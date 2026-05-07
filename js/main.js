@@ -1,9 +1,9 @@
-var NeoApp=angular.module("NeoApp",["ngAnimate","ngRoute","ngSanitize","ngTouch","ui.bootstrap"],function($interpolateProvider){$interpolateProvider.startSymbol("[");$interpolateProvider.endSymbol("]");});NeoApp.config(["$routeProvider",function($routeProvider,$scope,$rootScope){$routeProvider.when("/Temphome",{templateUrl:"Temphome",controller:"Temphome_Ctrl"});$routeProvider.when("/Indexwrite",{templateUrl:"Indexwrite",controller:"Indexwrite_Ctrl"});$routeProvider.when("/Records-2026",{templateUrl:"Records-2026",controller:"Records-2026_Ctrl"});$routeProvider.when("/CopyAll",{templateUrl:"CopyAll",controller:"CopyAll_Ctrl"});$routeProvider.when("/Speed01",{templateUrl:"Speed01",controller:"Speed01_Ctrl"});$routeProvider.when("/Speed02",{templateUrl:"Speed02",controller:"Speed02_Ctrl"});$routeProvider.when("/Speed03",{templateUrl:"Speed03",controller:"Speed03_Ctrl"});$routeProvider.when("/Speed04",{templateUrl:"Speed04",controller:"Speed04_Ctrl"});$routeProvider.when("/Speed05",{templateUrl:"Speed05",controller:"Speed05_Ctrl"});$routeProvider.when("/Speed06",{templateUrl:"Speed06",controller:"Speed06_Ctrl"});$routeProvider.when("/Speed07",{templateUrl:"Speed07",controller:"Speed07_Ctrl"});$routeProvider.when("/Speed08",{templateUrl:"Speed08",controller:"Speed08_Ctrl"});$routeProvider.when("/Speed10",{templateUrl:"Speed10",controller:"Speed10_Ctrl"});$routeProvider.when("/Speed11",{templateUrl:"Speed11",controller:"Speed11_Ctrl"});$routeProvider.when("/Speed09",{templateUrl:"Speed09",controller:"Speed09_Ctrl"});$routeProvider.when("/Speed12",{templateUrl:"Speed12",controller:"Speed12_Ctrl"});$routeProvider.when("/Speed13",{templateUrl:"Speed13",controller:"Speed13_Ctrl"});$routeProvider.when("/Speed14",{templateUrl:"Speed14",controller:"Speed14_Ctrl"});$routeProvider.when("/Speed15",{templateUrl:"Speed15",controller:"Speed15_Ctrl"});$routeProvider.when("/Speed16",{templateUrl:"Speed16",controller:"Speed16_Ctrl"});$routeProvider.when("/Speed17",{templateUrl:"Speed17",controller:"Speed17_Ctrl"});$routeProvider.when("/Speed18",{templateUrl:"Speed18",controller:"Speed18_Ctrl"});$routeProvider.when("/Speed19",{templateUrl:"Speed19",controller:"Speed19_Ctrl"});$routeProvider.when("/Speed20",{templateUrl:"Speed20",controller:"Speed20_Ctrl"});$routeProvider.when("/Speed21",{templateUrl:"Speed21",controller:"Speed21_Ctrl"});$routeProvider.when("/Speed22",{templateUrl:"Speed22",controller:"Speed22_Ctrl"});$routeProvider.when("/Speed23",{templateUrl:"Speed23",controller:"Speed23_Ctrl"});$routeProvider.when("/Speed24",{templateUrl:"Speed24",controller:"Speed24_Ctrl"});$routeProvider.when("/Speed25",{templateUrl:"Speed25",controller:"Speed25_Ctrl"});$routeProvider.when("/Speed26",{templateUrl:"Speed26",controller:"Speed26_Ctrl"});$routeProvider.when("/Speed27",{templateUrl:"Speed27",controller:"Speed27_Ctrl"});$routeProvider.when("/Speed28",{templateUrl:"Speed28",controller:"Speed28_Ctrl"});$routeProvider.when("/Speed29",{templateUrl:"Speed29",controller:"Speed29_Ctrl"});$routeProvider.when("/Speed30",{templateUrl:"Speed30",controller:"Speed30_Ctrl"});$routeProvider.when("/Speed31",{templateUrl:"Speed31",controller:"Speed31_Ctrl"});$routeProvider.when("/Speed32",{templateUrl:"Speed32",controller:"Speed32_Ctrl"});$routeProvider.when("/HomeTiles",{templateUrl:"HomeTiles",controller:"HomeTiles_Ctrl"});$routeProvider.when("/TNeoAppPage11",{templateUrl:"TNeoAppPage11",controller:"TNeoAppPage11_Ctrl"});$routeProvider.when("/Health",{templateUrl:"Health",controller:"Health_Ctrl"});$routeProvider.when("/Homestuff",{templateUrl:"Homestuff",controller:"Homestuff_Ctrl"});$routeProvider.when("/WorkDesktop",{templateUrl:"WorkDesktop",controller:"WorkDesktop_Ctrl"});$routeProvider.when("/HowToV3",{templateUrl:"HowToV3",controller:"HowToV3_Ctrl"});$routeProvider.when("/Tentinastorm",{templateUrl:"Tentinastorm",controller:"Tentinastorm_Ctrl"});$routeProvider.when("/fiveyearplan",{templateUrl:"fiveyearplan",controller:"fiveyearplan_Ctrl"});$routeProvider.when("/TILES",{templateUrl:"TILES",controller:"TILES_Ctrl"});$routeProvider.when("/Project1",{templateUrl:"Project1",controller:"Project1_Ctrl"});$routeProvider.when("/Project1pa",{templateUrl:"Project1pa",controller:"Project1pa_Ctrl"});$routeProvider.when("/Projectaa",{templateUrl:"Projectaa",controller:"Projectaa_Ctrl"});$routeProvider.when("/Projectab",{templateUrl:"Projectab",controller:"Projectab_Ctrl"});$routeProvider.when("/Projectac",{templateUrl:"Projectac",controller:"Projectac_Ctrl"});$routeProvider.when("/Projectad",{templateUrl:"Projectad",controller:"Projectad_Ctrl"});$routeProvider.when("/Project1pb",{templateUrl:"Project1pb",controller:"Project1pb_Ctrl"});$routeProvider.when("/Project1pc",{templateUrl:"Project1pc",controller:"Project1pc_Ctrl"});$routeProvider.when("/Project1pd",{templateUrl:"Project1pd",controller:"Project1pd_Ctrl"});$routeProvider.when("/Project1pe",{templateUrl:"Project1pe",controller:"Project1pe_Ctrl"});$routeProvider.when("/Project1pf",{templateUrl:"Project1pf",controller:"Project1pf_Ctrl"});$routeProvider.when("/Project1pg",{templateUrl:"Project1pg",controller:"Project1pg_Ctrl"});$routeProvider.when("/Project1ph",{templateUrl:"Project1ph",controller:"Project1ph_Ctrl"});$routeProvider.when("/Project1pi",{templateUrl:"Project1pi",controller:"Project1pi_Ctrl"});$routeProvider.when("/Project1pj",{templateUrl:"Project1pj",controller:"Project1pj_Ctrl"});$routeProvider.when("/Project1pk",{templateUrl:"Project1pk",controller:"Project1pk_Ctrl"});$routeProvider.when("/Project1pl",{templateUrl:"Project1pl",controller:"Project1pl_Ctrl"});$routeProvider.when("/Project1pm",{templateUrl:"Project1pm",controller:"Project1pm_Ctrl"});$routeProvider.when("/Project1pn",{templateUrl:"Project1pn",controller:"Project1pn_Ctrl"});$routeProvider.when("/Project1pfo",{templateUrl:"Project1pfo",controller:"Project1pfo_Ctrl"});$routeProvider.when("/Project1pp",{templateUrl:"Project1pp",controller:"Project1pp_Ctrl"});$routeProvider.when("/Project1pq",{templateUrl:"Project1pq",controller:"Project1pq_Ctrl"});$routeProvider.when("/Project1pr",{templateUrl:"Project1pr",controller:"Project1pr_Ctrl"});$routeProvider.when("/Project1ps",{templateUrl:"Project1ps",controller:"Project1ps_Ctrl"});$routeProvider.when("/Project1pft",{templateUrl:"Project1pft",controller:"Project1pft_Ctrl"});$routeProvider.when("/Project1pu",{templateUrl:"Project1pu",controller:"Project1pu_Ctrl"});$routeProvider.when("/Project1pv",{templateUrl:"Project1pv",controller:"Project1pv_Ctrl"});$routeProvider.when("/Project1pw",{templateUrl:"Project1pw",controller:"Project1pw_Ctrl"});$routeProvider.when("/Project1px",{templateUrl:"Project1px",controller:"Project1px_Ctrl"});$routeProvider.when("/Project2",{templateUrl:"Project2",controller:"Project2_Ctrl"});$routeProvider.when("/Projectaa2",{templateUrl:"Projectaa2",controller:"Projectaa2_Ctrl"});$routeProvider.when("/Projectab2",{templateUrl:"Projectab2",controller:"Projectab2_Ctrl"});$routeProvider.when("/Projectac2",{templateUrl:"Projectac2",controller:"Projectac2_Ctrl"});$routeProvider.when("/Projectad2",{templateUrl:"Projectad2",controller:"Projectad2_Ctrl"});$routeProvider.when("/Project2pa",{templateUrl:"Project2pa",controller:"Project2pa_Ctrl"});$routeProvider.when("/Project2pb",{templateUrl:"Project2pb",controller:"Project2pb_Ctrl"});$routeProvider.when("/Project2pc",{templateUrl:"Project2pc",controller:"Project2pc_Ctrl"});$routeProvider.when("/Project2pd",{templateUrl:"Project2pd",controller:"Project2pd_Ctrl"});$routeProvider.when("/Project2pe",{templateUrl:"Project2pe",controller:"Project2pe_Ctrl"});$routeProvider.when("/Project2pf",{templateUrl:"Project2pf",controller:"Project2pf_Ctrl"});$routeProvider.when("/Project2pg",{templateUrl:"Project2pg",controller:"Project2pg_Ctrl"});$routeProvider.when("/Project2ph",{templateUrl:"Project2ph",controller:"Project2ph_Ctrl"});$routeProvider.when("/Project2pi",{templateUrl:"Project2pi",controller:"Project2pi_Ctrl"});$routeProvider.when("/Project2pj",{templateUrl:"Project2pj",controller:"Project2pj_Ctrl"});$routeProvider.when("/Project2pk",{templateUrl:"Project2pk",controller:"Project2pk_Ctrl"});$routeProvider.when("/Project2pl",{templateUrl:"Project2pl",controller:"Project2pl_Ctrl"});$routeProvider.when("/Project2pm",{templateUrl:"Project2pm",controller:"Project2pm_Ctrl"});$routeProvider.when("/Project2pn",{templateUrl:"Project2pn",controller:"Project2pn_Ctrl"});$routeProvider.when("/C-A-Z",{templateUrl:"C-A-Z",controller:"C-A-Z_Ctrl"});$routeProvider.when("/Workstuff-A",{templateUrl:"Workstuff-A",controller:"Workstuff-A_Ctrl"});$routeProvider.when("/Workstuff-B",{templateUrl:"Workstuff-B",controller:"Workstuff-B_Ctrl"});$routeProvider.when("/Workstuff-C",{templateUrl:"Workstuff-C",controller:"Workstuff-C_Ctrl"});$routeProvider.when("/Prayer",{templateUrl:"Prayer",controller:"Prayer_Ctrl"});$routeProvider.when("/Next",{templateUrl:"Next",controller:"Next_Ctrl"});$routeProvider.when("/DailyReps",{templateUrl:"DailyReps",controller:"DailyReps_Ctrl"});$routeProvider.when("/Home",{templateUrl:"Home",controller:"Home_Ctrl"});$routeProvider.when("/Templates",{templateUrl:"Templates",controller:"Templates_Ctrl"});$routeProvider.when("/Workstuff-D",{templateUrl:"Workstuff-D",controller:"Workstuff-D_Ctrl"});$routeProvider.when("/VERSION",{templateUrl:"VERSION",controller:"VERSION_Ctrl"});$routeProvider.when("/ResetRules",{templateUrl:"ResetRules",controller:"ResetRules_Ctrl"});$routeProvider.when("/Resetoverview",{templateUrl:"Resetoverview",controller:"Resetoverview_Ctrl"});$routeProvider.when("/ResetNotes",{templateUrl:"ResetNotes",controller:"ResetNotes_Ctrl"});$routeProvider.when("/Template001",{templateUrl:"Template001",controller:"Template001_Ctrl"});$routeProvider.when("/Template1setup",{templateUrl:"Template1setup",controller:"Template1setup_Ctrl"});$routeProvider.when("/KeepJIC",{templateUrl:"KeepJIC",controller:"KeepJIC_Ctrl"});$routeProvider.when("/ResetNew",{templateUrl:"ResetNew",controller:"ResetNew_Ctrl"});$routeProvider.when("/Reset",{templateUrl:"Reset",controller:"Reset_Ctrl"});$routeProvider.when("/Stages",{templateUrl:"Stages",controller:"Stages_Ctrl"});$routeProvider.when("/Lanes",{templateUrl:"Lanes",controller:"Lanes_Ctrl"});$routeProvider.when("/Me",{templateUrl:"Me",controller:"Me_Ctrl"});$routeProvider.when("/bounce",{templateUrl:"bounce",controller:"bounce_Ctrl"});$routeProvider.when("/P012-Index-Cards-Read1",{templateUrl:"P012-Index-Cards-Read1",controller:"P012-Index-Cards-Read1_Ctrl"});$routeProvider.otherwise({redirectTo:"/Temphome"});}]);NeoApp.filter("checkmark",function(){return function(input){return input?"\u2713":"\u2718";};});NeoApp.filter("element",function(){return function(input,idx1,idx2){idx1=idx1||0;if(input&&input.constructor===Array){if(idx2){return input[idx1,idx2];}else{return input[idx1];};};return"";};});NeoApp.filter("string",function(){return function(input){if(input&&input.constructor===Array)return input.toString();if(input)return input;return"";};});NeoApp.filter("default",function(){return function(input,defValue){if(!input)return defValue;return input;};});NeoApp.filter("trustUrl",function($sce){return function(url){return $sce.trustAsResourceUrl(url);};});NeoApp.filter('bool',function(){return function(input,valueTrue,valueFalse){return input!==true?valueFalse:valueTrue;};});NeoApp.filter('splitLt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(0,p):str;};});NeoApp.filter('splitRt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(p+1):str;};});NeoApp.controller("NeoApp_CoreCtrl",function($scope,$rootScope,$location,$route,$modal,$window,$timeout,$interval,$http,$filter,$compile,$animate){$App=$rootScope;$App.$on("$locationChangeStart",function(event,newUrl,oldUrl){var newPg=newUrl.substr(newUrl.lastIndexOf("/")+1);var oldPg=oldUrl.substr(oldUrl.lastIndexOf("/")+1);if(newPg=="!"){event.preventDefault();};if(newPg=="Temphome"){$timeout($scope.Temphome_pageenter);};if(newPg=="HomeTiles"){$timeout($scope.HomeTiles_pageenter);};if(newPg=="TNeoAppPage11"){$timeout($scope.TNeoAppPage11_pageenter);};if(oldPg=="Tentinastorm"){$scope.Tentinastorm_pageexit();};if(oldPg=="fiveyearplan"){$scope.fiveyearplan_pageexit();};if(newPg=="Project1pm"){$timeout($scope.Project1pm_pageenter);};if(newPg=="Project1pn"){$timeout($scope.Project1pn_pageenter);};if(newPg=="Project1pfo"){$timeout($scope.Project1pfo_pageenter);};if(newPg=="Project1pp"){$timeout($scope.Project1pp_pageenter);};if(newPg=="Project1pq"){$timeout($scope.Project1pq_pageenter);};if(newPg=="Project1pr"){$timeout($scope.Project1pr_pageenter);};if(newPg=="Project1ps"){$timeout($scope.Project1ps_pageenter);};if(newPg=="Project1pft"){$timeout($scope.Project1pft_pageenter);};if(newPg=="Project1pv"){$timeout($scope.Project1pv_pageenter);};if(newPg=="Project1pw"){$timeout($scope.Project1pw_pageenter);};if(newPg=="Project1px"){$timeout($scope.Project1px_pageenter);};if(newPg=="Project2pa"){$timeout($scope.Project2pa_pageenter);};if(newPg=="Home"){$timeout($scope.Home_pageenter);};if(newPg=="KeepJIC"){$timeout($scope.KeepJIC_pageenter);};if(oldPg=="ResetNew"){$scope.ResetNew_pageexit();};});
+var NeoApp=angular.module("NeoApp",["ngAnimate","ngRoute","ngSanitize","ngTouch","ui.bootstrap"],function($interpolateProvider){$interpolateProvider.startSymbol("[");$interpolateProvider.endSymbol("]");});NeoApp.config(["$routeProvider",function($routeProvider,$scope,$rootScope){$routeProvider.when("/Temphome",{templateUrl:"Temphome",controller:"Temphome_Ctrl"});$routeProvider.when("/Indexwrite",{templateUrl:"Indexwrite",controller:"Indexwrite_Ctrl"});$routeProvider.when("/Records-2026",{templateUrl:"Records-2026",controller:"Records-2026_Ctrl"});$routeProvider.when("/CopyAll",{templateUrl:"CopyAll",controller:"CopyAll_Ctrl"});$routeProvider.when("/Speed01",{templateUrl:"Speed01",controller:"Speed01_Ctrl"});$routeProvider.when("/Speed03",{templateUrl:"Speed03",controller:"Speed03_Ctrl"});$routeProvider.when("/Speed04",{templateUrl:"Speed04",controller:"Speed04_Ctrl"});$routeProvider.when("/Speed02",{templateUrl:"Speed02",controller:"Speed02_Ctrl"});$routeProvider.when("/Speed05",{templateUrl:"Speed05",controller:"Speed05_Ctrl"});$routeProvider.when("/Speed06",{templateUrl:"Speed06",controller:"Speed06_Ctrl"});$routeProvider.when("/Speed07",{templateUrl:"Speed07",controller:"Speed07_Ctrl"});$routeProvider.when("/Speed08",{templateUrl:"Speed08",controller:"Speed08_Ctrl"});$routeProvider.when("/Speed10",{templateUrl:"Speed10",controller:"Speed10_Ctrl"});$routeProvider.when("/Speed11",{templateUrl:"Speed11",controller:"Speed11_Ctrl"});$routeProvider.when("/Speed09",{templateUrl:"Speed09",controller:"Speed09_Ctrl"});$routeProvider.when("/Speed12",{templateUrl:"Speed12",controller:"Speed12_Ctrl"});$routeProvider.when("/Speed13",{templateUrl:"Speed13",controller:"Speed13_Ctrl"});$routeProvider.when("/Speed14",{templateUrl:"Speed14",controller:"Speed14_Ctrl"});$routeProvider.when("/Speed15",{templateUrl:"Speed15",controller:"Speed15_Ctrl"});$routeProvider.when("/Speed16",{templateUrl:"Speed16",controller:"Speed16_Ctrl"});$routeProvider.when("/Speed17",{templateUrl:"Speed17",controller:"Speed17_Ctrl"});$routeProvider.when("/Speed18",{templateUrl:"Speed18",controller:"Speed18_Ctrl"});$routeProvider.when("/Speed19",{templateUrl:"Speed19",controller:"Speed19_Ctrl"});$routeProvider.when("/Speed20",{templateUrl:"Speed20",controller:"Speed20_Ctrl"});$routeProvider.when("/Speed21",{templateUrl:"Speed21",controller:"Speed21_Ctrl"});$routeProvider.when("/Speed22",{templateUrl:"Speed22",controller:"Speed22_Ctrl"});$routeProvider.when("/Speed23",{templateUrl:"Speed23",controller:"Speed23_Ctrl"});$routeProvider.when("/Speed24",{templateUrl:"Speed24",controller:"Speed24_Ctrl"});$routeProvider.when("/Speed25",{templateUrl:"Speed25",controller:"Speed25_Ctrl"});$routeProvider.when("/Speed26",{templateUrl:"Speed26",controller:"Speed26_Ctrl"});$routeProvider.when("/Speed27",{templateUrl:"Speed27",controller:"Speed27_Ctrl"});$routeProvider.when("/Speed28",{templateUrl:"Speed28",controller:"Speed28_Ctrl"});$routeProvider.when("/Speed29",{templateUrl:"Speed29",controller:"Speed29_Ctrl"});$routeProvider.when("/Speed30",{templateUrl:"Speed30",controller:"Speed30_Ctrl"});$routeProvider.when("/Speed31",{templateUrl:"Speed31",controller:"Speed31_Ctrl"});$routeProvider.when("/Speed32",{templateUrl:"Speed32",controller:"Speed32_Ctrl"});$routeProvider.when("/HomeTiles",{templateUrl:"HomeTiles",controller:"HomeTiles_Ctrl"});$routeProvider.when("/TNeoAppPage11",{templateUrl:"TNeoAppPage11",controller:"TNeoAppPage11_Ctrl"});$routeProvider.when("/Health",{templateUrl:"Health",controller:"Health_Ctrl"});$routeProvider.when("/Homestuff",{templateUrl:"Homestuff",controller:"Homestuff_Ctrl"});$routeProvider.when("/WorkDesktop",{templateUrl:"WorkDesktop",controller:"WorkDesktop_Ctrl"});$routeProvider.when("/HowToV3",{templateUrl:"HowToV3",controller:"HowToV3_Ctrl"});$routeProvider.when("/Tentinastorm",{templateUrl:"Tentinastorm",controller:"Tentinastorm_Ctrl"});$routeProvider.when("/fiveyearplan",{templateUrl:"fiveyearplan",controller:"fiveyearplan_Ctrl"});$routeProvider.when("/TILES",{templateUrl:"TILES",controller:"TILES_Ctrl"});$routeProvider.when("/Project1",{templateUrl:"Project1",controller:"Project1_Ctrl"});$routeProvider.when("/Project1pa",{templateUrl:"Project1pa",controller:"Project1pa_Ctrl"});$routeProvider.when("/Projectaa",{templateUrl:"Projectaa",controller:"Projectaa_Ctrl"});$routeProvider.when("/Projectab",{templateUrl:"Projectab",controller:"Projectab_Ctrl"});$routeProvider.when("/Projectac",{templateUrl:"Projectac",controller:"Projectac_Ctrl"});$routeProvider.when("/Projectad",{templateUrl:"Projectad",controller:"Projectad_Ctrl"});$routeProvider.when("/Project1pb",{templateUrl:"Project1pb",controller:"Project1pb_Ctrl"});$routeProvider.when("/Project1pc",{templateUrl:"Project1pc",controller:"Project1pc_Ctrl"});$routeProvider.when("/Project1pd",{templateUrl:"Project1pd",controller:"Project1pd_Ctrl"});$routeProvider.when("/Project1pe",{templateUrl:"Project1pe",controller:"Project1pe_Ctrl"});$routeProvider.when("/Project1pf",{templateUrl:"Project1pf",controller:"Project1pf_Ctrl"});$routeProvider.when("/Project1pg",{templateUrl:"Project1pg",controller:"Project1pg_Ctrl"});$routeProvider.when("/Project1ph",{templateUrl:"Project1ph",controller:"Project1ph_Ctrl"});$routeProvider.when("/Project1pi",{templateUrl:"Project1pi",controller:"Project1pi_Ctrl"});$routeProvider.when("/Project1pj",{templateUrl:"Project1pj",controller:"Project1pj_Ctrl"});$routeProvider.when("/Project1pk",{templateUrl:"Project1pk",controller:"Project1pk_Ctrl"});$routeProvider.when("/Project1pl",{templateUrl:"Project1pl",controller:"Project1pl_Ctrl"});$routeProvider.when("/Project1pm",{templateUrl:"Project1pm",controller:"Project1pm_Ctrl"});$routeProvider.when("/Project1pn",{templateUrl:"Project1pn",controller:"Project1pn_Ctrl"});$routeProvider.when("/Project1pfo",{templateUrl:"Project1pfo",controller:"Project1pfo_Ctrl"});$routeProvider.when("/Project1pp",{templateUrl:"Project1pp",controller:"Project1pp_Ctrl"});$routeProvider.when("/Project1pq",{templateUrl:"Project1pq",controller:"Project1pq_Ctrl"});$routeProvider.when("/Project1pr",{templateUrl:"Project1pr",controller:"Project1pr_Ctrl"});$routeProvider.when("/Project1ps",{templateUrl:"Project1ps",controller:"Project1ps_Ctrl"});$routeProvider.when("/Project1pft",{templateUrl:"Project1pft",controller:"Project1pft_Ctrl"});$routeProvider.when("/Project1pu",{templateUrl:"Project1pu",controller:"Project1pu_Ctrl"});$routeProvider.when("/Project1pv",{templateUrl:"Project1pv",controller:"Project1pv_Ctrl"});$routeProvider.when("/Project1pw",{templateUrl:"Project1pw",controller:"Project1pw_Ctrl"});$routeProvider.when("/Project1px",{templateUrl:"Project1px",controller:"Project1px_Ctrl"});$routeProvider.when("/Project2",{templateUrl:"Project2",controller:"Project2_Ctrl"});$routeProvider.when("/Projectaa2",{templateUrl:"Projectaa2",controller:"Projectaa2_Ctrl"});$routeProvider.when("/Projectab2",{templateUrl:"Projectab2",controller:"Projectab2_Ctrl"});$routeProvider.when("/Projectac2",{templateUrl:"Projectac2",controller:"Projectac2_Ctrl"});$routeProvider.when("/Projectad2",{templateUrl:"Projectad2",controller:"Projectad2_Ctrl"});$routeProvider.when("/Project2pa",{templateUrl:"Project2pa",controller:"Project2pa_Ctrl"});$routeProvider.when("/Project2pb",{templateUrl:"Project2pb",controller:"Project2pb_Ctrl"});$routeProvider.when("/Project2pc",{templateUrl:"Project2pc",controller:"Project2pc_Ctrl"});$routeProvider.when("/Project2pd",{templateUrl:"Project2pd",controller:"Project2pd_Ctrl"});$routeProvider.when("/Project2pe",{templateUrl:"Project2pe",controller:"Project2pe_Ctrl"});$routeProvider.when("/Project2pf",{templateUrl:"Project2pf",controller:"Project2pf_Ctrl"});$routeProvider.when("/Project2pg",{templateUrl:"Project2pg",controller:"Project2pg_Ctrl"});$routeProvider.when("/Project2ph",{templateUrl:"Project2ph",controller:"Project2ph_Ctrl"});$routeProvider.when("/Project2pi",{templateUrl:"Project2pi",controller:"Project2pi_Ctrl"});$routeProvider.when("/Project2pj",{templateUrl:"Project2pj",controller:"Project2pj_Ctrl"});$routeProvider.when("/Project2pk",{templateUrl:"Project2pk",controller:"Project2pk_Ctrl"});$routeProvider.when("/Project2pl",{templateUrl:"Project2pl",controller:"Project2pl_Ctrl"});$routeProvider.when("/Project2pm",{templateUrl:"Project2pm",controller:"Project2pm_Ctrl"});$routeProvider.when("/Project2pn",{templateUrl:"Project2pn",controller:"Project2pn_Ctrl"});$routeProvider.when("/C-A-Z",{templateUrl:"C-A-Z",controller:"C-A-Z_Ctrl"});$routeProvider.when("/Workstuff-A",{templateUrl:"Workstuff-A",controller:"Workstuff-A_Ctrl"});$routeProvider.when("/Workstuff-B",{templateUrl:"Workstuff-B",controller:"Workstuff-B_Ctrl"});$routeProvider.when("/Workstuff-C",{templateUrl:"Workstuff-C",controller:"Workstuff-C_Ctrl"});$routeProvider.when("/Prayer",{templateUrl:"Prayer",controller:"Prayer_Ctrl"});$routeProvider.when("/Next",{templateUrl:"Next",controller:"Next_Ctrl"});$routeProvider.when("/DailyReps",{templateUrl:"DailyReps",controller:"DailyReps_Ctrl"});$routeProvider.when("/Home",{templateUrl:"Home",controller:"Home_Ctrl"});$routeProvider.when("/Templates",{templateUrl:"Templates",controller:"Templates_Ctrl"});$routeProvider.when("/Workstuff-D",{templateUrl:"Workstuff-D",controller:"Workstuff-D_Ctrl"});$routeProvider.when("/VERSION",{templateUrl:"VERSION",controller:"VERSION_Ctrl"});$routeProvider.when("/ResetRules",{templateUrl:"ResetRules",controller:"ResetRules_Ctrl"});$routeProvider.when("/Resetoverview",{templateUrl:"Resetoverview",controller:"Resetoverview_Ctrl"});$routeProvider.when("/ResetNotes",{templateUrl:"ResetNotes",controller:"ResetNotes_Ctrl"});$routeProvider.when("/Template001",{templateUrl:"Template001",controller:"Template001_Ctrl"});$routeProvider.when("/Template1setup",{templateUrl:"Template1setup",controller:"Template1setup_Ctrl"});$routeProvider.when("/KeepJIC",{templateUrl:"KeepJIC",controller:"KeepJIC_Ctrl"});$routeProvider.when("/ResetNew",{templateUrl:"ResetNew",controller:"ResetNew_Ctrl"});$routeProvider.when("/Reset",{templateUrl:"Reset",controller:"Reset_Ctrl"});$routeProvider.when("/Stages",{templateUrl:"Stages",controller:"Stages_Ctrl"});$routeProvider.when("/Lanes",{templateUrl:"Lanes",controller:"Lanes_Ctrl"});$routeProvider.when("/Me",{templateUrl:"Me",controller:"Me_Ctrl"});$routeProvider.when("/bounce",{templateUrl:"bounce",controller:"bounce_Ctrl"});$routeProvider.when("/P012-Index-Cards-Read1",{templateUrl:"P012-Index-Cards-Read1",controller:"P012-Index-Cards-Read1_Ctrl"});$routeProvider.otherwise({redirectTo:"/Temphome"});}]);NeoApp.filter("checkmark",function(){return function(input){return input?"\u2713":"\u2718";};});NeoApp.filter("element",function(){return function(input,idx1,idx2){idx1=idx1||0;if(input&&input.constructor===Array){if(idx2){return input[idx1,idx2];}else{return input[idx1];};};return"";};});NeoApp.filter("string",function(){return function(input){if(input&&input.constructor===Array)return input.toString();if(input)return input;return"";};});NeoApp.filter("default",function(){return function(input,defValue){if(!input)return defValue;return input;};});NeoApp.filter("trustUrl",function($sce){return function(url){return $sce.trustAsResourceUrl(url);};});NeoApp.filter('bool',function(){return function(input,valueTrue,valueFalse){return input!==true?valueFalse:valueTrue;};});NeoApp.filter('splitLt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(0,p):str;};});NeoApp.filter('splitRt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(p+1):str;};});NeoApp.controller("NeoApp_CoreCtrl",function($scope,$rootScope,$location,$route,$modal,$window,$timeout,$interval,$http,$filter,$compile,$animate){$App=$rootScope;$App.$on("$locationChangeStart",function(event,newUrl,oldUrl){var newPg=newUrl.substr(newUrl.lastIndexOf("/")+1);var oldPg=oldUrl.substr(oldUrl.lastIndexOf("/")+1);if(newPg=="!"){event.preventDefault();};if(newPg=="Temphome"){$timeout($scope.Temphome_pageenter);};if(newPg=="HomeTiles"){$timeout($scope.HomeTiles_pageenter);};if(newPg=="TNeoAppPage11"){$timeout($scope.TNeoAppPage11_pageenter);};if(oldPg=="Tentinastorm"){$scope.Tentinastorm_pageexit();};if(oldPg=="fiveyearplan"){$scope.fiveyearplan_pageexit();};if(newPg=="Project1pm"){$timeout($scope.Project1pm_pageenter);};if(newPg=="Project1pn"){$timeout($scope.Project1pn_pageenter);};if(newPg=="Project1pfo"){$timeout($scope.Project1pfo_pageenter);};if(newPg=="Project1pp"){$timeout($scope.Project1pp_pageenter);};if(newPg=="Project1pq"){$timeout($scope.Project1pq_pageenter);};if(newPg=="Project1pr"){$timeout($scope.Project1pr_pageenter);};if(newPg=="Project1ps"){$timeout($scope.Project1ps_pageenter);};if(newPg=="Project1pft"){$timeout($scope.Project1pft_pageenter);};if(newPg=="Project1pv"){$timeout($scope.Project1pv_pageenter);};if(newPg=="Project1pw"){$timeout($scope.Project1pw_pageenter);};if(newPg=="Project1px"){$timeout($scope.Project1px_pageenter);};if(newPg=="Project2pa"){$timeout($scope.Project2pa_pageenter);};if(newPg=="Home"){$timeout($scope.Home_pageenter);};if(newPg=="KeepJIC"){$timeout($scope.KeepJIC_pageenter);};if(oldPg=="ResetNew"){$scope.ResetNew_pageexit();};});
 $scope.SetError=function(msg){throw msg;};$scope.Refresh=function(){$timeout(angular.noop);};$scope.AddFont=function(fontName,fontPath){neotempstyle=document.createElement("style");var position=fontPath.lastIndexOf("/");if(position!=-1){position++;}else{position=0;}var extPosition=fontPath.lastIndexOf(".");extPosition++;var extension=fontPath.substr(extPosition);if(extension=="ttf"){extension="truetype";}if(window.location.href.indexOf("file://")!=-1){neotempstyle.textContent='@font-face{font-family: "'+fontName+'";src: url("'+fontPath+'") format("'+extension+'");}';}else{fontPath=fontPath.substr(position);neotempstyle.textContent='@font-face{font-family: "'+fontName+'";src: url("./fonts/'+fontPath+'") format("'+extension+'");}';}document.head.append(neotempstyle);};$scope.GetOrientation=function(){if($window.orientation){if(Math.abs(window.orientation)===90){return"Landscape";}else{return"Portrait";}}else{if($window.innerWidth>=$window.innerHeight){return"Landscape";}else{return"Portrait";}}};$scope.GotoPageNum=function(pgNum){if(pgNum>0&&pgNum<=$App.NAB.PageList.length){if($App.NAB.PageEnterEffect[pgNum-1]){$App.NAB._pageEffect=" animate enter-"+$App.NAB.PageEnterEffect[pgNum-1]+" exit-"+($App.NAB.PageExitEffect[pgNum-1]||"fadeOut");}else{$App.NAB._pageEffect="";}$timeout(function(){$location.path('/'+$App.NAB.PageList[pgNum-1]);});}else{$scope.SetError('Invalid page.');}};$scope.GotoPage=function(pgId){$scope.GotoPageNum($App.NAB.PageList.indexOf(pgId)+1);};$scope.GotoFirstPage=function(){$scope.GotoPageNum(1);};$scope.GotoLastPage=function(){$scope.GotoPageNum($App.NAB.PageList.length);};$scope.GotoNextPage=function(){var pgNum=$App.NAB.PageNumber;if(pgNum<$App.NAB.PageList.length){$scope.GotoPageNum(pgNum+1);return true;}return false;};$scope.GotoPrevPage=function(){var pgNum=$App.NAB.PageNumber;if(pgNum>1){$scope.GotoPageNum(pgNum-1);return true;}return false;};function makeSVG(tag,attrs){var el=document.createElementNS('http://www.w3.org/2000/svg',tag);for(var k in attrs)el.setAttribute(k,attrs[k]);return el;};function addSvgNode(objId,svgNode){if(document.getElementById(objId).tagName=="svg"){document.getElementById(objId).appendChild(svgNode);}else{document.getElementById(objId).getElementsByTagName('svg')[0].appendChild(svgNode);}};$scope.DrawCircle=function DrawCircle(objId,svgName,cx,cy,circleRadio,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('circle',{'id':svgName,'VisualNEOWebName':svgName,'cx':cx,'cy':cy,'r':circleRadio,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawEllipse=function DrawEllipse(objId,svgName,cx,cy,rx,ry,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('ellipse',{'id':svgName,'VisualNEOWebName':svgName,'cx':cx,'cy':cy,'rx':rx,'ry':ry,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawRect=function DrawRect(objId,svgName,posx,posy,width,height,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('rect',{'id':svgName,'VisualNEOWebName':svgName,'x':posx,'y':posy,'width':width,'height':height,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawPolygon=function DrawPolygon(objId,svgName,points,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('polygon',{'id':svgName,'VisualNEOWebName':svgName,'points':points,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawPath=function DrawPath(objId,svgName,path,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('path',{'id':svgName,'VisualNEOWebName':svgName,'d':path,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawPolyLine=function DrawPolyLine(objId,svgName,points,strokeColor,strokeWidth){$App[svgName]=makeSVG('polyline',{'id':svgName,'VisualNEOWebName':svgName,'points':points,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':'none'});addSvgNode(objId,$App[svgName]);};$scope.DrawLine=function DrawLine(objId,svgName,x1,y1,x2,y2,strokeColor,strokeWidth){$App[svgName]=makeSVG('line',{'id':svgName,'VisualNEOWebName':svgName,'x1':x1,'y1':y1,'x2':x2,'y2':y2,'stroke':strokeColor,'stroke-width':strokeWidth});addSvgNode(objId,$App[svgName]);};$scope.DrawImage=function DrawImage(objId,svgName,fileName,x,y,width,height){$App[svgName]=makeSVG('image',{'id':svgName,'VisualNEOWebName':svgName,'x':x,'y':y,'width':width,'height':height,'xlink:href':''});$App[svgName].setAttributeNS("http://www.w3.org/1999/xlink","xlink:href",""+fileName+"");addSvgNode(objId,$App[svgName]);};$scope.DrawText=function DrawText(objId,svgName,theText,posx,posy,fillColor,fontSize,fontFamily,angle){$App[svgName]=makeSVG('text',{'id':svgName,'VisualNEOWebName':svgName,'x':posx,'y':posy,'stroke-width':0,'fill':fillColor,'font-size':fontSize,'font-family':fontFamily,'transform':'rotate('+angle+' '+posx+' '+posy+')'});$App[svgName].textContent=theText;addSvgNode(objId,$App[svgName]);};$scope.DrawClear=function DrawClear(objId){var n=0;$("#"+objId).children().each(function(){if(n!=0){$(this).remove();}n++;});};$scope.OnMouseEvent=function(objId,eventName,subroutine){if(eventName=="contextmenu"){if($App.NAB[objId]){$App.NAB[objId].on(eventName,function(e){e.preventDefault();subroutine;return;});}$("#"+objId).on(eventName,function(e){e.preventDefault();subroutine;return;});}if($App.NAB[objId]){$App.NAB[objId].on(eventName,subroutine);return;}$("#"+objId).on(eventName,subroutine);};$scope.RemoveOnMouseEvent=function(objId,eventName){if($App.NAB[objId]){$App.NAB[objId].off(eventName);return;}$("#"+objId).off(eventName);};$scope.OnTouchEvent=function(objId,eventName,subroutine){if($App.NAB[objId]){$App.NAB[objId].on(eventName,subroutine);return;}$("#"+objId).on(eventName,subroutine);};$scope.RemoveOnTouchEvent=function(objId,eventName){if($App.NAB[objId]){$App.NAB[objId].off(eventName);return;}$("#"+objId).off(eventName);};$scope.ShowObject=function(objId,effect,speed){if($App.NAB[objId]){$App.NAB[objId].show(speed);return;}if(!effect||effect.toLowerCase()=='none'){$App.NAB[objId+'_effect']='';}else{if(speed)effect=effect+' speed-'+speed*50;$App.NAB[objId+'_effect']='animate enter-'+effect;}$timeout(function(){var name=objId+'_hidden';if($App.NAB[name])delete $App.NAB[name];});};$scope.HideObject=function(objId,effect,speed){if($App.NAB[objId]){$App.NAB[objId].hide(speed);return;}if(!effect||effect.toLowerCase()=='none'){$App.NAB[objId+'_effect']='';}else{if(speed)effect=effect+' speed-'+speed*50;$App.NAB[objId+'_effect']='animate exit-'+effect;}$timeout(function(){$App.NAB[objId+'_hidden']=true;});};$scope.DisableObject=function(objId,value){var name=objId+'_disabled';if(value){$App.NAB[name]=value;}else{if($App.NAB[name])delete $App.NAB[name];}};$scope.ClipObjectPolygon=function(objId,polygonId){var points=$("#"+polygonId).html();points=points.replace('<polygon vector-effect="non-scaling-stroke" points="',"");points=points.replace('"></polygon>','');coords=points.split(",");var puntos="";for(i=0;i<coords.length;i=i+2){if(i!=coords.length-2){puntos=puntos+coords[i]+"px "+coords[i+1]+"px,";}else{puntos=puntos+coords[i]+"px "+coords[i+1]+"px";}}$("#"+objId).css("clip-path","polygon("+puntos+")");};$scope.ClipObjectPath=function(objId,shape){if(shape=="circle"){$("#"+objId).css("clip-path","circle(50% at 50% 50%)");}else if(shape=="triangle"){$("#"+objId).css("clip-path","polygon(50% 0%, 0% 100%, 100% 100%)");}else if(shape=="rhombus"){$("#"+objId).css("clip-path","polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)");}else if(shape=="pentagon"){$("#"+objId).css("clip-path","polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)");}else{$("#"+objId).css("clip-path",shape);}};$scope.SetObjectStyle=function(objId,selector,value){if($App.NAB[objId]){$App.NAB[objId].css(selector,value);return;}if($App[objId]){$("#"+objId).css(selector,value);return;}var name=objId+'_style';if(!$App.NAB[name])$App.NAB[name]={};if(value&&value.length>0){$App.NAB[name][selector]=value;}else{if($App.NAB[name][selector])delete $App.NAB[name][selector];if(jQuery.isEmptyObject($App.NAB[name]))delete $App.NAB[name];}};$scope.ClearObjectStyles=function(objId){var name=objId+'_style';if($App.NAB[name])delete $App.NAB[name];};$scope.GetObjectInfo=function(objId,info){if($App.NAB[objId]){return $App.NAB[objId].css(info);}return $("#"+objId).css(info);};$scope.GetObjectXY=function(objId,xvar,yvar){var rect=document.getElementById($App.NAB.PageID).getBoundingClientRect();$App.PageLeft=rect.left;$App.PageTop=rect.top;var objeto=document.getElementById(objId).getBoundingClientRect();$App[xvar]=objeto.x-$App.PageLeft;$App[yvar]=objeto.y-$App.PageTop;};$scope.SetObjectHTML=function(objId,code){if($App.NAB[objId]){$App.NAB[objId].html(code);return;}var e=document.getElementById(objId);e.innerHTML=code;$compile(e)($scope);};$scope.GetObjectHTML=function(objId){if($App.NAB[objId]){return $App.NAB[objId].html();;}return document.getElementById(objId).innerHTML;};$scope.SetObjectAttribute=function(objId,AttrName,AttrValue){var element=$("#"+objId);if(AttrName==="src"){AttrName="ng-src";}var pendingChanges=$App.NAB['pendingChanges']||{};pendingChanges[objId]=pendingChanges[objId]||[];pendingChanges[objId].push({AttrName,AttrValue});$App.NAB['pendingChanges']=pendingChanges;$scope.applyPendingChanges();};$scope.applyPendingChanges=function(){var pendingChanges=$App.NAB['pendingChanges'];if(!pendingChanges||jQuery.isEmptyObject(pendingChanges)){return;}Object.keys(pendingChanges).forEach(function(objId){var element=$("#"+objId);if(element.length>0){pendingChanges[objId].forEach(function(change){element.attr(change.AttrName,change.AttrValue);$compile(element)($scope);});}});};$scope.GetObjectAttribute=function(objId,AttrName){if($App.NAB[objId]){return $App.NAB[objId].attr(AttrName);}return $("#"+objId).attr(AttrName);};$scope.SetObjectText=function(objId,code){if($App.NAB[objId]){$App.NAB[objId].text(code);return;}var e=document.getElementById(objId);e.innerText=code;$compile(e)($scope);};$scope.GetObjectText=function(objId){if($App.NAB[objId]){return $App.NAB[objId].text();}return document.getElementById(objId).innerText;};$scope.DuplicateObject=function(objId,objName,containerId){if($App.NAB[objName]){$App.NAB[objName].remove();delete $App.NAB[objName];}else{$("#"+objName).remove();delete $App.NAB[objName];}if($App.NAB[objId]){$App.NAB[objName]=$App.NAB[objId].clone().appendTo("#"+containerId);}else if($App[objId]){$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);$App.NAB[objName].attr("id","");}else{$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);}$App.NAB[objName].attr("VisualNEOWebName",objName);$App.NAB[objName].attr("ng-style","NAB."+objName+"_style");$App.NAB[objName].attr("ng-hide","NAB."+objName+"_hidden");$App.NAB[objName].attr("ng-disabled","NAB."+objName+"_disabled");var e=document.getElementById(containerId);$compile(e)($scope);};$scope.DuplicateObjectEx=function(objId,objName,containerId,objStyle){if($App.NAB[objName]){$App.NAB[objName].remove();delete $App.NAB[objName];}else{$("#"+objName).remove();delete $App.NAB[objName];}if($App.NAB[objId]){$App.NAB[objName]=$App.NAB[objId].clone().appendTo("#"+containerId);}else if($App[objId]){$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);$App.NAB[objName].attr("id","");}else{$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);$App.NAB[objName].attr("id",objName);$App.NAB[objName].atyle=document.getElementById(objId).style;}$App.NAB[objName].attr("VisualNEOWebName",objName);$App.NAB[objName].attr("ng-style","NAB."+objName+"_style");$App.NAB[objName].attr("ng-hide","NAB."+objName+"_hidden");$App.NAB[objName].attr("ng-disabled","NAB."+objName+"_disabled");$App.NAB[objName].attr("style",objStyle);var e=document.getElementById(containerId);$compile(e)($scope);};$scope.AnimateObjectCSS=function(objId,cssData,duration,delay,easing,callbackfn){if($App.NAB[objId]){$App.NAB[objId].delay(delay).animate(cssData,duration,easing,callbackfn);}else{$("#"+objId).delay(delay).animate(cssData,duration,easing,callbackfn);}};$scope.SetObjectCSS=function(objId,cssData){if($App.NAB[objId]){$App.NAB[objId].css(cssData);}else{$("#"+objId).css(cssData);}};$scope.CheckCollision=function(objId1,objId2){var x1=$("#"+objId1).offset().left;var y1=$("#"+objId1).offset().top;var h1=$("#"+objId1).outerHeight(true);var w1=$("#"+objId1).outerWidth(true);var b1=y1+h1;var r1=x1+w1;var x2=$("#"+objId2).offset().left;var y2=$("#"+objId2).offset().top;var h2=$("#"+objId2).outerHeight(true);var w2=$("#"+objId2).outerWidth(true);var b2=y2+h2;var r2=x2+w2;if(b1<y2||y1>b2||r1<x2||x1>r2){return false;}else{return true;}};$scope.CheckFullCollision=function(objId1,objId2){var r1=document.getElementById(rectone);var r2=document.getElementById(recttwo);var r1bb=r1.getBoundingClientRect();var r2bb=r2.getBoundingClientRect();var r1x=r1bb.x;var r1w=r1bb.width;var r1y=r1bb.y;var r1h=r1bb.height;var r2x=r2bb.x;var r2w=r2bb.width;var r2y=r2bb.y;var r2h=r2bb.height;if(r1x+1>=r2x&&r1y+1>=r2y&&r1x+r1w-1<=r2x+r2w&&r1y+r1h-1<=r2y+r2h){return true;}else{return false;}};function fixUnit(s){var t=s.toString();var parts=t.match(/^([+-]?(?:\d+|\d*\.\d+))([a-z]*|%)$/);return(parts[2])?t:parts[1]+'px';}$scope.SetObjectBounds=function(objId,l,t,w,h){if($App.NAB[objId]){var e=$App.NAB[objId];}else{var e=document.getElementById(objId);}if(w){w=fixUnit(w);e.style.width=w;$scope.SetObjectStyle(objId,'width',w);};if(h){h=fixUnit(h);e.style.height=h;$scope.SetObjectStyle(objId,'height',h);};if(l){l=fixUnit(l);e.style.left=l;$scope.SetObjectStyle(objId,'left',l);};if(t){t=fixUnit(t);e.style.top=t;$scope.SetObjectStyle(objId,'top',t);};};$scope.MoveObject=function(objId,left,top){if($App.NAB[objId]){$App.NAB[objId].css("left",left);$App.NAB[objId].css("top",top);}else{$scope.SetObjectBounds(objId,left,top);}};$scope.ObjectToFront=function(objId){if($App.NAB[objId]){theParent=$App.NAB[objId].parent();$App.NAB[objId].detach().appendTo(theParent);}else{theParent=$("#"+objId).parent();$("#"+objId).detach().appendTo(theParent);}};$scope.ObjectToBack=function(objId){if($App.NAB[objId]){theParent=$App.NAB[objId].parent();$App.NAB[objId].detach().prependTo(theParent);}else if($("#"+objId).parent().prop("tagName")=="svg"){theParent=$("#"+objId).parent().children().first();$("#"+objId).detach().insertAfter(theParent);}else{theParent=$("#"+objId).parent();$("#"+objId).detach().prependTo(theParent);}};$scope.SizeObject=function(objId,width,height){if($App.NAB[objId]){w=fixUnit(width);h=fixUnit(height);$App.NAB[objId].css("width",w);$App.NAB[objId].css("height",h);}else{$scope.SetObjectBounds(objId,null,null,width,height);}};$scope.RotateObject=function(objId,deg){if($App.NAB[objId]){$App.NAB[objId].css("webkitTransform","rotate("+deg+"deg)");$App.NAB[objId].css("mozTransform","rotate("+deg+"deg)");$App.NAB[objId].css("msTransform","rotate("+deg+"deg)");$App.NAB[objId].css("oTransform","rotate("+deg+"deg)");$App.NAB[objId].css("transform","rotate("+deg+"deg)");}else{var e=document.getElementById(objId);e.style.webkitTransform='rotate('+deg+'deg)';e.style.mozTransform='rotate('+deg+'deg)';e.style.msTransform='rotate('+deg+'deg)';e.style.oTransform='rotate('+deg+'deg)';e.style.transform='rotate('+deg+'deg)';};};$scope.ListBoxSort=function(objId){if($("#"+objId).children("option:selected").text()==""){$("#"+objId).children("option:selected").remove();};$("#"+objId+" option").filter(function(){return!this.value||$.trim(this.value).length==0||$.trim(this.text).length==0;}).remove();var options=$("#"+objId+" option");var arr=options.map(function(_,o){return{t:$(o).text(),v:o.value};}).get();arr.sort(function(o1,o2){return o1.t>o2.t?1:o1.t<o2.t?-1:0;});options.each(function(i,o){o.value=arr[i].v;$(o).text(arr[i].t);});if($("#"+objId).children("option:selected").text()==""){$("#"+objId).children("option:selected").remove();};};$scope.ListBoxMoveItem=function(listID,direction){var listbox=document.getElementById(listID);var selIndex=listbox.selectedIndex;if(-1==selIndex){return;}var increment=-1;if(direction=='up'){if(selIndex==1){return;}else{increment=-1;}}else{increment=1;}if((selIndex+increment)<0||(selIndex+increment)>(listbox.options.length-1)){return;}var selValue=listbox.options[selIndex].value;var selText=listbox.options[selIndex].text;listbox.options[selIndex].value=listbox.options[selIndex+increment].value
 listbox.options[selIndex].text=listbox.options[selIndex+increment].text
 listbox.options[selIndex+increment].value=selValue;listbox.options[selIndex+increment].text=selText;listbox.selectedIndex=selIndex+increment;};$scope.OpenDialog=function(dlgId){var modalInstance=$modal.open({templateUrl:dlgId,controller:dlgId+'_Ctrl',scope:$scope,size:'sm',backdrop:'static',animation:true});};$scope.AlertBox=function(dlgTitle,dlgMsg,dlgKind,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" ng-class="modal-sm">'+'<div class="modal-content">'+'<div class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+'<button class="btn btn-primary" ng-click="CloseDialog();">OK</button>'+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn!=undefined){modalInstance.result.then(function(){callbackFn()},function(){callbackFn()});}};$scope.AlertBoxEx=function(dlgTitle,dlgMsg,dlgKind,theWidth,theHeight,theColor,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var dlgKind=dlgKind||"primary";if(theWidth<150){theWidth=150;}if(theHeight<200){theHeight=200;}var modalBodyMaxHeight=theHeight-140;var modalInstance=$modal.open({template:'<div class="modal-dialog" style="width:'+theWidth+'px;height:'+theHeight+'px;" ng-class="modal-sm">'+'<div class="modal-content">'+'<div style="background:'+theColor+';" class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div style="overflow:auto;max-height:'+modalBodyMaxHeight+'px" class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+'<button class="btn btn-custom" style="color:#fff;background:'+theColor+';" ng-click="CloseDialog();">OK</button>'+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn!=undefined){modalInstance.result.then(function(){callbackFn()},function(){callbackFn()});}};$scope.MessageBoxEx=function(dlgTitle,dlgMsg,dlgButtons,dlgKind,theWidth,theHeight,theColor,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}if(theWidth<150){theWidth=150;}if(theHeight<200){theHeight=200;}var modalBodyMaxHeight=theHeight-140;var idx;var btns=dlgButtons.split("|");var btnsHTML='';for(idx=0;idx<btns.length;idx++){btnsHTML+='<button class="btn btn-custom" style="color:#fff;background:'+theColor+';" ng-click="CloseDialogBtn('+idx.toString()+');">'+btns[idx]+'</button>';}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" style="width:'+theWidth+'px;height:'+theHeight+'px;" ng-class="modal-sm">'+'<div class="modal-content">'+'<div style="background:'+theColor+';" class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div style="overflow:auto;max-height:'+modalBodyMaxHeight+'px" class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+btnsHTML+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn){modalInstance.result.then(function(value){callbackFn(value+1)},function(){callbackFn(0)});}};$scope.MessageBox=function(dlgTitle,dlgMsg,dlgButtons,dlgKind,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var idx;var btns=dlgButtons.split("|");var btnsHTML='';for(idx=0;idx<btns.length;idx++){btnsHTML+='<button class="btn btn-primary" ng-click="CloseDialogBtn('+idx.toString()+');">'+btns[idx]+'</button>';}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" ng-class="modal-sm">'+'<div class="modal-content">'+'<div class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+btnsHTML+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn){modalInstance.result.then(function(value){callbackFn(value+1)},function(){callbackFn(0)});}};$scope.SerializeForm=function(formId){var form=document.getElementById(formId);if(!form||form.nodeName!=="FORM")return;var i,j,s,field,m,q=[];for(i=0;i<form.elements.length;i++){field=form.elements[i];if(field.name==="")continue;switch(field.nodeName){case'INPUT':switch(field.type){case'text':case'hidden':case'password':case'number':q.push(field.name+"="+encodeURIComponent(field.value));break;case'checkbox':if(angular.isElement(field)){m=angular.element(field).controller('ngModel');if(m){q.push(field.name+"="+encodeURIComponent(m.$modelValue));break;}}q.push(field.name+"="+encodeURIComponent(field.checked));break;case'radio':if(field.checked){q.push(field.name+"="+encodeURIComponent(field.value));}break;case'file':break;}break;case'TEXTAREA':q.push(field.name+"="+encodeURIComponent(field.value));break;case'SELECT':switch(field.type){case'select-one':q.push(field.name+"="+encodeURIComponent(field.value));break;case'select-multiple':s='';for(j=field.options.length-1;j>=0;j=j-1){if(field.options[j].selected){s+=','+encodeURIComponent(field.options[j].value);}}if(s.length>0)q.push(field.name+"="+s.substr(1));break;}break;}}return q.join("&");};$scope.SubmitForm=function(form,url,method,submitFn,successFn,failFn){var ok=true;if(submitFn){ok=submitFn();}if(ok&&form&&url&&method){var f=$scope.SerializeForm(form);$http({method:method,url:url,data:f,responseType:"text",headers:{'Content-Type':'application/x-www-form-urlencoded'}}).then(function(response){if(successFn)successFn(response.data,response.status);},function(response){if(failFn)failFn(response.data,response.status);});}};$scope.FormSubmit=function(formulario,url){var neoApp=angular.element(document.getElementById("ng-view")).scope();var fnsubmit=neoApp[formulario+"_submit"];var fnsuccess=neoApp[formulario+"_success"];var fnfail=neoApp[formulario+"_fail"];neoApp.SubmitForm(formulario,url,'POST',fnsubmit,fnsuccess,fnfail);};$scope.FormReset=function(formulario){$("#"+formulario).trigger("reset");};$scope.SetCompVar=function(varname,varvalue){varname2="";vararray=varname.split("[");for(n=0;n<vararray.length;n++){vararray[n]=vararray[n].replace("]","");if($App[vararray[n]]!=undefined){varname2=varname2+$App[vararray[n]];}else{varname2=varname2+vararray[n];};};$App[varname2]=varvalue;};$scope.GetCompVar=function(varname,composedvar){varname2="";vararray=composedvar.split("[");for(n=0;n<vararray.length;n++){vararray[n]=vararray[n].replace("]","");if($App[vararray[n]]!=undefined){varname2=varname2+$App[vararray[n]];}else{varname2=varname2+vararray[n];};};$App[varname]=$App[varname2];};$scope.ArraySuffle=function(array,newArray){for(n=0;n<array.length;n++){newArray[n]=array[n];}var currentIndex=newArray.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex-=1;temporaryValue=newArray[currentIndex];newArray[currentIndex]=newArray[randomIndex];newArray[randomIndex]=temporaryValue;}};$scope.ArrayCopy=function(a,start,len){if(a&&start>-1&&len>0)return a.slice(start,start+len);return[]};$scope.LoadGoogleFont=function(fontName){$("head").append("<link href='https://fonts.googleapis.com/css?family="+fontName+"' rel='stylesheet' type='text/css'>");};$scope.LocalFileToVar=function(inputFileName,resultVar,tipo){$App.NAB.temp=resultVar;var realInputFileName=$("#"+inputFileName).prop("for");var files=$('#'+realInputFileName).prop("files");for(var i=0,f;f=files[i];i++){var reader=new FileReader();reader.onload=(function(theFile,resultVar,callBackFunction){return function(e,resultVar){varName=$App.NAB.temp;$App[varName]=e.target.result;};})(f);if(tipo=="text"){reader.readAsText(f);}else if(tipo=="binary"){reader.readAsBinaryString(f);}else if(tipo=="base64"){reader.readAsDataURL(f);}else{reader.readAsArrayBuffer(f);}};};$scope.SvgToBase64=function(theContainer,theWidth,theHeight,theType,theQuality,resultVar,callbackFn){var tagName=$("#"+theContainer).prop("tagName").toLowerCase();if(tagName=="svg"){var svg=document.getElementById(theContainer);}else{var svg=document.querySelector("#"+theContainer+" svg");}var svgToBase64PngTemp=svg.outerHTML;tempWidth=svg.getAttribute("width");if(tempWidth==null){tempWidth=theWidth;}tempHeight=svg.getAttribute("height");if(tempHeight==null){tempHeight=theHeight;}svg.setAttribute("width",theWidth);svg.setAttribute("height",theHeight);var svgData=new XMLSerializer().serializeToString(svg);var canvas=document.createElement("canvas");canvas.width=theWidth;canvas.height=theHeight;var ctx=canvas.getContext("2d");var img=document.createElement("img");img.setAttribute("src","data:image/svg+xml;base64,"+btoa(svgData));img.onload=function(){ctx.drawImage(img,0,0);svg.setAttribute("width",tempWidth);svg.setAttribute("height",tempHeight);if(theType=="jpg"){$App[resultVar]=canvas.toDataURL("image/jpeg",theQuality);if(callbackFn!=""&&callbackFn!=null&&callbackFn!=undefined){callbackFn();}}else{$App[resultVar]=canvas.toDataURL("image/png");if(callbackFn!=""&&callbackFn!=null&&callbackFn!=undefined){callbackFn();}}};};$scope.ImgToBase64=function(theImg,theType,theQuality,resultVar){var img=document.querySelector("#"+theImg);const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;ctx.drawImage(img,0,0);if(theType=="jpg"){$App[resultVar]=canvas.toDataURL('image/jpeg',theQuality);}else{$App[resultVar]=canvas.toDataURL('image/png');}};$scope.Base64ToLocalFile=function(dataurl,filename){var arr=dataurl.split(','),mime=arr[0].match(/:(.*?);/)[1],bstr=atob(arr[1]),n=bstr.length,u8arr=new Uint8Array(n);while(n--){u8arr[n]=bstr.charCodeAt(n);}theFile=new File([u8arr],filename,{type:mime});saveAs(theFile,filename);};$scope.ResizeDesktopWindow=function(theWidth,theHeight){if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){window.resizeTo(theWidth,theHeight);}};$scope.FitAppToScreen=function(coverScreen,verticalAlign,horizontalAlign){$scope.AppPosition(verticalAlign,horizontalAlign);var ha=horizontalAlign.toUpperCase();var va=verticalAlign.toUpperCase();if(va=="MIDDLE"){va="CENTER"};fit(document.getElementById("ng-app"),{x:0,y:0,width:window.innerWidth,height:window.innerHeight},{cover:coverScreen,hAlign:fit[ha],vAlign:fit[va]});fit(document.getElementById("ng-app"),{x:0,y:0,width:window.innerWidth,height:window.innerHeight},{cover:coverScreen,hAlign:fit[ha],vAlign:fit[va]},function(transform){$App.NAB.AppScale=transform.scale});};$scope.IsInstalled=function(){if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){return true;}else{return false;}};$scope.CenterApp=function(){$("body").css("position","absolute");$("body").css("top","0px");$("body").css("bottom","0px");$("body").css("left","0px");$("body").css("right","0px");$("body").css("margin","auto");$("body").css("margin","auto");};$scope.TopCenterApp=function(){$("body").css("position","absolute");$("body").css("top","0px!important");$("body").css("left","0px");$("body").css("right","0px");$("body").css("bottom","auto");$("body").css("margin","auto");};$scope.ScaleApp=function(thezoom){$App.NAB.AppScale=thezoom;$("#ng-app").css("transform-origin","50% 50%");$("#ng-app").css("transform","scale("+thezoom+","+thezoom+")");};$scope.AppPosition=function(vertical,horizontal){$('body').css("position","absolute");if(vertical=="top"){$('body').css("top","0px");$('body').css("bottom","auto");}else if(vertical=="bottom"){$('body').css("bottom","0px");$('body').css("top","auto");}else{$('body').css("bottom","0px");$('body').css("top","0px");}if(horizontal=="left"){$('body').css("left","0px");$('body').css("right","auto");}else if(horizontal=="right"){$('body').css("left","auto");$('body').css("right","0px");}else{$('body').css("left","0px");$('body').css("right","0px");}$('body').css("margin","auto");};$scope.SetResponsivePages=function(plarge,pmedium,psmall,pxsmall){if(matchMedia){const largedisp=window.matchMedia("(min-width: 1025px)");const mediumdisp=window.matchMedia("(min-width: 768px) and (max-width: 1024px)");const smalldisp=window.matchMedia("(min-width: 481px) and (max-width: 767px)");const verysmalldisp=window.matchMedia("(min-width: 320px) and (max-width: 480px)");funciones=angular.element(document.getElementById("ng-view")).scope();$("body").css("width","100%");$("body").css("height","100%");$("body").css("overflow-x","hidden");$("body").css("overflow-y","auto");largedisp.addListener(WidthChangeLarge);WidthChangeLarge(largedisp);mediumdisp.addListener(WidthChangeMedium);WidthChangeMedium(mediumdisp);smalldisp.addListener(WidthChangeSmall);WidthChangeSmall(smalldisp);verysmalldisp.addListener(WidthChangeVerySmall);WidthChangeVerySmall(verysmalldisp);function WidthChangeLarge(largedisp){if(largedisp.matches){funciones.GotoPage(plarge);}};function WidthChangeMedium(mediumdisp){if(mediumdisp.matches){funciones.GotoPage(pmedium);}};function WidthChangeSmall(smalldisp){if(smalldisp.matches){funciones.GotoPage(psmall);}};function WidthChangeVerySmall(verysmalldisp){if(verysmalldisp.matches){funciones.GotoPage(pxsmall);}};}};$scope.AppBackgroundColor=function(thecolor){$("html").css("background",thecolor);};$scope.AppBackgroundImage=function(imagen){ruta=$("#"+imagen).attr('src');$("html").css('background-image','url('+ruta+' )');$("html").css('background-repeat','no-repeat');$("html").css('background-position','center center');$("html").css('background-attachment','fixed');$("html").css("-webkit-background-size","cover");$("html").css("-moz-background-size","cover");$("html").css("-o-background-size","cover");$("html").css("background-size","cover");};$scope.ObjDisableSelection=function(objectname){$("#"+objectname).css("-webkit-touch-callout","none");$("#"+objectname).css("-webkit-user-select","none");$("#"+objectname).css("-khtml-user-select","none");$("#"+objectname).css("-moz-user-select","none");$("#"+objectname).css("-ms-user-select","none");$("#"+objectname).css("user-select","none");};$scope.DisableSelection=function(){$("*").css("-webkit-touch-callout","none");$("*").css("-webkit-user-select","none");$("*").css("-khtml-user-select","none");$("*").css("-moz-user-select","none");$("*").css("-ms-user-select","none");$("*").css("user-select","none");};$scope.GetUrlParameter=function(param){url=window.location.href;var queryString=url?url.split('?')[1]:window.location.search.slice(1);var obj={};if(queryString){queryString=queryString.split('#')[0];var arr=queryString.split('&');for(var i=0;i<arr.length;i++){var a=arr[i].split('=');var paramName=a[0];var paramValue=typeof(a[1])==='undefined'?true:a[1];if(typeof paramValue==='string')paramValue=paramValue;if(paramName.match(/\[(\d+)?\]$/)){var key=paramName.replace(/\[(\d+)?\]/,'');if(!obj[key])obj[key]=[];if(paramName.match(/\[\d+\]$/)){var index=/\[(\d+)\]/.exec(paramName)[1];obj[key][index]=paramValue;}else{obj[key].push(paramValue);}}else{if(!obj[paramName]){obj[paramName]=paramValue;}else if(obj[paramName]&&typeof obj[paramName]==='string'){obj[paramName]=[obj[paramName]];obj[paramName].push(paramValue);}else{obj[paramName].push(paramValue);}}}}return obj[param];};$scope.csvToJSON=function(mycsv,separator,jsonObject){var lines=$App[mycsv].split("\n");var result=[];var headers=lines[0].split(separator);for(var i=1;i<lines.length;i++){var obj={};var currentline=lines[i].split(separator);for(var j=0;j<headers.length;j++){obj[headers[j]]=currentline[j];}result.push(obj);}$App[jsonObject]=result;};$scope.CheckInternetConnection=function(url,timeout,successFn,errorFn){$.ajax({url:url,timeout:timeout,cache:false,success:function(){if(successFn!=undefined){successFn();}},error:function(){if(errorFn!=undefined){errorFn();}},});};$scope.SetRelativePosition=function(objectname,vertical,horizontal){$("#"+objectname).css("position","absolute");if(vertical=="top"){$("#"+objectname).css("top","0px");$("#"+objectname).css("bottom","auto");}else if(vertical=="bottom"){$("#"+objectname).css("bottom","0px");$("#"+objectname).css("top","auto");}else{$("#"+objectname).css("bottom","0px");$("#"+objectname).css("top","0px");}if(horizontal=="left"){$("#"+objectname).css("left","0px");$("#"+objectname).css("right","auto");}else if(horizontal=="right"){$("#"+objectname).css("left","auto");$("#"+objectname).css("right","0px");}else{$("#"+objectname).css("left","0px");$("#"+objectname).css("right","0px");}$("#"+objectname).css("margin","auto");};$scope.WatchVar=function(varName,fn){if($App.NAB.$Watches[varName]){if($App.NAB.$Watches[varName].deRegFn)$App.NAB.$Watches[varName].deRegFn();delete $App.NAB.$Watches[varName];};if(fn){$App.NAB.$Watches[varName]={id:varName,deRegFn:undefined};$App.NAB.$Watches[varName].deRegFn=$scope.$watch(varName,function(newVal,oldVal){if(oldVal!==newVal)fn(newVal,oldVal);});};};$scope.TimerStart=function(objId,ms){if($App.NAB.$Timers[objId]){if(!angular.isDefined($App.NAB.$Timers[objId].promise)){$App.NAB.$Timers[objId].stime=Date.now();$App.NAB.$Timers[objId].promise=$interval($App.NAB.$Timers[objId].fn,ms||1000);}}else throw'A timer named "'+objId+'" does not exist.';};$scope.TimerStop=function(objId){if($App.NAB.$Timers[objId]){if(angular.isDefined($App.NAB.$Timers[objId].promise)){$interval.cancel($App.NAB.$Timers[objId].promise);$App.NAB.$Timers[objId].promise=undefined;}}else throw'A timer named "'+objId+'" does not exist.';};$scope._DeleteSound=function(sname){if($App.NAB.$Audio[sname]){$App.NAB.$Audio[sname].player.pause();delete $App.NAB.$Audio[sname].player;delete $App.NAB.$Audio[sname];return true;}return false;};$scope.PlaySound=function(fname,loop){var sname=ExtractFileName(fname).toLowerCase();if($App.NAB.$Audio[sname])throw'A sound named "'+sname+'" is already playing.';var devicePlatform=(typeof device!=='undefined'&&device.platform)?device.platform:null;if(typeof Audio!=="undefined"&&devicePlatform===null){obj={id:sname,kind:"audio",player:new Audio(fname)};obj.player.addEventListener("ended",function(){$scope._DeleteSound(sname);});}else if(devicePlatform){if(devicePlatform==='Android'){if(!IsUrl(fname))fname='/android_asset/www/'+fname;}obj={id:sname,kind:"media",player:new Media(fname,function onSuccess(){$scope._DeleteSound(sname);},function onError(e){console.log("Error playing sound: "+JSON.stringify(e));$scope._DeleteSound(sname);})};}else throw'Sound API unavailable.';$App.NAB.$Audio[sname]=obj;if(obj.kind==="audio"){obj.player.loop=loop;obj.player.play();}else obj.player.play({numberOfLoops:loop});};$scope.StopSound=function(fname){if(!fname||fname.length===0){for(var id in $App.NAB.$Audio)$scope._DeleteSound(id);}else{var sname=ExtractFileName(fname).toLowerCase();if(!$scope._DeleteSound(sname))throw'There is no playing sound named "'+sname+'"';}};$scope.CreateVideoPlayer=function(objId,fname,controls,autoplay,looping,muted){var sname=ExtractFileName(fname).toLowerCase();if(controls){addcontrols="controls";}else{addcontrols="";}if(autoplay){addautoplay="autoplay";}else{addautoplay="";}if(looping){addloop="loop";}else{addloop="";}if(muted){addmuted="muted";}else{addmuted="";}htmlstring='<video id="'+objId+'Video" width="100%" height="100%" '+addcontrols+' '+addautoplay+' '+addloop+' '+addmuted+'><source src="'+fname+'" type="video/mp4"></video>';$("#"+objId).html(htmlstring);};$scope.OnVideoEvent=function(objId,eventName,subroutine){if($App.NAB[objId+"Video"]){$App.NAB[objId+"Video"].on(eventName,subroutine);return;}$("#"+objId+"Video").on(eventName,subroutine);};$scope.CreateAudioPlayer=function(objId,fname,controls,autoplay,looping){var sname=ExtractFileName(fname).toLowerCase();if(controls){addcontrols="controls";}else{addcontrols="";}if(autoplay){addautoplay="autoplay";}else{addautoplay="";}if(looping){addloop="loop";}else{addloop="";}htmlstring='<audio id="'+objId+'Audio" width="100%" height="100%" '+addcontrols+' '+addautoplay+' '+addloop+'><source src="'+fname+'" type="audio/mp3"></audio>';$("#"+objId).html(htmlstring);};$scope.OnAudioEvent=function(objId,eventName,subroutine){if($App.NAB[objId+"Audio"]){$App.NAB[objId+"Audio"].on(eventName,subroutine);return;}$("#"+objId+"Audio").on(eventName,subroutine);};$scope.SoundBeep=function(){var snd=new Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2oCgILEBupZgHvAhEBcZ6joQBxS76AgccrFlczBvKLC0QI2cBoCFvfTDAo7eoOQInqDPBtvrDEZBNYN5xwNwxQRfw8ZQ5wQVLvO8OYU+mHvFLlDh05Mdg7BT6YrRPpCBznMB2r//xKJjyyOh+cImr2/4doscwD6neZjuZR4AgAABYAAAABy1xcdQtxYBYYZdifkUDgzzXaXn98Z0oi9ILU5mBjFANmRwlVJ3/6jYDAmxaiDG3/6xjQQCCKkRb/6kg/wW+kSJ5//rLobkLSiKmqP/0ikJuDaSaSf/6JiLYLEYnW/+kXg1WRVJL/9EmQ1YZIsv/6Qzwy5qk7/+tEU0nkls3/zIUMPKNX/6yZLf+kFgAfgGyLFAUwY//uQZAUABcd5UiNPVXAAAApAAAAAE0VZQKw9ISAAACgAAAAAVQIygIElVrFkBS+Jhi+EAuu+lKAkYUEIsmEAEoMeDmCETMvfSHTGkF5RWH7kz/ESHWPAq/kcCRhqBtMdokPdM7vil7RG98A2sc7zO6ZvTdM7pmOUAZTnJW+NXxqmd41dqJ6mLTXxrPpnV8avaIf5SvL7pndPvPpndJR9Kuu8fePvuiuhorgWjp7Mf/PRjxcFCPDkW31srioCExivv9lcwKEaHsf/7ow2Fl1T/9RkXgEhYElAoCLFtMArxwivDJJ+bR1HTKJdlEoTELCIqgEwVGSQ+hIm0NbK8WXcTEI0UPoa2NbG4y2K00JEWbZavJXkYaqo9CRHS55FcZTjKEk3NKoCYUnSQ0rWxrZbFKbKIhOKPZe1cJKzZSaQrIyULHDZmV5K4xySsDRKWOruanGtjLJXFEmwaIbDLX0hIPBUQPVFVkQkDoUNfSoDgQGKPekoxeGzA4DUvnn4bxzcZrtJyipKfPNy5w+9lnXwgqsiyHNeSVpemw4bWb9psYeq//uQZBoABQt4yMVxYAIAAAkQoAAAHvYpL5m6AAgAACXDAAAAD59jblTirQe9upFsmZbpMudy7Lz1X1DYsxOOSWpfPqNX2WqktK0DMvuGwlbNj44TleLPQ+Gsfb+GOWOKJoIrWb3cIMeeON6lz2umTqMXV8Mj30yWPpjoSa9ujK8SyeJP5y5mOW1D6hvLepeveEAEDo0mgCRClOEgANv3B9a6fikgUSu/DmAMATrGx7nng5p5iimPNZsfQLYB2sDLIkzRKZOHGAaUyDcpFBSLG9MCQALgAIgQs2YunOszLSAyQYPVC2YdGGeHD2dTdJk1pAHGAWDjnkcLKFymS3RQZTInzySoBwMG0QueC3gMsCEYxUqlrcxK6k1LQQcsmyYeQPdC2YfuGPASCBkcVMQQqpVJshui1tkXQJQV0OXGAZMXSOEEBRirXbVRQW7ugq7IM7rPWSZyDlM3IuNEkxzCOJ0ny2ThNkyRai1b6ev//3dzNGzNb//4uAvHT5sURcZCFcuKLhOFs8mLAAEAt4UWAAIABAAAAAB4qbHo0tIjVkUU//uQZAwABfSFz3ZqQAAAAAngwAAAE1HjMp2qAAAAACZDgAAAD5UkTE1UgZEUExqYynN1qZvqIOREEFmBcJQkwdxiFtw0qEOkGYfRDifBui9MQg4QAHAqWtAWHoCxu1Yf4VfWLPIM2mHDFsbQEVGwyqQoQcwnfHeIkNt9YnkiaS1oizycqJrx4KOQjahZxWbcZgztj2c49nKmkId44S71j0c8eV9yDK6uPRzx5X18eDvjvQ6yKo9ZSS6l//8elePK/Lf//IInrOF/FvDoADYAGBMGb7FtErm5MXMlmPAJQVgWta7Zx2go+8xJ0UiCb8LHHdftWyLJE0QIAIsI+UbXu67dZMjmgDGCGl1H+vpF4NSDckSIkk7Vd+sxEhBQMRU8j/12UIRhzSaUdQ+rQU5kGeFxm+hb1oh6pWWmv3uvmReDl0UnvtapVaIzo1jZbf/pD6ElLqSX+rUmOQNpJFa/r+sa4e/pBlAABoAAAAA3CUgShLdGIxsY7AUABPRrgCABdDuQ5GC7DqPQCgbbJUAoRSUj+NIEig0YfyWUho1VBBBA//uQZB4ABZx5zfMakeAAAAmwAAAAF5F3P0w9GtAAACfAAAAAwLhMDmAYWMgVEG1U0FIGCBgXBXAtfMH10000EEEEEECUBYln03TTTdNBDZopopYvrTTdNa325mImNg3TTPV9q3pmY0xoO6bv3r00y+IDGid/9aaaZTGMuj9mpu9Mpio1dXrr5HERTZSmqU36A3CumzN/9Robv/Xx4v9ijkSRSNLQhAWumap82WRSBUqXStV/YcS+XVLnSS+WLDroqArFkMEsAS+eWmrUzrO0oEmE40RlMZ5+ODIkAyKAGUwZ3mVKmcamcJnMW26MRPgUw6j+LkhyHGVGYjSUUKNpuJUQoOIAyDvEyG8S5yfK6dhZc0Tx1KI/gviKL6qvvFs1+bWtaz58uUNnryq6kt5RzOCkPWlVqVX2a/EEBUdU1KrXLf40GoiiFXK///qpoiDXrOgqDR38JB0bw7SoL+ZB9o1RCkQjQ2CBYZKd/+VJxZRRZlqSkKiws0WFxUyCwsKiMy7hUVFhIaCrNQsKkTIsLivwKKigsj8XYlwt/WKi2N4d//uQRCSAAjURNIHpMZBGYiaQPSYyAAABLAAAAAAAACWAAAAApUF/Mg+0aohSIRobBAsMlO//Kk4soosy1JSFRYWaLC4qZBYWFRGZdwqKiwkNBVmoWFSJkWFxX4FFRQWR+LsS4W/rFRb/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VEFHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU291bmRib3kuZGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAwNGh0dHA6Ly93d3cuc291bmRib3kuZGUAAAAAAAAAACU=");snd.play();};var fit=function(){"use strict";function t(t){return t.toUpperCase()}function e(t){return"number"==typeof t&&!isNaN(t)}function n(){return(new Date).getTime()}function i(t,e){for(var n=[],i=0,r=t.length;r>i;i++)n[i]=e(t[i]);return n}function r(t,e){for(var n in e)n in t||(t[n]=e[n]);return t}function o(e){if(!d)for(var n,i=H(C.body),r=w,o=0,a=T.length;a>o&&(d=T[o],n=d+r,!(n in i))&&(d=d.replace(/^(\w)/,t),n=d+r,!(n in i));o++);return d+e}function a(t){var e=H(t),n=e[o(w)].replace(/[a-z()]/gi,"").split(",");if(n.length<6)return[1,0,0,1,0,0];for(var i=0;6>i;i++)n[i]=parseFloat(n[i]);return n}function f(t,e){var n=a(e);n[0]=t.scale,n[3]=t.scale,n[4]+=t.tx,n[5]+=t.ty;var r=i(n,function(t){return t.toFixed(6)});e.style[o(m)]="0 0",e.style[o(w)]="matrix("+r.join(",")+")"}function s(t,e){var n=H(e),i=parseFloat(n.left)||0,r=parseFloat(n.top)||0;"static"===n.position&&(e.style.position="relative"),e.style.left=i+t.tx+b,e.style.top=r+t.ty+b,e.style.height=t.height+b,e.style.width=t.width+b}function l(t,e){var n=H(e),i=parseFloat(n.marginLeft)||0,r=parseFloat(n.marginTop)||0;e.style.marginLeft=i+t.tx+b,e.style.marginTop=r+t.ty+b,e.style.height=t.height+b,e.style.width=t.width+b}function h(t,e){e.height*=t.scale,e.width*=t.scale,e.x+=t.tx,e.y+=t.ty}function u(t){if(t.nodeType&&1==t.nodeType){var n=t.getBoundingClientRect();t={height:t.offsetHeight,width:t.offsetWidth,x:n.left,y:n.top}}return!e(t.x)&&e(t.left)&&(t.x=t.left),!e(t.y)&&e(t.top)&&(t.y=t.top),t}function c(){var t=n(),e=t-y;if(x>=e)clearInterval(v),v=setTimeout(c,x-e);else{for(var i=0,r=M.length;r>i;i++)M[i]();y=t}}function g(t,e,n,i,r){var o=u(t),a=u(e),s=0===o.width?R:o.width,l=0===o.height?P:o.height,c=0===a.width?I:a.width,g=0===a.height?P:a.height;R=s,B=l,I=c,P=g;var p=c/s,d=g/l,y=s/l,v=c/g,x=n.cover?d:p,m=n.cover?p:d,w=y>=v?x:m,T=s*w,O=l*w,F=n.hAlign==E?.5*(T-c):n.hAlign==L?T-c:0,b=n.vAlign==E?.5*(O-g):n.vAlign==A?O-g:0;return r=r||{},r.tx=a.x-F-o.x,r.ty=a.y-b-o.y,r.x=a.x-F-o.x*w,r.y=a.y-b-o.y*w,r.height=o.height*w,r.width=o.width*w,r.scale=w,i?i(r,t):n.apply&&(i="undefined"!=typeof HTMLElement&&t instanceof HTMLElement?f:h)(r,t),r}function p(t,e,n,i){if(!t||!e)throw"You must supply a target and a container";"function"==typeof n&&(i=n,n={}),n=r(n||{},N);var o=g(t,e,n,i);return n.watch&&(M.length||(z.addEventListener?(z.addEventListener("resize",c),z.addEventListener("orientationchange",c)):(z.attachEvent("onresize",c),z.attachEvent("onorientationchange",c))),o.trigger=function(){g(t,e,n,i,o)},o.on=function(t){var e=M.indexOf(o.trigger);~e||M.push(o.trigger),t||o.trigger()},o.off=function(){var t=M.indexOf(o.trigger);~t&&M.splice(t,1)},o.on(!0)),o}var d,y,v,x=50,m="TransformOrigin",w="Transform",T="moz ms o webkit".split(" "),E="center",A="bottom",L="right",O="left",F="top",b="px",z=window||self,C=document,H=z.getComputedStyle,M=[],N={hAlign:E,vAlign:E,watch:!1,cover:!1,apply:!0};Array.prototype.indexOf||(Array.prototype.indexOf=function(t){for(var e=0;e<this.length;++e)if(this[e]==t)return e;return-1});var R,B,I,P;return r(p,{watching:M,defaults:N,cssTransform:f,cssPosition:s,cssMargin:l,CENTER:E,BOTTOM:A,RIGHT:L,LEFT:O,TOP:F})}();"undefined"!=typeof exports&&("undefined"!=typeof module&&module.exports&&(exports=module.exports=fit),exports.fit=fit);(function(factory){if(typeof define==="function"&&define.amd){define(["jquery"],function($){return factory($)})}else if(typeof module==="object"&&typeof module.exports==="object"){exports=factory(require("jquery"))}else{factory(jQuery)}})(function($){$.easing.jswing=$.easing.swing;var pow=Math.pow,sqrt=Math.sqrt,sin=Math.sin,cos=Math.cos,PI=Math.PI,c1=1.70158,c2=c1*1.525,c3=c1+1,c4=2*PI/3,c5=2*PI/4.5;function bounceOut(x){var n1=7.5625,d1=2.75;if(x<1/d1){return n1*x*x}else if(x<2/d1){return n1*(x-=1.5/d1)*x+.75}else if(x<2.5/d1){return n1*(x-=2.25/d1)*x+.9375}else{return n1*(x-=2.625/d1)*x+.984375}}$.extend($.easing,{def:"easeOutQuad",swing:function(x){return $.easing[$.easing.def](x)},easeInQuad:function(x){return x*x},easeOutQuad:function(x){return 1-(1-x)*(1-x)},easeInOutQuad:function(x){return x<.5?2*x*x:1-pow(-2*x+2,2)/2},easeInCubic:function(x){return x*x*x},easeOutCubic:function(x){return 1-pow(1-x,3)},easeInOutCubic:function(x){return x<.5?4*x*x*x:1-pow(-2*x+2,3)/2},easeInQuart:function(x){return x*x*x*x},easeOutQuart:function(x){return 1-pow(1-x,4)},easeInOutQuart:function(x){return x<.5?8*x*x*x*x:1-pow(-2*x+2,4)/2},easeInQuint:function(x){return x*x*x*x*x},easeOutQuint:function(x){return 1-pow(1-x,5)},easeInOutQuint:function(x){return x<.5?16*x*x*x*x*x:1-pow(-2*x+2,5)/2},easeInSine:function(x){return 1-cos(x*PI/2)},easeOutSine:function(x){return sin(x*PI/2)},easeInOutSine:function(x){return-(cos(PI*x)-1)/2},easeInExpo:function(x){return x===0?0:pow(2,10*x-10)},easeOutExpo:function(x){return x===1?1:1-pow(2,-10*x)},easeInOutExpo:function(x){return x===0?0:x===1?1:x<.5?pow(2,20*x-10)/2:(2-pow(2,-20*x+10))/2},easeInCirc:function(x){return 1-sqrt(1-pow(x,2))},easeOutCirc:function(x){return sqrt(1-pow(x-1,2))},easeInOutCirc:function(x){return x<.5?(1-sqrt(1-pow(2*x,2)))/2:(sqrt(1-pow(-2*x+2,2))+1)/2},easeInElastic:function(x){return x===0?0:x===1?1:-pow(2,10*x-10)*sin((x*10-10.75)*c4)},easeOutElastic:function(x){return x===0?0:x===1?1:pow(2,-10*x)*sin((x*10-.75)*c4)+1},easeInOutElastic:function(x){return x===0?0:x===1?1:x<.5?-(pow(2,20*x-10)*sin((20*x-11.125)*c5))/2:pow(2,-20*x+10)*sin((20*x-11.125)*c5)/2+1},easeInBack:function(x){return c3*x*x*x-c1*x*x},easeOutBack:function(x){return 1+c3*pow(x-1,3)+c1*pow(x-1,2)},easeInOutBack:function(x){return x<.5?pow(2*x,2)*((c2+1)*2*x-c2)/2:(pow(2*x-2,2)*((c2+1)*(x*2-2)+c2)+2)/2},easeInBounce:function(x){return 1-bounceOut(1-x)},easeOutBounce:bounceOut,easeInOutBounce:function(x){return x<.5?(1-bounceOut(1-2*x))/2:(1+bounceOut(2*x-1))/2}})});function d(c){var b,a;if(!this.length)return this;b=this[0];b.ownerDocument?a=b.ownerDocument:(a=b,b=a.documentElement);if(null==c){if(!a.exitFullscreen&&!a.webkitExitFullscreen&&!a.webkitCancelFullScreen&&!a.msExitFullscreen&&!a.mozCancelFullScreen)return null;c=!!a.fullscreenElement||!!a.msFullscreenElement||!!a.webkitIsFullScreen||!!a.mozFullScreen;return!c?c:a.fullscreenElement||a.webkitFullscreenElement||a.webkitCurrentFullScreenElement||a.msFullscreenElement||a.mozFullScreenElement||c}c?(c=b.requestFullscreen||b.webkitRequestFullscreen||b.webkitRequestFullScreen||b.msRequestFullscreen||b.mozRequestFullScreen)&&c.call(b):(c=a.exitFullscreen||a.webkitExitFullscreen||a.webkitCancelFullScreen||a.msExitFullscreen||a.mozCancelFullScreen)&&c.call(a);return this}jQuery.fn.fullScreen=d;jQuery.fn.toggleFullScreen=function(){return d.call(this,!d.call(this))};var e,f,g;e=document;e.webkitCancelFullScreen?(f="webkitfullscreenchange",g="webkitfullscreenerror"):e.msExitFullscreen?(f="MSFullscreenChange",g="MSFullscreenError"):e.mozCancelFullScreen?(f="mozfullscreenchange",g="mozfullscreenerror"):(f="fullscreenchange",g="fullscreenerror");jQuery(document).bind(f,function(){jQuery(document).trigger(new jQuery.Event("fullscreenchange"))});jQuery(document).bind(g,function(){jQuery(document).trigger(new jQuery.Event("fullscreenerror"))});$scope.EnterFullScreen=function(){$(document).fullScreen(true);};$scope.ExitFullScreen=function(){$(document).fullScreen(false);};$scope.ObjectEnterFullScreen=function(ObjId){$("#"+ObjId).fullScreen(true);};$scope.ObjectExitFullScreen=function(ObjId){$("#"+ObjId).fullScreen(false);};var neoscript;$scope.AppOnKeyDown=function(callbackFn){$("body").keydown(function(evt){callbackFn(evt.which);});};(function(a,b){if("function"==typeof define&&define.amd)define([],b);else if("undefined"!=typeof exports)b();else{b(),a.FileSaver={exports:{}}.exports}})(this,function(){"use strict";function b(a,b){return"undefined"==typeof b?b={autoBom:!1}:"object"!=typeof b&&(console.warn("Depricated: Expected third argument to be a object"),b={autoBom:!b}),b.autoBom&&/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type)?new Blob(["\uFEFF",a],{type:a.type}):a}function c(b,c,d){var e=new XMLHttpRequest;e.open("GET",b),e.responseType="blob",e.onload=function(){a(e.response,c,d)},e.onerror=function(){console.error("could not download file")},e.send()}function d(a){var b=new XMLHttpRequest;return b.open("HEAD",a,!1),b.send(),200<=b.status&&299>=b.status}function e(a){try{a.dispatchEvent(new MouseEvent("click"))}catch(c){var b=document.createEvent("MouseEvents");b.initMouseEvent("click",!0,!0,window,0,0,0,80,20,!1,!1,!1,!1,0,null),a.dispatchEvent(b)}}var f="object"==typeof window&&window.window===window?window:"object"==typeof self&&self.self===self?self:"object"==typeof global&&global.global===global?global:void 0,a=f.saveAs||"object"!=typeof window||window!==f?function(){}:"download"in HTMLAnchorElement.prototype?function(b,g,h){var i=f.URL||f.webkitURL,j=document.createElement("a");g=g||b.name||"download",j.download=g,j.rel="noopener","string"==typeof b?(j.href=b,j.origin===location.origin?e(j):d(j.href)?c(b,g,h):e(j,j.target="_blank")):(j.href=i.createObjectURL(b),setTimeout(function(){i.revokeObjectURL(j.href)},4E4),setTimeout(function(){e(j)},0))}:"msSaveOrOpenBlob"in navigator?function(f,g,h){if(g=g||f.name||"download","string"!=typeof f)navigator.msSaveOrOpenBlob(b(f,h),g);else if(d(f))c(f,g,h);else{var i=document.createElement("a");i.href=f,i.target="_blank",setTimeout(function(){e(i)})}}:function(a,b,d,e){if(e=e||open("","_blank"),e&&(e.document.title=e.document.body.innerText="downloading..."),"string"==typeof a)return c(a,b,d);var g="application/octet-stream"===a.type,h=/constructor/i.test(f.HTMLElement)||f.safari,i=/CriOS\/[\d]+/.test(navigator.userAgent);if((i||g&&h)&&"object"==typeof FileReader){var j=new FileReader;j.onloadend=function(){var a=j.result;a=i?a:a.replace(/^data:[^;]*;/,"data:attachment/file;"),e?e.location.href=a:location=a,e=null},j.readAsDataURL(a)}else{var k=f.URL||f.webkitURL,l=k.createObjectURL(a);e?e.location=l:location.href=l,e=null,setTimeout(function(){k.revokeObjectURL(l)},4E4)}};f.saveAs=a.saveAs=a,"undefined"!=typeof module&&(module.exports=a)});$scope.VarToFile=function(datavar,filename){var blob=new Blob([datavar],{type:"text/plain;charset=utf-8"});saveAs(blob,filename);};!function(a){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=a();else if("function"==typeof define&&define.amd)define([],a);else{var b;b="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,b.mexp=a()}}(function(){return function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c?c:a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}({1:[function(a,b,c){var d=a("./postfix_evaluator.js");d.prototype.formulaEval=function(){"use strict";for(var a,b,c,d=[],e=this.value,f=0;f<e.length;f++)1===e[f].type||3===e[f].type?d.push({value:3===e[f].type?e[f].show:e[f].value,type:1}):13===e[f].type?d.push({value:e[f].show,type:1}):0===e[f].type?d[d.length-1]={value:e[f].show+("-"!=e[f].show?"(":"")+d[d.length-1].value+("-"!=e[f].show?")":""),type:0}:7===e[f].type?d[d.length-1]={value:(1!=d[d.length-1].type?"(":"")+d[d.length-1].value+(1!=d[d.length-1].type?")":"")+e[f].show,type:7}:10===e[f].type?(a=d.pop(),b=d.pop(),"P"===e[f].show||"C"===e[f].show?d.push({value:"<sup>"+b.value+"</sup>"+e[f].show+"<sub>"+a.value+"</sub>",type:10}):d.push({value:(1!=b.type?"(":"")+b.value+(1!=b.type?")":"")+"<sup>"+a.value+"</sup>",type:1})):2===e[f].type||9===e[f].type?(a=d.pop(),b=d.pop(),d.push({value:(1!=b.type?"(":"")+b.value+(1!=b.type?")":"")+e[f].show+(1!=a.type?"(":"")+a.value+(1!=a.type?")":""),type:e[f].type})):12===e[f].type&&(a=d.pop(),b=d.pop(),c=d.pop(),d.push({value:e[f].show+"("+c.value+","+b.value+","+a.value+")",type:12}));return d[0].value},b.exports=d},{"./postfix_evaluator.js":5}],2:[function(a,b,c){function d(a,b){for(var c=0;c<a.length;c++)a[c]+=b;return a}function e(a,b,c,d){for(var e=0;e<d;e++)if(a[c+e]!==b[e])return!1;return!0}var f=a("./math_function.js"),g=["sin","cos","tan","pi","(",")","P","C","asin","acos","atan","7","8","9","int","cosh","acosh","ln","^","root","4","5","6","/","!","tanh","atanh","Mod","1","2","3","*","sinh","asinh","e","log","0",".","+","-",",","Sigma","n","Pi","pow"],h=["sin","cos","tan","&pi;","(",")","P","C","asin","acos","atan","7","8","9","Int","cosh","acosh"," ln","^","root","4","5","6","&divide;","!","tanh","atanh"," Mod ","1","2","3","&times;","sinh","asinh","e"," log","0",".","+","-",",","&Sigma;","n","&Pi;","pow"],i=[f.math.sin,f.math.cos,f.math.tan,"PI","(",")",f.math.P,f.math.C,f.math.asin,f.math.acos,f.math.atan,"7","8","9",Math.floor,f.math.cosh,f.math.acosh,Math.log,Math.pow,Math.sqrt,"4","5","6",f.math.div,f.math.fact,f.math.tanh,f.math.atanh,f.math.mod,"1","2","3",f.math.mul,f.math.sinh,f.math.asinh,"E",f.math.log,"0",".",f.math.add,f.math.sub,",",f.math.sigma,"n",f.math.Pi,Math.pow],j={0:11,1:0,2:3,3:0,4:0,5:0,6:0,7:11,8:11,9:1,10:10,11:0,12:11,13:0},k=[0,0,0,3,4,5,10,10,0,0,0,1,1,1,0,0,0,0,10,0,1,1,1,2,7,0,0,2,1,1,1,2,0,0,3,0,1,6,9,9,11,12,13,12,8],l={0:!0,1:!0,3:!0,4:!0,6:!0,8:!0,9:!0,12:!0,13:!0},m={0:!0,1:!0,2:!0,3:!0,4:!0,5:!0,6:!0,7:!0,8:!0,9:!0,10:!0,11:!0,12:!0,13:!0},n={0:!0,3:!0,4:!0,8:!0,12:!0,13:!0},o={},p={0:!0,1:!0,3:!0,4:!0,6:!0,8:!0,12:!0,13:!0},q={1:!0},r=[[],["1","2","3","7","8","9","4","5","6","+","-","*","/","(",")","^","!","P","C","e","0",".",",","n"],["pi","ln","Pi"],["sin","cos","tan","Del","int","Mod","log","pow"],["asin","acos","atan","cosh","root","tanh","sinh"],["acosh","atanh","asinh","Sigma"]];f.addToken=function(a){for(var b=0;b<a.length;b++){var c=a[b].token.length,d=-1;if(c<r.length)for(var e=0;e<r[c].length;e++)if(a[b].token===r[c][e]){d=g.indexOf(r[c][e]);break}d===-1?(g.push(a[b].token),k.push(a[b].type),r.length<=a[b].token.length&&(r[a[b].token.length]=[]),r[a[b].token.length].push(a[b].token),i.push(a[b].value),h.push(a[b].show)):(g[d]=a[b].token,k[d]=a[b].type,i[d]=a[b].value,h[d]=a[b].show)}},f.lex=function(a,b){"use strict";var c,s,t,u,v={value:f.math.changeSign,type:0,pre:21,show:"-"},w={value:")",show:")",type:5,pre:0},x={value:"(",type:4,pre:0,show:"("},y=[x],z=[],A=a,B=0,C=l,D=0,E=o,F="";"undefined"!=typeof b&&f.addToken(b);var G={};for(s=0;s<A.length;s++)if(" "!==A[s]){for(c="",t=A.length-s>r.length-2?r.length-1:A.length-s;t>0;t--)for(u=0;u<r[t].length;u++)e(A,r[t][u],s,t)&&(c=r[t][u],u=r[t].length,t=0);if(s+=c.length-1,""===c)throw new f.Exception("Can't understand after "+A.slice(s));var H,I=g.indexOf(c),J=c,K=k[I],L=i[I],M=j[K],N=h[I],O=y[y.length-1];for(H=z.length;H--&&0===z[H];)if([0,2,3,5,9,11,12,13].indexOf(K)!==-1){if(C[K]!==!0)throw new f.Exception(c+" is not allowed after "+F);y.push(w),C=m,E=p,d(z,-1).pop()}if(C[K]!==!0)throw new f.Exception(c+" is not allowed after "+F);if(E[K]===!0&&(K=2,L=f.math.mul,N="&times;",M=3,s-=c.length),G={value:L,type:K,pre:M,show:N},0===K)C=l,E=o,d(z,2).push(2),y.push(G),y.push(x);else if(1===K)1===O.type?(O.value+=L,d(z,1)):y.push(G),C=m,E=n;else if(2===K)C=l,E=o,d(z,2),y.push(G);else if(3===K)y.push(G),C=m,E=p;else if(4===K)B+=z.length,z=[],D++,C=l,E=o,y.push(G);else if(5===K){if(!D)throw new f.Exception("Closing parenthesis are more than opening one, wait What!!!");for(;B--;)y.push(w);B=0,D--,C=m,E=p,y.push(G)}else if(6===K){if(O.hasDec)throw new f.Exception("Two decimals are not allowed in one number");1!==O.type&&(O={value:0,type:1,pre:0},y.push(O),d(z,-1)),C=q,d(z,1),E=o,O.value+=L,O.hasDec=!0}else 7===K&&(C=m,E=p,d(z,1),y.push(G));8===K?(C=l,E=o,d(z,4).push(4),y.push(G),y.push(x)):9===K?(9===O.type?O.value===f.math.add?(O.value=L,O.show=N,d(z,1)):O.value===f.math.sub&&"-"===N&&(O.value=f.math.add,O.show="+",d(z,1)):5!==O.type&&7!==O.type&&1!==O.type&&3!==O.type&&13!==O.type?"-"===J&&(C=l,E=o,d(z,2).push(2),y.push(v),y.push(x)):(y.push(G),d(z,2)),C=l,E=o):10===K?(C=l,E=o,d(z,2),y.push(G)):11===K?(C=l,E=o,y.push(G)):12===K?(C=l,E=o,d(z,6).push(6),y.push(G),y.push(x)):13===K&&(C=m,E=p,y.push(G)),d(z,-1),F=c}for(H=z.length;H--&&0===z[H];)y.push(w),d(z,-1).pop();if(C[5]!==!0)throw new f.Exception("complete the expression");for(;D--;)y.push(w);return y.push(w),new f(y)},b.exports=f},{"./math_function.js":3}],3:[function(a,b,c){var d=function(a){this.value=a};d.math={isDegree:!0,acos:function(a){return d.math.isDegree?180/Math.PI*Math.acos(a):Math.acos(a)},add:function(a,b){return a+b},asin:function(a){return d.math.isDegree?180/Math.PI*Math.asin(a):Math.asin(a)},atan:function(a){return d.math.isDegree?180/Math.PI*Math.atan(a):Math.atan(a)},acosh:function(a){return Math.log(a+Math.sqrt(a*a-1))},asinh:function(a){return Math.log(a+Math.sqrt(a*a+1))},atanh:function(a){return Math.log((1+a)/(1-a))},C:function(a,b){var c=1,e=a-b,f=b;f<e&&(f=e,e=b);for(var g=f+1;g<=a;g++)c*=g;return c/d.math.fact(e)},changeSign:function(a){return-a},cos:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.cos(a)},cosh:function(a){return(Math.pow(Math.E,a)+Math.pow(Math.E,-1*a))/2},div:function(a,b){return a/b},fact:function(a){if(a%1!==0)return"NaN";for(var b=1,c=2;c<=a;c++)b*=c;return b},inverse:function(a){return 1/a},log:function(a){return Math.log(a)/Math.log(10)},mod:function(a,b){return a%b},mul:function(a,b){return a*b},P:function(a,b){for(var c=1,d=Math.floor(a)-Math.floor(b)+1;d<=Math.floor(a);d++)c*=d;return c},Pi:function(a,b,c){for(var d=1,e=a;e<=b;e++)d*=Number(c.postfixEval({n:e}));return d},pow10x:function(a){for(var b=1;a--;)b*=10;return b},sigma:function(a,b,c){for(var d=0,e=a;e<=b;e++)d+=Number(c.postfixEval({n:e}));return d},sin:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.sin(a)},sinh:function(a){return(Math.pow(Math.E,a)-Math.pow(Math.E,-1*a))/2},sub:function(a,b){return a-b},tan:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.tan(a)},tanh:function(a){return d.sinha(a)/d.cosha(a)},toRadian:function(a){return a*Math.PI/180}},d.Exception=function(a){this.message=a},b.exports=d},{}],4:[function(a,b,c){var d=a("./lexer.js");d.prototype.toPostfix=function(){"use strict";for(var a,b,c,e,f,g=[],h=[{value:"(",type:4,pre:0}],i=this.value,j=1;j<i.length;j++)if(1===i[j].type||3===i[j].type||13===i[j].type)1===i[j].type&&(i[j].value=Number(i[j].value)),g.push(i[j]);else if(4===i[j].type)h.push(i[j]);else if(5===i[j].type)for(;4!==(b=h.pop()).type;)g.push(b);else if(11===i[j].type){for(;4!==(b=h.pop()).type;)g.push(b);h.push(b)}else{a=i[j],e=a.pre,f=h[h.length-1],c=f.pre;var k="Math.pow"==f.value&&"Math.pow"==a.value;if(e>c)h.push(a);else{for(;c>=e&&!k||k&&e<c;)b=h.pop(),f=h[h.length-1],g.push(b),c=f.pre,k="Math.pow"==a.value&&"Math.pow"==f.value;h.push(a)}}return new d(g)},b.exports=d},{"./lexer.js":2}],5:[function(a,b,c){var d=a("./postfix.js");d.prototype.postfixEval=function(a){"use strict";a=a||{},a.PI=Math.PI,a.E=Math.E;for(var b,c,e,f=[],g=this.value,h="undefined"!=typeof a.n,i=0;i<g.length;i++)1===g[i].type?f.push({value:g[i].value,type:1}):3===g[i].type?f.push({value:a[g[i].value],type:1}):0===g[i].type?"undefined"==typeof f[f.length-1].type?f[f.length-1].value.push(g[i]):f[f.length-1].value=g[i].value(f[f.length-1].value):7===g[i].type?"undefined"==typeof f[f.length-1].type?f[f.length-1].value.push(g[i]):f[f.length-1].value=g[i].value(f[f.length-1].value):8===g[i].type?(b=f.pop(),c=f.pop(),f.push({type:1,value:g[i].value(c.value,b.value)})):10===g[i].type?(b=f.pop(),c=f.pop(),"undefined"==typeof c.type?(c.value=c.concat(b),c.value.push(g[i]),f.push(c)):"undefined"==typeof b.type?(b.unshift(c),b.push(g[i]),f.push(b)):f.push({type:1,value:g[i].value(c.value,b.value)})):2===g[i].type||9===g[i].type?(b=f.pop(),c=f.pop(),"undefined"==typeof c.type?(console.log(c),c=c.concat(b),c.push(g[i]),f.push(c)):"undefined"==typeof b.type?(b.unshift(c),b.push(g[i]),f.push(b)):f.push({type:1,value:g[i].value(c.value,b.value)})):12===g[i].type?(b=f.pop(),"undefined"!=typeof b.type&&(b=[b]),c=f.pop(),e=f.pop(),f.push({type:1,value:g[i].value(e.value,c.value,new d(b))})):13===g[i].type&&(h?f.push({value:a[g[i].value],type:3}):f.push([g[i]]));if(f.length>1)throw new d.exception("Uncaught Syntax error");return f[0].value>1e15?"Infinity":parseFloat(f[0].value.toFixed(15))},d.eval=function(a,b,c){return"undefined"==typeof b?this.lex(a).toPostfix().postfixEval():"undefined"==typeof c?"undefined"!=typeof b.length?this.lex(a,b).toPostfix().postfixEval():this.lex(a).toPostfix().postfixEval(b):this.lex(a,b).toPostfix().postfixEval(c)},b.exports=d},{"./postfix.js":4}]},{},[1])(1)});$scope.Calculate=function(formula,decimals){var numero=mexp.eval(formula);if(decimals!=-1){potencia=Math.pow(10,decimals);numero=Math.round(numero*potencia)/potencia;}return numero;};$(document).mousemove(function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.pageX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.pageY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;var sx=((evt.pageX+$(window).scrollLeft())/$App.NAB.AppScale);var sy=((evt.pageY+$(window).scrollTop())/$App.NAB.AppScale);$App.NAB.MouseX=Math.round(x);$App.NAB.MouseY=Math.round(y);$App.NAB.MouseScreenX=Math.round(sx);$App.NAB.MouseScreenY=Math.round(sy);});$(document).on("touchmove",function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.touches[0].clientX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.touches[0].clientY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;$App.NAB.TouchX=Math.round(x);$App.NAB.TouchY=Math.round(y);});$(document).on("touchstart",function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.touches[0].clientX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.touches[0].clientY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;$App.NAB.TouchX=Math.round(x);$App.NAB.TouchY=Math.round(y);});
-$App.NAB={PageList:["Temphome","Indexwrite","Records-2026","CopyAll","Speed01","Speed02","Speed03","Speed04","Speed05","Speed06","Speed07","Speed08","Speed10","Speed11","Speed09","Speed12","Speed13","Speed14","Speed15","Speed16","Speed17","Speed18","Speed19","Speed20","Speed21","Speed22","Speed23","Speed24","Speed25","Speed26","Speed27","Speed28","Speed29","Speed30","Speed31","Speed32","HomeTiles","TNeoAppPage11","Health","Homestuff","WorkDesktop","HowToV3","Tentinastorm","fiveyearplan","TILES","Project1","Project1pa","Projectaa","Projectab","Projectac","Projectad","Project1pb","Project1pc","Project1pd","Project1pe","Project1pf","Project1pg","Project1ph","Project1pi","Project1pj","Project1pk","Project1pl","Project1pm","Project1pn","Project1pfo","Project1pp","Project1pq","Project1pr","Project1ps","Project1pft","Project1pu","Project1pv","Project1pw","Project1px","Project2","Projectaa2","Projectab2","Projectac2","Projectad2","Project2pa","Project2pb","Project2pc","Project2pd","Project2pe","Project2pf","Project2pg","Project2ph","Project2pi","Project2pj","Project2pk","Project2pl","Project2pm","Project2pn","C-A-Z","Workstuff-A","Workstuff-B","Workstuff-C","Prayer","Next","DailyReps","Home","Templates","Workstuff-D","VERSION","ResetRules","Resetoverview","ResetNotes","Template001","Template1setup","KeepJIC","ResetNew","Reset","Stages","Lanes","Me","bounce","P012-Index-Cards-Read1"],PageEnterEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageCount:117,PageExitEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageNumber:1,AppScale:1,PageID:"",Hour:"",Hour24:"",Minute:"",Second:"",Time:"",Time24:"",DateShort:"",DateLong:"",DateFull:"",Month:"",MonthNum:"",WeekNum:"",Day:"",DayNum:"",Year:"",ClientWidth:$window.innerWidth,ClientHeight:$window.innerHeight,WindowWidth:$window.outerWidth,WindowHeight:$window.outerHeight,Orientation:$scope.GetOrientation(),OperatingSystem:"",$Watches:{},$Timers:{},$Audio:{}};$scope.__doUpdate=function(){var Now=new Date();$App.NAB.Hour=$filter("date")(Now,"h");$App.NAB.Hour24=$filter("date")(Now,"H");$App.NAB.Minute=$filter("date")(Now,"mm");$App.NAB.Second=$filter("date")(Now,"ss");$App.NAB.Time=$filter("date")(Now,"mediumTime");$App.NAB.Time24=$filter("date")(Now,"H:mm:ss");$App.NAB.DateShort=$filter("date")(Now,"shortDate");$App.NAB.DateLong=$filter("date")(Now,"longDate");$App.NAB.DateFull=$filter("date")(Now,"fullDate");$App.NAB.Month=$filter("date")(Now,"MMMM");$App.NAB.MonthNum=$filter("date")(Now,"M");$App.NAB.WeekNum=$filter("date")(Now,"w");$App.NAB.Day=$filter("date")(Now,"EEEE");$App.NAB.DayNum=$filter("date")(Now,"d");$App.NAB.Year=$filter("date")(Now,"yyyy");};$scope.__doOrientationChange=function(){$App.NAB.Orientation=$scope.GetOrientation();};$scope.__doResize=function(){$App.NAB.ClientWidth=$window.innerWidth;$App.NAB.ClientHeight=$window.innerHeight;$App.NAB.WindowWidth=$window.outerWidth;$App.NAB.WindowHeight=$window.outerHeight;};$scope.__init=function(){angular.element($window).bind("orientationchange.app",function(){$timeout($scope.__doOrientationChange);});angular.element($window).bind("resize.app",function(){$timeout($scope.__doResize);});$interval($scope.__doUpdate,1000);$App.NAB.OperatingSystem=GetPlatform();$scope.__doUpdate();};
-$scope.Temphome_pageenter = function() {$App.VERSION = "v3.906";
+$App.NAB={PageList:["Temphome","Indexwrite","Records-2026","CopyAll","Speed01","Speed03","Speed04","Speed02","Speed05","Speed06","Speed07","Speed08","Speed10","Speed11","Speed09","Speed12","Speed13","Speed14","Speed15","Speed16","Speed17","Speed18","Speed19","Speed20","Speed21","Speed22","Speed23","Speed24","Speed25","Speed26","Speed27","Speed28","Speed29","Speed30","Speed31","Speed32","HomeTiles","TNeoAppPage11","Health","Homestuff","WorkDesktop","HowToV3","Tentinastorm","fiveyearplan","TILES","Project1","Project1pa","Projectaa","Projectab","Projectac","Projectad","Project1pb","Project1pc","Project1pd","Project1pe","Project1pf","Project1pg","Project1ph","Project1pi","Project1pj","Project1pk","Project1pl","Project1pm","Project1pn","Project1pfo","Project1pp","Project1pq","Project1pr","Project1ps","Project1pft","Project1pu","Project1pv","Project1pw","Project1px","Project2","Projectaa2","Projectab2","Projectac2","Projectad2","Project2pa","Project2pb","Project2pc","Project2pd","Project2pe","Project2pf","Project2pg","Project2ph","Project2pi","Project2pj","Project2pk","Project2pl","Project2pm","Project2pn","C-A-Z","Workstuff-A","Workstuff-B","Workstuff-C","Prayer","Next","DailyReps","Home","Templates","Workstuff-D","VERSION","ResetRules","Resetoverview","ResetNotes","Template001","Template1setup","KeepJIC","ResetNew","Reset","Stages","Lanes","Me","bounce","P012-Index-Cards-Read1"],PageEnterEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageCount:117,PageExitEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageNumber:1,AppScale:1,PageID:"",Hour:"",Hour24:"",Minute:"",Second:"",Time:"",Time24:"",DateShort:"",DateLong:"",DateFull:"",Month:"",MonthNum:"",WeekNum:"",Day:"",DayNum:"",Year:"",ClientWidth:$window.innerWidth,ClientHeight:$window.innerHeight,WindowWidth:$window.outerWidth,WindowHeight:$window.outerHeight,Orientation:$scope.GetOrientation(),OperatingSystem:"",$Watches:{},$Timers:{},$Audio:{}};$scope.__doUpdate=function(){var Now=new Date();$App.NAB.Hour=$filter("date")(Now,"h");$App.NAB.Hour24=$filter("date")(Now,"H");$App.NAB.Minute=$filter("date")(Now,"mm");$App.NAB.Second=$filter("date")(Now,"ss");$App.NAB.Time=$filter("date")(Now,"mediumTime");$App.NAB.Time24=$filter("date")(Now,"H:mm:ss");$App.NAB.DateShort=$filter("date")(Now,"shortDate");$App.NAB.DateLong=$filter("date")(Now,"longDate");$App.NAB.DateFull=$filter("date")(Now,"fullDate");$App.NAB.Month=$filter("date")(Now,"MMMM");$App.NAB.MonthNum=$filter("date")(Now,"M");$App.NAB.WeekNum=$filter("date")(Now,"w");$App.NAB.Day=$filter("date")(Now,"EEEE");$App.NAB.DayNum=$filter("date")(Now,"d");$App.NAB.Year=$filter("date")(Now,"yyyy");};$scope.__doOrientationChange=function(){$App.NAB.Orientation=$scope.GetOrientation();};$scope.__doResize=function(){$App.NAB.ClientWidth=$window.innerWidth;$App.NAB.ClientHeight=$window.innerHeight;$App.NAB.WindowWidth=$window.outerWidth;$App.NAB.WindowHeight=$window.outerHeight;};$scope.__init=function(){angular.element($window).bind("orientationchange.app",function(){$timeout($scope.__doOrientationChange);});angular.element($window).bind("resize.app",function(){$timeout($scope.__doResize);});$interval($scope.__doUpdate,1000);$App.NAB.OperatingSystem=GetPlatform();$scope.__doUpdate();};
+$scope.Temphome_pageenter = function() {$App.VERSION = "v3.907";
 $App.zt126 = localStorage.getItem("zt126");
 $App.zt226 = localStorage.getItem("zt226");
 $App.zt326 = localStorage.getItem("zt326");
@@ -531,6 +531,46 @@ $App.v4a2 = localStorage.getItem("v4a2");
 $App.v4a3 = localStorage.getItem("v4a3");
 $App.v4a4 = localStorage.getItem("v4a4");
 $App.v4a5 = localStorage.getItem("v4a5");
+$App.w1a1 = localStorage.getItem("w1a1");
+$App.w1a2 = localStorage.getItem("w1a2");
+$App.w1a3 = localStorage.getItem("w1a3");
+$App.w1a4 = localStorage.getItem("w1a4");
+$App.w1a5 = localStorage.getItem("w1a5");
+$App.w2a1 = localStorage.getItem("w2a1");
+$App.w2a2 = localStorage.getItem("w2a2");
+$App.w2a3 = localStorage.getItem("w2a3");
+$App.w2a4 = localStorage.getItem("w2a4");
+$App.w2a5 = localStorage.getItem("w2a5");
+$App.x1a1 = localStorage.getItem("x1a1");
+$App.x1a2 = localStorage.getItem("x1a2");
+$App.x1a3 = localStorage.getItem("x1a3");
+$App.x1a4 = localStorage.getItem("x1a4");
+$App.x1a5 = localStorage.getItem("x1a5");
+$App.x2a1 = localStorage.getItem("x2a1");
+$App.x2a2 = localStorage.getItem("x2a2");
+$App.x2a3 = localStorage.getItem("x2a3");
+$App.x2a4 = localStorage.getItem("x2a4");
+$App.x2a5 = localStorage.getItem("x2a5");
+$App.y1a1 = localStorage.getItem("y1a1");
+$App.y1a2 = localStorage.getItem("y1a2");
+$App.y1a3 = localStorage.getItem("y1a3");
+$App.y1a4 = localStorage.getItem("y1a4");
+$App.y1a5 = localStorage.getItem("y1a5");
+$App.y2a1 = localStorage.getItem("y2a1");
+$App.y2a2 = localStorage.getItem("y2a2");
+$App.y2a3 = localStorage.getItem("y2a3");
+$App.y2a4 = localStorage.getItem("y2a4");
+$App.y2a5 = localStorage.getItem("y2a5");
+$App.z1a1 = localStorage.getItem("z1a1");
+$App.z1a2 = localStorage.getItem("z1a2");
+$App.z1a3 = localStorage.getItem("z1a3");
+$App.z1a4 = localStorage.getItem("z1a4");
+$App.z1a5 = localStorage.getItem("z1a5");
+$App.z2a1 = localStorage.getItem("z2a1");
+$App.z2a2 = localStorage.getItem("z2a2");
+$App.z2a3 = localStorage.getItem("z2a3");
+$App.z2a4 = localStorage.getItem("z2a4");
+$App.z2a5 = localStorage.getItem("z2a5");
 $App.Speed01link01 = localStorage.getItem("Speed01link01");
 $App.speed1ref = localStorage.getItem("speed1ref");
 $App.speed1refb = localStorage.getItem("speed1refb");
@@ -569,482 +609,482 @@ $App.aa30 = localStorage.getItem("aa30");
 $App.aa31 = localStorage.getItem("aa31");
 $App.aa32 = localStorage.getItem("aa32");
 if ($App.aa1 == "r") {
-$scope.SetObjectStyle("Ellipse1","fill","red");
+$scope.SetObjectStyle("Headline10001","color","red");
 $scope.SetObjectStyle("Ellipse101","fill","red");
 } else {
 };
 if ($App.aa1 == "g") {
-$scope.SetObjectStyle("Ellipse1","fill","green");
+$scope.SetObjectStyle("Headline10001","color","green");
 $scope.SetObjectStyle("Ellipse101","fill","green");
 } else {
 };
 if ($App.aa1 == "b") {
-$scope.SetObjectStyle("Ellipse1","fill","blue");
+$scope.SetObjectStyle("Headline10001","color","blue");
 $scope.SetObjectStyle("Ellipse101","fill","blue");
 } else {
 };
 if ($App.aa2 == "r") {
-$scope.SetObjectStyle("Ellipse2","fill","red");
+$scope.SetObjectStyle("Headline10002","color","red");
 $scope.SetObjectStyle("Ellipse102","fill","red");
 } else {
 };
 if ($App.aa2 == "g") {
-$scope.SetObjectStyle("Ellipse2","fill","green");
+$scope.SetObjectStyle("Headline10002","color","green");
 $scope.SetObjectStyle("Ellipse102","fill","green");
 } else {
 };
 if ($App.aa2 == "b") {
-$scope.SetObjectStyle("Ellipse2","fill","blue");
+$scope.SetObjectStyle("Headline10002","color","blue");
 $scope.SetObjectStyle("Ellipse102","fill","blue");
 } else {
 };
 if ($App.aa3 == "r") {
-$scope.SetObjectStyle("Ellipse3","fill","red");
+$scope.SetObjectStyle("Headline10003","color","red");
 $scope.SetObjectStyle("Ellipse103","fill","red");
 } else {
 };
 if ($App.aa3 == "g") {
-$scope.SetObjectStyle("Ellipse3","fill","green");
+$scope.SetObjectStyle("Headline10003","color","green");
 $scope.SetObjectStyle("Ellipse103","fill","green");
 } else {
 };
 if ($App.aa3 == "b") {
-$scope.SetObjectStyle("Ellipse3","fill","blue");
+$scope.SetObjectStyle("Headline10003","color","blue");
 $scope.SetObjectStyle("Ellipse103","fill","blue");
 } else {
 };
 if ($App.aa4 == "r") {
-$scope.SetObjectStyle("Ellipse4","fill","red");
+$scope.SetObjectStyle("Headline10004","color","red");
 $scope.SetObjectStyle("Ellipse104","fill","red");
 } else {
 };
 if ($App.aa4 == "g") {
-$scope.SetObjectStyle("Ellipse4","fill","green");
+$scope.SetObjectStyle("Headline10004","color","green");
 $scope.SetObjectStyle("Ellipse104","fill","green");
 } else {
 };
 if ($App.aa4 == "b") {
-$scope.SetObjectStyle("Ellipse4","fill","blue");
+$scope.SetObjectStyle("Headline10004","color","blue");
 $scope.SetObjectStyle("Ellipse104","fill","blue");
 } else {
 };
 if ($App.aa5 == "r") {
-$scope.SetObjectStyle("Ellipse5","fill","red");
+$scope.SetObjectStyle("Headline10005","color","red");
 $scope.SetObjectStyle("Ellipse105","fill","red");
 } else {
 };
 if ($App.aa5 == "g") {
-$scope.SetObjectStyle("Ellipse5","fill","green");
+$scope.SetObjectStyle("Headline10005","color","green");
 $scope.SetObjectStyle("Ellipse105","fill","green");
 } else {
 };
 if ($App.aa5 == "b") {
-$scope.SetObjectStyle("Ellipse5","fill","blue");
+$scope.SetObjectStyle("Headline10005","color","blue");
 $scope.SetObjectStyle("Ellipse105","fill","blue");
 } else {
 };
 if ($App.aa5 == "r") {
-$scope.SetObjectStyle("Ellipse6","fill","red");
+$scope.SetObjectStyle("Headline10006","color","red");
 $scope.SetObjectStyle("Ellipse106","fill","red");
 } else {
 };
 if ($App.aa6 == "g") {
-$scope.SetObjectStyle("Ellipse6","fill","green");
+$scope.SetObjectStyle("Headline10006","color","green");
 $scope.SetObjectStyle("Ellipse106","fill","green");
 } else {
 };
 if ($App.aa6 == "b") {
-$scope.SetObjectStyle("Ellipse6","fill","blue");
+$scope.SetObjectStyle("Headline10006","color","blue");
 $scope.SetObjectStyle("Ellipse106","fill","blue");
 } else {
 };
 if ($App.aa7 == "r") {
-$scope.SetObjectStyle("Ellipse7","fill","red");
+$scope.SetObjectStyle("Headline10007","color","red");
 $scope.SetObjectStyle("Ellipse107","fill","red");
 } else {
 };
 if ($App.aa7 == "g") {
-$scope.SetObjectStyle("Ellipse7","fill","green");
+$scope.SetObjectStyle("Headline10007","color","green");
 $scope.SetObjectStyle("Ellipse107","fill","green");
 } else {
 };
 if ($App.aa7 == "b") {
-$scope.SetObjectStyle("Ellipse7","fill","blue");
+$scope.SetObjectStyle("Headline10007","color","blue");
 $scope.SetObjectStyle("Ellipse107","fill","blue");
 } else {
 };
 if ($App.aa8 == "r") {
-$scope.SetObjectStyle("Ellipse8","fill","red");
+$scope.SetObjectStyle("Headline10008","color","red");
 $scope.SetObjectStyle("Ellipse108","fill","red");
 } else {
 };
 if ($App.aa8 == "g") {
-$scope.SetObjectStyle("Ellipse8","fill","green");
+$scope.SetObjectStyle("Headline10008","color","green");
 $scope.SetObjectStyle("Ellipse108","fill","green");
 } else {
 };
 if ($App.aa8 == "b") {
-$scope.SetObjectStyle("Ellipse8","fill","blue");
+$scope.SetObjectStyle("Headline10008","color","blue");
 $scope.SetObjectStyle("Ellipse108","fill","blue");
 } else {
 };
 if ($App.aa9 == "r") {
-$scope.SetObjectStyle("Ellipse9","fill","red");
+$scope.SetObjectStyle("Headline10009","color","red");
 $scope.SetObjectStyle("Ellipse109","fill","red");
 } else {
 };
 if ($App.aa9 == "g") {
-$scope.SetObjectStyle("Ellipse9","fill","green");
+$scope.SetObjectStyle("Headline10009","color","green");
 $scope.SetObjectStyle("Ellipse109","fill","green");
 } else {
 };
 if ($App.aa9 == "b") {
-$scope.SetObjectStyle("Ellipse9","fill","blue");
+$scope.SetObjectStyle("Headline10009","color","blue");
 $scope.SetObjectStyle("Ellipse109","fill","blue");
 } else {
 };
 if ($App.aa10 == "r") {
-$scope.SetObjectStyle("Ellipse10","fill","red");
+$scope.SetObjectStyle("Headline10010","color","red");
 $scope.SetObjectStyle("Ellipse110","fill","red");
 } else {
 };
 if ($App.aa10 == "g") {
-$scope.SetObjectStyle("Ellipse10","fill","green");
+$scope.SetObjectStyle("Headline10010","color","green");
 $scope.SetObjectStyle("Ellipse110","fill","green");
 } else {
 };
 if ($App.aa10 == "b") {
-$scope.SetObjectStyle("Ellipse10","fill","blue");
+$scope.SetObjectStyle("Headline10010","color","blue");
 $scope.SetObjectStyle("Ellipse110","fill","blue");
 } else {
 };
 if ($App.aa11 == "r") {
-$scope.SetObjectStyle("Ellipse11","fill","red");
+$scope.SetObjectStyle("Headline10011","color","red");
 $scope.SetObjectStyle("Ellipse111","fill","red");
 } else {
 };
 if ($App.aa11 == "g") {
-$scope.SetObjectStyle("Ellipse11","fill","green");
+$scope.SetObjectStyle("Headline10011","color","green");
 $scope.SetObjectStyle("Ellipse111","fill","green");
 } else {
 };
 if ($App.aa11 == "b") {
-$scope.SetObjectStyle("Ellipse11","fill","blue");
+$scope.SetObjectStyle("Headline10011","color","blue");
 $scope.SetObjectStyle("Ellipse111","fill","blue");
 } else {
 };
 if ($App.aa12 == "r") {
-$scope.SetObjectStyle("Ellipse12","fill","red");
+$scope.SetObjectStyle("Headline10012","color","red");
 $scope.SetObjectStyle("Ellipse112","fill","red");
 } else {
 };
 if ($App.aa12 == "g") {
-$scope.SetObjectStyle("Ellipse12","fill","green");
+$scope.SetObjectStyle("Headline10012","color","green");
 $scope.SetObjectStyle("Ellipse112","fill","green");
 } else {
 };
 if ($App.aa12 == "b") {
-$scope.SetObjectStyle("Ellipse12","fill","blue");
+$scope.SetObjectStyle("Headline10012","color","blue");
 $scope.SetObjectStyle("Ellipse112","fill","blue");
 } else {
 };
 if ($App.aa13 == "r") {
-$scope.SetObjectStyle("Ellipse13","fill","red");
+$scope.SetObjectStyle("Headline10013","color","red");
 $scope.SetObjectStyle("Ellipse113","fill","red");
 } else {
 };
 if ($App.aa13 == "g") {
-$scope.SetObjectStyle("Ellipse13","fill","green");
+$scope.SetObjectStyle("Headline10013","color","green");
 $scope.SetObjectStyle("Ellipse113","fill","green");
 } else {
 };
 if ($App.aa13 == "b") {
-$scope.SetObjectStyle("Ellipse13","fill","blue");
+$scope.SetObjectStyle("Headline10013","color","blue");
 $scope.SetObjectStyle("Ellipse113","fill","blue");
 } else {
 };
 if ($App.aa14 == "r") {
-$scope.SetObjectStyle("Ellipse14","fill","red");
+$scope.SetObjectStyle("Headline10014","color","red");
 $scope.SetObjectStyle("Ellipse114","fill","red");
 } else {
 };
 if ($App.aa14 == "g") {
-$scope.SetObjectStyle("Ellipse14","fill","green");
+$scope.SetObjectStyle("Headline10014","color","green");
 $scope.SetObjectStyle("Ellipse114","fill","green");
 } else {
 };
 if ($App.aa14 == "b") {
-$scope.SetObjectStyle("Ellipse14","fill","blue");
+$scope.SetObjectStyle("Headline10014","color","blue");
 $scope.SetObjectStyle("Ellipse114","fill","blue");
 } else {
 };
 if ($App.aa15 == "r") {
-$scope.SetObjectStyle("Ellipse15","fill","red");
+$scope.SetObjectStyle("Headline10015","color","red");
 $scope.SetObjectStyle("Ellipse115","fill","red");
 } else {
 };
 if ($App.aa15 == "g") {
-$scope.SetObjectStyle("Ellipse15","fill","green");
+$scope.SetObjectStyle("Headline10015","color","green");
 $scope.SetObjectStyle("Ellipse115","fill","green");
 } else {
 };
 if ($App.aa15 == "b") {
-$scope.SetObjectStyle("Ellipse15","fill","blue");
+$scope.SetObjectStyle("Headline10015","color","blue");
 $scope.SetObjectStyle("Ellipse115","fill","blue");
 } else {
 };
 if ($App.aa16 == "r") {
-$scope.SetObjectStyle("Ellipse16","fill","red");
+$scope.SetObjectStyle("Headline10016","color","red");
 $scope.SetObjectStyle("Ellipse116","fill","red");
 } else {
 };
 if ($App.aa16 == "g") {
-$scope.SetObjectStyle("Ellipse16","fill","green");
+$scope.SetObjectStyle("Headline10016","color","green");
 $scope.SetObjectStyle("Ellipse116","fill","green");
 } else {
 };
 if ($App.aa16 == "b") {
-$scope.SetObjectStyle("Ellipse16","fill","blue");
+$scope.SetObjectStyle("Headline10016","color","blue");
 $scope.SetObjectStyle("Ellipse116","fill","blue");
 } else {
 };
 if ($App.aa17 == "r") {
-$scope.SetObjectStyle("Ellipse17","fill","red");
+$scope.SetObjectStyle("Headline10017","color","red");
 $scope.SetObjectStyle("Ellipse117","fill","red");
 } else {
 };
 if ($App.aa17 == "g") {
-$scope.SetObjectStyle("Ellipse17","fill","green");
+$scope.SetObjectStyle("Headline10017","color","green");
 $scope.SetObjectStyle("Ellipse117","fill","green");
 } else {
 };
 if ($App.aa17 == "b") {
-$scope.SetObjectStyle("Ellipse17","fill","blue");
+$scope.SetObjectStyle("Headline10017","color","blue");
 $scope.SetObjectStyle("Ellipse117","fill","blue");
 } else {
 };
 if ($App.aa18 == "r") {
-$scope.SetObjectStyle("Ellipse18","fill","red");
+$scope.SetObjectStyle("Headline10018","color","red");
 $scope.SetObjectStyle("Ellipse118","fill","red");
 } else {
 };
 if ($App.aa18 == "g") {
-$scope.SetObjectStyle("Ellipse18","fill","green");
+$scope.SetObjectStyle("Headline10018","color","green");
 $scope.SetObjectStyle("Ellipse118","fill","green");
 } else {
 };
 if ($App.aa18 == "b") {
-$scope.SetObjectStyle("Ellipse18","fill","blue");
+$scope.SetObjectStyle("Headline10018","color","blue");
 $scope.SetObjectStyle("Ellipse118","fill","blue");
 } else {
 };
 if ($App.aa19 == "r") {
-$scope.SetObjectStyle("Ellipse19","fill","red");
+$scope.SetObjectStyle("Headline10019","color","red");
 $scope.SetObjectStyle("Ellipse119","fill","red");
 } else {
 };
 if ($App.aa19 == "g") {
-$scope.SetObjectStyle("Ellipse19","fill","green");
+$scope.SetObjectStyle("Headline10019","color","green");
 $scope.SetObjectStyle("Ellipse119","fill","green");
 } else {
 };
 if ($App.aa19 == "b") {
-$scope.SetObjectStyle("Ellipse19","fill","blue");
+$scope.SetObjectStyle("Headline10019","color","blue");
 $scope.SetObjectStyle("Ellipse119","fill","blue");
 } else {
 };
 if ($App.aa20 == "r") {
-$scope.SetObjectStyle("Ellipse20","fill","red");
+$scope.SetObjectStyle("Headline10020","color","red");
 $scope.SetObjectStyle("Ellipse120","fill","red");
 } else {
 };
 if ($App.aa20 == "g") {
-$scope.SetObjectStyle("Ellipse20","fill","green");
+$scope.SetObjectStyle("Headline10020","color","green");
 $scope.SetObjectStyle("Ellipse120","fill","green");
 } else {
 };
 if ($App.aa20 == "b") {
-$scope.SetObjectStyle("Ellipse20","fill","blue");
+$scope.SetObjectStyle("Headline10020","color","blue");
 $scope.SetObjectStyle("Ellipse120","fill","blue");
 } else {
 };
 if ($App.aa21 == "r") {
-$scope.SetObjectStyle("Ellipse21","fill","red");
+$scope.SetObjectStyle("Headline10021","color","red");
 $scope.SetObjectStyle("Ellipse121","fill","red");
 } else {
 };
 if ($App.aa21 == "g") {
-$scope.SetObjectStyle("Ellipse21","fill","green");
+$scope.SetObjectStyle("Headline10021","color","green");
 $scope.SetObjectStyle("Ellipse121","fill","green");
 } else {
 };
 if ($App.aa21 == "b") {
-$scope.SetObjectStyle("Ellipse21","fill","blue");
+$scope.SetObjectStyle("Headline10021","color","blue");
 $scope.SetObjectStyle("Ellipse121","fill","blue");
 } else {
 };
 if ($App.aa22 == "r") {
-$scope.SetObjectStyle("Ellipse22","fill","red");
+$scope.SetObjectStyle("Headline10022","color","red");
 $scope.SetObjectStyle("Ellipse122","fill","red");
 } else {
 };
 if ($App.aa22 == "g") {
-$scope.SetObjectStyle("Ellipse22","fill","green");
+$scope.SetObjectStyle("Headline10022","color","green");
 $scope.SetObjectStyle("Ellipse122","fill","green");
 } else {
 };
 if ($App.aa22 == "b") {
-$scope.SetObjectStyle("Ellipse22","fill","blue");
+$scope.SetObjectStyle("Headline10022","color","blue");
 $scope.SetObjectStyle("Ellipse122","fill","blue");
 } else {
 };
 if ($App.aa23 == "r") {
-$scope.SetObjectStyle("Ellipse23","fill","red");
+$scope.SetObjectStyle("Headline10023","color","red");
 $scope.SetObjectStyle("Ellipse123","fill","red");
 } else {
 };
 if ($App.aa23 == "g") {
-$scope.SetObjectStyle("Ellipse23","fill","green");
+$scope.SetObjectStyle("Headline10023","color","green");
 $scope.SetObjectStyle("Ellipse123","fill","green");
 } else {
 };
 if ($App.aa23 == "b") {
-$scope.SetObjectStyle("Ellipse23","fill","blue");
+$scope.SetObjectStyle("Headline10023","color","blue");
 $scope.SetObjectStyle("Ellipse123","fill","blue");
 } else {
 };
 if ($App.aa24 == "r") {
-$scope.SetObjectStyle("Ellipse24","fill","red");
+$scope.SetObjectStyle("Headline10024","color","red");
 $scope.SetObjectStyle("Ellipse124","fill","red");
 } else {
 };
 if ($App.aa24 == "g") {
-$scope.SetObjectStyle("Ellipse24","fill","green");
+$scope.SetObjectStyle("Headline10024","color","green");
 $scope.SetObjectStyle("Ellipse124","fill","green");
 } else {
 };
 if ($App.aa24 == "b") {
-$scope.SetObjectStyle("Ellipse24","fill","blue");
+$scope.SetObjectStyle("Headline10024","color","blue");
 $scope.SetObjectStyle("Ellipse124","fill","blue");
 } else {
 };
 if ($App.aa25 == "r") {
-$scope.SetObjectStyle("Ellipse25","fill","red");
+$scope.SetObjectStyle("Headline10025","color","red");
 $scope.SetObjectStyle("Ellipse125","fill","red");
 } else {
 };
 if ($App.aa25 == "g") {
-$scope.SetObjectStyle("Ellipse25","fill","green");
+$scope.SetObjectStyle("Headline10025","color","green");
 $scope.SetObjectStyle("Ellipse125","fill","green");
 } else {
 };
 if ($App.aa25 == "b") {
-$scope.SetObjectStyle("Ellipse25","fill","blue");
+$scope.SetObjectStyle("Headline10025","color","blue");
 $scope.SetObjectStyle("Ellipse125","fill","blue");
 } else {
 };
 if ($App.aa26 == "r") {
-$scope.SetObjectStyle("Ellipse26","fill","red");
+$scope.SetObjectStyle("Headline10026","color","red");
 $scope.SetObjectStyle("Ellipse126","fill","red");
 } else {
 };
 if ($App.aa26 == "g") {
-$scope.SetObjectStyle("Ellipse26","fill","green");
+$scope.SetObjectStyle("Headline10026","color","green");
 $scope.SetObjectStyle("Ellipse126","fill","green");
 } else {
 };
 if ($App.aa26 == "b") {
-$scope.SetObjectStyle("Ellipse26","fill","blue");
+$scope.SetObjectStyle("Headline10026","color","blue");
 $scope.SetObjectStyle("Ellipse126","fill","blue");
 } else {
 };
 if ($App.aa27 == "r") {
-$scope.SetObjectStyle("Ellipse27","fill","red");
+$scope.SetObjectStyle("Headline10027","color","red");
 $scope.SetObjectStyle("Ellipse127","fill","red");
 } else {
 };
 if ($App.aa27 == "g") {
-$scope.SetObjectStyle("Ellipse27","fill","green");
+$scope.SetObjectStyle("Headline10027","color","green");
 $scope.SetObjectStyle("Ellipse127","fill","green");
 } else {
 };
 if ($App.aa27 == "b") {
-$scope.SetObjectStyle("Ellipse27","fill","blue");
+$scope.SetObjectStyle("Headline10027","color","blue");
 $scope.SetObjectStyle("Ellipse127","fill","blue");
 } else {
 };
 if ($App.aa28 == "r") {
-$scope.SetObjectStyle("Ellipse28","fill","red");
+$scope.SetObjectStyle("Headline10028","color","red");
 $scope.SetObjectStyle("Ellipse128","fill","red");
 } else {
 };
 if ($App.aa28 == "g") {
-$scope.SetObjectStyle("Ellipse28","fill","green");
+$scope.SetObjectStyle("Headline10028","color","green");
 $scope.SetObjectStyle("Ellipse128","fill","green");
 } else {
 };
 if ($App.aa28 == "b") {
-$scope.SetObjectStyle("Ellipse28","fill","blue");
+$scope.SetObjectStyle("Headline10028","color","blue");
 $scope.SetObjectStyle("Ellipse128","fill","blue");
 } else {
 };
 if ($App.aa29 == "r") {
-$scope.SetObjectStyle("Ellipse29","fill","red");
+$scope.SetObjectStyle("Headline10029","color","red");
 $scope.SetObjectStyle("Ellipse129","fill","red");
 } else {
 };
 if ($App.aa29 == "g") {
-$scope.SetObjectStyle("Ellipse29","fill","green");
+$scope.SetObjectStyle("Headline10029","color","green");
 $scope.SetObjectStyle("Ellipse129","fill","green");
 } else {
 };
 if ($App.aa29 == "b") {
-$scope.SetObjectStyle("Ellipse29","fill","blue");
+$scope.SetObjectStyle("Headline10029","color","blue");
 $scope.SetObjectStyle("Ellipse129","fill","blue");
 } else {
 };
 if ($App.aa30 == "r") {
-$scope.SetObjectStyle("Ellipse30","fill","red");
+$scope.SetObjectStyle("Headline10030","color","red");
 $scope.SetObjectStyle("Ellipse130","fill","red");
 } else {
 };
 if ($App.aa30 == "g") {
-$scope.SetObjectStyle("Ellipse30","fill","green");
+$scope.SetObjectStyle("Headline10030","color","green");
 $scope.SetObjectStyle("Ellipse130","fill","green");
 } else {
 };
 if ($App.aa30 == "b") {
-$scope.SetObjectStyle("Ellipse30","fill","blue");
+$scope.SetObjectStyle("Headline10030","color","blue");
 $scope.SetObjectStyle("Ellipse130","fill","blue");
 } else {
 };
 if ($App.aa31 == "r") {
-$scope.SetObjectStyle("Ellipse31","fill","red");
+$scope.SetObjectStyle("Headline10031","color","red");
 $scope.SetObjectStyle("Ellipse131","fill","red");
 } else {
 };
 if ($App.aa31 == "g") {
-$scope.SetObjectStyle("Ellipse31","fill","green");
+$scope.SetObjectStyle("Headline10031","color","green");
 $scope.SetObjectStyle("Ellipse131","fill","green");
 } else {
 };
 if ($App.aa31 == "b") {
-$scope.SetObjectStyle("Ellipse31","fill","blue");
+$scope.SetObjectStyle("Headline10031","color","blue");
 $scope.SetObjectStyle("Ellipse131","fill","blue");
 } else {
 };
 if ($App.aa32 == "r") {
-$scope.SetObjectStyle("Ellipse32","fill","red");
+$scope.SetObjectStyle("Headline10032","color","red");
 $scope.SetObjectStyle("Ellipse132","fill","red");
 } else {
 };
 if ($App.aa32 == "g") {
-$scope.SetObjectStyle("Ellipse32","fill","green");
+$scope.SetObjectStyle("Headline10032","color","green");
 $scope.SetObjectStyle("Ellipse132","fill","green");
 } else {
 };
 if ($App.aa32 == "b") {
-$scope.SetObjectStyle("Ellipse32","fill","blue");
+$scope.SetObjectStyle("Headline10032","color","blue");
 $scope.SetObjectStyle("Ellipse132","fill","blue");
 } else {
 };
@@ -2609,31 +2649,39 @@ function debounce(func,wait,immediate){var timeout;return function(){var context
 NeoApp.controller("Temphome_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 1;
 $App.NAB.PageID = "Temphome";
+$scope.Headline10026_click = function() {neoTalkSpeak($App.speed26a, "", $App.Read1, $App.Read2);};
+$scope.Headline10027_click = function() {neoTalkSpeak($App.speed27a, "", $App.Read1, $App.Read2);};
+$scope.Headline10028_click = function() {neoTalkSpeak($App.speed28a, "", $App.Read1, $App.Read2);};
+$scope.Headline10025_click = function() {neoTalkSpeak($App.speed25a, "", $App.Read1, $App.Read2);};
+$scope.Headline10030_click = function() {neoTalkSpeak($App.speed30a, "", $App.Read1, $App.Read2);};
+$scope.Headline10031_click = function() {neoTalkSpeak($App.speed31a, "", $App.Read1, $App.Read2);};
+$scope.Headline10032_click = function() {neoTalkSpeak($App.speed32a, "", $App.Read1, $App.Read2);};
+$scope.Headline10029_click = function() {neoTalkSpeak($App.speed29a, "", $App.Read1, $App.Read2);};
+$scope.Headline10009_click = function() {neoTalkSpeak($App.speed09a, "", $App.Read1, $App.Read2);};
+$scope.Headline10011_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
+$scope.Headline10012_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
+$scope.Headline10006_click = function() {neoTalkSpeak($App.speed06a, "", $App.Read1, $App.Read2);};
+$scope.Headline10007_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
+$scope.Headline10008_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
+$scope.Headline10005_click = function() {neoTalkSpeak($App.speed05a, "", $App.Read1, $App.Read2);};
+$scope.Headline10002_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
+$scope.Headline10003_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
+$scope.Headline10004_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
+$scope.Headline10001_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
+$scope.Headline10014_click = function() {neoTalkSpeak($App.speed14a, "", $App.Read1, $App.Read2);};
+$scope.Headline10015_click = function() {neoTalkSpeak($App.speed15a, "", $App.Read1, $App.Read2);};
+$scope.Headline10016_click = function() {neoTalkSpeak($App.speed16a, "", $App.Read1, $App.Read2);};
+$scope.Headline10013_click = function() {neoTalkSpeak($App.speed13a, "", $App.Read1, $App.Read2);};
+$scope.Headline10019_click = function() {neoTalkSpeak($App.speed19a, "", $App.Read1, $App.Read2);};
+$scope.Headline10020_click = function() {neoTalkSpeak($App.speed20a, "", $App.Read1, $App.Read2);};
+$scope.Headline10017_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
+$scope.Headline10021_click = function() {neoTalkSpeak($App.speed21a, "", $App.Read1, $App.Read2);};
+$scope.Headline10010_click = function() {neoTalkSpeak($App.speed10a, "", $App.Read1, $App.Read2);};
+$scope.Headline10018_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
+$scope.Headline10022_click = function() {neoTalkSpeak($App.speed22a, "", $App.Read1, $App.Read2);};
+$scope.Headline10023_click = function() {neoTalkSpeak($App.speed23a, "", $App.Read1, $App.Read2);};
+$scope.Headline10024_click = function() {neoTalkSpeak($App.speed24a, "", $App.Read1, $App.Read2);};
 $scope.Headline29_click = function() {$scope.GotoPage( "VERSION" );};
-$scope.Headline75_click = function() {neoTalkSpeak($App.speed26a, "", $App.Read1, $App.Read2);};
-$scope.Headline77_click = function() {neoTalkSpeak($App.speed27a, "", $App.Read1, $App.Read2);};
-$scope.Headline78_click = function() {neoTalkSpeak($App.speed28a, "", $App.Read1, $App.Read2);};
-$scope.Headline322_click = function() {neoTalkSpeak($App.speed25a, "", $App.Read1, $App.Read2);};
-$scope.Headline323_click = function() {neoTalkSpeak($App.speed30a, "", $App.Read1, $App.Read2);};
-$scope.Headline334_click = function() {neoTalkSpeak($App.speed31a, "", $App.Read1, $App.Read2);};
-$scope.Headline335_click = function() {neoTalkSpeak($App.speed32a, "", $App.Read1, $App.Read2);};
-$scope.Headline336_click = function() {neoTalkSpeak($App.speed29a, "", $App.Read1, $App.Read2);};
-$scope.Headline341_click = function() {neoTalkSpeak($App.speed10a, "", $App.Read1, $App.Read2);};
-$scope.Headline344_click = function() {neoTalkSpeak($App.speed09a, "", $App.Read1, $App.Read2);};
-$scope.Headline474_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
-$scope.Headline475_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
-$scope.Headline326_click = function() {neoTalkSpeak($App.speed06a, "", $App.Read1, $App.Read2);};
-$scope.Headline327_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
-$scope.Headline328_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
-$scope.Headline329_click = function() {neoTalkSpeak($App.speed05a, "", $App.Read1, $App.Read2);};
-$scope.Headline53_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
-$scope.Headline54_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
-$scope.Headline55_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
-$scope.Headline56_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
-$scope.Headline345_click = function() {neoTalkSpeak($App.speed14a, "", $App.Read1, $App.Read2);};
-$scope.Headline346_click = function() {neoTalkSpeak($App.speed15a, "", $App.Read1, $App.Read2);};
-$scope.Headline347_click = function() {neoTalkSpeak($App.speed16a, "", $App.Read1, $App.Read2);};
-$scope.Headline348_click = function() {neoTalkSpeak($App.speed13a, "", $App.Read1, $App.Read2);};
 $scope.PushButton22_click = function() {window.document.location.reload();};
 $scope.PushButton203_click = function() {$scope.GotoPage( "CopyAll" );};
 $scope.PushButton544_click = function() {$scope.GotoPage( "Records-2026" );};
@@ -2693,13 +2741,6 @@ $scope.PushButton458_click = function() {$scope.GotoPage( "Speed13" );};
 $scope.PushButton462_click = function() {$scope.GotoPage( "Speed14" );};
 $scope.PushButton466_click = function() {$scope.GotoPage( "Speed15" );};
 $scope.PushButton470_click = function() {$scope.GotoPage( "Speed16" );};
-$scope.Headline459_click = function() {neoTalkSpeak($App.speed19a, "", $App.Read1, $App.Read2);};
-$scope.Headline460_click = function() {neoTalkSpeak($App.speed20a, "", $App.Read1, $App.Read2);};
-$scope.Headline461_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
-$scope.Headline462_click = function() {neoTalkSpeak($App.speed22a, "", $App.Read1, $App.Read2);};
-$scope.Headline463_click = function() {neoTalkSpeak($App.speed23a, "", $App.Read1, $App.Read2);};
-$scope.Headline464_click = function() {neoTalkSpeak($App.speed24a, "", $App.Read1, $App.Read2);};
-$scope.Headline465_click = function() {neoTalkSpeak($App.speed21a, "", $App.Read1, $App.Read2);};
 $scope.PushButton700_click = function() {$scope.GotoPage( "Speed17" );};
 $scope.PushButton701_click = function() {$scope.GotoPage( "Speed18" );};
 $scope.PushButton702_click = function() {$scope.GotoPage( "Speed19" );};
@@ -2708,8 +2749,6 @@ $scope.PushButton704_click = function() {$scope.GotoPage( "Speed21" );};
 $scope.PushButton705_click = function() {$scope.GotoPage( "Speed22" );};
 $scope.PushButton706_click = function() {$scope.GotoPage( "Speed23" );};
 $scope.PushButton707_click = function() {$scope.GotoPage( "Speed24" );};
-$scope.Headline476_click = function() {neoTalkSpeak($App.speed10a, "", $App.Read1, $App.Read2);};
-$scope.Headline458_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
 $scope.PushButton577_click = function() {$scope.GotoPage( "Speed25" );};
 $scope.PushButton588_click = function() {$scope.GotoPage( "Speed26" );};
 $scope.PushButton613_click = function() {$scope.GotoPage( "Speed27" );};
@@ -3154,6 +3193,244 @@ $scope.ObjectToFront("Container-index-m03");
 $scope.MoveObject("Container-index-m01",4,80);
 $scope.MoveObject("Container-index-m02",382,80);
 $scope.MoveObject("Container-index-m03",750,80);};
+$scope.TextInput924_change = function() {localStorage.setItem("n1a1",$App.n1a1);};
+$scope.TextArea768_change = function() {localStorage.setItem("n1a2",$App.n1a2);};
+$scope.TextArea769_change = function() {localStorage.setItem("n1a3",$App.n1a3);};
+$scope.TextInput925_change = function() {localStorage.setItem("n1a4",$App.n1a4);};
+$scope.TextInput926_change = function() {localStorage.setItem("n1a5",$App.n1a5);};
+$scope.TextInput927_change = function() {localStorage.setItem("n2a1",$App.n2a1);};
+$scope.TextArea770_change = function() {localStorage.setItem("n2a2",$App.n2a2);};
+$scope.TextArea771_change = function() {localStorage.setItem("n2a3",$App.n2a3);};
+$scope.TextInput928_change = function() {localStorage.setItem("n2a4",$App.n2a4);};
+$scope.TextInput929_change = function() {localStorage.setItem("n2a5",$App.n2a5);};
+$scope.PushButton943_click = function() {$scope.ObjectToFront("Container-index-n01");
+$scope.ObjectToFront("Container-index-n02");
+$scope.ObjectToFront("Container-index-n03");
+$scope.MoveObject("Container-index-n01",4,80);
+$scope.MoveObject("Container-index-n02",382,80);
+$scope.MoveObject("Container-index-n03",750,80);};
+$scope.TextInput960_change = function() {localStorage.setItem("o1a1",$App.o1a1);};
+$scope.TextArea792_change = function() {localStorage.setItem("o1a2",$App.o1a2);};
+$scope.TextArea793_change = function() {localStorage.setItem("o1a3",$App.o1a3);};
+$scope.TextInput961_change = function() {localStorage.setItem("o1a4",$App.o1a4);};
+$scope.TextInput962_change = function() {localStorage.setItem("o1a5",$App.o1a5);};
+$scope.TextInput963_change = function() {localStorage.setItem("o2a1",$App.o2a1);};
+$scope.TextArea794_change = function() {localStorage.setItem("o2a2",$App.o2a2);};
+$scope.TextArea795_change = function() {localStorage.setItem("o2a3",$App.o2a3);};
+$scope.TextInput964_change = function() {localStorage.setItem("o2a4",$App.o2a4);};
+$scope.TextInput965_change = function() {localStorage.setItem("o2a5",$App.o2a5);};
+$scope.PushButton944_click = function() {$scope.ObjectToFront("Container-index-o01");
+$scope.ObjectToFront("Container-index-o02");
+$scope.ObjectToFront("Container-index-o03");
+$scope.MoveObject("Container-index-o01",4,80);
+$scope.MoveObject("Container-index-o02",382,80);
+$scope.MoveObject("Container-index-o03",750,80);};
+$scope.TextInput996_change = function() {localStorage.setItem("p1a1",$App.p1a1);};
+$scope.TextArea816_change = function() {localStorage.setItem("p1a2",$App.p1a2);};
+$scope.TextArea817_change = function() {localStorage.setItem("p1a3",$App.p1a3);};
+$scope.TextInput997_change = function() {localStorage.setItem("p1a4",$App.p1a4);};
+$scope.TextInput998_change = function() {localStorage.setItem("p1a5",$App.p1a5);};
+$scope.TextInput999_change = function() {localStorage.setItem("p2a1",$App.p2a1);};
+$scope.TextArea818_change = function() {localStorage.setItem("p2a2",$App.p2a2);};
+$scope.TextArea819_change = function() {localStorage.setItem("p2a3",$App.p2a3);};
+$scope.TextInput1000_change = function() {localStorage.setItem("p2a4",$App.p2a4);};
+$scope.TextInput1001_change = function() {localStorage.setItem("p2a5",$App.p2a5);};
+$scope.PushButton945_click = function() {$scope.ObjectToFront("Container-index-p01");
+$scope.ObjectToFront("Container-index-p02");
+$scope.ObjectToFront("Container-index-p03");
+$scope.MoveObject("Container-index-p01",4,80);
+$scope.MoveObject("Container-index-p02",382,80);
+$scope.MoveObject("Container-index-p03",750,80);};
+$scope.TextInput1032_change = function() {localStorage.setItem("q1a1",$App.q1a1);};
+$scope.TextArea840_change = function() {localStorage.setItem("q1a2",$App.q1a2);};
+$scope.TextArea841_change = function() {localStorage.setItem("q1a3",$App.q1a3);};
+$scope.TextInput1033_change = function() {localStorage.setItem("q1a4",$App.q1a4);};
+$scope.TextInput1034_change = function() {localStorage.setItem("q1a5",$App.q1a5);};
+$scope.TextInput1035_change = function() {localStorage.setItem("q2a1",$App.q2a1);};
+$scope.TextArea842_change = function() {localStorage.setItem("q2a2",$App.q2a2);};
+$scope.TextArea843_change = function() {localStorage.setItem("q2a3",$App.q2a3);};
+$scope.TextInput1036_change = function() {localStorage.setItem("q2a4",$App.q2a4);};
+$scope.TextInput1037_change = function() {localStorage.setItem("q2a5",$App.q2a5);};
+$scope.PushButton946_click = function() {$scope.ObjectToFront("Container-index-q01");
+$scope.ObjectToFront("Container-index-q02");
+$scope.ObjectToFront("Container-index-q03");
+$scope.MoveObject("Container-index-q01",4,80);
+$scope.MoveObject("Container-index-q02",382,80);
+$scope.MoveObject("Container-index-q03",750,80);};
+$scope.TextInput1068_change = function() {localStorage.setItem("r1a1",$App.r1a1);};
+$scope.TextArea864_change = function() {localStorage.setItem("r1a2",$App.r1a2);};
+$scope.TextArea865_change = function() {localStorage.setItem("r1a3",$App.r1a3);};
+$scope.TextInput1069_change = function() {localStorage.setItem("r1a4",$App.r1a4);};
+$scope.TextInput1070_change = function() {localStorage.setItem("r1a5",$App.r1a5);};
+$scope.TextInput1071_change = function() {localStorage.setItem("r2a1",$App.r2a1);};
+$scope.TextArea866_change = function() {localStorage.setItem("r2a2",$App.r2a2);};
+$scope.TextArea867_change = function() {localStorage.setItem("r2a3",$App.r2a3);};
+$scope.TextInput1072_change = function() {localStorage.setItem("r2a4",$App.r2a4);};
+$scope.TextInput1073_change = function() {localStorage.setItem("r2a5",$App.r2a5);};
+$scope.TextInput1074_change = function() {localStorage.setItem("r3a1",$App.r3a1);};
+$scope.TextArea868_change = function() {localStorage.setItem("r3a2",$App.r3a2);};
+$scope.TextArea869_change = function() {localStorage.setItem("r3a3",$App.r3a3);};
+$scope.TextInput1075_change = function() {localStorage.setItem("r3a4",$App.r3a4);};
+$scope.TextInput1076_change = function() {localStorage.setItem("r3a5",$App.r3a5);};
+$scope.TextInput1077_change = function() {localStorage.setItem("r4a1",$App.r4a1);};
+$scope.TextArea870_change = function() {localStorage.setItem("r4a2",$App.r4a2);};
+$scope.TextArea871_change = function() {localStorage.setItem("r4a3",$App.r4a3);};
+$scope.TextInput1078_change = function() {localStorage.setItem("r4a4",$App.r4a4);};
+$scope.TextInput1079_change = function() {localStorage.setItem("r4a5",$App.r4a5);};
+$scope.PushButton947_click = function() {$scope.ObjectToFront("Container-index-r01");
+$scope.ObjectToFront("Container-index-r02");
+$scope.ObjectToFront("Container-index-r03");
+$scope.MoveObject("Container-index-r01",4,80);
+$scope.MoveObject("Container-index-r02",382,80);
+$scope.MoveObject("Container-index-r03",750,80);};
+$scope.TextInput1104_change = function() {localStorage.setItem("s1a1",$App.s1a1);};
+$scope.TextArea888_change = function() {localStorage.setItem("s1a2",$App.s1a2);};
+$scope.TextArea889_change = function() {localStorage.setItem("s1a3",$App.s1a3);};
+$scope.TextInput1105_change = function() {localStorage.setItem("s1a4",$App.s1a4);};
+$scope.TextInput1106_change = function() {localStorage.setItem("s1a5",$App.s1a5);};
+$scope.TextInput1107_change = function() {localStorage.setItem("s2a1",$App.s2a1);};
+$scope.TextArea890_change = function() {localStorage.setItem("s2a2",$App.s2a2);};
+$scope.TextArea891_change = function() {localStorage.setItem("s2a3",$App.s2a3);};
+$scope.TextInput1108_change = function() {localStorage.setItem("s2a4",$App.s2a4);};
+$scope.TextInput1109_change = function() {localStorage.setItem("s2a5",$App.s2a5);};
+$scope.TextInput1110_change = function() {localStorage.setItem("s3a1",$App.s3a1);};
+$scope.TextArea892_change = function() {localStorage.setItem("s3a2",$App.s3a2);};
+$scope.TextArea893_change = function() {localStorage.setItem("s3a3",$App.s3a3);};
+$scope.TextInput1111_change = function() {localStorage.setItem("s3a4",$App.s3a4);};
+$scope.TextInput1112_change = function() {localStorage.setItem("s3a5",$App.s3a5);};
+$scope.TextInput1113_change = function() {localStorage.setItem("s4a1",$App.s4a1);};
+$scope.TextArea894_change = function() {localStorage.setItem("s4a2",$App.s4a2);};
+$scope.TextArea895_change = function() {localStorage.setItem("s4a3",$App.s4a3);};
+$scope.TextInput1114_change = function() {localStorage.setItem("s4a4",$App.s4a4);};
+$scope.TextInput1115_change = function() {localStorage.setItem("s4a5",$App.s4a5);};
+$scope.PushButton948_click = function() {$scope.ObjectToFront("Container-index-s01");
+$scope.ObjectToFront("Container-index-s02");
+$scope.ObjectToFront("Container-index-s03");
+$scope.MoveObject("Container-index-s01",4,80);
+$scope.MoveObject("Container-index-s02",382,80);
+$scope.MoveObject("Container-index-s03",750,80);};
+$scope.TextInput1236_change = function() {localStorage.setItem("t1a1",$App.t1a1);};
+$scope.TextArea976_change = function() {localStorage.setItem("t1a2",$App.t1a2);};
+$scope.TextArea977_change = function() {localStorage.setItem("t1a3",$App.t1a3);};
+$scope.TextInput1237_change = function() {localStorage.setItem("t1a4",$App.t1a4);};
+$scope.TextInput1238_change = function() {localStorage.setItem("t1a5",$App.t1a5);};
+$scope.TextInput1239_change = function() {localStorage.setItem("t2a1",$App.t2a1);};
+$scope.TextArea978_change = function() {localStorage.setItem("t2a2",$App.t2a2);};
+$scope.TextArea979_change = function() {localStorage.setItem("t2a3",$App.t2a3);};
+$scope.TextInput1240_change = function() {localStorage.setItem("t2a4",$App.t2a4);};
+$scope.TextInput1241_change = function() {localStorage.setItem("t2a5",$App.t2a5);};
+$scope.TextInput1242_change = function() {localStorage.setItem("t3a1",$App.t3a1);};
+$scope.TextArea980_change = function() {localStorage.setItem("t3a2",$App.t3a2);};
+$scope.TextArea981_change = function() {localStorage.setItem("t3a3",$App.t3a3);};
+$scope.TextInput1243_change = function() {localStorage.setItem("t3a4",$App.t3a4);};
+$scope.TextInput1244_change = function() {localStorage.setItem("t3a5",$App.t3a5);};
+$scope.TextInput1245_change = function() {localStorage.setItem("t4a1",$App.t4a1);};
+$scope.TextArea982_change = function() {localStorage.setItem("t4a2",$App.t4a2);};
+$scope.TextArea983_change = function() {localStorage.setItem("t4a3",$App.t4a3);};
+$scope.TextInput1246_change = function() {localStorage.setItem("t4a4",$App.t4a4);};
+$scope.TextInput1247_change = function() {localStorage.setItem("t4a5",$App.t4a5);};
+$scope.PushButton949_click = function() {$scope.ObjectToFront("Container-index-t01");
+$scope.ObjectToFront("Container-index-t02");
+$scope.ObjectToFront("Container-index-t03");
+$scope.MoveObject("Container-index-t01",4,80);
+$scope.MoveObject("Container-index-t02",382,80);
+$scope.MoveObject("Container-index-t03",750,80);};
+$scope.TextInput1248_change = function() {localStorage.setItem("u1a1",$App.u1a1);};
+$scope.TextArea443_change = function() {localStorage.setItem("u1a2",$App.u1a2);};
+$scope.TextArea444_change = function() {localStorage.setItem("1ua3",$App.u1a3);};
+$scope.TextInput1249_change = function() {localStorage.setItem("u1a4",$App.u1a4);};
+$scope.TextInput1250_change = function() {localStorage.setItem("u1a5",$App.u1a5);};
+$scope.TextInput1251_change = function() {localStorage.setItem("u2a1",$App.u2a1);};
+$scope.TextArea445_change = function() {localStorage.setItem("u2a2",$App.u2a2);};
+$scope.TextArea446_change = function() {localStorage.setItem("u2a3",$App.u2a3);};
+$scope.TextInput1252_change = function() {localStorage.setItem("u2a4",$App.u2a4);};
+$scope.TextInput1253_change = function() {localStorage.setItem("u2a5",$App.u2a5);};
+$scope.PushButton950_click = function() {$scope.ObjectToFront("Container-index-u01");
+$scope.ObjectToFront("Container-index-u02");
+$scope.ObjectToFront("Container-index-u03");
+$scope.MoveObject("Container-index-u01",4,80);
+$scope.MoveObject("Container-index-u02",382,80);
+$scope.MoveObject("Container-index-u03",750,80);};
+$scope.TextInput1296_change = function() {localStorage.setItem("v1a1",$App.v1a1);};
+$scope.TextArea1005_change = function() {localStorage.setItem("v1a2",$App.v1a2);};
+$scope.TextArea1006_change = function() {localStorage.setItem("v1a3",$App.v1a3);};
+$scope.TextInput1297_change = function() {localStorage.setItem("v1a4",$App.v1a4);};
+$scope.TextInput1298_change = function() {localStorage.setItem("v1a5",$App.v1a5);};
+$scope.TextInput1299_change = function() {localStorage.setItem("v2a1",$App.v2a1);};
+$scope.TextArea1007_change = function() {localStorage.setItem("v2a2",$App.v2a2);};
+$scope.TextArea1008_change = function() {localStorage.setItem("v2a3",$App.v2a3);};
+$scope.TextInput1300_change = function() {localStorage.setItem("v2a4",$App.v2a4);};
+$scope.TextInput1301_change = function() {localStorage.setItem("v2a5",$App.v2a5);};
+$scope.PushButton951_click = function() {$scope.ObjectToFront("Container-index-v01");
+$scope.ObjectToFront("Container-index-v02");
+$scope.ObjectToFront("Container-index-v03");
+$scope.MoveObject("Container-index-v01",4,80);
+$scope.MoveObject("Container-index-v02",382,80);
+$scope.MoveObject("Container-index-v03",750,80);};
+$scope.TextInput1320_change = function() {localStorage.setItem("w1a1",$App.w1a1);};
+$scope.TextArea1021_change = function() {localStorage.setItem("w1a2",$App.w1a2);};
+$scope.TextArea1022_change = function() {localStorage.setItem("w1a3",$App.w1a3);};
+$scope.TextInput1321_change = function() {localStorage.setItem("w1a4",$App.w1a4);};
+$scope.TextInput1322_change = function() {localStorage.setItem("w1a5",$App.w1a5);};
+$scope.TextInput1323_change = function() {localStorage.setItem("w2a1",$App.w2a1);};
+$scope.TextArea1023_change = function() {localStorage.setItem("w2a2",$App.w2a2);};
+$scope.TextArea1024_change = function() {localStorage.setItem("w2a3",$App.w2a3);};
+$scope.TextInput1324_change = function() {localStorage.setItem("w2a4",$App.w2a4);};
+$scope.TextInput1325_change = function() {localStorage.setItem("w2a5",$App.w2a5);};
+$scope.PushButton952_click = function() {$scope.ObjectToFront("Container-index-w01");
+$scope.ObjectToFront("Container-index-w02");
+$scope.ObjectToFront("Container-index-w03");
+$scope.MoveObject("Container-index-w01",4,80);
+$scope.MoveObject("Container-index-w02",382,80);
+$scope.MoveObject("Container-index-w03",750,80);};
+$scope.TextInput1356_change = function() {localStorage.setItem("x1a1",$App.x1a1);};
+$scope.TextArea1045_change = function() {localStorage.setItem("x1a2",$App.x1a2);};
+$scope.TextArea1046_change = function() {localStorage.setItem("x1a3",$App.x1a3);};
+$scope.TextInput1357_change = function() {localStorage.setItem("x1a4",$App.x1a4);};
+$scope.TextInput1358_change = function() {localStorage.setItem("x1a5",$App.x1a5);};
+$scope.TextInput1359_change = function() {localStorage.setItem("x2a1",$App.x2a1);};
+$scope.TextArea1047_change = function() {localStorage.setItem("x2a2",$App.x2a2);};
+$scope.TextArea1048_change = function() {localStorage.setItem("x2a3",$App.x2a3);};
+$scope.TextInput1360_change = function() {localStorage.setItem("x2a4",$App.x2a4);};
+$scope.TextInput1361_change = function() {localStorage.setItem("x2a5",$App.x2a5);};
+$scope.PushButton953_click = function() {$scope.ObjectToFront("Container-index-x01");
+$scope.ObjectToFront("Container-index-x02");
+$scope.ObjectToFront("Container-index-x03");
+$scope.MoveObject("Container-index-x01",4,80);
+$scope.MoveObject("Container-index-x02",382,80);
+$scope.MoveObject("Container-index-x03",750,80);};
+$scope.TextInput1428_change = function() {localStorage.setItem("y1a1",$App.y1a1);};
+$scope.TextArea1093_change = function() {localStorage.setItem("y1a2",$App.y1a2);};
+$scope.TextArea1094_change = function() {localStorage.setItem("y1a3",$App.y1a3);};
+$scope.TextInput1429_change = function() {localStorage.setItem("y1a4",$App.y1a4);};
+$scope.TextInput1430_change = function() {localStorage.setItem("y1a5",$App.y1a5);};
+$scope.TextInput1431_change = function() {localStorage.setItem("y2a1",$App.y2a1);};
+$scope.TextArea1095_change = function() {localStorage.setItem("y2a2",$App.y2a2);};
+$scope.TextArea1096_change = function() {localStorage.setItem("y2a3",$App.y2a3);};
+$scope.TextInput1432_change = function() {localStorage.setItem("y2a4",$App.y2a4);};
+$scope.TextInput1433_change = function() {localStorage.setItem("y2a5",$App.y2a5);};
+$scope.PushButton954_click = function() {$scope.ObjectToFront("Container-index-y01");
+$scope.ObjectToFront("Container-index-y02");
+$scope.ObjectToFront("Container-index-y03");
+$scope.MoveObject("Container-index-y01",4,80);
+$scope.MoveObject("Container-index-y02",382,80);
+$scope.MoveObject("Container-index-y03",750,80);};
+$scope.TextInput1464_change = function() {localStorage.setItem("z1a1",$App.z1a1);};
+$scope.TextArea1117_change = function() {localStorage.setItem("z1a2",$App.z1a2);};
+$scope.TextArea1118_change = function() {localStorage.setItem("z1a3",$App.z1a3);};
+$scope.TextInput1465_change = function() {localStorage.setItem("z1a4",$App.z1a4);};
+$scope.TextInput1466_change = function() {localStorage.setItem("z1a5",$App.z1a5);};
+$scope.TextInput1467_change = function() {localStorage.setItem("z2a1",$App.z2a1);};
+$scope.TextArea1119_change = function() {localStorage.setItem("z2a2",$App.z2a2);};
+$scope.TextArea1120_change = function() {localStorage.setItem("z2a3",$App.z2a3);};
+$scope.TextInput1468_change = function() {localStorage.setItem("z2a4",$App.z2a4);};
+$scope.TextInput1469_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
+$scope.PushButton955_click = function() {$scope.ObjectToFront("Container-index-z01");
+$scope.ObjectToFront("Container-index-z02");
+$scope.ObjectToFront("Container-index-z03");
+$scope.MoveObject("Container-index-z01",4,80);
+$scope.MoveObject("Container-index-z02",382,80);
+$scope.MoveObject("Container-index-z03",750,80);};
 $scope.Headline831_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager142_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager142_nextclick = function() {$scope.GotoNextPage();};
@@ -3391,366 +3668,8 @@ $scope.MoveObject("Container-index-z03",750,80);
 } else {
 };};
 $scope.TextArea457_change = function() {localStorage.setItem("i10002",$App.i10002);};
-$scope.TextInput924_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea768_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea769_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput925_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput926_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput927_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea770_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea771_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput928_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput929_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput930_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea772_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea773_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput931_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput932_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput933_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea774_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea775_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput934_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput935_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton943_click = function() {$scope.ObjectToFront("Container-index-n01");
-$scope.ObjectToFront("Container-index-n02");
-$scope.ObjectToFront("Container-index-n03");
-$scope.MoveObject("Container-index-n01",4,80);
-$scope.MoveObject("Container-index-n02",382,80);
-$scope.MoveObject("Container-index-n03",750,80);};
-$scope.TextInput960_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea792_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea793_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput961_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput962_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput963_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea794_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea795_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput964_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput965_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput966_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea796_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea797_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput967_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput968_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput969_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea798_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea799_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput970_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput971_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton944_click = function() {$scope.ObjectToFront("Container-index-o01");
-$scope.ObjectToFront("Container-index-o02");
-$scope.ObjectToFront("Container-index-o03");
-$scope.MoveObject("Container-index-o01",4,80);
-$scope.MoveObject("Container-index-o02",382,80);
-$scope.MoveObject("Container-index-o03",750,80);};
-$scope.TextInput996_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea816_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea817_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput997_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput998_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput999_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea818_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea819_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1000_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1001_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1002_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea820_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea821_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1003_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1004_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1005_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea822_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea823_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1006_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1007_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton945_click = function() {$scope.ObjectToFront("Container-index-p01");
-$scope.ObjectToFront("Container-index-p02");
-$scope.ObjectToFront("Container-index-p03");
-$scope.MoveObject("Container-index-p01",4,80);
-$scope.MoveObject("Container-index-p02",382,80);
-$scope.MoveObject("Container-index-p03",750,80);};
-$scope.TextInput1032_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea840_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea841_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1033_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1034_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1035_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea842_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea843_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1036_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1037_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1038_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea844_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea845_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1039_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1040_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1041_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea846_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea847_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1042_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1043_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton946_click = function() {$scope.ObjectToFront("Container-index-q01");
-$scope.ObjectToFront("Container-index-q02");
-$scope.ObjectToFront("Container-index-q03");
-$scope.MoveObject("Container-index-q01",4,80);
-$scope.MoveObject("Container-index-q02",382,80);
-$scope.MoveObject("Container-index-q03",750,80);};
-$scope.TextInput1068_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea864_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea865_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1069_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1070_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1071_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea866_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea867_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1072_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1073_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1074_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea868_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea869_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1075_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1076_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1077_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea870_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea871_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1078_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1079_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton947_click = function() {$scope.ObjectToFront("Container-index-r01");
-$scope.ObjectToFront("Container-index-r02");
-$scope.ObjectToFront("Container-index-r03");
-$scope.MoveObject("Container-index-r01",4,80);
-$scope.MoveObject("Container-index-r02",382,80);
-$scope.MoveObject("Container-index-r03",750,80);};
-$scope.TextInput1104_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea888_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea889_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1105_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1106_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1107_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea890_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea891_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1108_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1109_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1110_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea892_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea893_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1111_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1112_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1113_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea894_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea895_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1114_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1115_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton948_click = function() {$scope.ObjectToFront("Container-index-s01");
-$scope.ObjectToFront("Container-index-s02");
-$scope.ObjectToFront("Container-index-s03");
-$scope.MoveObject("Container-index-s01",4,80);
-$scope.MoveObject("Container-index-s02",382,80);
-$scope.MoveObject("Container-index-s03",750,80);};
-$scope.TextInput1236_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea976_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea977_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1237_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1238_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1239_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea978_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea979_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1240_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1241_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1242_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea980_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea981_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1243_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1244_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1245_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea982_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea983_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1246_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1247_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton949_click = function() {$scope.ObjectToFront("Container-index-t01");
-$scope.ObjectToFront("Container-index-t02");
-$scope.ObjectToFront("Container-index-t03");
-$scope.MoveObject("Container-index-t01",4,80);
-$scope.MoveObject("Container-index-t02",382,80);
-$scope.MoveObject("Container-index-t03",750,80);};
-$scope.TextInput1248_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea443_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea444_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1249_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1250_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1251_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea445_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea446_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1252_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1253_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1254_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea447_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea448_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1255_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1256_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1257_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea449_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea450_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1258_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1259_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton950_click = function() {$scope.ObjectToFront("Container-index-u01");
-$scope.ObjectToFront("Container-index-u02");
-$scope.ObjectToFront("Container-index-u03");
-$scope.MoveObject("Container-index-u01",4,80);
-$scope.MoveObject("Container-index-u02",382,80);
-$scope.MoveObject("Container-index-u03",750,80);};
-$scope.TextInput1296_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea1005_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea1006_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1297_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1298_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1299_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea1007_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea1008_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1300_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1301_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1302_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea1009_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea1010_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1303_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1304_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1305_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea1011_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea1012_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1306_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1307_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton951_click = function() {$scope.ObjectToFront("Container-index-v01");
-$scope.ObjectToFront("Container-index-v02");
-$scope.ObjectToFront("Container-index-v03");
-$scope.MoveObject("Container-index-v01",4,80);
-$scope.MoveObject("Container-index-v02",382,80);
-$scope.MoveObject("Container-index-v03",750,80);};
-$scope.TextInput1320_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea1021_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea1022_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1321_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1322_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1323_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea1023_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea1024_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1324_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1325_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1326_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea1025_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea1026_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1327_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1328_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1329_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea1027_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea1028_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1330_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1331_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton952_click = function() {$scope.ObjectToFront("Container-index-w01");
-$scope.ObjectToFront("Container-index-w02");
-$scope.ObjectToFront("Container-index-w03");
-$scope.MoveObject("Container-index-w01",4,80);
-$scope.MoveObject("Container-index-w02",382,80);
-$scope.MoveObject("Container-index-w03",750,80);};
-$scope.TextInput1356_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea1045_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea1046_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1357_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1358_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1359_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea1047_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea1048_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1360_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1361_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1362_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea1049_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea1050_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1363_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1364_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1365_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea1051_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea1052_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1366_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1367_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton953_click = function() {$scope.ObjectToFront("Container-index-x01");
-$scope.ObjectToFront("Container-index-x02");
-$scope.ObjectToFront("Container-index-x03");
-$scope.MoveObject("Container-index-x01",4,80);
-$scope.MoveObject("Container-index-x02",382,80);
-$scope.MoveObject("Container-index-x03",750,80);};
-$scope.TextInput1428_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea1093_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea1094_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1429_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1430_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1431_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea1095_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea1096_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1432_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1433_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1434_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea1097_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea1098_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1435_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1436_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1437_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea1099_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea1100_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1438_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1439_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton954_click = function() {$scope.ObjectToFront("Container-index-y01");
-$scope.ObjectToFront("Container-index-y02");
-$scope.ObjectToFront("Container-index-y03");
-$scope.MoveObject("Container-index-y01",4,80);
-$scope.MoveObject("Container-index-y02",382,80);
-$scope.MoveObject("Container-index-y03",750,80);};
-$scope.TextInput1464_change = function() {localStorage.setItem("a1",$App.a1);};
-$scope.TextArea1117_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
-$scope.TextArea1118_change = function() {localStorage.setItem("a1a3",$App.a1a3);};
-$scope.TextInput1465_change = function() {localStorage.setItem("a1a4",$App.a1a4);};
-$scope.TextInput1466_change = function() {localStorage.setItem("a1a5",$App.a1a5);};
-$scope.TextInput1467_change = function() {localStorage.setItem("a2",$App.a2);};
-$scope.TextArea1119_change = function() {localStorage.setItem("a2a2",$App.a2a2);};
-$scope.TextArea1120_change = function() {localStorage.setItem("a2a3",$App.a2a3);};
-$scope.TextInput1468_change = function() {localStorage.setItem("a2a4",$App.a2a4);};
-$scope.TextInput1469_change = function() {localStorage.setItem("a2a5",$App.a2a5);};
-$scope.TextInput1470_change = function() {localStorage.setItem("a3",$App.a3);};
-$scope.TextArea1121_change = function() {localStorage.setItem("a3a2",$App.a3a2);};
-$scope.TextArea1122_change = function() {localStorage.setItem("a3a3",$App.a3a3);};
-$scope.TextInput1471_change = function() {localStorage.setItem("a3a4",$App.a3a4);};
-$scope.TextInput1472_change = function() {localStorage.setItem("a3a5",$App.a3a5);};
-$scope.TextInput1473_change = function() {localStorage.setItem("a4",$App.a4);};
-$scope.TextArea1123_change = function() {localStorage.setItem("a4a2",$App.a4a2);};
-$scope.TextArea1124_change = function() {localStorage.setItem("a4a3",$App.a4a3);};
-$scope.TextInput1474_change = function() {localStorage.setItem("a4a4",$App.a4a4);};
-$scope.TextInput1475_change = function() {localStorage.setItem("a4a5",$App.a4a5);};
-$scope.PushButton955_click = function() {$scope.ObjectToFront("Container-index-z01");
-$scope.ObjectToFront("Container-index-z02");
-$scope.ObjectToFront("Container-index-z03");
-$scope.MoveObject("Container-index-z01",4,80);
-$scope.MoveObject("Container-index-z02",382,80);
-$scope.MoveObject("Container-index-z03",750,80);};
 $scope.PushButton956_click = function() {$scope.GotoPage( "bounce" );
 $scope.GotoPage( "Indexwrite" );};
-$scope.TextInput397_change = function() {localStorage.setItem("e6a1",$App.e6a1);};
-$scope.TextArea296_change = function() {localStorage.setItem("e6a2",$App.e6a2);};
-$scope.TextArea297_change = function() {localStorage.setItem("e6a3",$App.e6a3);};
-$scope.TextInput398_change = function() {localStorage.setItem("e6a4",$App.e6a4);};
-$scope.TextInput399_change = function() {localStorage.setItem("e6a5",$App.e6a5);};
-$scope.TextInput400_change = function() {localStorage.setItem("e6a1",$App.e6a1);};
-$scope.TextArea298_change = function() {localStorage.setItem("e6a2",$App.e6a2);};
-$scope.TextArea299_change = function() {localStorage.setItem("e6a3",$App.e6a3);};
-$scope.TextInput401_change = function() {localStorage.setItem("e6a4",$App.e6a4);};
-$scope.TextInput402_change = function() {localStorage.setItem("e6a5",$App.e6a5);};
-$scope.TextInput415_change = function() {localStorage.setItem("f5a1",$App.f5a1);};
-$scope.TextArea308_change = function() {localStorage.setItem("f5a2",$App.f5a2);};
-$scope.TextArea309_change = function() {localStorage.setItem("f5a3",$App.f5a3);};
-$scope.TextInput416_change = function() {localStorage.setItem("f5a4",$App.f5a4);};
-$scope.TextInput417_change = function() {localStorage.setItem("f5a5",$App.f5a5);};
-$scope.TextInput418_change = function() {localStorage.setItem("f6a1",$App.f6a1);};
-$scope.TextArea310_change = function() {localStorage.setItem("f6a2",$App.f6a2);};
-$scope.TextArea311_change = function() {localStorage.setItem("f6a3",$App.f6a3);};
-$scope.TextInput419_change = function() {localStorage.setItem("f6a4",$App.f6a4);};
-$scope.TextInput420_change = function() {localStorage.setItem("f6a5",$App.f6a5);};
 });
 NeoApp.controller("Records-2026_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 3;
@@ -3828,13 +3747,13 @@ $scope.PushButton771_click = function() {neoTalkSpeak($App.speed01d, "", $App.Re
 $scope.TextArea392_change = function() {localStorage.setItem("speed01d",$App.speed01d);};
 $scope.PushButton772_click = function() {neoTalkSpeak($App.speed01e, "", $App.Read1, $App.Read2);};
 $scope.TextArea393_change = function() {localStorage.setItem("speed01e",$App.speed01e);};
-$scope.PushButton811_click = function() {$scope.SetObjectStyle("Ellipse1","fill","red");
+$scope.PushButton811_click = function() {$scope.SetObjectStyle("Headline10001","color","red");
 $scope.SetObjectStyle("Ellipse101","fill","red");
 localStorage.setItem("aa1","r");};
-$scope.PushButton812_click = function() {$scope.SetObjectStyle("Ellipse1","fill","green");
+$scope.PushButton812_click = function() {$scope.SetObjectStyle("Headline10001","color","green");
 $scope.SetObjectStyle("Ellipse101","fill","green");
 localStorage.setItem("aa1","g");};
-$scope.PushButton813_click = function() {$scope.SetObjectStyle("Ellipse1","fill","blue");
+$scope.PushButton813_click = function() {$scope.SetObjectStyle("Headline10001","color","blue");
 $scope.SetObjectStyle("Ellipse101","fill","blue");
 localStorage.setItem("aa1","b");};
 $scope.TextInput443_change = function() {localStorage.setItem("speed1ref",$App.speed1ref);};
@@ -3907,8 +3826,58 @@ localStorage.setItem("Speed01link01",$App.Speed01link01);};
 $scope.Headline364_click = function() {localStorage.setItem("speed01a",$App.speed01a);};
 $scope.Headline365_click = function() {localStorage.setItem("speed01a",$App.speed01a);};
 });
-NeoApp.controller("Speed02_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
+NeoApp.controller("Speed03_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 6;
+$App.NAB.PageID = "Speed03";
+$scope.PushButton189_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.TextArea226_change = function() {localStorage.setItem("speed03a",$App.speed03a);};
+$scope.PushButton192_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
+$scope.TextInput155_change = function() {localStorage.setItem("speed03",$App.speed03);};
+$scope.PushButton760_click = function() {neoTalkSpeak($App.speed03c, "", $App.Read1, $App.Read2);};
+$scope.TextArea382_change = function() {localStorage.setItem("speed03c",$App.speed03c);};
+$scope.PushButton761_click = function() {neoTalkSpeak($App.speed03d, "", $App.Read1, $App.Read2);};
+$scope.TextArea383_change = function() {localStorage.setItem("speed03d",$App.speed03d);};
+$scope.PushButton762_click = function() {neoTalkSpeak($App.speed03e, "", $App.Read1, $App.Read2);};
+$scope.TextArea384_change = function() {localStorage.setItem("speed03e",$App.speed03e);};
+$scope.TextArea385_change = function() {localStorage.setItem("speed03b",$App.speed03b);};
+$scope.PushButton763_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
+$scope.PushButton805_click = function() {$scope.SetObjectStyle("Headline10001","color","red");
+$scope.SetObjectStyle("Ellipse103","fill","red");
+localStorage.setItem("aa3","r");};
+$scope.PushButton806_click = function() {$scope.SetObjectStyle("Headline10003","color","green");
+$scope.SetObjectStyle("Ellipse103","fill","green");
+localStorage.setItem("aa3","g");};
+$scope.PushButton807_click = function() {$scope.SetObjectStyle("Headline10001","color","blue");
+$scope.SetObjectStyle("Ellipse103","fill","blue");
+localStorage.setItem("aa3","b");};
+});
+NeoApp.controller("Speed04_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
+$App.NAB.PageNumber = 7;
+$App.NAB.PageID = "Speed04";
+$scope.PushButton194_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.TextArea228_change = function() {localStorage.setItem("speed04a",$App.speed04a);};
+$scope.PushButton195_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
+$scope.TextInput159_change = function() {localStorage.setItem("speed04",$App.speed04);};
+$scope.PushButton756_click = function() {neoTalkSpeak($App.speed04b, "", $App.Read1, $App.Read2);};
+$scope.TextArea378_change = function() {localStorage.setItem("speed04b",$App.speed04b);};
+$scope.PushButton757_click = function() {neoTalkSpeak($App.speed04c, "", $App.Read1, $App.Read2);};
+$scope.TextArea379_change = function() {localStorage.setItem("speed04c",$App.speed04c);};
+$scope.PushButton758_click = function() {neoTalkSpeak($App.speed04d, "", $App.Read1, $App.Read2);};
+$scope.TextArea380_change = function() {localStorage.setItem("speed04d",$App.speed04d);};
+$scope.PushButton759_click = function() {neoTalkSpeak($App.speed04e, "", $App.Read1, $App.Read2);};
+$scope.TextArea381_change = function() {localStorage.setItem("speed04e",$App.speed04e);};
+$scope.PushButton802_click = function() {$scope.SetObjectStyle("Headline10002","color","red");
+$scope.SetObjectStyle("Ellipse104","fill","red");
+localStorage.setItem("aa4","r");};
+$scope.PushButton803_click = function() {$scope.SetObjectStyle("Headline10004","color","green");
+$scope.SetObjectStyle("Ellipse104","fill","green");
+localStorage.setItem("aa4","g");};
+$scope.PushButton804_click = function() {$scope.SetObjectStyle("Headline10004","color","blue");
+$scope.SetObjectStyle("Ellipse104","fill","blue");
+localStorage.setItem("aa4","b");};
+});
+NeoApp.controller("Speed02_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
+$App.NAB.PageNumber = 8;
 $App.NAB.PageID = "Speed02";
 $scope.PushButton590_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton591_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
@@ -3921,13 +3890,13 @@ $scope.PushButton594_click = function() {neoTalkSpeak($App.speed02d, "", $App.Re
 $scope.TextArea315_change = function() {localStorage.setItem("speed02d",$App.speed02d);};
 $scope.PushButton595_click = function() {neoTalkSpeak($App.speed01e, "", $App.Read1, $App.Read2);};
 $scope.TextArea316_change = function() {localStorage.setItem("speed01e",$App.speed01e);};
-$scope.PushButton596_click = function() {$scope.SetObjectStyle("Ellipse2","fill","red");
+$scope.PushButton596_click = function() {$scope.SetObjectStyle("Headline10002","color","red");
 $scope.SetObjectStyle("Ellipse102","fill","red");
 localStorage.setItem("aa2","r");};
-$scope.PushButton597_click = function() {$scope.SetObjectStyle("Ellipse2","fill","green");
+$scope.PushButton597_click = function() {$scope.SetObjectStyle("Headline10002","color","green");
 $scope.SetObjectStyle("Ellipse102","fill","green");
 localStorage.setItem("aa2","g");};
-$scope.PushButton598_click = function() {$scope.SetObjectStyle("Ellipse2","fill","blue");
+$scope.PushButton598_click = function() {$scope.SetObjectStyle("Headline10002","color","blue");
 $scope.SetObjectStyle("Ellipse102","fill","blue");
 localStorage.setItem("aa2","b");};
 $scope.TextInput421_change = function() {localStorage.setItem("speed1ref",$App.speed1ref);};
@@ -4001,56 +3970,6 @@ localStorage.setItem("speed06i2",$App.speed06i2);
 } else {
 };};
 });
-NeoApp.controller("Speed03_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 7;
-$App.NAB.PageID = "Speed03";
-$scope.PushButton189_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.TextArea226_change = function() {localStorage.setItem("speed03a",$App.speed03a);};
-$scope.PushButton192_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
-$scope.TextInput155_change = function() {localStorage.setItem("speed03",$App.speed03);};
-$scope.PushButton760_click = function() {neoTalkSpeak($App.speed03c, "", $App.Read1, $App.Read2);};
-$scope.TextArea382_change = function() {localStorage.setItem("speed03c",$App.speed03c);};
-$scope.PushButton761_click = function() {neoTalkSpeak($App.speed03d, "", $App.Read1, $App.Read2);};
-$scope.TextArea383_change = function() {localStorage.setItem("speed03d",$App.speed03d);};
-$scope.PushButton762_click = function() {neoTalkSpeak($App.speed03e, "", $App.Read1, $App.Read2);};
-$scope.TextArea384_change = function() {localStorage.setItem("speed03e",$App.speed03e);};
-$scope.TextArea385_change = function() {localStorage.setItem("speed03b",$App.speed03b);};
-$scope.PushButton763_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
-$scope.PushButton805_click = function() {$scope.SetObjectStyle("Ellipse3","fill","red");
-$scope.SetObjectStyle("Ellipse103","fill","red");
-localStorage.setItem("aa3","r");};
-$scope.PushButton806_click = function() {$scope.SetObjectStyle("Ellipse3","fill","green");
-$scope.SetObjectStyle("Ellipse103","fill","green");
-localStorage.setItem("aa3","g");};
-$scope.PushButton807_click = function() {$scope.SetObjectStyle("Ellipse3","fill","blue");
-$scope.SetObjectStyle("Ellipse103","fill","blue");
-localStorage.setItem("aa3","b");};
-});
-NeoApp.controller("Speed04_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 8;
-$App.NAB.PageID = "Speed04";
-$scope.PushButton194_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.TextArea228_change = function() {localStorage.setItem("speed04a",$App.speed04a);};
-$scope.PushButton195_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
-$scope.TextInput159_change = function() {localStorage.setItem("speed04",$App.speed04);};
-$scope.PushButton756_click = function() {neoTalkSpeak($App.speed04b, "", $App.Read1, $App.Read2);};
-$scope.TextArea378_change = function() {localStorage.setItem("speed04b",$App.speed04b);};
-$scope.PushButton757_click = function() {neoTalkSpeak($App.speed04c, "", $App.Read1, $App.Read2);};
-$scope.TextArea379_change = function() {localStorage.setItem("speed04c",$App.speed04c);};
-$scope.PushButton758_click = function() {neoTalkSpeak($App.speed04d, "", $App.Read1, $App.Read2);};
-$scope.TextArea380_change = function() {localStorage.setItem("speed04d",$App.speed04d);};
-$scope.PushButton759_click = function() {neoTalkSpeak($App.speed04e, "", $App.Read1, $App.Read2);};
-$scope.TextArea381_change = function() {localStorage.setItem("speed04e",$App.speed04e);};
-$scope.PushButton802_click = function() {$scope.SetObjectStyle("Ellipse4","fill","red");
-$scope.SetObjectStyle("Ellipse104","fill","red");
-localStorage.setItem("aa4","r");};
-$scope.PushButton803_click = function() {$scope.SetObjectStyle("Ellipse4","fill","green");
-$scope.SetObjectStyle("Ellipse104","fill","green");
-localStorage.setItem("aa4","g");};
-$scope.PushButton804_click = function() {$scope.SetObjectStyle("Ellipse4","fill","blue");
-$scope.SetObjectStyle("Ellipse104","fill","blue");
-localStorage.setItem("aa4","b");};
-});
 NeoApp.controller("Speed05_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 9;
 $App.NAB.PageID = "Speed05";
@@ -4066,13 +3985,13 @@ $scope.TextArea244_change = function() {localStorage.setItem("speed05d",$App.spe
 $scope.PushButton343_click = function() {neoTalkSpeak($App.speed05e, "", $App.Read1, $App.Read2);};
 $scope.TextArea245_change = function() {localStorage.setItem("speed05e",$App.speed05e);};
 $scope.PushButton331_click = function() {neoTalkSpeak($App.speed05b, "", $App.Read1, $App.Read2);};
-$scope.PushButton799_click = function() {$scope.SetObjectStyle("Ellipse5","fill","red");
+$scope.PushButton799_click = function() {$scope.SetObjectStyle("Headline10005","color","red");
 $scope.SetObjectStyle("Ellipse105","fill","red");
 localStorage.setItem("aa5","r");};
-$scope.PushButton800_click = function() {$scope.SetObjectStyle("Ellipse5","fill","green");
+$scope.PushButton800_click = function() {$scope.SetObjectStyle("Headline10005","color","green");
 $scope.SetObjectStyle("Ellipse105","fill","green");
 localStorage.setItem("aa5","g");};
-$scope.PushButton801_click = function() {$scope.SetObjectStyle("Ellipse5","fill","blue");
+$scope.PushButton801_click = function() {$scope.SetObjectStyle("Headline10005","color","blue");
 $scope.SetObjectStyle("Ellipse105","fill","blue");
 localStorage.setItem("aa5","b");};
 });
@@ -4091,13 +4010,13 @@ $scope.PushButton323_click = function() {neoTalkSpeak($App.speed06d, "", $App.Re
 $scope.TextArea240_change = function() {localStorage.setItem("speed06d",$App.speed06d);};
 $scope.PushButton327_click = function() {neoTalkSpeak($App.speed06e, "", $App.Read1, $App.Read2);};
 $scope.TextArea241_change = function() {localStorage.setItem("speed06e",$App.speed06e);};
-$scope.PushButton775_click = function() {$scope.SetObjectStyle("Ellipse6","fill","red");
+$scope.PushButton775_click = function() {$scope.SetObjectStyle("Headline10006","color","red");
 $scope.SetObjectStyle("Ellipse106","fill","red");
 localStorage.setItem("aa6","r");};
-$scope.PushButton776_click = function() {$scope.SetObjectStyle("Ellipse6","fill","green");
+$scope.PushButton776_click = function() {$scope.SetObjectStyle("Headline10006","color","green");
 $scope.SetObjectStyle("Ellipse106","fill","green");
 localStorage.setItem("aa6","g");};
-$scope.PushButton777_click = function() {$scope.SetObjectStyle("Ellipse6","fill","blue");
+$scope.PushButton777_click = function() {$scope.SetObjectStyle("Headline10007","color","blue");
 $scope.SetObjectStyle("Ellipse106","fill","blue");
 localStorage.setItem("aa6","b");};
 });
@@ -4116,13 +4035,13 @@ $scope.PushButton234_click = function() {neoTalkSpeak($App.speed07d, "", $App.Re
 $scope.TextArea232_change = function() {localStorage.setItem("speed07d",$App.speed07d);};
 $scope.PushButton235_click = function() {neoTalkSpeak($App.speed07e, "", $App.Read1, $App.Read2);};
 $scope.TextArea233_change = function() {localStorage.setItem("speed07e",$App.speed07e);};
-$scope.PushButton793_click = function() {$scope.SetObjectStyle("Ellipse7","fill","blue");
+$scope.PushButton793_click = function() {$scope.SetObjectStyle("Headline10007","color","blue");
 $scope.SetObjectStyle("Ellipse107","fill","blue");
 localStorage.setItem("aa7","b");};
-$scope.PushButton794_click = function() {$scope.SetObjectStyle("Ellipse7","fill","red");
+$scope.PushButton794_click = function() {$scope.SetObjectStyle("Headline10007","color","red");
 $scope.SetObjectStyle("Ellipse107","fill","red");
 localStorage.setItem("aa7","r");};
-$scope.PushButton795_click = function() {$scope.SetObjectStyle("Ellipse7","fill","green");
+$scope.PushButton795_click = function() {$scope.SetObjectStyle("Headline10007","color","green");
 $scope.SetObjectStyle("Ellipse107","fill","green");
 localStorage.setItem("aa7","g");};
 });
@@ -4142,13 +4061,13 @@ $scope.PushButton304_click = function() {neoTalkSpeak($App.speed08d, "", $App.Re
 $scope.TextArea236_change = function() {localStorage.setItem("speed08d",$App.speed08d);};
 $scope.PushButton773_click = function() {neoTalkSpeak($App.speed08e, "", $App.Read1, $App.Read2);};
 $scope.TextArea237_change = function() {localStorage.setItem("speed08e",$App.speed08e);};
-$scope.PushButton790_click = function() {$scope.SetObjectStyle("Ellipse6","fill","blue");
-$scope.SetObjectStyle("Ellipse106","fill","blue");
-localStorage.setItem("aa6","b");};
-$scope.PushButton791_click = function() {$scope.SetObjectStyle("Ellipse8","fill","red");
+$scope.PushButton790_click = function() {$scope.SetObjectStyle("Headline10008","color","blue");
+$scope.SetObjectStyle("Ellipse108","fill","blue");
+localStorage.setItem("aa8","b");};
+$scope.PushButton791_click = function() {$scope.SetObjectStyle("Headline10008","color","red");
 $scope.SetObjectStyle("Ellipse108","fill","red");
 localStorage.setItem("aa8","r");};
-$scope.PushButton792_click = function() {$scope.SetObjectStyle("Ellipse8","fill","green");
+$scope.PushButton792_click = function() {$scope.SetObjectStyle("Headline10008","color","green");
 $scope.SetObjectStyle("Ellipse108","fill","green");
 localStorage.setItem("aa8","g");};
 });
@@ -4167,13 +4086,13 @@ $scope.PushButton514_click = function() {neoTalkSpeak($App.speed10d, "", $App.Re
 $scope.TextArea256_change = function() {localStorage.setItem("speed10d",$App.speed10d);};
 $scope.PushButton518_click = function() {neoTalkSpeak($App.speed10e, "", $App.Read1, $App.Read2);};
 $scope.TextArea257_change = function() {localStorage.setItem("speed10e",$App.speed10e);};
-$scope.PushButton778_click = function() {$scope.SetObjectStyle("Ellipse10","fill","blue");
+$scope.PushButton778_click = function() {$scope.SetObjectStyle("Headline10010","color","blue");
 $scope.SetObjectStyle("Ellipse110","fill","blue");
 localStorage.setItem("aa10","b");};
-$scope.PushButton779_click = function() {$scope.SetObjectStyle("Ellipse10","fill","red");
+$scope.PushButton779_click = function() {$scope.SetObjectStyle("Headline10010","color","red");
 $scope.SetObjectStyle("Ellipse110","fill","red");
 localStorage.setItem("aa10","r");};
-$scope.PushButton780_click = function() {$scope.SetObjectStyle("Ellipse10","fill","green");
+$scope.PushButton780_click = function() {$scope.SetObjectStyle("Headline10010","color","green");
 $scope.SetObjectStyle("Ellipse110","fill","green");
 localStorage.setItem("aa10","g");};
 });
@@ -4192,13 +4111,13 @@ $scope.PushButton527_click = function() {neoTalkSpeak($App.speed11d, "", $App.Re
 $scope.TextArea261_change = function() {localStorage.setItem("speed11d",$App.speed11d);};
 $scope.PushButton529_click = function() {neoTalkSpeak($App.speed11e, "", $App.Read1, $App.Read2);};
 $scope.TextArea262_change = function() {localStorage.setItem("speed11e",$App.speed11e);};
-$scope.PushButton781_click = function() {$scope.SetObjectStyle("Ellipse11","fill","blue");
+$scope.PushButton781_click = function() {$scope.SetObjectStyle("Headline10011","color","blue");
 $scope.SetObjectStyle("Ellipse111","fill","blue");
 localStorage.setItem("aa11","b");};
-$scope.PushButton782_click = function() {$scope.SetObjectStyle("Ellipse11","fill","red");
+$scope.PushButton782_click = function() {$scope.SetObjectStyle("Headline10011","color","red");
 $scope.SetObjectStyle("Ellipse111","fill","red");
 localStorage.setItem("aa11","r");};
-$scope.PushButton783_click = function() {$scope.SetObjectStyle("Ellipse11","fill","green");
+$scope.PushButton783_click = function() {$scope.SetObjectStyle("Headline10011","color","green");
 $scope.SetObjectStyle("Ellipse111","fill","green");
 localStorage.setItem("aa11","g");};
 });
@@ -4217,13 +4136,13 @@ $scope.PushButton490_click = function() {neoTalkSpeak($App.speed09d, "", $App.Re
 $scope.TextArea251_change = function() {localStorage.setItem("speed09d",$App.speed09d);};
 $scope.PushButton494_click = function() {neoTalkSpeak($App.speed09e, "", $App.Read1, $App.Read2);};
 $scope.TextArea252_change = function() {localStorage.setItem("speed09e",$App.speed09e);};
-$scope.PushButton787_click = function() {$scope.SetObjectStyle("Ellipse9","fill","blue");
+$scope.PushButton787_click = function() {$scope.SetObjectStyle("Headline10009","color","blue");
 $scope.SetObjectStyle("Ellipse109","fill","blue");
 localStorage.setItem("aa9","b");};
-$scope.PushButton788_click = function() {$scope.SetObjectStyle("Ellipse9","fill","red");
+$scope.PushButton788_click = function() {$scope.SetObjectStyle("Headline10009","color","red");
 $scope.SetObjectStyle("Ellipse109","fill","red");
 localStorage.setItem("aa9","r");};
-$scope.PushButton789_click = function() {$scope.SetObjectStyle("Ellipse9","fill","green");
+$scope.PushButton789_click = function() {$scope.SetObjectStyle("Headline10009","color","green");
 $scope.SetObjectStyle("Ellipse109","fill","green");
 localStorage.setItem("aa9","g");};
 });
@@ -4242,13 +4161,13 @@ $scope.PushButton534_click = function() {neoTalkSpeak($App.speed12d, "", $App.Re
 $scope.TextArea266_change = function() {localStorage.setItem("speed12d",$App.speed12d);};
 $scope.PushButton535_click = function() {neoTalkSpeak($App.speed12e, "", $App.Read1, $App.Read2);};
 $scope.TextArea267_change = function() {localStorage.setItem("speed12e",$App.speed12e);};
-$scope.PushButton784_click = function() {$scope.SetObjectStyle("Ellipse12","fill","blue");
+$scope.PushButton784_click = function() {$scope.SetObjectStyle("Headline10012","color","blue");
 $scope.SetObjectStyle("Ellipse112","fill","blue");
 localStorage.setItem("aa12","b");};
-$scope.PushButton785_click = function() {$scope.SetObjectStyle("Ellipse12","fill","red");
+$scope.PushButton785_click = function() {$scope.SetObjectStyle("Headline10012","color","red");
 $scope.SetObjectStyle("Ellipse112","fill","red");
 localStorage.setItem("aa12","r");};
-$scope.PushButton786_click = function() {$scope.SetObjectStyle("Ellipse12","fill","green");
+$scope.PushButton786_click = function() {$scope.SetObjectStyle("Headline10012","color","green");
 $scope.SetObjectStyle("Ellipse112","fill","green");
 localStorage.setItem("aa12","g");};
 });
@@ -4267,13 +4186,13 @@ $scope.PushButton550_click = function() {neoTalkSpeak($App.speed13d, "", $App.Re
 $scope.TextArea271_change = function() {localStorage.setItem("speed13d",$App.speed13d);};
 $scope.PushButton555_click = function() {neoTalkSpeak($App.speed13e, "", $App.Read1, $App.Read2);};
 $scope.TextArea272_change = function() {localStorage.setItem("speed13e",$App.speed13e);};
-$scope.PushButton796_click = function() {$scope.SetObjectStyle("Ellipse13","fill","red");
+$scope.PushButton796_click = function() {$scope.SetObjectStyle("Headline10013","color","red");
 $scope.SetObjectStyle("Ellipse113","fill","red");
 localStorage.setItem("aa13","r");};
-$scope.PushButton797_click = function() {$scope.SetObjectStyle("Ellipse13","fill","green");
+$scope.PushButton797_click = function() {$scope.SetObjectStyle("Headline10013","color","red");
 $scope.SetObjectStyle("Ellipse113","fill","green");
 localStorage.setItem("aa13","g");};
-$scope.PushButton798_click = function() {$scope.SetObjectStyle("Ellipse13","fill","blue");
+$scope.PushButton798_click = function() {$scope.SetObjectStyle("Headline10013","color","blue");
 $scope.SetObjectStyle("Ellipse113","fill","blue");
 localStorage.setItem("aa13","b");};
 });
@@ -4292,13 +4211,13 @@ $scope.PushButton561_click = function() {neoTalkSpeak($App.speed14d, "", $App.Re
 $scope.TextArea276_change = function() {localStorage.setItem("speed14d",$App.speed14d);};
 $scope.PushButton562_click = function() {neoTalkSpeak($App.speed14e, "", $App.Read1, $App.Read2);};
 $scope.TextArea277_change = function() {localStorage.setItem("speed14e",$App.speed14e);};
-$scope.PushButton814_click = function() {$scope.SetObjectStyle("Ellipse14","fill","red");
+$scope.PushButton814_click = function() {$scope.SetObjectStyle("Headline10014","color","red");
 $scope.SetObjectStyle("Ellipse114","fill","red");
 localStorage.setItem("aa14","r");};
-$scope.PushButton815_click = function() {$scope.SetObjectStyle("Ellipse14","fill","green");
+$scope.PushButton815_click = function() {$scope.SetObjectStyle("Headline10014","color","green");
 $scope.SetObjectStyle("Ellipse114","fill","green");
 localStorage.setItem("aa14","g");};
-$scope.PushButton816_click = function() {$scope.SetObjectStyle("Ellipse14","fill","blue");
+$scope.PushButton816_click = function() {$scope.SetObjectStyle("Headline10014","color","blue");
 $scope.SetObjectStyle("Ellipse114","fill","blue");
 localStorage.setItem("aa14","b");};
 });
@@ -4317,13 +4236,13 @@ $scope.PushButton567_click = function() {neoTalkSpeak($App.speed15d, "", $App.Re
 $scope.TextArea281_change = function() {localStorage.setItem("speed15d",$App.speed15d);};
 $scope.PushButton568_click = function() {neoTalkSpeak($App.speed15e, "", $App.Read1, $App.Read2);};
 $scope.TextArea282_change = function() {localStorage.setItem("speed15e",$App.speed15e);};
-$scope.PushButton817_click = function() {$scope.SetObjectStyle("Ellipse15","fill","red");
+$scope.PushButton817_click = function() {$scope.SetObjectStyle("Headline10015","color","red");
 $scope.SetObjectStyle("Ellipse115","fill","red");
 localStorage.setItem("aa15","r");};
-$scope.PushButton818_click = function() {$scope.SetObjectStyle("Ellipse15","fill","green");
+$scope.PushButton818_click = function() {$scope.SetObjectStyle("Headline10015","color","green");
 $scope.SetObjectStyle("Ellipse115","fill","green");
 localStorage.setItem("aa15","g");};
-$scope.PushButton819_click = function() {$scope.SetObjectStyle("Ellipse15","fill","blue");
+$scope.PushButton819_click = function() {$scope.SetObjectStyle("Headline10015","color","blue");
 $scope.SetObjectStyle("Ellipse115","fill","blue");
 localStorage.setItem("aa15","b");};
 });
@@ -4342,13 +4261,13 @@ $scope.PushButton573_click = function() {neoTalkSpeak($App.speed16d, "", $App.Re
 $scope.TextArea286_change = function() {localStorage.setItem("speed16d",$App.speed16d);};
 $scope.PushButton574_click = function() {neoTalkSpeak($App.speed16e, "", $App.Read1, $App.Read2);};
 $scope.TextArea287_change = function() {localStorage.setItem("speed16e",$App.speed16e);};
-$scope.PushButton820_click = function() {$scope.SetObjectStyle("Ellipse16","fill","red");
+$scope.PushButton820_click = function() {$scope.SetObjectStyle("Headline10016","color","red");
 $scope.SetObjectStyle("Ellipse116","fill","red");
 localStorage.setItem("aa16","r");};
-$scope.PushButton821_click = function() {$scope.SetObjectStyle("Ellipse16","fill","green");
+$scope.PushButton821_click = function() {$scope.SetObjectStyle("Headline10016","color","green");
 $scope.SetObjectStyle("Ellipse116","fill","green");
 localStorage.setItem("aa16","g");};
-$scope.PushButton822_click = function() {$scope.SetObjectStyle("Ellipse16","fill","blue");
+$scope.PushButton822_click = function() {$scope.SetObjectStyle("Headline10016","color","blue");
 $scope.SetObjectStyle("Ellipse116","fill","blue");
 localStorage.setItem("aa16","b");};
 });
