@@ -3,45 +3,716 @@ $scope.SetError=function(msg){throw msg;};$scope.Refresh=function(){$timeout(ang
 listbox.options[selIndex].text=listbox.options[selIndex+increment].text
 listbox.options[selIndex+increment].value=selValue;listbox.options[selIndex+increment].text=selText;listbox.selectedIndex=selIndex+increment;};$scope.OpenDialog=function(dlgId){var modalInstance=$modal.open({templateUrl:dlgId,controller:dlgId+'_Ctrl',scope:$scope,size:'sm',backdrop:'static',animation:true});};$scope.AlertBox=function(dlgTitle,dlgMsg,dlgKind,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" ng-class="modal-sm">'+'<div class="modal-content">'+'<div class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+'<button class="btn btn-primary" ng-click="CloseDialog();">OK</button>'+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn!=undefined){modalInstance.result.then(function(){callbackFn()},function(){callbackFn()});}};$scope.AlertBoxEx=function(dlgTitle,dlgMsg,dlgKind,theWidth,theHeight,theColor,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var dlgKind=dlgKind||"primary";if(theWidth<150){theWidth=150;}if(theHeight<200){theHeight=200;}var modalBodyMaxHeight=theHeight-140;var modalInstance=$modal.open({template:'<div class="modal-dialog" style="width:'+theWidth+'px;height:'+theHeight+'px;" ng-class="modal-sm">'+'<div class="modal-content">'+'<div style="background:'+theColor+';" class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div style="overflow:auto;max-height:'+modalBodyMaxHeight+'px" class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+'<button class="btn btn-custom" style="color:#fff;background:'+theColor+';" ng-click="CloseDialog();">OK</button>'+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn!=undefined){modalInstance.result.then(function(){callbackFn()},function(){callbackFn()});}};$scope.MessageBoxEx=function(dlgTitle,dlgMsg,dlgButtons,dlgKind,theWidth,theHeight,theColor,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}if(theWidth<150){theWidth=150;}if(theHeight<200){theHeight=200;}var modalBodyMaxHeight=theHeight-140;var idx;var btns=dlgButtons.split("|");var btnsHTML='';for(idx=0;idx<btns.length;idx++){btnsHTML+='<button class="btn btn-custom" style="color:#fff;background:'+theColor+';" ng-click="CloseDialogBtn('+idx.toString()+');">'+btns[idx]+'</button>';}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" style="width:'+theWidth+'px;height:'+theHeight+'px;" ng-class="modal-sm">'+'<div class="modal-content">'+'<div style="background:'+theColor+';" class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div style="overflow:auto;max-height:'+modalBodyMaxHeight+'px" class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+btnsHTML+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn){modalInstance.result.then(function(value){callbackFn(value+1)},function(){callbackFn(0)});}};$scope.MessageBox=function(dlgTitle,dlgMsg,dlgButtons,dlgKind,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var idx;var btns=dlgButtons.split("|");var btnsHTML='';for(idx=0;idx<btns.length;idx++){btnsHTML+='<button class="btn btn-primary" ng-click="CloseDialogBtn('+idx.toString()+');">'+btns[idx]+'</button>';}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" ng-class="modal-sm">'+'<div class="modal-content">'+'<div class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+btnsHTML+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn){modalInstance.result.then(function(value){callbackFn(value+1)},function(){callbackFn(0)});}};$scope.SerializeForm=function(formId){var form=document.getElementById(formId);if(!form||form.nodeName!=="FORM")return;var i,j,s,field,m,q=[];for(i=0;i<form.elements.length;i++){field=form.elements[i];if(field.name==="")continue;switch(field.nodeName){case'INPUT':switch(field.type){case'text':case'hidden':case'password':case'number':q.push(field.name+"="+encodeURIComponent(field.value));break;case'checkbox':if(angular.isElement(field)){m=angular.element(field).controller('ngModel');if(m){q.push(field.name+"="+encodeURIComponent(m.$modelValue));break;}}q.push(field.name+"="+encodeURIComponent(field.checked));break;case'radio':if(field.checked){q.push(field.name+"="+encodeURIComponent(field.value));}break;case'file':break;}break;case'TEXTAREA':q.push(field.name+"="+encodeURIComponent(field.value));break;case'SELECT':switch(field.type){case'select-one':q.push(field.name+"="+encodeURIComponent(field.value));break;case'select-multiple':s='';for(j=field.options.length-1;j>=0;j=j-1){if(field.options[j].selected){s+=','+encodeURIComponent(field.options[j].value);}}if(s.length>0)q.push(field.name+"="+s.substr(1));break;}break;}}return q.join("&");};$scope.SubmitForm=function(form,url,method,submitFn,successFn,failFn){var ok=true;if(submitFn){ok=submitFn();}if(ok&&form&&url&&method){var f=$scope.SerializeForm(form);$http({method:method,url:url,data:f,responseType:"text",headers:{'Content-Type':'application/x-www-form-urlencoded'}}).then(function(response){if(successFn)successFn(response.data,response.status);},function(response){if(failFn)failFn(response.data,response.status);});}};$scope.FormSubmit=function(formulario,url){var neoApp=angular.element(document.getElementById("ng-view")).scope();var fnsubmit=neoApp[formulario+"_submit"];var fnsuccess=neoApp[formulario+"_success"];var fnfail=neoApp[formulario+"_fail"];neoApp.SubmitForm(formulario,url,'POST',fnsubmit,fnsuccess,fnfail);};$scope.FormReset=function(formulario){$("#"+formulario).trigger("reset");};$scope.SetCompVar=function(varname,varvalue){varname2="";vararray=varname.split("[");for(n=0;n<vararray.length;n++){vararray[n]=vararray[n].replace("]","");if($App[vararray[n]]!=undefined){varname2=varname2+$App[vararray[n]];}else{varname2=varname2+vararray[n];};};$App[varname2]=varvalue;};$scope.GetCompVar=function(varname,composedvar){varname2="";vararray=composedvar.split("[");for(n=0;n<vararray.length;n++){vararray[n]=vararray[n].replace("]","");if($App[vararray[n]]!=undefined){varname2=varname2+$App[vararray[n]];}else{varname2=varname2+vararray[n];};};$App[varname]=$App[varname2];};$scope.ArraySuffle=function(array,newArray){for(n=0;n<array.length;n++){newArray[n]=array[n];}var currentIndex=newArray.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex-=1;temporaryValue=newArray[currentIndex];newArray[currentIndex]=newArray[randomIndex];newArray[randomIndex]=temporaryValue;}};$scope.ArrayCopy=function(a,start,len){if(a&&start>-1&&len>0)return a.slice(start,start+len);return[]};$scope.LoadGoogleFont=function(fontName){$("head").append("<link href='https://fonts.googleapis.com/css?family="+fontName+"' rel='stylesheet' type='text/css'>");};$scope.LocalFileToVar=function(inputFileName,resultVar,tipo){$App.NAB.temp=resultVar;var realInputFileName=$("#"+inputFileName).prop("for");var files=$('#'+realInputFileName).prop("files");for(var i=0,f;f=files[i];i++){var reader=new FileReader();reader.onload=(function(theFile,resultVar,callBackFunction){return function(e,resultVar){varName=$App.NAB.temp;$App[varName]=e.target.result;};})(f);if(tipo=="text"){reader.readAsText(f);}else if(tipo=="binary"){reader.readAsBinaryString(f);}else if(tipo=="base64"){reader.readAsDataURL(f);}else{reader.readAsArrayBuffer(f);}};};$scope.SvgToBase64=function(theContainer,theWidth,theHeight,theType,theQuality,resultVar,callbackFn){var tagName=$("#"+theContainer).prop("tagName").toLowerCase();if(tagName=="svg"){var svg=document.getElementById(theContainer);}else{var svg=document.querySelector("#"+theContainer+" svg");}var svgToBase64PngTemp=svg.outerHTML;tempWidth=svg.getAttribute("width");if(tempWidth==null){tempWidth=theWidth;}tempHeight=svg.getAttribute("height");if(tempHeight==null){tempHeight=theHeight;}svg.setAttribute("width",theWidth);svg.setAttribute("height",theHeight);var svgData=new XMLSerializer().serializeToString(svg);var canvas=document.createElement("canvas");canvas.width=theWidth;canvas.height=theHeight;var ctx=canvas.getContext("2d");var img=document.createElement("img");img.setAttribute("src","data:image/svg+xml;base64,"+btoa(svgData));img.onload=function(){ctx.drawImage(img,0,0);svg.setAttribute("width",tempWidth);svg.setAttribute("height",tempHeight);if(theType=="jpg"){$App[resultVar]=canvas.toDataURL("image/jpeg",theQuality);if(callbackFn!=""&&callbackFn!=null&&callbackFn!=undefined){callbackFn();}}else{$App[resultVar]=canvas.toDataURL("image/png");if(callbackFn!=""&&callbackFn!=null&&callbackFn!=undefined){callbackFn();}}};};$scope.ImgToBase64=function(theImg,theType,theQuality,resultVar){var img=document.querySelector("#"+theImg);const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;ctx.drawImage(img,0,0);if(theType=="jpg"){$App[resultVar]=canvas.toDataURL('image/jpeg',theQuality);}else{$App[resultVar]=canvas.toDataURL('image/png');}};$scope.Base64ToLocalFile=function(dataurl,filename){var arr=dataurl.split(','),mime=arr[0].match(/:(.*?);/)[1],bstr=atob(arr[1]),n=bstr.length,u8arr=new Uint8Array(n);while(n--){u8arr[n]=bstr.charCodeAt(n);}theFile=new File([u8arr],filename,{type:mime});saveAs(theFile,filename);};$scope.ResizeDesktopWindow=function(theWidth,theHeight){if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){window.resizeTo(theWidth,theHeight);}};$scope.FitAppToScreen=function(coverScreen,verticalAlign,horizontalAlign){$scope.AppPosition(verticalAlign,horizontalAlign);var ha=horizontalAlign.toUpperCase();var va=verticalAlign.toUpperCase();if(va=="MIDDLE"){va="CENTER"};fit(document.getElementById("ng-app"),{x:0,y:0,width:window.innerWidth,height:window.innerHeight},{cover:coverScreen,hAlign:fit[ha],vAlign:fit[va]});fit(document.getElementById("ng-app"),{x:0,y:0,width:window.innerWidth,height:window.innerHeight},{cover:coverScreen,hAlign:fit[ha],vAlign:fit[va]},function(transform){$App.NAB.AppScale=transform.scale});};$scope.IsInstalled=function(){if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){return true;}else{return false;}};$scope.CenterApp=function(){$("body").css("position","absolute");$("body").css("top","0px");$("body").css("bottom","0px");$("body").css("left","0px");$("body").css("right","0px");$("body").css("margin","auto");$("body").css("margin","auto");};$scope.TopCenterApp=function(){$("body").css("position","absolute");$("body").css("top","0px!important");$("body").css("left","0px");$("body").css("right","0px");$("body").css("bottom","auto");$("body").css("margin","auto");};$scope.ScaleApp=function(thezoom){$App.NAB.AppScale=thezoom;$("#ng-app").css("transform-origin","50% 50%");$("#ng-app").css("transform","scale("+thezoom+","+thezoom+")");};$scope.AppPosition=function(vertical,horizontal){$('body').css("position","absolute");if(vertical=="top"){$('body').css("top","0px");$('body').css("bottom","auto");}else if(vertical=="bottom"){$('body').css("bottom","0px");$('body').css("top","auto");}else{$('body').css("bottom","0px");$('body').css("top","0px");}if(horizontal=="left"){$('body').css("left","0px");$('body').css("right","auto");}else if(horizontal=="right"){$('body').css("left","auto");$('body').css("right","0px");}else{$('body').css("left","0px");$('body').css("right","0px");}$('body').css("margin","auto");};$scope.SetResponsivePages=function(plarge,pmedium,psmall,pxsmall){if(matchMedia){const largedisp=window.matchMedia("(min-width: 1025px)");const mediumdisp=window.matchMedia("(min-width: 768px) and (max-width: 1024px)");const smalldisp=window.matchMedia("(min-width: 481px) and (max-width: 767px)");const verysmalldisp=window.matchMedia("(min-width: 320px) and (max-width: 480px)");funciones=angular.element(document.getElementById("ng-view")).scope();$("body").css("width","100%");$("body").css("height","100%");$("body").css("overflow-x","hidden");$("body").css("overflow-y","auto");largedisp.addListener(WidthChangeLarge);WidthChangeLarge(largedisp);mediumdisp.addListener(WidthChangeMedium);WidthChangeMedium(mediumdisp);smalldisp.addListener(WidthChangeSmall);WidthChangeSmall(smalldisp);verysmalldisp.addListener(WidthChangeVerySmall);WidthChangeVerySmall(verysmalldisp);function WidthChangeLarge(largedisp){if(largedisp.matches){funciones.GotoPage(plarge);}};function WidthChangeMedium(mediumdisp){if(mediumdisp.matches){funciones.GotoPage(pmedium);}};function WidthChangeSmall(smalldisp){if(smalldisp.matches){funciones.GotoPage(psmall);}};function WidthChangeVerySmall(verysmalldisp){if(verysmalldisp.matches){funciones.GotoPage(pxsmall);}};}};$scope.AppBackgroundColor=function(thecolor){$("html").css("background",thecolor);};$scope.AppBackgroundImage=function(imagen){ruta=$("#"+imagen).attr('src');$("html").css('background-image','url('+ruta+' )');$("html").css('background-repeat','no-repeat');$("html").css('background-position','center center');$("html").css('background-attachment','fixed');$("html").css("-webkit-background-size","cover");$("html").css("-moz-background-size","cover");$("html").css("-o-background-size","cover");$("html").css("background-size","cover");};$scope.ObjDisableSelection=function(objectname){$("#"+objectname).css("-webkit-touch-callout","none");$("#"+objectname).css("-webkit-user-select","none");$("#"+objectname).css("-khtml-user-select","none");$("#"+objectname).css("-moz-user-select","none");$("#"+objectname).css("-ms-user-select","none");$("#"+objectname).css("user-select","none");};$scope.DisableSelection=function(){$("*").css("-webkit-touch-callout","none");$("*").css("-webkit-user-select","none");$("*").css("-khtml-user-select","none");$("*").css("-moz-user-select","none");$("*").css("-ms-user-select","none");$("*").css("user-select","none");};$scope.GetUrlParameter=function(param){url=window.location.href;var queryString=url?url.split('?')[1]:window.location.search.slice(1);var obj={};if(queryString){queryString=queryString.split('#')[0];var arr=queryString.split('&');for(var i=0;i<arr.length;i++){var a=arr[i].split('=');var paramName=a[0];var paramValue=typeof(a[1])==='undefined'?true:a[1];if(typeof paramValue==='string')paramValue=paramValue;if(paramName.match(/\[(\d+)?\]$/)){var key=paramName.replace(/\[(\d+)?\]/,'');if(!obj[key])obj[key]=[];if(paramName.match(/\[\d+\]$/)){var index=/\[(\d+)\]/.exec(paramName)[1];obj[key][index]=paramValue;}else{obj[key].push(paramValue);}}else{if(!obj[paramName]){obj[paramName]=paramValue;}else if(obj[paramName]&&typeof obj[paramName]==='string'){obj[paramName]=[obj[paramName]];obj[paramName].push(paramValue);}else{obj[paramName].push(paramValue);}}}}return obj[param];};$scope.csvToJSON=function(mycsv,separator,jsonObject){var lines=$App[mycsv].split("\n");var result=[];var headers=lines[0].split(separator);for(var i=1;i<lines.length;i++){var obj={};var currentline=lines[i].split(separator);for(var j=0;j<headers.length;j++){obj[headers[j]]=currentline[j];}result.push(obj);}$App[jsonObject]=result;};$scope.CheckInternetConnection=function(url,timeout,successFn,errorFn){$.ajax({url:url,timeout:timeout,cache:false,success:function(){if(successFn!=undefined){successFn();}},error:function(){if(errorFn!=undefined){errorFn();}},});};$scope.SetRelativePosition=function(objectname,vertical,horizontal){$("#"+objectname).css("position","absolute");if(vertical=="top"){$("#"+objectname).css("top","0px");$("#"+objectname).css("bottom","auto");}else if(vertical=="bottom"){$("#"+objectname).css("bottom","0px");$("#"+objectname).css("top","auto");}else{$("#"+objectname).css("bottom","0px");$("#"+objectname).css("top","0px");}if(horizontal=="left"){$("#"+objectname).css("left","0px");$("#"+objectname).css("right","auto");}else if(horizontal=="right"){$("#"+objectname).css("left","auto");$("#"+objectname).css("right","0px");}else{$("#"+objectname).css("left","0px");$("#"+objectname).css("right","0px");}$("#"+objectname).css("margin","auto");};$scope.WatchVar=function(varName,fn){if($App.NAB.$Watches[varName]){if($App.NAB.$Watches[varName].deRegFn)$App.NAB.$Watches[varName].deRegFn();delete $App.NAB.$Watches[varName];};if(fn){$App.NAB.$Watches[varName]={id:varName,deRegFn:undefined};$App.NAB.$Watches[varName].deRegFn=$scope.$watch(varName,function(newVal,oldVal){if(oldVal!==newVal)fn(newVal,oldVal);});};};$scope.TimerStart=function(objId,ms){if($App.NAB.$Timers[objId]){if(!angular.isDefined($App.NAB.$Timers[objId].promise)){$App.NAB.$Timers[objId].stime=Date.now();$App.NAB.$Timers[objId].promise=$interval($App.NAB.$Timers[objId].fn,ms||1000);}}else throw'A timer named "'+objId+'" does not exist.';};$scope.TimerStop=function(objId){if($App.NAB.$Timers[objId]){if(angular.isDefined($App.NAB.$Timers[objId].promise)){$interval.cancel($App.NAB.$Timers[objId].promise);$App.NAB.$Timers[objId].promise=undefined;}}else throw'A timer named "'+objId+'" does not exist.';};$scope._DeleteSound=function(sname){if($App.NAB.$Audio[sname]){$App.NAB.$Audio[sname].player.pause();delete $App.NAB.$Audio[sname].player;delete $App.NAB.$Audio[sname];return true;}return false;};$scope.PlaySound=function(fname,loop){var sname=ExtractFileName(fname).toLowerCase();if($App.NAB.$Audio[sname])throw'A sound named "'+sname+'" is already playing.';var devicePlatform=(typeof device!=='undefined'&&device.platform)?device.platform:null;if(typeof Audio!=="undefined"&&devicePlatform===null){obj={id:sname,kind:"audio",player:new Audio(fname)};obj.player.addEventListener("ended",function(){$scope._DeleteSound(sname);});}else if(devicePlatform){if(devicePlatform==='Android'){if(!IsUrl(fname))fname='/android_asset/www/'+fname;}obj={id:sname,kind:"media",player:new Media(fname,function onSuccess(){$scope._DeleteSound(sname);},function onError(e){console.log("Error playing sound: "+JSON.stringify(e));$scope._DeleteSound(sname);})};}else throw'Sound API unavailable.';$App.NAB.$Audio[sname]=obj;if(obj.kind==="audio"){obj.player.loop=loop;obj.player.play();}else obj.player.play({numberOfLoops:loop});};$scope.StopSound=function(fname){if(!fname||fname.length===0){for(var id in $App.NAB.$Audio)$scope._DeleteSound(id);}else{var sname=ExtractFileName(fname).toLowerCase();if(!$scope._DeleteSound(sname))throw'There is no playing sound named "'+sname+'"';}};$scope.CreateVideoPlayer=function(objId,fname,controls,autoplay,looping,muted){var sname=ExtractFileName(fname).toLowerCase();if(controls){addcontrols="controls";}else{addcontrols="";}if(autoplay){addautoplay="autoplay";}else{addautoplay="";}if(looping){addloop="loop";}else{addloop="";}if(muted){addmuted="muted";}else{addmuted="";}htmlstring='<video id="'+objId+'Video" width="100%" height="100%" '+addcontrols+' '+addautoplay+' '+addloop+' '+addmuted+'><source src="'+fname+'" type="video/mp4"></video>';$("#"+objId).html(htmlstring);};$scope.OnVideoEvent=function(objId,eventName,subroutine){if($App.NAB[objId+"Video"]){$App.NAB[objId+"Video"].on(eventName,subroutine);return;}$("#"+objId+"Video").on(eventName,subroutine);};$scope.CreateAudioPlayer=function(objId,fname,controls,autoplay,looping){var sname=ExtractFileName(fname).toLowerCase();if(controls){addcontrols="controls";}else{addcontrols="";}if(autoplay){addautoplay="autoplay";}else{addautoplay="";}if(looping){addloop="loop";}else{addloop="";}htmlstring='<audio id="'+objId+'Audio" width="100%" height="100%" '+addcontrols+' '+addautoplay+' '+addloop+'><source src="'+fname+'" type="audio/mp3"></audio>';$("#"+objId).html(htmlstring);};$scope.OnAudioEvent=function(objId,eventName,subroutine){if($App.NAB[objId+"Audio"]){$App.NAB[objId+"Audio"].on(eventName,subroutine);return;}$("#"+objId+"Audio").on(eventName,subroutine);};$scope.SoundBeep=function(){var snd=new Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2oCgILEBupZgHvAhEBcZ6joQBxS76AgccrFlczBvKLC0QI2cBoCFvfTDAo7eoOQInqDPBtvrDEZBNYN5xwNwxQRfw8ZQ5wQVLvO8OYU+mHvFLlDh05Mdg7BT6YrRPpCBznMB2r//xKJjyyOh+cImr2/4doscwD6neZjuZR4AgAABYAAAABy1xcdQtxYBYYZdifkUDgzzXaXn98Z0oi9ILU5mBjFANmRwlVJ3/6jYDAmxaiDG3/6xjQQCCKkRb/6kg/wW+kSJ5//rLobkLSiKmqP/0ikJuDaSaSf/6JiLYLEYnW/+kXg1WRVJL/9EmQ1YZIsv/6Qzwy5qk7/+tEU0nkls3/zIUMPKNX/6yZLf+kFgAfgGyLFAUwY//uQZAUABcd5UiNPVXAAAApAAAAAE0VZQKw9ISAAACgAAAAAVQIygIElVrFkBS+Jhi+EAuu+lKAkYUEIsmEAEoMeDmCETMvfSHTGkF5RWH7kz/ESHWPAq/kcCRhqBtMdokPdM7vil7RG98A2sc7zO6ZvTdM7pmOUAZTnJW+NXxqmd41dqJ6mLTXxrPpnV8avaIf5SvL7pndPvPpndJR9Kuu8fePvuiuhorgWjp7Mf/PRjxcFCPDkW31srioCExivv9lcwKEaHsf/7ow2Fl1T/9RkXgEhYElAoCLFtMArxwivDJJ+bR1HTKJdlEoTELCIqgEwVGSQ+hIm0NbK8WXcTEI0UPoa2NbG4y2K00JEWbZavJXkYaqo9CRHS55FcZTjKEk3NKoCYUnSQ0rWxrZbFKbKIhOKPZe1cJKzZSaQrIyULHDZmV5K4xySsDRKWOruanGtjLJXFEmwaIbDLX0hIPBUQPVFVkQkDoUNfSoDgQGKPekoxeGzA4DUvnn4bxzcZrtJyipKfPNy5w+9lnXwgqsiyHNeSVpemw4bWb9psYeq//uQZBoABQt4yMVxYAIAAAkQoAAAHvYpL5m6AAgAACXDAAAAD59jblTirQe9upFsmZbpMudy7Lz1X1DYsxOOSWpfPqNX2WqktK0DMvuGwlbNj44TleLPQ+Gsfb+GOWOKJoIrWb3cIMeeON6lz2umTqMXV8Mj30yWPpjoSa9ujK8SyeJP5y5mOW1D6hvLepeveEAEDo0mgCRClOEgANv3B9a6fikgUSu/DmAMATrGx7nng5p5iimPNZsfQLYB2sDLIkzRKZOHGAaUyDcpFBSLG9MCQALgAIgQs2YunOszLSAyQYPVC2YdGGeHD2dTdJk1pAHGAWDjnkcLKFymS3RQZTInzySoBwMG0QueC3gMsCEYxUqlrcxK6k1LQQcsmyYeQPdC2YfuGPASCBkcVMQQqpVJshui1tkXQJQV0OXGAZMXSOEEBRirXbVRQW7ugq7IM7rPWSZyDlM3IuNEkxzCOJ0ny2ThNkyRai1b6ev//3dzNGzNb//4uAvHT5sURcZCFcuKLhOFs8mLAAEAt4UWAAIABAAAAAB4qbHo0tIjVkUU//uQZAwABfSFz3ZqQAAAAAngwAAAE1HjMp2qAAAAACZDgAAAD5UkTE1UgZEUExqYynN1qZvqIOREEFmBcJQkwdxiFtw0qEOkGYfRDifBui9MQg4QAHAqWtAWHoCxu1Yf4VfWLPIM2mHDFsbQEVGwyqQoQcwnfHeIkNt9YnkiaS1oizycqJrx4KOQjahZxWbcZgztj2c49nKmkId44S71j0c8eV9yDK6uPRzx5X18eDvjvQ6yKo9ZSS6l//8elePK/Lf//IInrOF/FvDoADYAGBMGb7FtErm5MXMlmPAJQVgWta7Zx2go+8xJ0UiCb8LHHdftWyLJE0QIAIsI+UbXu67dZMjmgDGCGl1H+vpF4NSDckSIkk7Vd+sxEhBQMRU8j/12UIRhzSaUdQ+rQU5kGeFxm+hb1oh6pWWmv3uvmReDl0UnvtapVaIzo1jZbf/pD6ElLqSX+rUmOQNpJFa/r+sa4e/pBlAABoAAAAA3CUgShLdGIxsY7AUABPRrgCABdDuQ5GC7DqPQCgbbJUAoRSUj+NIEig0YfyWUho1VBBBA//uQZB4ABZx5zfMakeAAAAmwAAAAF5F3P0w9GtAAACfAAAAAwLhMDmAYWMgVEG1U0FIGCBgXBXAtfMH10000EEEEEECUBYln03TTTdNBDZopopYvrTTdNa325mImNg3TTPV9q3pmY0xoO6bv3r00y+IDGid/9aaaZTGMuj9mpu9Mpio1dXrr5HERTZSmqU36A3CumzN/9Robv/Xx4v9ijkSRSNLQhAWumap82WRSBUqXStV/YcS+XVLnSS+WLDroqArFkMEsAS+eWmrUzrO0oEmE40RlMZ5+ODIkAyKAGUwZ3mVKmcamcJnMW26MRPgUw6j+LkhyHGVGYjSUUKNpuJUQoOIAyDvEyG8S5yfK6dhZc0Tx1KI/gviKL6qvvFs1+bWtaz58uUNnryq6kt5RzOCkPWlVqVX2a/EEBUdU1KrXLf40GoiiFXK///qpoiDXrOgqDR38JB0bw7SoL+ZB9o1RCkQjQ2CBYZKd/+VJxZRRZlqSkKiws0WFxUyCwsKiMy7hUVFhIaCrNQsKkTIsLivwKKigsj8XYlwt/WKi2N4d//uQRCSAAjURNIHpMZBGYiaQPSYyAAABLAAAAAAAACWAAAAApUF/Mg+0aohSIRobBAsMlO//Kk4soosy1JSFRYWaLC4qZBYWFRGZdwqKiwkNBVmoWFSJkWFxX4FFRQWR+LsS4W/rFRb/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VEFHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU291bmRib3kuZGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAwNGh0dHA6Ly93d3cuc291bmRib3kuZGUAAAAAAAAAACU=");snd.play();};var fit=function(){"use strict";function t(t){return t.toUpperCase()}function e(t){return"number"==typeof t&&!isNaN(t)}function n(){return(new Date).getTime()}function i(t,e){for(var n=[],i=0,r=t.length;r>i;i++)n[i]=e(t[i]);return n}function r(t,e){for(var n in e)n in t||(t[n]=e[n]);return t}function o(e){if(!d)for(var n,i=H(C.body),r=w,o=0,a=T.length;a>o&&(d=T[o],n=d+r,!(n in i))&&(d=d.replace(/^(\w)/,t),n=d+r,!(n in i));o++);return d+e}function a(t){var e=H(t),n=e[o(w)].replace(/[a-z()]/gi,"").split(",");if(n.length<6)return[1,0,0,1,0,0];for(var i=0;6>i;i++)n[i]=parseFloat(n[i]);return n}function f(t,e){var n=a(e);n[0]=t.scale,n[3]=t.scale,n[4]+=t.tx,n[5]+=t.ty;var r=i(n,function(t){return t.toFixed(6)});e.style[o(m)]="0 0",e.style[o(w)]="matrix("+r.join(",")+")"}function s(t,e){var n=H(e),i=parseFloat(n.left)||0,r=parseFloat(n.top)||0;"static"===n.position&&(e.style.position="relative"),e.style.left=i+t.tx+b,e.style.top=r+t.ty+b,e.style.height=t.height+b,e.style.width=t.width+b}function l(t,e){var n=H(e),i=parseFloat(n.marginLeft)||0,r=parseFloat(n.marginTop)||0;e.style.marginLeft=i+t.tx+b,e.style.marginTop=r+t.ty+b,e.style.height=t.height+b,e.style.width=t.width+b}function h(t,e){e.height*=t.scale,e.width*=t.scale,e.x+=t.tx,e.y+=t.ty}function u(t){if(t.nodeType&&1==t.nodeType){var n=t.getBoundingClientRect();t={height:t.offsetHeight,width:t.offsetWidth,x:n.left,y:n.top}}return!e(t.x)&&e(t.left)&&(t.x=t.left),!e(t.y)&&e(t.top)&&(t.y=t.top),t}function c(){var t=n(),e=t-y;if(x>=e)clearInterval(v),v=setTimeout(c,x-e);else{for(var i=0,r=M.length;r>i;i++)M[i]();y=t}}function g(t,e,n,i,r){var o=u(t),a=u(e),s=0===o.width?R:o.width,l=0===o.height?P:o.height,c=0===a.width?I:a.width,g=0===a.height?P:a.height;R=s,B=l,I=c,P=g;var p=c/s,d=g/l,y=s/l,v=c/g,x=n.cover?d:p,m=n.cover?p:d,w=y>=v?x:m,T=s*w,O=l*w,F=n.hAlign==E?.5*(T-c):n.hAlign==L?T-c:0,b=n.vAlign==E?.5*(O-g):n.vAlign==A?O-g:0;return r=r||{},r.tx=a.x-F-o.x,r.ty=a.y-b-o.y,r.x=a.x-F-o.x*w,r.y=a.y-b-o.y*w,r.height=o.height*w,r.width=o.width*w,r.scale=w,i?i(r,t):n.apply&&(i="undefined"!=typeof HTMLElement&&t instanceof HTMLElement?f:h)(r,t),r}function p(t,e,n,i){if(!t||!e)throw"You must supply a target and a container";"function"==typeof n&&(i=n,n={}),n=r(n||{},N);var o=g(t,e,n,i);return n.watch&&(M.length||(z.addEventListener?(z.addEventListener("resize",c),z.addEventListener("orientationchange",c)):(z.attachEvent("onresize",c),z.attachEvent("onorientationchange",c))),o.trigger=function(){g(t,e,n,i,o)},o.on=function(t){var e=M.indexOf(o.trigger);~e||M.push(o.trigger),t||o.trigger()},o.off=function(){var t=M.indexOf(o.trigger);~t&&M.splice(t,1)},o.on(!0)),o}var d,y,v,x=50,m="TransformOrigin",w="Transform",T="moz ms o webkit".split(" "),E="center",A="bottom",L="right",O="left",F="top",b="px",z=window||self,C=document,H=z.getComputedStyle,M=[],N={hAlign:E,vAlign:E,watch:!1,cover:!1,apply:!0};Array.prototype.indexOf||(Array.prototype.indexOf=function(t){for(var e=0;e<this.length;++e)if(this[e]==t)return e;return-1});var R,B,I,P;return r(p,{watching:M,defaults:N,cssTransform:f,cssPosition:s,cssMargin:l,CENTER:E,BOTTOM:A,RIGHT:L,LEFT:O,TOP:F})}();"undefined"!=typeof exports&&("undefined"!=typeof module&&module.exports&&(exports=module.exports=fit),exports.fit=fit);(function(factory){if(typeof define==="function"&&define.amd){define(["jquery"],function($){return factory($)})}else if(typeof module==="object"&&typeof module.exports==="object"){exports=factory(require("jquery"))}else{factory(jQuery)}})(function($){$.easing.jswing=$.easing.swing;var pow=Math.pow,sqrt=Math.sqrt,sin=Math.sin,cos=Math.cos,PI=Math.PI,c1=1.70158,c2=c1*1.525,c3=c1+1,c4=2*PI/3,c5=2*PI/4.5;function bounceOut(x){var n1=7.5625,d1=2.75;if(x<1/d1){return n1*x*x}else if(x<2/d1){return n1*(x-=1.5/d1)*x+.75}else if(x<2.5/d1){return n1*(x-=2.25/d1)*x+.9375}else{return n1*(x-=2.625/d1)*x+.984375}}$.extend($.easing,{def:"easeOutQuad",swing:function(x){return $.easing[$.easing.def](x)},easeInQuad:function(x){return x*x},easeOutQuad:function(x){return 1-(1-x)*(1-x)},easeInOutQuad:function(x){return x<.5?2*x*x:1-pow(-2*x+2,2)/2},easeInCubic:function(x){return x*x*x},easeOutCubic:function(x){return 1-pow(1-x,3)},easeInOutCubic:function(x){return x<.5?4*x*x*x:1-pow(-2*x+2,3)/2},easeInQuart:function(x){return x*x*x*x},easeOutQuart:function(x){return 1-pow(1-x,4)},easeInOutQuart:function(x){return x<.5?8*x*x*x*x:1-pow(-2*x+2,4)/2},easeInQuint:function(x){return x*x*x*x*x},easeOutQuint:function(x){return 1-pow(1-x,5)},easeInOutQuint:function(x){return x<.5?16*x*x*x*x*x:1-pow(-2*x+2,5)/2},easeInSine:function(x){return 1-cos(x*PI/2)},easeOutSine:function(x){return sin(x*PI/2)},easeInOutSine:function(x){return-(cos(PI*x)-1)/2},easeInExpo:function(x){return x===0?0:pow(2,10*x-10)},easeOutExpo:function(x){return x===1?1:1-pow(2,-10*x)},easeInOutExpo:function(x){return x===0?0:x===1?1:x<.5?pow(2,20*x-10)/2:(2-pow(2,-20*x+10))/2},easeInCirc:function(x){return 1-sqrt(1-pow(x,2))},easeOutCirc:function(x){return sqrt(1-pow(x-1,2))},easeInOutCirc:function(x){return x<.5?(1-sqrt(1-pow(2*x,2)))/2:(sqrt(1-pow(-2*x+2,2))+1)/2},easeInElastic:function(x){return x===0?0:x===1?1:-pow(2,10*x-10)*sin((x*10-10.75)*c4)},easeOutElastic:function(x){return x===0?0:x===1?1:pow(2,-10*x)*sin((x*10-.75)*c4)+1},easeInOutElastic:function(x){return x===0?0:x===1?1:x<.5?-(pow(2,20*x-10)*sin((20*x-11.125)*c5))/2:pow(2,-20*x+10)*sin((20*x-11.125)*c5)/2+1},easeInBack:function(x){return c3*x*x*x-c1*x*x},easeOutBack:function(x){return 1+c3*pow(x-1,3)+c1*pow(x-1,2)},easeInOutBack:function(x){return x<.5?pow(2*x,2)*((c2+1)*2*x-c2)/2:(pow(2*x-2,2)*((c2+1)*(x*2-2)+c2)+2)/2},easeInBounce:function(x){return 1-bounceOut(1-x)},easeOutBounce:bounceOut,easeInOutBounce:function(x){return x<.5?(1-bounceOut(1-2*x))/2:(1+bounceOut(2*x-1))/2}})});function d(c){var b,a;if(!this.length)return this;b=this[0];b.ownerDocument?a=b.ownerDocument:(a=b,b=a.documentElement);if(null==c){if(!a.exitFullscreen&&!a.webkitExitFullscreen&&!a.webkitCancelFullScreen&&!a.msExitFullscreen&&!a.mozCancelFullScreen)return null;c=!!a.fullscreenElement||!!a.msFullscreenElement||!!a.webkitIsFullScreen||!!a.mozFullScreen;return!c?c:a.fullscreenElement||a.webkitFullscreenElement||a.webkitCurrentFullScreenElement||a.msFullscreenElement||a.mozFullScreenElement||c}c?(c=b.requestFullscreen||b.webkitRequestFullscreen||b.webkitRequestFullScreen||b.msRequestFullscreen||b.mozRequestFullScreen)&&c.call(b):(c=a.exitFullscreen||a.webkitExitFullscreen||a.webkitCancelFullScreen||a.msExitFullscreen||a.mozCancelFullScreen)&&c.call(a);return this}jQuery.fn.fullScreen=d;jQuery.fn.toggleFullScreen=function(){return d.call(this,!d.call(this))};var e,f,g;e=document;e.webkitCancelFullScreen?(f="webkitfullscreenchange",g="webkitfullscreenerror"):e.msExitFullscreen?(f="MSFullscreenChange",g="MSFullscreenError"):e.mozCancelFullScreen?(f="mozfullscreenchange",g="mozfullscreenerror"):(f="fullscreenchange",g="fullscreenerror");jQuery(document).bind(f,function(){jQuery(document).trigger(new jQuery.Event("fullscreenchange"))});jQuery(document).bind(g,function(){jQuery(document).trigger(new jQuery.Event("fullscreenerror"))});$scope.EnterFullScreen=function(){$(document).fullScreen(true);};$scope.ExitFullScreen=function(){$(document).fullScreen(false);};$scope.ObjectEnterFullScreen=function(ObjId){$("#"+ObjId).fullScreen(true);};$scope.ObjectExitFullScreen=function(ObjId){$("#"+ObjId).fullScreen(false);};var neoscript;$scope.AppOnKeyDown=function(callbackFn){$("body").keydown(function(evt){callbackFn(evt.which);});};(function(a,b){if("function"==typeof define&&define.amd)define([],b);else if("undefined"!=typeof exports)b();else{b(),a.FileSaver={exports:{}}.exports}})(this,function(){"use strict";function b(a,b){return"undefined"==typeof b?b={autoBom:!1}:"object"!=typeof b&&(console.warn("Depricated: Expected third argument to be a object"),b={autoBom:!b}),b.autoBom&&/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type)?new Blob(["\uFEFF",a],{type:a.type}):a}function c(b,c,d){var e=new XMLHttpRequest;e.open("GET",b),e.responseType="blob",e.onload=function(){a(e.response,c,d)},e.onerror=function(){console.error("could not download file")},e.send()}function d(a){var b=new XMLHttpRequest;return b.open("HEAD",a,!1),b.send(),200<=b.status&&299>=b.status}function e(a){try{a.dispatchEvent(new MouseEvent("click"))}catch(c){var b=document.createEvent("MouseEvents");b.initMouseEvent("click",!0,!0,window,0,0,0,80,20,!1,!1,!1,!1,0,null),a.dispatchEvent(b)}}var f="object"==typeof window&&window.window===window?window:"object"==typeof self&&self.self===self?self:"object"==typeof global&&global.global===global?global:void 0,a=f.saveAs||"object"!=typeof window||window!==f?function(){}:"download"in HTMLAnchorElement.prototype?function(b,g,h){var i=f.URL||f.webkitURL,j=document.createElement("a");g=g||b.name||"download",j.download=g,j.rel="noopener","string"==typeof b?(j.href=b,j.origin===location.origin?e(j):d(j.href)?c(b,g,h):e(j,j.target="_blank")):(j.href=i.createObjectURL(b),setTimeout(function(){i.revokeObjectURL(j.href)},4E4),setTimeout(function(){e(j)},0))}:"msSaveOrOpenBlob"in navigator?function(f,g,h){if(g=g||f.name||"download","string"!=typeof f)navigator.msSaveOrOpenBlob(b(f,h),g);else if(d(f))c(f,g,h);else{var i=document.createElement("a");i.href=f,i.target="_blank",setTimeout(function(){e(i)})}}:function(a,b,d,e){if(e=e||open("","_blank"),e&&(e.document.title=e.document.body.innerText="downloading..."),"string"==typeof a)return c(a,b,d);var g="application/octet-stream"===a.type,h=/constructor/i.test(f.HTMLElement)||f.safari,i=/CriOS\/[\d]+/.test(navigator.userAgent);if((i||g&&h)&&"object"==typeof FileReader){var j=new FileReader;j.onloadend=function(){var a=j.result;a=i?a:a.replace(/^data:[^;]*;/,"data:attachment/file;"),e?e.location.href=a:location=a,e=null},j.readAsDataURL(a)}else{var k=f.URL||f.webkitURL,l=k.createObjectURL(a);e?e.location=l:location.href=l,e=null,setTimeout(function(){k.revokeObjectURL(l)},4E4)}};f.saveAs=a.saveAs=a,"undefined"!=typeof module&&(module.exports=a)});$scope.VarToFile=function(datavar,filename){var blob=new Blob([datavar],{type:"text/plain;charset=utf-8"});saveAs(blob,filename);};!function(a){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=a();else if("function"==typeof define&&define.amd)define([],a);else{var b;b="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,b.mexp=a()}}(function(){return function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c?c:a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}({1:[function(a,b,c){var d=a("./postfix_evaluator.js");d.prototype.formulaEval=function(){"use strict";for(var a,b,c,d=[],e=this.value,f=0;f<e.length;f++)1===e[f].type||3===e[f].type?d.push({value:3===e[f].type?e[f].show:e[f].value,type:1}):13===e[f].type?d.push({value:e[f].show,type:1}):0===e[f].type?d[d.length-1]={value:e[f].show+("-"!=e[f].show?"(":"")+d[d.length-1].value+("-"!=e[f].show?")":""),type:0}:7===e[f].type?d[d.length-1]={value:(1!=d[d.length-1].type?"(":"")+d[d.length-1].value+(1!=d[d.length-1].type?")":"")+e[f].show,type:7}:10===e[f].type?(a=d.pop(),b=d.pop(),"P"===e[f].show||"C"===e[f].show?d.push({value:"<sup>"+b.value+"</sup>"+e[f].show+"<sub>"+a.value+"</sub>",type:10}):d.push({value:(1!=b.type?"(":"")+b.value+(1!=b.type?")":"")+"<sup>"+a.value+"</sup>",type:1})):2===e[f].type||9===e[f].type?(a=d.pop(),b=d.pop(),d.push({value:(1!=b.type?"(":"")+b.value+(1!=b.type?")":"")+e[f].show+(1!=a.type?"(":"")+a.value+(1!=a.type?")":""),type:e[f].type})):12===e[f].type&&(a=d.pop(),b=d.pop(),c=d.pop(),d.push({value:e[f].show+"("+c.value+","+b.value+","+a.value+")",type:12}));return d[0].value},b.exports=d},{"./postfix_evaluator.js":5}],2:[function(a,b,c){function d(a,b){for(var c=0;c<a.length;c++)a[c]+=b;return a}function e(a,b,c,d){for(var e=0;e<d;e++)if(a[c+e]!==b[e])return!1;return!0}var f=a("./math_function.js"),g=["sin","cos","tan","pi","(",")","P","C","asin","acos","atan","7","8","9","int","cosh","acosh","ln","^","root","4","5","6","/","!","tanh","atanh","Mod","1","2","3","*","sinh","asinh","e","log","0",".","+","-",",","Sigma","n","Pi","pow"],h=["sin","cos","tan","&pi;","(",")","P","C","asin","acos","atan","7","8","9","Int","cosh","acosh"," ln","^","root","4","5","6","&divide;","!","tanh","atanh"," Mod ","1","2","3","&times;","sinh","asinh","e"," log","0",".","+","-",",","&Sigma;","n","&Pi;","pow"],i=[f.math.sin,f.math.cos,f.math.tan,"PI","(",")",f.math.P,f.math.C,f.math.asin,f.math.acos,f.math.atan,"7","8","9",Math.floor,f.math.cosh,f.math.acosh,Math.log,Math.pow,Math.sqrt,"4","5","6",f.math.div,f.math.fact,f.math.tanh,f.math.atanh,f.math.mod,"1","2","3",f.math.mul,f.math.sinh,f.math.asinh,"E",f.math.log,"0",".",f.math.add,f.math.sub,",",f.math.sigma,"n",f.math.Pi,Math.pow],j={0:11,1:0,2:3,3:0,4:0,5:0,6:0,7:11,8:11,9:1,10:10,11:0,12:11,13:0},k=[0,0,0,3,4,5,10,10,0,0,0,1,1,1,0,0,0,0,10,0,1,1,1,2,7,0,0,2,1,1,1,2,0,0,3,0,1,6,9,9,11,12,13,12,8],l={0:!0,1:!0,3:!0,4:!0,6:!0,8:!0,9:!0,12:!0,13:!0},m={0:!0,1:!0,2:!0,3:!0,4:!0,5:!0,6:!0,7:!0,8:!0,9:!0,10:!0,11:!0,12:!0,13:!0},n={0:!0,3:!0,4:!0,8:!0,12:!0,13:!0},o={},p={0:!0,1:!0,3:!0,4:!0,6:!0,8:!0,12:!0,13:!0},q={1:!0},r=[[],["1","2","3","7","8","9","4","5","6","+","-","*","/","(",")","^","!","P","C","e","0",".",",","n"],["pi","ln","Pi"],["sin","cos","tan","Del","int","Mod","log","pow"],["asin","acos","atan","cosh","root","tanh","sinh"],["acosh","atanh","asinh","Sigma"]];f.addToken=function(a){for(var b=0;b<a.length;b++){var c=a[b].token.length,d=-1;if(c<r.length)for(var e=0;e<r[c].length;e++)if(a[b].token===r[c][e]){d=g.indexOf(r[c][e]);break}d===-1?(g.push(a[b].token),k.push(a[b].type),r.length<=a[b].token.length&&(r[a[b].token.length]=[]),r[a[b].token.length].push(a[b].token),i.push(a[b].value),h.push(a[b].show)):(g[d]=a[b].token,k[d]=a[b].type,i[d]=a[b].value,h[d]=a[b].show)}},f.lex=function(a,b){"use strict";var c,s,t,u,v={value:f.math.changeSign,type:0,pre:21,show:"-"},w={value:")",show:")",type:5,pre:0},x={value:"(",type:4,pre:0,show:"("},y=[x],z=[],A=a,B=0,C=l,D=0,E=o,F="";"undefined"!=typeof b&&f.addToken(b);var G={};for(s=0;s<A.length;s++)if(" "!==A[s]){for(c="",t=A.length-s>r.length-2?r.length-1:A.length-s;t>0;t--)for(u=0;u<r[t].length;u++)e(A,r[t][u],s,t)&&(c=r[t][u],u=r[t].length,t=0);if(s+=c.length-1,""===c)throw new f.Exception("Can't understand after "+A.slice(s));var H,I=g.indexOf(c),J=c,K=k[I],L=i[I],M=j[K],N=h[I],O=y[y.length-1];for(H=z.length;H--&&0===z[H];)if([0,2,3,5,9,11,12,13].indexOf(K)!==-1){if(C[K]!==!0)throw new f.Exception(c+" is not allowed after "+F);y.push(w),C=m,E=p,d(z,-1).pop()}if(C[K]!==!0)throw new f.Exception(c+" is not allowed after "+F);if(E[K]===!0&&(K=2,L=f.math.mul,N="&times;",M=3,s-=c.length),G={value:L,type:K,pre:M,show:N},0===K)C=l,E=o,d(z,2).push(2),y.push(G),y.push(x);else if(1===K)1===O.type?(O.value+=L,d(z,1)):y.push(G),C=m,E=n;else if(2===K)C=l,E=o,d(z,2),y.push(G);else if(3===K)y.push(G),C=m,E=p;else if(4===K)B+=z.length,z=[],D++,C=l,E=o,y.push(G);else if(5===K){if(!D)throw new f.Exception("Closing parenthesis are more than opening one, wait What!!!");for(;B--;)y.push(w);B=0,D--,C=m,E=p,y.push(G)}else if(6===K){if(O.hasDec)throw new f.Exception("Two decimals are not allowed in one number");1!==O.type&&(O={value:0,type:1,pre:0},y.push(O),d(z,-1)),C=q,d(z,1),E=o,O.value+=L,O.hasDec=!0}else 7===K&&(C=m,E=p,d(z,1),y.push(G));8===K?(C=l,E=o,d(z,4).push(4),y.push(G),y.push(x)):9===K?(9===O.type?O.value===f.math.add?(O.value=L,O.show=N,d(z,1)):O.value===f.math.sub&&"-"===N&&(O.value=f.math.add,O.show="+",d(z,1)):5!==O.type&&7!==O.type&&1!==O.type&&3!==O.type&&13!==O.type?"-"===J&&(C=l,E=o,d(z,2).push(2),y.push(v),y.push(x)):(y.push(G),d(z,2)),C=l,E=o):10===K?(C=l,E=o,d(z,2),y.push(G)):11===K?(C=l,E=o,y.push(G)):12===K?(C=l,E=o,d(z,6).push(6),y.push(G),y.push(x)):13===K&&(C=m,E=p,y.push(G)),d(z,-1),F=c}for(H=z.length;H--&&0===z[H];)y.push(w),d(z,-1).pop();if(C[5]!==!0)throw new f.Exception("complete the expression");for(;D--;)y.push(w);return y.push(w),new f(y)},b.exports=f},{"./math_function.js":3}],3:[function(a,b,c){var d=function(a){this.value=a};d.math={isDegree:!0,acos:function(a){return d.math.isDegree?180/Math.PI*Math.acos(a):Math.acos(a)},add:function(a,b){return a+b},asin:function(a){return d.math.isDegree?180/Math.PI*Math.asin(a):Math.asin(a)},atan:function(a){return d.math.isDegree?180/Math.PI*Math.atan(a):Math.atan(a)},acosh:function(a){return Math.log(a+Math.sqrt(a*a-1))},asinh:function(a){return Math.log(a+Math.sqrt(a*a+1))},atanh:function(a){return Math.log((1+a)/(1-a))},C:function(a,b){var c=1,e=a-b,f=b;f<e&&(f=e,e=b);for(var g=f+1;g<=a;g++)c*=g;return c/d.math.fact(e)},changeSign:function(a){return-a},cos:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.cos(a)},cosh:function(a){return(Math.pow(Math.E,a)+Math.pow(Math.E,-1*a))/2},div:function(a,b){return a/b},fact:function(a){if(a%1!==0)return"NaN";for(var b=1,c=2;c<=a;c++)b*=c;return b},inverse:function(a){return 1/a},log:function(a){return Math.log(a)/Math.log(10)},mod:function(a,b){return a%b},mul:function(a,b){return a*b},P:function(a,b){for(var c=1,d=Math.floor(a)-Math.floor(b)+1;d<=Math.floor(a);d++)c*=d;return c},Pi:function(a,b,c){for(var d=1,e=a;e<=b;e++)d*=Number(c.postfixEval({n:e}));return d},pow10x:function(a){for(var b=1;a--;)b*=10;return b},sigma:function(a,b,c){for(var d=0,e=a;e<=b;e++)d+=Number(c.postfixEval({n:e}));return d},sin:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.sin(a)},sinh:function(a){return(Math.pow(Math.E,a)-Math.pow(Math.E,-1*a))/2},sub:function(a,b){return a-b},tan:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.tan(a)},tanh:function(a){return d.sinha(a)/d.cosha(a)},toRadian:function(a){return a*Math.PI/180}},d.Exception=function(a){this.message=a},b.exports=d},{}],4:[function(a,b,c){var d=a("./lexer.js");d.prototype.toPostfix=function(){"use strict";for(var a,b,c,e,f,g=[],h=[{value:"(",type:4,pre:0}],i=this.value,j=1;j<i.length;j++)if(1===i[j].type||3===i[j].type||13===i[j].type)1===i[j].type&&(i[j].value=Number(i[j].value)),g.push(i[j]);else if(4===i[j].type)h.push(i[j]);else if(5===i[j].type)for(;4!==(b=h.pop()).type;)g.push(b);else if(11===i[j].type){for(;4!==(b=h.pop()).type;)g.push(b);h.push(b)}else{a=i[j],e=a.pre,f=h[h.length-1],c=f.pre;var k="Math.pow"==f.value&&"Math.pow"==a.value;if(e>c)h.push(a);else{for(;c>=e&&!k||k&&e<c;)b=h.pop(),f=h[h.length-1],g.push(b),c=f.pre,k="Math.pow"==a.value&&"Math.pow"==f.value;h.push(a)}}return new d(g)},b.exports=d},{"./lexer.js":2}],5:[function(a,b,c){var d=a("./postfix.js");d.prototype.postfixEval=function(a){"use strict";a=a||{},a.PI=Math.PI,a.E=Math.E;for(var b,c,e,f=[],g=this.value,h="undefined"!=typeof a.n,i=0;i<g.length;i++)1===g[i].type?f.push({value:g[i].value,type:1}):3===g[i].type?f.push({value:a[g[i].value],type:1}):0===g[i].type?"undefined"==typeof f[f.length-1].type?f[f.length-1].value.push(g[i]):f[f.length-1].value=g[i].value(f[f.length-1].value):7===g[i].type?"undefined"==typeof f[f.length-1].type?f[f.length-1].value.push(g[i]):f[f.length-1].value=g[i].value(f[f.length-1].value):8===g[i].type?(b=f.pop(),c=f.pop(),f.push({type:1,value:g[i].value(c.value,b.value)})):10===g[i].type?(b=f.pop(),c=f.pop(),"undefined"==typeof c.type?(c.value=c.concat(b),c.value.push(g[i]),f.push(c)):"undefined"==typeof b.type?(b.unshift(c),b.push(g[i]),f.push(b)):f.push({type:1,value:g[i].value(c.value,b.value)})):2===g[i].type||9===g[i].type?(b=f.pop(),c=f.pop(),"undefined"==typeof c.type?(console.log(c),c=c.concat(b),c.push(g[i]),f.push(c)):"undefined"==typeof b.type?(b.unshift(c),b.push(g[i]),f.push(b)):f.push({type:1,value:g[i].value(c.value,b.value)})):12===g[i].type?(b=f.pop(),"undefined"!=typeof b.type&&(b=[b]),c=f.pop(),e=f.pop(),f.push({type:1,value:g[i].value(e.value,c.value,new d(b))})):13===g[i].type&&(h?f.push({value:a[g[i].value],type:3}):f.push([g[i]]));if(f.length>1)throw new d.exception("Uncaught Syntax error");return f[0].value>1e15?"Infinity":parseFloat(f[0].value.toFixed(15))},d.eval=function(a,b,c){return"undefined"==typeof b?this.lex(a).toPostfix().postfixEval():"undefined"==typeof c?"undefined"!=typeof b.length?this.lex(a,b).toPostfix().postfixEval():this.lex(a).toPostfix().postfixEval(b):this.lex(a,b).toPostfix().postfixEval(c)},b.exports=d},{"./postfix.js":4}]},{},[1])(1)});$scope.Calculate=function(formula,decimals){var numero=mexp.eval(formula);if(decimals!=-1){potencia=Math.pow(10,decimals);numero=Math.round(numero*potencia)/potencia;}return numero;};$(document).mousemove(function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.pageX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.pageY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;var sx=((evt.pageX+$(window).scrollLeft())/$App.NAB.AppScale);var sy=((evt.pageY+$(window).scrollTop())/$App.NAB.AppScale);$App.NAB.MouseX=Math.round(x);$App.NAB.MouseY=Math.round(y);$App.NAB.MouseScreenX=Math.round(sx);$App.NAB.MouseScreenY=Math.round(sy);});$(document).on("touchmove",function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.touches[0].clientX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.touches[0].clientY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;$App.NAB.TouchX=Math.round(x);$App.NAB.TouchY=Math.round(y);});$(document).on("touchstart",function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.touches[0].clientX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.touches[0].clientY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;$App.NAB.TouchX=Math.round(x);$App.NAB.TouchY=Math.round(y);});
 $App.NAB={PageList:["Temphome","Indexwrite","Records-2026","CopyAll","Speed01","Speed03","Speed04","Speed02","Speed05","Speed06","Speed07","Speed08","Speed10","Speed11","Speed09","Speed12","Speed13","Speed14","Speed15","Speed16","Speed17","Speed18","Speed19","Speed20","Speed21","Speed22","Speed23","Speed24","Speed25","Speed26","Speed27","Speed28","Speed29","Speed30","Speed31","Speed32","HomeTiles","TNeoAppPage11","Health","Homestuff","WorkDesktop","HowToV3","Tentinastorm","fiveyearplan","TILES","Project1","Project1pa","Projectaa","Projectab","Projectac","Projectad","Project1pb","Project1pc","Project1pd","Project1pe","Project1pf","Project1pg","Project1ph","Project1pi","Project1pj","Project1pk","Project1pl","Project1pm","Project1pn","Project1pfo","Project1pp","Project1pq","Project1pr","Project1ps","Project1pft","Project1pu","Project1pv","Project1pw","Project1px","Project2","Projectaa2","Projectab2","Projectac2","Projectad2","Project2pa","Project2pb","Project2pc","Project2pd","Project2pe","Project2pf","Project2pg","Project2ph","Project2pi","Project2pj","Project2pk","Project2pl","Project2pm","Project2pn","C-A-Z","Workstuff-A","Workstuff-B","Workstuff-C","Prayer","Journal","Next","DailyReps","Home","Templates","Workstuff-D","VERSION","ResetRules","Resetoverview","ResetNotes","Template001","Template1setup","KeepJIC","ResetNew","Reset","Stages","Lanes","Me","bounce","P012-Index-Cards-Read1"],PageEnterEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageCount:118,PageExitEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageNumber:1,AppScale:1,PageID:"",Hour:"",Hour24:"",Minute:"",Second:"",Time:"",Time24:"",DateShort:"",DateLong:"",DateFull:"",Month:"",MonthNum:"",WeekNum:"",Day:"",DayNum:"",Year:"",ClientWidth:$window.innerWidth,ClientHeight:$window.innerHeight,WindowWidth:$window.outerWidth,WindowHeight:$window.outerHeight,Orientation:$scope.GetOrientation(),OperatingSystem:"",$Watches:{},$Timers:{},$Audio:{}};$scope.__doUpdate=function(){var Now=new Date();$App.NAB.Hour=$filter("date")(Now,"h");$App.NAB.Hour24=$filter("date")(Now,"H");$App.NAB.Minute=$filter("date")(Now,"mm");$App.NAB.Second=$filter("date")(Now,"ss");$App.NAB.Time=$filter("date")(Now,"mediumTime");$App.NAB.Time24=$filter("date")(Now,"H:mm:ss");$App.NAB.DateShort=$filter("date")(Now,"shortDate");$App.NAB.DateLong=$filter("date")(Now,"longDate");$App.NAB.DateFull=$filter("date")(Now,"fullDate");$App.NAB.Month=$filter("date")(Now,"MMMM");$App.NAB.MonthNum=$filter("date")(Now,"M");$App.NAB.WeekNum=$filter("date")(Now,"w");$App.NAB.Day=$filter("date")(Now,"EEEE");$App.NAB.DayNum=$filter("date")(Now,"d");$App.NAB.Year=$filter("date")(Now,"yyyy");};$scope.__doOrientationChange=function(){$App.NAB.Orientation=$scope.GetOrientation();};$scope.__doResize=function(){$App.NAB.ClientWidth=$window.innerWidth;$App.NAB.ClientHeight=$window.innerHeight;$App.NAB.WindowWidth=$window.outerWidth;$App.NAB.WindowHeight=$window.outerHeight;};$scope.__init=function(){angular.element($window).bind("orientationchange.app",function(){$timeout($scope.__doOrientationChange);});angular.element($window).bind("resize.app",function(){$timeout($scope.__doResize);});$interval($scope.__doUpdate,1000);$App.NAB.OperatingSystem=GetPlatform();$scope.__doUpdate();};
-$scope.Temphome_pageenter = function() {$App.VERSION = "v3.909";
-$App.journal = localStorage.getItem("journal");
-$App.zt126 = localStorage.getItem("zt126");
-$App.zt226 = localStorage.getItem("zt226");
-$App.zt326 = localStorage.getItem("zt326");
-$App.may260 = localStorage.getItem("may260");
-$App.may261 = localStorage.getItem("may261");
-$App.may262 = localStorage.getItem("may262");
-$App.may263 = localStorage.getItem("may263");
-$App.june260 = localStorage.getItem("june260");
-$App.june261 = localStorage.getItem("june261");
-$App.june262 = localStorage.getItem("june262");
-$App.june263 = localStorage.getItem("june263");
-$App.july260 = localStorage.getItem("july260");
-$App.july261 = localStorage.getItem("july261");
-$App.july262 = localStorage.getItem("july262");
-$App.july263 = localStorage.getItem("july263");
-$App.aug260 = localStorage.getItem("aug260");
-$App.aug261 = localStorage.getItem("aug261");
-$App.aug262 = localStorage.getItem("aug262");
-$App.aug263 = localStorage.getItem("aug263");
-$App.sep260 = localStorage.getItem("sep260");
-$App.sep261 = localStorage.getItem("sep261");
-$App.sep262 = localStorage.getItem("sep262");
-$App.sep263 = localStorage.getItem("sep263");
-$App.oct260 = localStorage.getItem("oct260");
-$App.oct261 = localStorage.getItem("oct261");
-$App.oct262 = localStorage.getItem("oct262");
-$App.oct263 = localStorage.getItem("oct263");
-$App.nov260 = localStorage.getItem("nov260");
-$App.nov261 = localStorage.getItem("nov261");
-$App.nov262 = localStorage.getItem("nov262");
-$App.nov263 = localStorage.getItem("nov263");
-$App.dec260 = localStorage.getItem("dec260");
-$App.dec261 = localStorage.getItem("dec261");
-$App.dec262 = localStorage.getItem("dec262");
-$App.dec263 = localStorage.getItem("dec263");
-$App.monthnotes = localStorage.getItem("monthnotes");
-$App.monthnotes2 = localStorage.getItem("monthnotes2");
+$scope.Temphome_pageenter = function() {$App.VERSION = "v3.910";
+$App.Speed01link01 = localStorage.getItem("Speed01link01");
+$App.speed1ref = localStorage.getItem("speed1ref");
+$App.speed1refb = localStorage.getItem("speed1refb");
+$App.speed2ref = localStorage.getItem("speed2ref");
+$App.speed2refb = localStorage.getItem("speed2refb");
+$App.aa1 = localStorage.getItem("aa1");
+$App.aa2 = localStorage.getItem("aa2");
+$App.aa3 = localStorage.getItem("aa3");
+$App.aa4 = localStorage.getItem("aa4");
+$App.aa5 = localStorage.getItem("aa5");
+$App.aa6 = localStorage.getItem("aa6");
+$App.aa7 = localStorage.getItem("aa7");
+$App.aa8 = localStorage.getItem("aa8");
+$App.aa9 = localStorage.getItem("aa8");
+$App.aa10 = localStorage.getItem("aa10");
+$App.aa11 = localStorage.getItem("aa11");
+$App.aa12 = localStorage.getItem("aa12");
+$App.aa13 = localStorage.getItem("aa13");
+$App.aa14 = localStorage.getItem("aa14");
+$App.aa15 = localStorage.getItem("aa15");
+$App.aa16 = localStorage.getItem("aa16");
+$App.aa17 = localStorage.getItem("aa17");
+$App.aa18 = localStorage.getItem("aa18");
+$App.aa19 = localStorage.getItem("aa19");
+$App.aa20 = localStorage.getItem("aa20");
+$App.aa21 = localStorage.getItem("aa21");
+$App.aa22 = localStorage.getItem("aa22");
+$App.aa23 = localStorage.getItem("aa23");
+$App.aa24 = localStorage.getItem("aa24");
+$App.aa25 = localStorage.getItem("aa25");
+$App.aa26 = localStorage.getItem("aa26");
+$App.aa27 = localStorage.getItem("aa27");
+$App.aa28 = localStorage.getItem("aa28");
+$App.aa29 = localStorage.getItem("aa29");
+$App.aa30 = localStorage.getItem("aa30");
+$App.aa31 = localStorage.getItem("aa31");
+$App.aa32 = localStorage.getItem("aa32");
+if ($App.aa1 == "r") {
+$scope.SetObjectStyle("Headline10001","color","red");
+$scope.SetObjectStyle("Ellipse101","fill","red");
+} else {
+};
+if ($App.aa1 == "g") {
+$scope.SetObjectStyle("Headline10001","color","green");
+$scope.SetObjectStyle("Ellipse101","fill","green");
+} else {
+};
+if ($App.aa1 == "b") {
+$scope.SetObjectStyle("Headline10001","color","blue");
+$scope.SetObjectStyle("Ellipse101","fill","blue");
+} else {
+};
+if ($App.aa2 == "r") {
+$scope.SetObjectStyle("Headline10002","color","red");
+$scope.SetObjectStyle("Ellipse102","fill","red");
+} else {
+};
+if ($App.aa2 == "g") {
+$scope.SetObjectStyle("Headline10002","color","green");
+$scope.SetObjectStyle("Ellipse102","fill","green");
+} else {
+};
+if ($App.aa2 == "b") {
+$scope.SetObjectStyle("Headline10002","color","blue");
+$scope.SetObjectStyle("Ellipse102","fill","blue");
+} else {
+};
+if ($App.aa3 == "r") {
+$scope.SetObjectStyle("Headline10003","color","red");
+$scope.SetObjectStyle("Ellipse103","fill","red");
+} else {
+};
+if ($App.aa3 == "g") {
+$scope.SetObjectStyle("Headline10003","color","green");
+$scope.SetObjectStyle("Ellipse103","fill","green");
+} else {
+};
+if ($App.aa3 == "b") {
+$scope.SetObjectStyle("Headline10003","color","blue");
+$scope.SetObjectStyle("Ellipse103","fill","blue");
+} else {
+};
+if ($App.aa4 == "r") {
+$scope.SetObjectStyle("Headline10004","color","red");
+$scope.SetObjectStyle("Ellipse104","fill","red");
+} else {
+};
+if ($App.aa4 == "g") {
+$scope.SetObjectStyle("Headline10004","color","green");
+$scope.SetObjectStyle("Ellipse104","fill","green");
+} else {
+};
+if ($App.aa4 == "b") {
+$scope.SetObjectStyle("Headline10004","color","blue");
+$scope.SetObjectStyle("Ellipse104","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10005","color","red");
+$scope.SetObjectStyle("Ellipse105","fill","red");
+} else {
+};
+if ($App.aa5 == "g") {
+$scope.SetObjectStyle("Headline10005","color","green");
+$scope.SetObjectStyle("Ellipse105","fill","green");
+} else {
+};
+if ($App.aa5 == "b") {
+$scope.SetObjectStyle("Headline10005","color","blue");
+$scope.SetObjectStyle("Ellipse105","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10006","color","red");
+$scope.SetObjectStyle("Ellipse106","fill","red");
+} else {
+};
+if ($App.aa6 == "g") {
+$scope.SetObjectStyle("Headline10006","color","green");
+$scope.SetObjectStyle("Ellipse106","fill","green");
+} else {
+};
+if ($App.aa6 == "b") {
+$scope.SetObjectStyle("Headline10006","color","blue");
+$scope.SetObjectStyle("Ellipse106","fill","blue");
+} else {
+};
+if ($App.aa7 == "r") {
+$scope.SetObjectStyle("Headline10007","color","red");
+$scope.SetObjectStyle("Ellipse107","fill","red");
+} else {
+};
+if ($App.aa7 == "g") {
+$scope.SetObjectStyle("Headline10007","color","green");
+$scope.SetObjectStyle("Ellipse107","fill","green");
+} else {
+};
+if ($App.aa7 == "b") {
+$scope.SetObjectStyle("Headline10007","color","blue");
+$scope.SetObjectStyle("Ellipse107","fill","blue");
+} else {
+};
+if ($App.aa8 == "r") {
+$scope.SetObjectStyle("Headline10008","color","red");
+$scope.SetObjectStyle("Ellipse108","fill","red");
+} else {
+};
+if ($App.aa8 == "g") {
+$scope.SetObjectStyle("Headline10008","color","green");
+$scope.SetObjectStyle("Ellipse108","fill","green");
+} else {
+};
+if ($App.aa8 == "b") {
+$scope.SetObjectStyle("Headline10008","color","blue");
+$scope.SetObjectStyle("Ellipse108","fill","blue");
+} else {
+};
+if ($App.aa9 == "r") {
+$scope.SetObjectStyle("Headline10009","color","red");
+$scope.SetObjectStyle("Ellipse109","fill","red");
+} else {
+};
+if ($App.aa9 == "g") {
+$scope.SetObjectStyle("Headline10009","color","green");
+$scope.SetObjectStyle("Ellipse109","fill","green");
+} else {
+};
+if ($App.aa9 == "b") {
+$scope.SetObjectStyle("Headline10009","color","blue");
+$scope.SetObjectStyle("Ellipse109","fill","blue");
+} else {
+};
+if ($App.aa10 == "r") {
+$scope.SetObjectStyle("Headline10010","color","red");
+$scope.SetObjectStyle("Ellipse110","fill","red");
+} else {
+};
+if ($App.aa10 == "g") {
+$scope.SetObjectStyle("Headline10010","color","green");
+$scope.SetObjectStyle("Ellipse110","fill","green");
+} else {
+};
+if ($App.aa10 == "b") {
+$scope.SetObjectStyle("Headline10010","color","blue");
+$scope.SetObjectStyle("Ellipse110","fill","blue");
+} else {
+};
+if ($App.aa11 == "r") {
+$scope.SetObjectStyle("Headline10011","color","red");
+$scope.SetObjectStyle("Ellipse111","fill","red");
+} else {
+};
+if ($App.aa11 == "g") {
+$scope.SetObjectStyle("Headline10011","color","green");
+$scope.SetObjectStyle("Ellipse111","fill","green");
+} else {
+};
+if ($App.aa11 == "b") {
+$scope.SetObjectStyle("Headline10011","color","blue");
+$scope.SetObjectStyle("Ellipse111","fill","blue");
+} else {
+};
+if ($App.aa12 == "r") {
+$scope.SetObjectStyle("Headline10012","color","red");
+$scope.SetObjectStyle("Ellipse112","fill","red");
+} else {
+};
+if ($App.aa12 == "g") {
+$scope.SetObjectStyle("Headline10012","color","green");
+$scope.SetObjectStyle("Ellipse112","fill","green");
+} else {
+};
+if ($App.aa12 == "b") {
+$scope.SetObjectStyle("Headline10012","color","blue");
+$scope.SetObjectStyle("Ellipse112","fill","blue");
+} else {
+};
+if ($App.aa13 == "r") {
+$scope.SetObjectStyle("Headline10013","color","red");
+$scope.SetObjectStyle("Ellipse113","fill","red");
+} else {
+};
+if ($App.aa13 == "g") {
+$scope.SetObjectStyle("Headline10013","color","green");
+$scope.SetObjectStyle("Ellipse113","fill","green");
+} else {
+};
+if ($App.aa13 == "b") {
+$scope.SetObjectStyle("Headline10013","color","blue");
+$scope.SetObjectStyle("Ellipse113","fill","blue");
+} else {
+};
+if ($App.aa14 == "r") {
+$scope.SetObjectStyle("Headline10014","color","red");
+$scope.SetObjectStyle("Ellipse114","fill","red");
+} else {
+};
+if ($App.aa14 == "g") {
+$scope.SetObjectStyle("Headline10014","color","green");
+$scope.SetObjectStyle("Ellipse114","fill","green");
+} else {
+};
+if ($App.aa14 == "b") {
+$scope.SetObjectStyle("Headline10014","color","blue");
+$scope.SetObjectStyle("Ellipse114","fill","blue");
+} else {
+};
+if ($App.aa15 == "r") {
+$scope.SetObjectStyle("Headline10015","color","red");
+$scope.SetObjectStyle("Ellipse115","fill","red");
+} else {
+};
+if ($App.aa15 == "g") {
+$scope.SetObjectStyle("Headline10015","color","green");
+$scope.SetObjectStyle("Ellipse115","fill","green");
+} else {
+};
+if ($App.aa15 == "b") {
+$scope.SetObjectStyle("Headline10015","color","blue");
+$scope.SetObjectStyle("Ellipse115","fill","blue");
+} else {
+};
+if ($App.aa16 == "r") {
+$scope.SetObjectStyle("Headline10016","color","red");
+$scope.SetObjectStyle("Ellipse116","fill","red");
+} else {
+};
+if ($App.aa16 == "g") {
+$scope.SetObjectStyle("Headline10016","color","green");
+$scope.SetObjectStyle("Ellipse116","fill","green");
+} else {
+};
+if ($App.aa16 == "b") {
+$scope.SetObjectStyle("Headline10016","color","blue");
+$scope.SetObjectStyle("Ellipse116","fill","blue");
+} else {
+};
+if ($App.aa17 == "r") {
+$scope.SetObjectStyle("Headline10017","color","red");
+$scope.SetObjectStyle("Ellipse117","fill","red");
+} else {
+};
+if ($App.aa17 == "g") {
+$scope.SetObjectStyle("Headline10017","color","green");
+$scope.SetObjectStyle("Ellipse117","fill","green");
+} else {
+};
+if ($App.aa17 == "b") {
+$scope.SetObjectStyle("Headline10017","color","blue");
+$scope.SetObjectStyle("Ellipse117","fill","blue");
+} else {
+};
+if ($App.aa18 == "r") {
+$scope.SetObjectStyle("Headline10018","color","red");
+$scope.SetObjectStyle("Ellipse118","fill","red");
+} else {
+};
+if ($App.aa18 == "g") {
+$scope.SetObjectStyle("Headline10018","color","green");
+$scope.SetObjectStyle("Ellipse118","fill","green");
+} else {
+};
+if ($App.aa18 == "b") {
+$scope.SetObjectStyle("Headline10018","color","blue");
+$scope.SetObjectStyle("Ellipse118","fill","blue");
+} else {
+};
+if ($App.aa19 == "r") {
+$scope.SetObjectStyle("Headline10019","color","red");
+$scope.SetObjectStyle("Ellipse119","fill","red");
+} else {
+};
+if ($App.aa19 == "g") {
+$scope.SetObjectStyle("Headline10019","color","green");
+$scope.SetObjectStyle("Ellipse119","fill","green");
+} else {
+};
+if ($App.aa19 == "b") {
+$scope.SetObjectStyle("Headline10019","color","blue");
+$scope.SetObjectStyle("Ellipse119","fill","blue");
+} else {
+};
+if ($App.aa20 == "r") {
+$scope.SetObjectStyle("Headline10020","color","red");
+$scope.SetObjectStyle("Ellipse120","fill","red");
+} else {
+};
+if ($App.aa20 == "g") {
+$scope.SetObjectStyle("Headline10020","color","green");
+$scope.SetObjectStyle("Ellipse120","fill","green");
+} else {
+};
+if ($App.aa20 == "b") {
+$scope.SetObjectStyle("Headline10020","color","blue");
+$scope.SetObjectStyle("Ellipse120","fill","blue");
+} else {
+};
+if ($App.aa21 == "r") {
+$scope.SetObjectStyle("Headline10021","color","red");
+$scope.SetObjectStyle("Ellipse121","fill","red");
+} else {
+};
+if ($App.aa21 == "g") {
+$scope.SetObjectStyle("Headline10021","color","green");
+$scope.SetObjectStyle("Ellipse121","fill","green");
+} else {
+};
+if ($App.aa21 == "b") {
+$scope.SetObjectStyle("Headline10021","color","blue");
+$scope.SetObjectStyle("Ellipse121","fill","blue");
+} else {
+};
+if ($App.aa22 == "r") {
+$scope.SetObjectStyle("Headline10022","color","red");
+$scope.SetObjectStyle("Ellipse122","fill","red");
+} else {
+};
+if ($App.aa22 == "g") {
+$scope.SetObjectStyle("Headline10022","color","green");
+$scope.SetObjectStyle("Ellipse122","fill","green");
+} else {
+};
+if ($App.aa22 == "b") {
+$scope.SetObjectStyle("Headline10022","color","blue");
+$scope.SetObjectStyle("Ellipse122","fill","blue");
+} else {
+};
+if ($App.aa23 == "r") {
+$scope.SetObjectStyle("Headline10023","color","red");
+$scope.SetObjectStyle("Ellipse123","fill","red");
+} else {
+};
+if ($App.aa23 == "g") {
+$scope.SetObjectStyle("Headline10023","color","green");
+$scope.SetObjectStyle("Ellipse123","fill","green");
+} else {
+};
+if ($App.aa23 == "b") {
+$scope.SetObjectStyle("Headline10023","color","blue");
+$scope.SetObjectStyle("Ellipse123","fill","blue");
+} else {
+};
+if ($App.aa24 == "r") {
+$scope.SetObjectStyle("Headline10024","color","red");
+$scope.SetObjectStyle("Ellipse124","fill","red");
+} else {
+};
+if ($App.aa24 == "g") {
+$scope.SetObjectStyle("Headline10024","color","green");
+$scope.SetObjectStyle("Ellipse124","fill","green");
+} else {
+};
+if ($App.aa24 == "b") {
+$scope.SetObjectStyle("Headline10024","color","blue");
+$scope.SetObjectStyle("Ellipse124","fill","blue");
+} else {
+};
+if ($App.aa25 == "r") {
+$scope.SetObjectStyle("Headline10025","color","red");
+$scope.SetObjectStyle("Ellipse125","fill","red");
+} else {
+};
+if ($App.aa25 == "g") {
+$scope.SetObjectStyle("Headline10025","color","green");
+$scope.SetObjectStyle("Ellipse125","fill","green");
+} else {
+};
+if ($App.aa25 == "b") {
+$scope.SetObjectStyle("Headline10025","color","blue");
+$scope.SetObjectStyle("Ellipse125","fill","blue");
+} else {
+};
+if ($App.aa26 == "r") {
+$scope.SetObjectStyle("Headline10026","color","red");
+$scope.SetObjectStyle("Ellipse126","fill","red");
+} else {
+};
+if ($App.aa26 == "g") {
+$scope.SetObjectStyle("Headline10026","color","green");
+$scope.SetObjectStyle("Ellipse126","fill","green");
+} else {
+};
+if ($App.aa26 == "b") {
+$scope.SetObjectStyle("Headline10026","color","blue");
+$scope.SetObjectStyle("Ellipse126","fill","blue");
+} else {
+};
+if ($App.aa27 == "r") {
+$scope.SetObjectStyle("Headline10027","color","red");
+$scope.SetObjectStyle("Ellipse127","fill","red");
+} else {
+};
+if ($App.aa27 == "g") {
+$scope.SetObjectStyle("Headline10027","color","green");
+$scope.SetObjectStyle("Ellipse127","fill","green");
+} else {
+};
+if ($App.aa27 == "b") {
+$scope.SetObjectStyle("Headline10027","color","blue");
+$scope.SetObjectStyle("Ellipse127","fill","blue");
+} else {
+};
+if ($App.aa28 == "r") {
+$scope.SetObjectStyle("Headline10028","color","red");
+$scope.SetObjectStyle("Ellipse128","fill","red");
+} else {
+};
+if ($App.aa28 == "g") {
+$scope.SetObjectStyle("Headline10028","color","green");
+$scope.SetObjectStyle("Ellipse128","fill","green");
+} else {
+};
+if ($App.aa28 == "b") {
+$scope.SetObjectStyle("Headline10028","color","blue");
+$scope.SetObjectStyle("Ellipse128","fill","blue");
+} else {
+};
+if ($App.aa29 == "r") {
+$scope.SetObjectStyle("Headline10029","color","red");
+$scope.SetObjectStyle("Ellipse129","fill","red");
+} else {
+};
+if ($App.aa29 == "g") {
+$scope.SetObjectStyle("Headline10029","color","green");
+$scope.SetObjectStyle("Ellipse129","fill","green");
+} else {
+};
+if ($App.aa29 == "b") {
+$scope.SetObjectStyle("Headline10029","color","blue");
+$scope.SetObjectStyle("Ellipse129","fill","blue");
+} else {
+};
+if ($App.aa30 == "r") {
+$scope.SetObjectStyle("Headline10030","color","red");
+$scope.SetObjectStyle("Ellipse130","fill","red");
+} else {
+};
+if ($App.aa30 == "g") {
+$scope.SetObjectStyle("Headline10030","color","green");
+$scope.SetObjectStyle("Ellipse130","fill","green");
+} else {
+};
+if ($App.aa30 == "b") {
+$scope.SetObjectStyle("Headline10030","color","blue");
+$scope.SetObjectStyle("Ellipse130","fill","blue");
+} else {
+};
+if ($App.aa31 == "r") {
+$scope.SetObjectStyle("Headline10031","color","red");
+$scope.SetObjectStyle("Ellipse131","fill","red");
+} else {
+};
+if ($App.aa31 == "g") {
+$scope.SetObjectStyle("Headline10031","color","green");
+$scope.SetObjectStyle("Ellipse131","fill","green");
+} else {
+};
+if ($App.aa31 == "b") {
+$scope.SetObjectStyle("Headline10031","color","blue");
+$scope.SetObjectStyle("Ellipse131","fill","blue");
+} else {
+};
+if ($App.aa32 == "r") {
+$scope.SetObjectStyle("Headline10032","color","red");
+$scope.SetObjectStyle("Ellipse132","fill","red");
+} else {
+};
+if ($App.aa32 == "g") {
+$scope.SetObjectStyle("Headline10032","color","green");
+$scope.SetObjectStyle("Ellipse132","fill","green");
+} else {
+};
+if ($App.aa32 == "b") {
+$scope.SetObjectStyle("Headline10032","color","blue");
+$scope.SetObjectStyle("Ellipse132","fill","blue");
+} else {
+};
+$App.speed01 = localStorage.getItem("speed01");
+$App.speed02 = localStorage.getItem("speed02");
+$App.speed03 = localStorage.getItem("speed03");
+$App.speed04 = localStorage.getItem("speed04");
+$App.speed05 = localStorage.getItem("speed05");
+$App.speed06 = localStorage.getItem("speed06");
+$App.speed07 = localStorage.getItem("speed07");
+$App.speed08 = localStorage.getItem("speed08");
+$App.speed09 = localStorage.getItem("speed09");
+$App.speed10 = localStorage.getItem("speed10");
+$App.speed11 = localStorage.getItem("speed11");
+$App.speed12 = localStorage.getItem("speed12");
+$App.speed13 = localStorage.getItem("speed13");
+$App.speed14 = localStorage.getItem("speed14");
+$App.speed15 = localStorage.getItem("speed15");
+$App.speed16 = localStorage.getItem("speed16");
+$App.speed17 = localStorage.getItem("speed17");
+$App.speed18 = localStorage.getItem("speed18");
+$App.speed19 = localStorage.getItem("speed19");
+$App.speed20 = localStorage.getItem("speed20");
+$App.speed21 = localStorage.getItem("speed21");
+$App.speed22 = localStorage.getItem("speed22");
+$App.speed23 = localStorage.getItem("speed23");
+$App.speed24 = localStorage.getItem("speed24");
+$App.speed25 = localStorage.getItem("speed25");
+$App.speed26 = localStorage.getItem("speed26");
+$App.speed27 = localStorage.getItem("speed27");
+$App.speed28 = localStorage.getItem("speed28");
+$App.speed29 = localStorage.getItem("speed29");
+$App.speed30 = localStorage.getItem("speed30");
+$App.speed31 = localStorage.getItem("speed31");
+$App.speed32 = localStorage.getItem("speed32");
+$App.speed01a = localStorage.getItem("speed01a");
+$App.speed02a = localStorage.getItem("speed02a");
+$App.speed03a = localStorage.getItem("speed03a");
+$App.speed04a = localStorage.getItem("speed04a");
+$App.speed05a = localStorage.getItem("speed05a");
+$App.speed06a = localStorage.getItem("speed06a");
+$App.speed07a = localStorage.getItem("speed07a");
+$App.speed08a = localStorage.getItem("speed08a");
+$App.speed09a = localStorage.getItem("speed09a");
+$App.speed10a = localStorage.getItem("speed10a");
+$App.speed11a = localStorage.getItem("speed11a");
+$App.speed12a = localStorage.getItem("speed12a");
+$App.speed13a = localStorage.getItem("speed13a");
+$App.speed14a = localStorage.getItem("speed14a");
+$App.speed15a = localStorage.getItem("speed15a");
+$App.speed16a = localStorage.getItem("speed16a");
+$App.speed17a = localStorage.getItem("speed17a");
+$App.speed18a = localStorage.getItem("speed18a");
+$App.speed19a = localStorage.getItem("speed19a");
+$App.speed20a = localStorage.getItem("speed20a");
+$App.speed21a = localStorage.getItem("speed21a");
+$App.speed22a = localStorage.getItem("speed22a");
+$App.speed23a = localStorage.getItem("speed23a");
+$App.speed24a = localStorage.getItem("speed24a");
+$App.speed25a = localStorage.getItem("speed25a");
+$App.speed26a = localStorage.getItem("speed26a");
+$App.speed27a = localStorage.getItem("speed27a");
+$App.speed28a = localStorage.getItem("speed28a");
+$App.speed29a = localStorage.getItem("speed29a");
+$App.speed30a = localStorage.getItem("speed30a");
+$App.speed31a = localStorage.getItem("speed31a");
+$App.speed32a = localStorage.getItem("speed32a");
+$App.speed01b = localStorage.getItem("speed01b");
+$App.speed02b = localStorage.getItem("speed02b");
+$App.speed03b = localStorage.getItem("speed03b");
+$App.speed04b = localStorage.getItem("speed04b");
+$App.speed05b = localStorage.getItem("speed05b");
+$App.speed06b = localStorage.getItem("speed06b");
+$App.speed07b = localStorage.getItem("speed07b");
+$App.speed08b = localStorage.getItem("speed08b");
+$App.speed09b = localStorage.getItem("speed09b");
+$App.speed10b = localStorage.getItem("speed10b");
+$App.speed11b = localStorage.getItem("speed11b");
+$App.speed12b = localStorage.getItem("speed12b");
+$App.speed13b = localStorage.getItem("speed13b");
+$App.speed14b = localStorage.getItem("speed14b");
+$App.speed15b = localStorage.getItem("speed15b");
+$App.speed16b = localStorage.getItem("speed16b");
+$App.speed17b = localStorage.getItem("speed17b");
+$App.speed18b = localStorage.getItem("speed18b");
+$App.speed19b = localStorage.getItem("speed19b");
+$App.speed20b = localStorage.getItem("speed20b");
+$App.speed21b = localStorage.getItem("speed21b");
+$App.speed22b = localStorage.getItem("speed22b");
+$App.speed23b = localStorage.getItem("speed23b");
+$App.speed24b = localStorage.getItem("speed24b");
+$App.speed25b = localStorage.getItem("speed25b");
+$App.speed26b = localStorage.getItem("speed26b");
+$App.speed27b = localStorage.getItem("speed27b");
+$App.speed28b = localStorage.getItem("speed28b");
+$App.speed29b = localStorage.getItem("speed29b");
+$App.speed30b = localStorage.getItem("speed30b");
+$App.speed31b = localStorage.getItem("speed31b");
+$App.speed32b = localStorage.getItem("speed32b");
+$App.speed01c = localStorage.getItem("speed01c");
+$App.speed02c = localStorage.getItem("speed02c");
+$App.speed03c = localStorage.getItem("speed03c");
+$App.speed04c = localStorage.getItem("speed04c");
+$App.speed05c = localStorage.getItem("speed05c");
+$App.speed06c = localStorage.getItem("speed06c");
+$App.speed07c = localStorage.getItem("speed07c");
+$App.speed08c = localStorage.getItem("speed08c");
+$App.speed09c = localStorage.getItem("speed09c");
+$App.speed10c = localStorage.getItem("speed10c");
+$App.speed11c = localStorage.getItem("speed11c");
+$App.speed12c = localStorage.getItem("speed12c");
+$App.speed13c = localStorage.getItem("speed13c");
+$App.speed14c = localStorage.getItem("speed14c");
+$App.speed15c = localStorage.getItem("speed15c");
+$App.speed16c = localStorage.getItem("speed16c");
+$App.speed17c = localStorage.getItem("speed17c");
+$App.speed18c = localStorage.getItem("speed18c");
+$App.speed19c = localStorage.getItem("speed19c");
+$App.speed20c = localStorage.getItem("speed20c");
+$App.speed21c = localStorage.getItem("speed21c");
+$App.speed22c = localStorage.getItem("speed22c");
+$App.speed23c = localStorage.getItem("speed23c");
+$App.speed24c = localStorage.getItem("speed24c");
+$App.speed25c = localStorage.getItem("speed25c");
+$App.speed26c = localStorage.getItem("speed26c");
+$App.speed27c = localStorage.getItem("speed27c");
+$App.speed28c = localStorage.getItem("speed28c");
+$App.speed29c = localStorage.getItem("speed29c");
+$App.speed30c = localStorage.getItem("speed30c");
+$App.speed31c = localStorage.getItem("speed31c");
+$App.speed32c = localStorage.getItem("speed32c");
+$App.speed01d = localStorage.getItem("speed01d");
+$App.speed02d = localStorage.getItem("speed02d");
+$App.speed03d = localStorage.getItem("speed03d");
+$App.speed04d = localStorage.getItem("speed04d");
+$App.speed05d = localStorage.getItem("speed05d");
+$App.speed06d = localStorage.getItem("speed06d");
+$App.speed07d = localStorage.getItem("speed07d");
+$App.speed08d = localStorage.getItem("speed08d");
+$App.speed09d = localStorage.getItem("speed09d");
+$App.speed10d = localStorage.getItem("speed10d");
+$App.speed11d = localStorage.getItem("speed11d");
+$App.speed12d = localStorage.getItem("speed12d");
+$App.speed13d = localStorage.getItem("speed13d");
+$App.speed14d = localStorage.getItem("speed14d");
+$App.speed15d = localStorage.getItem("speed15d");
+$App.speed16d = localStorage.getItem("speed16d");
+$App.speed17d = localStorage.getItem("speed17d");
+$App.speed18d = localStorage.getItem("speed18d");
+$App.speed19d = localStorage.getItem("speed19d");
+$App.speed20d = localStorage.getItem("speed20d");
+$App.speed21d = localStorage.getItem("speed21d");
+$App.speed22d = localStorage.getItem("speed22d");
+$App.speed23d = localStorage.getItem("speed23d");
+$App.speed24d = localStorage.getItem("speed24d");
+$App.speed25d = localStorage.getItem("speed25d");
+$App.speed26d = localStorage.getItem("speed26d");
+$App.speed27d = localStorage.getItem("speed27d");
+$App.speed28d = localStorage.getItem("speed28d");
+$App.speed29d = localStorage.getItem("speed29d");
+$App.speed30d = localStorage.getItem("speed30d");
+$App.speed31d = localStorage.getItem("speed31d");
+$App.speed32d = localStorage.getItem("speed32d");
+$App.speed01e = localStorage.getItem("speed01e");
+$App.speed02e = localStorage.getItem("speed02e");
+$App.speed03e = localStorage.getItem("speed03e");
+$App.speed04e = localStorage.getItem("speed04e");
+$App.speed05e = localStorage.getItem("speed05e");
+$App.speed06e = localStorage.getItem("speed06e");
+$App.speed07e = localStorage.getItem("speed07e");
+$App.speed08e = localStorage.getItem("speed08e");
+$App.speed09e = localStorage.getItem("speed09e");
+$App.speed10e = localStorage.getItem("speed10e");
+$App.speed11e = localStorage.getItem("speed11e");
+$App.speed12e = localStorage.getItem("speed12e");
+$App.speed13e = localStorage.getItem("speed13e");
+$App.speed14e = localStorage.getItem("speed14e");
+$App.speed15e = localStorage.getItem("speed15e");
+$App.speed16e = localStorage.getItem("speed16e");
+$App.speed17e = localStorage.getItem("speed17e");
+$App.speed18e = localStorage.getItem("speed18e");
+$App.speed19e = localStorage.getItem("speed19e");
+$App.speed20e = localStorage.getItem("speed20e");
+$App.speed21e = localStorage.getItem("speed21e");
+$App.speed22e = localStorage.getItem("speed22e");
+$App.speed23e = localStorage.getItem("speed23e");
+$App.speed24e = localStorage.getItem("speed24e");
+$App.speed25e = localStorage.getItem("speed25e");
+$App.speed26e = localStorage.getItem("speed26e");
+$App.speed27e = localStorage.getItem("speed27e");
+$App.speed28e = localStorage.getItem("speed28e");
+$App.speed29e = localStorage.getItem("speed29e");
+$App.speed30e = localStorage.getItem("speed30e");
+$App.speed31e = localStorage.getItem("speed31e");
+$App.speed32e = localStorage.getItem("speed32e");
 $App.a1a1 = localStorage.getItem("a1a1");
 $App.a1a2 = localStorage.getItem("a1a2");
 $App.a1a3 = localStorage.getItem("a1a3");
@@ -572,948 +1243,6 @@ $App.z2a2 = localStorage.getItem("z2a2");
 $App.z2a3 = localStorage.getItem("z2a3");
 $App.z2a4 = localStorage.getItem("z2a4");
 $App.z2a5 = localStorage.getItem("z2a5");
-$App.Speed01link01 = localStorage.getItem("Speed01link01");
-$App.speed1ref = localStorage.getItem("speed1ref");
-$App.speed1refb = localStorage.getItem("speed1refb");
-$App.speed2ref = localStorage.getItem("speed2ref");
-$App.speed2refb = localStorage.getItem("speed2refb");
-$App.aa1 = localStorage.getItem("aa1");
-$App.aa2 = localStorage.getItem("aa2");
-$App.aa3 = localStorage.getItem("aa3");
-$App.aa4 = localStorage.getItem("aa4");
-$App.aa5 = localStorage.getItem("aa5");
-$App.aa6 = localStorage.getItem("aa6");
-$App.aa7 = localStorage.getItem("aa7");
-$App.aa8 = localStorage.getItem("aa8");
-$App.aa9 = localStorage.getItem("aa8");
-$App.aa10 = localStorage.getItem("aa10");
-$App.aa11 = localStorage.getItem("aa11");
-$App.aa12 = localStorage.getItem("aa12");
-$App.aa13 = localStorage.getItem("aa13");
-$App.aa14 = localStorage.getItem("aa14");
-$App.aa15 = localStorage.getItem("aa15");
-$App.aa16 = localStorage.getItem("aa16");
-$App.aa17 = localStorage.getItem("aa17");
-$App.aa18 = localStorage.getItem("aa18");
-$App.aa19 = localStorage.getItem("aa19");
-$App.aa20 = localStorage.getItem("aa20");
-$App.aa21 = localStorage.getItem("aa21");
-$App.aa22 = localStorage.getItem("aa22");
-$App.aa23 = localStorage.getItem("aa23");
-$App.aa24 = localStorage.getItem("aa24");
-$App.aa25 = localStorage.getItem("aa25");
-$App.aa26 = localStorage.getItem("aa26");
-$App.aa27 = localStorage.getItem("aa27");
-$App.aa28 = localStorage.getItem("aa28");
-$App.aa29 = localStorage.getItem("aa29");
-$App.aa30 = localStorage.getItem("aa30");
-$App.aa31 = localStorage.getItem("aa31");
-$App.aa32 = localStorage.getItem("aa32");
-if ($App.aa1 == "r") {
-$scope.SetObjectStyle("Headline10001","color","red");
-$scope.SetObjectStyle("Ellipse101","fill","red");
-} else {
-};
-if ($App.aa1 == "g") {
-$scope.SetObjectStyle("Headline10001","color","green");
-$scope.SetObjectStyle("Ellipse101","fill","green");
-} else {
-};
-if ($App.aa1 == "b") {
-$scope.SetObjectStyle("Headline10001","color","blue");
-$scope.SetObjectStyle("Ellipse101","fill","blue");
-} else {
-};
-if ($App.aa2 == "r") {
-$scope.SetObjectStyle("Headline10002","color","red");
-$scope.SetObjectStyle("Ellipse102","fill","red");
-} else {
-};
-if ($App.aa2 == "g") {
-$scope.SetObjectStyle("Headline10002","color","green");
-$scope.SetObjectStyle("Ellipse102","fill","green");
-} else {
-};
-if ($App.aa2 == "b") {
-$scope.SetObjectStyle("Headline10002","color","blue");
-$scope.SetObjectStyle("Ellipse102","fill","blue");
-} else {
-};
-if ($App.aa3 == "r") {
-$scope.SetObjectStyle("Headline10003","color","red");
-$scope.SetObjectStyle("Ellipse103","fill","red");
-} else {
-};
-if ($App.aa3 == "g") {
-$scope.SetObjectStyle("Headline10003","color","green");
-$scope.SetObjectStyle("Ellipse103","fill","green");
-} else {
-};
-if ($App.aa3 == "b") {
-$scope.SetObjectStyle("Headline10003","color","blue");
-$scope.SetObjectStyle("Ellipse103","fill","blue");
-} else {
-};
-if ($App.aa4 == "r") {
-$scope.SetObjectStyle("Headline10004","color","red");
-$scope.SetObjectStyle("Ellipse104","fill","red");
-} else {
-};
-if ($App.aa4 == "g") {
-$scope.SetObjectStyle("Headline10004","color","green");
-$scope.SetObjectStyle("Ellipse104","fill","green");
-} else {
-};
-if ($App.aa4 == "b") {
-$scope.SetObjectStyle("Headline10004","color","blue");
-$scope.SetObjectStyle("Ellipse104","fill","blue");
-} else {
-};
-if ($App.aa5 == "r") {
-$scope.SetObjectStyle("Headline10005","color","red");
-$scope.SetObjectStyle("Ellipse105","fill","red");
-} else {
-};
-if ($App.aa5 == "g") {
-$scope.SetObjectStyle("Headline10005","color","green");
-$scope.SetObjectStyle("Ellipse105","fill","green");
-} else {
-};
-if ($App.aa5 == "b") {
-$scope.SetObjectStyle("Headline10005","color","blue");
-$scope.SetObjectStyle("Ellipse105","fill","blue");
-} else {
-};
-if ($App.aa5 == "r") {
-$scope.SetObjectStyle("Headline10006","color","red");
-$scope.SetObjectStyle("Ellipse106","fill","red");
-} else {
-};
-if ($App.aa6 == "g") {
-$scope.SetObjectStyle("Headline10006","color","green");
-$scope.SetObjectStyle("Ellipse106","fill","green");
-} else {
-};
-if ($App.aa6 == "b") {
-$scope.SetObjectStyle("Headline10006","color","blue");
-$scope.SetObjectStyle("Ellipse106","fill","blue");
-} else {
-};
-if ($App.aa7 == "r") {
-$scope.SetObjectStyle("Headline10007","color","red");
-$scope.SetObjectStyle("Ellipse107","fill","red");
-} else {
-};
-if ($App.aa7 == "g") {
-$scope.SetObjectStyle("Headline10007","color","green");
-$scope.SetObjectStyle("Ellipse107","fill","green");
-} else {
-};
-if ($App.aa7 == "b") {
-$scope.SetObjectStyle("Headline10007","color","blue");
-$scope.SetObjectStyle("Ellipse107","fill","blue");
-} else {
-};
-if ($App.aa8 == "r") {
-$scope.SetObjectStyle("Headline10008","color","red");
-$scope.SetObjectStyle("Ellipse108","fill","red");
-} else {
-};
-if ($App.aa8 == "g") {
-$scope.SetObjectStyle("Headline10008","color","green");
-$scope.SetObjectStyle("Ellipse108","fill","green");
-} else {
-};
-if ($App.aa8 == "b") {
-$scope.SetObjectStyle("Headline10008","color","blue");
-$scope.SetObjectStyle("Ellipse108","fill","blue");
-} else {
-};
-if ($App.aa9 == "r") {
-$scope.SetObjectStyle("Headline10009","color","red");
-$scope.SetObjectStyle("Ellipse109","fill","red");
-} else {
-};
-if ($App.aa9 == "g") {
-$scope.SetObjectStyle("Headline10009","color","green");
-$scope.SetObjectStyle("Ellipse109","fill","green");
-} else {
-};
-if ($App.aa9 == "b") {
-$scope.SetObjectStyle("Headline10009","color","blue");
-$scope.SetObjectStyle("Ellipse109","fill","blue");
-} else {
-};
-if ($App.aa10 == "r") {
-$scope.SetObjectStyle("Headline10010","color","red");
-$scope.SetObjectStyle("Ellipse110","fill","red");
-} else {
-};
-if ($App.aa10 == "g") {
-$scope.SetObjectStyle("Headline10010","color","green");
-$scope.SetObjectStyle("Ellipse110","fill","green");
-} else {
-};
-if ($App.aa10 == "b") {
-$scope.SetObjectStyle("Headline10010","color","blue");
-$scope.SetObjectStyle("Ellipse110","fill","blue");
-} else {
-};
-if ($App.aa11 == "r") {
-$scope.SetObjectStyle("Headline10011","color","red");
-$scope.SetObjectStyle("Ellipse111","fill","red");
-} else {
-};
-if ($App.aa11 == "g") {
-$scope.SetObjectStyle("Headline10011","color","green");
-$scope.SetObjectStyle("Ellipse111","fill","green");
-} else {
-};
-if ($App.aa11 == "b") {
-$scope.SetObjectStyle("Headline10011","color","blue");
-$scope.SetObjectStyle("Ellipse111","fill","blue");
-} else {
-};
-if ($App.aa12 == "r") {
-$scope.SetObjectStyle("Headline10012","color","red");
-$scope.SetObjectStyle("Ellipse112","fill","red");
-} else {
-};
-if ($App.aa12 == "g") {
-$scope.SetObjectStyle("Headline10012","color","green");
-$scope.SetObjectStyle("Ellipse112","fill","green");
-} else {
-};
-if ($App.aa12 == "b") {
-$scope.SetObjectStyle("Headline10012","color","blue");
-$scope.SetObjectStyle("Ellipse112","fill","blue");
-} else {
-};
-if ($App.aa13 == "r") {
-$scope.SetObjectStyle("Headline10013","color","red");
-$scope.SetObjectStyle("Ellipse113","fill","red");
-} else {
-};
-if ($App.aa13 == "g") {
-$scope.SetObjectStyle("Headline10013","color","green");
-$scope.SetObjectStyle("Ellipse113","fill","green");
-} else {
-};
-if ($App.aa13 == "b") {
-$scope.SetObjectStyle("Headline10013","color","blue");
-$scope.SetObjectStyle("Ellipse113","fill","blue");
-} else {
-};
-if ($App.aa14 == "r") {
-$scope.SetObjectStyle("Headline10014","color","red");
-$scope.SetObjectStyle("Ellipse114","fill","red");
-} else {
-};
-if ($App.aa14 == "g") {
-$scope.SetObjectStyle("Headline10014","color","green");
-$scope.SetObjectStyle("Ellipse114","fill","green");
-} else {
-};
-if ($App.aa14 == "b") {
-$scope.SetObjectStyle("Headline10014","color","blue");
-$scope.SetObjectStyle("Ellipse114","fill","blue");
-} else {
-};
-if ($App.aa15 == "r") {
-$scope.SetObjectStyle("Headline10015","color","red");
-$scope.SetObjectStyle("Ellipse115","fill","red");
-} else {
-};
-if ($App.aa15 == "g") {
-$scope.SetObjectStyle("Headline10015","color","green");
-$scope.SetObjectStyle("Ellipse115","fill","green");
-} else {
-};
-if ($App.aa15 == "b") {
-$scope.SetObjectStyle("Headline10015","color","blue");
-$scope.SetObjectStyle("Ellipse115","fill","blue");
-} else {
-};
-if ($App.aa16 == "r") {
-$scope.SetObjectStyle("Headline10016","color","red");
-$scope.SetObjectStyle("Ellipse116","fill","red");
-} else {
-};
-if ($App.aa16 == "g") {
-$scope.SetObjectStyle("Headline10016","color","green");
-$scope.SetObjectStyle("Ellipse116","fill","green");
-} else {
-};
-if ($App.aa16 == "b") {
-$scope.SetObjectStyle("Headline10016","color","blue");
-$scope.SetObjectStyle("Ellipse116","fill","blue");
-} else {
-};
-if ($App.aa17 == "r") {
-$scope.SetObjectStyle("Headline10017","color","red");
-$scope.SetObjectStyle("Ellipse117","fill","red");
-} else {
-};
-if ($App.aa17 == "g") {
-$scope.SetObjectStyle("Headline10017","color","green");
-$scope.SetObjectStyle("Ellipse117","fill","green");
-} else {
-};
-if ($App.aa17 == "b") {
-$scope.SetObjectStyle("Headline10017","color","blue");
-$scope.SetObjectStyle("Ellipse117","fill","blue");
-} else {
-};
-if ($App.aa18 == "r") {
-$scope.SetObjectStyle("Headline10018","color","red");
-$scope.SetObjectStyle("Ellipse118","fill","red");
-} else {
-};
-if ($App.aa18 == "g") {
-$scope.SetObjectStyle("Headline10018","color","green");
-$scope.SetObjectStyle("Ellipse118","fill","green");
-} else {
-};
-if ($App.aa18 == "b") {
-$scope.SetObjectStyle("Headline10018","color","blue");
-$scope.SetObjectStyle("Ellipse118","fill","blue");
-} else {
-};
-if ($App.aa19 == "r") {
-$scope.SetObjectStyle("Headline10019","color","red");
-$scope.SetObjectStyle("Ellipse119","fill","red");
-} else {
-};
-if ($App.aa19 == "g") {
-$scope.SetObjectStyle("Headline10019","color","green");
-$scope.SetObjectStyle("Ellipse119","fill","green");
-} else {
-};
-if ($App.aa19 == "b") {
-$scope.SetObjectStyle("Headline10019","color","blue");
-$scope.SetObjectStyle("Ellipse119","fill","blue");
-} else {
-};
-if ($App.aa20 == "r") {
-$scope.SetObjectStyle("Headline10020","color","red");
-$scope.SetObjectStyle("Ellipse120","fill","red");
-} else {
-};
-if ($App.aa20 == "g") {
-$scope.SetObjectStyle("Headline10020","color","green");
-$scope.SetObjectStyle("Ellipse120","fill","green");
-} else {
-};
-if ($App.aa20 == "b") {
-$scope.SetObjectStyle("Headline10020","color","blue");
-$scope.SetObjectStyle("Ellipse120","fill","blue");
-} else {
-};
-if ($App.aa21 == "r") {
-$scope.SetObjectStyle("Headline10021","color","red");
-$scope.SetObjectStyle("Ellipse121","fill","red");
-} else {
-};
-if ($App.aa21 == "g") {
-$scope.SetObjectStyle("Headline10021","color","green");
-$scope.SetObjectStyle("Ellipse121","fill","green");
-} else {
-};
-if ($App.aa21 == "b") {
-$scope.SetObjectStyle("Headline10021","color","blue");
-$scope.SetObjectStyle("Ellipse121","fill","blue");
-} else {
-};
-if ($App.aa22 == "r") {
-$scope.SetObjectStyle("Headline10022","color","red");
-$scope.SetObjectStyle("Ellipse122","fill","red");
-} else {
-};
-if ($App.aa22 == "g") {
-$scope.SetObjectStyle("Headline10022","color","green");
-$scope.SetObjectStyle("Ellipse122","fill","green");
-} else {
-};
-if ($App.aa22 == "b") {
-$scope.SetObjectStyle("Headline10022","color","blue");
-$scope.SetObjectStyle("Ellipse122","fill","blue");
-} else {
-};
-if ($App.aa23 == "r") {
-$scope.SetObjectStyle("Headline10023","color","red");
-$scope.SetObjectStyle("Ellipse123","fill","red");
-} else {
-};
-if ($App.aa23 == "g") {
-$scope.SetObjectStyle("Headline10023","color","green");
-$scope.SetObjectStyle("Ellipse123","fill","green");
-} else {
-};
-if ($App.aa23 == "b") {
-$scope.SetObjectStyle("Headline10023","color","blue");
-$scope.SetObjectStyle("Ellipse123","fill","blue");
-} else {
-};
-if ($App.aa24 == "r") {
-$scope.SetObjectStyle("Headline10024","color","red");
-$scope.SetObjectStyle("Ellipse124","fill","red");
-} else {
-};
-if ($App.aa24 == "g") {
-$scope.SetObjectStyle("Headline10024","color","green");
-$scope.SetObjectStyle("Ellipse124","fill","green");
-} else {
-};
-if ($App.aa24 == "b") {
-$scope.SetObjectStyle("Headline10024","color","blue");
-$scope.SetObjectStyle("Ellipse124","fill","blue");
-} else {
-};
-if ($App.aa25 == "r") {
-$scope.SetObjectStyle("Headline10025","color","red");
-$scope.SetObjectStyle("Ellipse125","fill","red");
-} else {
-};
-if ($App.aa25 == "g") {
-$scope.SetObjectStyle("Headline10025","color","green");
-$scope.SetObjectStyle("Ellipse125","fill","green");
-} else {
-};
-if ($App.aa25 == "b") {
-$scope.SetObjectStyle("Headline10025","color","blue");
-$scope.SetObjectStyle("Ellipse125","fill","blue");
-} else {
-};
-if ($App.aa26 == "r") {
-$scope.SetObjectStyle("Headline10026","color","red");
-$scope.SetObjectStyle("Ellipse126","fill","red");
-} else {
-};
-if ($App.aa26 == "g") {
-$scope.SetObjectStyle("Headline10026","color","green");
-$scope.SetObjectStyle("Ellipse126","fill","green");
-} else {
-};
-if ($App.aa26 == "b") {
-$scope.SetObjectStyle("Headline10026","color","blue");
-$scope.SetObjectStyle("Ellipse126","fill","blue");
-} else {
-};
-if ($App.aa27 == "r") {
-$scope.SetObjectStyle("Headline10027","color","red");
-$scope.SetObjectStyle("Ellipse127","fill","red");
-} else {
-};
-if ($App.aa27 == "g") {
-$scope.SetObjectStyle("Headline10027","color","green");
-$scope.SetObjectStyle("Ellipse127","fill","green");
-} else {
-};
-if ($App.aa27 == "b") {
-$scope.SetObjectStyle("Headline10027","color","blue");
-$scope.SetObjectStyle("Ellipse127","fill","blue");
-} else {
-};
-if ($App.aa28 == "r") {
-$scope.SetObjectStyle("Headline10028","color","red");
-$scope.SetObjectStyle("Ellipse128","fill","red");
-} else {
-};
-if ($App.aa28 == "g") {
-$scope.SetObjectStyle("Headline10028","color","green");
-$scope.SetObjectStyle("Ellipse128","fill","green");
-} else {
-};
-if ($App.aa28 == "b") {
-$scope.SetObjectStyle("Headline10028","color","blue");
-$scope.SetObjectStyle("Ellipse128","fill","blue");
-} else {
-};
-if ($App.aa29 == "r") {
-$scope.SetObjectStyle("Headline10029","color","red");
-$scope.SetObjectStyle("Ellipse129","fill","red");
-} else {
-};
-if ($App.aa29 == "g") {
-$scope.SetObjectStyle("Headline10029","color","green");
-$scope.SetObjectStyle("Ellipse129","fill","green");
-} else {
-};
-if ($App.aa29 == "b") {
-$scope.SetObjectStyle("Headline10029","color","blue");
-$scope.SetObjectStyle("Ellipse129","fill","blue");
-} else {
-};
-if ($App.aa30 == "r") {
-$scope.SetObjectStyle("Headline10030","color","red");
-$scope.SetObjectStyle("Ellipse130","fill","red");
-} else {
-};
-if ($App.aa30 == "g") {
-$scope.SetObjectStyle("Headline10030","color","green");
-$scope.SetObjectStyle("Ellipse130","fill","green");
-} else {
-};
-if ($App.aa30 == "b") {
-$scope.SetObjectStyle("Headline10030","color","blue");
-$scope.SetObjectStyle("Ellipse130","fill","blue");
-} else {
-};
-if ($App.aa31 == "r") {
-$scope.SetObjectStyle("Headline10031","color","red");
-$scope.SetObjectStyle("Ellipse131","fill","red");
-} else {
-};
-if ($App.aa31 == "g") {
-$scope.SetObjectStyle("Headline10031","color","green");
-$scope.SetObjectStyle("Ellipse131","fill","green");
-} else {
-};
-if ($App.aa31 == "b") {
-$scope.SetObjectStyle("Headline10031","color","blue");
-$scope.SetObjectStyle("Ellipse131","fill","blue");
-} else {
-};
-if ($App.aa32 == "r") {
-$scope.SetObjectStyle("Headline10032","color","red");
-$scope.SetObjectStyle("Ellipse132","fill","red");
-} else {
-};
-if ($App.aa32 == "g") {
-$scope.SetObjectStyle("Headline10032","color","green");
-$scope.SetObjectStyle("Ellipse132","fill","green");
-} else {
-};
-if ($App.aa32 == "b") {
-$scope.SetObjectStyle("Headline10032","color","blue");
-$scope.SetObjectStyle("Ellipse132","fill","blue");
-} else {
-};
-$App.ia01 = localStorage.getItem("ia01");
-$App.ia01a = localStorage.getItem("ia01a");
-$App.ia02 = localStorage.getItem("ia02");
-$App.ia02a = localStorage.getItem("ia02a");
-$App.ia03 = localStorage.getItem("ia03");
-$App.ia03a = localStorage.getItem("ia03a");
-$App.ia04 = localStorage.getItem("ia04");
-$App.ia04a = localStorage.getItem("ia04a");
-$App.ia05 = localStorage.getItem("ia05");
-$App.ia05a = localStorage.getItem("ia05a");
-$App.ia06 = localStorage.getItem("ia06");
-$App.ia06a = localStorage.getItem("ia06a");
-$App.ib01 = localStorage.getItem("ib01");
-$App.ib01a = localStorage.getItem("ib01a");
-$App.ib02 = localStorage.getItem("ib02");
-$App.ib02a = localStorage.getItem("ib02a");
-$App.ib03 = localStorage.getItem("ib03");
-$App.ib03a = localStorage.getItem("ib03a");
-$App.ib04 = localStorage.getItem("ib04");
-$App.ib04a = localStorage.getItem("ib04a");
-$App.ib05 = localStorage.getItem("ib05");
-$App.ib05a = localStorage.getItem("ib05a");
-$App.ib06 = localStorage.getItem("ib06");
-$App.ib06a = localStorage.getItem("ib06a");
-$App.ic01 = localStorage.getItem("ic01");
-$App.ic01a = localStorage.getItem("ic01a");
-$App.ic02 = localStorage.getItem("ic02");
-$App.ic02a = localStorage.getItem("ic02a");
-$App.ic03 = localStorage.getItem("ic03");
-$App.ic03a = localStorage.getItem("ic03a");
-$App.ic04 = localStorage.getItem("ic04");
-$App.ic04a = localStorage.getItem("ic04a");
-$App.ic05 = localStorage.getItem("ic05");
-$App.ic05a = localStorage.getItem("ic05a");
-$App.ic06 = localStorage.getItem("ic06");
-$App.ic06a = localStorage.getItem("ic06a");
-$App.id01 = localStorage.getItem("id01");
-$App.id01a = localStorage.getItem("id01a");
-$App.id02 = localStorage.getItem("id02");
-$App.id02a = localStorage.getItem("id02a");
-$App.id03 = localStorage.getItem("id03");
-$App.id03a = localStorage.getItem("id03a");
-$App.id04 = localStorage.getItem("id04");
-$App.id04a = localStorage.getItem("id04a");
-$App.id05 = localStorage.getItem("id05");
-$App.id05a = localStorage.getItem("id05a");
-$App.id06 = localStorage.getItem("id06");
-$App.id06a = localStorage.getItem("id06a");
-$App.ie01 = localStorage.getItem("ie01");
-$App.ie01a = localStorage.getItem("ie01a");
-$App.ie02 = localStorage.getItem("ie02");
-$App.ie02a = localStorage.getItem("ie02a");
-$App.ie03 = localStorage.getItem("ie03");
-$App.ie03a = localStorage.getItem("ie03a");
-$App.ie04 = localStorage.getItem("ie04");
-$App.ie04a = localStorage.getItem("ie04a");
-$App.ie05 = localStorage.getItem("ie05");
-$App.ie05a = localStorage.getItem("ie05a");
-$App.ie06 = localStorage.getItem("ie06");
-$App.ie06a = localStorage.getItem("ie06a");
-$App.if01 = localStorage.getItem("if01");
-$App.if01a = localStorage.getItem("if01a");
-$App.if02 = localStorage.getItem("if02");
-$App.if02a = localStorage.getItem("if02a");
-$App.if03 = localStorage.getItem("if03");
-$App.if03a = localStorage.getItem("if03a");
-$App.if04 = localStorage.getItem("if04");
-$App.if04a = localStorage.getItem("if04a");
-$App.if05 = localStorage.getItem("if05");
-$App.if05a = localStorage.getItem("if05a");
-$App.if06 = localStorage.getItem("if06");
-$App.if06a = localStorage.getItem("if06a");
-$App.ig01 = localStorage.getItem("ig01");
-$App.ig01a = localStorage.getItem("ig01a");
-$App.ig02 = localStorage.getItem("ig02");
-$App.ig02a = localStorage.getItem("ig02a");
-$App.ig03 = localStorage.getItem("ig03");
-$App.ig03a = localStorage.getItem("ig03a");
-$App.ig04 = localStorage.getItem("ig04");
-$App.ig04a = localStorage.getItem("ig04a");
-$App.ig05 = localStorage.getItem("ig05");
-$App.ig05a = localStorage.getItem("ig05a");
-$App.ig06 = localStorage.getItem("ig06");
-$App.ig06a = localStorage.getItem("ig06a");
-$App.ih01 = localStorage.getItem("ih01");
-$App.ih01a = localStorage.getItem("ih01a");
-$App.ih02 = localStorage.getItem("ih02");
-$App.ih02a = localStorage.getItem("ih02a");
-$App.ih03 = localStorage.getItem("ih03");
-$App.ih03a = localStorage.getItem("ih03a");
-$App.ih04 = localStorage.getItem("ih04");
-$App.ih04a = localStorage.getItem("ih04a");
-$App.ih05 = localStorage.getItem("ih05");
-$App.ih05a = localStorage.getItem("ih05a");
-$App.ih06 = localStorage.getItem("ih06");
-$App.ih06a = localStorage.getItem("ih06a");
-$App.ii01 = localStorage.getItem("ii01");
-$App.ii01a = localStorage.getItem("ii01a");
-$App.ii02 = localStorage.getItem("ii02");
-$App.ii02a = localStorage.getItem("ii02a");
-$App.ii03 = localStorage.getItem("ii03");
-$App.ii03a = localStorage.getItem("ii03a");
-$App.ii04 = localStorage.getItem("ii04");
-$App.ii04a = localStorage.getItem("ii04a");
-$App.ii05 = localStorage.getItem("ii05");
-$App.ii05a = localStorage.getItem("ii05a");
-$App.ii06 = localStorage.getItem("ii06");
-$App.ii06a = localStorage.getItem("ii06a");
-$App.ij01 = localStorage.getItem("ij01");
-$App.ij01a = localStorage.getItem("ij01a");
-$App.ij02 = localStorage.getItem("ij02");
-$App.ij02a = localStorage.getItem("ij02a");
-$App.ij03 = localStorage.getItem("ij03");
-$App.ij03a = localStorage.getItem("ij03a");
-$App.ij04 = localStorage.getItem("ij04");
-$App.ij04a = localStorage.getItem("ij04a");
-$App.ij05 = localStorage.getItem("ij05");
-$App.ij05a = localStorage.getItem("ij05a");
-$App.ij06 = localStorage.getItem("ij06");
-$App.ij06a = localStorage.getItem("ij06a");
-$App.ik01 = localStorage.getItem("ik01");
-$App.ik01a = localStorage.getItem("ik01a");
-$App.ik02 = localStorage.getItem("ik02");
-$App.ik02a = localStorage.getItem("ik02a");
-$App.ik03 = localStorage.getItem("ik03");
-$App.ik03a = localStorage.getItem("ik03a");
-$App.ik04 = localStorage.getItem("ik04");
-$App.ik04a = localStorage.getItem("ik04a");
-$App.ik05 = localStorage.getItem("ik05");
-$App.ik05a = localStorage.getItem("ik05a");
-$App.ik06 = localStorage.getItem("ik06");
-$App.ik06a = localStorage.getItem("ik06a");
-$App.il01 = localStorage.getItem("il01");
-$App.il01a = localStorage.getItem("il01a");
-$App.il02 = localStorage.getItem("il02");
-$App.il02a = localStorage.getItem("il02a");
-$App.il03 = localStorage.getItem("il03");
-$App.il03a = localStorage.getItem("il03a");
-$App.il04 = localStorage.getItem("il04");
-$App.il04a = localStorage.getItem("il04a");
-$App.il05 = localStorage.getItem("il05");
-$App.il05a = localStorage.getItem("il05a");
-$App.il06 = localStorage.getItem("il06");
-$App.il06a = localStorage.getItem("il06a");
-$App.im01 = localStorage.getItem("im01");
-$App.im01a = localStorage.getItem("im01a");
-$App.im02 = localStorage.getItem("im02");
-$App.im02a = localStorage.getItem("im02a");
-$App.im03 = localStorage.getItem("im03");
-$App.im03a = localStorage.getItem("im03a");
-$App.im04 = localStorage.getItem("im04");
-$App.im04a = localStorage.getItem("im04a");
-$App.im05 = localStorage.getItem("im05");
-$App.im05a = localStorage.getItem("im05a");
-$App.im06 = localStorage.getItem("im06");
-$App.im06a = localStorage.getItem("im06a");
-$App.in01 = localStorage.getItem("in01");
-$App.in01a = localStorage.getItem("in01a");
-$App.in02 = localStorage.getItem("in02");
-$App.in02a = localStorage.getItem("in02a");
-$App.in03 = localStorage.getItem("in03");
-$App.in03a = localStorage.getItem("in03a");
-$App.in04 = localStorage.getItem("in04");
-$App.ih04a = localStorage.getItem("in04a");
-$App.in05 = localStorage.getItem("in05");
-$App.in05a = localStorage.getItem("in05a");
-$App.in06 = localStorage.getItem("in06");
-$App.in06a = localStorage.getItem("in06a");
-$App.io01 = localStorage.getItem("io01");
-$App.io01a = localStorage.getItem("io01a");
-$App.io02 = localStorage.getItem("io02");
-$App.io02a = localStorage.getItem("io02a");
-$App.io03 = localStorage.getItem("io03");
-$App.io03a = localStorage.getItem("io03a");
-$App.io04 = localStorage.getItem("io04");
-$App.io04a = localStorage.getItem("io04a");
-$App.io05 = localStorage.getItem("io05");
-$App.io05a = localStorage.getItem("io05a");
-$App.io06 = localStorage.getItem("io06");
-$App.io06a = localStorage.getItem("io06a");
-$App.ip01 = localStorage.getItem("ip01");
-$App.ip01a = localStorage.getItem("ip01a");
-$App.ip02 = localStorage.getItem("ip02");
-$App.ip02a = localStorage.getItem("ip02a");
-$App.ip03 = localStorage.getItem("ip03");
-$App.ip03a = localStorage.getItem("ip03a");
-$App.ip04 = localStorage.getItem("ip04");
-$App.ip04a = localStorage.getItem("ip04a");
-$App.ip05 = localStorage.getItem("ip05");
-$App.ip05a = localStorage.getItem("ip05a");
-$App.ip06 = localStorage.getItem("ip06");
-$App.ip06a = localStorage.getItem("ip06a");
-$App.iq01 = localStorage.getItem("iq01");
-$App.iq01a = localStorage.getItem("iq01a");
-$App.iq02 = localStorage.getItem("iq02");
-$App.iq02a = localStorage.getItem("iq02a");
-$App.iq03 = localStorage.getItem("iq03");
-$App.iq03a = localStorage.getItem("iq03a");
-$App.iq04 = localStorage.getItem("iq04");
-$App.iq04a = localStorage.getItem("iq04a");
-$App.iq05 = localStorage.getItem("iq05");
-$App.iq05a = localStorage.getItem("iq05a");
-$App.iq06 = localStorage.getItem("iq06");
-$App.iq06a = localStorage.getItem("iq06a");
-$App.ir01 = localStorage.getItem("ir01");
-$App.ir01a = localStorage.getItem("ir01a");
-$App.is01 = localStorage.getItem("is01");
-$App.is01a = localStorage.getItem("is01a");
-$App.it01 = localStorage.getItem("it01");
-$App.it01a = localStorage.getItem("it01a");
-$App.iu01 = localStorage.getItem("iu01");
-$App.iv01a = localStorage.getItem("iv01a");
-$App.iv01 = localStorage.getItem("iv01");
-$App.iv01a = localStorage.getItem("iv01a");
-$App.iw01 = localStorage.getItem("iw01");
-$App.iw01a = localStorage.getItem("iw01a");
-$App.ixy01 = localStorage.getItem("ixy01");
-$App.ixy01a = localStorage.getItem("ixy01a");
-$App.iz01 = localStorage.getItem("iz01");
-$App.iz01a = localStorage.getItem("iz01a");
-$App.speed01 = localStorage.getItem("speed01");
-$App.speed02 = localStorage.getItem("speed02");
-$App.speed03 = localStorage.getItem("speed03");
-$App.speed04 = localStorage.getItem("speed04");
-$App.speed05 = localStorage.getItem("speed05");
-$App.speed06 = localStorage.getItem("speed06");
-$App.speed07 = localStorage.getItem("speed07");
-$App.speed08 = localStorage.getItem("speed08");
-$App.speed09 = localStorage.getItem("speed09");
-$App.speed10 = localStorage.getItem("speed10");
-$App.speed11 = localStorage.getItem("speed11");
-$App.speed12 = localStorage.getItem("speed12");
-$App.speed13 = localStorage.getItem("speed13");
-$App.speed14 = localStorage.getItem("speed14");
-$App.speed15 = localStorage.getItem("speed15");
-$App.speed16 = localStorage.getItem("speed16");
-$App.speed17 = localStorage.getItem("speed17");
-$App.speed18 = localStorage.getItem("speed18");
-$App.speed19 = localStorage.getItem("speed19");
-$App.speed20 = localStorage.getItem("speed20");
-$App.speed21 = localStorage.getItem("speed21");
-$App.speed22 = localStorage.getItem("speed22");
-$App.speed23 = localStorage.getItem("speed23");
-$App.speed24 = localStorage.getItem("speed24");
-$App.speed25 = localStorage.getItem("speed25");
-$App.speed26 = localStorage.getItem("speed26");
-$App.speed27 = localStorage.getItem("speed27");
-$App.speed28 = localStorage.getItem("speed28");
-$App.speed29 = localStorage.getItem("speed29");
-$App.speed30 = localStorage.getItem("speed30");
-$App.speed31 = localStorage.getItem("speed31");
-$App.speed32 = localStorage.getItem("speed32");
-$App.speed01a = localStorage.getItem("speed01a");
-$App.speed02a = localStorage.getItem("speed02a");
-$App.speed03a = localStorage.getItem("speed03a");
-$App.speed04a = localStorage.getItem("speed04a");
-$App.speed05a = localStorage.getItem("speed05a");
-$App.speed06a = localStorage.getItem("speed06a");
-$App.speed07a = localStorage.getItem("speed07a");
-$App.speed08a = localStorage.getItem("speed08a");
-$App.speed09a = localStorage.getItem("speed09a");
-$App.speed10a = localStorage.getItem("speed10a");
-$App.speed11a = localStorage.getItem("speed11a");
-$App.speed12a = localStorage.getItem("speed12a");
-$App.speed13a = localStorage.getItem("speed13a");
-$App.speed14a = localStorage.getItem("speed14a");
-$App.speed15a = localStorage.getItem("speed15a");
-$App.speed16a = localStorage.getItem("speed16a");
-$App.speed17a = localStorage.getItem("speed17a");
-$App.speed18a = localStorage.getItem("speed18a");
-$App.speed19a = localStorage.getItem("speed19a");
-$App.speed20a = localStorage.getItem("speed20a");
-$App.speed21a = localStorage.getItem("speed21a");
-$App.speed22a = localStorage.getItem("speed22a");
-$App.speed23a = localStorage.getItem("speed23a");
-$App.speed24a = localStorage.getItem("speed24a");
-$App.speed25a = localStorage.getItem("speed25a");
-$App.speed26a = localStorage.getItem("speed26a");
-$App.speed27a = localStorage.getItem("speed27a");
-$App.speed28a = localStorage.getItem("speed28a");
-$App.speed29a = localStorage.getItem("speed29a");
-$App.speed30a = localStorage.getItem("speed30a");
-$App.speed31a = localStorage.getItem("speed31a");
-$App.speed32a = localStorage.getItem("speed32a");
-$App.speed01b = localStorage.getItem("speed01b");
-$App.speed02b = localStorage.getItem("speed02b");
-$App.speed03b = localStorage.getItem("speed03b");
-$App.speed04b = localStorage.getItem("speed04b");
-$App.speed05b = localStorage.getItem("speed05b");
-$App.speed06b = localStorage.getItem("speed06b");
-$App.speed07b = localStorage.getItem("speed07b");
-$App.speed08b = localStorage.getItem("speed08b");
-$App.speed09b = localStorage.getItem("speed09b");
-$App.speed10b = localStorage.getItem("speed10b");
-$App.speed11b = localStorage.getItem("speed11b");
-$App.speed12b = localStorage.getItem("speed12b");
-$App.speed13b = localStorage.getItem("speed13b");
-$App.speed14b = localStorage.getItem("speed14b");
-$App.speed15b = localStorage.getItem("speed15b");
-$App.speed16b = localStorage.getItem("speed16b");
-$App.speed17b = localStorage.getItem("speed17b");
-$App.speed18b = localStorage.getItem("speed18b");
-$App.speed19b = localStorage.getItem("speed19b");
-$App.speed20b = localStorage.getItem("speed20b");
-$App.speed21b = localStorage.getItem("speed21b");
-$App.speed22b = localStorage.getItem("speed22b");
-$App.speed23b = localStorage.getItem("speed23b");
-$App.speed24b = localStorage.getItem("speed24b");
-$App.speed25b = localStorage.getItem("speed25b");
-$App.speed26b = localStorage.getItem("speed26b");
-$App.speed27b = localStorage.getItem("speed27b");
-$App.speed28b = localStorage.getItem("speed28b");
-$App.speed29b = localStorage.getItem("speed29b");
-$App.speed30b = localStorage.getItem("speed30b");
-$App.speed31b = localStorage.getItem("speed31b");
-$App.speed32b = localStorage.getItem("speed32b");
-$App.speed01c = localStorage.getItem("speed01c");
-$App.speed02c = localStorage.getItem("speed02c");
-$App.speed03c = localStorage.getItem("speed03c");
-$App.speed04c = localStorage.getItem("speed04c");
-$App.speed05c = localStorage.getItem("speed05c");
-$App.speed06c = localStorage.getItem("speed06c");
-$App.speed07c = localStorage.getItem("speed07c");
-$App.speed08c = localStorage.getItem("speed08c");
-$App.speed09c = localStorage.getItem("speed09c");
-$App.speed10c = localStorage.getItem("speed10c");
-$App.speed11c = localStorage.getItem("speed11c");
-$App.speed12c = localStorage.getItem("speed12c");
-$App.speed13c = localStorage.getItem("speed13c");
-$App.speed14c = localStorage.getItem("speed14c");
-$App.speed15c = localStorage.getItem("speed15c");
-$App.speed16c = localStorage.getItem("speed16c");
-$App.speed17c = localStorage.getItem("speed17c");
-$App.speed18c = localStorage.getItem("speed18c");
-$App.speed19c = localStorage.getItem("speed19c");
-$App.speed20c = localStorage.getItem("speed20c");
-$App.speed21c = localStorage.getItem("speed21c");
-$App.speed22c = localStorage.getItem("speed22c");
-$App.speed23c = localStorage.getItem("speed23c");
-$App.speed24c = localStorage.getItem("speed24c");
-$App.speed25c = localStorage.getItem("speed25c");
-$App.speed26c = localStorage.getItem("speed26c");
-$App.speed27c = localStorage.getItem("speed27c");
-$App.speed28c = localStorage.getItem("speed28c");
-$App.speed29c = localStorage.getItem("speed29c");
-$App.speed30c = localStorage.getItem("speed30c");
-$App.speed31c = localStorage.getItem("speed31c");
-$App.speed32c = localStorage.getItem("speed32c");
-$App.speed01d = localStorage.getItem("speed01d");
-$App.speed02d = localStorage.getItem("speed02d");
-$App.speed03d = localStorage.getItem("speed03d");
-$App.speed04d = localStorage.getItem("speed04d");
-$App.speed05d = localStorage.getItem("speed05d");
-$App.speed06d = localStorage.getItem("speed06d");
-$App.speed07d = localStorage.getItem("speed07d");
-$App.speed08d = localStorage.getItem("speed08d");
-$App.speed09d = localStorage.getItem("speed09d");
-$App.speed10d = localStorage.getItem("speed10d");
-$App.speed11d = localStorage.getItem("speed11d");
-$App.speed12d = localStorage.getItem("speed12d");
-$App.speed13d = localStorage.getItem("speed13d");
-$App.speed14d = localStorage.getItem("speed14d");
-$App.speed15d = localStorage.getItem("speed15d");
-$App.speed16d = localStorage.getItem("speed16d");
-$App.speed17d = localStorage.getItem("speed17d");
-$App.speed18d = localStorage.getItem("speed18d");
-$App.speed19d = localStorage.getItem("speed19d");
-$App.speed20d = localStorage.getItem("speed20d");
-$App.speed21d = localStorage.getItem("speed21d");
-$App.speed22d = localStorage.getItem("speed22d");
-$App.speed23d = localStorage.getItem("speed23d");
-$App.speed24d = localStorage.getItem("speed24d");
-$App.speed25d = localStorage.getItem("speed25d");
-$App.speed26d = localStorage.getItem("speed26d");
-$App.speed27d = localStorage.getItem("speed27d");
-$App.speed28d = localStorage.getItem("speed28d");
-$App.speed29d = localStorage.getItem("speed29d");
-$App.speed30d = localStorage.getItem("speed30d");
-$App.speed31d = localStorage.getItem("speed31d");
-$App.speed32d = localStorage.getItem("speed32d");
-$App.speed01e = localStorage.getItem("speed01e");
-$App.speed02e = localStorage.getItem("speed02e");
-$App.speed03e = localStorage.getItem("speed03e");
-$App.speed04e = localStorage.getItem("speed04e");
-$App.speed05e = localStorage.getItem("speed05e");
-$App.speed06e = localStorage.getItem("speed06e");
-$App.speed07e = localStorage.getItem("speed07e");
-$App.speed08e = localStorage.getItem("speed08e");
-$App.speed09e = localStorage.getItem("speed09e");
-$App.speed10e = localStorage.getItem("speed10e");
-$App.speed11e = localStorage.getItem("speed11e");
-$App.speed12e = localStorage.getItem("speed12e");
-$App.speed13e = localStorage.getItem("speed13e");
-$App.speed14e = localStorage.getItem("speed14e");
-$App.speed15e = localStorage.getItem("speed15e");
-$App.speed16e = localStorage.getItem("speed16e");
-$App.speed17e = localStorage.getItem("speed17e");
-$App.speed18e = localStorage.getItem("speed18e");
-$App.speed19e = localStorage.getItem("speed19e");
-$App.speed20e = localStorage.getItem("speed20e");
-$App.speed21e = localStorage.getItem("speed21e");
-$App.speed22e = localStorage.getItem("speed22e");
-$App.speed23e = localStorage.getItem("speed23e");
-$App.speed24e = localStorage.getItem("speed24e");
-$App.speed25e = localStorage.getItem("speed25e");
-$App.speed26e = localStorage.getItem("speed26e");
-$App.speed27e = localStorage.getItem("speed27e");
-$App.speed28e = localStorage.getItem("speed28e");
-$App.speed29e = localStorage.getItem("speed29e");
-$App.speed30e = localStorage.getItem("speed30e");
-$App.speed31e = localStorage.getItem("speed31e");
-$App.speed32e = localStorage.getItem("speed32e");
-$App.rcrimume1 = localStorage.getItem("rcrimume1");
-$App.rcrimume2 = localStorage.getItem("rcrimume2");
-$App.rcrimume3 = localStorage.getItem("rcrimume3");
-$App.Prayer = localStorage.getItem("Prayer");
-$App.Prayer1 = localStorage.getItem("Prayer1");
-$App.Prayer2 = localStorage.getItem("Prayer2");
-$App.Prayer3 = localStorage.getItem("Prayer3");
-$App.Prayer4 = localStorage.getItem("Prayer4");
-$App.Prayer1tit = localStorage.getItem("Prayer1tit");
-$App.Prayer2tit = localStorage.getItem("Prayer2tit");
-$App.Prayer3tit = localStorage.getItem("Prayer3tit");
-$App.Prayer4tit = localStorage.getItem("Prayer4tit");
-$App.worknotes10 = localStorage.getItem("worknotes10");
 $App.project1abT = localStorage.getItem("project1abT");
 $App.project1doc = localStorage.getItem("project1doc");
 $App.project1 = localStorage.getItem("project1");
@@ -1629,455 +1358,7 @@ $App.project2u = localStorage.getItem("project2u");
 $App.project2v = localStorage.getItem("project2v");
 $App.project2w = localStorage.getItem("project2w");
 $App.project2x = localStorage.getItem("project2x");
-$App.project2y = localStorage.getItem("project2y");
-$App.TPtitle017n = localStorage.getItem("TPtitle017n");
-$App.TPtitle018n = localStorage.getItem("TPtitle018n");
-$App.TPtitle019n = localStorage.getItem("TPtitle019n");
-$App.TPtitle020n = localStorage.getItem("TPtitle020n");
-$App.TPtitle021n = localStorage.getItem("TPtitle021n");
-$App.TPtitle022n = localStorage.getItem("TPtitle022n");
-$App.TPtitle023n = localStorage.getItem("TPtitle023n");
-$App.TPtitle024n = localStorage.getItem("TPtitle024n");
-$App.TPtitle025n = localStorage.getItem("TPtitle025n");
-$App.TPtitle026n = localStorage.getItem("TPtitle026n");
-$App.TPtitle027n = localStorage.getItem("TPtitle027n");
-$App.TPtitle028n = localStorage.getItem("TPtitle028n");
-$App.TPtitle029n = localStorage.getItem("TPtitle029n");
-$App.TPtitle030n = localStorage.getItem("TPtitle030n");
-$App.TPtitle031n = localStorage.getItem("TPtitle031n");
-$App.TPtitle032n = localStorage.getItem("TPtitle032n");
-$App.TPtitle033n = localStorage.getItem("TPtitle033n");
-$App.TPtitle034n = localStorage.getItem("TPtitle034n");
-$App.TPtitle035n = localStorage.getItem("TPtitle035n");
-$App.TPtitle036n = localStorage.getItem("TPtitle036n");
-$App.TPtitle037n = localStorage.getItem("TPtitle037n");
-$App.TPtitle038n = localStorage.getItem("TPtitle038n");
-$App.TPtitle039n = localStorage.getItem("TPtitle039n");
-$App.TPtitle040n = localStorage.getItem("TPtitle040n");
-$App.TPtitle041n = localStorage.getItem("TPtitle041n");
-$App.TPtitle042n = localStorage.getItem("TPtitle042n");
-$App.TPtitle043n = localStorage.getItem("TPtitle043n");
-$App.TPtitle044n = localStorage.getItem("TPtitle044n");
-$App.TPtitle045n = localStorage.getItem("TPtitle045n");
-$App.TPtitle046n = localStorage.getItem("TPtitle046n");
-$App.TPtitle047n = localStorage.getItem("TPtitle047n");
-$App.TPtitle048n = localStorage.getItem("TPtitle048n");
-$App.TPtitle017 = localStorage.getItem("TPtitle017");
-$App.TPtitle018 = localStorage.getItem("TPtitle018");
-$App.TPtitle019 = localStorage.getItem("TPtitle019");
-$App.TPtitle020 = localStorage.getItem("TPtitle020");
-$App.TPtitle021 = localStorage.getItem("TPtitle021");
-$App.TPtitle022 = localStorage.getItem("TPtitle022");
-$App.TPtitle023 = localStorage.getItem("TPtitle023");
-$App.TPtitle024 = localStorage.getItem("TPtitle024");
-$App.TPtitle025 = localStorage.getItem("TPtitle025");
-$App.TPtitle026 = localStorage.getItem("TPtitle026");
-$App.TPtitle027 = localStorage.getItem("TPtitle027");
-$App.TPtitle028 = localStorage.getItem("TPtitle028");
-$App.TPtitle029 = localStorage.getItem("TPtitle029");
-$App.TPtitle030 = localStorage.getItem("TPtitle030");
-$App.TPtitle031 = localStorage.getItem("TPtitle031");
-$App.TPtitle032 = localStorage.getItem("TPtitle032");
-$App.TPtitle033 = localStorage.getItem("TPtitle033");
-$App.TPtitle034 = localStorage.getItem("TPtitle034");
-$App.TPtitle035 = localStorage.getItem("TPtitle035");
-$App.TPtitle036 = localStorage.getItem("TPtitle036");
-$App.TPtitle037 = localStorage.getItem("TPtitle037");
-$App.TPtitle038 = localStorage.getItem("TPtitle038");
-$App.TPtitle039 = localStorage.getItem("TPtitle038");
-$App.TPtitle040 = localStorage.getItem("TPtitle040");
-$App.TPtitle041 = localStorage.getItem("TPtitle041");
-$App.TPtitle042 = localStorage.getItem("TPtitle042");
-$App.TPtitle043 = localStorage.getItem("TPtitle043");
-$App.TPtitle044 = localStorage.getItem("TPtitle044");
-$App.TPtitle045 = localStorage.getItem("TPtitle045");
-$App.TPtitle046 = localStorage.getItem("TPtitle046");
-$App.TPtitle047 = localStorage.getItem("TPtitle047");
-$App.TPtitle048 = localStorage.getItem("TPtitle048");
-$App.Stage1 = localStorage.getItem("Stage1");
-$App.Stage2 = localStorage.getItem("Stage2");
-$App.Stage3 = localStorage.getItem("Stage3");
-$App.Stage4 = localStorage.getItem("Stage4");
-$App.Stage5 = localStorage.getItem("Stage5");
-$App.Stage6 = localStorage.getItem("Stage6");
-$App.Stage7 = localStorage.getItem("Stage7");
-$App.Stage8 = localStorage.getItem("Stage8");
-$App.Lanes1 = localStorage.getItem("Lanes1");
-$App.Lanes2 = localStorage.getItem("Lanes2");
-$App.Lanes3 = localStorage.getItem("Lanes3");
-$App.Lanes4 = localStorage.getItem("Lanes4");
-$App.Lanes5 = localStorage.getItem("Lanes5");
-$App.Lanes6 = localStorage.getItem("Lanes6");
-$App.Lanes7 = localStorage.getItem("Lanes7");
-$App.Lanes8 = localStorage.getItem("Lanes8");
-$App.Lanes9 = localStorage.getItem("Lanes9");
-$App.Lanes10 = localStorage.getItem("Lanes10");
-$App.Lanes11 = localStorage.getItem("Lanes11");
-$App.Lanes12 = localStorage.getItem("Lanes12");
-$App.Lanes13 = localStorage.getItem("Lanes13");
-$App.Lanes14 = localStorage.getItem("Lanes14");
-$App.Lanes15 = localStorage.getItem("Lanes15");
-$App.Lanes16 = localStorage.getItem("Lanes16");
-$App.Reset = localStorage.getItem("Reset");
-$App.Reset1 = localStorage.getItem("Reset1");
-$App.Resetpaste = localStorage.getItem("Resetpaste");
-$App.Tinote5b = localStorage.getItem("Tinote5b");
-$App.Tinote5c = localStorage.getItem("Tinote5c");
-$App.Tinote5d = localStorage.getItem("Tinote5d");
-$App.Tinote5e = localStorage.getItem("Tinote5e");
-$App.Tinote5f = localStorage.getItem("Tinote5f");
-$App.Tinote5 = localStorage.getItem("Tinote5");
-$App.ToDo = localStorage.getItem("ToDo");
-$App.ToDon = localStorage.getItem("ToDon");
-$App.Read1 = localStorage.getItem("Read1");
-$App.Read2 = localStorage.getItem("Read2");
-$App.Prayer = localStorage.getItem("Prayer");
-$App.Next = localStorage.getItem("Next");
-$App.Me = localStorage.getItem("Me");
-$App.Reps1tit = localStorage.getItem("Reps1tit");
-$App.Reps2tit = localStorage.getItem("Reps2tit");
-$App.Reps3tit = localStorage.getItem("Reps3tit");
-$App.Reps4tit = localStorage.getItem("Reps4tit");
-$App.Reps = localStorage.getItem("Reps");
-$App.Reps1 = localStorage.getItem("Reps1");
-$App.Reps02 = localStorage.getItem("Reps02");
-$App.Reset1 = localStorage.getItem("Reset1");
-$App.Reset2 = localStorage.getItem("Reset2");
-$App.Reset3 = localStorage.getItem("Reset3");
-$App.Reset4 = localStorage.getItem("Reset4");
-$App.Reset5 = localStorage.getItem("Reset5");
-$App.Reset6 = localStorage.getItem("Reset6");
-$App.Reset7 = localStorage.getItem("Reset7");
-$App.Reset8 = localStorage.getItem("Reset8");
-$App.Reset9 = localStorage.getItem("Reset9");
-$App.Reset10 = localStorage.getItem("Reset10");
-$App.Reset11 = localStorage.getItem("Reset11");
-$App.Reset12 = localStorage.getItem("Reset12");
-$App.Reset13 = localStorage.getItem("Reset13");
-$App.Reset14 = localStorage.getItem("Reset14");
-$App.Reset15 = localStorage.getItem("Reset15");
-$App.Reset16 = localStorage.getItem("Reset16");
-$App.Reset1a = localStorage.getItem("Reset1a");
-$App.Reset2a = localStorage.getItem("Reset2a");
-$App.Reset3a = localStorage.getItem("Reset3a");
-$App.Reset4a = localStorage.getItem("Reset4a");
-$App.Reset5a = localStorage.getItem("Reset5a");
-$App.Reset6a = localStorage.getItem("Reset6a");
-$App.Reset7a = localStorage.getItem("Reset7a");
-$App.Reset8a = localStorage.getItem("Reset8a");
-$App.Reset9a = localStorage.getItem("Reset9a");
-$App.Reset10a = localStorage.getItem("Reset10a");
-$App.Reset11a = localStorage.getItem("Reset11a");
-$App.Reset12a = localStorage.getItem("Reset12a");
-$App.Reset13a = localStorage.getItem("Reset13a");
-$App.Reset14a = localStorage.getItem("Reset14a");
-$App.Reset15a = localStorage.getItem("Reset15a");
-$App.Reset16a = localStorage.getItem("Reset16a");
-$App.Homsstuffinote = localStorage.getItem("Homsstuffinote");
-$App.WorkBstuffnote = localStorage.getItem("WorkBstuffnote");
-$App.WorkCstuffnote = localStorage.getItem("WorkCstuffnote");
-$App.WorkDstuffnote = localStorage.getItem("WorkDstuffnote");
-$App.VERSIONRECORD = localStorage.getItem("VERSIONRECORD");
-$App.RecData = localStorage.getItem("RecData");
-$App.HEALTHGENERAL001 = localStorage.getItem("HEALTHGENERAL001");
-$App.Healthweight = localStorage.getItem("Healthweight");
-$App.Healthheight = localStorage.getItem("Healthheight");
-$App.Healthbsugar = localStorage.getItem("Healthbsugar");
-$App.Heathneck = localStorage.getItem("Heathneck");
-$App.Heathchest = localStorage.getItem("Heathchest");
-$App.Tinote = localStorage.getItem("Tinote");
-$App.Tititle001 = localStorage.getItem("Tititle001");
-$App.Tititle002 = localStorage.getItem("Tititle002");
-$App.Tititle003 = localStorage.getItem("Tititle003");
-$App.Tititle004 = localStorage.getItem("Tititle004");
-$App.Tititle001n = localStorage.getItem("Tititle001n");
-$App.Tititle002n = localStorage.getItem("Tititle002n");
-$App.Tititle003n = localStorage.getItem("Tititle003n");
-$App.Tititle004n = localStorage.getItem("Tititle004n");
-$App.Tititle005 = localStorage.getItem("Tititle005");
-$App.Tititle006 = localStorage.getItem("Tititle006");
-$App.Tititle007 = localStorage.getItem("Tititle007");
-$App.Tititle008 = localStorage.getItem("Tititle008");
-$App.Tititle005n = localStorage.getItem("Tititle005n");
-$App.Tititle006n = localStorage.getItem("Tititle006n");
-$App.Tititle007n = localStorage.getItem("Tititle007n");
-$App.Tititle008n = localStorage.getItem("Tititle008n");
-$App.Tititle009 = localStorage.getItem("Tititle009");
-$App.Tititle010 = localStorage.getItem("Tititle010");
-$App.Tititle011 = localStorage.getItem("Tititle011");
-$App.Tititle012 = localStorage.getItem("Tititle012");
-$App.Tititle009n = localStorage.getItem("Tititle009n");
-$App.Tititle010n = localStorage.getItem("Tititle010n");
-$App.Tititle011n = localStorage.getItem("Tititle011n");
-$App.Tititle012n = localStorage.getItem("Tititle012n");
-$App.Tititle013n = localStorage.getItem("Tititle013n");
-$App.Test14n = localStorage.getItem("Test14n");
-$App.Tititle015n = localStorage.getItem("Tititle015n");
-$App.Tititle016n = localStorage.getItem("Tititle016n");
-$App.Tititle013 = localStorage.getItem("Tititle013");
-$App.Tititle014 = localStorage.getItem("Tititle014");
-$App.Tititle015 = localStorage.getItem("Tititle015");
-$App.Tititle016 = localStorage.getItem("Tititle016");
-$App.Tititle017 = localStorage.getItem("Tititle017");
-$App.Tititle018 = localStorage.getItem("Tititle018");
-$App.Tititle019 = localStorage.getItem("Tititle019");
-$App.Tititle020 = localStorage.getItem("Tititle020");
-$App.Tititle021 = localStorage.getItem("Tititle021");
-$App.title001 = localStorage.getItem("title001");
-$App.title002 = localStorage.getItem("title002");
-$App.title003 = localStorage.getItem("title003");
-$App.title004 = localStorage.getItem("title004");
-$App.title001n = localStorage.getItem("title001n");
-$App.title002n = localStorage.getItem("title002n");
-$App.title003n = localStorage.getItem("title003n");
-$App.title004n = localStorage.getItem("title004n");
-$App.title005 = localStorage.getItem("title005");
-$App.title006 = localStorage.getItem("title006");
-$App.title007 = localStorage.getItem("title007");
-$App.title008 = localStorage.getItem("title008");
-$App.title005n = localStorage.getItem("title005n");
-$App.title006n = localStorage.getItem("title006n");
-$App.title007n = localStorage.getItem("title007n");
-$App.title008n = localStorage.getItem("title008n");
-$App.title009 = localStorage.getItem("title009");
-$App.title010 = localStorage.getItem("title010");
-$App.title011 = localStorage.getItem("title011");
-$App.title012 = localStorage.getItem("title012");
-$App.title009n = localStorage.getItem("title009n");
-$App.title010n = localStorage.getItem("title010n");
-$App.title011n = localStorage.getItem("title011n");
-$App.title012n = localStorage.getItem("title012n");
-$App.title013 = localStorage.getItem("title013");
-$App.title014 = localStorage.getItem("title014");
-$App.title015 = localStorage.getItem("title015");
-$App.title016 = localStorage.getItem("title016");
-$App.title017 = localStorage.getItem("title017");
-$App.title018 = localStorage.getItem("title018");
-$App.title019 = localStorage.getItem("title019");
-$App.title020 = localStorage.getItem("title020");
-$App.title021 = localStorage.getItem("title021");
-$App.title013n = localStorage.getItem("title013n");
-$App.title014n = localStorage.getItem("title014n");
-$App.title015n = localStorage.getItem("title015n");
-$App.title016n = localStorage.getItem("title016n");
-$App.title017n = localStorage.getItem("title017n");
-$App.title018n = localStorage.getItem("title018n");
-$App.title019n = localStorage.getItem("title019n");
-$App.title020n = localStorage.getItem("title020n");
-$App.title021n = localStorage.getItem("title021n");
-$App.TPtitle001n = localStorage.getItem("TPtitle001n");
-$App.TPtitle002n = localStorage.getItem("TPtitle002n");
-$App.TPtitle003n = localStorage.getItem("TPtitle003n");
-$App.TPtitle004n = localStorage.getItem("TPtitle004n");
-$App.TPtitle001 = localStorage.getItem("TPtitle001");
-$App.TPtitle002 = localStorage.getItem("TPtitle002");
-$App.TPtitle003 = localStorage.getItem("TPtitle003");
-$App.TPtitle004 = localStorage.getItem("TPtitle004");
-$App.TPtitle005 = localStorage.getItem("TPtitle005");
-$App.TPtitle006 = localStorage.getItem("TPtitle006");
-$App.TPtitle007 = localStorage.getItem("TPtitle007");
-$App.TPtitle008 = localStorage.getItem("TPtitle008");
-$App.TPtitle005n = localStorage.getItem("TPtitle005n");
-$App.TPtitle006n = localStorage.getItem("TPtitle006n");
-$App.TPtitle007n = localStorage.getItem("TPtitle007n");
-$App.TPtitle008n = localStorage.getItem("TPtitle008n");
-$App.TPtitle009 = localStorage.getItem("TPtitle009");
-$App.TPtitle010 = localStorage.getItem("TPtitle010");
-$App.TPtitle011 = localStorage.getItem("TPtitle011");
-$App.TPtitle012 = localStorage.getItem("TPtitle012");
-$App.TPtitle009n = localStorage.getItem("TPtitle009n");
-$App.TPtitle010n = localStorage.getItem("TPtitle010n");
-$App.TPtitle011n = localStorage.getItem("TPtitle011n");
-$App.TPtitle012n = localStorage.getItem("TPtitle012n");
-$App.TPtitle013 = localStorage.getItem("TPtitle013");
-$App.TPtitle014 = localStorage.getItem("TPtitle014");
-$App.TPtitle015 = localStorage.getItem("TPtitle015");
-$App.TPtitle016 = localStorage.getItem("TPtitle016");
-$App.TPtitle017 = localStorage.getItem("TPtitle017");
-$App.TPtitle018 = localStorage.getItem("TPtitle018");
-$App.TPtitle019 = localStorage.getItem("TPtitle019");
-$App.TPtitle020 = localStorage.getItem("TPtitle020");
-$App.TPtitle021 = localStorage.getItem("TPtitle021");
-$App.TPtitle022 = localStorage.getItem("TPtitle022");
-$App.TPtitle013n = localStorage.getItem("TPtitle013n");
-$App.TPtitle014n = localStorage.getItem("TPtitle014n");
-$App.TPtitle015n = localStorage.getItem("TPtitle015n");
-$App.TPtitle016n = localStorage.getItem("TPtitle016n");
-$App.TPtitle017n = localStorage.getItem("TPtitle017n");
-$App.TPtitle018n = localStorage.getItem("TPtitle018n");
-$App.TPtitle019n = localStorage.getItem("TPtitle019n");
-$App.TPtitle020n = localStorage.getItem("TPtitle020n");
-$App.TPtitle021n = localStorage.getItem("TPtitle021n");
-$App.TPtitle022n = localStorage.getItem("TPtitle022n");
-$App.Atitle001 = localStorage.getItem("Atitle001");
-$App.Atitle002 = localStorage.getItem("Atitle002");
-$App.Atitle003 = localStorage.getItem("Atitle003");
-$App.Atitle004 = localStorage.getItem("Atitle004");
-$App.Atitle001n = localStorage.getItem("Atitle001n");
-$App.Atitle002n = localStorage.getItem("Atitle002n");
-$App.Atitle003n = localStorage.getItem("Atitle003n");
-$App.Atitle004n = localStorage.getItem("Atitle004n");
-$App.Atitle005 = localStorage.getItem("Atitle005");
-$App.Atitle006 = localStorage.getItem("Atitle006");
-$App.Atitle007 = localStorage.getItem("Atitle007");
-$App.Atitle008 = localStorage.getItem("Atitle008");
-$App.Atitle005n = localStorage.getItem("Atitle005n");
-$App.Atitle006n = localStorage.getItem("Atitle006n");
-$App.Atitle007n = localStorage.getItem("Atitle007n");
-$App.Atitle008n = localStorage.getItem("Atitle008n");
-$App.Atitle009 = localStorage.getItem("Atitle009");
-$App.Atitle010 = localStorage.getItem("Atitle010");
-$App.Atitle011 = localStorage.getItem("Atitle011");
-$App.Atitle012 = localStorage.getItem("Atitle012");
-$App.Atitle009n = localStorage.getItem("Atitle009n");
-$App.Atitle010n = localStorage.getItem("Atitle010n");
-$App.Atitle011n = localStorage.getItem("Atitle011n");
-$App.Atitle012n = localStorage.getItem("Atitle012n");
-$App.Atitle013 = localStorage.getItem("Atitle013");
-$App.Atitle014 = localStorage.getItem("Atitle014");
-$App.Atitle015 = localStorage.getItem("Atitle015");
-$App.Atitle016 = localStorage.getItem("Atitle016");
-$App.Atitle017 = localStorage.getItem("Atitle017");
-$App.Atitle018 = localStorage.getItem("Atitle018");
-$App.Atitle019 = localStorage.getItem("Atitle019");
-$App.Atitle020 = localStorage.getItem("Atitle020");
-$App.Atitle021 = localStorage.getItem("Atitle021");
-$App.Atitle022 = localStorage.getItem("Atitle022");
-$App.Atitle013n = localStorage.getItem("Atitle013n");
-$App.Atitle014n = localStorage.getItem("Atitle014n");
-$App.Atitle015n = localStorage.getItem("Atitle015n");
-$App.Atitle016n = localStorage.getItem("Atitle016n");
-$App.Atitle017n = localStorage.getItem("Atitle017n");
-$App.Atitle018n = localStorage.getItem("Atitle018n");
-$App.Atitle019n = localStorage.getItem("Atitle019n");
-$App.Atitle020n = localStorage.getItem("Atitle020n");
-$App.Atitle021n = localStorage.getItem("Atitle021n");
-$App.Atitle022n = localStorage.getItem("Atitle022n");
-$App.Btitle001 = localStorage.getItem("Btitle001");
-$App.Btitle002 = localStorage.getItem("Btitle002");
-$App.Btitle003 = localStorage.getItem("Btitle003");
-$App.Btitle004 = localStorage.getItem("Btitle004");
-$App.Btitle001n = localStorage.getItem("Btitle001n");
-$App.Btitle002n = localStorage.getItem("Btitle002n");
-$App.Btitle003n = localStorage.getItem("Btitle003n");
-$App.Btitle004n = localStorage.getItem("Btitle004n");
-$App.Btitle005 = localStorage.getItem("Btitle005");
-$App.Btitle006 = localStorage.getItem("Btitle006");
-$App.Btitle007 = localStorage.getItem("Btitle007");
-$App.Btitle008 = localStorage.getItem("Btitle008");
-$App.Btitle005n = localStorage.getItem("Btitle005n");
-$App.Btitle006n = localStorage.getItem("Btitle006n");
-$App.Btitle007n = localStorage.getItem("Btitle007n");
-$App.Btitle008n = localStorage.getItem("Btitle008n");
-$App.Btitle009 = localStorage.getItem("Btitle009");
-$App.Btitle010 = localStorage.getItem("Btitle010");
-$App.Btitle011 = localStorage.getItem("Btitle011");
-$App.Btitle012 = localStorage.getItem("Btitle012");
-$App.Btitle009n = localStorage.getItem("Btitle009n");
-$App.Btitle010n = localStorage.getItem("Btitle010n");
-$App.Btitle011n = localStorage.getItem("Btitle011n");
-$App.Btitle012n = localStorage.getItem("Btitle012n");
-$App.Btitle005 = localStorage.getItem("Btitle013");
-$App.Btitle006 = localStorage.getItem("Btitle014");
-$App.Btitle007 = localStorage.getItem("Btitle015");
-$App.Btitle008 = localStorage.getItem("Btitle016");
-$App.Btitle013n = localStorage.getItem("Btitle013n");
-$App.Btitle014n = localStorage.getItem("Btitle014n");
-$App.Btitle015n = localStorage.getItem("Btitle015n");
-$App.Btitle016n = localStorage.getItem("Btitle016n");
-$App.Ctitle001 = localStorage.getItem("Ctitle001");
-$App.Ctitle002 = localStorage.getItem("Ctitle002");
-$App.Ctitle003 = localStorage.getItem("Ctitle003");
-$App.Ctitle004 = localStorage.getItem("Ctitle004");
-$App.Ctitle001n = localStorage.getItem("Ctitle001n");
-$App.Ctitle002n = localStorage.getItem("Ctitle002n");
-$App.Ctitle003n = localStorage.getItem("Ctitle003n");
-$App.Ctitle004n = localStorage.getItem("Ctitle004n");
-$App.Ctitle005 = localStorage.getItem("Ctitle005");
-$App.Ctitle006 = localStorage.getItem("Ctitle006");
-$App.Ctitle007 = localStorage.getItem("Ctitle007");
-$App.Ctitle008 = localStorage.getItem("Ctitle008");
-$App.Ctitle005n = localStorage.getItem("Ctitle005n");
-$App.Ctitle006n = localStorage.getItem("Ctitle006n");
-$App.Ctitle007n = localStorage.getItem("Ctitle007n");
-$App.Ctitle008n = localStorage.getItem("Ctitle008n");
-$App.Ctitle009 = localStorage.getItem("Ctitle009");
-$App.Ctitle010 = localStorage.getItem("Ctitle010");
-$App.Ctitle011 = localStorage.getItem("Ctitle011");
-$App.Ctitle012 = localStorage.getItem("Ctitle012");
-$App.Ctitle009n = localStorage.getItem("Ctitle009n");
-$App.Ctitle010n = localStorage.getItem("Ctitle010n");
-$App.Ctitle011n = localStorage.getItem("Ctitle011n");
-$App.Ctitle012n = localStorage.getItem("Ctitle012n");
-$App.Ctitle013 = localStorage.getItem("Ctitle013");
-$App.Ctitle014 = localStorage.getItem("Ctitle014");
-$App.Ctitle015 = localStorage.getItem("Ctitle015");
-$App.Ctitle016 = localStorage.getItem("Ctitle016");
-$App.Ctitle017 = localStorage.getItem("Ctitle017");
-$App.Ctitle018 = localStorage.getItem("Ctitle018");
-$App.Ctitle019 = localStorage.getItem("Ctitle019");
-$App.Ctitle020 = localStorage.getItem("Ctitle020");
-$App.Ctitle021 = localStorage.getItem("Ctitle021");
-$App.Ctitle022 = localStorage.getItem("Ctitle022");
-$App.Ctitle013n = localStorage.getItem("Ctitle013n");
-$App.Ctitle014n = localStorage.getItem("Ctitle014n");
-$App.Ctitle015n = localStorage.getItem("Ctitle015n");
-$App.Ctitle016n = localStorage.getItem("Ctitle016n");
-$App.Ctitle017n = localStorage.getItem("Ctitle017n");
-$App.Ctitle018n = localStorage.getItem("Ctitle018n");
-$App.Ctitle019n = localStorage.getItem("Ctitle019n");
-$App.Ctitle020n = localStorage.getItem("Ctitle020n");
-$App.Ctitle021n = localStorage.getItem("Ctitle021n");
-$App.Ctitle022n = localStorage.getItem("Ctitle022n");
-$App.Dtitle001 = localStorage.getItem("Dtitle001");
-$App.Dtitle002 = localStorage.getItem("Dtitle002");
-$App.Dtitle003 = localStorage.getItem("Dtitle003");
-$App.Dtitle004 = localStorage.getItem("Dtitle004");
-$App.Dtitle001n = localStorage.getItem("Dtitle001n");
-$App.Dtitle002n = localStorage.getItem("Dtitle002n");
-$App.Dtitle003n = localStorage.getItem("Dtitle003n");
-$App.Dtitle004n = localStorage.getItem("Dtitle004n");
-$App.Dtitle005 = localStorage.getItem("Dtitle005");
-$App.Dtitle006 = localStorage.getItem("Dtitle006");
-$App.Dtitle007 = localStorage.getItem("Dtitle007");
-$App.Dtitle008 = localStorage.getItem("Dtitle008");
-$App.Dtitle005n = localStorage.getItem("Dtitle005n");
-$App.Dtitle006n = localStorage.getItem("Dtitle006n");
-$App.Dtitle007n = localStorage.getItem("Dtitle007n");
-$App.Dtitle008n = localStorage.getItem("Dtitle008n");
-$App.Dtitle009 = localStorage.getItem("Dtitle009");
-$App.Dtitle010 = localStorage.getItem("Dtitle010");
-$App.Dtitle011 = localStorage.getItem("Dtitle011");
-$App.Dtitle012 = localStorage.getItem("Dtitle012");
-$App.Dtitle009n = localStorage.getItem("Dtitle009n");
-$App.Dtitle010n = localStorage.getItem("Dtitle010n");
-$App.Dtitle011n = localStorage.getItem("Dtitle011n");
-$App.Dtitle012n = localStorage.getItem("Dtitle012n");
-$App.Dtitle013 = localStorage.getItem("Dtitle013");
-$App.Dtitle014 = localStorage.getItem("Dtitle014");
-$App.Dtitle015 = localStorage.getItem("Dtitle015");
-$App.Dtitle016 = localStorage.getItem("Dtitle016");
-$App.Dtitle017 = localStorage.getItem("Dtitle017");
-$App.Dtitle018 = localStorage.getItem("Dtitle018");
-$App.Dtitle019 = localStorage.getItem("Dtitle019");
-$App.Dtitle020 = localStorage.getItem("Dtitle020");
-$App.Dtitle021 = localStorage.getItem("Dtitle021");
-$App.Dtitle022 = localStorage.getItem("Dtitle022");
-$App.Dtitle013n = localStorage.getItem("Dtitle013n");
-$App.Dtitle014n = localStorage.getItem("Dtitle014n");
-$App.Dtitle015n = localStorage.getItem("Dtitle015n");
-$App.Dtitle016n = localStorage.getItem("Dtitle016n");
-$App.Dtitle017n = localStorage.getItem("Dtitle017n");
-$App.Dtitle018n = localStorage.getItem("Dtitle018n");
-$App.Dtitle019n = localStorage.getItem("Dtitle019n");
-$App.Dtitle020n = localStorage.getItem("Dtitle020n");
-$App.Dtitle021n = localStorage.getItem("Dtitle021n");
-$App.Dtitle022n = localStorage.getItem("Dtitle022n");
-$App.main001n = localStorage.getItem("main001n");
-$App.main002n = localStorage.getItem("main002n");
-$App.main003n = localStorage.getItem("main003n");
-$App.main004n = localStorage.getItem("main004n");
-$App.Linkslocal = localStorage.getItem("Linkslocal");};
+$App.project2y = localStorage.getItem("project2y");};
 $scope.HomeTiles_pageenter = function() {$App.VERSION = "v3.6";
 $App.rversion = "V6.7";};
 $scope.TNeoAppPage11_pageenter = function() {$('#'+"TextInputDate1").mask("0000-00-00");
@@ -2651,44 +1932,83 @@ function debounce(func,wait,immediate){var timeout;return function(){var context
 NeoApp.controller("Temphome_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 1;
 $App.NAB.PageID = "Temphome";
-$scope.Headline10026_click = function() {neoTalkSpeak($App.speed26a, "", $App.Read1, $App.Read2);};
-$scope.Headline10027_click = function() {neoTalkSpeak($App.speed27a, "", $App.Read1, $App.Read2);};
-$scope.Headline10028_click = function() {neoTalkSpeak($App.speed28a, "", $App.Read1, $App.Read2);};
-$scope.Headline10025_click = function() {neoTalkSpeak($App.speed25a, "", $App.Read1, $App.Read2);};
-$scope.Headline10030_click = function() {neoTalkSpeak($App.speed30a, "", $App.Read1, $App.Read2);};
-$scope.Headline10031_click = function() {neoTalkSpeak($App.speed31a, "", $App.Read1, $App.Read2);};
-$scope.Headline10032_click = function() {neoTalkSpeak($App.speed32a, "", $App.Read1, $App.Read2);};
-$scope.Headline10029_click = function() {neoTalkSpeak($App.speed29a, "", $App.Read1, $App.Read2);};
-$scope.Headline10009_click = function() {neoTalkSpeak($App.speed09a, "", $App.Read1, $App.Read2);};
-$scope.Headline10011_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
-$scope.Headline10012_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
-$scope.Headline10006_click = function() {neoTalkSpeak($App.speed06a, "", $App.Read1, $App.Read2);};
-$scope.Headline10007_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
-$scope.Headline10008_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
-$scope.Headline10005_click = function() {neoTalkSpeak($App.speed05a, "", $App.Read1, $App.Read2);};
-$scope.Headline10002_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
-$scope.Headline10003_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
-$scope.Headline10004_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
-$scope.Headline10001_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
-$scope.Headline10014_click = function() {neoTalkSpeak($App.speed14a, "", $App.Read1, $App.Read2);};
-$scope.Headline10015_click = function() {neoTalkSpeak($App.speed15a, "", $App.Read1, $App.Read2);};
-$scope.Headline10016_click = function() {neoTalkSpeak($App.speed16a, "", $App.Read1, $App.Read2);};
-$scope.Headline10013_click = function() {neoTalkSpeak($App.speed13a, "", $App.Read1, $App.Read2);};
-$scope.Headline10019_click = function() {neoTalkSpeak($App.speed19a, "", $App.Read1, $App.Read2);};
-$scope.Headline10020_click = function() {neoTalkSpeak($App.speed20a, "", $App.Read1, $App.Read2);};
-$scope.Headline10017_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
-$scope.Headline10021_click = function() {neoTalkSpeak($App.speed21a, "", $App.Read1, $App.Read2);};
-$scope.Headline10010_click = function() {neoTalkSpeak($App.speed10a, "", $App.Read1, $App.Read2);};
-$scope.Headline10018_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
-$scope.Headline10022_click = function() {neoTalkSpeak($App.speed22a, "", $App.Read1, $App.Read2);};
-$scope.Headline10023_click = function() {neoTalkSpeak($App.speed23a, "", $App.Read1, $App.Read2);};
-$scope.Headline10024_click = function() {neoTalkSpeak($App.speed24a, "", $App.Read1, $App.Read2);};
+$scope.Headline10026_click = function() {neoTalkSpeak($App.speed26a, "", $App.read1, $App.read2);};
+$scope.Headline10027_click = function() {neoTalkSpeak($App.speed27a, "", $App.read1, $App.read2);};
+$scope.Headline10028_click = function() {neoTalkSpeak($App.speed28a, "", $App.read1, $App.read2);};
+$scope.Headline10025_click = function() {neoTalkSpeak($App.speed25a, "", $App.read1, $App.read2);};
+$scope.Headline10030_click = function() {neoTalkSpeak($App.speed30a, "", $App.read1, $App.read2);};
+$scope.Headline10031_click = function() {neoTalkSpeak($App.speed31a, "", $App.read1, $App.read2);};
+$scope.Headline10032_click = function() {neoTalkSpeak($App.speed32a, "", $App.read1, $App.read2);};
+$scope.Headline10029_click = function() {neoTalkSpeak($App.speed29a, "", $App.read1, $App.read2);};
+$scope.Headline10009_click = function() {neoTalkSpeak($App.speed09a, "", $App.read1, $App.read2);};
+$scope.Headline10011_click = function() {neoTalkSpeak($App.speed07a, "", $App.read1, $App.read2);};
+$scope.Headline10012_click = function() {neoTalkSpeak($App.speed08a, "", $App.read1, $App.read2);};
+$scope.Headline10006_click = function() {neoTalkSpeak($App.speed06a, "", $App.read1, $App.read2);};
+$scope.Headline10007_click = function() {neoTalkSpeak($App.speed07a, "", $App.read1, $App.read2);};
+$scope.Headline10008_click = function() {neoTalkSpeak($App.speed08a, "", $App.read1, $App.read2);};
+$scope.Headline10005_click = function() {neoTalkSpeak($App.speed05a, "", $App.read1, $App.read2);};
+$scope.Headline10002_click = function() {neoTalkSpeak($App.speed02a, "", $App.read1, $App.read2);};
+$scope.Headline10003_click = function() {neoTalkSpeak($App.speed03a, "", $App.read1, $App.read2);};
+$scope.Headline10004_click = function() {neoTalkSpeak($App.speed04a, "", $App.read1, $App.read2);};
+$scope.Headline10001_click = function() {neoTalkSpeak($App.speed01a, "", $App.read1, $App.read2);};
+$scope.Headline10014_click = function() {neoTalkSpeak($App.speed14a, "", $App.read1, $App.read2);};
+$scope.Headline10015_click = function() {neoTalkSpeak($App.speed15a, "", $App.read1, $App.read2);};
+$scope.Headline10016_click = function() {neoTalkSpeak($App.speed16a, "", $App.read1, $App.read2);};
+$scope.Headline10013_click = function() {neoTalkSpeak($App.speed13a, "", $App.read1, $App.read2);};
+$scope.Headline10019_click = function() {neoTalkSpeak($App.speed19a, "", $App.read1, $App.read2);};
+$scope.Headline10020_click = function() {neoTalkSpeak($App.speed20a, "", $App.read1, $App.read2);};
+$scope.Headline10017_click = function() {neoTalkSpeak($App.speed17a, "", $App.read1, $App.read2);};
+$scope.Headline10021_click = function() {neoTalkSpeak($App.speed21a, "", $App.read1, $App.read2);};
+$scope.Headline10010_click = function() {neoTalkSpeak($App.speed10a, "", $App.read1, $App.read2);};
+$scope.Headline10018_click = function() {neoTalkSpeak($App.speed17a, "", $App.read1, $App.read2);};
+$scope.Headline10022_click = function() {neoTalkSpeak($App.speed22a, "", $App.read1, $App.read2);};
+$scope.Headline10023_click = function() {neoTalkSpeak($App.speed23a, "", $App.read1, $App.read2);};
+$scope.Headline10024_click = function() {neoTalkSpeak($App.speed24a, "", $App.read1, $App.read2);};
 $scope.Headline29_click = function() {$scope.GotoPage( "VERSION" );};
-$scope.PushButton22_click = function() {window.document.location.reload();};
+$scope.PushButton22_click = function() {window.document.location.reload();
+$scope.GotoPage( "Speed01" );
+$scope.GotoPage( "Temphome" );};
 $scope.PushButton203_click = function() {$scope.GotoPage( "CopyAll" );};
-$scope.PushButton544_click = function() {$scope.GotoPage( "Records-2026" );};
-$scope.TextInput374_change = function() {localStorage.setItem("Read1",$App.Read1);};
-$scope.TextInput375_change = function() {localStorage.setItem("Read2",$App.Read2);};
+$scope.PushButton544_click = function() {$App.zt126 = localStorage.getItem("zt126");
+$App.zt226 = localStorage.getItem("zt226");
+$App.zt326 = localStorage.getItem("zt326");
+$App.may260 = localStorage.getItem("may260");
+$App.may261 = localStorage.getItem("may261");
+$App.may262 = localStorage.getItem("may262");
+$App.may263 = localStorage.getItem("may263");
+$App.june260 = localStorage.getItem("june260");
+$App.june261 = localStorage.getItem("june261");
+$App.june262 = localStorage.getItem("june262");
+$App.june263 = localStorage.getItem("june263");
+$App.july260 = localStorage.getItem("july260");
+$App.july261 = localStorage.getItem("july261");
+$App.july262 = localStorage.getItem("july262");
+$App.july263 = localStorage.getItem("july263");
+$App.aug260 = localStorage.getItem("aug260");
+$App.aug261 = localStorage.getItem("aug261");
+$App.aug262 = localStorage.getItem("aug262");
+$App.aug263 = localStorage.getItem("aug263");
+$App.sep260 = localStorage.getItem("sep260");
+$App.sep261 = localStorage.getItem("sep261");
+$App.sep262 = localStorage.getItem("sep262");
+$App.sep263 = localStorage.getItem("sep263");
+$App.oct260 = localStorage.getItem("oct260");
+$App.oct261 = localStorage.getItem("oct261");
+$App.oct262 = localStorage.getItem("oct262");
+$App.oct263 = localStorage.getItem("oct263");
+$App.nov260 = localStorage.getItem("nov260");
+$App.nov261 = localStorage.getItem("nov261");
+$App.nov262 = localStorage.getItem("nov262");
+$App.nov263 = localStorage.getItem("nov263");
+$App.dec260 = localStorage.getItem("dec260");
+$App.dec261 = localStorage.getItem("dec261");
+$App.dec262 = localStorage.getItem("dec262");
+$App.dec263 = localStorage.getItem("dec263");
+$App.monthnotes = localStorage.getItem("monthnotes");
+$App.monthnotes2 = localStorage.getItem("monthnotes2");
+$scope.GotoPage( "Records-2026" );};
+$scope.TextInput374_change = function() {localStorage.setItem("Read1",$App.read1);};
+$scope.TextInput375_change = function() {localStorage.setItem("Read2",$App.read2);};
 $scope.PushButton363_click = function() {$scope.GotoPage( "Homestuff" );};
 $scope.PushButton367_click = function() {$scope.GotoPage( "Workstuff-A" );};
 $scope.PushButton371_click = function() {$scope.GotoPage( "HowToV3" );};
@@ -2698,13 +2018,13 @@ $scope.PushButton387_click = function() {$scope.GotoPage( "Project1" );};
 $scope.PushButton395_click = function() {$scope.GotoPage( "Project2" );};
 $scope.PushButton400_click = function() {$scope.GotoPage( "Tentinastorm" );};
 $scope.PushButton98_click = function() {$scope.GotoPage( "Next" );};
-$scope.PushButton391_click = function() {neoTalkSpeak($App.Tinote, "", $App.Read1, $App.Read2);};
-$scope.PushButton536_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $App.Read1, $App.Read2);};
-$scope.PushButton541_click = function() {neoTalkSpeak($App.HEALTHGENERAL001, "", $App.Read1, $App.Read2);};
-$scope.PushButton542_click = function() {neoTalkSpeak($App.Next, "", $App.Read1, $App.Read2);};
-$scope.PushButton548_click = function() {neoTalkSpeak($App.Me, "", $App.Read1, $App.Read2);};
+$scope.PushButton391_click = function() {neoTalkSpeak($App.Tinote, "", $App.read1, $App.read2);};
+$scope.PushButton536_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $App.read1, $App.read2);};
+$scope.PushButton541_click = function() {neoTalkSpeak($App.HEALTHGENERAL001, "", $App.read1, $App.read2);};
+$scope.PushButton542_click = function() {neoTalkSpeak($App.Next, "", $App.read1, $App.read2);};
+$scope.PushButton548_click = function() {neoTalkSpeak($App.Me, "", $App.read1, $App.read2);};
 $scope.PushButton549_click = function() {$scope.GotoPage( "Me" );};
-$scope.PushButton551_click = function() {neoTalkSpeak($App.Tinote5, "", $App.Read1, $App.Read2);};
+$scope.PushButton551_click = function() {neoTalkSpeak($App.Tinote5, "", $App.read1, $App.read2);};
 $scope.PushButton552_click = function() {$scope.GotoPage( "fiveyearplan" );};
 $scope.PushButton553_click = function() {$scope.GotoPage( "TILES" );};
 $scope.PushButton554_click = function() {$scope.GotoPage( "Health" );};
@@ -2716,7 +2036,6 @@ $scope.PushButton347_click = function() {$scope.GotoPage( "Journal" );};
 $scope.SVGicon1_click = function() {neoTalkPauseSpeech();};
 $scope.SVGicon2_click = function() {neoTalkResumeSpeech();};
 $scope.SVGicon3_click = function() {neoTalkCancelSpeech();};
-$scope.PushButton80_click = function() {$scope.GotoPage( "Speed01" );};
 $scope.PushButton102_click = function() {$scope.GotoPage( "Speed02" );};
 $scope.PushButton129_click = function() {$scope.GotoPage( "Speed03" );};
 $scope.PushButton133_click = function() {$scope.GotoPage( "Speed04" );};
@@ -2728,16 +2047,16 @@ $scope.PushButton26_click = function() {$scope.GotoPage( "Speed09" );};
 $scope.PushButton99_click = function() {$scope.GotoPage( "Speed10" );};
 $scope.PushButton131_click = function() {$scope.GotoPage( "Speed11" );};
 $scope.PushButton132_click = function() {$scope.GotoPage( "Speed12" );};
-$scope.PushButton173_click = function() {neoTalkSpeak($App.Prayer, "", $App.Read1, $App.Read2);};
-$scope.PushButton174_click = function() {neoTalkSpeak($App.Reps, "", $App.Read1, $App.Read2);};
+$scope.PushButton173_click = function() {neoTalkSpeak($App.Prayer, "", $App.read1, $App.read2);};
+$scope.PushButton174_click = function() {neoTalkSpeak($App.Reps, "", $App.read1, $App.read2);};
 $scope.PushButton180_click = function() {$scope.GotoPage( "Prayer" );};
 $scope.PushButton306_click = function() {$scope.GotoPage( "DailyReps" );};
-$scope.PushButton401_click = function() {neoTalkSpeak($App.Reps02, "", $App.Read1, $App.Read2);};
-$scope.PushButton402_click = function() {neoTalkSpeak($App.Prayer2, "", $App.Read1, $App.Read2);};
-$scope.PushButton406_click = function() {neoTalkSpeak($App.Prayer3, "", $App.Read1, $App.Read2);};
-$scope.PushButton410_click = function() {neoTalkSpeak($App.Prayer4, "", $App.Read1, $App.Read2);};
-$scope.PushButton414_click = function() {neoTalkSpeak($App.Reps03, "", $App.Read1, $App.Read2);};
-$scope.PushButton418_click = function() {neoTalkSpeak($App.Reps04, "", $App.Read1, $App.Read2);};
+$scope.PushButton401_click = function() {neoTalkSpeak($App.Reps02, "", $App.read1, $App.read2);};
+$scope.PushButton402_click = function() {neoTalkSpeak($App.Prayer2, "", $App.read1, $App.read2);};
+$scope.PushButton406_click = function() {neoTalkSpeak($App.Prayer3, "", $App.read1, $App.read2);};
+$scope.PushButton410_click = function() {neoTalkSpeak($App.Prayer4, "", $App.read1, $App.read2);};
+$scope.PushButton414_click = function() {neoTalkSpeak($App.Reps03, "", $App.read1, $App.read2);};
+$scope.PushButton418_click = function() {neoTalkSpeak($App.Reps04, "", $App.read1, $App.read2);};
 $scope.PushButton458_click = function() {$scope.GotoPage( "Speed13" );};
 $scope.PushButton462_click = function() {$scope.GotoPage( "Speed14" );};
 $scope.PushButton466_click = function() {$scope.GotoPage( "Speed15" );};
@@ -2760,6 +2079,7 @@ $scope.PushButton641_click = function() {$scope.GotoPage( "Speed31" );};
 $scope.PushButton642_click = function() {$scope.GotoPage( "Speed32" );};
 $scope.Headline342_click = function() {$scope.GotoPage( "VERSION" );};
 $scope.PushButton906_click = function() {$scope.GotoPage( "Indexwrite" );};
+$scope.PushButton66_click = function() {$scope.GotoPage( "Speed01" );};
 });
 NeoApp.controller("Indexwrite_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 2;
@@ -3738,15 +3058,15 @@ NeoApp.controller("Speed01_Ctrl", function($scope,$rootScope,$route,$timeout,$fi
 $App.NAB.PageNumber = 5;
 $App.NAB.PageID = "Speed01";
 $scope.PushButton34_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton72_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
+$scope.PushButton72_click = function() {neoTalkSpeak($App.speed01a, "", $App.read1, $App.read2);};
 $scope.TextArea223_change = function() {localStorage.setItem("speed01b",$App.speed01b);};
-$scope.PushButton769_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
+$scope.PushButton769_click = function() {neoTalkSpeak($App.speed01a, "", $App.read1, $App.read2);};
 $scope.TextArea390_change = function() {localStorage.setItem("speed01a",$App.speed01a);};
-$scope.PushButton770_click = function() {neoTalkSpeak($App.speed01c, "", $App.Read1, $App.Read2);};
+$scope.PushButton770_click = function() {neoTalkSpeak($App.speed01c, "", $App.read1, $App.read2);};
 $scope.TextArea391_change = function() {localStorage.setItem("speed01c",$App.speed01c);};
-$scope.PushButton771_click = function() {neoTalkSpeak($App.speed01d, "", $App.Read1, $App.Read2);};
+$scope.PushButton771_click = function() {neoTalkSpeak($App.speed01d, "", $App.read1, $App.read2);};
 $scope.TextArea392_change = function() {localStorage.setItem("speed01d",$App.speed01d);};
-$scope.PushButton772_click = function() {neoTalkSpeak($App.speed01e, "", $App.Read1, $App.Read2);};
+$scope.PushButton772_click = function() {neoTalkSpeak($App.speed01e, "", $App.read1, $App.read2);};
 $scope.TextArea393_change = function() {localStorage.setItem("speed01e",$App.speed01e);};
 $scope.PushButton811_click = function() {$scope.SetObjectStyle("Headline10001","color","red");
 $scope.SetObjectStyle("Ellipse101","fill","red");
@@ -3769,16 +3089,16 @@ $App.NAB.PageNumber = 6;
 $App.NAB.PageID = "Speed03";
 $scope.PushButton189_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea226_change = function() {localStorage.setItem("speed03a",$App.speed03a);};
-$scope.PushButton192_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
+$scope.PushButton192_click = function() {neoTalkSpeak($App.speed03a, "", $App.read1, $App.read2);};
 $scope.TextInput155_change = function() {localStorage.setItem("speed03",$App.speed03);};
-$scope.PushButton760_click = function() {neoTalkSpeak($App.speed03c, "", $App.Read1, $App.Read2);};
+$scope.PushButton760_click = function() {neoTalkSpeak($App.speed03c, "", $App.read1, $App.read2);};
 $scope.TextArea382_change = function() {localStorage.setItem("speed03c",$App.speed03c);};
-$scope.PushButton761_click = function() {neoTalkSpeak($App.speed03d, "", $App.Read1, $App.Read2);};
+$scope.PushButton761_click = function() {neoTalkSpeak($App.speed03d, "", $App.read1, $App.read2);};
 $scope.TextArea383_change = function() {localStorage.setItem("speed03d",$App.speed03d);};
-$scope.PushButton762_click = function() {neoTalkSpeak($App.speed03e, "", $App.Read1, $App.Read2);};
+$scope.PushButton762_click = function() {neoTalkSpeak($App.speed03e, "", $App.read1, $App.read2);};
 $scope.TextArea384_change = function() {localStorage.setItem("speed03e",$App.speed03e);};
 $scope.TextArea385_change = function() {localStorage.setItem("speed03b",$App.speed03b);};
-$scope.PushButton763_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
+$scope.PushButton763_click = function() {neoTalkSpeak($App.speed03a, "", $App.read1, $App.read2);};
 $scope.PushButton805_click = function() {$scope.SetObjectStyle("Headline10001","color","red");
 $scope.SetObjectStyle("Ellipse103","fill","red");
 localStorage.setItem("aa3","r");};
@@ -3794,15 +3114,15 @@ $App.NAB.PageNumber = 7;
 $App.NAB.PageID = "Speed04";
 $scope.PushButton194_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea228_change = function() {localStorage.setItem("speed04a",$App.speed04a);};
-$scope.PushButton195_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
+$scope.PushButton195_click = function() {neoTalkSpeak($App.speed04a, "", $App.read1, $App.read2);};
 $scope.TextInput159_change = function() {localStorage.setItem("speed04",$App.speed04);};
-$scope.PushButton756_click = function() {neoTalkSpeak($App.speed04b, "", $App.Read1, $App.Read2);};
+$scope.PushButton756_click = function() {neoTalkSpeak($App.speed04b, "", $App.read1, $App.read2);};
 $scope.TextArea378_change = function() {localStorage.setItem("speed04b",$App.speed04b);};
-$scope.PushButton757_click = function() {neoTalkSpeak($App.speed04c, "", $App.Read1, $App.Read2);};
+$scope.PushButton757_click = function() {neoTalkSpeak($App.speed04c, "", $App.read1, $App.read2);};
 $scope.TextArea379_change = function() {localStorage.setItem("speed04c",$App.speed04c);};
-$scope.PushButton758_click = function() {neoTalkSpeak($App.speed04d, "", $App.Read1, $App.Read2);};
+$scope.PushButton758_click = function() {neoTalkSpeak($App.speed04d, "", $App.read1, $App.read2);};
 $scope.TextArea380_change = function() {localStorage.setItem("speed04d",$App.speed04d);};
-$scope.PushButton759_click = function() {neoTalkSpeak($App.speed04e, "", $App.Read1, $App.Read2);};
+$scope.PushButton759_click = function() {neoTalkSpeak($App.speed04e, "", $App.read1, $App.read2);};
 $scope.TextArea381_change = function() {localStorage.setItem("speed04e",$App.speed04e);};
 $scope.PushButton802_click = function() {$scope.SetObjectStyle("Headline10002","color","red");
 $scope.SetObjectStyle("Ellipse104","fill","red");
@@ -3818,15 +3138,15 @@ NeoApp.controller("Speed02_Ctrl", function($scope,$rootScope,$route,$timeout,$fi
 $App.NAB.PageNumber = 8;
 $App.NAB.PageID = "Speed02";
 $scope.PushButton590_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton591_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
+$scope.PushButton591_click = function() {neoTalkSpeak($App.speed02a, "", $App.read1, $App.read2);};
 $scope.TextArea312_change = function() {localStorage.setItem("speed02b",$App.speed02b);};
-$scope.PushButton592_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
+$scope.PushButton592_click = function() {neoTalkSpeak($App.speed02a, "", $App.read1, $App.read2);};
 $scope.TextArea313_change = function() {localStorage.setItem("speed02a",$App.speed02a);};
-$scope.PushButton593_click = function() {neoTalkSpeak($App.speed02c, "", $App.Read1, $App.Read2);};
+$scope.PushButton593_click = function() {neoTalkSpeak($App.speed02c, "", $App.read1, $App.read2);};
 $scope.TextArea314_change = function() {localStorage.setItem("speed02c",$App.speed02c);};
-$scope.PushButton594_click = function() {neoTalkSpeak($App.speed02d, "", $App.Read1, $App.Read2);};
+$scope.PushButton594_click = function() {neoTalkSpeak($App.speed02d, "", $App.read1, $App.read2);};
 $scope.TextArea315_change = function() {localStorage.setItem("speed02d",$App.speed02d);};
-$scope.PushButton595_click = function() {neoTalkSpeak($App.speed01e, "", $App.Read1, $App.Read2);};
+$scope.PushButton595_click = function() {neoTalkSpeak($App.speed01e, "", $App.read1, $App.read2);};
 $scope.TextArea316_change = function() {localStorage.setItem("speed01e",$App.speed01e);};
 $scope.PushButton596_click = function() {$scope.SetObjectStyle("Headline10002","color","red");
 $scope.SetObjectStyle("Ellipse102","fill","red");
@@ -3849,16 +3169,16 @@ $App.NAB.PageNumber = 9;
 $App.NAB.PageID = "Speed05";
 $scope.PushButton204_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea222_change = function() {localStorage.setItem("speed05a",$App.speed05a);};
-$scope.PushButton205_click = function() {neoTalkSpeak($App.speed05b, "", $App.Read1, $App.Read2);};
+$scope.PushButton205_click = function() {neoTalkSpeak($App.speed05b, "", $App.read1, $App.read2);};
 $scope.TextInput161_change = function() {localStorage.setItem("speed05",$App.speed05);};
 $scope.TextArea242_change = function() {localStorage.setItem("speed05b",$App.speed05b);};
-$scope.PushButton335_click = function() {neoTalkSpeak($App.speed05c, "", $App.Read1, $App.Read2);};
+$scope.PushButton335_click = function() {neoTalkSpeak($App.speed05c, "", $App.read1, $App.read2);};
 $scope.TextArea243_change = function() {localStorage.setItem("speed05c",$App.speed05c);};
-$scope.PushButton339_click = function() {neoTalkSpeak($App.speed05d, "", $App.Read1, $App.Read2);};
+$scope.PushButton339_click = function() {neoTalkSpeak($App.speed05d, "", $App.read1, $App.read2);};
 $scope.TextArea244_change = function() {localStorage.setItem("speed05d",$App.speed05d);};
-$scope.PushButton343_click = function() {neoTalkSpeak($App.speed05e, "", $App.Read1, $App.Read2);};
+$scope.PushButton343_click = function() {neoTalkSpeak($App.speed05e, "", $App.read1, $App.read2);};
 $scope.TextArea245_change = function() {localStorage.setItem("speed05e",$App.speed05e);};
-$scope.PushButton331_click = function() {neoTalkSpeak($App.speed05b, "", $App.Read1, $App.Read2);};
+$scope.PushButton331_click = function() {neoTalkSpeak($App.speed05b, "", $App.read1, $App.read2);};
 $scope.PushButton799_click = function() {$scope.SetObjectStyle("Headline10005","color","red");
 $scope.SetObjectStyle("Ellipse105","fill","red");
 localStorage.setItem("aa5","r");};
@@ -3873,16 +3193,16 @@ NeoApp.controller("Speed06_Ctrl", function($scope,$rootScope,$route,$timeout,$fi
 $App.NAB.PageNumber = 10;
 $App.NAB.PageID = "Speed06";
 $scope.PushButton206_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton209_click = function() {neoTalkSpeak($App.speed06b, "", $App.Read1, $App.Read2);};
+$scope.PushButton209_click = function() {neoTalkSpeak($App.speed06b, "", $App.read1, $App.read2);};
 $scope.TextArea225_change = function() {localStorage.setItem("speed06b",$App.speed06b);};
-$scope.PushButton307_click = function() {neoTalkSpeak($App.speed06b, "", $App.Read1, $App.Read2);};
+$scope.PushButton307_click = function() {neoTalkSpeak($App.speed06b, "", $App.read1, $App.read2);};
 $scope.TextArea238_change = function() {localStorage.setItem("speed06a",$App.speed06a);};
 $scope.TextInput311_change = function() {localStorage.setItem("speed06",$App.speed06);};
-$scope.PushButton319_click = function() {neoTalkSpeak($App.speed06c, "", $App.Read1, $App.Read2);};
+$scope.PushButton319_click = function() {neoTalkSpeak($App.speed06c, "", $App.read1, $App.read2);};
 $scope.TextArea239_change = function() {localStorage.setItem("speed06c",$App.speed06c);};
-$scope.PushButton323_click = function() {neoTalkSpeak($App.speed06d, "", $App.Read1, $App.Read2);};
+$scope.PushButton323_click = function() {neoTalkSpeak($App.speed06d, "", $App.read1, $App.read2);};
 $scope.TextArea240_change = function() {localStorage.setItem("speed06d",$App.speed06d);};
-$scope.PushButton327_click = function() {neoTalkSpeak($App.speed06e, "", $App.Read1, $App.Read2);};
+$scope.PushButton327_click = function() {neoTalkSpeak($App.speed06e, "", $App.read1, $App.read2);};
 $scope.TextArea241_change = function() {localStorage.setItem("speed06e",$App.speed06e);};
 $scope.PushButton775_click = function() {$scope.SetObjectStyle("Headline10006","color","red");
 $scope.SetObjectStyle("Ellipse106","fill","red");
@@ -3898,16 +3218,16 @@ NeoApp.controller("Speed07_Ctrl", function($scope,$rootScope,$route,$timeout,$fi
 $App.NAB.PageNumber = 11;
 $App.NAB.PageID = "Speed07";
 $scope.PushButton211_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton214_click = function() {neoTalkSpeak($App.speed07b, "", $App.Read1, $App.Read2);};
+$scope.PushButton214_click = function() {neoTalkSpeak($App.speed07b, "", $App.read1, $App.read2);};
 $scope.TextArea227_change = function() {localStorage.setItem("speed7b",$App.speed07b);};
-$scope.PushButton223_click = function() {neoTalkSpeak($App.speed07b, "", $App.Read1, $App.Read2);};
+$scope.PushButton223_click = function() {neoTalkSpeak($App.speed07b, "", $App.read1, $App.read2);};
 $scope.TextArea230_change = function() {localStorage.setItem("speed07a",$App.speed07a);};
 $scope.TextInput312_change = function() {localStorage.setItem("speed07",$App.speed07);};
-$scope.PushButton230_click = function() {neoTalkSpeak($App.speed07c, "", $App.Read1, $App.Read2);};
+$scope.PushButton230_click = function() {neoTalkSpeak($App.speed07c, "", $App.read1, $App.read2);};
 $scope.TextArea231_change = function() {localStorage.setItem("speed07c",$App.speed07c);};
-$scope.PushButton234_click = function() {neoTalkSpeak($App.speed07d, "", $App.Read1, $App.Read2);};
+$scope.PushButton234_click = function() {neoTalkSpeak($App.speed07d, "", $App.read1, $App.read2);};
 $scope.TextArea232_change = function() {localStorage.setItem("speed07d",$App.speed07d);};
-$scope.PushButton235_click = function() {neoTalkSpeak($App.speed07e, "", $App.Read1, $App.Read2);};
+$scope.PushButton235_click = function() {neoTalkSpeak($App.speed07e, "", $App.read1, $App.read2);};
 $scope.TextArea233_change = function() {localStorage.setItem("speed07e",$App.speed07e);};
 $scope.PushButton793_click = function() {$scope.SetObjectStyle("Headline10007","color","blue");
 $scope.SetObjectStyle("Ellipse107","fill","blue");
@@ -3924,16 +3244,16 @@ $App.NAB.PageNumber = 12;
 $App.NAB.PageID = "Speed08";
 $scope.PushButton217_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton218_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton273_click = function() {neoTalkSpeak($App.speed08b, "", $App.Read1, $App.Read2);};
+$scope.PushButton273_click = function() {neoTalkSpeak($App.speed08b, "", $App.read1, $App.read2);};
 $scope.TextArea229_change = function() {localStorage.setItem("speed08b",$App.speed08b);};
-$scope.PushButton275_click = function() {neoTalkSpeak($App.speed08b, "", $App.Read1, $App.Read2);};
+$scope.PushButton275_click = function() {neoTalkSpeak($App.speed08b, "", $App.read1, $App.read2);};
 $scope.TextArea234_change = function() {localStorage.setItem("speed08a",$App.speed08a);};
 $scope.TextInput376_change = function() {localStorage.setItem("speed08",$App.speed08);};
-$scope.PushButton283_click = function() {neoTalkSpeak($App.speed08c, "", $App.Read1, $App.Read2);};
+$scope.PushButton283_click = function() {neoTalkSpeak($App.speed08c, "", $App.read1, $App.read2);};
 $scope.TextArea235_change = function() {localStorage.setItem("speed08c",$App.speed08c);};
-$scope.PushButton304_click = function() {neoTalkSpeak($App.speed08d, "", $App.Read1, $App.Read2);};
+$scope.PushButton304_click = function() {neoTalkSpeak($App.speed08d, "", $App.read1, $App.read2);};
 $scope.TextArea236_change = function() {localStorage.setItem("speed08d",$App.speed08d);};
-$scope.PushButton773_click = function() {neoTalkSpeak($App.speed08e, "", $App.Read1, $App.Read2);};
+$scope.PushButton773_click = function() {neoTalkSpeak($App.speed08e, "", $App.read1, $App.read2);};
 $scope.TextArea237_change = function() {localStorage.setItem("speed08e",$App.speed08e);};
 $scope.PushButton790_click = function() {$scope.SetObjectStyle("Headline10008","color","blue");
 $scope.SetObjectStyle("Ellipse108","fill","blue");
@@ -3950,15 +3270,15 @@ $App.NAB.PageNumber = 13;
 $App.NAB.PageID = "Speed10";
 $scope.PushButton498_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea253_change = function() {localStorage.setItem("speed10a",$App.speed10a);};
-$scope.PushButton502_click = function() {neoTalkSpeak($App.speed10a, "", $App.Read1, $App.Read2);};
+$scope.PushButton502_click = function() {neoTalkSpeak($App.speed10a, "", $App.read1, $App.read2);};
 $scope.TextInput378_change = function() {localStorage.setItem("speed10",$App.speed10);};
-$scope.PushButton506_click = function() {neoTalkSpeak($App.speed10b, "", $App.Read1, $App.Read2);};
+$scope.PushButton506_click = function() {neoTalkSpeak($App.speed10b, "", $App.read1, $App.read2);};
 $scope.TextArea254_change = function() {localStorage.setItem("speed10b",$App.speed10b);};
-$scope.PushButton510_click = function() {neoTalkSpeak($App.speed10c, "", $App.Read1, $App.Read2);};
+$scope.PushButton510_click = function() {neoTalkSpeak($App.speed10c, "", $App.read1, $App.read2);};
 $scope.TextArea255_change = function() {localStorage.setItem("speed10c",$App.speed10c);};
-$scope.PushButton514_click = function() {neoTalkSpeak($App.speed10d, "", $App.Read1, $App.Read2);};
+$scope.PushButton514_click = function() {neoTalkSpeak($App.speed10d, "", $App.read1, $App.read2);};
 $scope.TextArea256_change = function() {localStorage.setItem("speed10d",$App.speed10d);};
-$scope.PushButton518_click = function() {neoTalkSpeak($App.speed10e, "", $App.Read1, $App.Read2);};
+$scope.PushButton518_click = function() {neoTalkSpeak($App.speed10e, "", $App.read1, $App.read2);};
 $scope.TextArea257_change = function() {localStorage.setItem("speed10e",$App.speed10e);};
 $scope.PushButton778_click = function() {$scope.SetObjectStyle("Headline10010","color","blue");
 $scope.SetObjectStyle("Ellipse110","fill","blue");
@@ -3975,15 +3295,15 @@ $App.NAB.PageNumber = 14;
 $App.NAB.PageID = "Speed11";
 $scope.PushButton522_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea258_change = function() {localStorage.setItem("speed11a",$App.speed11a);};
-$scope.PushButton523_click = function() {neoTalkSpeak($App.speed11a, "", $App.Read1, $App.Read2);};
+$scope.PushButton523_click = function() {neoTalkSpeak($App.speed11a, "", $App.read1, $App.read2);};
 $scope.TextInput379_change = function() {localStorage.setItem("speed11",$App.speed11);};
-$scope.PushButton524_click = function() {neoTalkSpeak($App.speed11b, "", $App.Read1, $App.Read2);};
+$scope.PushButton524_click = function() {neoTalkSpeak($App.speed11b, "", $App.read1, $App.read2);};
 $scope.TextArea259_change = function() {localStorage.setItem("speed11b",$App.speed11b);};
-$scope.PushButton525_click = function() {neoTalkSpeak($App.speed11c, "", $App.Read1, $App.Read2);};
+$scope.PushButton525_click = function() {neoTalkSpeak($App.speed11c, "", $App.read1, $App.read2);};
 $scope.TextArea260_change = function() {localStorage.setItem("speed11c",$App.speed11c);};
-$scope.PushButton527_click = function() {neoTalkSpeak($App.speed11d, "", $App.Read1, $App.Read2);};
+$scope.PushButton527_click = function() {neoTalkSpeak($App.speed11d, "", $App.read1, $App.read2);};
 $scope.TextArea261_change = function() {localStorage.setItem("speed11d",$App.speed11d);};
-$scope.PushButton529_click = function() {neoTalkSpeak($App.speed11e, "", $App.Read1, $App.Read2);};
+$scope.PushButton529_click = function() {neoTalkSpeak($App.speed11e, "", $App.read1, $App.read2);};
 $scope.TextArea262_change = function() {localStorage.setItem("speed11e",$App.speed11e);};
 $scope.PushButton781_click = function() {$scope.SetObjectStyle("Headline10011","color","blue");
 $scope.SetObjectStyle("Ellipse111","fill","blue");
@@ -4000,15 +3320,15 @@ $App.NAB.PageNumber = 15;
 $App.NAB.PageID = "Speed09";
 $scope.PushButton474_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea248_change = function() {localStorage.setItem("speed09a",$App.speed09a);};
-$scope.PushButton478_click = function() {neoTalkSpeak($App.speed09a, "", $App.Read1, $App.Read2);};
+$scope.PushButton478_click = function() {neoTalkSpeak($App.speed09a, "", $App.read1, $App.read2);};
 $scope.TextInput377_change = function() {localStorage.setItem("speed09",$App.speed09);};
-$scope.PushButton482_click = function() {neoTalkSpeak($App.speed09b, "", $App.Read1, $App.Read2);};
+$scope.PushButton482_click = function() {neoTalkSpeak($App.speed09b, "", $App.read1, $App.read2);};
 $scope.TextArea249_change = function() {localStorage.setItem("speed09b",$App.speed09b);};
-$scope.PushButton486_click = function() {neoTalkSpeak($App.speed09c, "", $App.Read1, $App.Read2);};
+$scope.PushButton486_click = function() {neoTalkSpeak($App.speed09c, "", $App.read1, $App.read2);};
 $scope.TextArea250_change = function() {localStorage.setItem("speed09c",$App.speed09c);};
-$scope.PushButton490_click = function() {neoTalkSpeak($App.speed09d, "", $App.Read1, $App.Read2);};
+$scope.PushButton490_click = function() {neoTalkSpeak($App.speed09d, "", $App.read1, $App.read2);};
 $scope.TextArea251_change = function() {localStorage.setItem("speed09d",$App.speed09d);};
-$scope.PushButton494_click = function() {neoTalkSpeak($App.speed09e, "", $App.Read1, $App.Read2);};
+$scope.PushButton494_click = function() {neoTalkSpeak($App.speed09e, "", $App.read1, $App.read2);};
 $scope.TextArea252_change = function() {localStorage.setItem("speed09e",$App.speed09e);};
 $scope.PushButton787_click = function() {$scope.SetObjectStyle("Headline10009","color","blue");
 $scope.SetObjectStyle("Ellipse109","fill","blue");
@@ -4025,15 +3345,15 @@ $App.NAB.PageNumber = 16;
 $App.NAB.PageID = "Speed12";
 $scope.PushButton530_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea263_change = function() {localStorage.setItem("speed12a",$App.speed12a);};
-$scope.PushButton531_click = function() {neoTalkSpeak($App.speed12a, "", $App.Read1, $App.Read2);};
+$scope.PushButton531_click = function() {neoTalkSpeak($App.speed12a, "", $App.read1, $App.read2);};
 $scope.TextInput380_change = function() {localStorage.setItem("speed12",$App.speed12);};
-$scope.PushButton532_click = function() {neoTalkSpeak($App.speed12b, "", $App.Read1, $App.Read2);};
+$scope.PushButton532_click = function() {neoTalkSpeak($App.speed12b, "", $App.read1, $App.read2);};
 $scope.TextArea264_change = function() {localStorage.setItem("speed12b",$App.speed12b);};
-$scope.PushButton533_click = function() {neoTalkSpeak($App.speed12c, "", $App.Read1, $App.Read2);};
+$scope.PushButton533_click = function() {neoTalkSpeak($App.speed12c, "", $App.read1, $App.read2);};
 $scope.TextArea265_change = function() {localStorage.setItem("speed12c",$App.speed12c);};
-$scope.PushButton534_click = function() {neoTalkSpeak($App.speed12d, "", $App.Read1, $App.Read2);};
+$scope.PushButton534_click = function() {neoTalkSpeak($App.speed12d, "", $App.read1, $App.read2);};
 $scope.TextArea266_change = function() {localStorage.setItem("speed12d",$App.speed12d);};
-$scope.PushButton535_click = function() {neoTalkSpeak($App.speed12e, "", $App.Read1, $App.Read2);};
+$scope.PushButton535_click = function() {neoTalkSpeak($App.speed12e, "", $App.read1, $App.read2);};
 $scope.TextArea267_change = function() {localStorage.setItem("speed12e",$App.speed12e);};
 $scope.PushButton784_click = function() {$scope.SetObjectStyle("Headline10012","color","blue");
 $scope.SetObjectStyle("Ellipse112","fill","blue");
@@ -4050,15 +3370,15 @@ $App.NAB.PageNumber = 17;
 $App.NAB.PageID = "Speed13";
 $scope.PushButton537_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea268_change = function() {localStorage.setItem("speed13a",$App.speed13a);};
-$scope.PushButton538_click = function() {neoTalkSpeak($App.speed13a, "", $App.Read1, $App.Read2);};
+$scope.PushButton538_click = function() {neoTalkSpeak($App.speed13a, "", $App.read1, $App.read2);};
 $scope.TextInput381_change = function() {localStorage.setItem("speed13",$App.speed13);};
-$scope.PushButton539_click = function() {neoTalkSpeak($App.speed13b, "", $App.Read1, $App.Read2);};
+$scope.PushButton539_click = function() {neoTalkSpeak($App.speed13b, "", $App.read1, $App.read2);};
 $scope.TextArea269_change = function() {localStorage.setItem("speed13b",$App.speed13b);};
-$scope.PushButton545_click = function() {neoTalkSpeak($App.speed13c, "", $App.Read1, $App.Read2);};
+$scope.PushButton545_click = function() {neoTalkSpeak($App.speed13c, "", $App.read1, $App.read2);};
 $scope.TextArea270_change = function() {localStorage.setItem("speed13c",$App.speed13c);};
-$scope.PushButton550_click = function() {neoTalkSpeak($App.speed13d, "", $App.Read1, $App.Read2);};
+$scope.PushButton550_click = function() {neoTalkSpeak($App.speed13d, "", $App.read1, $App.read2);};
 $scope.TextArea271_change = function() {localStorage.setItem("speed13d",$App.speed13d);};
-$scope.PushButton555_click = function() {neoTalkSpeak($App.speed13e, "", $App.Read1, $App.Read2);};
+$scope.PushButton555_click = function() {neoTalkSpeak($App.speed13e, "", $App.read1, $App.read2);};
 $scope.TextArea272_change = function() {localStorage.setItem("speed13e",$App.speed13e);};
 $scope.PushButton796_click = function() {$scope.SetObjectStyle("Headline10013","color","red");
 $scope.SetObjectStyle("Ellipse113","fill","red");
@@ -4075,15 +3395,15 @@ $App.NAB.PageNumber = 18;
 $App.NAB.PageID = "Speed14";
 $scope.PushButton556_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea273_change = function() {localStorage.setItem("speed14a",$App.speed14a);};
-$scope.PushButton557_click = function() {neoTalkSpeak($App.speed14a, "", $App.Read1, $App.Read2);};
+$scope.PushButton557_click = function() {neoTalkSpeak($App.speed14a, "", $App.read1, $App.read2);};
 $scope.TextInput382_change = function() {localStorage.setItem("speed14",$App.speed14);};
-$scope.PushButton558_click = function() {neoTalkSpeak($App.speed14b, "", $App.Read1, $App.Read2);};
+$scope.PushButton558_click = function() {neoTalkSpeak($App.speed14b, "", $App.read1, $App.read2);};
 $scope.TextArea274_change = function() {localStorage.setItem("speed14b",$App.speed14b);};
-$scope.PushButton559_click = function() {neoTalkSpeak($App.speed14c, "", $App.Read1, $App.Read2);};
+$scope.PushButton559_click = function() {neoTalkSpeak($App.speed14c, "", $App.read1, $App.read2);};
 $scope.TextArea275_change = function() {localStorage.setItem("speed14c",$App.speed14c);};
-$scope.PushButton561_click = function() {neoTalkSpeak($App.speed14d, "", $App.Read1, $App.Read2);};
+$scope.PushButton561_click = function() {neoTalkSpeak($App.speed14d, "", $App.read1, $App.read2);};
 $scope.TextArea276_change = function() {localStorage.setItem("speed14d",$App.speed14d);};
-$scope.PushButton562_click = function() {neoTalkSpeak($App.speed14e, "", $App.Read1, $App.Read2);};
+$scope.PushButton562_click = function() {neoTalkSpeak($App.speed14e, "", $App.read1, $App.read2);};
 $scope.TextArea277_change = function() {localStorage.setItem("speed14e",$App.speed14e);};
 $scope.PushButton814_click = function() {$scope.SetObjectStyle("Headline10014","color","red");
 $scope.SetObjectStyle("Ellipse114","fill","red");
@@ -4100,15 +3420,15 @@ $App.NAB.PageNumber = 19;
 $App.NAB.PageID = "Speed15";
 $scope.PushButton563_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea278_change = function() {localStorage.setItem("speed15a",$App.speed15a);};
-$scope.PushButton564_click = function() {neoTalkSpeak($App.speed15a, "", $App.Read1, $App.Read2);};
+$scope.PushButton564_click = function() {neoTalkSpeak($App.speed15a, "", $App.read1, $App.read2);};
 $scope.TextInput383_change = function() {localStorage.setItem("speed15",$App.speed15);};
-$scope.PushButton565_click = function() {neoTalkSpeak($App.speed15b, "", $App.Read1, $App.Read2);};
+$scope.PushButton565_click = function() {neoTalkSpeak($App.speed15b, "", $App.read1, $App.read2);};
 $scope.TextArea279_change = function() {localStorage.setItem("speed15b",$App.speed15b);};
-$scope.PushButton566_click = function() {neoTalkSpeak($App.speed15c, "", $App.Read1, $App.Read2);};
+$scope.PushButton566_click = function() {neoTalkSpeak($App.speed15c, "", $App.read1, $App.read2);};
 $scope.TextArea280_change = function() {localStorage.setItem("speed15c",$App.speed15c);};
-$scope.PushButton567_click = function() {neoTalkSpeak($App.speed15d, "", $App.Read1, $App.Read2);};
+$scope.PushButton567_click = function() {neoTalkSpeak($App.speed15d, "", $App.read1, $App.read2);};
 $scope.TextArea281_change = function() {localStorage.setItem("speed15d",$App.speed15d);};
-$scope.PushButton568_click = function() {neoTalkSpeak($App.speed15e, "", $App.Read1, $App.Read2);};
+$scope.PushButton568_click = function() {neoTalkSpeak($App.speed15e, "", $App.read1, $App.read2);};
 $scope.TextArea282_change = function() {localStorage.setItem("speed15e",$App.speed15e);};
 $scope.PushButton817_click = function() {$scope.SetObjectStyle("Headline10015","color","red");
 $scope.SetObjectStyle("Ellipse115","fill","red");
@@ -4125,15 +3445,15 @@ $App.NAB.PageNumber = 20;
 $App.NAB.PageID = "Speed16";
 $scope.PushButton569_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea283_change = function() {localStorage.setItem("speed16a",$App.speed16a);};
-$scope.PushButton570_click = function() {neoTalkSpeak($App.speed16a, "", $App.Read1, $App.Read2);};
+$scope.PushButton570_click = function() {neoTalkSpeak($App.speed16a, "", $App.read1, $App.read2);};
 $scope.TextInput384_change = function() {localStorage.setItem("speed16",$App.speed16);};
-$scope.PushButton571_click = function() {neoTalkSpeak($App.speed16b, "", $App.Read1, $App.Read2);};
+$scope.PushButton571_click = function() {neoTalkSpeak($App.speed16b, "", $App.read1, $App.read2);};
 $scope.TextArea284_change = function() {localStorage.setItem("speed16b",$App.speed16b);};
-$scope.PushButton572_click = function() {neoTalkSpeak($App.speed16c, "", $App.Read1, $App.Read2);};
+$scope.PushButton572_click = function() {neoTalkSpeak($App.speed16c, "", $App.read1, $App.read2);};
 $scope.TextArea285_change = function() {localStorage.setItem("speed16c",$App.speed16c);};
-$scope.PushButton573_click = function() {neoTalkSpeak($App.speed16d, "", $App.Read1, $App.Read2);};
+$scope.PushButton573_click = function() {neoTalkSpeak($App.speed16d, "", $App.read1, $App.read2);};
 $scope.TextArea286_change = function() {localStorage.setItem("speed16d",$App.speed16d);};
-$scope.PushButton574_click = function() {neoTalkSpeak($App.speed16e, "", $App.Read1, $App.Read2);};
+$scope.PushButton574_click = function() {neoTalkSpeak($App.speed16e, "", $App.read1, $App.read2);};
 $scope.TextArea287_change = function() {localStorage.setItem("speed16e",$App.speed16e);};
 $scope.PushButton820_click = function() {$scope.SetObjectStyle("Headline10016","color","red");
 $scope.SetObjectStyle("Ellipse116","fill","red");
@@ -4150,15 +3470,15 @@ $App.NAB.PageNumber = 21;
 $App.NAB.PageID = "Speed17";
 $scope.PushButton708_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea338_change = function() {localStorage.setItem("speed17a",$App.speed17a);};
-$scope.PushButton709_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
+$scope.PushButton709_click = function() {neoTalkSpeak($App.speed17a, "", $App.read1, $App.read2);};
 $scope.TextInput435_change = function() {localStorage.setItem("speed17",$App.speed17);};
-$scope.PushButton710_click = function() {neoTalkSpeak($App.speed17b, "", $App.Read1, $App.Read2);};
+$scope.PushButton710_click = function() {neoTalkSpeak($App.speed17b, "", $App.read1, $App.read2);};
 $scope.TextArea339_change = function() {localStorage.setItem("speed17b",$App.speed17b);};
-$scope.PushButton711_click = function() {neoTalkSpeak($App.speed17c, "", $App.Read1, $App.Read2);};
+$scope.PushButton711_click = function() {neoTalkSpeak($App.speed17c, "", $App.read1, $App.read2);};
 $scope.TextArea340_change = function() {localStorage.setItem("speed17c",$App.speed17c);};
-$scope.PushButton712_click = function() {neoTalkSpeak($App.speed17d, "", $App.Read1, $App.Read2);};
+$scope.PushButton712_click = function() {neoTalkSpeak($App.speed17d, "", $App.read1, $App.read2);};
 $scope.TextArea341_change = function() {localStorage.setItem("speed17d",$App.speed16d);};
-$scope.PushButton713_click = function() {neoTalkSpeak($App.speed17e, "", $App.Read1, $App.Read2);};
+$scope.PushButton713_click = function() {neoTalkSpeak($App.speed17e, "", $App.read1, $App.read2);};
 $scope.TextArea342_change = function() {localStorage.setItem("speed17e",$App.speed17e);};
 $scope.PushButton832_click = function() {$scope.SetObjectStyle("Ellipse17","fill","red");
 $scope.SetObjectStyle("Ellipse117","fill","red");
@@ -4175,15 +3495,15 @@ $App.NAB.PageNumber = 22;
 $App.NAB.PageID = "Speed18";
 $scope.PushButton714_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea343_change = function() {localStorage.setItem("speed18a",$App.speed18a);};
-$scope.PushButton715_click = function() {neoTalkSpeak($App.speed18a, "", $App.Read1, $App.Read2);};
+$scope.PushButton715_click = function() {neoTalkSpeak($App.speed18a, "", $App.read1, $App.read2);};
 $scope.TextInput436_change = function() {localStorage.setItem("speed18",$App.speed18);};
-$scope.PushButton716_click = function() {neoTalkSpeak($App.speed18b, "", $App.Read1, $App.Read2);};
+$scope.PushButton716_click = function() {neoTalkSpeak($App.speed18b, "", $App.read1, $App.read2);};
 $scope.TextArea344_change = function() {localStorage.setItem("speed18b",$App.speed18b);};
-$scope.PushButton717_click = function() {neoTalkSpeak($App.speed18c, "", $App.Read1, $App.Read2);};
+$scope.PushButton717_click = function() {neoTalkSpeak($App.speed18c, "", $App.read1, $App.read2);};
 $scope.TextArea345_change = function() {localStorage.setItem("speed18c",$App.speed18c);};
-$scope.PushButton718_click = function() {neoTalkSpeak($App.speed18d, "", $App.Read1, $App.Read2);};
+$scope.PushButton718_click = function() {neoTalkSpeak($App.speed18d, "", $App.read1, $App.read2);};
 $scope.TextArea346_change = function() {localStorage.setItem("speed18d",$App.speed18d);};
-$scope.PushButton719_click = function() {neoTalkSpeak($App.speed18e, "", $App.Read1, $App.Read2);};
+$scope.PushButton719_click = function() {neoTalkSpeak($App.speed18e, "", $App.read1, $App.read2);};
 $scope.TextArea347_change = function() {localStorage.setItem("speed18e",$App.speed18e);};
 $scope.PushButton829_click = function() {$scope.SetObjectStyle("Ellipse18","fill","red");
 $scope.SetObjectStyle("Ellipse118","fill","red");
@@ -4200,15 +3520,15 @@ $App.NAB.PageNumber = 23;
 $App.NAB.PageID = "Speed19";
 $scope.PushButton720_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea348_change = function() {localStorage.setItem("speed19a",$App.speed19a);};
-$scope.PushButton721_click = function() {neoTalkSpeak($App.speed19a, "", $App.Read1, $App.Read2);};
+$scope.PushButton721_click = function() {neoTalkSpeak($App.speed19a, "", $App.read1, $App.read2);};
 $scope.TextInput437_change = function() {localStorage.setItem("speed19",$App.speed19);};
-$scope.PushButton722_click = function() {neoTalkSpeak($App.speed19b, "", $App.Read1, $App.Read2);};
+$scope.PushButton722_click = function() {neoTalkSpeak($App.speed19b, "", $App.read1, $App.read2);};
 $scope.TextArea349_change = function() {localStorage.setItem("speed19b",$App.speed19b);};
-$scope.PushButton723_click = function() {neoTalkSpeak($App.speed19c, "", $App.Read1, $App.Read2);};
+$scope.PushButton723_click = function() {neoTalkSpeak($App.speed19c, "", $App.read1, $App.read2);};
 $scope.TextArea350_change = function() {localStorage.setItem("speed19c",$App.speed19c);};
-$scope.PushButton724_click = function() {neoTalkSpeak($App.speed19d, "", $App.Read1, $App.Read2);};
+$scope.PushButton724_click = function() {neoTalkSpeak($App.speed19d, "", $App.read1, $App.read2);};
 $scope.TextArea351_change = function() {localStorage.setItem("speed19d",$App.speed19d);};
-$scope.PushButton725_click = function() {neoTalkSpeak($App.speed19e, "", $App.Read1, $App.Read2);};
+$scope.PushButton725_click = function() {neoTalkSpeak($App.speed19e, "", $App.read1, $App.read2);};
 $scope.TextArea352_change = function() {localStorage.setItem("speed19e",$App.speed19e);};
 $scope.PushButton826_click = function() {$scope.SetObjectStyle("Ellipse19","fill","red");
 $scope.SetObjectStyle("Ellipse119","fill","red");
@@ -4225,15 +3545,15 @@ $App.NAB.PageNumber = 24;
 $App.NAB.PageID = "Speed20";
 $scope.PushButton726_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea353_change = function() {localStorage.setItem("speed20a",$App.speed20a);};
-$scope.PushButton727_click = function() {neoTalkSpeak($App.speed20a, "", $App.Read1, $App.Read2);};
+$scope.PushButton727_click = function() {neoTalkSpeak($App.speed20a, "", $App.read1, $App.read2);};
 $scope.TextInput438_change = function() {localStorage.setItem("speed20",$App.speed20);};
-$scope.PushButton728_click = function() {neoTalkSpeak($App.speed20b, "", $App.Read1, $App.Read2);};
+$scope.PushButton728_click = function() {neoTalkSpeak($App.speed20b, "", $App.read1, $App.read2);};
 $scope.TextArea354_change = function() {localStorage.setItem("speed20b",$App.speed20b);};
-$scope.PushButton729_click = function() {neoTalkSpeak($App.speed20c, "", $App.Read1, $App.Read2);};
+$scope.PushButton729_click = function() {neoTalkSpeak($App.speed20c, "", $App.read1, $App.read2);};
 $scope.TextArea355_change = function() {localStorage.setItem("speed20c",$App.speed20c);};
-$scope.PushButton730_click = function() {neoTalkSpeak($App.speed17d, "", $App.Read1, $App.Read2);};
+$scope.PushButton730_click = function() {neoTalkSpeak($App.speed17d, "", $App.read1, $App.read2);};
 $scope.TextArea356_change = function() {localStorage.setItem("speed20d",$App.speed20d);};
-$scope.PushButton731_click = function() {neoTalkSpeak($App.speed17e, "", $App.Read1, $App.Read2);};
+$scope.PushButton731_click = function() {neoTalkSpeak($App.speed17e, "", $App.read1, $App.read2);};
 $scope.TextArea357_change = function() {localStorage.setItem("speed20e",$App.speed20e);};
 $scope.PushButton823_click = function() {$scope.SetObjectStyle("Ellipse20","fill","red");
 $scope.SetObjectStyle("Ellipse120","fill","red");
@@ -4250,15 +3570,15 @@ $App.NAB.PageNumber = 25;
 $App.NAB.PageID = "Speed21";
 $scope.PushButton732_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea358_change = function() {localStorage.setItem("speed21a",$App.speed21a);};
-$scope.PushButton733_click = function() {neoTalkSpeak($App.speed21a, "", $App.Read1, $App.Read2);};
+$scope.PushButton733_click = function() {neoTalkSpeak($App.speed21a, "", $App.read1, $App.read2);};
 $scope.TextInput439_change = function() {localStorage.setItem("speed21",$App.speed21);};
-$scope.PushButton734_click = function() {neoTalkSpeak($App.speed21b, "", $App.Read1, $App.Read2);};
+$scope.PushButton734_click = function() {neoTalkSpeak($App.speed21b, "", $App.read1, $App.read2);};
 $scope.TextArea359_change = function() {localStorage.setItem("speed21b",$App.speed21b);};
-$scope.PushButton735_click = function() {neoTalkSpeak($App.speed21c, "", $App.Read1, $App.Read2);};
+$scope.PushButton735_click = function() {neoTalkSpeak($App.speed21c, "", $App.read1, $App.read2);};
 $scope.TextArea360_change = function() {localStorage.setItem("speed21c",$App.speed21c);};
-$scope.PushButton736_click = function() {neoTalkSpeak($App.speed21d, "", $App.Read1, $App.Read2);};
+$scope.PushButton736_click = function() {neoTalkSpeak($App.speed21d, "", $App.read1, $App.read2);};
 $scope.TextArea361_change = function() {localStorage.setItem("speed21d",$App.speed21d);};
-$scope.PushButton737_click = function() {neoTalkSpeak($App.speed21e, "", $App.Read1, $App.Read2);};
+$scope.PushButton737_click = function() {neoTalkSpeak($App.speed21e, "", $App.read1, $App.read2);};
 $scope.TextArea362_change = function() {localStorage.setItem("speed21e",$App.speed21e);};
 $scope.PushButton835_click = function() {$scope.SetObjectStyle("Ellipse21","fill","red");
 $scope.SetObjectStyle("Ellipse121","fill","red");
@@ -4275,15 +3595,15 @@ $App.NAB.PageNumber = 26;
 $App.NAB.PageID = "Speed22";
 $scope.PushButton744_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea368_change = function() {localStorage.setItem("speed22a",$App.speed22a);};
-$scope.PushButton745_click = function() {neoTalkSpeak($App.speed22a, "", $App.Read1, $App.Read2);};
+$scope.PushButton745_click = function() {neoTalkSpeak($App.speed22a, "", $App.read1, $App.read2);};
 $scope.TextInput441_change = function() {localStorage.setItem("speed22",$App.speed22);};
-$scope.PushButton746_click = function() {neoTalkSpeak($App.speed22b, "", $App.Read1, $App.Read2);};
+$scope.PushButton746_click = function() {neoTalkSpeak($App.speed22b, "", $App.read1, $App.read2);};
 $scope.TextArea369_change = function() {localStorage.setItem("speed22b",$App.speed22b);};
-$scope.PushButton747_click = function() {neoTalkSpeak($App.speed22c, "", $App.Read1, $App.Read2);};
+$scope.PushButton747_click = function() {neoTalkSpeak($App.speed22c, "", $App.read1, $App.read2);};
 $scope.TextArea370_change = function() {localStorage.setItem("speed22c",$App.speed22c);};
-$scope.PushButton748_click = function() {neoTalkSpeak($App.speed22d, "", $App.Read1, $App.Read2);};
+$scope.PushButton748_click = function() {neoTalkSpeak($App.speed22d, "", $App.read1, $App.read2);};
 $scope.TextArea371_change = function() {localStorage.setItem("speed22d",$App.speed22d);};
-$scope.PushButton749_click = function() {neoTalkSpeak($App.speed22e, "", $App.Read1, $App.Read2);};
+$scope.PushButton749_click = function() {neoTalkSpeak($App.speed22e, "", $App.read1, $App.read2);};
 $scope.TextArea372_change = function() {localStorage.setItem("speed22e",$App.speed22e);};
 $scope.PushButton838_click = function() {$scope.SetObjectStyle("Ellipse22","fill","red");
 $scope.SetObjectStyle("Ellipse122","fill","red");
@@ -4300,15 +3620,15 @@ $App.NAB.PageNumber = 27;
 $App.NAB.PageID = "Speed23";
 $scope.PushButton750_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea373_change = function() {localStorage.setItem("speed23a",$App.speed23a);};
-$scope.PushButton751_click = function() {neoTalkSpeak($App.speed23a, "", $App.Read1, $App.Read2);};
+$scope.PushButton751_click = function() {neoTalkSpeak($App.speed23a, "", $App.read1, $App.read2);};
 $scope.TextInput442_change = function() {localStorage.setItem("speed23",$App.speed23);};
-$scope.PushButton752_click = function() {neoTalkSpeak($App.speed23b, "", $App.Read1, $App.Read2);};
+$scope.PushButton752_click = function() {neoTalkSpeak($App.speed23b, "", $App.read1, $App.read2);};
 $scope.TextArea374_change = function() {localStorage.setItem("speed23b",$App.speed23b);};
-$scope.PushButton753_click = function() {neoTalkSpeak($App.speed23c, "", $App.Read1, $App.Read2);};
+$scope.PushButton753_click = function() {neoTalkSpeak($App.speed23c, "", $App.read1, $App.read2);};
 $scope.TextArea375_change = function() {localStorage.setItem("speed23c",$App.speed23c);};
-$scope.PushButton754_click = function() {neoTalkSpeak($App.speed23d, "", $App.Read1, $App.Read2);};
+$scope.PushButton754_click = function() {neoTalkSpeak($App.speed23d, "", $App.read1, $App.read2);};
 $scope.TextArea376_change = function() {localStorage.setItem("speed23d",$App.speed23d);};
-$scope.PushButton755_click = function() {neoTalkSpeak($App.speed23e, "", $App.Read1, $App.Read2);};
+$scope.PushButton755_click = function() {neoTalkSpeak($App.speed23e, "", $App.read1, $App.read2);};
 $scope.TextArea377_change = function() {localStorage.setItem("speed23e",$App.speed23e);};
 $scope.PushButton841_click = function() {$scope.SetObjectStyle("Ellipse23","fill","red");
 $scope.SetObjectStyle("Ellipse123","fill","red");
@@ -4325,15 +3645,15 @@ $App.NAB.PageNumber = 28;
 $App.NAB.PageID = "Speed24";
 $scope.PushButton738_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea363_change = function() {localStorage.setItem("speed24a",$App.speed24a);};
-$scope.PushButton739_click = function() {neoTalkSpeak($App.speed24a, "", $App.Read1, $App.Read2);};
+$scope.PushButton739_click = function() {neoTalkSpeak($App.speed24a, "", $App.read1, $App.read2);};
 $scope.TextInput440_change = function() {localStorage.setItem("speed24",$App.speed24);};
-$scope.PushButton740_click = function() {neoTalkSpeak($App.speed24b, "", $App.Read1, $App.Read2);};
+$scope.PushButton740_click = function() {neoTalkSpeak($App.speed24b, "", $App.read1, $App.read2);};
 $scope.TextArea364_change = function() {localStorage.setItem("speed24b",$App.speed24b);};
-$scope.PushButton741_click = function() {neoTalkSpeak($App.speed24c, "", $App.Read1, $App.Read2);};
+$scope.PushButton741_click = function() {neoTalkSpeak($App.speed24c, "", $App.read1, $App.read2);};
 $scope.TextArea365_change = function() {localStorage.setItem("speed24c",$App.speed24c);};
-$scope.PushButton742_click = function() {neoTalkSpeak($App.speed24d, "", $App.Read1, $App.Read2);};
+$scope.PushButton742_click = function() {neoTalkSpeak($App.speed24d, "", $App.read1, $App.read2);};
 $scope.TextArea366_change = function() {localStorage.setItem("speed24d",$App.speed24d);};
-$scope.PushButton743_click = function() {neoTalkSpeak($App.speed24e, "", $App.Read1, $App.Read2);};
+$scope.PushButton743_click = function() {neoTalkSpeak($App.speed24e, "", $App.read1, $App.read2);};
 $scope.TextArea367_change = function() {localStorage.setItem("speed24e",$App.speed24e);};
 $scope.PushButton844_click = function() {$scope.SetObjectStyle("Ellipse24","fill","red");
 $scope.SetObjectStyle("Ellipse124","fill","red");
@@ -4350,15 +3670,15 @@ $App.NAB.PageNumber = 29;
 $App.NAB.PageID = "Speed25";
 $scope.PushButton643_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea403_change = function() {localStorage.setItem("speed25a",$App.speed25a);};
-$scope.PushButton644_click = function() {neoTalkSpeak($App.speed25a, "", $App.Read1, $App.Read2);};
+$scope.PushButton644_click = function() {neoTalkSpeak($App.speed25a, "", $App.read1, $App.read2);};
 $scope.TextInput448_change = function() {localStorage.setItem("speed25",$App.speed25);};
-$scope.PushButton645_click = function() {neoTalkSpeak($App.speed25b, "", $App.Read1, $App.Read2);};
+$scope.PushButton645_click = function() {neoTalkSpeak($App.speed25b, "", $App.read1, $App.read2);};
 $scope.TextArea404_change = function() {localStorage.setItem("speed25b",$App.speed25b);};
-$scope.PushButton646_click = function() {neoTalkSpeak($App.speed25c, "", $App.Read1, $App.Read2);};
+$scope.PushButton646_click = function() {neoTalkSpeak($App.speed25c, "", $App.read1, $App.read2);};
 $scope.TextArea405_change = function() {localStorage.setItem("speed25c",$App.speed25c);};
-$scope.PushButton647_click = function() {neoTalkSpeak($App.speed25d, "", $App.Read1, $App.Read2);};
+$scope.PushButton647_click = function() {neoTalkSpeak($App.speed25d, "", $App.read1, $App.read2);};
 $scope.TextArea406_change = function() {localStorage.setItem("speed25d",$App.speed25d);};
-$scope.PushButton648_click = function() {neoTalkSpeak($App.speed25e, "", $App.Read1, $App.Read2);};
+$scope.PushButton648_click = function() {neoTalkSpeak($App.speed25e, "", $App.read1, $App.read2);};
 $scope.TextArea407_change = function() {localStorage.setItem("speed25e",$App.speed25e);};
 $scope.PushButton649_click = function() {$scope.SetObjectStyle("Ellipse25","fill","red");
 $scope.SetObjectStyle("Ellipse125","fill","red");
@@ -4375,15 +3695,15 @@ $App.NAB.PageNumber = 30;
 $App.NAB.PageID = "Speed26";
 $scope.PushButton652_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea408_change = function() {localStorage.setItem("speed26a",$App.speed26a);};
-$scope.PushButton653_click = function() {neoTalkSpeak($App.speed26a, "", $App.Read1, $App.Read2);};
+$scope.PushButton653_click = function() {neoTalkSpeak($App.speed26a, "", $App.read1, $App.read2);};
 $scope.TextInput449_change = function() {localStorage.setItem("speed26",$App.speed26);};
-$scope.PushButton654_click = function() {neoTalkSpeak($App.speed26b, "", $App.Read1, $App.Read2);};
+$scope.PushButton654_click = function() {neoTalkSpeak($App.speed26b, "", $App.read1, $App.read2);};
 $scope.TextArea409_change = function() {localStorage.setItem("speed26b",$App.speed26b);};
-$scope.PushButton655_click = function() {neoTalkSpeak($App.speed26c, "", $App.Read1, $App.Read2);};
+$scope.PushButton655_click = function() {neoTalkSpeak($App.speed26c, "", $App.read1, $App.read2);};
 $scope.TextArea410_change = function() {localStorage.setItem("speed26c",$App.speed26c);};
-$scope.PushButton656_click = function() {neoTalkSpeak($App.speed26d, "", $App.Read1, $App.Read2);};
+$scope.PushButton656_click = function() {neoTalkSpeak($App.speed26d, "", $App.read1, $App.read2);};
 $scope.TextArea411_change = function() {localStorage.setItem("speed26d",$App.speed26d);};
-$scope.PushButton657_click = function() {neoTalkSpeak($App.speed26e, "", $App.Read1, $App.Read2);};
+$scope.PushButton657_click = function() {neoTalkSpeak($App.speed26e, "", $App.read1, $App.read2);};
 $scope.TextArea412_change = function() {localStorage.setItem("speed26e",$App.speed26e);};
 $scope.PushButton658_click = function() {$scope.SetObjectStyle("Ellipse26","fill","red");
 $scope.SetObjectStyle("Ellipse126","fill","red");
@@ -4400,15 +3720,15 @@ $App.NAB.PageNumber = 31;
 $App.NAB.PageID = "Speed27";
 $scope.PushButton850_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea413_change = function() {localStorage.setItem("speed27a",$App.speed27a);};
-$scope.PushButton851_click = function() {neoTalkSpeak($App.speed27a, "", $App.Read1, $App.Read2);};
+$scope.PushButton851_click = function() {neoTalkSpeak($App.speed27a, "", $App.read1, $App.read2);};
 $scope.TextInput450_change = function() {localStorage.setItem("speed27",$App.speed26);};
-$scope.PushButton852_click = function() {neoTalkSpeak($App.speed27b, "", $App.Read1, $App.Read2);};
+$scope.PushButton852_click = function() {neoTalkSpeak($App.speed27b, "", $App.read1, $App.read2);};
 $scope.TextArea414_change = function() {localStorage.setItem("speed27b",$App.speed27b);};
-$scope.PushButton853_click = function() {neoTalkSpeak($App.speed27c, "", $App.Read1, $App.Read2);};
+$scope.PushButton853_click = function() {neoTalkSpeak($App.speed27c, "", $App.read1, $App.read2);};
 $scope.TextArea415_change = function() {localStorage.setItem("speed27c",$App.speed27c);};
-$scope.PushButton854_click = function() {neoTalkSpeak($App.speed27d, "", $App.Read1, $App.Read2);};
+$scope.PushButton854_click = function() {neoTalkSpeak($App.speed27d, "", $App.read1, $App.read2);};
 $scope.TextArea416_change = function() {localStorage.setItem("speed27d",$App.speed27d);};
-$scope.PushButton855_click = function() {neoTalkSpeak($App.speed27e, "", $App.Read1, $App.Read2);};
+$scope.PushButton855_click = function() {neoTalkSpeak($App.speed27e, "", $App.read1, $App.read2);};
 $scope.TextArea417_change = function() {localStorage.setItem("speed27e",$App.speed27e);};
 $scope.PushButton856_click = function() {$scope.SetObjectStyle("Ellipse27","fill","red");
 $scope.SetObjectStyle("Ellipse127","fill","red");
@@ -4425,15 +3745,15 @@ $App.NAB.PageNumber = 32;
 $App.NAB.PageID = "Speed28";
 $scope.PushButton859_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea418_change = function() {localStorage.setItem("speed28a",$App.speed28a);};
-$scope.PushButton860_click = function() {neoTalkSpeak($App.speed28a, "", $App.Read1, $App.Read2);};
+$scope.PushButton860_click = function() {neoTalkSpeak($App.speed28a, "", $App.read1, $App.read2);};
 $scope.TextInput451_change = function() {localStorage.setItem("speed28",$App.speed28);};
-$scope.PushButton861_click = function() {neoTalkSpeak($App.speed28b, "", $App.Read1, $App.Read2);};
+$scope.PushButton861_click = function() {neoTalkSpeak($App.speed28b, "", $App.read1, $App.read2);};
 $scope.TextArea419_change = function() {localStorage.setItem("speed28b",$App.speed28b);};
-$scope.PushButton862_click = function() {neoTalkSpeak($App.speed28c, "", $App.Read1, $App.Read2);};
+$scope.PushButton862_click = function() {neoTalkSpeak($App.speed28c, "", $App.read1, $App.read2);};
 $scope.TextArea420_change = function() {localStorage.setItem("speed28c",$App.speed28c);};
-$scope.PushButton863_click = function() {neoTalkSpeak($App.speed28d, "", $App.Read1, $App.Read2);};
+$scope.PushButton863_click = function() {neoTalkSpeak($App.speed28d, "", $App.read1, $App.read2);};
 $scope.TextArea421_change = function() {localStorage.setItem("speed28d",$App.speed28d);};
-$scope.PushButton864_click = function() {neoTalkSpeak($App.speed28e, "", $App.Read1, $App.Read2);};
+$scope.PushButton864_click = function() {neoTalkSpeak($App.speed28e, "", $App.read1, $App.read2);};
 $scope.TextArea422_change = function() {localStorage.setItem("speed28e",$App.speed28e);};
 $scope.PushButton865_click = function() {$scope.SetObjectStyle("Ellipse28","fill","red");
 $scope.SetObjectStyle("Ellipse128","fill","red");
@@ -4450,15 +3770,15 @@ $App.NAB.PageNumber = 33;
 $App.NAB.PageID = "Speed29";
 $scope.PushButton868_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea423_change = function() {localStorage.setItem("speed29a",$App.speed29a);};
-$scope.PushButton869_click = function() {neoTalkSpeak($App.speed29a, "", $App.Read1, $App.Read2);};
+$scope.PushButton869_click = function() {neoTalkSpeak($App.speed29a, "", $App.read1, $App.read2);};
 $scope.TextInput452_change = function() {localStorage.setItem("speed29",$App.speed29);};
-$scope.PushButton870_click = function() {neoTalkSpeak($App.speed29b, "", $App.Read1, $App.Read2);};
+$scope.PushButton870_click = function() {neoTalkSpeak($App.speed29b, "", $App.read1, $App.read2);};
 $scope.TextArea424_change = function() {localStorage.setItem("speed29b",$App.speed29b);};
-$scope.PushButton871_click = function() {neoTalkSpeak($App.speed29c, "", $App.Read1, $App.Read2);};
+$scope.PushButton871_click = function() {neoTalkSpeak($App.speed29c, "", $App.read1, $App.read2);};
 $scope.TextArea425_change = function() {localStorage.setItem("speed29c",$App.speed29c);};
-$scope.PushButton872_click = function() {neoTalkSpeak($App.speed29d, "", $App.Read1, $App.Read2);};
+$scope.PushButton872_click = function() {neoTalkSpeak($App.speed29d, "", $App.read1, $App.read2);};
 $scope.TextArea426_change = function() {localStorage.setItem("speed29d",$App.speed29d);};
-$scope.PushButton873_click = function() {neoTalkSpeak($App.speed29e, "", $App.Read1, $App.Read2);};
+$scope.PushButton873_click = function() {neoTalkSpeak($App.speed29e, "", $App.read1, $App.read2);};
 $scope.TextArea427_change = function() {localStorage.setItem("speed29e",$App.speed29e);};
 $scope.PushButton874_click = function() {$scope.SetObjectStyle("Ellipse29","fill","red");
 $scope.SetObjectStyle("Ellipse129","fill","red");
@@ -4475,15 +3795,15 @@ $App.NAB.PageNumber = 34;
 $App.NAB.PageID = "Speed30";
 $scope.PushButton877_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea428_change = function() {localStorage.setItem("speed30a",$App.speed30a);};
-$scope.PushButton878_click = function() {neoTalkSpeak($App.speed30a, "", $App.Read1, $App.Read2);};
+$scope.PushButton878_click = function() {neoTalkSpeak($App.speed30a, "", $App.read1, $App.read2);};
 $scope.TextInput453_change = function() {localStorage.setItem("speed30",$App.speed30);};
-$scope.PushButton879_click = function() {neoTalkSpeak($App.speed30b, "", $App.Read1, $App.Read2);};
+$scope.PushButton879_click = function() {neoTalkSpeak($App.speed30b, "", $App.read1, $App.read2);};
 $scope.TextArea429_change = function() {localStorage.setItem("speed30b",$App.speed30b);};
-$scope.PushButton880_click = function() {neoTalkSpeak($App.speed30c, "", $App.Read1, $App.Read2);};
+$scope.PushButton880_click = function() {neoTalkSpeak($App.speed30c, "", $App.read1, $App.read2);};
 $scope.TextArea430_change = function() {localStorage.setItem("speed30c",$App.speed30c);};
-$scope.PushButton881_click = function() {neoTalkSpeak($App.speed30d, "", $App.Read1, $App.Read2);};
+$scope.PushButton881_click = function() {neoTalkSpeak($App.speed30d, "", $App.read1, $App.read2);};
 $scope.TextArea431_change = function() {localStorage.setItem("speed30d",$App.speed30d);};
-$scope.PushButton882_click = function() {neoTalkSpeak($App.speed30e, "", $App.Read1, $App.Read2);};
+$scope.PushButton882_click = function() {neoTalkSpeak($App.speed30e, "", $App.read1, $App.read2);};
 $scope.TextArea432_change = function() {localStorage.setItem("speed30e",$App.speed30e);};
 $scope.PushButton883_click = function() {$scope.SetObjectStyle("Ellipse30","fill","red");
 $scope.SetObjectStyle("Ellipse130","fill","red");
@@ -4500,15 +3820,15 @@ $App.NAB.PageNumber = 35;
 $App.NAB.PageID = "Speed31";
 $scope.PushButton886_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea433_change = function() {localStorage.setItem("speed31a",$App.speed31a);};
-$scope.PushButton887_click = function() {neoTalkSpeak($App.speed31a, "", $App.Read1, $App.Read2);};
+$scope.PushButton887_click = function() {neoTalkSpeak($App.speed31a, "", $App.read1, $App.read2);};
 $scope.TextInput454_change = function() {localStorage.setItem("speed31",$App.speed31);};
-$scope.PushButton888_click = function() {neoTalkSpeak($App.speed31b, "", $App.Read1, $App.Read2);};
+$scope.PushButton888_click = function() {neoTalkSpeak($App.speed31b, "", $App.read1, $App.read2);};
 $scope.TextArea434_change = function() {localStorage.setItem("speed31b",$App.speed31b);};
-$scope.PushButton889_click = function() {neoTalkSpeak($App.speed31c, "", $App.Read1, $App.Read2);};
+$scope.PushButton889_click = function() {neoTalkSpeak($App.speed31c, "", $App.read1, $App.read2);};
 $scope.TextArea435_change = function() {localStorage.setItem("speed31c",$App.speed31c);};
-$scope.PushButton890_click = function() {neoTalkSpeak($App.speed31d, "", $App.Read1, $App.Read2);};
+$scope.PushButton890_click = function() {neoTalkSpeak($App.speed31d, "", $App.read1, $App.read2);};
 $scope.TextArea436_change = function() {localStorage.setItem("speed31d",$App.speed31d);};
-$scope.PushButton891_click = function() {neoTalkSpeak($App.speed31e, "", $App.Read1, $App.Read2);};
+$scope.PushButton891_click = function() {neoTalkSpeak($App.speed31e, "", $App.read1, $App.read2);};
 $scope.TextArea437_change = function() {localStorage.setItem("speed31e",$App.speed31e);};
 $scope.PushButton892_click = function() {$scope.SetObjectStyle("Ellipse31","fill","red");
 $scope.SetObjectStyle("Ellipse131","fill","red");
@@ -4525,15 +3845,15 @@ $App.NAB.PageNumber = 36;
 $App.NAB.PageID = "Speed32";
 $scope.PushButton895_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea438_change = function() {localStorage.setItem("speed32a",$App.speed32a);};
-$scope.PushButton896_click = function() {neoTalkSpeak($App.speed32a, "", $App.Read1, $App.Read2);};
+$scope.PushButton896_click = function() {neoTalkSpeak($App.speed32a, "", $App.read1, $App.read2);};
 $scope.TextInput455_change = function() {localStorage.setItem("speed32",$App.speed32);};
-$scope.PushButton897_click = function() {neoTalkSpeak($App.speed32b, "", $App.Read1, $App.Read2);};
+$scope.PushButton897_click = function() {neoTalkSpeak($App.speed32b, "", $App.read1, $App.read2);};
 $scope.TextArea439_change = function() {localStorage.setItem("speed32b",$App.speed32b);};
-$scope.PushButton898_click = function() {neoTalkSpeak($App.speed32c, "", $App.Read1, $App.Read2);};
+$scope.PushButton898_click = function() {neoTalkSpeak($App.speed32c, "", $App.read1, $App.read2);};
 $scope.TextArea440_change = function() {localStorage.setItem("speed32c",$App.speed32c);};
-$scope.PushButton899_click = function() {neoTalkSpeak($App.speed32d, "", $App.Read1, $App.Read2);};
+$scope.PushButton899_click = function() {neoTalkSpeak($App.speed32d, "", $App.read1, $App.read2);};
 $scope.TextArea441_change = function() {localStorage.setItem("speed32d",$App.speed32d);};
-$scope.PushButton900_click = function() {neoTalkSpeak($App.speed32e, "", $App.Read1, $App.Read2);};
+$scope.PushButton900_click = function() {neoTalkSpeak($App.speed32e, "", $App.read1, $App.read2);};
 $scope.TextArea442_change = function() {localStorage.setItem("speed32e",$App.speed32e);};
 $scope.PushButton901_click = function() {$scope.SetObjectStyle("Ellipse32","fill","red");
 $scope.SetObjectStyle("Ellipse132","fill","red");
@@ -4620,7 +3940,7 @@ $scope.Pager13_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager13_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea16_change = function() {localStorage.setItem("HEALTHGENERAL001",$App.HEALTHGENERAL001);};
 $scope.TextArea218_change = function() {localStorage.setItem("HEALTHGENERAL002",$App.HEALTHGENERAL002);};
-$scope.PushButton101_click = function() {neoTalkSpeak($App.HEALTHGENERAL001, "", $App.Read1, $App.Read2);};
+$scope.PushButton101_click = function() {neoTalkSpeak($App.HEALTHGENERAL001, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Homestuff_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 40;
@@ -4677,7 +3997,7 @@ $scope.PushButton36_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager5_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager5_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea6_change = function() {localStorage.setItem("Homsstuffinote",$App.Homsstuffinote);};
-$scope.PushButton187_click = function() {neoTalkSpeak($App.Homsstuffinote, "", $App.Read1, $App.Read2);};
+$scope.PushButton187_click = function() {neoTalkSpeak($App.Homsstuffinote, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("WorkDesktop_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 41;
@@ -4686,7 +4006,7 @@ $scope.PushButton546_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager77_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager77_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea14_change = function() {localStorage.setItem("Homsstuffinote",$App.Homsstuffinote);};
-$scope.PushButton547_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $App.Read1, $App.Read2);};
+$scope.PushButton547_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $App.read1, $App.read2);};
 $scope.TextArea214_change = function() {localStorage.setItem("worknotes10",$App.worknotes10);};
 });
 NeoApp.controller("HowToV3_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
@@ -4695,7 +4015,7 @@ $App.NAB.PageID = "HowToV3";
 $scope.PushButton27_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager3_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager3_nextclick = function() {$scope.GotoNextPage();};
-$scope.PushButton28_click = function() {neoTalkSpeak($App.rcrimume1, "", $App.Read1, $App.Read2);};
+$scope.PushButton28_click = function() {neoTalkSpeak($App.rcrimume1, "", $App.read1, $App.read2);};
 $scope.TextArea220_change = function() {localStorage.setItem("rcrimume1",$App.rcrimume1);};
 $scope.TextArea219_change = function() {localStorage.setItem("rcrimume2",$App.rcrimume2);};
 $scope.TextArea221_change = function() {localStorage.setItem("rcrimume3",$App.rcrimume3);};
@@ -4858,7 +4178,7 @@ $scope.PushButton231_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager25_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager25_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea19_change = function() {localStorage.setItem("Tinote5",$App.Tinote5);};
-$scope.PushButton233_click = function() {neoTalkSpeak($App.Tinote5, "", $App.Read1, $App.Read2);};
+$scope.PushButton233_click = function() {neoTalkSpeak($App.Tinote5, "", $App.read1, $App.read2);};
 $scope.TextArea20_change = function() {localStorage.setItem("Tinote5c",$App.Tinote5c);};
 $scope.TextInput272_change = function() {localStorage.setItem("Plan1",$App.Plan1);};
 $scope.TextArea21_change = function() {localStorage.setItem("Tinote5b",$App.Tinote5b);};
@@ -4905,7 +4225,7 @@ $scope.TextInput245_change = function() {localStorage.setItem("Tititle006n",$App
 $scope.TextInput246_change = function() {localStorage.setItem("Tititle007",$App.Tititle007);};
 $scope.TextInput247_change = function() {localStorage.setItem("Tititle007n",$App.Tititle007n);};
 $scope.TextArea5_change = function() {localStorage.setItem("Tinote",$App.Tinote);};
-$scope.PushButton188_click = function() {neoTalkSpeak($App.Tinote, "", $App.Read1, $App.Read2);};
+$scope.PushButton188_click = function() {neoTalkSpeak($App.Tinote, "", $App.read1, $App.read2);};
 $scope.TextInput224_change = function() {localStorage.setItem("Tititle001n",$App.Tititle001n);};
 $scope.TextInput240_change = function() {localStorage.setItem("Tititle009n",$App.Tititle009n);};
 });
@@ -4972,7 +4292,7 @@ $scope.TextInput337_change = function() {localStorage.setItem("project1v",$App.p
 $scope.TextInput338_change = function() {localStorage.setItem("project1w",$App.project1w);};
 $scope.TextInput339_change = function() {localStorage.setItem("project1x",$App.project1x);};
 $scope.PushButton309_click = function() {$scope.GotoPage( "Project1pq" );};
-$scope.PushButton399_click = function() {neoTalkSpeak($App.Project1Main, "", $App.Read1, $App.Read2);};
+$scope.PushButton399_click = function() {neoTalkSpeak($App.Project1Main, "", $App.read1, $App.read2);};
 $scope.TextInput369_change = function() {localStorage.setItem("project1",$App.project1);};
 $scope.TextInput371_change = function() {localStorage.setItem("project1doc",$App.project1doc);};
 });
@@ -4982,7 +4302,7 @@ $App.NAB.PageID = "Project1pa";
 $scope.PushButton274_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea167_change = function() {localStorage.setItem("project1aT",$App.project1aT);};
 $scope.PushButton312_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton313_click = function() {neoTalkSpeak($App.project1aT, "", $App.Read1, $App.Read2);};
+$scope.PushButton313_click = function() {neoTalkSpeak($App.project1aT, "", $App.read1, $App.read2);};
 $scope.Pager30_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager30_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -4992,7 +4312,7 @@ $App.NAB.PageID = "Projectaa";
 $scope.PushButton403_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea191_change = function() {localStorage.setItem("project1aaT",$App.project1aaT);};
 $scope.PushButton404_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton405_click = function() {neoTalkSpeak($App.project1aaT, "", $App.Read1, $App.Read2);};
+$scope.PushButton405_click = function() {neoTalkSpeak($App.project1aaT, "", $App.read1, $App.read2);};
 $scope.Pager54_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager54_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5002,7 +4322,7 @@ $App.NAB.PageID = "Projectab";
 $scope.PushButton407_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea192_change = function() {localStorage.setItem("project1abT",$App.project1abT);};
 $scope.PushButton408_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton409_click = function() {neoTalkSpeak($App.project1abT, "", $App.Read1, $App.Read2);};
+$scope.PushButton409_click = function() {neoTalkSpeak($App.project1abT, "", $App.read1, $App.read2);};
 $scope.Pager55_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager55_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5012,7 +4332,7 @@ $App.NAB.PageID = "Projectac";
 $scope.PushButton411_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea193_change = function() {localStorage.setItem("project1acT",$App.project1acT);};
 $scope.PushButton412_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton413_click = function() {neoTalkSpeak($App.project1acT, "", $App.Read1, $App.Read2);};
+$scope.PushButton413_click = function() {neoTalkSpeak($App.project1acT, "", $App.read1, $App.read2);};
 $scope.Pager56_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager56_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5022,7 +4342,7 @@ $App.NAB.PageID = "Projectad";
 $scope.PushButton415_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea194_change = function() {localStorage.setItem("project1adT",$App.project1adT);};
 $scope.PushButton416_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton417_click = function() {neoTalkSpeak($App.project1adT, "", $App.Read1, $App.Read2);};
+$scope.PushButton417_click = function() {neoTalkSpeak($App.project1adT, "", $App.read1, $App.read2);};
 $scope.Pager57_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager57_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5034,7 +4354,7 @@ $scope.Pager31_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager31_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea168_change = function() {localStorage.setItem("project1bT",$App.project1bT);};
 $scope.PushButton311_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton314_click = function() {neoTalkSpeak($App.project1bT, "", $App.Read1, $App.Read2);};
+$scope.PushButton314_click = function() {neoTalkSpeak($App.project1bT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pc_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 53;
@@ -5044,7 +4364,7 @@ $scope.PushButton308_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager32_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager32_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton315_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton316_click = function() {neoTalkSpeak($App.project1cT, "", $App.Read1, $App.Read2);};
+$scope.PushButton316_click = function() {neoTalkSpeak($App.project1cT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pd_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 54;
@@ -5054,7 +4374,7 @@ $scope.PushButton310_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager33_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager33_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton317_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton318_click = function() {neoTalkSpeak($App.project1dT, "", $App.Read1, $App.Read2);};
+$scope.PushButton318_click = function() {neoTalkSpeak($App.project1dT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pe_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 55;
@@ -5064,7 +4384,7 @@ $scope.PushButton320_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager34_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager34_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton321_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton322_click = function() {neoTalkSpeak($App.project1eT, "", $App.Read1, $App.Read2);};
+$scope.PushButton322_click = function() {neoTalkSpeak($App.project1eT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pf_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 56;
@@ -5074,7 +4394,7 @@ $scope.PushButton324_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager35_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager35_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton325_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton326_click = function() {neoTalkSpeak($App.project1fT, "", $App.Read1, $App.Read2);};
+$scope.PushButton326_click = function() {neoTalkSpeak($App.project1fT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pg_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 57;
@@ -5084,7 +4404,7 @@ $scope.PushButton328_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager36_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager36_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton329_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton330_click = function() {neoTalkSpeak($App.project1gT, "", $App.Read1, $App.Read2);};
+$scope.PushButton330_click = function() {neoTalkSpeak($App.project1gT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1ph_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 58;
@@ -5094,7 +4414,7 @@ $scope.PushButton332_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager37_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager37_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton333_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton334_click = function() {neoTalkSpeak($App.project1hT, "", $App.Read1, $App.Read2);};
+$scope.PushButton334_click = function() {neoTalkSpeak($App.project1hT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pi_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 59;
@@ -5104,7 +4424,7 @@ $scope.PushButton336_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager38_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager38_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton337_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton338_click = function() {neoTalkSpeak($App.project1iT, "", $App.Read1, $App.Read2);};
+$scope.PushButton338_click = function() {neoTalkSpeak($App.project1iT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pj_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 60;
@@ -5114,7 +4434,7 @@ $scope.PushButton340_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager39_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager39_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton341_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton342_click = function() {neoTalkSpeak($App.project1jT, "", $App.Read1, $App.Read2);};
+$scope.PushButton342_click = function() {neoTalkSpeak($App.project1jT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pk_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 61;
@@ -5124,7 +4444,7 @@ $scope.PushButton344_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager40_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager40_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton345_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton346_click = function() {neoTalkSpeak($App.project1kT, "", $App.Read1, $App.Read2);};
+$scope.PushButton346_click = function() {neoTalkSpeak($App.project1kT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pl_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 62;
@@ -5134,7 +4454,7 @@ $scope.PushButton348_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager41_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager41_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton349_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton350_click = function() {neoTalkSpeak($App.project1lT, "", $App.Read1, $App.Read2);};
+$scope.PushButton350_click = function() {neoTalkSpeak($App.project1lT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pm_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 63;
@@ -5144,7 +4464,7 @@ $scope.PushButton352_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager42_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager42_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton353_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton354_click = function() {neoTalkSpeak($App.project1mT, "", $App.Read1, $App.Read2);};
+$scope.PushButton354_click = function() {neoTalkSpeak($App.project1mT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pn_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 64;
@@ -5154,7 +4474,7 @@ $scope.PushButton356_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager43_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager43_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton357_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton358_click = function() {neoTalkSpeak($App.project1nT, "", $App.Read1, $App.Read2);};
+$scope.PushButton358_click = function() {neoTalkSpeak($App.project1nT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pfo_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 65;
@@ -5164,7 +4484,7 @@ $scope.PushButton364_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager45_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager45_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton365_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton366_click = function() {neoTalkSpeak($App.project1oT, "", $App.Read1, $App.Read2);};
+$scope.PushButton366_click = function() {neoTalkSpeak($App.project1oT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pp_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 66;
@@ -5174,7 +4494,7 @@ $scope.PushButton368_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager46_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager46_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton369_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton370_click = function() {neoTalkSpeak($App.project1pT, "", $App.Read1, $App.Read2);};
+$scope.PushButton370_click = function() {neoTalkSpeak($App.project1pT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pq_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 67;
@@ -5184,7 +4504,7 @@ $scope.PushButton372_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager47_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager47_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton373_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton374_click = function() {neoTalkSpeak($App.project1qT, "", $App.Read1, $App.Read2);};
+$scope.PushButton374_click = function() {neoTalkSpeak($App.project1qT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pr_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 68;
@@ -5194,7 +4514,7 @@ $scope.PushButton376_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager48_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager48_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton377_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton378_click = function() {neoTalkSpeak($App.project1rT, "", $App.Read1, $App.Read2);};
+$scope.PushButton378_click = function() {neoTalkSpeak($App.project1rT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1ps_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 69;
@@ -5204,7 +4524,7 @@ $scope.PushButton380_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager49_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager49_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton381_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton382_click = function() {neoTalkSpeak($App.project1sT, "", $App.Read1, $App.Read2);};
+$scope.PushButton382_click = function() {neoTalkSpeak($App.project1sT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pft_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 70;
@@ -5214,7 +4534,7 @@ $scope.PushButton360_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager44_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager44_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton361_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton362_click = function() {neoTalkSpeak($App.project1tT, "", $App.Read1, $App.Read2);};
+$scope.PushButton362_click = function() {neoTalkSpeak($App.project1tT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pu_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 71;
@@ -5224,7 +4544,7 @@ $scope.PushButton384_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager50_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager50_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton385_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton386_click = function() {neoTalkSpeak($App.project1uT, "", $App.Read1, $App.Read2);};
+$scope.PushButton386_click = function() {neoTalkSpeak($App.project1uT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pv_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 72;
@@ -5234,7 +4554,7 @@ $scope.PushButton388_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager51_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager51_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton389_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton390_click = function() {neoTalkSpeak($App.project1vT, "", $App.Read1, $App.Read2);};
+$scope.PushButton390_click = function() {neoTalkSpeak($App.project1vT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1pw_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 73;
@@ -5244,7 +4564,7 @@ $scope.PushButton392_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager52_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager52_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton393_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton394_click = function() {neoTalkSpeak($App.project1wT, "", $App.Read1, $App.Read2);};
+$scope.PushButton394_click = function() {neoTalkSpeak($App.project1wT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project1px_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 74;
@@ -5254,7 +4574,7 @@ $scope.PushButton396_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager53_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager53_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton397_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton398_click = function() {neoTalkSpeak($App.project1xT, "", $App.Read1, $App.Read2);};
+$scope.PushButton398_click = function() {neoTalkSpeak($App.project1xT, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Project2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 75;
@@ -5319,7 +4639,7 @@ $scope.TextInput366_change = function() {localStorage.setItem("project2v",$App.p
 $scope.TextInput367_change = function() {localStorage.setItem("project2",$App.project2w);};
 $scope.TextInput368_change = function() {localStorage.setItem("project2x",$App.project2x);};
 $scope.PushButton448_click = function() {$scope.GotoPage( "Project2pq" );};
-$scope.PushButton449_click = function() {neoTalkSpeak($App.Project2Main, "", $App.Read1, $App.Read2);};
+$scope.PushButton449_click = function() {neoTalkSpeak($App.Project2Main, "", $App.read1, $App.read2);};
 $scope.TextInput370_change = function() {localStorage.setItem("project2",$App.project2);};
 $scope.TextInput372_change = function() {localStorage.setItem("project2",$App.project2);};
 $scope.TextInput373_change = function() {localStorage.setItem("project2doc",$App.project2doc);};
@@ -5330,7 +4650,7 @@ $App.NAB.PageID = "Projectaa2";
 $scope.PushButton451_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea196_change = function() {localStorage.setItem("project2aaT",$App.project2aaT);};
 $scope.PushButton452_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton453_click = function() {neoTalkSpeak($App.project2aaT, "", $App.Read1, $App.Read2);};
+$scope.PushButton453_click = function() {neoTalkSpeak($App.project2aaT, "", $App.read1, $App.read2);};
 $scope.Pager59_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager59_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5340,7 +4660,7 @@ $App.NAB.PageID = "Projectab2";
 $scope.PushButton455_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea197_change = function() {localStorage.setItem("project2abT",$App.project2abT);};
 $scope.PushButton456_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton457_click = function() {neoTalkSpeak($App.project2abT, "", $App.Read1, $App.Read2);};
+$scope.PushButton457_click = function() {neoTalkSpeak($App.project2abT, "", $App.read1, $App.read2);};
 $scope.Pager60_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager60_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5349,7 +4669,7 @@ $App.NAB.PageNumber = 78;
 $App.NAB.PageID = "Projectac2";
 $scope.PushButton459_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton460_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton461_click = function() {neoTalkSpeak($App.project2acT, "", $App.Read1, $App.Read2);};
+$scope.PushButton461_click = function() {neoTalkSpeak($App.project2acT, "", $App.read1, $App.read2);};
 $scope.Pager61_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager61_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea198_change = function() {localStorage.setItem("project2acT",$App.project2acT);
@@ -5362,7 +4682,7 @@ $App.NAB.PageID = "Projectad2";
 $scope.PushButton463_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea199_change = function() {localStorage.setItem("project2adT",$App.project2adT);};
 $scope.PushButton464_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton465_click = function() {neoTalkSpeak($App.project2adT, "", $App.Read1, $App.Read2);};
+$scope.PushButton465_click = function() {neoTalkSpeak($App.project2adT, "", $App.read1, $App.read2);};
 $scope.Pager62_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager62_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5372,7 +4692,7 @@ $App.NAB.PageID = "Project2pa";
 $scope.PushButton467_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea200_change = function() {localStorage.setItem("project2aT",$App.project2aT);};
 $scope.PushButton468_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton469_click = function() {neoTalkSpeak($App.project2aT, "", $App.Read1, $App.Read2);};
+$scope.PushButton469_click = function() {neoTalkSpeak($App.project2aT, "", $App.read1, $App.read2);};
 $scope.Pager63_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager63_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5382,7 +4702,7 @@ $App.NAB.PageID = "Project2pb";
 $scope.PushButton471_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea201_change = function() {localStorage.setItem("project2bT",$App.project2bT);};
 $scope.PushButton472_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton473_click = function() {neoTalkSpeak($App.project2bT, "", $App.Read1, $App.Read2);};
+$scope.PushButton473_click = function() {neoTalkSpeak($App.project2bT, "", $App.read1, $App.read2);};
 $scope.Pager64_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager64_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5392,7 +4712,7 @@ $App.NAB.PageID = "Project2pc";
 $scope.PushButton475_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea202_change = function() {localStorage.setItem("project2cT",$App.project2cT);};
 $scope.PushButton476_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton477_click = function() {neoTalkSpeak($App.project2cT, "", $App.Read1, $App.Read2);};
+$scope.PushButton477_click = function() {neoTalkSpeak($App.project2cT, "", $App.read1, $App.read2);};
 $scope.Pager65_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager65_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5402,7 +4722,7 @@ $App.NAB.PageID = "Project2pd";
 $scope.PushButton479_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea203_change = function() {localStorage.setItem("project2dT",$App.project2dT);};
 $scope.PushButton480_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton481_click = function() {neoTalkSpeak($App.project2dT, "", $App.Read1, $App.Read2);};
+$scope.PushButton481_click = function() {neoTalkSpeak($App.project2dT, "", $App.read1, $App.read2);};
 $scope.Pager66_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager66_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5412,7 +4732,7 @@ $App.NAB.PageID = "Project2pe";
 $scope.PushButton483_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea204_change = function() {localStorage.setItem("project2eT",$App.project2eT);};
 $scope.PushButton484_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton485_click = function() {neoTalkSpeak($App.project2eT, "", $App.Read1, $App.Read2);};
+$scope.PushButton485_click = function() {neoTalkSpeak($App.project2eT, "", $App.read1, $App.read2);};
 $scope.Pager67_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager67_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5422,7 +4742,7 @@ $App.NAB.PageID = "Project2pf";
 $scope.PushButton487_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea205_change = function() {localStorage.setItem("project2fT",$App.project2fT);};
 $scope.PushButton488_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton489_click = function() {neoTalkSpeak($App.project2fT, "", $App.Read1, $App.Read2);};
+$scope.PushButton489_click = function() {neoTalkSpeak($App.project2fT, "", $App.read1, $App.read2);};
 $scope.Pager68_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager68_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5432,7 +4752,7 @@ $App.NAB.PageID = "Project2pg";
 $scope.PushButton491_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea206_change = function() {localStorage.setItem("project2gT",$App.project2gT);};
 $scope.PushButton492_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton493_click = function() {neoTalkSpeak($App.project2gT, "", $App.Read1, $App.Read2);};
+$scope.PushButton493_click = function() {neoTalkSpeak($App.project2gT, "", $App.read1, $App.read2);};
 $scope.Pager69_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager69_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5442,7 +4762,7 @@ $App.NAB.PageID = "Project2ph";
 $scope.PushButton495_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea207_change = function() {localStorage.setItem("projecthT",$App.projecthT);};
 $scope.PushButton496_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton497_click = function() {neoTalkSpeak($App.project2hT, "", $App.Read1, $App.Read2);};
+$scope.PushButton497_click = function() {neoTalkSpeak($App.project2hT, "", $App.read1, $App.read2);};
 $scope.Pager70_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager70_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5452,7 +4772,7 @@ $App.NAB.PageID = "Project2pi";
 $scope.PushButton499_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea208_change = function() {localStorage.setItem("project2iT",$App.project2iT);};
 $scope.PushButton500_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton501_click = function() {neoTalkSpeak($App.project2iT, "", $App.Read1, $App.Read2);};
+$scope.PushButton501_click = function() {neoTalkSpeak($App.project2iT, "", $App.read1, $App.read2);};
 $scope.Pager71_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager71_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5462,7 +4782,7 @@ $App.NAB.PageID = "Project2pj";
 $scope.PushButton503_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea209_change = function() {localStorage.setItem("project2jT",$App.project2jT);};
 $scope.PushButton504_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton505_click = function() {neoTalkSpeak($App.project2jT, "", $App.Read1, $App.Read2);};
+$scope.PushButton505_click = function() {neoTalkSpeak($App.project2jT, "", $App.read1, $App.read2);};
 $scope.Pager72_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager72_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5472,7 +4792,7 @@ $App.NAB.PageID = "Project2pk";
 $scope.PushButton507_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea210_change = function() {localStorage.setItem("project2kT",$App.project2kT);};
 $scope.PushButton508_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton509_click = function() {neoTalkSpeak($App.project2kT, "", $App.Read1, $App.Read2);};
+$scope.PushButton509_click = function() {neoTalkSpeak($App.project2kT, "", $App.read1, $App.read2);};
 $scope.Pager73_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager73_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5482,7 +4802,7 @@ $App.NAB.PageID = "Project2pl";
 $scope.PushButton511_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea211_change = function() {localStorage.setItem("project2lT",$App.project2lT);};
 $scope.PushButton512_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton513_click = function() {neoTalkSpeak($App.project2lT, "", $App.Read1, $App.Read2);};
+$scope.PushButton513_click = function() {neoTalkSpeak($App.project2lT, "", $App.read1, $App.read2);};
 $scope.Pager74_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager74_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5492,7 +4812,7 @@ $App.NAB.PageID = "Project2pm";
 $scope.PushButton515_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea212_change = function() {localStorage.setItem("project2mT",$App.project2mT);};
 $scope.PushButton516_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton517_click = function() {neoTalkSpeak($App.project2mT, "", $App.Read1, $App.Read2);};
+$scope.PushButton517_click = function() {neoTalkSpeak($App.project2mT, "", $App.read1, $App.read2);};
 $scope.Pager75_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager75_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5502,7 +4822,7 @@ $App.NAB.PageID = "Project2pn";
 $scope.PushButton519_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea213_change = function() {localStorage.setItem("project2nT",$App.project2nT);};
 $scope.PushButton520_click = function() {$scope.GotoPage( "Projects" );};
-$scope.PushButton521_click = function() {neoTalkSpeak($App.project2nT, "", $App.Read1, $App.Read2);};
+$scope.PushButton521_click = function() {neoTalkSpeak($App.project2nT, "", $App.read1, $App.read2);};
 $scope.Pager76_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager76_nextclick = function() {$scope.GotoNextPage();};
 });
@@ -5668,7 +4988,7 @@ $scope.Pager11_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea8_change = function() {localStorage.setItem("WorkBstuffnote",$App.WorkBstuffnote);};
 $scope.Pager17_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager17_nextclick = function() {$scope.GotoNextPage();};
-$scope.PushButton186_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $App.Read1, $App.Read2);};
+$scope.PushButton186_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Workstuff-C_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 97;
@@ -5727,7 +5047,7 @@ $scope.Pager14_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea9_change = function() {localStorage.setItem("WorkCstuffnote",$App.WorkCstuffnote);};
 $scope.Pager18_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager18_nextclick = function() {$scope.GotoNextPage();};
-$scope.PushButton154_click = function() {neoTalkSpeak($App.WorkCstuffnote, "", $App.Read1, $App.Read2);};
+$scope.PushButton154_click = function() {neoTalkSpeak($App.WorkCstuffnote, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("Prayer_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 98;
@@ -5738,7 +5058,7 @@ $scope.Pager20_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea11_change = function() {localStorage.setItem("Prayer",$App.Prayer);};
 $scope.Pager21_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager21_nextclick = function() {$scope.GotoNextPage();};
-$scope.PushButton210_click = function() {neoTalkSpeak($App.Prayer, "", $App.Read1, $App.Read2);};
+$scope.PushButton210_click = function() {neoTalkSpeak($App.Prayer, "", $App.read1, $App.read2);};
 $scope.TextArea215_change = function() {localStorage.setItem("Prayer2",$App.Prayer2);};
 $scope.TextArea216_change = function() {localStorage.setItem("Prayer3",$App.Prayer3);};
 $scope.TextArea217_change = function() {localStorage.setItem("Prayer4",$App.Prayer4);};
@@ -5760,7 +5080,7 @@ $scope.PushButton212_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager23_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager23_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea17_change = function() {localStorage.setItem("Next",$App.Next);};
-$scope.PushButton213_click = function() {neoTalkSpeak($App.Next, "", $App.Read1, $App.Read2);};
+$scope.PushButton213_click = function() {neoTalkSpeak($App.Next, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("DailyReps_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 101;
@@ -5769,11 +5089,11 @@ $scope.PushButton197_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager22_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager22_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea12_change = function() {localStorage.setItem("Reps",$App.Reps);};
-$scope.PushButton198_click = function() {neoTalkSpeak($App.Reps, "", $App.Read1, $App.Read2);};
+$scope.PushButton198_click = function() {neoTalkSpeak($App.Reps, "", $App.read1, $App.read2);};
 $scope.TextArea13_change = function() {localStorage.setItem("Reps02",$App.Reps02);};
-$scope.PushButton528_click = function() {neoTalkSpeak($App.Reps02, "", $App.Read1, $App.Read2);};
-$scope.PushButton355_click = function() {neoTalkSpeak($App.Reps03, "", $App.Read1, $App.Read2);};
-$scope.PushButton359_click = function() {neoTalkSpeak($App.Reps04, "", $App.Read1, $App.Read2);};
+$scope.PushButton528_click = function() {neoTalkSpeak($App.Reps02, "", $App.read1, $App.read2);};
+$scope.PushButton355_click = function() {neoTalkSpeak($App.Reps03, "", $App.read1, $App.read2);};
+$scope.PushButton359_click = function() {neoTalkSpeak($App.Reps04, "", $App.read1, $App.read2);};
 $scope.TextArea246_change = function() {localStorage.setItem("Reps03",$App.Reps);};
 $scope.TextArea247_change = function() {localStorage.setItem("Reps04",$App.Reps04);};
 $scope.TextArea399_change = function() {localStorage.setItem("Reps1tit",$App.Reps1tit);};
@@ -5861,7 +5181,7 @@ $scope.Pager15_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea10_change = function() {localStorage.setItem("WorkDstuffnote",$App.WorkDstuffnote);};
 $scope.Pager19_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager19_nextclick = function() {$scope.GotoNextPage();};
-$scope.PushButton30_click = function() {neoTalkSpeak($App.WorkDstuffnote, "", $App.Read1, $App.Read2);};
+$scope.PushButton30_click = function() {neoTalkSpeak($App.WorkDstuffnote, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("VERSION_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 105;
@@ -7248,7 +6568,7 @@ $scope.PushButton220_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager26_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager26_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea25_change = function() {localStorage.setItem("Reset",$App.Reset);};
-$scope.PushButton221_click = function() {neoTalkSpeak($App.Reset, "", $App.Read1, $App.Read2);};
+$scope.PushButton221_click = function() {neoTalkSpeak($App.Reset, "", $App.read1, $App.read2);};
 $scope.TextArea26_change = function() {localStorage.setItem("Reset1a",$App.Reset1a);};
 $scope.TextArea27_change = function() {localStorage.setItem("Reset1",$App.Reset1);};
 $scope.TextArea28_change = function() {localStorage.setItem("Reset2a",$App.Reset2a);};
@@ -7290,7 +6610,7 @@ $App.NAB.PageID = "Stages";
 $scope.Pager27_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager27_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton29_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton222_click = function() {neoTalkSpeak($App.Reset, "", $App.Read1, $App.Read2);};
+$scope.PushButton222_click = function() {neoTalkSpeak($App.Reset, "", $App.read1, $App.read2);};
 $scope.TextArea73_change = function() {localStorage.setItem("Reset7a",$App.Reset7a);};
 $scope.TextArea74_change = function() {localStorage.setItem("Reset7",$App.Reset7);};
 $scope.TextArea75_change = function() {localStorage.setItem("Reset8a",$App.Reset8a);};
@@ -7326,7 +6646,7 @@ $App.NAB.PageID = "Lanes";
 $scope.PushButton224_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager28_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager28_nextclick = function() {$scope.GotoNextPage();};
-$scope.PushButton225_click = function() {neoTalkSpeak($App.Reset, "", $App.Read1, $App.Read2);};
+$scope.PushButton225_click = function() {neoTalkSpeak($App.Reset, "", $App.read1, $App.read2);};
 $scope.TextArea98_change = function() {localStorage.setItem("Reset12a",$App.Reset12a);};
 $scope.TextArea99_change = function() {localStorage.setItem("Reset12",$App.Reset12);};
 $scope.TextArea100_change = function() {localStorage.setItem("Reset13a",$App.Reset13a);};
@@ -7360,7 +6680,7 @@ $scope.PushButton215_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager24_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager24_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea18_change = function() {localStorage.setItem("Me",$App.Me);};
-$scope.PushButton216_click = function() {neoTalkSpeak($App.Me, "", $App.Read1, $App.Read2);};
+$scope.PushButton216_click = function() {neoTalkSpeak($App.Me, "", $App.read1, $App.read2);};
 });
 NeoApp.controller("bounce_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 117;
@@ -7370,7 +6690,7 @@ NeoApp.controller("P012-Index-Cards-Read1_Ctrl", function($scope,$rootScope,$rou
 $App.NAB.PageNumber = 118;
 $App.NAB.PageID = "P012-Index-Cards-Read1";
 $scope.TextArea454_change = function() {localStorage.setItem("i0001",$App.i0001);};
-$scope.Headline527_click = function() {neoTalkSpeak($App.i0001, "", $App.Read1, $App.Read2);};
+$scope.Headline527_click = function() {neoTalkSpeak($App.i0001, "", $App.read1, $App.read2);};
 $scope.Pager141_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager141_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton918_click = function() {$scope.GotoPage( "ia01" );};
