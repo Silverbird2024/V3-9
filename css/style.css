@@ -70,7 +70,7 @@ html{background:#eeeeee}body{background:rgba(255,255,255,0);position:absolute;to
 #Headline29 {position:absolute;left:2px;top:52px;width:109px;height:63px;margin:0;color:green;font-size:28pt;font-weight:800;text-align:center;text-shadow:2px 2px 3px WHITE}
 #Headline457 {position:absolute;left:21px;top:99px;width:326px;height:29px;margin:0;color:blue;font-size:17pt;font-weight:600;text-shadow:2px 2px 3px WHITE}
 #Headline457:hover {color:RED;font-weight:800}
-#PushButton22 {position:absolute;left:13px;top:2px;width:64px;height:33px;margin:0;color:#66B032;font-size:9pt}
+#PushButton22 {position:absolute;left:13px;top:2px;width:64px;height:30px;margin:0;color:#66B032;font-size:9pt}
 #PushButton22:hover {color:green}
 #Headline30 {position:absolute;left:3px;top:39px;width:363px;height:23px;margin:0;color:blue;font-size:10pt;font-weight:600;text-align:center}
 #Headline30:hover {color:#FFFF00}
