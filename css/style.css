@@ -1574,7 +1574,7 @@ html{background:#eeeeee}body{background:rgba(255,255,255,0);position:absolute;to
 #TextInput71 {position:absolute;left:399px;top:172px;width:209px;height:37px;margin:0;color:blue}
 #PushButton39 {position:absolute;left:29px;top:184px;width:300px;height:42px;margin:0;color:blue}
 #PushButton44 {position:absolute;left:261px;top:49px;width:66px;height:42px;margin:0;color:blue}
-#Headline388 {position:absolute;left:17px;top:266px;width:163px;height:545px;margin:0;color:blue;font-size:8pt;font-weight:600;line-height:100%}
+#Headline388 {position:absolute;left:12px;top:268px;width:163px;height:545px;margin:0;color:blue;font-size:8pt;font-weight:600;line-height:100%}
 #Headline389 {position:absolute;left:13px;top:238px;width:168px;height:23px;margin:0;color:blue;font-size:12pt;font-weight:600}
 #Headline390 {position:absolute;left:186px;top:238px;width:159px;height:23px;margin:0;color:blue;font-size:12pt;font-weight:600}
 #Headline391 {position:absolute;left:187px;top:264px;width:163px;height:545px;margin:0;color:blue;font-size:9pt;font-weight:600}
@@ -1714,7 +1714,7 @@ html{background:#eeeeee}body{background:rgba(255,255,255,0);position:absolute;to
 #TextInput502 {position:absolute;left:565px;top:460px;width:50px;height:26px;margin:0;color:blue}
 #TextInput503 {position:absolute;left:565px;top:494px;width:50px;height:26px;margin:0;color:blue}
 #PushButton73 {position:absolute;left:394px;top:535px;width:69px;height:30px;margin:0;}
-#Headline412 {position:absolute;left:476px;top:540px;width:140px;height:25px;margin:0;font-size:16pt}
+#Headline412 {position:absolute;left:476px;top:540px;width:266px;height:43px;margin:0;font-size:16pt}
 #TextInput504 {position:absolute;left:631px;top:45px;width:330px;height:26px;margin:0;color:blue;font-size:8pt}
 #TextInput505 {position:absolute;left:631px;top:74px;width:330px;height:26px;margin:0;color:blue;font-size:8pt}
 #TextInput506 {position:absolute;left:631px;top:103px;width:330px;height:26px;margin:0;color:blue;font-size:8pt}
@@ -1730,6 +1730,7 @@ html{background:#eeeeee}body{background:rgba(255,255,255,0);position:absolute;to
 #TextInput540 {position:absolute;left:626px;top:428px;width:330px;height:26px;margin:0;color:blue;font-size:8pt}
 #TextInput541 {position:absolute;left:625px;top:462px;width:330px;height:26px;margin:0;color:blue;font-size:8pt}
 #TextInput542 {position:absolute;left:626px;top:495px;width:330px;height:26px;margin:0;color:blue;font-size:8pt}
+#PushButton105 {position:absolute;left:719px;top:541px;width:162px;height:26px;margin:0;}
 #Barrels3 {position:relative;width:100%;height:100%;overflow:auto;;background-color:#E0E0E0}
 #Headline46 {position:absolute;left:13px;top:7px;width:228px;height:41px;margin:0;color:#008080;text-align:center}
 #Headline53 {position:absolute;left:249px;top:6px;width:112px;height:23px;margin:0;color:green;font-size:16pt}
