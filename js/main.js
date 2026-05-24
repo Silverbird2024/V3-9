@@ -1,10 +1,5530 @@
-var NeoApp=angular.module("NeoApp",["ngAnimate","ngRoute","ngSanitize","ngTouch","ui.bootstrap"],function($interpolateProvider){$interpolateProvider.startSymbol("[");$interpolateProvider.endSymbol("]");});NeoApp.config(["$routeProvider",function($routeProvider,$scope,$rootScope){$routeProvider.when("/Temphome",{templateUrl:"Temphome",controller:"Temphome_Ctrl"});$routeProvider.when("/wiiaa",{templateUrl:"wiiaa",controller:"wiiaa_Ctrl"});$routeProvider.when("/Reset2026",{templateUrl:"Reset2026",controller:"Reset2026_Ctrl"});$routeProvider.when("/Reset00",{templateUrl:"Reset00",controller:"Reset00_Ctrl"});$routeProvider.when("/Reset01",{templateUrl:"Reset01",controller:"Reset01_Ctrl"});$routeProvider.when("/Reset02",{templateUrl:"Reset02",controller:"Reset02_Ctrl"});$routeProvider.when("/onehundredandonebusinesses",{templateUrl:"onehundredandonebusinesses",controller:"onehundredandonebusinesses_Ctrl"});$routeProvider.when("/Indexwrite",{templateUrl:"Indexwrite",controller:"Indexwrite_Ctrl"});$routeProvider.when("/Records-2026",{templateUrl:"Records-2026",controller:"Records-2026_Ctrl"});$routeProvider.when("/CopyAll",{templateUrl:"CopyAll",controller:"CopyAll_Ctrl"});$routeProvider.when("/tilesv5",{templateUrl:"tilesv5",controller:"tilesv5_Ctrl"});$routeProvider.when("/Barrels",{templateUrl:"Barrels",controller:"Barrels_Ctrl"});$routeProvider.when("/Barrels1",{templateUrl:"Barrels1",controller:"Barrels1_Ctrl"});$routeProvider.when("/Barrels2",{templateUrl:"Barrels2",controller:"Barrels2_Ctrl"});$routeProvider.when("/Barrels3",{templateUrl:"Barrels3",controller:"Barrels3_Ctrl"});$routeProvider.when("/Barrels4",{templateUrl:"Barrels4",controller:"Barrels4_Ctrl"});$routeProvider.when("/tilesv5-2",{templateUrl:"tilesv5-2",controller:"tilesv5-2_Ctrl"});$routeProvider.when("/tilesv5-3",{templateUrl:"tilesv5-3",controller:"tilesv5-3_Ctrl"});$routeProvider.when("/External01",{templateUrl:"External01",controller:"External01_Ctrl"});$routeProvider.when("/Speed01",{templateUrl:"Speed01",controller:"Speed01_Ctrl"});$routeProvider.when("/Speed03",{templateUrl:"Speed03",controller:"Speed03_Ctrl"});$routeProvider.when("/Speed04",{templateUrl:"Speed04",controller:"Speed04_Ctrl"});$routeProvider.when("/Speed02",{templateUrl:"Speed02",controller:"Speed02_Ctrl"});$routeProvider.when("/Speed05",{templateUrl:"Speed05",controller:"Speed05_Ctrl"});$routeProvider.when("/Speed06",{templateUrl:"Speed06",controller:"Speed06_Ctrl"});$routeProvider.when("/Speed07",{templateUrl:"Speed07",controller:"Speed07_Ctrl"});$routeProvider.when("/Speed08",{templateUrl:"Speed08",controller:"Speed08_Ctrl"});$routeProvider.when("/Speed10",{templateUrl:"Speed10",controller:"Speed10_Ctrl"});$routeProvider.when("/Speed11",{templateUrl:"Speed11",controller:"Speed11_Ctrl"});$routeProvider.when("/Speed09",{templateUrl:"Speed09",controller:"Speed09_Ctrl"});$routeProvider.when("/Speed12",{templateUrl:"Speed12",controller:"Speed12_Ctrl"});$routeProvider.when("/Speed13",{templateUrl:"Speed13",controller:"Speed13_Ctrl"});$routeProvider.when("/Speed14",{templateUrl:"Speed14",controller:"Speed14_Ctrl"});$routeProvider.when("/Speed15",{templateUrl:"Speed15",controller:"Speed15_Ctrl"});$routeProvider.when("/Speed16",{templateUrl:"Speed16",controller:"Speed16_Ctrl"});$routeProvider.when("/Speed17",{templateUrl:"Speed17",controller:"Speed17_Ctrl"});$routeProvider.when("/Speed18",{templateUrl:"Speed18",controller:"Speed18_Ctrl"});$routeProvider.when("/Speed19",{templateUrl:"Speed19",controller:"Speed19_Ctrl"});$routeProvider.when("/Speed20",{templateUrl:"Speed20",controller:"Speed20_Ctrl"});$routeProvider.when("/Speed21",{templateUrl:"Speed21",controller:"Speed21_Ctrl"});$routeProvider.when("/Speed22",{templateUrl:"Speed22",controller:"Speed22_Ctrl"});$routeProvider.when("/Speed23",{templateUrl:"Speed23",controller:"Speed23_Ctrl"});$routeProvider.when("/Speed24",{templateUrl:"Speed24",controller:"Speed24_Ctrl"});$routeProvider.when("/Speed25",{templateUrl:"Speed25",controller:"Speed25_Ctrl"});$routeProvider.when("/Speed26",{templateUrl:"Speed26",controller:"Speed26_Ctrl"});$routeProvider.when("/Speed27",{templateUrl:"Speed27",controller:"Speed27_Ctrl"});$routeProvider.when("/Speed28",{templateUrl:"Speed28",controller:"Speed28_Ctrl"});$routeProvider.when("/Speed29",{templateUrl:"Speed29",controller:"Speed29_Ctrl"});$routeProvider.when("/Speed30",{templateUrl:"Speed30",controller:"Speed30_Ctrl"});$routeProvider.when("/Speed31",{templateUrl:"Speed31",controller:"Speed31_Ctrl"});$routeProvider.when("/Speed32",{templateUrl:"Speed32",controller:"Speed32_Ctrl"});$routeProvider.when("/HomeTiles",{templateUrl:"HomeTiles",controller:"HomeTiles_Ctrl"});$routeProvider.when("/TNeoAppPage11",{templateUrl:"TNeoAppPage11",controller:"TNeoAppPage11_Ctrl"});$routeProvider.when("/Health",{templateUrl:"Health",controller:"Health_Ctrl"});$routeProvider.when("/Homestuff",{templateUrl:"Homestuff",controller:"Homestuff_Ctrl"});$routeProvider.when("/elink2",{templateUrl:"elink2",controller:"elink2_Ctrl"});$routeProvider.when("/WorkDesktop",{templateUrl:"WorkDesktop",controller:"WorkDesktop_Ctrl"});$routeProvider.when("/skillsphil",{templateUrl:"skillsphil",controller:"skillsphil_Ctrl"});$routeProvider.when("/Project1",{templateUrl:"Project1",controller:"Project1_Ctrl"});$routeProvider.when("/Project1pa",{templateUrl:"Project1pa",controller:"Project1pa_Ctrl"});$routeProvider.when("/Projectaa",{templateUrl:"Projectaa",controller:"Projectaa_Ctrl"});$routeProvider.when("/Projectab",{templateUrl:"Projectab",controller:"Projectab_Ctrl"});$routeProvider.when("/Projectac",{templateUrl:"Projectac",controller:"Projectac_Ctrl"});$routeProvider.when("/Projectad",{templateUrl:"Projectad",controller:"Projectad_Ctrl"});$routeProvider.when("/Project1pb",{templateUrl:"Project1pb",controller:"Project1pb_Ctrl"});$routeProvider.when("/Project1pc",{templateUrl:"Project1pc",controller:"Project1pc_Ctrl"});$routeProvider.when("/Project1pd",{templateUrl:"Project1pd",controller:"Project1pd_Ctrl"});$routeProvider.when("/Project1pe",{templateUrl:"Project1pe",controller:"Project1pe_Ctrl"});$routeProvider.when("/Project1pf",{templateUrl:"Project1pf",controller:"Project1pf_Ctrl"});$routeProvider.when("/Project1pg",{templateUrl:"Project1pg",controller:"Project1pg_Ctrl"});$routeProvider.when("/Project1ph",{templateUrl:"Project1ph",controller:"Project1ph_Ctrl"});$routeProvider.when("/Project1pi",{templateUrl:"Project1pi",controller:"Project1pi_Ctrl"});$routeProvider.when("/Project1pj",{templateUrl:"Project1pj",controller:"Project1pj_Ctrl"});$routeProvider.when("/Project1pk",{templateUrl:"Project1pk",controller:"Project1pk_Ctrl"});$routeProvider.when("/Project1pl",{templateUrl:"Project1pl",controller:"Project1pl_Ctrl"});$routeProvider.when("/Project1pm",{templateUrl:"Project1pm",controller:"Project1pm_Ctrl"});$routeProvider.when("/Project1pn",{templateUrl:"Project1pn",controller:"Project1pn_Ctrl"});$routeProvider.when("/Project1pfo",{templateUrl:"Project1pfo",controller:"Project1pfo_Ctrl"});$routeProvider.when("/Project1pp",{templateUrl:"Project1pp",controller:"Project1pp_Ctrl"});$routeProvider.when("/Project1pq",{templateUrl:"Project1pq",controller:"Project1pq_Ctrl"});$routeProvider.when("/Project1pr",{templateUrl:"Project1pr",controller:"Project1pr_Ctrl"});$routeProvider.when("/Project1ps",{templateUrl:"Project1ps",controller:"Project1ps_Ctrl"});$routeProvider.when("/Project1pft",{templateUrl:"Project1pft",controller:"Project1pft_Ctrl"});$routeProvider.when("/Project1pu",{templateUrl:"Project1pu",controller:"Project1pu_Ctrl"});$routeProvider.when("/Project1pv",{templateUrl:"Project1pv",controller:"Project1pv_Ctrl"});$routeProvider.when("/Project1pw",{templateUrl:"Project1pw",controller:"Project1pw_Ctrl"});$routeProvider.when("/Project1px",{templateUrl:"Project1px",controller:"Project1px_Ctrl"});$routeProvider.when("/Project2",{templateUrl:"Project2",controller:"Project2_Ctrl"});$routeProvider.when("/Projectaa2",{templateUrl:"Projectaa2",controller:"Projectaa2_Ctrl"});$routeProvider.when("/Projectab2",{templateUrl:"Projectab2",controller:"Projectab2_Ctrl"});$routeProvider.when("/Projectac2",{templateUrl:"Projectac2",controller:"Projectac2_Ctrl"});$routeProvider.when("/Projectad2",{templateUrl:"Projectad2",controller:"Projectad2_Ctrl"});$routeProvider.when("/Project2pa",{templateUrl:"Project2pa",controller:"Project2pa_Ctrl"});$routeProvider.when("/Project2pb",{templateUrl:"Project2pb",controller:"Project2pb_Ctrl"});$routeProvider.when("/Project2pc",{templateUrl:"Project2pc",controller:"Project2pc_Ctrl"});$routeProvider.when("/Project2pd",{templateUrl:"Project2pd",controller:"Project2pd_Ctrl"});$routeProvider.when("/Project2pe",{templateUrl:"Project2pe",controller:"Project2pe_Ctrl"});$routeProvider.when("/Project2pf",{templateUrl:"Project2pf",controller:"Project2pf_Ctrl"});$routeProvider.when("/Project2pg",{templateUrl:"Project2pg",controller:"Project2pg_Ctrl"});$routeProvider.when("/Project2ph",{templateUrl:"Project2ph",controller:"Project2ph_Ctrl"});$routeProvider.when("/Project2pi",{templateUrl:"Project2pi",controller:"Project2pi_Ctrl"});$routeProvider.when("/Project2pj",{templateUrl:"Project2pj",controller:"Project2pj_Ctrl"});$routeProvider.when("/Project2pk",{templateUrl:"Project2pk",controller:"Project2pk_Ctrl"});$routeProvider.when("/Project2pl",{templateUrl:"Project2pl",controller:"Project2pl_Ctrl"});$routeProvider.when("/Project2pm",{templateUrl:"Project2pm",controller:"Project2pm_Ctrl"});$routeProvider.when("/Project2pn",{templateUrl:"Project2pn",controller:"Project2pn_Ctrl"});$routeProvider.when("/C-A-Z",{templateUrl:"C-A-Z",controller:"C-A-Z_Ctrl"});$routeProvider.when("/Workstuff-B",{templateUrl:"Workstuff-B",controller:"Workstuff-B_Ctrl"});$routeProvider.when("/Prayer",{templateUrl:"Prayer",controller:"Prayer_Ctrl"});$routeProvider.when("/Journal",{templateUrl:"Journal",controller:"Journal_Ctrl"});$routeProvider.when("/Next",{templateUrl:"Next",controller:"Next_Ctrl"});$routeProvider.when("/DailyReps",{templateUrl:"DailyReps",controller:"DailyReps_Ctrl"});$routeProvider.when("/Home",{templateUrl:"Home",controller:"Home_Ctrl"});$routeProvider.when("/VERSION",{templateUrl:"VERSION",controller:"VERSION_Ctrl"});$routeProvider.when("/ResetRules",{templateUrl:"ResetRules",controller:"ResetRules_Ctrl"});$routeProvider.when("/Resetoverview",{templateUrl:"Resetoverview",controller:"Resetoverview_Ctrl"});$routeProvider.when("/ResetNotes",{templateUrl:"ResetNotes",controller:"ResetNotes_Ctrl"});$routeProvider.when("/Template001",{templateUrl:"Template001",controller:"Template001_Ctrl"});$routeProvider.when("/Template1setup",{templateUrl:"Template1setup",controller:"Template1setup_Ctrl"});$routeProvider.when("/KeepJIC",{templateUrl:"KeepJIC",controller:"KeepJIC_Ctrl"});$routeProvider.when("/ResetNew",{templateUrl:"ResetNew",controller:"ResetNew_Ctrl"});$routeProvider.when("/Reset",{templateUrl:"Reset",controller:"Reset_Ctrl"});$routeProvider.when("/Stages",{templateUrl:"Stages",controller:"Stages_Ctrl"});$routeProvider.when("/Lanes",{templateUrl:"Lanes",controller:"Lanes_Ctrl"});$routeProvider.when("/Me",{templateUrl:"Me",controller:"Me_Ctrl"});$routeProvider.when("/bounce",{templateUrl:"bounce",controller:"bounce_Ctrl"});$routeProvider.when("/P012-Index-Cards-Read1",{templateUrl:"P012-Index-Cards-Read1",controller:"P012-Index-Cards-Read1_Ctrl"});$routeProvider.otherwise({redirectTo:"/Temphome"});}]);NeoApp.filter("checkmark",function(){return function(input){return input?"\u2713":"\u2718";};});NeoApp.filter("element",function(){return function(input,idx1,idx2){idx1=idx1||0;if(input&&input.constructor===Array){if(idx2){return input[idx1,idx2];}else{return input[idx1];};};return"";};});NeoApp.filter("string",function(){return function(input){if(input&&input.constructor===Array)return input.toString();if(input)return input;return"";};});NeoApp.filter("default",function(){return function(input,defValue){if(!input)return defValue;return input;};});NeoApp.filter("trustUrl",function($sce){return function(url){return $sce.trustAsResourceUrl(url);};});NeoApp.filter('bool',function(){return function(input,valueTrue,valueFalse){return input!==true?valueFalse:valueTrue;};});NeoApp.filter('splitLt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(0,p):str;};});NeoApp.filter('splitRt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(p+1):str;};});NeoApp.controller("NeoApp_CoreCtrl",function($scope,$rootScope,$location,$route,$modal,$window,$timeout,$interval,$http,$filter,$compile,$animate){$App=$rootScope;$App.$on("$locationChangeStart",function(event,newUrl,oldUrl){var newPg=newUrl.substr(newUrl.lastIndexOf("/")+1);var oldPg=oldUrl.substr(oldUrl.lastIndexOf("/")+1);if(newPg=="!"){event.preventDefault();};if(newPg=="Temphome"){$timeout($scope.Temphome_pageenter);};if(newPg=="HomeTiles"){$timeout($scope.HomeTiles_pageenter);};if(newPg=="TNeoAppPage11"){$timeout($scope.TNeoAppPage11_pageenter);};if(oldPg=="elink2"){$scope.elink2_pageexit();};if(newPg=="Project1pm"){$timeout($scope.Project1pm_pageenter);};if(newPg=="Project1pn"){$timeout($scope.Project1pn_pageenter);};if(newPg=="Project1pfo"){$timeout($scope.Project1pfo_pageenter);};if(newPg=="Project1pp"){$timeout($scope.Project1pp_pageenter);};if(newPg=="Project1pq"){$timeout($scope.Project1pq_pageenter);};if(newPg=="Project1pr"){$timeout($scope.Project1pr_pageenter);};if(newPg=="Project1ps"){$timeout($scope.Project1ps_pageenter);};if(newPg=="Project1pft"){$timeout($scope.Project1pft_pageenter);};if(newPg=="Project1pv"){$timeout($scope.Project1pv_pageenter);};if(newPg=="Project1pw"){$timeout($scope.Project1pw_pageenter);};if(newPg=="Project1px"){$timeout($scope.Project1px_pageenter);};if(newPg=="Project2pa"){$timeout($scope.Project2pa_pageenter);};if(newPg=="Home"){$timeout($scope.Home_pageenter);};if(newPg=="KeepJIC"){$timeout($scope.KeepJIC_pageenter);};if(oldPg=="ResetNew"){$scope.ResetNew_pageexit();};});
+var NeoApp=angular.module("NeoApp",["ngAnimate","ngRoute","ngSanitize","ngTouch","ui.bootstrap"],function($interpolateProvider){$interpolateProvider.startSymbol("[");$interpolateProvider.endSymbol("]");});NeoApp.config(["$routeProvider",function($routeProvider,$scope,$rootScope){$routeProvider.when("/landinghome",{templateUrl:"landinghome",controller:"landinghome_Ctrl"});$routeProvider.when("/Temphome",{templateUrl:"Temphome",controller:"Temphome_Ctrl"});$routeProvider.when("/PreparationKeys",{templateUrl:"PreparationKeys",controller:"PreparationKeys_Ctrl"});$routeProvider.when("/PrayerReps",{templateUrl:"PrayerReps",controller:"PrayerReps_Ctrl"});$routeProvider.when("/wiiaa",{templateUrl:"wiiaa",controller:"wiiaa_Ctrl"});$routeProvider.when("/Reset2026",{templateUrl:"Reset2026",controller:"Reset2026_Ctrl"});$routeProvider.when("/Reset00",{templateUrl:"Reset00",controller:"Reset00_Ctrl"});$routeProvider.when("/Reset01",{templateUrl:"Reset01",controller:"Reset01_Ctrl"});$routeProvider.when("/Reset02",{templateUrl:"Reset02",controller:"Reset02_Ctrl"});$routeProvider.when("/onehundredandonebusinesses",{templateUrl:"onehundredandonebusinesses",controller:"onehundredandonebusinesses_Ctrl"});$routeProvider.when("/Indexwrite",{templateUrl:"Indexwrite",controller:"Indexwrite_Ctrl"});$routeProvider.when("/Records-2026",{templateUrl:"Records-2026",controller:"Records-2026_Ctrl"});$routeProvider.when("/CopyAll",{templateUrl:"CopyAll",controller:"CopyAll_Ctrl"});$routeProvider.when("/tilesv5",{templateUrl:"tilesv5",controller:"tilesv5_Ctrl"});$routeProvider.when("/Barrels",{templateUrl:"Barrels",controller:"Barrels_Ctrl"});$routeProvider.when("/Barrels1",{templateUrl:"Barrels1",controller:"Barrels1_Ctrl"});$routeProvider.when("/Barrels2",{templateUrl:"Barrels2",controller:"Barrels2_Ctrl"});$routeProvider.when("/Barrels3",{templateUrl:"Barrels3",controller:"Barrels3_Ctrl"});$routeProvider.when("/Barrels4",{templateUrl:"Barrels4",controller:"Barrels4_Ctrl"});$routeProvider.when("/tilesv5-2",{templateUrl:"tilesv5-2",controller:"tilesv5-2_Ctrl"});$routeProvider.when("/tilesv5-3",{templateUrl:"tilesv5-3",controller:"tilesv5-3_Ctrl"});$routeProvider.when("/External01",{templateUrl:"External01",controller:"External01_Ctrl"});$routeProvider.when("/Speed01",{templateUrl:"Speed01",controller:"Speed01_Ctrl"});$routeProvider.when("/Speed03",{templateUrl:"Speed03",controller:"Speed03_Ctrl"});$routeProvider.when("/Speed04",{templateUrl:"Speed04",controller:"Speed04_Ctrl"});$routeProvider.when("/Speed02",{templateUrl:"Speed02",controller:"Speed02_Ctrl"});$routeProvider.when("/Speed05",{templateUrl:"Speed05",controller:"Speed05_Ctrl"});$routeProvider.when("/Speed06",{templateUrl:"Speed06",controller:"Speed06_Ctrl"});$routeProvider.when("/Speed07",{templateUrl:"Speed07",controller:"Speed07_Ctrl"});$routeProvider.when("/Speed08",{templateUrl:"Speed08",controller:"Speed08_Ctrl"});$routeProvider.when("/Speed10",{templateUrl:"Speed10",controller:"Speed10_Ctrl"});$routeProvider.when("/Speed11",{templateUrl:"Speed11",controller:"Speed11_Ctrl"});$routeProvider.when("/Speed09",{templateUrl:"Speed09",controller:"Speed09_Ctrl"});$routeProvider.when("/Speed12",{templateUrl:"Speed12",controller:"Speed12_Ctrl"});$routeProvider.when("/Speed13",{templateUrl:"Speed13",controller:"Speed13_Ctrl"});$routeProvider.when("/Speed14",{templateUrl:"Speed14",controller:"Speed14_Ctrl"});$routeProvider.when("/Speed15",{templateUrl:"Speed15",controller:"Speed15_Ctrl"});$routeProvider.when("/Speed16",{templateUrl:"Speed16",controller:"Speed16_Ctrl"});$routeProvider.when("/Speed17",{templateUrl:"Speed17",controller:"Speed17_Ctrl"});$routeProvider.when("/Speed18",{templateUrl:"Speed18",controller:"Speed18_Ctrl"});$routeProvider.when("/Speed19",{templateUrl:"Speed19",controller:"Speed19_Ctrl"});$routeProvider.when("/Speed20",{templateUrl:"Speed20",controller:"Speed20_Ctrl"});$routeProvider.when("/Speed21",{templateUrl:"Speed21",controller:"Speed21_Ctrl"});$routeProvider.when("/Speed22",{templateUrl:"Speed22",controller:"Speed22_Ctrl"});$routeProvider.when("/Speed23",{templateUrl:"Speed23",controller:"Speed23_Ctrl"});$routeProvider.when("/Speed24",{templateUrl:"Speed24",controller:"Speed24_Ctrl"});$routeProvider.when("/Speed25",{templateUrl:"Speed25",controller:"Speed25_Ctrl"});$routeProvider.when("/Speed26",{templateUrl:"Speed26",controller:"Speed26_Ctrl"});$routeProvider.when("/Speed27",{templateUrl:"Speed27",controller:"Speed27_Ctrl"});$routeProvider.when("/Speed28",{templateUrl:"Speed28",controller:"Speed28_Ctrl"});$routeProvider.when("/Speed29",{templateUrl:"Speed29",controller:"Speed29_Ctrl"});$routeProvider.when("/Speed30",{templateUrl:"Speed30",controller:"Speed30_Ctrl"});$routeProvider.when("/Speed31",{templateUrl:"Speed31",controller:"Speed31_Ctrl"});$routeProvider.when("/Speed32",{templateUrl:"Speed32",controller:"Speed32_Ctrl"});$routeProvider.when("/HomeTiles",{templateUrl:"HomeTiles",controller:"HomeTiles_Ctrl"});$routeProvider.when("/TNeoAppPage11",{templateUrl:"TNeoAppPage11",controller:"TNeoAppPage11_Ctrl"});$routeProvider.when("/Health",{templateUrl:"Health",controller:"Health_Ctrl"});$routeProvider.when("/Homestuff",{templateUrl:"Homestuff",controller:"Homestuff_Ctrl"});$routeProvider.when("/elink2",{templateUrl:"elink2",controller:"elink2_Ctrl"});$routeProvider.when("/WorkDesktop",{templateUrl:"WorkDesktop",controller:"WorkDesktop_Ctrl"});$routeProvider.when("/skillsphil",{templateUrl:"skillsphil",controller:"skillsphil_Ctrl"});$routeProvider.when("/Project1",{templateUrl:"Project1",controller:"Project1_Ctrl"});$routeProvider.when("/Project1pa",{templateUrl:"Project1pa",controller:"Project1pa_Ctrl"});$routeProvider.when("/Projectaa",{templateUrl:"Projectaa",controller:"Projectaa_Ctrl"});$routeProvider.when("/Projectab",{templateUrl:"Projectab",controller:"Projectab_Ctrl"});$routeProvider.when("/Projectac",{templateUrl:"Projectac",controller:"Projectac_Ctrl"});$routeProvider.when("/Projectad",{templateUrl:"Projectad",controller:"Projectad_Ctrl"});$routeProvider.when("/Project1pb",{templateUrl:"Project1pb",controller:"Project1pb_Ctrl"});$routeProvider.when("/Project1pc",{templateUrl:"Project1pc",controller:"Project1pc_Ctrl"});$routeProvider.when("/Project1pd",{templateUrl:"Project1pd",controller:"Project1pd_Ctrl"});$routeProvider.when("/Project1pe",{templateUrl:"Project1pe",controller:"Project1pe_Ctrl"});$routeProvider.when("/Project1pf",{templateUrl:"Project1pf",controller:"Project1pf_Ctrl"});$routeProvider.when("/Project1pg",{templateUrl:"Project1pg",controller:"Project1pg_Ctrl"});$routeProvider.when("/Project1ph",{templateUrl:"Project1ph",controller:"Project1ph_Ctrl"});$routeProvider.when("/Project1pi",{templateUrl:"Project1pi",controller:"Project1pi_Ctrl"});$routeProvider.when("/Project1pj",{templateUrl:"Project1pj",controller:"Project1pj_Ctrl"});$routeProvider.when("/Project1pk",{templateUrl:"Project1pk",controller:"Project1pk_Ctrl"});$routeProvider.when("/Project1pl",{templateUrl:"Project1pl",controller:"Project1pl_Ctrl"});$routeProvider.when("/Project1pm",{templateUrl:"Project1pm",controller:"Project1pm_Ctrl"});$routeProvider.when("/Project1pn",{templateUrl:"Project1pn",controller:"Project1pn_Ctrl"});$routeProvider.when("/Project1pfo",{templateUrl:"Project1pfo",controller:"Project1pfo_Ctrl"});$routeProvider.when("/Project1pp",{templateUrl:"Project1pp",controller:"Project1pp_Ctrl"});$routeProvider.when("/Project1pq",{templateUrl:"Project1pq",controller:"Project1pq_Ctrl"});$routeProvider.when("/Project1pr",{templateUrl:"Project1pr",controller:"Project1pr_Ctrl"});$routeProvider.when("/Project1ps",{templateUrl:"Project1ps",controller:"Project1ps_Ctrl"});$routeProvider.when("/Project1pft",{templateUrl:"Project1pft",controller:"Project1pft_Ctrl"});$routeProvider.when("/Project1pu",{templateUrl:"Project1pu",controller:"Project1pu_Ctrl"});$routeProvider.when("/Project1pv",{templateUrl:"Project1pv",controller:"Project1pv_Ctrl"});$routeProvider.when("/Project1pw",{templateUrl:"Project1pw",controller:"Project1pw_Ctrl"});$routeProvider.when("/Project1px",{templateUrl:"Project1px",controller:"Project1px_Ctrl"});$routeProvider.when("/Project2",{templateUrl:"Project2",controller:"Project2_Ctrl"});$routeProvider.when("/Projectaa2",{templateUrl:"Projectaa2",controller:"Projectaa2_Ctrl"});$routeProvider.when("/Projectab2",{templateUrl:"Projectab2",controller:"Projectab2_Ctrl"});$routeProvider.when("/Projectac2",{templateUrl:"Projectac2",controller:"Projectac2_Ctrl"});$routeProvider.when("/Projectad2",{templateUrl:"Projectad2",controller:"Projectad2_Ctrl"});$routeProvider.when("/Project2pa",{templateUrl:"Project2pa",controller:"Project2pa_Ctrl"});$routeProvider.when("/Project2pb",{templateUrl:"Project2pb",controller:"Project2pb_Ctrl"});$routeProvider.when("/Project2pc",{templateUrl:"Project2pc",controller:"Project2pc_Ctrl"});$routeProvider.when("/Project2pd",{templateUrl:"Project2pd",controller:"Project2pd_Ctrl"});$routeProvider.when("/Project2pe",{templateUrl:"Project2pe",controller:"Project2pe_Ctrl"});$routeProvider.when("/Project2pf",{templateUrl:"Project2pf",controller:"Project2pf_Ctrl"});$routeProvider.when("/Project2pg",{templateUrl:"Project2pg",controller:"Project2pg_Ctrl"});$routeProvider.when("/Project2ph",{templateUrl:"Project2ph",controller:"Project2ph_Ctrl"});$routeProvider.when("/Project2pi",{templateUrl:"Project2pi",controller:"Project2pi_Ctrl"});$routeProvider.when("/Project2pj",{templateUrl:"Project2pj",controller:"Project2pj_Ctrl"});$routeProvider.when("/Project2pk",{templateUrl:"Project2pk",controller:"Project2pk_Ctrl"});$routeProvider.when("/Project2pl",{templateUrl:"Project2pl",controller:"Project2pl_Ctrl"});$routeProvider.when("/Project2pm",{templateUrl:"Project2pm",controller:"Project2pm_Ctrl"});$routeProvider.when("/Project2pn",{templateUrl:"Project2pn",controller:"Project2pn_Ctrl"});$routeProvider.when("/C-A-Z",{templateUrl:"C-A-Z",controller:"C-A-Z_Ctrl"});$routeProvider.when("/Workstuff-B",{templateUrl:"Workstuff-B",controller:"Workstuff-B_Ctrl"});$routeProvider.when("/Prayer",{templateUrl:"Prayer",controller:"Prayer_Ctrl"});$routeProvider.when("/Journal",{templateUrl:"Journal",controller:"Journal_Ctrl"});$routeProvider.when("/Next",{templateUrl:"Next",controller:"Next_Ctrl"});$routeProvider.when("/DailyReps",{templateUrl:"DailyReps",controller:"DailyReps_Ctrl"});$routeProvider.when("/Home",{templateUrl:"Home",controller:"Home_Ctrl"});$routeProvider.when("/VERSION",{templateUrl:"VERSION",controller:"VERSION_Ctrl"});$routeProvider.when("/ResetRules",{templateUrl:"ResetRules",controller:"ResetRules_Ctrl"});$routeProvider.when("/Resetoverview",{templateUrl:"Resetoverview",controller:"Resetoverview_Ctrl"});$routeProvider.when("/ResetNotes",{templateUrl:"ResetNotes",controller:"ResetNotes_Ctrl"});$routeProvider.when("/Template001",{templateUrl:"Template001",controller:"Template001_Ctrl"});$routeProvider.when("/Template1setup",{templateUrl:"Template1setup",controller:"Template1setup_Ctrl"});$routeProvider.when("/KeepJIC",{templateUrl:"KeepJIC",controller:"KeepJIC_Ctrl"});$routeProvider.when("/ResetNew",{templateUrl:"ResetNew",controller:"ResetNew_Ctrl"});$routeProvider.when("/Reset",{templateUrl:"Reset",controller:"Reset_Ctrl"});$routeProvider.when("/Stages",{templateUrl:"Stages",controller:"Stages_Ctrl"});$routeProvider.when("/Lanes",{templateUrl:"Lanes",controller:"Lanes_Ctrl"});$routeProvider.when("/Me",{templateUrl:"Me",controller:"Me_Ctrl"});$routeProvider.when("/bounce",{templateUrl:"bounce",controller:"bounce_Ctrl"});$routeProvider.when("/P012-Index-Cards-Read1",{templateUrl:"P012-Index-Cards-Read1",controller:"P012-Index-Cards-Read1_Ctrl"});$routeProvider.otherwise({redirectTo:"/landinghome"});}]);NeoApp.filter("checkmark",function(){return function(input){return input?"\u2713":"\u2718";};});NeoApp.filter("element",function(){return function(input,idx1,idx2){idx1=idx1||0;if(input&&input.constructor===Array){if(idx2){return input[idx1,idx2];}else{return input[idx1];};};return"";};});NeoApp.filter("string",function(){return function(input){if(input&&input.constructor===Array)return input.toString();if(input)return input;return"";};});NeoApp.filter("default",function(){return function(input,defValue){if(!input)return defValue;return input;};});NeoApp.filter("trustUrl",function($sce){return function(url){return $sce.trustAsResourceUrl(url);};});NeoApp.filter('bool',function(){return function(input,valueTrue,valueFalse){return input!==true?valueFalse:valueTrue;};});NeoApp.filter('splitLt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(0,p):str;};});NeoApp.filter('splitRt',function(){return function(str,delimeter){var p=str.indexOf(delimeter);return(p>-1)?str.substring(p+1):str;};});NeoApp.controller("NeoApp_CoreCtrl",function($scope,$rootScope,$location,$route,$modal,$window,$timeout,$interval,$http,$filter,$compile,$animate){$App=$rootScope;$App.$on("$locationChangeStart",function(event,newUrl,oldUrl){var newPg=newUrl.substr(newUrl.lastIndexOf("/")+1);var oldPg=oldUrl.substr(oldUrl.lastIndexOf("/")+1);if(newPg=="!"){event.preventDefault();};if(newPg=="landinghome"){$timeout($scope.landinghome_pageenter);};if(newPg=="Temphome"){$timeout($scope.Temphome_pageenter);};if(newPg=="PreparationKeys"){$timeout($scope.PreparationKeys_pageenter);};if(newPg=="PrayerReps"){$timeout($scope.PrayerReps_pageenter);};if(newPg=="HomeTiles"){$timeout($scope.HomeTiles_pageenter);};if(newPg=="TNeoAppPage11"){$timeout($scope.TNeoAppPage11_pageenter);};if(oldPg=="elink2"){$scope.elink2_pageexit();};if(newPg=="Project1pm"){$timeout($scope.Project1pm_pageenter);};if(newPg=="Project1pn"){$timeout($scope.Project1pn_pageenter);};if(newPg=="Project1pfo"){$timeout($scope.Project1pfo_pageenter);};if(newPg=="Project1pp"){$timeout($scope.Project1pp_pageenter);};if(newPg=="Project1pq"){$timeout($scope.Project1pq_pageenter);};if(newPg=="Project1pr"){$timeout($scope.Project1pr_pageenter);};if(newPg=="Project1ps"){$timeout($scope.Project1ps_pageenter);};if(newPg=="Project1pft"){$timeout($scope.Project1pft_pageenter);};if(newPg=="Project1pv"){$timeout($scope.Project1pv_pageenter);};if(newPg=="Project1pw"){$timeout($scope.Project1pw_pageenter);};if(newPg=="Project1px"){$timeout($scope.Project1px_pageenter);};if(newPg=="Project2pa"){$timeout($scope.Project2pa_pageenter);};if(newPg=="Home"){$timeout($scope.Home_pageenter);};if(newPg=="KeepJIC"){$timeout($scope.KeepJIC_pageenter);};if(oldPg=="ResetNew"){$scope.ResetNew_pageexit();};});
 $scope.SetError=function(msg){throw msg;};$scope.Refresh=function(){$timeout(angular.noop);};$scope.AddFont=function(fontName,fontPath){neotempstyle=document.createElement("style");var position=fontPath.lastIndexOf("/");if(position!=-1){position++;}else{position=0;}var extPosition=fontPath.lastIndexOf(".");extPosition++;var extension=fontPath.substr(extPosition);if(extension=="ttf"){extension="truetype";}if(window.location.href.indexOf("file://")!=-1){neotempstyle.textContent='@font-face{font-family: "'+fontName+'";src: url("'+fontPath+'") format("'+extension+'");}';}else{fontPath=fontPath.substr(position);neotempstyle.textContent='@font-face{font-family: "'+fontName+'";src: url("./fonts/'+fontPath+'") format("'+extension+'");}';}document.head.append(neotempstyle);};$scope.GetOrientation=function(){if($window.orientation){if(Math.abs(window.orientation)===90){return"Landscape";}else{return"Portrait";}}else{if($window.innerWidth>=$window.innerHeight){return"Landscape";}else{return"Portrait";}}};$scope.GotoPageNum=function(pgNum){if(pgNum>0&&pgNum<=$App.NAB.PageList.length){if($App.NAB.PageEnterEffect[pgNum-1]){$App.NAB._pageEffect=" animate enter-"+$App.NAB.PageEnterEffect[pgNum-1]+" exit-"+($App.NAB.PageExitEffect[pgNum-1]||"fadeOut");}else{$App.NAB._pageEffect="";}$timeout(function(){$location.path('/'+$App.NAB.PageList[pgNum-1]);});}else{$scope.SetError('Invalid page.');}};$scope.GotoPage=function(pgId){$scope.GotoPageNum($App.NAB.PageList.indexOf(pgId)+1);};$scope.GotoFirstPage=function(){$scope.GotoPageNum(1);};$scope.GotoLastPage=function(){$scope.GotoPageNum($App.NAB.PageList.length);};$scope.GotoNextPage=function(){var pgNum=$App.NAB.PageNumber;if(pgNum<$App.NAB.PageList.length){$scope.GotoPageNum(pgNum+1);return true;}return false;};$scope.GotoPrevPage=function(){var pgNum=$App.NAB.PageNumber;if(pgNum>1){$scope.GotoPageNum(pgNum-1);return true;}return false;};function makeSVG(tag,attrs){var el=document.createElementNS('http://www.w3.org/2000/svg',tag);for(var k in attrs)el.setAttribute(k,attrs[k]);return el;};function addSvgNode(objId,svgNode){if(document.getElementById(objId).tagName=="svg"){document.getElementById(objId).appendChild(svgNode);}else{document.getElementById(objId).getElementsByTagName('svg')[0].appendChild(svgNode);}};$scope.DrawCircle=function DrawCircle(objId,svgName,cx,cy,circleRadio,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('circle',{'id':svgName,'VisualNEOWebName':svgName,'cx':cx,'cy':cy,'r':circleRadio,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawEllipse=function DrawEllipse(objId,svgName,cx,cy,rx,ry,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('ellipse',{'id':svgName,'VisualNEOWebName':svgName,'cx':cx,'cy':cy,'rx':rx,'ry':ry,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawRect=function DrawRect(objId,svgName,posx,posy,width,height,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('rect',{'id':svgName,'VisualNEOWebName':svgName,'x':posx,'y':posy,'width':width,'height':height,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawPolygon=function DrawPolygon(objId,svgName,points,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('polygon',{'id':svgName,'VisualNEOWebName':svgName,'points':points,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawPath=function DrawPath(objId,svgName,path,strokeColor,strokeWidth,fillColor){$App[svgName]=makeSVG('path',{'id':svgName,'VisualNEOWebName':svgName,'d':path,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':fillColor});addSvgNode(objId,$App[svgName]);};$scope.DrawPolyLine=function DrawPolyLine(objId,svgName,points,strokeColor,strokeWidth){$App[svgName]=makeSVG('polyline',{'id':svgName,'VisualNEOWebName':svgName,'points':points,'stroke':strokeColor,'stroke-width':strokeWidth,'fill':'none'});addSvgNode(objId,$App[svgName]);};$scope.DrawLine=function DrawLine(objId,svgName,x1,y1,x2,y2,strokeColor,strokeWidth){$App[svgName]=makeSVG('line',{'id':svgName,'VisualNEOWebName':svgName,'x1':x1,'y1':y1,'x2':x2,'y2':y2,'stroke':strokeColor,'stroke-width':strokeWidth});addSvgNode(objId,$App[svgName]);};$scope.DrawImage=function DrawImage(objId,svgName,fileName,x,y,width,height){$App[svgName]=makeSVG('image',{'id':svgName,'VisualNEOWebName':svgName,'x':x,'y':y,'width':width,'height':height,'xlink:href':''});$App[svgName].setAttributeNS("http://www.w3.org/1999/xlink","xlink:href",""+fileName+"");addSvgNode(objId,$App[svgName]);};$scope.DrawText=function DrawText(objId,svgName,theText,posx,posy,fillColor,fontSize,fontFamily,angle){$App[svgName]=makeSVG('text',{'id':svgName,'VisualNEOWebName':svgName,'x':posx,'y':posy,'stroke-width':0,'fill':fillColor,'font-size':fontSize,'font-family':fontFamily,'transform':'rotate('+angle+' '+posx+' '+posy+')'});$App[svgName].textContent=theText;addSvgNode(objId,$App[svgName]);};$scope.DrawClear=function DrawClear(objId){var n=0;$("#"+objId).children().each(function(){if(n!=0){$(this).remove();}n++;});};$scope.OnMouseEvent=function(objId,eventName,subroutine){if(eventName=="contextmenu"){if($App.NAB[objId]){$App.NAB[objId].on(eventName,function(e){e.preventDefault();subroutine;return;});}$("#"+objId).on(eventName,function(e){e.preventDefault();subroutine;return;});}if($App.NAB[objId]){$App.NAB[objId].on(eventName,subroutine);return;}$("#"+objId).on(eventName,subroutine);};$scope.RemoveOnMouseEvent=function(objId,eventName){if($App.NAB[objId]){$App.NAB[objId].off(eventName);return;}$("#"+objId).off(eventName);};$scope.OnTouchEvent=function(objId,eventName,subroutine){if($App.NAB[objId]){$App.NAB[objId].on(eventName,subroutine);return;}$("#"+objId).on(eventName,subroutine);};$scope.RemoveOnTouchEvent=function(objId,eventName){if($App.NAB[objId]){$App.NAB[objId].off(eventName);return;}$("#"+objId).off(eventName);};$scope.ShowObject=function(objId,effect,speed){if($App.NAB[objId]){$App.NAB[objId].show(speed);return;}if(!effect||effect.toLowerCase()=='none'){$App.NAB[objId+'_effect']='';}else{if(speed)effect=effect+' speed-'+speed*50;$App.NAB[objId+'_effect']='animate enter-'+effect;}$timeout(function(){var name=objId+'_hidden';if($App.NAB[name])delete $App.NAB[name];});};$scope.HideObject=function(objId,effect,speed){if($App.NAB[objId]){$App.NAB[objId].hide(speed);return;}if(!effect||effect.toLowerCase()=='none'){$App.NAB[objId+'_effect']='';}else{if(speed)effect=effect+' speed-'+speed*50;$App.NAB[objId+'_effect']='animate exit-'+effect;}$timeout(function(){$App.NAB[objId+'_hidden']=true;});};$scope.DisableObject=function(objId,value){var name=objId+'_disabled';if(value){$App.NAB[name]=value;}else{if($App.NAB[name])delete $App.NAB[name];}};$scope.ClipObjectPolygon=function(objId,polygonId){var points=$("#"+polygonId).html();points=points.replace('<polygon vector-effect="non-scaling-stroke" points="',"");points=points.replace('"></polygon>','');coords=points.split(",");var puntos="";for(i=0;i<coords.length;i=i+2){if(i!=coords.length-2){puntos=puntos+coords[i]+"px "+coords[i+1]+"px,";}else{puntos=puntos+coords[i]+"px "+coords[i+1]+"px";}}$("#"+objId).css("clip-path","polygon("+puntos+")");};$scope.ClipObjectPath=function(objId,shape){if(shape=="circle"){$("#"+objId).css("clip-path","circle(50% at 50% 50%)");}else if(shape=="triangle"){$("#"+objId).css("clip-path","polygon(50% 0%, 0% 100%, 100% 100%)");}else if(shape=="rhombus"){$("#"+objId).css("clip-path","polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)");}else if(shape=="pentagon"){$("#"+objId).css("clip-path","polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)");}else{$("#"+objId).css("clip-path",shape);}};$scope.SetObjectStyle=function(objId,selector,value){if($App.NAB[objId]){$App.NAB[objId].css(selector,value);return;}if($App[objId]){$("#"+objId).css(selector,value);return;}var name=objId+'_style';if(!$App.NAB[name])$App.NAB[name]={};if(value&&value.length>0){$App.NAB[name][selector]=value;}else{if($App.NAB[name][selector])delete $App.NAB[name][selector];if(jQuery.isEmptyObject($App.NAB[name]))delete $App.NAB[name];}};$scope.ClearObjectStyles=function(objId){var name=objId+'_style';if($App.NAB[name])delete $App.NAB[name];};$scope.GetObjectInfo=function(objId,info){if($App.NAB[objId]){return $App.NAB[objId].css(info);}return $("#"+objId).css(info);};$scope.GetObjectXY=function(objId,xvar,yvar){var rect=document.getElementById($App.NAB.PageID).getBoundingClientRect();$App.PageLeft=rect.left;$App.PageTop=rect.top;var objeto=document.getElementById(objId).getBoundingClientRect();$App[xvar]=objeto.x-$App.PageLeft;$App[yvar]=objeto.y-$App.PageTop;};$scope.SetObjectHTML=function(objId,code){if($App.NAB[objId]){$App.NAB[objId].html(code);return;}var e=document.getElementById(objId);e.innerHTML=code;$compile(e)($scope);};$scope.GetObjectHTML=function(objId){if($App.NAB[objId]){return $App.NAB[objId].html();;}return document.getElementById(objId).innerHTML;};$scope.SetObjectAttribute=function(objId,AttrName,AttrValue){var element=$("#"+objId);if(AttrName==="src"){AttrName="ng-src";}var pendingChanges=$App.NAB['pendingChanges']||{};pendingChanges[objId]=pendingChanges[objId]||[];pendingChanges[objId].push({AttrName,AttrValue});$App.NAB['pendingChanges']=pendingChanges;$scope.applyPendingChanges();};$scope.applyPendingChanges=function(){var pendingChanges=$App.NAB['pendingChanges'];if(!pendingChanges||jQuery.isEmptyObject(pendingChanges)){return;}Object.keys(pendingChanges).forEach(function(objId){var element=$("#"+objId);if(element.length>0){pendingChanges[objId].forEach(function(change){element.attr(change.AttrName,change.AttrValue);$compile(element)($scope);});}});};$scope.GetObjectAttribute=function(objId,AttrName){if($App.NAB[objId]){return $App.NAB[objId].attr(AttrName);}return $("#"+objId).attr(AttrName);};$scope.SetObjectText=function(objId,code){if($App.NAB[objId]){$App.NAB[objId].text(code);return;}var e=document.getElementById(objId);e.innerText=code;$compile(e)($scope);};$scope.GetObjectText=function(objId){if($App.NAB[objId]){return $App.NAB[objId].text();}return document.getElementById(objId).innerText;};$scope.DuplicateObject=function(objId,objName,containerId){if($App.NAB[objName]){$App.NAB[objName].remove();delete $App.NAB[objName];}else{$("#"+objName).remove();delete $App.NAB[objName];}if($App.NAB[objId]){$App.NAB[objName]=$App.NAB[objId].clone().appendTo("#"+containerId);}else if($App[objId]){$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);$App.NAB[objName].attr("id","");}else{$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);}$App.NAB[objName].attr("VisualNEOWebName",objName);$App.NAB[objName].attr("ng-style","NAB."+objName+"_style");$App.NAB[objName].attr("ng-hide","NAB."+objName+"_hidden");$App.NAB[objName].attr("ng-disabled","NAB."+objName+"_disabled");var e=document.getElementById(containerId);$compile(e)($scope);};$scope.DuplicateObjectEx=function(objId,objName,containerId,objStyle){if($App.NAB[objName]){$App.NAB[objName].remove();delete $App.NAB[objName];}else{$("#"+objName).remove();delete $App.NAB[objName];}if($App.NAB[objId]){$App.NAB[objName]=$App.NAB[objId].clone().appendTo("#"+containerId);}else if($App[objId]){$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);$App.NAB[objName].attr("id","");}else{$App.NAB[objName]=$("#"+objId).clone().appendTo("#"+containerId);$App.NAB[objName].attr("id",objName);$App.NAB[objName].atyle=document.getElementById(objId).style;}$App.NAB[objName].attr("VisualNEOWebName",objName);$App.NAB[objName].attr("ng-style","NAB."+objName+"_style");$App.NAB[objName].attr("ng-hide","NAB."+objName+"_hidden");$App.NAB[objName].attr("ng-disabled","NAB."+objName+"_disabled");$App.NAB[objName].attr("style",objStyle);var e=document.getElementById(containerId);$compile(e)($scope);};$scope.AnimateObjectCSS=function(objId,cssData,duration,delay,easing,callbackfn){if($App.NAB[objId]){$App.NAB[objId].delay(delay).animate(cssData,duration,easing,callbackfn);}else{$("#"+objId).delay(delay).animate(cssData,duration,easing,callbackfn);}};$scope.SetObjectCSS=function(objId,cssData){if($App.NAB[objId]){$App.NAB[objId].css(cssData);}else{$("#"+objId).css(cssData);}};$scope.CheckCollision=function(objId1,objId2){var x1=$("#"+objId1).offset().left;var y1=$("#"+objId1).offset().top;var h1=$("#"+objId1).outerHeight(true);var w1=$("#"+objId1).outerWidth(true);var b1=y1+h1;var r1=x1+w1;var x2=$("#"+objId2).offset().left;var y2=$("#"+objId2).offset().top;var h2=$("#"+objId2).outerHeight(true);var w2=$("#"+objId2).outerWidth(true);var b2=y2+h2;var r2=x2+w2;if(b1<y2||y1>b2||r1<x2||x1>r2){return false;}else{return true;}};$scope.CheckFullCollision=function(objId1,objId2){var r1=document.getElementById(rectone);var r2=document.getElementById(recttwo);var r1bb=r1.getBoundingClientRect();var r2bb=r2.getBoundingClientRect();var r1x=r1bb.x;var r1w=r1bb.width;var r1y=r1bb.y;var r1h=r1bb.height;var r2x=r2bb.x;var r2w=r2bb.width;var r2y=r2bb.y;var r2h=r2bb.height;if(r1x+1>=r2x&&r1y+1>=r2y&&r1x+r1w-1<=r2x+r2w&&r1y+r1h-1<=r2y+r2h){return true;}else{return false;}};function fixUnit(s){var t=s.toString();var parts=t.match(/^([+-]?(?:\d+|\d*\.\d+))([a-z]*|%)$/);return(parts[2])?t:parts[1]+'px';}$scope.SetObjectBounds=function(objId,l,t,w,h){if($App.NAB[objId]){var e=$App.NAB[objId];}else{var e=document.getElementById(objId);}if(w){w=fixUnit(w);e.style.width=w;$scope.SetObjectStyle(objId,'width',w);};if(h){h=fixUnit(h);e.style.height=h;$scope.SetObjectStyle(objId,'height',h);};if(l){l=fixUnit(l);e.style.left=l;$scope.SetObjectStyle(objId,'left',l);};if(t){t=fixUnit(t);e.style.top=t;$scope.SetObjectStyle(objId,'top',t);};};$scope.MoveObject=function(objId,left,top){if($App.NAB[objId]){$App.NAB[objId].css("left",left);$App.NAB[objId].css("top",top);}else{$scope.SetObjectBounds(objId,left,top);}};$scope.ObjectToFront=function(objId){if($App.NAB[objId]){theParent=$App.NAB[objId].parent();$App.NAB[objId].detach().appendTo(theParent);}else{theParent=$("#"+objId).parent();$("#"+objId).detach().appendTo(theParent);}};$scope.ObjectToBack=function(objId){if($App.NAB[objId]){theParent=$App.NAB[objId].parent();$App.NAB[objId].detach().prependTo(theParent);}else if($("#"+objId).parent().prop("tagName")=="svg"){theParent=$("#"+objId).parent().children().first();$("#"+objId).detach().insertAfter(theParent);}else{theParent=$("#"+objId).parent();$("#"+objId).detach().prependTo(theParent);}};$scope.SizeObject=function(objId,width,height){if($App.NAB[objId]){w=fixUnit(width);h=fixUnit(height);$App.NAB[objId].css("width",w);$App.NAB[objId].css("height",h);}else{$scope.SetObjectBounds(objId,null,null,width,height);}};$scope.RotateObject=function(objId,deg){if($App.NAB[objId]){$App.NAB[objId].css("webkitTransform","rotate("+deg+"deg)");$App.NAB[objId].css("mozTransform","rotate("+deg+"deg)");$App.NAB[objId].css("msTransform","rotate("+deg+"deg)");$App.NAB[objId].css("oTransform","rotate("+deg+"deg)");$App.NAB[objId].css("transform","rotate("+deg+"deg)");}else{var e=document.getElementById(objId);e.style.webkitTransform='rotate('+deg+'deg)';e.style.mozTransform='rotate('+deg+'deg)';e.style.msTransform='rotate('+deg+'deg)';e.style.oTransform='rotate('+deg+'deg)';e.style.transform='rotate('+deg+'deg)';};};$scope.ListBoxSort=function(objId){if($("#"+objId).children("option:selected").text()==""){$("#"+objId).children("option:selected").remove();};$("#"+objId+" option").filter(function(){return!this.value||$.trim(this.value).length==0||$.trim(this.text).length==0;}).remove();var options=$("#"+objId+" option");var arr=options.map(function(_,o){return{t:$(o).text(),v:o.value};}).get();arr.sort(function(o1,o2){return o1.t>o2.t?1:o1.t<o2.t?-1:0;});options.each(function(i,o){o.value=arr[i].v;$(o).text(arr[i].t);});if($("#"+objId).children("option:selected").text()==""){$("#"+objId).children("option:selected").remove();};};$scope.ListBoxMoveItem=function(listID,direction){var listbox=document.getElementById(listID);var selIndex=listbox.selectedIndex;if(-1==selIndex){return;}var increment=-1;if(direction=='up'){if(selIndex==1){return;}else{increment=-1;}}else{increment=1;}if((selIndex+increment)<0||(selIndex+increment)>(listbox.options.length-1)){return;}var selValue=listbox.options[selIndex].value;var selText=listbox.options[selIndex].text;listbox.options[selIndex].value=listbox.options[selIndex+increment].value
 listbox.options[selIndex].text=listbox.options[selIndex+increment].text
 listbox.options[selIndex+increment].value=selValue;listbox.options[selIndex+increment].text=selText;listbox.selectedIndex=selIndex+increment;};$scope.OpenDialog=function(dlgId){var modalInstance=$modal.open({templateUrl:dlgId,controller:dlgId+'_Ctrl',scope:$scope,size:'sm',backdrop:'static',animation:true});};$scope.AlertBox=function(dlgTitle,dlgMsg,dlgKind,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" ng-class="modal-sm">'+'<div class="modal-content">'+'<div class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+'<button class="btn btn-primary" ng-click="CloseDialog();">OK</button>'+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn!=undefined){modalInstance.result.then(function(){callbackFn()},function(){callbackFn()});}};$scope.AlertBoxEx=function(dlgTitle,dlgMsg,dlgKind,theWidth,theHeight,theColor,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var dlgKind=dlgKind||"primary";if(theWidth<150){theWidth=150;}if(theHeight<200){theHeight=200;}var modalBodyMaxHeight=theHeight-140;var modalInstance=$modal.open({template:'<div class="modal-dialog" style="width:'+theWidth+'px;height:'+theHeight+'px;" ng-class="modal-sm">'+'<div class="modal-content">'+'<div style="background:'+theColor+';" class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div style="overflow:auto;max-height:'+modalBodyMaxHeight+'px" class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+'<button class="btn btn-custom" style="color:#fff;background:'+theColor+';" ng-click="CloseDialog();">OK</button>'+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn!=undefined){modalInstance.result.then(function(){callbackFn()},function(){callbackFn()});}};$scope.MessageBoxEx=function(dlgTitle,dlgMsg,dlgButtons,dlgKind,theWidth,theHeight,theColor,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}if(theWidth<150){theWidth=150;}if(theHeight<200){theHeight=200;}var modalBodyMaxHeight=theHeight-140;var idx;var btns=dlgButtons.split("|");var btnsHTML='';for(idx=0;idx<btns.length;idx++){btnsHTML+='<button class="btn btn-custom" style="color:#fff;background:'+theColor+';" ng-click="CloseDialogBtn('+idx.toString()+');">'+btns[idx]+'</button>';}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" style="width:'+theWidth+'px;height:'+theHeight+'px;" ng-class="modal-sm">'+'<div class="modal-content">'+'<div style="background:'+theColor+';" class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div style="overflow:auto;max-height:'+modalBodyMaxHeight+'px" class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+btnsHTML+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn){modalInstance.result.then(function(value){callbackFn(value+1)},function(){callbackFn(0)});}};$scope.MessageBox=function(dlgTitle,dlgMsg,dlgButtons,dlgKind,callbackFn){detect1=dlgMsg.toLowerCase().search("<script");detect2=dlgMsg.toLowerCase().search("javascript:");detect3=dlgMsg.toLowerCase().search("onclick");detect4=dlgMsg.toLowerCase().search("onmouse");if(detect1!=-1||detect2!=-1||detect3!=-1||detect4!=-1){return;}var idx;var btns=dlgButtons.split("|");var btnsHTML='';for(idx=0;idx<btns.length;idx++){btnsHTML+='<button class="btn btn-primary" ng-click="CloseDialogBtn('+idx.toString()+');">'+btns[idx]+'</button>';}var dlgKind=dlgKind||"primary";var modalInstance=$modal.open({template:'<div class="modal-dialog" ng-class="modal-sm">'+'<div class="modal-content">'+'<div class="modal-header bg-'+dlgKind+'">'+'<h4 class="modal-title">'+dlgTitle+'</h4>'+'</div>'+'<div class="modal-body">'+'<p>'+dlgMsg+'</p>'+'</div>'+'<div class="modal-footer">'+btnsHTML+'</div>'+'</div>'+'</div>',controller:'App_DlgCtrl',scope:$scope,size:'sm',backdrop:'static'});if(callbackFn){modalInstance.result.then(function(value){callbackFn(value+1)},function(){callbackFn(0)});}};$scope.SerializeForm=function(formId){var form=document.getElementById(formId);if(!form||form.nodeName!=="FORM")return;var i,j,s,field,m,q=[];for(i=0;i<form.elements.length;i++){field=form.elements[i];if(field.name==="")continue;switch(field.nodeName){case'INPUT':switch(field.type){case'text':case'hidden':case'password':case'number':q.push(field.name+"="+encodeURIComponent(field.value));break;case'checkbox':if(angular.isElement(field)){m=angular.element(field).controller('ngModel');if(m){q.push(field.name+"="+encodeURIComponent(m.$modelValue));break;}}q.push(field.name+"="+encodeURIComponent(field.checked));break;case'radio':if(field.checked){q.push(field.name+"="+encodeURIComponent(field.value));}break;case'file':break;}break;case'TEXTAREA':q.push(field.name+"="+encodeURIComponent(field.value));break;case'SELECT':switch(field.type){case'select-one':q.push(field.name+"="+encodeURIComponent(field.value));break;case'select-multiple':s='';for(j=field.options.length-1;j>=0;j=j-1){if(field.options[j].selected){s+=','+encodeURIComponent(field.options[j].value);}}if(s.length>0)q.push(field.name+"="+s.substr(1));break;}break;}}return q.join("&");};$scope.SubmitForm=function(form,url,method,submitFn,successFn,failFn){var ok=true;if(submitFn){ok=submitFn();}if(ok&&form&&url&&method){var f=$scope.SerializeForm(form);$http({method:method,url:url,data:f,responseType:"text",headers:{'Content-Type':'application/x-www-form-urlencoded'}}).then(function(response){if(successFn)successFn(response.data,response.status);},function(response){if(failFn)failFn(response.data,response.status);});}};$scope.FormSubmit=function(formulario,url){var neoApp=angular.element(document.getElementById("ng-view")).scope();var fnsubmit=neoApp[formulario+"_submit"];var fnsuccess=neoApp[formulario+"_success"];var fnfail=neoApp[formulario+"_fail"];neoApp.SubmitForm(formulario,url,'POST',fnsubmit,fnsuccess,fnfail);};$scope.FormReset=function(formulario){$("#"+formulario).trigger("reset");};$scope.SetCompVar=function(varname,varvalue){varname2="";vararray=varname.split("[");for(n=0;n<vararray.length;n++){vararray[n]=vararray[n].replace("]","");if($App[vararray[n]]!=undefined){varname2=varname2+$App[vararray[n]];}else{varname2=varname2+vararray[n];};};$App[varname2]=varvalue;};$scope.GetCompVar=function(varname,composedvar){varname2="";vararray=composedvar.split("[");for(n=0;n<vararray.length;n++){vararray[n]=vararray[n].replace("]","");if($App[vararray[n]]!=undefined){varname2=varname2+$App[vararray[n]];}else{varname2=varname2+vararray[n];};};$App[varname]=$App[varname2];};$scope.ArraySuffle=function(array,newArray){for(n=0;n<array.length;n++){newArray[n]=array[n];}var currentIndex=newArray.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex-=1;temporaryValue=newArray[currentIndex];newArray[currentIndex]=newArray[randomIndex];newArray[randomIndex]=temporaryValue;}};$scope.ArrayCopy=function(a,start,len){if(a&&start>-1&&len>0)return a.slice(start,start+len);return[]};$scope.LoadGoogleFont=function(fontName){$("head").append("<link href='https://fonts.googleapis.com/css?family="+fontName+"' rel='stylesheet' type='text/css'>");};$scope.LocalFileToVar=function(inputFileName,resultVar,tipo){$App.NAB.temp=resultVar;var realInputFileName=$("#"+inputFileName).prop("for");var files=$('#'+realInputFileName).prop("files");for(var i=0,f;f=files[i];i++){var reader=new FileReader();reader.onload=(function(theFile,resultVar,callBackFunction){return function(e,resultVar){varName=$App.NAB.temp;$App[varName]=e.target.result;};})(f);if(tipo=="text"){reader.readAsText(f);}else if(tipo=="binary"){reader.readAsBinaryString(f);}else if(tipo=="base64"){reader.readAsDataURL(f);}else{reader.readAsArrayBuffer(f);}};};$scope.SvgToBase64=function(theContainer,theWidth,theHeight,theType,theQuality,resultVar,callbackFn){var tagName=$("#"+theContainer).prop("tagName").toLowerCase();if(tagName=="svg"){var svg=document.getElementById(theContainer);}else{var svg=document.querySelector("#"+theContainer+" svg");}var svgToBase64PngTemp=svg.outerHTML;tempWidth=svg.getAttribute("width");if(tempWidth==null){tempWidth=theWidth;}tempHeight=svg.getAttribute("height");if(tempHeight==null){tempHeight=theHeight;}svg.setAttribute("width",theWidth);svg.setAttribute("height",theHeight);var svgData=new XMLSerializer().serializeToString(svg);var canvas=document.createElement("canvas");canvas.width=theWidth;canvas.height=theHeight;var ctx=canvas.getContext("2d");var img=document.createElement("img");img.setAttribute("src","data:image/svg+xml;base64,"+btoa(svgData));img.onload=function(){ctx.drawImage(img,0,0);svg.setAttribute("width",tempWidth);svg.setAttribute("height",tempHeight);if(theType=="jpg"){$App[resultVar]=canvas.toDataURL("image/jpeg",theQuality);if(callbackFn!=""&&callbackFn!=null&&callbackFn!=undefined){callbackFn();}}else{$App[resultVar]=canvas.toDataURL("image/png");if(callbackFn!=""&&callbackFn!=null&&callbackFn!=undefined){callbackFn();}}};};$scope.ImgToBase64=function(theImg,theType,theQuality,resultVar){var img=document.querySelector("#"+theImg);const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;ctx.drawImage(img,0,0);if(theType=="jpg"){$App[resultVar]=canvas.toDataURL('image/jpeg',theQuality);}else{$App[resultVar]=canvas.toDataURL('image/png');}};$scope.Base64ToLocalFile=function(dataurl,filename){var arr=dataurl.split(','),mime=arr[0].match(/:(.*?);/)[1],bstr=atob(arr[1]),n=bstr.length,u8arr=new Uint8Array(n);while(n--){u8arr[n]=bstr.charCodeAt(n);}theFile=new File([u8arr],filename,{type:mime});saveAs(theFile,filename);};$scope.ResizeDesktopWindow=function(theWidth,theHeight){if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){window.resizeTo(theWidth,theHeight);}};$scope.FitAppToScreen=function(coverScreen,verticalAlign,horizontalAlign){$scope.AppPosition(verticalAlign,horizontalAlign);var ha=horizontalAlign.toUpperCase();var va=verticalAlign.toUpperCase();if(va=="MIDDLE"){va="CENTER"};fit(document.getElementById("ng-app"),{x:0,y:0,width:window.innerWidth,height:window.innerHeight},{cover:coverScreen,hAlign:fit[ha],vAlign:fit[va]});fit(document.getElementById("ng-app"),{x:0,y:0,width:window.innerWidth,height:window.innerHeight},{cover:coverScreen,hAlign:fit[ha],vAlign:fit[va]},function(transform){$App.NAB.AppScale=transform.scale});};$scope.IsInstalled=function(){if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){return true;}else{return false;}};$scope.CenterApp=function(){$("body").css("position","absolute");$("body").css("top","0px");$("body").css("bottom","0px");$("body").css("left","0px");$("body").css("right","0px");$("body").css("margin","auto");$("body").css("margin","auto");};$scope.TopCenterApp=function(){$("body").css("position","absolute");$("body").css("top","0px!important");$("body").css("left","0px");$("body").css("right","0px");$("body").css("bottom","auto");$("body").css("margin","auto");};$scope.ScaleApp=function(thezoom){$App.NAB.AppScale=thezoom;$("#ng-app").css("transform-origin","50% 50%");$("#ng-app").css("transform","scale("+thezoom+","+thezoom+")");};$scope.AppPosition=function(vertical,horizontal){$('body').css("position","absolute");if(vertical=="top"){$('body').css("top","0px");$('body').css("bottom","auto");}else if(vertical=="bottom"){$('body').css("bottom","0px");$('body').css("top","auto");}else{$('body').css("bottom","0px");$('body').css("top","0px");}if(horizontal=="left"){$('body').css("left","0px");$('body').css("right","auto");}else if(horizontal=="right"){$('body').css("left","auto");$('body').css("right","0px");}else{$('body').css("left","0px");$('body').css("right","0px");}$('body').css("margin","auto");};$scope.SetResponsivePages=function(plarge,pmedium,psmall,pxsmall){if(matchMedia){const largedisp=window.matchMedia("(min-width: 1025px)");const mediumdisp=window.matchMedia("(min-width: 768px) and (max-width: 1024px)");const smalldisp=window.matchMedia("(min-width: 481px) and (max-width: 767px)");const verysmalldisp=window.matchMedia("(min-width: 320px) and (max-width: 480px)");funciones=angular.element(document.getElementById("ng-view")).scope();$("body").css("width","100%");$("body").css("height","100%");$("body").css("overflow-x","hidden");$("body").css("overflow-y","auto");largedisp.addListener(WidthChangeLarge);WidthChangeLarge(largedisp);mediumdisp.addListener(WidthChangeMedium);WidthChangeMedium(mediumdisp);smalldisp.addListener(WidthChangeSmall);WidthChangeSmall(smalldisp);verysmalldisp.addListener(WidthChangeVerySmall);WidthChangeVerySmall(verysmalldisp);function WidthChangeLarge(largedisp){if(largedisp.matches){funciones.GotoPage(plarge);}};function WidthChangeMedium(mediumdisp){if(mediumdisp.matches){funciones.GotoPage(pmedium);}};function WidthChangeSmall(smalldisp){if(smalldisp.matches){funciones.GotoPage(psmall);}};function WidthChangeVerySmall(verysmalldisp){if(verysmalldisp.matches){funciones.GotoPage(pxsmall);}};}};$scope.AppBackgroundColor=function(thecolor){$("html").css("background",thecolor);};$scope.AppBackgroundImage=function(imagen){ruta=$("#"+imagen).attr('src');$("html").css('background-image','url('+ruta+' )');$("html").css('background-repeat','no-repeat');$("html").css('background-position','center center');$("html").css('background-attachment','fixed');$("html").css("-webkit-background-size","cover");$("html").css("-moz-background-size","cover");$("html").css("-o-background-size","cover");$("html").css("background-size","cover");};$scope.ObjDisableSelection=function(objectname){$("#"+objectname).css("-webkit-touch-callout","none");$("#"+objectname).css("-webkit-user-select","none");$("#"+objectname).css("-khtml-user-select","none");$("#"+objectname).css("-moz-user-select","none");$("#"+objectname).css("-ms-user-select","none");$("#"+objectname).css("user-select","none");};$scope.DisableSelection=function(){$("*").css("-webkit-touch-callout","none");$("*").css("-webkit-user-select","none");$("*").css("-khtml-user-select","none");$("*").css("-moz-user-select","none");$("*").css("-ms-user-select","none");$("*").css("user-select","none");};$scope.GetUrlParameter=function(param){url=window.location.href;var queryString=url?url.split('?')[1]:window.location.search.slice(1);var obj={};if(queryString){queryString=queryString.split('#')[0];var arr=queryString.split('&');for(var i=0;i<arr.length;i++){var a=arr[i].split('=');var paramName=a[0];var paramValue=typeof(a[1])==='undefined'?true:a[1];if(typeof paramValue==='string')paramValue=paramValue;if(paramName.match(/\[(\d+)?\]$/)){var key=paramName.replace(/\[(\d+)?\]/,'');if(!obj[key])obj[key]=[];if(paramName.match(/\[\d+\]$/)){var index=/\[(\d+)\]/.exec(paramName)[1];obj[key][index]=paramValue;}else{obj[key].push(paramValue);}}else{if(!obj[paramName]){obj[paramName]=paramValue;}else if(obj[paramName]&&typeof obj[paramName]==='string'){obj[paramName]=[obj[paramName]];obj[paramName].push(paramValue);}else{obj[paramName].push(paramValue);}}}}return obj[param];};$scope.csvToJSON=function(mycsv,separator,jsonObject){var lines=$App[mycsv].split("\n");var result=[];var headers=lines[0].split(separator);for(var i=1;i<lines.length;i++){var obj={};var currentline=lines[i].split(separator);for(var j=0;j<headers.length;j++){obj[headers[j]]=currentline[j];}result.push(obj);}$App[jsonObject]=result;};$scope.CheckInternetConnection=function(url,timeout,successFn,errorFn){$.ajax({url:url,timeout:timeout,cache:false,success:function(){if(successFn!=undefined){successFn();}},error:function(){if(errorFn!=undefined){errorFn();}},});};$scope.SetRelativePosition=function(objectname,vertical,horizontal){$("#"+objectname).css("position","absolute");if(vertical=="top"){$("#"+objectname).css("top","0px");$("#"+objectname).css("bottom","auto");}else if(vertical=="bottom"){$("#"+objectname).css("bottom","0px");$("#"+objectname).css("top","auto");}else{$("#"+objectname).css("bottom","0px");$("#"+objectname).css("top","0px");}if(horizontal=="left"){$("#"+objectname).css("left","0px");$("#"+objectname).css("right","auto");}else if(horizontal=="right"){$("#"+objectname).css("left","auto");$("#"+objectname).css("right","0px");}else{$("#"+objectname).css("left","0px");$("#"+objectname).css("right","0px");}$("#"+objectname).css("margin","auto");};$scope.WatchVar=function(varName,fn){if($App.NAB.$Watches[varName]){if($App.NAB.$Watches[varName].deRegFn)$App.NAB.$Watches[varName].deRegFn();delete $App.NAB.$Watches[varName];};if(fn){$App.NAB.$Watches[varName]={id:varName,deRegFn:undefined};$App.NAB.$Watches[varName].deRegFn=$scope.$watch(varName,function(newVal,oldVal){if(oldVal!==newVal)fn(newVal,oldVal);});};};$scope.TimerStart=function(objId,ms){if($App.NAB.$Timers[objId]){if(!angular.isDefined($App.NAB.$Timers[objId].promise)){$App.NAB.$Timers[objId].stime=Date.now();$App.NAB.$Timers[objId].promise=$interval($App.NAB.$Timers[objId].fn,ms||1000);}}else throw'A timer named "'+objId+'" does not exist.';};$scope.TimerStop=function(objId){if($App.NAB.$Timers[objId]){if(angular.isDefined($App.NAB.$Timers[objId].promise)){$interval.cancel($App.NAB.$Timers[objId].promise);$App.NAB.$Timers[objId].promise=undefined;}}else throw'A timer named "'+objId+'" does not exist.';};$scope._DeleteSound=function(sname){if($App.NAB.$Audio[sname]){$App.NAB.$Audio[sname].player.pause();delete $App.NAB.$Audio[sname].player;delete $App.NAB.$Audio[sname];return true;}return false;};$scope.PlaySound=function(fname,loop){var sname=ExtractFileName(fname).toLowerCase();if($App.NAB.$Audio[sname])throw'A sound named "'+sname+'" is already playing.';var devicePlatform=(typeof device!=='undefined'&&device.platform)?device.platform:null;if(typeof Audio!=="undefined"&&devicePlatform===null){obj={id:sname,kind:"audio",player:new Audio(fname)};obj.player.addEventListener("ended",function(){$scope._DeleteSound(sname);});}else if(devicePlatform){if(devicePlatform==='Android'){if(!IsUrl(fname))fname='/android_asset/www/'+fname;}obj={id:sname,kind:"media",player:new Media(fname,function onSuccess(){$scope._DeleteSound(sname);},function onError(e){console.log("Error playing sound: "+JSON.stringify(e));$scope._DeleteSound(sname);})};}else throw'Sound API unavailable.';$App.NAB.$Audio[sname]=obj;if(obj.kind==="audio"){obj.player.loop=loop;obj.player.play();}else obj.player.play({numberOfLoops:loop});};$scope.StopSound=function(fname){if(!fname||fname.length===0){for(var id in $App.NAB.$Audio)$scope._DeleteSound(id);}else{var sname=ExtractFileName(fname).toLowerCase();if(!$scope._DeleteSound(sname))throw'There is no playing sound named "'+sname+'"';}};$scope.CreateVideoPlayer=function(objId,fname,controls,autoplay,looping,muted){var sname=ExtractFileName(fname).toLowerCase();if(controls){addcontrols="controls";}else{addcontrols="";}if(autoplay){addautoplay="autoplay";}else{addautoplay="";}if(looping){addloop="loop";}else{addloop="";}if(muted){addmuted="muted";}else{addmuted="";}htmlstring='<video id="'+objId+'Video" width="100%" height="100%" '+addcontrols+' '+addautoplay+' '+addloop+' '+addmuted+'><source src="'+fname+'" type="video/mp4"></video>';$("#"+objId).html(htmlstring);};$scope.OnVideoEvent=function(objId,eventName,subroutine){if($App.NAB[objId+"Video"]){$App.NAB[objId+"Video"].on(eventName,subroutine);return;}$("#"+objId+"Video").on(eventName,subroutine);};$scope.CreateAudioPlayer=function(objId,fname,controls,autoplay,looping){var sname=ExtractFileName(fname).toLowerCase();if(controls){addcontrols="controls";}else{addcontrols="";}if(autoplay){addautoplay="autoplay";}else{addautoplay="";}if(looping){addloop="loop";}else{addloop="";}htmlstring='<audio id="'+objId+'Audio" width="100%" height="100%" '+addcontrols+' '+addautoplay+' '+addloop+'><source src="'+fname+'" type="audio/mp3"></audio>';$("#"+objId).html(htmlstring);};$scope.OnAudioEvent=function(objId,eventName,subroutine){if($App.NAB[objId+"Audio"]){$App.NAB[objId+"Audio"].on(eventName,subroutine);return;}$("#"+objId+"Audio").on(eventName,subroutine);};$scope.SoundBeep=function(){var snd=new Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2oCgILEBupZgHvAhEBcZ6joQBxS76AgccrFlczBvKLC0QI2cBoCFvfTDAo7eoOQInqDPBtvrDEZBNYN5xwNwxQRfw8ZQ5wQVLvO8OYU+mHvFLlDh05Mdg7BT6YrRPpCBznMB2r//xKJjyyOh+cImr2/4doscwD6neZjuZR4AgAABYAAAABy1xcdQtxYBYYZdifkUDgzzXaXn98Z0oi9ILU5mBjFANmRwlVJ3/6jYDAmxaiDG3/6xjQQCCKkRb/6kg/wW+kSJ5//rLobkLSiKmqP/0ikJuDaSaSf/6JiLYLEYnW/+kXg1WRVJL/9EmQ1YZIsv/6Qzwy5qk7/+tEU0nkls3/zIUMPKNX/6yZLf+kFgAfgGyLFAUwY//uQZAUABcd5UiNPVXAAAApAAAAAE0VZQKw9ISAAACgAAAAAVQIygIElVrFkBS+Jhi+EAuu+lKAkYUEIsmEAEoMeDmCETMvfSHTGkF5RWH7kz/ESHWPAq/kcCRhqBtMdokPdM7vil7RG98A2sc7zO6ZvTdM7pmOUAZTnJW+NXxqmd41dqJ6mLTXxrPpnV8avaIf5SvL7pndPvPpndJR9Kuu8fePvuiuhorgWjp7Mf/PRjxcFCPDkW31srioCExivv9lcwKEaHsf/7ow2Fl1T/9RkXgEhYElAoCLFtMArxwivDJJ+bR1HTKJdlEoTELCIqgEwVGSQ+hIm0NbK8WXcTEI0UPoa2NbG4y2K00JEWbZavJXkYaqo9CRHS55FcZTjKEk3NKoCYUnSQ0rWxrZbFKbKIhOKPZe1cJKzZSaQrIyULHDZmV5K4xySsDRKWOruanGtjLJXFEmwaIbDLX0hIPBUQPVFVkQkDoUNfSoDgQGKPekoxeGzA4DUvnn4bxzcZrtJyipKfPNy5w+9lnXwgqsiyHNeSVpemw4bWb9psYeq//uQZBoABQt4yMVxYAIAAAkQoAAAHvYpL5m6AAgAACXDAAAAD59jblTirQe9upFsmZbpMudy7Lz1X1DYsxOOSWpfPqNX2WqktK0DMvuGwlbNj44TleLPQ+Gsfb+GOWOKJoIrWb3cIMeeON6lz2umTqMXV8Mj30yWPpjoSa9ujK8SyeJP5y5mOW1D6hvLepeveEAEDo0mgCRClOEgANv3B9a6fikgUSu/DmAMATrGx7nng5p5iimPNZsfQLYB2sDLIkzRKZOHGAaUyDcpFBSLG9MCQALgAIgQs2YunOszLSAyQYPVC2YdGGeHD2dTdJk1pAHGAWDjnkcLKFymS3RQZTInzySoBwMG0QueC3gMsCEYxUqlrcxK6k1LQQcsmyYeQPdC2YfuGPASCBkcVMQQqpVJshui1tkXQJQV0OXGAZMXSOEEBRirXbVRQW7ugq7IM7rPWSZyDlM3IuNEkxzCOJ0ny2ThNkyRai1b6ev//3dzNGzNb//4uAvHT5sURcZCFcuKLhOFs8mLAAEAt4UWAAIABAAAAAB4qbHo0tIjVkUU//uQZAwABfSFz3ZqQAAAAAngwAAAE1HjMp2qAAAAACZDgAAAD5UkTE1UgZEUExqYynN1qZvqIOREEFmBcJQkwdxiFtw0qEOkGYfRDifBui9MQg4QAHAqWtAWHoCxu1Yf4VfWLPIM2mHDFsbQEVGwyqQoQcwnfHeIkNt9YnkiaS1oizycqJrx4KOQjahZxWbcZgztj2c49nKmkId44S71j0c8eV9yDK6uPRzx5X18eDvjvQ6yKo9ZSS6l//8elePK/Lf//IInrOF/FvDoADYAGBMGb7FtErm5MXMlmPAJQVgWta7Zx2go+8xJ0UiCb8LHHdftWyLJE0QIAIsI+UbXu67dZMjmgDGCGl1H+vpF4NSDckSIkk7Vd+sxEhBQMRU8j/12UIRhzSaUdQ+rQU5kGeFxm+hb1oh6pWWmv3uvmReDl0UnvtapVaIzo1jZbf/pD6ElLqSX+rUmOQNpJFa/r+sa4e/pBlAABoAAAAA3CUgShLdGIxsY7AUABPRrgCABdDuQ5GC7DqPQCgbbJUAoRSUj+NIEig0YfyWUho1VBBBA//uQZB4ABZx5zfMakeAAAAmwAAAAF5F3P0w9GtAAACfAAAAAwLhMDmAYWMgVEG1U0FIGCBgXBXAtfMH10000EEEEEECUBYln03TTTdNBDZopopYvrTTdNa325mImNg3TTPV9q3pmY0xoO6bv3r00y+IDGid/9aaaZTGMuj9mpu9Mpio1dXrr5HERTZSmqU36A3CumzN/9Robv/Xx4v9ijkSRSNLQhAWumap82WRSBUqXStV/YcS+XVLnSS+WLDroqArFkMEsAS+eWmrUzrO0oEmE40RlMZ5+ODIkAyKAGUwZ3mVKmcamcJnMW26MRPgUw6j+LkhyHGVGYjSUUKNpuJUQoOIAyDvEyG8S5yfK6dhZc0Tx1KI/gviKL6qvvFs1+bWtaz58uUNnryq6kt5RzOCkPWlVqVX2a/EEBUdU1KrXLf40GoiiFXK///qpoiDXrOgqDR38JB0bw7SoL+ZB9o1RCkQjQ2CBYZKd/+VJxZRRZlqSkKiws0WFxUyCwsKiMy7hUVFhIaCrNQsKkTIsLivwKKigsj8XYlwt/WKi2N4d//uQRCSAAjURNIHpMZBGYiaQPSYyAAABLAAAAAAAACWAAAAApUF/Mg+0aohSIRobBAsMlO//Kk4soosy1JSFRYWaLC4qZBYWFRGZdwqKiwkNBVmoWFSJkWFxX4FFRQWR+LsS4W/rFRb/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VEFHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU291bmRib3kuZGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAwNGh0dHA6Ly93d3cuc291bmRib3kuZGUAAAAAAAAAACU=");snd.play();};var fit=function(){"use strict";function t(t){return t.toUpperCase()}function e(t){return"number"==typeof t&&!isNaN(t)}function n(){return(new Date).getTime()}function i(t,e){for(var n=[],i=0,r=t.length;r>i;i++)n[i]=e(t[i]);return n}function r(t,e){for(var n in e)n in t||(t[n]=e[n]);return t}function o(e){if(!d)for(var n,i=H(C.body),r=w,o=0,a=T.length;a>o&&(d=T[o],n=d+r,!(n in i))&&(d=d.replace(/^(\w)/,t),n=d+r,!(n in i));o++);return d+e}function a(t){var e=H(t),n=e[o(w)].replace(/[a-z()]/gi,"").split(",");if(n.length<6)return[1,0,0,1,0,0];for(var i=0;6>i;i++)n[i]=parseFloat(n[i]);return n}function f(t,e){var n=a(e);n[0]=t.scale,n[3]=t.scale,n[4]+=t.tx,n[5]+=t.ty;var r=i(n,function(t){return t.toFixed(6)});e.style[o(m)]="0 0",e.style[o(w)]="matrix("+r.join(",")+")"}function s(t,e){var n=H(e),i=parseFloat(n.left)||0,r=parseFloat(n.top)||0;"static"===n.position&&(e.style.position="relative"),e.style.left=i+t.tx+b,e.style.top=r+t.ty+b,e.style.height=t.height+b,e.style.width=t.width+b}function l(t,e){var n=H(e),i=parseFloat(n.marginLeft)||0,r=parseFloat(n.marginTop)||0;e.style.marginLeft=i+t.tx+b,e.style.marginTop=r+t.ty+b,e.style.height=t.height+b,e.style.width=t.width+b}function h(t,e){e.height*=t.scale,e.width*=t.scale,e.x+=t.tx,e.y+=t.ty}function u(t){if(t.nodeType&&1==t.nodeType){var n=t.getBoundingClientRect();t={height:t.offsetHeight,width:t.offsetWidth,x:n.left,y:n.top}}return!e(t.x)&&e(t.left)&&(t.x=t.left),!e(t.y)&&e(t.top)&&(t.y=t.top),t}function c(){var t=n(),e=t-y;if(x>=e)clearInterval(v),v=setTimeout(c,x-e);else{for(var i=0,r=M.length;r>i;i++)M[i]();y=t}}function g(t,e,n,i,r){var o=u(t),a=u(e),s=0===o.width?R:o.width,l=0===o.height?P:o.height,c=0===a.width?I:a.width,g=0===a.height?P:a.height;R=s,B=l,I=c,P=g;var p=c/s,d=g/l,y=s/l,v=c/g,x=n.cover?d:p,m=n.cover?p:d,w=y>=v?x:m,T=s*w,O=l*w,F=n.hAlign==E?.5*(T-c):n.hAlign==L?T-c:0,b=n.vAlign==E?.5*(O-g):n.vAlign==A?O-g:0;return r=r||{},r.tx=a.x-F-o.x,r.ty=a.y-b-o.y,r.x=a.x-F-o.x*w,r.y=a.y-b-o.y*w,r.height=o.height*w,r.width=o.width*w,r.scale=w,i?i(r,t):n.apply&&(i="undefined"!=typeof HTMLElement&&t instanceof HTMLElement?f:h)(r,t),r}function p(t,e,n,i){if(!t||!e)throw"You must supply a target and a container";"function"==typeof n&&(i=n,n={}),n=r(n||{},N);var o=g(t,e,n,i);return n.watch&&(M.length||(z.addEventListener?(z.addEventListener("resize",c),z.addEventListener("orientationchange",c)):(z.attachEvent("onresize",c),z.attachEvent("onorientationchange",c))),o.trigger=function(){g(t,e,n,i,o)},o.on=function(t){var e=M.indexOf(o.trigger);~e||M.push(o.trigger),t||o.trigger()},o.off=function(){var t=M.indexOf(o.trigger);~t&&M.splice(t,1)},o.on(!0)),o}var d,y,v,x=50,m="TransformOrigin",w="Transform",T="moz ms o webkit".split(" "),E="center",A="bottom",L="right",O="left",F="top",b="px",z=window||self,C=document,H=z.getComputedStyle,M=[],N={hAlign:E,vAlign:E,watch:!1,cover:!1,apply:!0};Array.prototype.indexOf||(Array.prototype.indexOf=function(t){for(var e=0;e<this.length;++e)if(this[e]==t)return e;return-1});var R,B,I,P;return r(p,{watching:M,defaults:N,cssTransform:f,cssPosition:s,cssMargin:l,CENTER:E,BOTTOM:A,RIGHT:L,LEFT:O,TOP:F})}();"undefined"!=typeof exports&&("undefined"!=typeof module&&module.exports&&(exports=module.exports=fit),exports.fit=fit);(function(factory){if(typeof define==="function"&&define.amd){define(["jquery"],function($){return factory($)})}else if(typeof module==="object"&&typeof module.exports==="object"){exports=factory(require("jquery"))}else{factory(jQuery)}})(function($){$.easing.jswing=$.easing.swing;var pow=Math.pow,sqrt=Math.sqrt,sin=Math.sin,cos=Math.cos,PI=Math.PI,c1=1.70158,c2=c1*1.525,c3=c1+1,c4=2*PI/3,c5=2*PI/4.5;function bounceOut(x){var n1=7.5625,d1=2.75;if(x<1/d1){return n1*x*x}else if(x<2/d1){return n1*(x-=1.5/d1)*x+.75}else if(x<2.5/d1){return n1*(x-=2.25/d1)*x+.9375}else{return n1*(x-=2.625/d1)*x+.984375}}$.extend($.easing,{def:"easeOutQuad",swing:function(x){return $.easing[$.easing.def](x)},easeInQuad:function(x){return x*x},easeOutQuad:function(x){return 1-(1-x)*(1-x)},easeInOutQuad:function(x){return x<.5?2*x*x:1-pow(-2*x+2,2)/2},easeInCubic:function(x){return x*x*x},easeOutCubic:function(x){return 1-pow(1-x,3)},easeInOutCubic:function(x){return x<.5?4*x*x*x:1-pow(-2*x+2,3)/2},easeInQuart:function(x){return x*x*x*x},easeOutQuart:function(x){return 1-pow(1-x,4)},easeInOutQuart:function(x){return x<.5?8*x*x*x*x:1-pow(-2*x+2,4)/2},easeInQuint:function(x){return x*x*x*x*x},easeOutQuint:function(x){return 1-pow(1-x,5)},easeInOutQuint:function(x){return x<.5?16*x*x*x*x*x:1-pow(-2*x+2,5)/2},easeInSine:function(x){return 1-cos(x*PI/2)},easeOutSine:function(x){return sin(x*PI/2)},easeInOutSine:function(x){return-(cos(PI*x)-1)/2},easeInExpo:function(x){return x===0?0:pow(2,10*x-10)},easeOutExpo:function(x){return x===1?1:1-pow(2,-10*x)},easeInOutExpo:function(x){return x===0?0:x===1?1:x<.5?pow(2,20*x-10)/2:(2-pow(2,-20*x+10))/2},easeInCirc:function(x){return 1-sqrt(1-pow(x,2))},easeOutCirc:function(x){return sqrt(1-pow(x-1,2))},easeInOutCirc:function(x){return x<.5?(1-sqrt(1-pow(2*x,2)))/2:(sqrt(1-pow(-2*x+2,2))+1)/2},easeInElastic:function(x){return x===0?0:x===1?1:-pow(2,10*x-10)*sin((x*10-10.75)*c4)},easeOutElastic:function(x){return x===0?0:x===1?1:pow(2,-10*x)*sin((x*10-.75)*c4)+1},easeInOutElastic:function(x){return x===0?0:x===1?1:x<.5?-(pow(2,20*x-10)*sin((20*x-11.125)*c5))/2:pow(2,-20*x+10)*sin((20*x-11.125)*c5)/2+1},easeInBack:function(x){return c3*x*x*x-c1*x*x},easeOutBack:function(x){return 1+c3*pow(x-1,3)+c1*pow(x-1,2)},easeInOutBack:function(x){return x<.5?pow(2*x,2)*((c2+1)*2*x-c2)/2:(pow(2*x-2,2)*((c2+1)*(x*2-2)+c2)+2)/2},easeInBounce:function(x){return 1-bounceOut(1-x)},easeOutBounce:bounceOut,easeInOutBounce:function(x){return x<.5?(1-bounceOut(1-2*x))/2:(1+bounceOut(2*x-1))/2}})});function d(c){var b,a;if(!this.length)return this;b=this[0];b.ownerDocument?a=b.ownerDocument:(a=b,b=a.documentElement);if(null==c){if(!a.exitFullscreen&&!a.webkitExitFullscreen&&!a.webkitCancelFullScreen&&!a.msExitFullscreen&&!a.mozCancelFullScreen)return null;c=!!a.fullscreenElement||!!a.msFullscreenElement||!!a.webkitIsFullScreen||!!a.mozFullScreen;return!c?c:a.fullscreenElement||a.webkitFullscreenElement||a.webkitCurrentFullScreenElement||a.msFullscreenElement||a.mozFullScreenElement||c}c?(c=b.requestFullscreen||b.webkitRequestFullscreen||b.webkitRequestFullScreen||b.msRequestFullscreen||b.mozRequestFullScreen)&&c.call(b):(c=a.exitFullscreen||a.webkitExitFullscreen||a.webkitCancelFullScreen||a.msExitFullscreen||a.mozCancelFullScreen)&&c.call(a);return this}jQuery.fn.fullScreen=d;jQuery.fn.toggleFullScreen=function(){return d.call(this,!d.call(this))};var e,f,g;e=document;e.webkitCancelFullScreen?(f="webkitfullscreenchange",g="webkitfullscreenerror"):e.msExitFullscreen?(f="MSFullscreenChange",g="MSFullscreenError"):e.mozCancelFullScreen?(f="mozfullscreenchange",g="mozfullscreenerror"):(f="fullscreenchange",g="fullscreenerror");jQuery(document).bind(f,function(){jQuery(document).trigger(new jQuery.Event("fullscreenchange"))});jQuery(document).bind(g,function(){jQuery(document).trigger(new jQuery.Event("fullscreenerror"))});$scope.EnterFullScreen=function(){$(document).fullScreen(true);};$scope.ExitFullScreen=function(){$(document).fullScreen(false);};$scope.ObjectEnterFullScreen=function(ObjId){$("#"+ObjId).fullScreen(true);};$scope.ObjectExitFullScreen=function(ObjId){$("#"+ObjId).fullScreen(false);};var neoscript;$scope.AppOnKeyDown=function(callbackFn){$("body").keydown(function(evt){callbackFn(evt.which);});};(function(a,b){if("function"==typeof define&&define.amd)define([],b);else if("undefined"!=typeof exports)b();else{b(),a.FileSaver={exports:{}}.exports}})(this,function(){"use strict";function b(a,b){return"undefined"==typeof b?b={autoBom:!1}:"object"!=typeof b&&(console.warn("Depricated: Expected third argument to be a object"),b={autoBom:!b}),b.autoBom&&/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type)?new Blob(["\uFEFF",a],{type:a.type}):a}function c(b,c,d){var e=new XMLHttpRequest;e.open("GET",b),e.responseType="blob",e.onload=function(){a(e.response,c,d)},e.onerror=function(){console.error("could not download file")},e.send()}function d(a){var b=new XMLHttpRequest;return b.open("HEAD",a,!1),b.send(),200<=b.status&&299>=b.status}function e(a){try{a.dispatchEvent(new MouseEvent("click"))}catch(c){var b=document.createEvent("MouseEvents");b.initMouseEvent("click",!0,!0,window,0,0,0,80,20,!1,!1,!1,!1,0,null),a.dispatchEvent(b)}}var f="object"==typeof window&&window.window===window?window:"object"==typeof self&&self.self===self?self:"object"==typeof global&&global.global===global?global:void 0,a=f.saveAs||"object"!=typeof window||window!==f?function(){}:"download"in HTMLAnchorElement.prototype?function(b,g,h){var i=f.URL||f.webkitURL,j=document.createElement("a");g=g||b.name||"download",j.download=g,j.rel="noopener","string"==typeof b?(j.href=b,j.origin===location.origin?e(j):d(j.href)?c(b,g,h):e(j,j.target="_blank")):(j.href=i.createObjectURL(b),setTimeout(function(){i.revokeObjectURL(j.href)},4E4),setTimeout(function(){e(j)},0))}:"msSaveOrOpenBlob"in navigator?function(f,g,h){if(g=g||f.name||"download","string"!=typeof f)navigator.msSaveOrOpenBlob(b(f,h),g);else if(d(f))c(f,g,h);else{var i=document.createElement("a");i.href=f,i.target="_blank",setTimeout(function(){e(i)})}}:function(a,b,d,e){if(e=e||open("","_blank"),e&&(e.document.title=e.document.body.innerText="downloading..."),"string"==typeof a)return c(a,b,d);var g="application/octet-stream"===a.type,h=/constructor/i.test(f.HTMLElement)||f.safari,i=/CriOS\/[\d]+/.test(navigator.userAgent);if((i||g&&h)&&"object"==typeof FileReader){var j=new FileReader;j.onloadend=function(){var a=j.result;a=i?a:a.replace(/^data:[^;]*;/,"data:attachment/file;"),e?e.location.href=a:location=a,e=null},j.readAsDataURL(a)}else{var k=f.URL||f.webkitURL,l=k.createObjectURL(a);e?e.location=l:location.href=l,e=null,setTimeout(function(){k.revokeObjectURL(l)},4E4)}};f.saveAs=a.saveAs=a,"undefined"!=typeof module&&(module.exports=a)});$scope.VarToFile=function(datavar,filename){var blob=new Blob([datavar],{type:"text/plain;charset=utf-8"});saveAs(blob,filename);};!function(a){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=a();else if("function"==typeof define&&define.amd)define([],a);else{var b;b="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,b.mexp=a()}}(function(){return function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c?c:a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}({1:[function(a,b,c){var d=a("./postfix_evaluator.js");d.prototype.formulaEval=function(){"use strict";for(var a,b,c,d=[],e=this.value,f=0;f<e.length;f++)1===e[f].type||3===e[f].type?d.push({value:3===e[f].type?e[f].show:e[f].value,type:1}):13===e[f].type?d.push({value:e[f].show,type:1}):0===e[f].type?d[d.length-1]={value:e[f].show+("-"!=e[f].show?"(":"")+d[d.length-1].value+("-"!=e[f].show?")":""),type:0}:7===e[f].type?d[d.length-1]={value:(1!=d[d.length-1].type?"(":"")+d[d.length-1].value+(1!=d[d.length-1].type?")":"")+e[f].show,type:7}:10===e[f].type?(a=d.pop(),b=d.pop(),"P"===e[f].show||"C"===e[f].show?d.push({value:"<sup>"+b.value+"</sup>"+e[f].show+"<sub>"+a.value+"</sub>",type:10}):d.push({value:(1!=b.type?"(":"")+b.value+(1!=b.type?")":"")+"<sup>"+a.value+"</sup>",type:1})):2===e[f].type||9===e[f].type?(a=d.pop(),b=d.pop(),d.push({value:(1!=b.type?"(":"")+b.value+(1!=b.type?")":"")+e[f].show+(1!=a.type?"(":"")+a.value+(1!=a.type?")":""),type:e[f].type})):12===e[f].type&&(a=d.pop(),b=d.pop(),c=d.pop(),d.push({value:e[f].show+"("+c.value+","+b.value+","+a.value+")",type:12}));return d[0].value},b.exports=d},{"./postfix_evaluator.js":5}],2:[function(a,b,c){function d(a,b){for(var c=0;c<a.length;c++)a[c]+=b;return a}function e(a,b,c,d){for(var e=0;e<d;e++)if(a[c+e]!==b[e])return!1;return!0}var f=a("./math_function.js"),g=["sin","cos","tan","pi","(",")","P","C","asin","acos","atan","7","8","9","int","cosh","acosh","ln","^","root","4","5","6","/","!","tanh","atanh","Mod","1","2","3","*","sinh","asinh","e","log","0",".","+","-",",","Sigma","n","Pi","pow"],h=["sin","cos","tan","&pi;","(",")","P","C","asin","acos","atan","7","8","9","Int","cosh","acosh"," ln","^","root","4","5","6","&divide;","!","tanh","atanh"," Mod ","1","2","3","&times;","sinh","asinh","e"," log","0",".","+","-",",","&Sigma;","n","&Pi;","pow"],i=[f.math.sin,f.math.cos,f.math.tan,"PI","(",")",f.math.P,f.math.C,f.math.asin,f.math.acos,f.math.atan,"7","8","9",Math.floor,f.math.cosh,f.math.acosh,Math.log,Math.pow,Math.sqrt,"4","5","6",f.math.div,f.math.fact,f.math.tanh,f.math.atanh,f.math.mod,"1","2","3",f.math.mul,f.math.sinh,f.math.asinh,"E",f.math.log,"0",".",f.math.add,f.math.sub,",",f.math.sigma,"n",f.math.Pi,Math.pow],j={0:11,1:0,2:3,3:0,4:0,5:0,6:0,7:11,8:11,9:1,10:10,11:0,12:11,13:0},k=[0,0,0,3,4,5,10,10,0,0,0,1,1,1,0,0,0,0,10,0,1,1,1,2,7,0,0,2,1,1,1,2,0,0,3,0,1,6,9,9,11,12,13,12,8],l={0:!0,1:!0,3:!0,4:!0,6:!0,8:!0,9:!0,12:!0,13:!0},m={0:!0,1:!0,2:!0,3:!0,4:!0,5:!0,6:!0,7:!0,8:!0,9:!0,10:!0,11:!0,12:!0,13:!0},n={0:!0,3:!0,4:!0,8:!0,12:!0,13:!0},o={},p={0:!0,1:!0,3:!0,4:!0,6:!0,8:!0,12:!0,13:!0},q={1:!0},r=[[],["1","2","3","7","8","9","4","5","6","+","-","*","/","(",")","^","!","P","C","e","0",".",",","n"],["pi","ln","Pi"],["sin","cos","tan","Del","int","Mod","log","pow"],["asin","acos","atan","cosh","root","tanh","sinh"],["acosh","atanh","asinh","Sigma"]];f.addToken=function(a){for(var b=0;b<a.length;b++){var c=a[b].token.length,d=-1;if(c<r.length)for(var e=0;e<r[c].length;e++)if(a[b].token===r[c][e]){d=g.indexOf(r[c][e]);break}d===-1?(g.push(a[b].token),k.push(a[b].type),r.length<=a[b].token.length&&(r[a[b].token.length]=[]),r[a[b].token.length].push(a[b].token),i.push(a[b].value),h.push(a[b].show)):(g[d]=a[b].token,k[d]=a[b].type,i[d]=a[b].value,h[d]=a[b].show)}},f.lex=function(a,b){"use strict";var c,s,t,u,v={value:f.math.changeSign,type:0,pre:21,show:"-"},w={value:")",show:")",type:5,pre:0},x={value:"(",type:4,pre:0,show:"("},y=[x],z=[],A=a,B=0,C=l,D=0,E=o,F="";"undefined"!=typeof b&&f.addToken(b);var G={};for(s=0;s<A.length;s++)if(" "!==A[s]){for(c="",t=A.length-s>r.length-2?r.length-1:A.length-s;t>0;t--)for(u=0;u<r[t].length;u++)e(A,r[t][u],s,t)&&(c=r[t][u],u=r[t].length,t=0);if(s+=c.length-1,""===c)throw new f.Exception("Can't understand after "+A.slice(s));var H,I=g.indexOf(c),J=c,K=k[I],L=i[I],M=j[K],N=h[I],O=y[y.length-1];for(H=z.length;H--&&0===z[H];)if([0,2,3,5,9,11,12,13].indexOf(K)!==-1){if(C[K]!==!0)throw new f.Exception(c+" is not allowed after "+F);y.push(w),C=m,E=p,d(z,-1).pop()}if(C[K]!==!0)throw new f.Exception(c+" is not allowed after "+F);if(E[K]===!0&&(K=2,L=f.math.mul,N="&times;",M=3,s-=c.length),G={value:L,type:K,pre:M,show:N},0===K)C=l,E=o,d(z,2).push(2),y.push(G),y.push(x);else if(1===K)1===O.type?(O.value+=L,d(z,1)):y.push(G),C=m,E=n;else if(2===K)C=l,E=o,d(z,2),y.push(G);else if(3===K)y.push(G),C=m,E=p;else if(4===K)B+=z.length,z=[],D++,C=l,E=o,y.push(G);else if(5===K){if(!D)throw new f.Exception("Closing parenthesis are more than opening one, wait What!!!");for(;B--;)y.push(w);B=0,D--,C=m,E=p,y.push(G)}else if(6===K){if(O.hasDec)throw new f.Exception("Two decimals are not allowed in one number");1!==O.type&&(O={value:0,type:1,pre:0},y.push(O),d(z,-1)),C=q,d(z,1),E=o,O.value+=L,O.hasDec=!0}else 7===K&&(C=m,E=p,d(z,1),y.push(G));8===K?(C=l,E=o,d(z,4).push(4),y.push(G),y.push(x)):9===K?(9===O.type?O.value===f.math.add?(O.value=L,O.show=N,d(z,1)):O.value===f.math.sub&&"-"===N&&(O.value=f.math.add,O.show="+",d(z,1)):5!==O.type&&7!==O.type&&1!==O.type&&3!==O.type&&13!==O.type?"-"===J&&(C=l,E=o,d(z,2).push(2),y.push(v),y.push(x)):(y.push(G),d(z,2)),C=l,E=o):10===K?(C=l,E=o,d(z,2),y.push(G)):11===K?(C=l,E=o,y.push(G)):12===K?(C=l,E=o,d(z,6).push(6),y.push(G),y.push(x)):13===K&&(C=m,E=p,y.push(G)),d(z,-1),F=c}for(H=z.length;H--&&0===z[H];)y.push(w),d(z,-1).pop();if(C[5]!==!0)throw new f.Exception("complete the expression");for(;D--;)y.push(w);return y.push(w),new f(y)},b.exports=f},{"./math_function.js":3}],3:[function(a,b,c){var d=function(a){this.value=a};d.math={isDegree:!0,acos:function(a){return d.math.isDegree?180/Math.PI*Math.acos(a):Math.acos(a)},add:function(a,b){return a+b},asin:function(a){return d.math.isDegree?180/Math.PI*Math.asin(a):Math.asin(a)},atan:function(a){return d.math.isDegree?180/Math.PI*Math.atan(a):Math.atan(a)},acosh:function(a){return Math.log(a+Math.sqrt(a*a-1))},asinh:function(a){return Math.log(a+Math.sqrt(a*a+1))},atanh:function(a){return Math.log((1+a)/(1-a))},C:function(a,b){var c=1,e=a-b,f=b;f<e&&(f=e,e=b);for(var g=f+1;g<=a;g++)c*=g;return c/d.math.fact(e)},changeSign:function(a){return-a},cos:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.cos(a)},cosh:function(a){return(Math.pow(Math.E,a)+Math.pow(Math.E,-1*a))/2},div:function(a,b){return a/b},fact:function(a){if(a%1!==0)return"NaN";for(var b=1,c=2;c<=a;c++)b*=c;return b},inverse:function(a){return 1/a},log:function(a){return Math.log(a)/Math.log(10)},mod:function(a,b){return a%b},mul:function(a,b){return a*b},P:function(a,b){for(var c=1,d=Math.floor(a)-Math.floor(b)+1;d<=Math.floor(a);d++)c*=d;return c},Pi:function(a,b,c){for(var d=1,e=a;e<=b;e++)d*=Number(c.postfixEval({n:e}));return d},pow10x:function(a){for(var b=1;a--;)b*=10;return b},sigma:function(a,b,c){for(var d=0,e=a;e<=b;e++)d+=Number(c.postfixEval({n:e}));return d},sin:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.sin(a)},sinh:function(a){return(Math.pow(Math.E,a)-Math.pow(Math.E,-1*a))/2},sub:function(a,b){return a-b},tan:function(a){return d.math.isDegree&&(a=d.math.toRadian(a)),Math.tan(a)},tanh:function(a){return d.sinha(a)/d.cosha(a)},toRadian:function(a){return a*Math.PI/180}},d.Exception=function(a){this.message=a},b.exports=d},{}],4:[function(a,b,c){var d=a("./lexer.js");d.prototype.toPostfix=function(){"use strict";for(var a,b,c,e,f,g=[],h=[{value:"(",type:4,pre:0}],i=this.value,j=1;j<i.length;j++)if(1===i[j].type||3===i[j].type||13===i[j].type)1===i[j].type&&(i[j].value=Number(i[j].value)),g.push(i[j]);else if(4===i[j].type)h.push(i[j]);else if(5===i[j].type)for(;4!==(b=h.pop()).type;)g.push(b);else if(11===i[j].type){for(;4!==(b=h.pop()).type;)g.push(b);h.push(b)}else{a=i[j],e=a.pre,f=h[h.length-1],c=f.pre;var k="Math.pow"==f.value&&"Math.pow"==a.value;if(e>c)h.push(a);else{for(;c>=e&&!k||k&&e<c;)b=h.pop(),f=h[h.length-1],g.push(b),c=f.pre,k="Math.pow"==a.value&&"Math.pow"==f.value;h.push(a)}}return new d(g)},b.exports=d},{"./lexer.js":2}],5:[function(a,b,c){var d=a("./postfix.js");d.prototype.postfixEval=function(a){"use strict";a=a||{},a.PI=Math.PI,a.E=Math.E;for(var b,c,e,f=[],g=this.value,h="undefined"!=typeof a.n,i=0;i<g.length;i++)1===g[i].type?f.push({value:g[i].value,type:1}):3===g[i].type?f.push({value:a[g[i].value],type:1}):0===g[i].type?"undefined"==typeof f[f.length-1].type?f[f.length-1].value.push(g[i]):f[f.length-1].value=g[i].value(f[f.length-1].value):7===g[i].type?"undefined"==typeof f[f.length-1].type?f[f.length-1].value.push(g[i]):f[f.length-1].value=g[i].value(f[f.length-1].value):8===g[i].type?(b=f.pop(),c=f.pop(),f.push({type:1,value:g[i].value(c.value,b.value)})):10===g[i].type?(b=f.pop(),c=f.pop(),"undefined"==typeof c.type?(c.value=c.concat(b),c.value.push(g[i]),f.push(c)):"undefined"==typeof b.type?(b.unshift(c),b.push(g[i]),f.push(b)):f.push({type:1,value:g[i].value(c.value,b.value)})):2===g[i].type||9===g[i].type?(b=f.pop(),c=f.pop(),"undefined"==typeof c.type?(console.log(c),c=c.concat(b),c.push(g[i]),f.push(c)):"undefined"==typeof b.type?(b.unshift(c),b.push(g[i]),f.push(b)):f.push({type:1,value:g[i].value(c.value,b.value)})):12===g[i].type?(b=f.pop(),"undefined"!=typeof b.type&&(b=[b]),c=f.pop(),e=f.pop(),f.push({type:1,value:g[i].value(e.value,c.value,new d(b))})):13===g[i].type&&(h?f.push({value:a[g[i].value],type:3}):f.push([g[i]]));if(f.length>1)throw new d.exception("Uncaught Syntax error");return f[0].value>1e15?"Infinity":parseFloat(f[0].value.toFixed(15))},d.eval=function(a,b,c){return"undefined"==typeof b?this.lex(a).toPostfix().postfixEval():"undefined"==typeof c?"undefined"!=typeof b.length?this.lex(a,b).toPostfix().postfixEval():this.lex(a).toPostfix().postfixEval(b):this.lex(a,b).toPostfix().postfixEval(c)},b.exports=d},{"./postfix.js":4}]},{},[1])(1)});$scope.Calculate=function(formula,decimals){var numero=mexp.eval(formula);if(decimals!=-1){potencia=Math.pow(10,decimals);numero=Math.round(numero*potencia)/potencia;}return numero;};$(document).mousemove(function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.pageX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.pageY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;var sx=((evt.pageX+$(window).scrollLeft())/$App.NAB.AppScale);var sy=((evt.pageY+$(window).scrollTop())/$App.NAB.AppScale);$App.NAB.MouseX=Math.round(x);$App.NAB.MouseY=Math.round(y);$App.NAB.MouseScreenX=Math.round(sx);$App.NAB.MouseScreenY=Math.round(sy);});$(document).on("touchmove",function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.touches[0].clientX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.touches[0].clientY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;$App.NAB.TouchX=Math.round(x);$App.NAB.TouchY=Math.round(y);});$(document).on("touchstart",function(evt){if($App.NAB.AppScale==0){$App.NAB.AppScale=1;}var x=((evt.touches[0].clientX-$('body').offset().left)+$(window).scrollLeft())/$App.NAB.AppScale;var y=((evt.touches[0].clientY-$('body').offset().top)+$(window).scrollTop())/$App.NAB.AppScale;$App.NAB.TouchX=Math.round(x);$App.NAB.TouchY=Math.round(y);});
-$App.NAB={PageList:["Temphome","wiiaa","Reset2026","Reset00","Reset01","Reset02","onehundredandonebusinesses","Indexwrite","Records-2026","CopyAll","tilesv5","Barrels","Barrels1","Barrels2","Barrels3","Barrels4","tilesv5-2","tilesv5-3","External01","Speed01","Speed03","Speed04","Speed02","Speed05","Speed06","Speed07","Speed08","Speed10","Speed11","Speed09","Speed12","Speed13","Speed14","Speed15","Speed16","Speed17","Speed18","Speed19","Speed20","Speed21","Speed22","Speed23","Speed24","Speed25","Speed26","Speed27","Speed28","Speed29","Speed30","Speed31","Speed32","HomeTiles","TNeoAppPage11","Health","Homestuff","elink2","WorkDesktop","skillsphil","Project1","Project1pa","Projectaa","Projectab","Projectac","Projectad","Project1pb","Project1pc","Project1pd","Project1pe","Project1pf","Project1pg","Project1ph","Project1pi","Project1pj","Project1pk","Project1pl","Project1pm","Project1pn","Project1pfo","Project1pp","Project1pq","Project1pr","Project1ps","Project1pft","Project1pu","Project1pv","Project1pw","Project1px","Project2","Projectaa2","Projectab2","Projectac2","Projectad2","Project2pa","Project2pb","Project2pc","Project2pd","Project2pe","Project2pf","Project2pg","Project2ph","Project2pi","Project2pj","Project2pk","Project2pl","Project2pm","Project2pn","C-A-Z","Workstuff-B","Prayer","Journal","Next","DailyReps","Home","VERSION","ResetRules","Resetoverview","ResetNotes","Template001","Template1setup","KeepJIC","ResetNew","Reset","Stages","Lanes","Me","bounce","P012-Index-Cards-Read1"],PageEnterEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageCount:127,PageExitEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageNumber:1,AppScale:1,PageID:"",Hour:"",Hour24:"",Minute:"",Second:"",Time:"",Time24:"",DateShort:"",DateLong:"",DateFull:"",Month:"",MonthNum:"",WeekNum:"",Day:"",DayNum:"",Year:"",ClientWidth:$window.innerWidth,ClientHeight:$window.innerHeight,WindowWidth:$window.outerWidth,WindowHeight:$window.outerHeight,Orientation:$scope.GetOrientation(),OperatingSystem:"",$Watches:{},$Timers:{},$Audio:{}};$scope.__doUpdate=function(){var Now=new Date();$App.NAB.Hour=$filter("date")(Now,"h");$App.NAB.Hour24=$filter("date")(Now,"H");$App.NAB.Minute=$filter("date")(Now,"mm");$App.NAB.Second=$filter("date")(Now,"ss");$App.NAB.Time=$filter("date")(Now,"mediumTime");$App.NAB.Time24=$filter("date")(Now,"H:mm:ss");$App.NAB.DateShort=$filter("date")(Now,"shortDate");$App.NAB.DateLong=$filter("date")(Now,"longDate");$App.NAB.DateFull=$filter("date")(Now,"fullDate");$App.NAB.Month=$filter("date")(Now,"MMMM");$App.NAB.MonthNum=$filter("date")(Now,"M");$App.NAB.WeekNum=$filter("date")(Now,"w");$App.NAB.Day=$filter("date")(Now,"EEEE");$App.NAB.DayNum=$filter("date")(Now,"d");$App.NAB.Year=$filter("date")(Now,"yyyy");};$scope.__doOrientationChange=function(){$App.NAB.Orientation=$scope.GetOrientation();};$scope.__doResize=function(){$App.NAB.ClientWidth=$window.innerWidth;$App.NAB.ClientHeight=$window.innerHeight;$App.NAB.WindowWidth=$window.outerWidth;$App.NAB.WindowHeight=$window.outerHeight;};$scope.__init=function(){angular.element($window).bind("orientationchange.app",function(){$timeout($scope.__doOrientationChange);});angular.element($window).bind("resize.app",function(){$timeout($scope.__doResize);});$interval($scope.__doUpdate,1000);$App.NAB.OperatingSystem=GetPlatform();$scope.__doUpdate();};
-$scope.Temphome_pageenter = function() {$App.VERSION = "v3.979";
+$App.NAB={PageList:["landinghome","Temphome","PreparationKeys","PrayerReps","wiiaa","Reset2026","Reset00","Reset01","Reset02","onehundredandonebusinesses","Indexwrite","Records-2026","CopyAll","tilesv5","Barrels","Barrels1","Barrels2","Barrels3","Barrels4","tilesv5-2","tilesv5-3","External01","Speed01","Speed03","Speed04","Speed02","Speed05","Speed06","Speed07","Speed08","Speed10","Speed11","Speed09","Speed12","Speed13","Speed14","Speed15","Speed16","Speed17","Speed18","Speed19","Speed20","Speed21","Speed22","Speed23","Speed24","Speed25","Speed26","Speed27","Speed28","Speed29","Speed30","Speed31","Speed32","HomeTiles","TNeoAppPage11","Health","Homestuff","elink2","WorkDesktop","skillsphil","Project1","Project1pa","Projectaa","Projectab","Projectac","Projectad","Project1pb","Project1pc","Project1pd","Project1pe","Project1pf","Project1pg","Project1ph","Project1pi","Project1pj","Project1pk","Project1pl","Project1pm","Project1pn","Project1pfo","Project1pp","Project1pq","Project1pr","Project1ps","Project1pft","Project1pu","Project1pv","Project1pw","Project1px","Project2","Projectaa2","Projectab2","Projectac2","Projectad2","Project2pa","Project2pb","Project2pc","Project2pd","Project2pe","Project2pf","Project2pg","Project2ph","Project2pi","Project2pj","Project2pk","Project2pl","Project2pm","Project2pn","C-A-Z","Workstuff-B","Prayer","Journal","Next","DailyReps","Home","VERSION","ResetRules","Resetoverview","ResetNotes","Template001","Template1setup","KeepJIC","ResetNew","Reset","Stages","Lanes","Me","bounce","P012-Index-Cards-Read1"],PageEnterEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageCount:130,PageExitEffect:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],PageNumber:1,AppScale:1,PageID:"",Hour:"",Hour24:"",Minute:"",Second:"",Time:"",Time24:"",DateShort:"",DateLong:"",DateFull:"",Month:"",MonthNum:"",WeekNum:"",Day:"",DayNum:"",Year:"",ClientWidth:$window.innerWidth,ClientHeight:$window.innerHeight,WindowWidth:$window.outerWidth,WindowHeight:$window.outerHeight,Orientation:$scope.GetOrientation(),OperatingSystem:"",$Watches:{},$Timers:{},$Audio:{}};$scope.__doUpdate=function(){var Now=new Date();$App.NAB.Hour=$filter("date")(Now,"h");$App.NAB.Hour24=$filter("date")(Now,"H");$App.NAB.Minute=$filter("date")(Now,"mm");$App.NAB.Second=$filter("date")(Now,"ss");$App.NAB.Time=$filter("date")(Now,"mediumTime");$App.NAB.Time24=$filter("date")(Now,"H:mm:ss");$App.NAB.DateShort=$filter("date")(Now,"shortDate");$App.NAB.DateLong=$filter("date")(Now,"longDate");$App.NAB.DateFull=$filter("date")(Now,"fullDate");$App.NAB.Month=$filter("date")(Now,"MMMM");$App.NAB.MonthNum=$filter("date")(Now,"M");$App.NAB.WeekNum=$filter("date")(Now,"w");$App.NAB.Day=$filter("date")(Now,"EEEE");$App.NAB.DayNum=$filter("date")(Now,"d");$App.NAB.Year=$filter("date")(Now,"yyyy");};$scope.__doOrientationChange=function(){$App.NAB.Orientation=$scope.GetOrientation();};$scope.__doResize=function(){$App.NAB.ClientWidth=$window.innerWidth;$App.NAB.ClientHeight=$window.innerHeight;$App.NAB.WindowWidth=$window.outerWidth;$App.NAB.WindowHeight=$window.outerHeight;};$scope.__init=function(){angular.element($window).bind("orientationchange.app",function(){$timeout($scope.__doOrientationChange);});angular.element($window).bind("resize.app",function(){$timeout($scope.__doResize);});$interval($scope.__doUpdate,1000);$App.NAB.OperatingSystem=GetPlatform();$scope.__doUpdate();};
+$scope.landinghome_pageenter = function() {$App.VERSION = "v3.9791";
 $scope.ObjectToFront("PushButton634");
+$App.familymatters = localStorage.getItem("familymatters");
+$App.healthmatters = localStorage.getItem("healthmatters");
+$App.mirrorCamera = localStorage.getItem("mirrorCamera");
+$App.worktrans = localStorage.getItem("worktrans");
+$App.financialMe = localStorage.getItem("financialMe");
+$App.bfm = localStorage.getItem("bfm");
+$App.resetmain = localStorage.getItem("resetmain");
+$App.resetmainMore = localStorage.getItem("resetmainMore");
+$App.mirrorCameramore = localStorage.getItem("mirrorCameramore");
+$App.familymattersMore = localStorage.getItem("familymattersMore");
+$App.reset001a = localStorage.getItem("reset001a");
+$App.reset001b = localStorage.getItem("reset001b");
+$App.reset001c = localStorage.getItem("reset001c");
+$App.reset001d = localStorage.getItem("reset001d");
+$App.reset001aMore = localStorage.getItem("reset001aMore");
+$App.reset001bMore = localStorage.getItem("reset001bMore");
+$App.reset001cMore = localStorage.getItem("reset001cMore");
+$App.reset001dMore = localStorage.getItem("reset001dMore");
+$App.symbola = localStorage.getItem("symbola");
+$App.symbolb = localStorage.getItem("symbolb");
+$App.symbolaMore = localStorage.getItem("symbolaMore");
+$App.symbolbMore = localStorage.getItem("symbolbMore");
+$App.reset002a = localStorage.getItem("reset002a");
+$App.reset002b = localStorage.getItem("reset002b");
+$App.reset002c = localStorage.getItem("reset002c");
+$App.reset002d = localStorage.getItem("reset002d");
+$App.reset002aMore = localStorage.getItem("reset002aMore");
+$App.reset002bMore = localStorage.getItem("reset002bMore");
+$App.reset002cMore = localStorage.getItem("reset002cMore");
+$App.reset002dMore = localStorage.getItem("reset002dMore");
+$App.symbolc = localStorage.getItem("symbolc");
+$App.symbold = localStorage.getItem("symbold");
+$App.symbolcMore = localStorage.getItem("symbolcMore");
+$App.symboldMore = localStorage.getItem("symboldMore");
+$App.reset003a = localStorage.getItem("reset003a");
+$App.reset003b = localStorage.getItem("reset003b");
+$App.reset003c = localStorage.getItem("reset003c");
+$App.reset003d = localStorage.getItem("reset003d");
+$App.reset004a = localStorage.getItem("reset004a");
+$App.reset004b = localStorage.getItem("reset004b");
+$App.reset004c = localStorage.getItem("reset004c");
+$App.reset004d = localStorage.getItem("reset004d");
+$App.reset005a = localStorage.getItem("reset005a");
+$App.reset005b = localStorage.getItem("reset005b");
+$App.reset005c = localStorage.getItem("reset005c");
+$App.reset005d = localStorage.getItem("reset005d");
+$App.reset006a = localStorage.getItem("reset006a");
+$App.reset006b = localStorage.getItem("reset006b");
+$App.reset006c = localStorage.getItem("reset006c");
+$App.reset006d = localStorage.getItem("reset006d");
+$App.symbole = localStorage.getItem("symbole");
+$App.symbolf = localStorage.getItem("symbolf");
+$App.symbolg = localStorage.getItem("symbolg");
+$App.symbolh = localStorage.getItem("symbolh");
+$App.symboli = localStorage.getItem("symboli");
+$App.symbolj = localStorage.getItem("symbolj");
+$App.symbolk = localStorage.getItem("symbolk");
+$App.symboll = localStorage.getItem("symboll");
+$App.b11111 = localStorage.getItem("b11111");
+$App.b22222 = localStorage.getItem("b22222");
+$App.b33333 = localStorage.getItem("b33333");
+$App.b44444 = localStorage.getItem("b44444");
+$App.b55555 = localStorage.getItem("b55555");
+$App.witaa1000 = localStorage.getItem("witaa1000");
+$App.witaa1000a = localStorage.getItem("witaa1000a");
+$App.witaa1000b = localStorage.getItem("witaa1000b");
+$App.witaa1000c = localStorage.getItem("witaa1000c");
+$App.witaaq001 = localStorage.getItem("witaaq001");
+$App.witaaq002 = localStorage.getItem("witaaq002");
+$App.witaaq003 = localStorage.getItem("witaaq003");
+$App.witaaq004 = localStorage.getItem("witaaq004");
+$App.witaaq005 = localStorage.getItem("witaaq005");
+$App.witaaq006 = localStorage.getItem("witaaq006");
+$App.witaaq007 = localStorage.getItem("witaaq007");
+$App.witaaq008 = localStorage.getItem("witaaq008");
+$App.witaaqa1001 = localStorage.getItem("witaaqa1001");
+$App.witaaqa1002 = localStorage.getItem("witaaqa1002");
+$App.witaaqa1003 = localStorage.getItem("witaaqa1003");
+$App.witaaqa1004 = localStorage.getItem("witaaqa1004");
+$App.witaaqa1005 = localStorage.getItem("witaaqa1005");
+$App.witaaqa1006 = localStorage.getItem("witaaqa1006");
+$App.witaaqa1007 = localStorage.getItem("witaaqa1007");
+$App.witaaqa1008 = localStorage.getItem("witaaqa1008");
+$App.mo1item01 = localStorage.getItem("mo1item01");
+$App.mo1item02 = localStorage.getItem("mo1item02");
+$App.mo1item03 = localStorage.getItem("mo1item03");
+$App.mo1item04 = localStorage.getItem("mo1item04");
+$App.mo1item05 = localStorage.getItem("mo1item05");
+$App.mo1item06 = localStorage.getItem("mo1item06");
+$App.mo1item07 = localStorage.getItem("mo1item07");
+$App.mo1item08 = localStorage.getItem("mo1item08");
+$App.mo1item09 = localStorage.getItem("mo1item09");
+$App.mo1item10 = localStorage.getItem("mo1item10");
+$App.mo1item11 = localStorage.getItem("mo1item11");
+$App.mo1item12 = localStorage.getItem("mo1item12");
+$App.mo1item13 = localStorage.getItem("mo1item13");
+$App.mo1item14 = localStorage.getItem("mo1item14");
+$App.mo1item15 = localStorage.getItem("mo1item15");
+$App.mo1item01n = localStorage.getItem("mo1item01n");
+$App.mo1item02n = localStorage.getItem("mo1item02n");
+$App.mo1item03n = localStorage.getItem("mo1item03n");
+$App.mo1item04n = localStorage.getItem("mo1item04n");
+$App.mo1item05n = localStorage.getItem("mo1item05n");
+$App.mo1item06n = localStorage.getItem("mo1item06n");
+$App.mo1item07n = localStorage.getItem("mo1item07n");
+$App.mo1item08n = localStorage.getItem("mo1item08n");
+$App.mo1item09n = localStorage.getItem("mo1item09n");
+$App.mo1item10n = localStorage.getItem("mo1item10n");
+$App.mo1item11n = localStorage.getItem("mo1item11n");
+$App.mo1item12n = localStorage.getItem("mo1item12n");
+$App.mo1item13n = localStorage.getItem("mo1item13n");
+$App.mo1item14n = localStorage.getItem("mo1item14n");
+$App.mo1item15n = localStorage.getItem("mo1item15n");
+$App.mo1item01v = localStorage.getItem("mo1item01v");
+$App.mo1item02v = localStorage.getItem("mo1item02v");
+$App.mo1item03v = localStorage.getItem("mo1item03v");
+$App.mo1item04v = localStorage.getItem("mo1item04v");
+$App.mo1item05v = localStorage.getItem("mo1item05v");
+$App.mo1item06v = localStorage.getItem("mo1item06v");
+$App.mo1item07v = localStorage.getItem("mo1item07v");
+$App.mo1item08v = localStorage.getItem("mo1item08v");
+$App.mo1item09v = localStorage.getItem("mo1item09v");
+$App.mo1item10v = localStorage.getItem("mo1item10v");
+$App.mo1item11v = localStorage.getItem("mo1item11v");
+$App.mo1item12v = localStorage.getItem("mo1item12v");
+$App.mo1item13v = localStorage.getItem("mo1item13v");
+$App.mo1item14v = localStorage.getItem("mo1item14v");
+$App.mo1item15v = localStorage.getItem("mo1item15v");
+$App.mo1itemtot = localStorage.getItem("mo1itemtot");
+$App.mo2item01 = localStorage.getItem("mo2item01");
+$App.mo2item02 = localStorage.getItem("mo2item02");
+$App.mo2item03 = localStorage.getItem("mo2item03");
+$App.mo2item04 = localStorage.getItem("mo2item04");
+$App.mo2item05 = localStorage.getItem("mo2item05");
+$App.mo2item06 = localStorage.getItem("mo2item06");
+$App.mo2item07 = localStorage.getItem("mo2item07");
+$App.mo2item08 = localStorage.getItem("mo2item08");
+$App.mo2item09 = localStorage.getItem("mo2item09");
+$App.mo2item10 = localStorage.getItem("mo2item10");
+$App.mo2item11 = localStorage.getItem("mo2item11");
+$App.mo2item12 = localStorage.getItem("mo2item12");
+$App.mo2item13 = localStorage.getItem("mo2item13");
+$App.mo2item14 = localStorage.getItem("mo2item14");
+$App.mo2item15 = localStorage.getItem("mo2item15");
+$App.mo2item01n = localStorage.getItem("mo2item01n");
+$App.mo2item02n = localStorage.getItem("mo2item02n");
+$App.mo2item03n = localStorage.getItem("mo2item03n");
+$App.mo2item04n = localStorage.getItem("mo2item04n");
+$App.mo2item05n = localStorage.getItem("mo2item05n");
+$App.mo2item06n = localStorage.getItem("mo2item06n");
+$App.mo2item07n = localStorage.getItem("mo2item07n");
+$App.mo2item08n = localStorage.getItem("mo2item08n");
+$App.mo2item09n = localStorage.getItem("mo2item09n");
+$App.mo2item10n = localStorage.getItem("mo2item10n");
+$App.mo2item11n = localStorage.getItem("mo2item11n");
+$App.mo2item12n = localStorage.getItem("mo2item12n");
+$App.mo2item13n = localStorage.getItem("mo2item13n");
+$App.mo2item14n = localStorage.getItem("mo2item14n");
+$App.mo2item15n = localStorage.getItem("mo2item15n");
+$App.mo2item01v = localStorage.getItem("mo2item01v");
+$App.mo2item02v = localStorage.getItem("mo2item02v");
+$App.mo2item03v = localStorage.getItem("mo2item03v");
+$App.mo2item04v = localStorage.getItem("mo2item04v");
+$App.mo2item05v = localStorage.getItem("mo2item05v");
+$App.mo2item06v = localStorage.getItem("mo2item06v");
+$App.mo2item07v = localStorage.getItem("mo2item07v");
+$App.mo2item08v = localStorage.getItem("mo2item08v");
+$App.mo2item09v = localStorage.getItem("mo2item09v");
+$App.mo2item10v = localStorage.getItem("mo2item10v");
+$App.mo2item11v = localStorage.getItem("mo2item11v");
+$App.mo2item12v = localStorage.getItem("mo2item12v");
+$App.mo2item13v = localStorage.getItem("mo2item13v");
+$App.mo2item14v = localStorage.getItem("mo2item14v");
+$App.mo2item15v = localStorage.getItem("mo2item15v");
+$App.mo2itemtot = localStorage.getItem("mo2itemtot");
+$App.fwf1n1 = localStorage.getItem("fwf1n1");
+$App.fwf1n2 = localStorage.getItem("fwf1n2");
+$App.fwf1n3 = localStorage.getItem("fwf1n3");
+$App.fwf1n4 = localStorage.getItem("fwf1n4");
+$App.timeline1 = localStorage.getItem("timeline1");
+$App.mitpm1 = localStorage.getItem("mitpm1");
+$App.motpm1 = localStorage.getItem("motpm1");
+$App.timeline1des = localStorage.getItem("timeline1des");
+$App.timeline1des2 = localStorage.getItem("timeline1des2");
+$App.spm1 = localStorage.getItem("spm1");
+$App.fwf1 = localStorage.getItem("fwf1");
+$App.fwf1m = localStorage.getItem("fwf1m");
+$App.fwf1d = localStorage.getItem("fwf1d");
+$App.fwf1md = localStorage.getItem("fwf1md");
+$App.fwf2n1 = localStorage.getItem("fwf2n1");
+$App.fwf2n2 = localStorage.getItem("fwf2n2");
+$App.fwf2n3 = localStorage.getItem("fwf2n3");
+$App.fwf2n4 = localStorage.getItem("fwf2n4");
+$App.timeline2 = localStorage.getItem("timeline2");
+$App.mitpm2 = localStorage.getItem("mitpm2");
+$App.motpm2 = localStorage.getItem("motpm2");
+$App.timeline2des = localStorage.getItem("timeline2des");
+$App.timeline2des2 = localStorage.getItem("timeline2des2");
+$App.spm2 = localStorage.getItem("spm2");
+$App.fwf2 = localStorage.getItem("fwf2");
+$App.fwf2m = localStorage.getItem("fwf2m");
+$App.fwf2d = localStorage.getItem("fwf2d");
+$App.fwf2md = localStorage.getItem("fwf2md");
+$App.elink2 = localStorage.getItem("elink2");
+$App.TPtitle001n = localStorage.getItem("TPtitle001n");
+$App.TPtitle002n = localStorage.getItem("TPtitle002n");
+$App.TPtitle003n = localStorage.getItem("TPtitle003n");
+$App.TPtitle004n = localStorage.getItem("TPtitle004n");
+$App.TPtitle005n = localStorage.getItem("TPtitle005n");
+$App.TPtitle006n = localStorage.getItem("TPtitle006n");
+$App.TPtitle007n = localStorage.getItem("TPtitle007n");
+$App.TPtitle008n = localStorage.getItem("TPtitle008n");
+$App.TPtitle009n = localStorage.getItem("TPtitle009n");
+$App.TPtitle010n = localStorage.getItem("TPtitle010n");
+$App.TPtitle011n = localStorage.getItem("TPtitle011n");
+$App.TPtitle012n = localStorage.getItem("TPtitle012n");
+$App.TPtitle013n = localStorage.getItem("TPtitle013n");
+$App.TPtitle014n = localStorage.getItem("TPtitle014n");
+$App.TPtitle015n = localStorage.getItem("TPtitle015n");
+$App.TPtitle016n = localStorage.getItem("TPtitle016n");
+$App.TPtitle017n = localStorage.getItem("TPtitle017n");
+$App.TPtitle018n = localStorage.getItem("TPtitle019n");
+$App.TPtitle019n = localStorage.getItem("TPtitle019n");
+$App.TPtitle019n = localStorage.getItem("TPtitle019n");
+$App.TPtitle020n = localStorage.getItem("TPtitle020n");
+$App.TPtitle021n = localStorage.getItem("TPtitle021n");
+$App.TPtitle022n = localStorage.getItem("TPtitle022n");
+$App.TPtitle023n = localStorage.getItem("TPtitle023n");
+$App.TPtitle024n = localStorage.getItem("TPtitle024n");
+$App.TPtitle025n = localStorage.getItem("TPtitle025n");
+$App.TPtitle026n = localStorage.getItem("TPtitle026n");
+$App.TPtitle027n = localStorage.getItem("TPtitle027n");
+$App.TPtitle028n = localStorage.getItem("TPtitle028n");
+$App.TPtitle029n = localStorage.getItem("TPtitle029n");
+$App.TPtitle030n = localStorage.getItem("TPtitle030n");
+$App.TPtitle031n = localStorage.getItem("TPtitle031n");
+$App.TPtitle032n = localStorage.getItem("TPtitle032n");
+$App.TPtitle033n = localStorage.getItem("TPtitle033n");
+$App.TPtitle034n = localStorage.getItem("TPtitle034n");
+$App.TPtitle035n = localStorage.getItem("TPtitle035n");
+$App.TPtitle036n = localStorage.getItem("TPtitle036n");
+$App.TPtitle037n = localStorage.getItem("TPtitle037n");
+$App.TPtitle038n = localStorage.getItem("TPtitle038n");
+$App.TPtitle039n = localStorage.getItem("TPtitle039n");
+$App.TPtitle040n = localStorage.getItem("TPtitle040n");
+$App.TPtitle041n = localStorage.getItem("TPtitle041n");
+$App.TPtitle042n = localStorage.getItem("TPtitle042n");
+$App.TPtitle043n = localStorage.getItem("TPtitle043n");
+$App.TPtitle044n = localStorage.getItem("TPtitle044n");
+$App.TPtitle045n = localStorage.getItem("TPtitle045n");
+$App.TPtitle046n = localStorage.getItem("TPtitle046n");
+$App.TPtitle047n = localStorage.getItem("TPtitle047n");
+$App.TPtitle048n = localStorage.getItem("TPtitle048n");
+$App.TPtitle017 = localStorage.getItem("TPtitle017");
+$App.TPtitle018 = localStorage.getItem("TPtitle018");
+$App.TPtitle019 = localStorage.getItem("TPtitle019");
+$App.TPtitle020 = localStorage.getItem("TPtitle020");
+$App.TPtitle021 = localStorage.getItem("TPtitle021");
+$App.TPtitle022 = localStorage.getItem("TPtitle022");
+$App.TPtitle023 = localStorage.getItem("TPtitle023");
+$App.TPtitle024 = localStorage.getItem("TPtitle024");
+$App.TPtitle025 = localStorage.getItem("TPtitle025");
+$App.TPtitle026 = localStorage.getItem("TPtitle026");
+$App.TPtitle027 = localStorage.getItem("TPtitle027");
+$App.TPtitle028 = localStorage.getItem("TPtitle028");
+$App.TPtitle029 = localStorage.getItem("TPtitle029");
+$App.TPtitle030 = localStorage.getItem("TPtitle030");
+$App.TPtitle031 = localStorage.getItem("TPtitle031");
+$App.TPtitle032 = localStorage.getItem("TPtitle032");
+$App.TPtitle033 = localStorage.getItem("TPtitle033");
+$App.TPtitle034 = localStorage.getItem("TPtitle034");
+$App.TPtitle035 = localStorage.getItem("TPtitle035");
+$App.TPtitle036 = localStorage.getItem("TPtitle036");
+$App.TPtitle037 = localStorage.getItem("TPtitle037");
+$App.TPtitle038 = localStorage.getItem("TPtitle038");
+$App.TPtitle039 = localStorage.getItem("TPtitle038");
+$App.TPtitle040 = localStorage.getItem("TPtitle040");
+$App.TPtitle041 = localStorage.getItem("TPtitle041");
+$App.TPtitle042 = localStorage.getItem("TPtitle042");
+$App.TPtitle043 = localStorage.getItem("TPtitle043");
+$App.TPtitle044 = localStorage.getItem("TPtitle044");
+$App.TPtitle045 = localStorage.getItem("TPtitle045");
+$App.TPtitle046 = localStorage.getItem("TPtitle046");
+$App.TPtitle047 = localStorage.getItem("TPtitle047");
+$App.TPtitle048 = localStorage.getItem("TPtitle048");
+$App.Tititle001 = localStorage.getItem("Tititle001");
+$App.Tititle002 = localStorage.getItem("Tititle002");
+$App.Tititle003 = localStorage.getItem("Tititle003");
+$App.Tititle004 = localStorage.getItem("Tititle004");
+$App.Tititle005 = localStorage.getItem("Tititle005");
+$App.Tititle006 = localStorage.getItem("Tititle006");
+$App.Tititle007 = localStorage.getItem("Tititle007");
+$App.Tititle008 = localStorage.getItem("Tititle008");
+$App.Tititle009 = localStorage.getItem("Tititle009");
+$App.Tititle010 = localStorage.getItem("Tititle010");
+$App.Tititle011 = localStorage.getItem("Tititle011");
+$App.Tititle012 = localStorage.getItem("Tititle012");
+$App.Tititle001n = localStorage.getItem("Tititle001n");
+$App.Tititle002n = localStorage.getItem("Tititle002n");
+$App.Tititle003n = localStorage.getItem("Tititle003n");
+$App.Tititle004n = localStorage.getItem("Tititle004n");
+$App.Tititle005n = localStorage.getItem("Tititle005n");
+$App.Tititle006n = localStorage.getItem("Tititle006n");
+$App.Tititle007n = localStorage.getItem("Tititle007n");
+$App.Tititle008n = localStorage.getItem("Tititle008n");
+$App.Tititle009n = localStorage.getItem("Tititle009n");
+$App.Tititle010n = localStorage.getItem("Tititle010n");
+$App.Tititle011n = localStorage.getItem("Tititle011n");
+$App.Tititle012n = localStorage.getItem("Tititle012n");
+$App.Tinote = localStorage.getItem("Tinote");
+$App.rcrimume1 = localStorage.getItem("rcrimume1");
+$App.rcrimume2 = localStorage.getItem("rcrimume2");
+$App.rcrimume3 = localStorage.getItem("rcrimume3");
+$App.pp01 = localStorage.getItem("pp01");
+$App.pp01a = localStorage.getItem("pp01a");
+$App.pp01b = localStorage.getItem("pp01b");
+$App.pp01c = localStorage.getItem("pp01c");
+$App.pp01d = localStorage.getItem("pp01d");
+$App.pp01e = localStorage.getItem("pp01e");
+$App.journal = localStorage.getItem("journal");
+$App.elink1t1 = localStorage.getItem("elink1t1");
+$App.elink1t2 = localStorage.getItem("elink1t2");
+$App.Ctitle001 = localStorage.getItem("Ctitle001");
+$App.Ctitle002 = localStorage.getItem("Ctitle002");
+$App.Ctitle003 = localStorage.getItem("Ctitle003");
+$App.Ctitle004 = localStorage.getItem("Ctitle004");
+$App.Ctitle001n = localStorage.getItem("Ctitle001n");
+$App.Ctitle002n = localStorage.getItem("Ctitle002n");
+$App.Ctitle003n = localStorage.getItem("Ctitle003n");
+$App.Ctitle004n = localStorage.getItem("Ctitle004n");
+$App.Ctitle005 = localStorage.getItem("Ctitle005");
+$App.Ctitle006 = localStorage.getItem("Ctitle006");
+$App.Ctitle007 = localStorage.getItem("Ctitle007");
+$App.Ctitle008 = localStorage.getItem("Ctitle008");
+$App.Ctitle005n = localStorage.getItem("Ctitle005n");
+$App.Ctitle006n = localStorage.getItem("Ctitle006n");
+$App.Ctitle007n = localStorage.getItem("Ctitle007n");
+$App.Ctitle008n = localStorage.getItem("Ctitle008n");
+$App.Ctitle009 = localStorage.getItem("Ctitle009");
+$App.Ctitle010 = localStorage.getItem("Ctitle010");
+$App.Ctitle011 = localStorage.getItem("Ctitle011");
+$App.Ctitle012 = localStorage.getItem("Ctitle012");
+$App.Ctitle009n = localStorage.getItem("Ctitle009n");
+$App.Ctitle010n = localStorage.getItem("Ctitle010n");
+$App.Ctitle011n = localStorage.getItem("Ctitle011n");
+$App.Ctitle012n = localStorage.getItem("Ctitle012n");
+$App.Ctitle013 = localStorage.getItem("Ctitle013");
+$App.Ctitle014 = localStorage.getItem("Ctitle014");
+$App.Ctitle015 = localStorage.getItem("Ctitle015");
+$App.Ctitle016 = localStorage.getItem("Ctitle016");
+$App.Ctitle017 = localStorage.getItem("Ctitle017");
+$App.Ctitle018 = localStorage.getItem("Ctitle018");
+$App.Ctitle019 = localStorage.getItem("Ctitle019");
+$App.Ctitle020 = localStorage.getItem("Ctitle020");
+$App.Ctitle021 = localStorage.getItem("Ctitle021");
+$App.Ctitle022 = localStorage.getItem("Ctitle022");
+$App.Ctitle013n = localStorage.getItem("Ctitle013n");
+$App.Ctitle014n = localStorage.getItem("Ctitle014n");
+$App.Ctitle015n = localStorage.getItem("Ctitle015n");
+$App.Ctitle016n = localStorage.getItem("Ctitle016n");
+$App.Ctitle017n = localStorage.getItem("Ctitle017n");
+$App.Ctitle018n = localStorage.getItem("Ctitle018n");
+$App.Ctitle019n = localStorage.getItem("Ctitle019n");
+$App.Ctitle020n = localStorage.getItem("Ctitle020n");
+$App.Ctitle021n = localStorage.getItem("Ctitle021n");
+$App.Ctitle022n = localStorage.getItem("Ctitle022n");
+$App.v5a001 = localStorage.getItem("v5a001");
+$App.v5a002 = localStorage.getItem("v5a002");
+$App.v5a003 = localStorage.getItem("v5a003");
+$App.v5a004 = localStorage.getItem("v5a004");
+$App.v5a005 = localStorage.getItem("v5a005");
+$App.v5a006 = localStorage.getItem("v5a006");
+$App.v5a007 = localStorage.getItem("v5a007");
+$App.v5a008 = localStorage.getItem("v5a008");
+$App.v5a009 = localStorage.getItem("v5a009");
+$App.v5a010 = localStorage.getItem("v5a010");
+$App.v5a011 = localStorage.getItem("v5a011");
+$App.v5a012 = localStorage.getItem("v5a012");
+$App.Speed01link01 = localStorage.getItem("Speed01link01");
+$App.speed1ref = localStorage.getItem("speed1ref");
+$App.speed1refb = localStorage.getItem("speed1refb");
+$App.speed2ref = localStorage.getItem("speed2ref");
+$App.speed2refb = localStorage.getItem("speed2refb");
+$App.aa1 = localStorage.getItem("aa1");
+$App.aa2 = localStorage.getItem("aa2");
+$App.aa3 = localStorage.getItem("aa3");
+$App.aa4 = localStorage.getItem("aa4");
+$App.aa5 = localStorage.getItem("aa5");
+$App.aa6 = localStorage.getItem("aa6");
+$App.aa7 = localStorage.getItem("aa7");
+$App.aa8 = localStorage.getItem("aa8");
+$App.aa9 = localStorage.getItem("aa8");
+$App.aa10 = localStorage.getItem("aa10");
+$App.aa11 = localStorage.getItem("aa11");
+$App.aa12 = localStorage.getItem("aa12");
+$App.aa13 = localStorage.getItem("aa13");
+$App.aa14 = localStorage.getItem("aa14");
+$App.aa15 = localStorage.getItem("aa15");
+$App.aa16 = localStorage.getItem("aa16");
+$App.aa17 = localStorage.getItem("aa17");
+$App.aa18 = localStorage.getItem("aa18");
+$App.aa19 = localStorage.getItem("aa19");
+$App.aa20 = localStorage.getItem("aa20");
+$App.aa21 = localStorage.getItem("aa21");
+$App.aa22 = localStorage.getItem("aa22");
+$App.aa23 = localStorage.getItem("aa23");
+$App.aa24 = localStorage.getItem("aa24");
+$App.aa25 = localStorage.getItem("aa25");
+$App.aa26 = localStorage.getItem("aa26");
+$App.aa27 = localStorage.getItem("aa27");
+$App.aa28 = localStorage.getItem("aa28");
+$App.aa29 = localStorage.getItem("aa29");
+$App.aa30 = localStorage.getItem("aa30");
+$App.aa31 = localStorage.getItem("aa31");
+$App.aa32 = localStorage.getItem("aa32");
+if ($App.aa1 == "r") {
+$scope.SetObjectStyle("Headline10001","color","red");
+$scope.SetObjectStyle("Ellipse101","fill","red");
+} else {
+};
+if ($App.aa1 == "g") {
+$scope.SetObjectStyle("Headline10001","color","green");
+$scope.SetObjectStyle("Ellipse101","fill","green");
+} else {
+};
+if ($App.aa1 == "b") {
+$scope.SetObjectStyle("Headline10001","color","blue");
+$scope.SetObjectStyle("Ellipse101","fill","blue");
+} else {
+};
+if ($App.aa2 == "r") {
+$scope.SetObjectStyle("Headline10002","color","red");
+$scope.SetObjectStyle("Ellipse102","fill","red");
+} else {
+};
+if ($App.aa2 == "g") {
+$scope.SetObjectStyle("Headline10002","color","green");
+$scope.SetObjectStyle("Ellipse102","fill","green");
+} else {
+};
+if ($App.aa2 == "b") {
+$scope.SetObjectStyle("Headline10002","color","blue");
+$scope.SetObjectStyle("Ellipse102","fill","blue");
+} else {
+};
+if ($App.aa3 == "r") {
+$scope.SetObjectStyle("Headline10003","color","red");
+$scope.SetObjectStyle("Ellipse103","fill","red");
+} else {
+};
+if ($App.aa3 == "g") {
+$scope.SetObjectStyle("Headline10003","color","green");
+$scope.SetObjectStyle("Ellipse103","fill","green");
+} else {
+};
+if ($App.aa3 == "b") {
+$scope.SetObjectStyle("Headline10003","color","blue");
+$scope.SetObjectStyle("Ellipse103","fill","blue");
+} else {
+};
+if ($App.aa4 == "r") {
+$scope.SetObjectStyle("Headline10004","color","red");
+$scope.SetObjectStyle("Ellipse104","fill","red");
+} else {
+};
+if ($App.aa4 == "g") {
+$scope.SetObjectStyle("Headline10004","color","green");
+$scope.SetObjectStyle("Ellipse104","fill","green");
+} else {
+};
+if ($App.aa4 == "b") {
+$scope.SetObjectStyle("Headline10004","color","blue");
+$scope.SetObjectStyle("Ellipse104","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10005","color","red");
+$scope.SetObjectStyle("Ellipse105","fill","red");
+} else {
+};
+if ($App.aa5 == "g") {
+$scope.SetObjectStyle("Headline10005","color","green");
+$scope.SetObjectStyle("Ellipse105","fill","green");
+} else {
+};
+if ($App.aa5 == "b") {
+$scope.SetObjectStyle("Headline10005","color","blue");
+$scope.SetObjectStyle("Ellipse105","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10006","color","red");
+$scope.SetObjectStyle("Ellipse106","fill","red");
+} else {
+};
+if ($App.aa6 == "g") {
+$scope.SetObjectStyle("Headline10006","color","green");
+$scope.SetObjectStyle("Ellipse106","fill","green");
+} else {
+};
+if ($App.aa6 == "b") {
+$scope.SetObjectStyle("Headline10006","color","blue");
+$scope.SetObjectStyle("Ellipse106","fill","blue");
+} else {
+};
+if ($App.aa7 == "r") {
+$scope.SetObjectStyle("Headline10007","color","red");
+$scope.SetObjectStyle("Ellipse107","fill","red");
+} else {
+};
+if ($App.aa7 == "g") {
+$scope.SetObjectStyle("Headline10007","color","green");
+$scope.SetObjectStyle("Ellipse107","fill","green");
+} else {
+};
+if ($App.aa7 == "b") {
+$scope.SetObjectStyle("Headline10007","color","blue");
+$scope.SetObjectStyle("Ellipse107","fill","blue");
+} else {
+};
+if ($App.aa8 == "r") {
+$scope.SetObjectStyle("Headline10008","color","red");
+$scope.SetObjectStyle("Ellipse108","fill","red");
+} else {
+};
+if ($App.aa8 == "g") {
+$scope.SetObjectStyle("Headline10008","color","green");
+$scope.SetObjectStyle("Ellipse108","fill","green");
+} else {
+};
+if ($App.aa8 == "b") {
+$scope.SetObjectStyle("Headline10008","color","blue");
+$scope.SetObjectStyle("Ellipse108","fill","blue");
+} else {
+};
+if ($App.aa9 == "r") {
+$scope.SetObjectStyle("Headline10009","color","red");
+$scope.SetObjectStyle("Ellipse109","fill","red");
+} else {
+};
+if ($App.aa9 == "g") {
+$scope.SetObjectStyle("Headline10009","color","green");
+$scope.SetObjectStyle("Ellipse109","fill","green");
+} else {
+};
+if ($App.aa9 == "b") {
+$scope.SetObjectStyle("Headline10009","color","blue");
+$scope.SetObjectStyle("Ellipse109","fill","blue");
+} else {
+};
+if ($App.aa10 == "r") {
+$scope.SetObjectStyle("Headline10010","color","red");
+$scope.SetObjectStyle("Ellipse110","fill","red");
+} else {
+};
+if ($App.aa10 == "g") {
+$scope.SetObjectStyle("Headline10010","color","green");
+$scope.SetObjectStyle("Ellipse110","fill","green");
+} else {
+};
+if ($App.aa10 == "b") {
+$scope.SetObjectStyle("Headline10010","color","blue");
+$scope.SetObjectStyle("Ellipse110","fill","blue");
+} else {
+};
+if ($App.aa11 == "r") {
+$scope.SetObjectStyle("Headline10011","color","red");
+$scope.SetObjectStyle("Ellipse111","fill","red");
+} else {
+};
+if ($App.aa11 == "g") {
+$scope.SetObjectStyle("Headline10011","color","green");
+$scope.SetObjectStyle("Ellipse111","fill","green");
+} else {
+};
+if ($App.aa11 == "b") {
+$scope.SetObjectStyle("Headline10011","color","blue");
+$scope.SetObjectStyle("Ellipse111","fill","blue");
+} else {
+};
+if ($App.aa12 == "r") {
+$scope.SetObjectStyle("Headline10012","color","red");
+$scope.SetObjectStyle("Ellipse112","fill","red");
+} else {
+};
+if ($App.aa12 == "g") {
+$scope.SetObjectStyle("Headline10012","color","green");
+$scope.SetObjectStyle("Ellipse112","fill","green");
+} else {
+};
+if ($App.aa12 == "b") {
+$scope.SetObjectStyle("Headline10012","color","blue");
+$scope.SetObjectStyle("Ellipse112","fill","blue");
+} else {
+};
+if ($App.aa13 == "r") {
+$scope.SetObjectStyle("Headline10013","color","red");
+$scope.SetObjectStyle("Ellipse113","fill","red");
+} else {
+};
+if ($App.aa13 == "g") {
+$scope.SetObjectStyle("Headline10013","color","green");
+$scope.SetObjectStyle("Ellipse113","fill","green");
+} else {
+};
+if ($App.aa13 == "b") {
+$scope.SetObjectStyle("Headline10013","color","blue");
+$scope.SetObjectStyle("Ellipse113","fill","blue");
+} else {
+};
+if ($App.aa14 == "r") {
+$scope.SetObjectStyle("Headline10014","color","red");
+$scope.SetObjectStyle("Ellipse114","fill","red");
+} else {
+};
+if ($App.aa14 == "g") {
+$scope.SetObjectStyle("Headline10014","color","green");
+$scope.SetObjectStyle("Ellipse114","fill","green");
+} else {
+};
+if ($App.aa14 == "b") {
+$scope.SetObjectStyle("Headline10014","color","blue");
+$scope.SetObjectStyle("Ellipse114","fill","blue");
+} else {
+};
+if ($App.aa15 == "r") {
+$scope.SetObjectStyle("Headline10015","color","red");
+$scope.SetObjectStyle("Ellipse115","fill","red");
+} else {
+};
+if ($App.aa15 == "g") {
+$scope.SetObjectStyle("Headline10015","color","green");
+$scope.SetObjectStyle("Ellipse115","fill","green");
+} else {
+};
+if ($App.aa15 == "b") {
+$scope.SetObjectStyle("Headline10015","color","blue");
+$scope.SetObjectStyle("Ellipse115","fill","blue");
+} else {
+};
+if ($App.aa16 == "r") {
+$scope.SetObjectStyle("Headline10016","color","red");
+$scope.SetObjectStyle("Ellipse116","fill","red");
+} else {
+};
+if ($App.aa16 == "g") {
+$scope.SetObjectStyle("Headline10016","color","green");
+$scope.SetObjectStyle("Ellipse116","fill","green");
+} else {
+};
+if ($App.aa16 == "b") {
+$scope.SetObjectStyle("Headline10016","color","blue");
+$scope.SetObjectStyle("Ellipse116","fill","blue");
+} else {
+};
+if ($App.aa17 == "r") {
+$scope.SetObjectStyle("Headline10017","color","red");
+$scope.SetObjectStyle("Ellipse117","fill","red");
+} else {
+};
+if ($App.aa17 == "g") {
+$scope.SetObjectStyle("Headline10017","color","green");
+$scope.SetObjectStyle("Ellipse117","fill","green");
+} else {
+};
+if ($App.aa17 == "b") {
+$scope.SetObjectStyle("Headline10017","color","blue");
+$scope.SetObjectStyle("Ellipse117","fill","blue");
+} else {
+};
+if ($App.aa18 == "r") {
+$scope.SetObjectStyle("Headline10018","color","red");
+$scope.SetObjectStyle("Ellipse118","fill","red");
+} else {
+};
+if ($App.aa18 == "g") {
+$scope.SetObjectStyle("Headline10018","color","green");
+$scope.SetObjectStyle("Ellipse118","fill","green");
+} else {
+};
+if ($App.aa18 == "b") {
+$scope.SetObjectStyle("Headline10018","color","blue");
+$scope.SetObjectStyle("Ellipse118","fill","blue");
+} else {
+};
+if ($App.aa19 == "r") {
+$scope.SetObjectStyle("Headline10019","color","red");
+$scope.SetObjectStyle("Ellipse119","fill","red");
+} else {
+};
+if ($App.aa19 == "g") {
+$scope.SetObjectStyle("Headline10019","color","green");
+$scope.SetObjectStyle("Ellipse119","fill","green");
+} else {
+};
+if ($App.aa19 == "b") {
+$scope.SetObjectStyle("Headline10019","color","blue");
+$scope.SetObjectStyle("Ellipse119","fill","blue");
+} else {
+};
+if ($App.aa20 == "r") {
+$scope.SetObjectStyle("Headline10020","color","red");
+$scope.SetObjectStyle("Ellipse120","fill","red");
+} else {
+};
+if ($App.aa20 == "g") {
+$scope.SetObjectStyle("Headline10020","color","green");
+$scope.SetObjectStyle("Ellipse120","fill","green");
+} else {
+};
+if ($App.aa20 == "b") {
+$scope.SetObjectStyle("Headline10020","color","blue");
+$scope.SetObjectStyle("Ellipse120","fill","blue");
+} else {
+};
+if ($App.aa21 == "r") {
+$scope.SetObjectStyle("Headline10021","color","red");
+$scope.SetObjectStyle("Ellipse121","fill","red");
+} else {
+};
+if ($App.aa21 == "g") {
+$scope.SetObjectStyle("Headline10021","color","green");
+$scope.SetObjectStyle("Ellipse121","fill","green");
+} else {
+};
+if ($App.aa21 == "b") {
+$scope.SetObjectStyle("Headline10021","color","blue");
+$scope.SetObjectStyle("Ellipse121","fill","blue");
+} else {
+};
+if ($App.aa22 == "r") {
+$scope.SetObjectStyle("Headline10022","color","red");
+$scope.SetObjectStyle("Ellipse122","fill","red");
+} else {
+};
+if ($App.aa22 == "g") {
+$scope.SetObjectStyle("Headline10022","color","green");
+$scope.SetObjectStyle("Ellipse122","fill","green");
+} else {
+};
+if ($App.aa22 == "b") {
+$scope.SetObjectStyle("Headline10022","color","blue");
+$scope.SetObjectStyle("Ellipse122","fill","blue");
+} else {
+};
+if ($App.aa23 == "r") {
+$scope.SetObjectStyle("Headline10023","color","red");
+$scope.SetObjectStyle("Ellipse123","fill","red");
+} else {
+};
+if ($App.aa23 == "g") {
+$scope.SetObjectStyle("Headline10023","color","green");
+$scope.SetObjectStyle("Ellipse123","fill","green");
+} else {
+};
+if ($App.aa23 == "b") {
+$scope.SetObjectStyle("Headline10023","color","blue");
+$scope.SetObjectStyle("Ellipse123","fill","blue");
+} else {
+};
+if ($App.aa24 == "r") {
+$scope.SetObjectStyle("Headline10024","color","red");
+$scope.SetObjectStyle("Ellipse124","fill","red");
+} else {
+};
+if ($App.aa24 == "g") {
+$scope.SetObjectStyle("Headline10024","color","green");
+$scope.SetObjectStyle("Ellipse124","fill","green");
+} else {
+};
+if ($App.aa24 == "b") {
+$scope.SetObjectStyle("Headline10024","color","blue");
+$scope.SetObjectStyle("Ellipse124","fill","blue");
+} else {
+};
+if ($App.aa25 == "r") {
+$scope.SetObjectStyle("Headline10025","color","red");
+$scope.SetObjectStyle("Ellipse125","fill","red");
+} else {
+};
+if ($App.aa25 == "g") {
+$scope.SetObjectStyle("Headline10025","color","green");
+$scope.SetObjectStyle("Ellipse125","fill","green");
+} else {
+};
+if ($App.aa25 == "b") {
+$scope.SetObjectStyle("Headline10025","color","blue");
+$scope.SetObjectStyle("Ellipse125","fill","blue");
+} else {
+};
+if ($App.aa26 == "r") {
+$scope.SetObjectStyle("Headline10026","color","red");
+$scope.SetObjectStyle("Ellipse126","fill","red");
+} else {
+};
+if ($App.aa26 == "g") {
+$scope.SetObjectStyle("Headline10026","color","green");
+$scope.SetObjectStyle("Ellipse126","fill","green");
+} else {
+};
+if ($App.aa26 == "b") {
+$scope.SetObjectStyle("Headline10026","color","blue");
+$scope.SetObjectStyle("Ellipse126","fill","blue");
+} else {
+};
+if ($App.aa27 == "r") {
+$scope.SetObjectStyle("Headline10027","color","red");
+$scope.SetObjectStyle("Ellipse127","fill","red");
+} else {
+};
+if ($App.aa27 == "g") {
+$scope.SetObjectStyle("Headline10027","color","green");
+$scope.SetObjectStyle("Ellipse127","fill","green");
+} else {
+};
+if ($App.aa27 == "b") {
+$scope.SetObjectStyle("Headline10027","color","blue");
+$scope.SetObjectStyle("Ellipse127","fill","blue");
+} else {
+};
+if ($App.aa28 == "r") {
+$scope.SetObjectStyle("Headline10028","color","red");
+$scope.SetObjectStyle("Ellipse128","fill","red");
+} else {
+};
+if ($App.aa28 == "g") {
+$scope.SetObjectStyle("Headline10028","color","green");
+$scope.SetObjectStyle("Ellipse128","fill","green");
+} else {
+};
+if ($App.aa28 == "b") {
+$scope.SetObjectStyle("Headline10028","color","blue");
+$scope.SetObjectStyle("Ellipse128","fill","blue");
+} else {
+};
+if ($App.aa29 == "r") {
+$scope.SetObjectStyle("Headline10029","color","red");
+$scope.SetObjectStyle("Ellipse129","fill","red");
+} else {
+};
+if ($App.aa29 == "g") {
+$scope.SetObjectStyle("Headline10029","color","green");
+$scope.SetObjectStyle("Ellipse129","fill","green");
+} else {
+};
+if ($App.aa29 == "b") {
+$scope.SetObjectStyle("Headline10029","color","blue");
+$scope.SetObjectStyle("Ellipse129","fill","blue");
+} else {
+};
+if ($App.aa30 == "r") {
+$scope.SetObjectStyle("Headline10030","color","red");
+$scope.SetObjectStyle("Ellipse130","fill","red");
+} else {
+};
+if ($App.aa30 == "g") {
+$scope.SetObjectStyle("Headline10030","color","green");
+$scope.SetObjectStyle("Ellipse130","fill","green");
+} else {
+};
+if ($App.aa30 == "b") {
+$scope.SetObjectStyle("Headline10030","color","blue");
+$scope.SetObjectStyle("Ellipse130","fill","blue");
+} else {
+};
+if ($App.aa31 == "r") {
+$scope.SetObjectStyle("Headline10031","color","red");
+$scope.SetObjectStyle("Ellipse131","fill","red");
+} else {
+};
+if ($App.aa31 == "g") {
+$scope.SetObjectStyle("Headline10031","color","green");
+$scope.SetObjectStyle("Ellipse131","fill","green");
+} else {
+};
+if ($App.aa31 == "b") {
+$scope.SetObjectStyle("Headline10031","color","blue");
+$scope.SetObjectStyle("Ellipse131","fill","blue");
+} else {
+};
+if ($App.aa32 == "r") {
+$scope.SetObjectStyle("Headline10032","color","red");
+$scope.SetObjectStyle("Ellipse132","fill","red");
+} else {
+};
+if ($App.aa32 == "g") {
+$scope.SetObjectStyle("Headline10032","color","green");
+$scope.SetObjectStyle("Ellipse132","fill","green");
+} else {
+};
+if ($App.aa32 == "b") {
+$scope.SetObjectStyle("Headline10032","color","blue");
+$scope.SetObjectStyle("Ellipse132","fill","blue");
+} else {
+};
+$App.speed01 = localStorage.getItem("speed01");
+$App.speed02 = localStorage.getItem("speed02");
+$App.speed03 = localStorage.getItem("speed03");
+$App.speed04 = localStorage.getItem("speed04");
+$App.speed05 = localStorage.getItem("speed05");
+$App.speed06 = localStorage.getItem("speed06");
+$App.speed07 = localStorage.getItem("speed07");
+$App.speed08 = localStorage.getItem("speed08");
+$App.speed09 = localStorage.getItem("speed09");
+$App.speed10 = localStorage.getItem("speed10");
+$App.speed11 = localStorage.getItem("speed11");
+$App.speed12 = localStorage.getItem("speed12");
+$App.speed13 = localStorage.getItem("speed13");
+$App.speed14 = localStorage.getItem("speed14");
+$App.speed15 = localStorage.getItem("speed15");
+$App.speed16 = localStorage.getItem("speed16");
+$App.speed17 = localStorage.getItem("speed17");
+$App.speed18 = localStorage.getItem("speed18");
+$App.speed19 = localStorage.getItem("speed19");
+$App.speed20 = localStorage.getItem("speed20");
+$App.speed21 = localStorage.getItem("speed21");
+$App.speed22 = localStorage.getItem("speed22");
+$App.speed23 = localStorage.getItem("speed23");
+$App.speed24 = localStorage.getItem("speed24");
+$App.speed25 = localStorage.getItem("speed25");
+$App.speed26 = localStorage.getItem("speed26");
+$App.speed27 = localStorage.getItem("speed27");
+$App.speed28 = localStorage.getItem("speed28");
+$App.speed29 = localStorage.getItem("speed29");
+$App.speed30 = localStorage.getItem("speed30");
+$App.speed31 = localStorage.getItem("speed31");
+$App.speed32 = localStorage.getItem("speed32");
+$App.speed01a = localStorage.getItem("speed01a");
+$App.speed02a = localStorage.getItem("speed02a");
+$App.speed03a = localStorage.getItem("speed03a");
+$App.speed04a = localStorage.getItem("speed04a");
+$App.speed05a = localStorage.getItem("speed05a");
+$App.speed06a = localStorage.getItem("speed06a");
+$App.speed07a = localStorage.getItem("speed07a");
+$App.speed08a = localStorage.getItem("speed08a");
+$App.speed09a = localStorage.getItem("speed09a");
+$App.speed10a = localStorage.getItem("speed10a");
+$App.speed11a = localStorage.getItem("speed11a");
+$App.speed12a = localStorage.getItem("speed12a");
+$App.speed13a = localStorage.getItem("speed13a");
+$App.speed14a = localStorage.getItem("speed14a");
+$App.speed15a = localStorage.getItem("speed15a");
+$App.speed16a = localStorage.getItem("speed16a");
+$App.speed17a = localStorage.getItem("speed17a");
+$App.speed18a = localStorage.getItem("speed18a");
+$App.speed19a = localStorage.getItem("speed19a");
+$App.speed20a = localStorage.getItem("speed20a");
+$App.speed21a = localStorage.getItem("speed21a");
+$App.speed22a = localStorage.getItem("speed22a");
+$App.speed23a = localStorage.getItem("speed23a");
+$App.speed24a = localStorage.getItem("speed24a");
+$App.speed25a = localStorage.getItem("speed25a");
+$App.speed26a = localStorage.getItem("speed26a");
+$App.speed27a = localStorage.getItem("speed27a");
+$App.speed28a = localStorage.getItem("speed28a");
+$App.speed29a = localStorage.getItem("speed29a");
+$App.speed30a = localStorage.getItem("speed30a");
+$App.speed31a = localStorage.getItem("speed31a");
+$App.speed32a = localStorage.getItem("speed32a");
+$App.speed01b = localStorage.getItem("speed01b");
+$App.speed02b = localStorage.getItem("speed02b");
+$App.speed03b = localStorage.getItem("speed03b");
+$App.speed04b = localStorage.getItem("speed04b");
+$App.speed05b = localStorage.getItem("speed05b");
+$App.speed06b = localStorage.getItem("speed06b");
+$App.speed07b = localStorage.getItem("speed07b");
+$App.speed08b = localStorage.getItem("speed08b");
+$App.speed09b = localStorage.getItem("speed09b");
+$App.speed10b = localStorage.getItem("speed10b");
+$App.speed11b = localStorage.getItem("speed11b");
+$App.speed12b = localStorage.getItem("speed12b");
+$App.speed13b = localStorage.getItem("speed13b");
+$App.speed14b = localStorage.getItem("speed14b");
+$App.speed15b = localStorage.getItem("speed15b");
+$App.speed16b = localStorage.getItem("speed16b");
+$App.speed17b = localStorage.getItem("speed17b");
+$App.speed18b = localStorage.getItem("speed18b");
+$App.speed19b = localStorage.getItem("speed19b");
+$App.speed20b = localStorage.getItem("speed20b");
+$App.speed21b = localStorage.getItem("speed21b");
+$App.speed22b = localStorage.getItem("speed22b");
+$App.speed23b = localStorage.getItem("speed23b");
+$App.speed24b = localStorage.getItem("speed24b");
+$App.speed25b = localStorage.getItem("speed25b");
+$App.speed26b = localStorage.getItem("speed26b");
+$App.speed27b = localStorage.getItem("speed27b");
+$App.speed28b = localStorage.getItem("speed28b");
+$App.speed29b = localStorage.getItem("speed29b");
+$App.speed30b = localStorage.getItem("speed30b");
+$App.speed31b = localStorage.getItem("speed31b");
+$App.speed32b = localStorage.getItem("speed32b");
+$App.speed01c = localStorage.getItem("speed01c");
+$App.speed02c = localStorage.getItem("speed02c");
+$App.speed03c = localStorage.getItem("speed03c");
+$App.speed04c = localStorage.getItem("speed04c");
+$App.speed05c = localStorage.getItem("speed05c");
+$App.speed06c = localStorage.getItem("speed06c");
+$App.speed07c = localStorage.getItem("speed07c");
+$App.speed08c = localStorage.getItem("speed08c");
+$App.speed09c = localStorage.getItem("speed09c");
+$App.speed10c = localStorage.getItem("speed10c");
+$App.speed11c = localStorage.getItem("speed11c");
+$App.speed12c = localStorage.getItem("speed12c");
+$App.speed13c = localStorage.getItem("speed13c");
+$App.speed14c = localStorage.getItem("speed14c");
+$App.speed15c = localStorage.getItem("speed15c");
+$App.speed16c = localStorage.getItem("speed16c");
+$App.speed17c = localStorage.getItem("speed17c");
+$App.speed18c = localStorage.getItem("speed18c");
+$App.speed19c = localStorage.getItem("speed19c");
+$App.speed20c = localStorage.getItem("speed20c");
+$App.speed21c = localStorage.getItem("speed21c");
+$App.speed22c = localStorage.getItem("speed22c");
+$App.speed23c = localStorage.getItem("speed23c");
+$App.speed24c = localStorage.getItem("speed24c");
+$App.speed25c = localStorage.getItem("speed25c");
+$App.speed26c = localStorage.getItem("speed26c");
+$App.speed27c = localStorage.getItem("speed27c");
+$App.speed28c = localStorage.getItem("speed28c");
+$App.speed29c = localStorage.getItem("speed29c");
+$App.speed30c = localStorage.getItem("speed30c");
+$App.speed31c = localStorage.getItem("speed31c");
+$App.speed32c = localStorage.getItem("speed32c");
+$App.speed01d = localStorage.getItem("speed01d");
+$App.speed02d = localStorage.getItem("speed02d");
+$App.speed03d = localStorage.getItem("speed03d");
+$App.speed04d = localStorage.getItem("speed04d");
+$App.speed05d = localStorage.getItem("speed05d");
+$App.speed06d = localStorage.getItem("speed06d");
+$App.speed07d = localStorage.getItem("speed07d");
+$App.speed08d = localStorage.getItem("speed08d");
+$App.speed09d = localStorage.getItem("speed09d");
+$App.speed10d = localStorage.getItem("speed10d");
+$App.speed11d = localStorage.getItem("speed11d");
+$App.speed12d = localStorage.getItem("speed12d");
+$App.speed13d = localStorage.getItem("speed13d");
+$App.speed14d = localStorage.getItem("speed14d");
+$App.speed15d = localStorage.getItem("speed15d");
+$App.speed16d = localStorage.getItem("speed16d");
+$App.speed17d = localStorage.getItem("speed17d");
+$App.speed18d = localStorage.getItem("speed18d");
+$App.speed19d = localStorage.getItem("speed19d");
+$App.speed20d = localStorage.getItem("speed20d");
+$App.speed21d = localStorage.getItem("speed21d");
+$App.speed22d = localStorage.getItem("speed22d");
+$App.speed23d = localStorage.getItem("speed23d");
+$App.speed24d = localStorage.getItem("speed24d");
+$App.speed25d = localStorage.getItem("speed25d");
+$App.speed26d = localStorage.getItem("speed26d");
+$App.speed27d = localStorage.getItem("speed27d");
+$App.speed28d = localStorage.getItem("speed28d");
+$App.speed29d = localStorage.getItem("speed29d");
+$App.speed30d = localStorage.getItem("speed30d");
+$App.speed31d = localStorage.getItem("speed31d");
+$App.speed32d = localStorage.getItem("speed32d");
+$App.speed01e = localStorage.getItem("speed01e");
+$App.speed02e = localStorage.getItem("speed02e");
+$App.speed03e = localStorage.getItem("speed03e");
+$App.speed04e = localStorage.getItem("speed04e");
+$App.speed05e = localStorage.getItem("speed05e");
+$App.speed06e = localStorage.getItem("speed06e");
+$App.speed07e = localStorage.getItem("speed07e");
+$App.speed08e = localStorage.getItem("speed08e");
+$App.speed09e = localStorage.getItem("speed09e");
+$App.speed10e = localStorage.getItem("speed10e");
+$App.speed11e = localStorage.getItem("speed11e");
+$App.speed12e = localStorage.getItem("speed12e");
+$App.speed13e = localStorage.getItem("speed13e");
+$App.speed14e = localStorage.getItem("speed14e");
+$App.speed15e = localStorage.getItem("speed15e");
+$App.speed16e = localStorage.getItem("speed16e");
+$App.speed17e = localStorage.getItem("speed17e");
+$App.speed18e = localStorage.getItem("speed18e");
+$App.speed19e = localStorage.getItem("speed19e");
+$App.speed20e = localStorage.getItem("speed20e");
+$App.speed21e = localStorage.getItem("speed21e");
+$App.speed22e = localStorage.getItem("speed22e");
+$App.speed23e = localStorage.getItem("speed23e");
+$App.speed24e = localStorage.getItem("speed24e");
+$App.speed25e = localStorage.getItem("speed25e");
+$App.speed26e = localStorage.getItem("speed26e");
+$App.speed27e = localStorage.getItem("speed27e");
+$App.speed28e = localStorage.getItem("speed28e");
+$App.speed29e = localStorage.getItem("speed29e");
+$App.speed30e = localStorage.getItem("speed30e");
+$App.speed31e = localStorage.getItem("speed31e");
+$App.speed32e = localStorage.getItem("speed32e");
+$App.a1a1 = localStorage.getItem("a1a1");
+$App.a1a2 = localStorage.getItem("a1a2");
+$App.a1a3 = localStorage.getItem("a1a3");
+$App.a1a4 = localStorage.getItem("a1a4");
+$App.a1a5 = localStorage.getItem("a1a5");
+$App.a2a1 = localStorage.getItem("a2a1");
+$App.a2a2 = localStorage.getItem("a2a2");
+$App.a2a3 = localStorage.getItem("a2a3");
+$App.a2a4 = localStorage.getItem("a2a4");
+$App.a2a5 = localStorage.getItem("a2a5");
+$App.a3a1 = localStorage.getItem("a3a1");
+$App.a3a2 = localStorage.getItem("a3a2");
+$App.a3a3 = localStorage.getItem("a3a3");
+$App.a3a4 = localStorage.getItem("a3a4");
+$App.a3a5 = localStorage.getItem("a3a5");
+$App.a4a1 = localStorage.getItem("a4a1");
+$App.a4a2 = localStorage.getItem("a4a2");
+$App.a4a3 = localStorage.getItem("a4a3");
+$App.a4a4 = localStorage.getItem("a4a4");
+$App.a4a5 = localStorage.getItem("a4a5");
+$App.a5a1 = localStorage.getItem("a5a1");
+$App.a5a2 = localStorage.getItem("a5a2");
+$App.a5a3 = localStorage.getItem("a5a3");
+$App.a5a4 = localStorage.getItem("a5a4");
+$App.a5a5 = localStorage.getItem("a5a5");
+$App.a6a1 = localStorage.getItem("a6a1");
+$App.a6a2 = localStorage.getItem("a6a2");
+$App.a6a3 = localStorage.getItem("a6a3");
+$App.a6a4 = localStorage.getItem("a6a4");
+$App.a6a5 = localStorage.getItem("a6a5");
+$App.b1a1 = localStorage.getItem("b1a1");
+$App.b1a2 = localStorage.getItem("b1a2");
+$App.b1a3 = localStorage.getItem("b1a3");
+$App.b1a4 = localStorage.getItem("b1a4");
+$App.b1a5 = localStorage.getItem("b1a5");
+$App.b2a1 = localStorage.getItem("b2a1");
+$App.b2a2 = localStorage.getItem("b2a2");
+$App.b2a3 = localStorage.getItem("b2a3");
+$App.b2a4 = localStorage.getItem("b2a4");
+$App.b2a5 = localStorage.getItem("b2a5");
+$App.b3a1 = localStorage.getItem("b3a1");
+$App.b3a2 = localStorage.getItem("b3a2");
+$App.b3a3 = localStorage.getItem("b3a3");
+$App.b3a4 = localStorage.getItem("b3a4");
+$App.b3a5 = localStorage.getItem("b3a5");
+$App.b4a1 = localStorage.getItem("b4a1");
+$App.b4a2 = localStorage.getItem("b4a2");
+$App.b4a3 = localStorage.getItem("b4a3");
+$App.b4a4 = localStorage.getItem("b4a4");
+$App.b4a5 = localStorage.getItem("b4a5");
+$App.b5a1 = localStorage.getItem("b5a1");
+$App.b5a2 = localStorage.getItem("b5a2");
+$App.b5a3 = localStorage.getItem("b5a3");
+$App.b5a4 = localStorage.getItem("b5a4");
+$App.b5a5 = localStorage.getItem("b5a5");
+$App.b6a1 = localStorage.getItem("b6a1");
+$App.b6a2 = localStorage.getItem("b6a2");
+$App.b6a3 = localStorage.getItem("b6a3");
+$App.b6a4 = localStorage.getItem("b6a4");
+$App.b6a5 = localStorage.getItem("b6a5");
+$App.c1a1 = localStorage.getItem("c1a1");
+$App.c1a2 = localStorage.getItem("c1a2");
+$App.c1a3 = localStorage.getItem("c1a3");
+$App.c1a4 = localStorage.getItem("c1a4");
+$App.c1a5 = localStorage.getItem("c1a5");
+$App.c2a1 = localStorage.getItem("c2a1");
+$App.c2a2 = localStorage.getItem("c2a2");
+$App.c2a3 = localStorage.getItem("c2a3");
+$App.c2a4 = localStorage.getItem("c2a4");
+$App.c2a5 = localStorage.getItem("c2a5");
+$App.c3a1 = localStorage.getItem("c3a1");
+$App.c3a2 = localStorage.getItem("c3a2");
+$App.c3a3 = localStorage.getItem("c3a3");
+$App.c3a4 = localStorage.getItem("c3a4");
+$App.c3a5 = localStorage.getItem("c3a5");
+$App.c4a1 = localStorage.getItem("c4a1");
+$App.c4a2 = localStorage.getItem("c4a2");
+$App.c4a3 = localStorage.getItem("c4a3");
+$App.c4a4 = localStorage.getItem("c4a4");
+$App.c4a5 = localStorage.getItem("c4a5");
+$App.c5a1 = localStorage.getItem("c5a1");
+$App.c5a2 = localStorage.getItem("c5a2");
+$App.c5a3 = localStorage.getItem("c5a3");
+$App.c5a4 = localStorage.getItem("c5a4");
+$App.c5a5 = localStorage.getItem("c5a5");
+$App.c6a1 = localStorage.getItem("c6a1");
+$App.c6a2 = localStorage.getItem("c6a2");
+$App.c6a3 = localStorage.getItem("c6a3");
+$App.c6a4 = localStorage.getItem("c6a4");
+$App.c6a5 = localStorage.getItem("c6a5");
+$App.d1a1 = localStorage.getItem("d1a1");
+$App.d1a2 = localStorage.getItem("d1a2");
+$App.d1a3 = localStorage.getItem("d1a3");
+$App.d1a4 = localStorage.getItem("d1a4");
+$App.d1a5 = localStorage.getItem("d1a5");
+$App.d2a1 = localStorage.getItem("d2a1");
+$App.d2a2 = localStorage.getItem("d2a2");
+$App.d2a3 = localStorage.getItem("d2a3");
+$App.d2a4 = localStorage.getItem("d2a4");
+$App.d2a5 = localStorage.getItem("d2a5");
+$App.d3a1 = localStorage.getItem("d3a1");
+$App.d3a2 = localStorage.getItem("d3a2");
+$App.d3a3 = localStorage.getItem("d3a3");
+$App.d3a4 = localStorage.getItem("d3a4");
+$App.d3a5 = localStorage.getItem("d3a5");
+$App.d4a1 = localStorage.getItem("d4a1");
+$App.d4a2 = localStorage.getItem("d4a2");
+$App.d4a3 = localStorage.getItem("d4a3");
+$App.d4a4 = localStorage.getItem("d4a4");
+$App.d4a5 = localStorage.getItem("d4a5");
+$App.d5a1 = localStorage.getItem("d5a1");
+$App.d5a2 = localStorage.getItem("d5a2");
+$App.d5a3 = localStorage.getItem("d5a3");
+$App.d5a4 = localStorage.getItem("d5a4");
+$App.d5a5 = localStorage.getItem("d5a5");
+$App.d6a1 = localStorage.getItem("d6a1");
+$App.d6a2 = localStorage.getItem("d6a2");
+$App.d6a3 = localStorage.getItem("d6a3");
+$App.d6a4 = localStorage.getItem("d6a4");
+$App.d6a5 = localStorage.getItem("d6a5");
+$App.e1a1 = localStorage.getItem("e1a1");
+$App.e1a2 = localStorage.getItem("e1a2");
+$App.e1a3 = localStorage.getItem("e1a3");
+$App.e1a4 = localStorage.getItem("e1a4");
+$App.e1a5 = localStorage.getItem("e1a5");
+$App.e2a1 = localStorage.getItem("e2a1");
+$App.e2a2 = localStorage.getItem("e2a2");
+$App.e2a3 = localStorage.getItem("e2a3");
+$App.e2a4 = localStorage.getItem("e2a4");
+$App.e2a5 = localStorage.getItem("e2a5");
+$App.e3a1 = localStorage.getItem("e3a1");
+$App.e3a2 = localStorage.getItem("e3a2");
+$App.e3a3 = localStorage.getItem("e3a3");
+$App.e3a4 = localStorage.getItem("e3a4");
+$App.e3a5 = localStorage.getItem("e3a5");
+$App.e4a1 = localStorage.getItem("e4a1");
+$App.e4a2 = localStorage.getItem("e4a2");
+$App.e4a3 = localStorage.getItem("e4a3");
+$App.e4a4 = localStorage.getItem("e4a4");
+$App.e4a5 = localStorage.getItem("e4a5");
+$App.e5a1 = localStorage.getItem("e5a1");
+$App.e5a2 = localStorage.getItem("e5a2");
+$App.e5a3 = localStorage.getItem("e5a3");
+$App.e5a4 = localStorage.getItem("e5a4");
+$App.e5a5 = localStorage.getItem("e5a5");
+$App.e6a1 = localStorage.getItem("e6a1");
+$App.e6a2 = localStorage.getItem("e6a2");
+$App.e6a3 = localStorage.getItem("e6a3");
+$App.e6a4 = localStorage.getItem("e6a4");
+$App.e6a5 = localStorage.getItem("e6a5");
+$App.f1a1 = localStorage.getItem("f1a1");
+$App.f1a2 = localStorage.getItem("f1a2");
+$App.f1a3 = localStorage.getItem("f1a3");
+$App.f1a4 = localStorage.getItem("f1a4");
+$App.f1a5 = localStorage.getItem("f1a5");
+$App.f2a1 = localStorage.getItem("f2a1");
+$App.f2a2 = localStorage.getItem("f2a2");
+$App.f2a3 = localStorage.getItem("f2a3");
+$App.f2a4 = localStorage.getItem("f2a4");
+$App.f2a5 = localStorage.getItem("f2a5");
+$App.f3a1 = localStorage.getItem("f3a1");
+$App.f3a2 = localStorage.getItem("f3a2");
+$App.f3a3 = localStorage.getItem("f3a3");
+$App.f3a4 = localStorage.getItem("f3a4");
+$App.f3a5 = localStorage.getItem("f3a5");
+$App.f4a1 = localStorage.getItem("f4a1");
+$App.f4a2 = localStorage.getItem("f4a2");
+$App.f4a3 = localStorage.getItem("f4a3");
+$App.f4a4 = localStorage.getItem("f4a4");
+$App.f4a5 = localStorage.getItem("f4a5");
+$App.g1a1 = localStorage.getItem("g1a1");
+$App.g1a2 = localStorage.getItem("g1a2");
+$App.g1a3 = localStorage.getItem("g1a3");
+$App.g1a4 = localStorage.getItem("g1a4");
+$App.g1a5 = localStorage.getItem("g1a5");
+$App.g2a1 = localStorage.getItem("g2a1");
+$App.g2a2 = localStorage.getItem("g2a2");
+$App.g2a3 = localStorage.getItem("g2a3");
+$App.g2a4 = localStorage.getItem("g2a4");
+$App.g2a5 = localStorage.getItem("g2a5");
+$App.g3a1 = localStorage.getItem("g3a1");
+$App.g3a2 = localStorage.getItem("g3a2");
+$App.g3a3 = localStorage.getItem("g3a3");
+$App.g3a4 = localStorage.getItem("g3a4");
+$App.g3a5 = localStorage.getItem("g3a5");
+$App.g4a1 = localStorage.getItem("g4a1");
+$App.g4a2 = localStorage.getItem("g4a2");
+$App.g4a3 = localStorage.getItem("g4a3");
+$App.g4a4 = localStorage.getItem("g4a4");
+$App.g4a5 = localStorage.getItem("g4a5");
+$App.h1a1 = localStorage.getItem("h1a1");
+$App.h1a2 = localStorage.getItem("h1a2");
+$App.h1a3 = localStorage.getItem("h1a3");
+$App.h1a4 = localStorage.getItem("h1a4");
+$App.h1a5 = localStorage.getItem("h1a5");
+$App.h2a1 = localStorage.getItem("h2a1");
+$App.h2a2 = localStorage.getItem("h2a2");
+$App.h2a3 = localStorage.getItem("h2a3");
+$App.h2a4 = localStorage.getItem("h2a4");
+$App.h2a5 = localStorage.getItem("h2a5");
+$App.h3a1 = localStorage.getItem("h3a1");
+$App.h3a2 = localStorage.getItem("h3a2");
+$App.h3a3 = localStorage.getItem("h3a3");
+$App.h3a4 = localStorage.getItem("h3a4");
+$App.h3a5 = localStorage.getItem("h3a5");
+$App.h4a1 = localStorage.getItem("h4a1");
+$App.h4a2 = localStorage.getItem("h4a2");
+$App.h4a3 = localStorage.getItem("h4a3");
+$App.h4a4 = localStorage.getItem("h4a4");
+$App.h4a5 = localStorage.getItem("h4a5");
+$App.i1a1 = localStorage.getItem("i1a1");
+$App.i1a2 = localStorage.getItem("i1a2");
+$App.i1a3 = localStorage.getItem("i1a3");
+$App.i1a4 = localStorage.getItem("i1a4");
+$App.i1a5 = localStorage.getItem("i1a5");
+$App.i2a1 = localStorage.getItem("i2a1");
+$App.i2a2 = localStorage.getItem("i2a2");
+$App.i2a3 = localStorage.getItem("i2a3");
+$App.i2a4 = localStorage.getItem("i2a4");
+$App.i2a5 = localStorage.getItem("i2a5");
+$App.i3a1 = localStorage.getItem("i3a1");
+$App.i3a2 = localStorage.getItem("i3a2");
+$App.i3a3 = localStorage.getItem("i3a3");
+$App.i3a4 = localStorage.getItem("i3a4");
+$App.i3a5 = localStorage.getItem("i3a5");
+$App.i4a1 = localStorage.getItem("i4a1");
+$App.i4a2 = localStorage.getItem("i4a2");
+$App.i4a3 = localStorage.getItem("i4a3");
+$App.i4a4 = localStorage.getItem("i4a4");
+$App.i4a5 = localStorage.getItem("i4a5");
+$App.j1a1 = localStorage.getItem("j1a1");
+$App.j1a2 = localStorage.getItem("j1a2");
+$App.j1a3 = localStorage.getItem("j1a3");
+$App.j1a4 = localStorage.getItem("j1a4");
+$App.j1a5 = localStorage.getItem("j1a5");
+$App.j2a1 = localStorage.getItem("j2a1");
+$App.j2a2 = localStorage.getItem("j2a2");
+$App.j2a3 = localStorage.getItem("j2a3");
+$App.j2a4 = localStorage.getItem("j2a4");
+$App.j2a5 = localStorage.getItem("j2a5");
+$App.j3a1 = localStorage.getItem("j3a1");
+$App.j3a2 = localStorage.getItem("j3a2");
+$App.j3a3 = localStorage.getItem("j3a3");
+$App.j3a4 = localStorage.getItem("j3a4");
+$App.j3a5 = localStorage.getItem("j3a5");
+$App.j4a1 = localStorage.getItem("j4a1");
+$App.j4a2 = localStorage.getItem("j4a2");
+$App.j4a3 = localStorage.getItem("j4a3");
+$App.j4a4 = localStorage.getItem("j4a4");
+$App.j4a5 = localStorage.getItem("j4a5");
+$App.k1a1 = localStorage.getItem("k1a1");
+$App.k1a2 = localStorage.getItem("k1a2");
+$App.k1a3 = localStorage.getItem("k1a3");
+$App.k1a4 = localStorage.getItem("k1a4");
+$App.k1a5 = localStorage.getItem("k1a5");
+$App.k2a1 = localStorage.getItem("k2a1");
+$App.k2a2 = localStorage.getItem("k2a2");
+$App.k2a3 = localStorage.getItem("k2a3");
+$App.k2a4 = localStorage.getItem("k2a4");
+$App.k2a5 = localStorage.getItem("k2a5");
+$App.k3a1 = localStorage.getItem("k3a1");
+$App.k3a2 = localStorage.getItem("k3a2");
+$App.k3a3 = localStorage.getItem("k3a3");
+$App.k3a4 = localStorage.getItem("k3a4");
+$App.k3a5 = localStorage.getItem("k3a5");
+$App.k4a1 = localStorage.getItem("k4a1");
+$App.k4a2 = localStorage.getItem("k4a2");
+$App.k4a3 = localStorage.getItem("k4a3");
+$App.k4a4 = localStorage.getItem("k4a4");
+$App.k4a5 = localStorage.getItem("k4a5");
+$App.l1a1 = localStorage.getItem("l1a1");
+$App.l1a2 = localStorage.getItem("l1a2");
+$App.l1a3 = localStorage.getItem("l1a3");
+$App.l1a4 = localStorage.getItem("l1a4");
+$App.l1a5 = localStorage.getItem("l1a5");
+$App.l2a1 = localStorage.getItem("l2a1");
+$App.l2a2 = localStorage.getItem("l2a2");
+$App.l2a3 = localStorage.getItem("l2a3");
+$App.l2a4 = localStorage.getItem("l2a4");
+$App.l2a5 = localStorage.getItem("l2a5");
+$App.l3a1 = localStorage.getItem("l3a1");
+$App.l3a2 = localStorage.getItem("l3a2");
+$App.l3a3 = localStorage.getItem("l3a3");
+$App.l3a4 = localStorage.getItem("l3a4");
+$App.l3a5 = localStorage.getItem("l3a5");
+$App.l4a1 = localStorage.getItem("l4a1");
+$App.l4a2 = localStorage.getItem("l4a2");
+$App.l4a3 = localStorage.getItem("l4a3");
+$App.l4a4 = localStorage.getItem("l4a4");
+$App.l4a5 = localStorage.getItem("l4a5");
+$App.m1a1 = localStorage.getItem("m1a1");
+$App.m1a2 = localStorage.getItem("m1a2");
+$App.m1a3 = localStorage.getItem("m1a3");
+$App.m1a4 = localStorage.getItem("m1a4");
+$App.m1a5 = localStorage.getItem("m1a5");
+$App.m2a1 = localStorage.getItem("m2a1");
+$App.m2a2 = localStorage.getItem("m2a2");
+$App.m2a3 = localStorage.getItem("m2a3");
+$App.m2a4 = localStorage.getItem("m2a4");
+$App.m2a5 = localStorage.getItem("m2a5");
+$App.m3a1 = localStorage.getItem("m3a1");
+$App.m3a2 = localStorage.getItem("m3a2");
+$App.m3a3 = localStorage.getItem("m3a3");
+$App.m3a4 = localStorage.getItem("m3a4");
+$App.m3a5 = localStorage.getItem("m3a5");
+$App.m4a1 = localStorage.getItem("m4a1");
+$App.m4a2 = localStorage.getItem("m4a2");
+$App.m4a3 = localStorage.getItem("m4a3");
+$App.m4a4 = localStorage.getItem("m4a4");
+$App.m4a5 = localStorage.getItem("m4a5");
+$App.n1a1 = localStorage.getItem("n1a1");
+$App.n1a2 = localStorage.getItem("n1a2");
+$App.n1a3 = localStorage.getItem("n1a3");
+$App.n1a4 = localStorage.getItem("n1a4");
+$App.n1a5 = localStorage.getItem("n1a5");
+$App.n2a1 = localStorage.getItem("n2a1");
+$App.n2a2 = localStorage.getItem("n2a2");
+$App.n2a3 = localStorage.getItem("n2a3");
+$App.n2a4 = localStorage.getItem("n2a4");
+$App.n2a5 = localStorage.getItem("n2a5");
+$App.n3a1 = localStorage.getItem("n3a1");
+$App.n3a2 = localStorage.getItem("n3a2");
+$App.n3a3 = localStorage.getItem("n3a3");
+$App.n3a4 = localStorage.getItem("n3a4");
+$App.n3a5 = localStorage.getItem("n3a5");
+$App.n4a1 = localStorage.getItem("n4a1");
+$App.n4a2 = localStorage.getItem("n4a2");
+$App.n4a3 = localStorage.getItem("n4a3");
+$App.n4a4 = localStorage.getItem("n4a4");
+$App.n4a5 = localStorage.getItem("n4a5");
+$App.o1a1 = localStorage.getItem("o1a1");
+$App.o1a2 = localStorage.getItem("o1a2");
+$App.o1a3 = localStorage.getItem("o1a3");
+$App.o1a4 = localStorage.getItem("o1a4");
+$App.o1a5 = localStorage.getItem("o1a5");
+$App.o2a1 = localStorage.getItem("o2a1");
+$App.o2a2 = localStorage.getItem("o2a2");
+$App.o2a3 = localStorage.getItem("o2a3");
+$App.o2a4 = localStorage.getItem("o2a4");
+$App.o2a5 = localStorage.getItem("o2a5");
+$App.o3a1 = localStorage.getItem("o3a1");
+$App.o3a2 = localStorage.getItem("o3a2");
+$App.o3a3 = localStorage.getItem("o3a3");
+$App.o3a4 = localStorage.getItem("o3a4");
+$App.o3a5 = localStorage.getItem("o3a5");
+$App.o4a1 = localStorage.getItem("o4a1");
+$App.o4a2 = localStorage.getItem("o4a2");
+$App.o4a3 = localStorage.getItem("o4a3");
+$App.o4a4 = localStorage.getItem("o4a4");
+$App.o4a5 = localStorage.getItem("o4a5");
+$App.p1a1 = localStorage.getItem("p1a1");
+$App.p1a2 = localStorage.getItem("p1a2");
+$App.p1a3 = localStorage.getItem("p1a3");
+$App.p1a4 = localStorage.getItem("p1a4");
+$App.p1a5 = localStorage.getItem("p1a5");
+$App.p2a1 = localStorage.getItem("p2a1");
+$App.p2a2 = localStorage.getItem("p2a2");
+$App.p2a3 = localStorage.getItem("p2a3");
+$App.p2a4 = localStorage.getItem("p2a4");
+$App.p2a5 = localStorage.getItem("p2a5");
+$App.p3a1 = localStorage.getItem("p3a1");
+$App.p3a2 = localStorage.getItem("p3a2");
+$App.p3a3 = localStorage.getItem("p3a3");
+$App.p3a4 = localStorage.getItem("p3a4");
+$App.p3a5 = localStorage.getItem("p3a5");
+$App.p4a1 = localStorage.getItem("p4a1");
+$App.p4a2 = localStorage.getItem("p4a2");
+$App.p4a3 = localStorage.getItem("p4a3");
+$App.p4a4 = localStorage.getItem("p4a4");
+$App.p4a5 = localStorage.getItem("p4a5");
+$App.q1a1 = localStorage.getItem("q1a1");
+$App.q1a2 = localStorage.getItem("q1a2");
+$App.q1a3 = localStorage.getItem("q1a3");
+$App.q1a4 = localStorage.getItem("q1a4");
+$App.q1a5 = localStorage.getItem("q1a5");
+$App.q2a1 = localStorage.getItem("q2a1");
+$App.q2a2 = localStorage.getItem("q2a2");
+$App.q2a3 = localStorage.getItem("q2a3");
+$App.q2a4 = localStorage.getItem("q2a4");
+$App.q2a5 = localStorage.getItem("q2a5");
+$App.q3a1 = localStorage.getItem("q3a1");
+$App.q3a2 = localStorage.getItem("q3a2");
+$App.q3a3 = localStorage.getItem("q3a3");
+$App.q3a4 = localStorage.getItem("q3a4");
+$App.q3a5 = localStorage.getItem("q3a5");
+$App.q4a1 = localStorage.getItem("q4a1");
+$App.q4a2 = localStorage.getItem("q4a2");
+$App.q4a3 = localStorage.getItem("q4a3");
+$App.q4a4 = localStorage.getItem("q4a4");
+$App.q4a5 = localStorage.getItem("q4a5");
+$App.r1a1 = localStorage.getItem("r1a1");
+$App.r1a2 = localStorage.getItem("r1a2");
+$App.r1a3 = localStorage.getItem("r1a3");
+$App.r1a4 = localStorage.getItem("r1a4");
+$App.r1a5 = localStorage.getItem("r1a5");
+$App.r2a1 = localStorage.getItem("r2a1");
+$App.r2a2 = localStorage.getItem("r2a2");
+$App.r2a3 = localStorage.getItem("r2a3");
+$App.r2a4 = localStorage.getItem("r2a4");
+$App.r2a5 = localStorage.getItem("r2a5");
+$App.r3a1 = localStorage.getItem("r3a1");
+$App.r3a2 = localStorage.getItem("r3a2");
+$App.r3a3 = localStorage.getItem("r3a3");
+$App.r3a4 = localStorage.getItem("r3a4");
+$App.r3a5 = localStorage.getItem("r3a5");
+$App.r4a1 = localStorage.getItem("r4a1");
+$App.r4a2 = localStorage.getItem("r4a2");
+$App.r4a3 = localStorage.getItem("r4a3");
+$App.r4a4 = localStorage.getItem("r4a4");
+$App.r4a5 = localStorage.getItem("r4a5");
+$App.s1a1 = localStorage.getItem("s1a1");
+$App.s1a2 = localStorage.getItem("s1a2");
+$App.s1a3 = localStorage.getItem("s1a3");
+$App.s1a4 = localStorage.getItem("s1a4");
+$App.s1a5 = localStorage.getItem("s1a5");
+$App.s2a1 = localStorage.getItem("s2a1");
+$App.s2a2 = localStorage.getItem("s2a2");
+$App.s2a3 = localStorage.getItem("s2a3");
+$App.s2a4 = localStorage.getItem("s2a4");
+$App.s2a5 = localStorage.getItem("s2a5");
+$App.s3a1 = localStorage.getItem("s3a1");
+$App.s3a2 = localStorage.getItem("s3a2");
+$App.s3a3 = localStorage.getItem("s3a3");
+$App.s3a4 = localStorage.getItem("s3a4");
+$App.s3a5 = localStorage.getItem("s3a5");
+$App.s4a1 = localStorage.getItem("s4a1");
+$App.s4a2 = localStorage.getItem("s4a2");
+$App.s4a3 = localStorage.getItem("s4a3");
+$App.s4a4 = localStorage.getItem("s4a4");
+$App.s4a5 = localStorage.getItem("s4a5");
+$App.t1a1 = localStorage.getItem("t1a1");
+$App.t1a2 = localStorage.getItem("t1a2");
+$App.t1a3 = localStorage.getItem("t1a3");
+$App.t1a4 = localStorage.getItem("t1a4");
+$App.t1a5 = localStorage.getItem("t1a5");
+$App.t2a1 = localStorage.getItem("t2a1");
+$App.t2a2 = localStorage.getItem("t2a2");
+$App.t2a3 = localStorage.getItem("t2a3");
+$App.t2a4 = localStorage.getItem("t2a4");
+$App.t2a5 = localStorage.getItem("t2a5");
+$App.t3a1 = localStorage.getItem("t3a1");
+$App.t3a2 = localStorage.getItem("t3a2");
+$App.t3a3 = localStorage.getItem("t3a3");
+$App.t3a4 = localStorage.getItem("t3a4");
+$App.t3a5 = localStorage.getItem("t3a5");
+$App.t4a1 = localStorage.getItem("t4a1");
+$App.t4a2 = localStorage.getItem("t4a2");
+$App.t4a3 = localStorage.getItem("t4a3");
+$App.t4a4 = localStorage.getItem("t4a4");
+$App.t4a5 = localStorage.getItem("t4a5");
+$App.u1a1 = localStorage.getItem("u1a1");
+$App.u1a2 = localStorage.getItem("u1a2");
+$App.u1a3 = localStorage.getItem("u1a3");
+$App.u1a4 = localStorage.getItem("u1a4");
+$App.u1a5 = localStorage.getItem("u1a5");
+$App.u2a1 = localStorage.getItem("u2a1");
+$App.u2a2 = localStorage.getItem("u2a2");
+$App.u2a3 = localStorage.getItem("u2a3");
+$App.u2a4 = localStorage.getItem("u2a4");
+$App.u2a5 = localStorage.getItem("u2a5");
+$App.u3a1 = localStorage.getItem("u3a1");
+$App.u3a2 = localStorage.getItem("u3a2");
+$App.u3a3 = localStorage.getItem("u3a3");
+$App.u3a4 = localStorage.getItem("u3a4");
+$App.u3a5 = localStorage.getItem("u3a5");
+$App.u4a1 = localStorage.getItem("u4a1");
+$App.u4a2 = localStorage.getItem("u4a2");
+$App.u4a3 = localStorage.getItem("u4a3");
+$App.u4a4 = localStorage.getItem("u4a4");
+$App.u4a5 = localStorage.getItem("u4a5");
+$App.v1a1 = localStorage.getItem("v1a1");
+$App.v1a2 = localStorage.getItem("v1a2");
+$App.v1a3 = localStorage.getItem("v1a3");
+$App.v1a4 = localStorage.getItem("v1a4");
+$App.v1a5 = localStorage.getItem("v1a5");
+$App.v2a1 = localStorage.getItem("v2a1");
+$App.v2a2 = localStorage.getItem("v2a2");
+$App.v2a3 = localStorage.getItem("v2a3");
+$App.v2a4 = localStorage.getItem("v2a4");
+$App.v2a5 = localStorage.getItem("v2a5");
+$App.v3a1 = localStorage.getItem("v3a1");
+$App.v3a2 = localStorage.getItem("v3a2");
+$App.v3a3 = localStorage.getItem("v3a3");
+$App.v3a4 = localStorage.getItem("v3a4");
+$App.v3a5 = localStorage.getItem("v3a5");
+$App.v4a1 = localStorage.getItem("v4a1");
+$App.v4a2 = localStorage.getItem("v4a2");
+$App.v4a3 = localStorage.getItem("v4a3");
+$App.v4a4 = localStorage.getItem("v4a4");
+$App.v4a5 = localStorage.getItem("v4a5");
+$App.w1a1 = localStorage.getItem("w1a1");
+$App.w1a2 = localStorage.getItem("w1a2");
+$App.w1a3 = localStorage.getItem("w1a3");
+$App.w1a4 = localStorage.getItem("w1a4");
+$App.w1a5 = localStorage.getItem("w1a5");
+$App.w2a1 = localStorage.getItem("w2a1");
+$App.w2a2 = localStorage.getItem("w2a2");
+$App.w2a3 = localStorage.getItem("w2a3");
+$App.w2a4 = localStorage.getItem("w2a4");
+$App.w2a5 = localStorage.getItem("w2a5");
+$App.x1a1 = localStorage.getItem("x1a1");
+$App.x1a2 = localStorage.getItem("x1a2");
+$App.x1a3 = localStorage.getItem("x1a3");
+$App.x1a4 = localStorage.getItem("x1a4");
+$App.x1a5 = localStorage.getItem("x1a5");
+$App.x2a1 = localStorage.getItem("x2a1");
+$App.x2a2 = localStorage.getItem("x2a2");
+$App.x2a3 = localStorage.getItem("x2a3");
+$App.x2a4 = localStorage.getItem("x2a4");
+$App.x2a5 = localStorage.getItem("x2a5");
+$App.y1a1 = localStorage.getItem("y1a1");
+$App.y1a2 = localStorage.getItem("y1a2");
+$App.y1a3 = localStorage.getItem("y1a3");
+$App.y1a4 = localStorage.getItem("y1a4");
+$App.y1a5 = localStorage.getItem("y1a5");
+$App.y2a1 = localStorage.getItem("y2a1");
+$App.y2a2 = localStorage.getItem("y2a2");
+$App.y2a3 = localStorage.getItem("y2a3");
+$App.y2a4 = localStorage.getItem("y2a4");
+$App.y2a5 = localStorage.getItem("y2a5");
+$App.z1a1 = localStorage.getItem("z1a1");
+$App.z1a2 = localStorage.getItem("z1a2");
+$App.z1a3 = localStorage.getItem("z1a3");
+$App.z1a4 = localStorage.getItem("z1a4");
+$App.z1a5 = localStorage.getItem("z1a5");
+$App.z2a1 = localStorage.getItem("z2a1");
+$App.z2a2 = localStorage.getItem("z2a2");
+$App.z2a3 = localStorage.getItem("z2a3");
+$App.z2a4 = localStorage.getItem("z2a4");
+$App.z2a5 = localStorage.getItem("z2a5");
+$App.zt126 = localStorage.getItem("zt126");
+$App.zt226 = localStorage.getItem("zt226");
+$App.zt326 = localStorage.getItem("zt326");
+$App.may260 = localStorage.getItem("may260");
+$App.may261 = localStorage.getItem("may261");
+$App.may262 = localStorage.getItem("may262");
+$App.may263 = localStorage.getItem("may263");
+$App.june260 = localStorage.getItem("june260");
+$App.june261 = localStorage.getItem("june261");
+$App.june262 = localStorage.getItem("june262");
+$App.june263 = localStorage.getItem("june263");
+$App.july260 = localStorage.getItem("july260");
+$App.july261 = localStorage.getItem("july261");
+$App.july262 = localStorage.getItem("july262");
+$App.july263 = localStorage.getItem("july263");
+$App.aug260 = localStorage.getItem("aug260");
+$App.aug261 = localStorage.getItem("aug261");
+$App.aug262 = localStorage.getItem("aug262");
+$App.aug263 = localStorage.getItem("aug263");
+$App.sep260 = localStorage.getItem("sep260");
+$App.sep261 = localStorage.getItem("sep261");
+$App.sep262 = localStorage.getItem("sep262");
+$App.sep263 = localStorage.getItem("sep263");
+$App.oct260 = localStorage.getItem("oct260");
+$App.oct261 = localStorage.getItem("oct261");
+$App.oct262 = localStorage.getItem("oct262");
+$App.oct263 = localStorage.getItem("oct263");
+$App.nov260 = localStorage.getItem("nov260");
+$App.nov261 = localStorage.getItem("nov261");
+$App.nov262 = localStorage.getItem("nov262");
+$App.nov263 = localStorage.getItem("nov263");
+$App.dec260 = localStorage.getItem("dec260");
+$App.dec261 = localStorage.getItem("dec261");
+$App.dec262 = localStorage.getItem("dec262");
+$App.dec263 = localStorage.getItem("dec263");
+$App.monthnotes = localStorage.getItem("monthnotes");
+$App.monthnotes2 = localStorage.getItem("monthnotes2");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Prayer1 = localStorage.getItem("Prayer1");
+$App.Prayer2 = localStorage.getItem("Prayer2");
+$App.Prayer3 = localStorage.getItem("Prayer3");
+$App.Prayer4 = localStorage.getItem("Prayer4");
+$App.Prayer1tit = localStorage.getItem("Prayer1tit");
+$App.Prayer2tit = localStorage.getItem("Prayer2tit");
+$App.Prayer3tit = localStorage.getItem("Prayer3tit");
+$App.Prayer4tit = localStorage.getItem("Prayer4tit");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Prayer1 = localStorage.getItem("Prayer1");
+$App.Prayer2 = localStorage.getItem("Prayer2");
+$App.Prayer3 = localStorage.getItem("Prayer3");
+$App.Prayer4 = localStorage.getItem("Prayer4");
+$App.Prayer1tit = localStorage.getItem("Prayer1tit");
+$App.Prayer2tit = localStorage.getItem("Prayer2tit");
+$App.Prayer3tit = localStorage.getItem("Prayer3tit");
+$App.Prayer4tit = localStorage.getItem("Prayer4tit");
+$App.Read1 = localStorage.getItem("Read1");
+$App.Read2 = localStorage.getItem("Read2");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Next = localStorage.getItem("Next");
+$App.Me = localStorage.getItem("Me");
+$App.Reps1tit = localStorage.getItem("Reps1tit");
+$App.Reps2tit = localStorage.getItem("Reps2tit");
+$App.Reps3tit = localStorage.getItem("Reps3tit");
+$App.Reps4tit = localStorage.getItem("Reps4tit");
+$App.Reps = localStorage.getItem("Reps");
+$App.Reps1 = localStorage.getItem("Reps1");
+$App.Reps02 = localStorage.getItem("Reps02");
+$App.Reset1 = localStorage.getItem("Reset1");
+$App.Reset2 = localStorage.getItem("Reset2");
+$App.Reset3 = localStorage.getItem("Reset3");
+$App.Reset4 = localStorage.getItem("Reset4");
+$App.Reset5 = localStorage.getItem("Reset5");
+$App.Reset6 = localStorage.getItem("Reset6");
+$App.Reset7 = localStorage.getItem("Reset7");
+$App.Reset8 = localStorage.getItem("Reset8");
+$App.Reset9 = localStorage.getItem("Reset9");
+$App.Reset10 = localStorage.getItem("Reset10");
+$App.Reset11 = localStorage.getItem("Reset11");
+$App.Reset12 = localStorage.getItem("Reset12");
+$App.Reset13 = localStorage.getItem("Reset13");
+$App.Reset14 = localStorage.getItem("Reset14");
+$App.Reset15 = localStorage.getItem("Reset15");
+$App.Reset16 = localStorage.getItem("Reset16");
+$App.Reset1a = localStorage.getItem("Reset1a");
+$App.Reset2a = localStorage.getItem("Reset2a");
+$App.Reset3a = localStorage.getItem("Reset3a");
+$App.Reset4a = localStorage.getItem("Reset4a");
+$App.Reset5a = localStorage.getItem("Reset5a");
+$App.Reset6a = localStorage.getItem("Reset6a");
+$App.Reset7a = localStorage.getItem("Reset7a");
+$App.Reset8a = localStorage.getItem("Reset8a");
+$App.Reset9a = localStorage.getItem("Reset9a");
+$App.Reset10a = localStorage.getItem("Reset10a");
+$App.Reset11a = localStorage.getItem("Reset11a");
+$App.Reset12a = localStorage.getItem("Reset12a");
+$App.Reset13a = localStorage.getItem("Reset13a");
+$App.Reset14a = localStorage.getItem("Reset14a");
+$App.Reset15a = localStorage.getItem("Reset15a");
+$App.Reset16a = localStorage.getItem("Reset16a");
+$App.Homsstuffinote = localStorage.getItem("Homsstuffinote");
+$App.WorkBstuffnote = localStorage.getItem("WorkBstuffnote");
+$App.WorkCstuffnote = localStorage.getItem("WorkCstuffnote");
+$App.WorkDstuffnote = localStorage.getItem("WorkDstuffnote");
+$App.VERSIONRECORD = localStorage.getItem("VERSIONRECORD");
+$App.RecData = localStorage.getItem("RecData");
+$App.HEALTHGENERAL001 = localStorage.getItem("HEALTHGENERAL001");
+$App.project1abT = localStorage.getItem("project1abT");
+$App.project1doc = localStorage.getItem("project1doc");
+$App.project1 = localStorage.getItem("project1");
+$App.Project1Main = localStorage.getItem("Project1Main");
+$App.project1aT = localStorage.getItem("project1aT");
+$App.project1bT = localStorage.getItem("project1bT");
+$App.project1cT = localStorage.getItem("project1cT");
+$App.project1dT = localStorage.getItem("project1dT");
+$App.project1eT = localStorage.getItem("project1eT");
+$App.project1fT = localStorage.getItem("project1fT");
+$App.project1gT = localStorage.getItem("project1gT");
+$App.project1hT = localStorage.getItem("project1hT");
+$App.project1iT = localStorage.getItem("project1jT");
+$App.project1jT = localStorage.getItem("project1jT");
+$App.project1kT = localStorage.getItem("project1kT");
+$App.project1lT = localStorage.getItem("project1lT");
+$App.project1mT = localStorage.getItem("project1mT");
+$App.project1nT = localStorage.getItem("project1nT");
+$App.project1oT = localStorage.getItem("project1oT");
+$App.project1pT = localStorage.getItem("project1pT");
+$App.project1qT = localStorage.getItem("project1qT");
+$App.project1rT = localStorage.getItem("project1rT");
+$App.project1sT = localStorage.getItem("project1sT");
+$App.project1tT = localStorage.getItem("project1tT");
+$App.project1uT = localStorage.getItem("project1uT");
+$App.project1vT = localStorage.getItem("project1vT");
+$App.project1wT = localStorage.getItem("project1wT");
+$App.project1xT = localStorage.getItem("project1xT");
+$App.project1aaT = localStorage.getItem("project1aaT");
+$App.project1aa = localStorage.getItem("project1aa");
+$App.project1ab = localStorage.getItem("project1ab");
+$App.project1ac = localStorage.getItem("project1ac");
+$App.project1ad = localStorage.getItem("project1ad");
+$App.project1a = localStorage.getItem("project1a");
+$App.project1b = localStorage.getItem("project1b");
+$App.project1c = localStorage.getItem("project1c");
+$App.project1d = localStorage.getItem("project1d");
+$App.project1e = localStorage.getItem("project1e");
+$App.project1f = localStorage.getItem("project1f");
+$App.project1g = localStorage.getItem("project1g");
+$App.project1h = localStorage.getItem("project1h");
+$App.project1i = localStorage.getItem("project1i");
+$App.project1j = localStorage.getItem("project1j");
+$App.project1k = localStorage.getItem("project1k");
+$App.project1l = localStorage.getItem("project1l");
+$App.project1m = localStorage.getItem("project1m");
+$App.project1n = localStorage.getItem("project1n");
+$App.project1o = localStorage.getItem("project1o");
+$App.project1p = localStorage.getItem("project1p");
+$App.project1q = localStorage.getItem("project1q");
+$App.project1r = localStorage.getItem("project1r");
+$App.project1s = localStorage.getItem("project1s");
+$App.project1t = localStorage.getItem("project1t");
+$App.project1u = localStorage.getItem("project1u");
+$App.project1v = localStorage.getItem("project1v");
+$App.project1w = localStorage.getItem("project1w");
+$App.project1x = localStorage.getItem("project1x");
+$App.project1y = localStorage.getItem("project1y");
+$App.project2doc = localStorage.getItem("project2doc");
+$App.project2 = localStorage.getItem("project2");
+$App.Project2Main = localStorage.getItem("Project2Main");
+$App.Project2aa = localStorage.getItem("Project2aa");
+$App.project2acT = localStorage.getItem("project2acT");
+$App.project2aT = localStorage.getItem("project2aT");
+$App.project2bT = localStorage.getItem("project2bT");
+$App.project2cT = localStorage.getItem("project2cT");
+$App.project2dT = localStorage.getItem("project2dT");
+$App.project2eT = localStorage.getItem("project2eT");
+$App.project2fT = localStorage.getItem("project2fT");
+$App.project2gT = localStorage.getItem("project2gT");
+$App.project2hT = localStorage.getItem("project2hT");
+$App.project2iT = localStorage.getItem("project2jT");
+$App.project2jT = localStorage.getItem("project2jT");
+$App.project2kT = localStorage.getItem("project2kT");
+$App.project2lT = localStorage.getItem("project2lT");
+$App.project2mT = localStorage.getItem("project2mT");
+$App.project2nT = localStorage.getItem("project2nT");
+$App.project2oT = localStorage.getItem("project2oT");
+$App.project2pT = localStorage.getItem("project2pT");
+$App.project2qT = localStorage.getItem("project2qT");
+$App.project2rT = localStorage.getItem("project2rT");
+$App.project2sT = localStorage.getItem("project2sT");
+$App.project2tT = localStorage.getItem("project2tT");
+$App.project2uT = localStorage.getItem("project2uT");
+$App.project2vT = localStorage.getItem("project2vT");
+$App.project2wT = localStorage.getItem("project2wT");
+$App.project2xT = localStorage.getItem("project2xT");
+$App.Project2aa = localStorage.getItem("project2aa");
+$App.project2ab = localStorage.getItem("project2ab");
+$App.project2ac = localStorage.getItem("project2ac");
+$App.project2ad = localStorage.getItem("project2ad");
+$App.project2a = localStorage.getItem("project2a");
+$App.project2b = localStorage.getItem("project2b");
+$App.project2c = localStorage.getItem("project2c");
+$App.project2d = localStorage.getItem("project2d");
+$App.project2e = localStorage.getItem("project2e");
+$App.project2f = localStorage.getItem("project2f");
+$App.project2g = localStorage.getItem("project2g");
+$App.project2h = localStorage.getItem("project2h");
+$App.project2i = localStorage.getItem("project2i");
+$App.project2j = localStorage.getItem("project2j");
+$App.project2k = localStorage.getItem("project2k");
+$App.project2l = localStorage.getItem("project2l");
+$App.project2m = localStorage.getItem("project2m");
+$App.project2n = localStorage.getItem("project2n");
+$App.project2o = localStorage.getItem("project2o");
+$App.project2p = localStorage.getItem("project2p");
+$App.project2q = localStorage.getItem("project2q");
+$App.project2r = localStorage.getItem("project2r");
+$App.project2s = localStorage.getItem("project2s");
+$App.project2t = localStorage.getItem("project2t");
+$App.project2u = localStorage.getItem("project2u");
+$App.project2v = localStorage.getItem("project2v");
+$App.project2w = localStorage.getItem("project2w");
+$App.project2x = localStorage.getItem("project2x");
+$App.project2y = localStorage.getItem("project2y");};
+$scope.Temphome_pageenter = function() {$scope.ObjectToFront("PushButton634");
+$App.familymatters = localStorage.getItem("familymatters");
+$App.healthmatters = localStorage.getItem("healthmatters");
+$App.mirrorCamera = localStorage.getItem("mirrorCamera");
+$App.worktrans = localStorage.getItem("worktrans");
+$App.financialMe = localStorage.getItem("financialMe");
+$App.bfm = localStorage.getItem("bfm");
+$App.resetmain = localStorage.getItem("resetmain");
+$App.resetmainMore = localStorage.getItem("resetmainMore");
+$App.mirrorCameramore = localStorage.getItem("mirrorCameramore");
+$App.familymattersMore = localStorage.getItem("familymattersMore");
+$App.reset001a = localStorage.getItem("reset001a");
+$App.reset001b = localStorage.getItem("reset001b");
+$App.reset001c = localStorage.getItem("reset001c");
+$App.reset001d = localStorage.getItem("reset001d");
+$App.reset001aMore = localStorage.getItem("reset001aMore");
+$App.reset001bMore = localStorage.getItem("reset001bMore");
+$App.reset001cMore = localStorage.getItem("reset001cMore");
+$App.reset001dMore = localStorage.getItem("reset001dMore");
+$App.symbola = localStorage.getItem("symbola");
+$App.symbolb = localStorage.getItem("symbolb");
+$App.symbolaMore = localStorage.getItem("symbolaMore");
+$App.symbolbMore = localStorage.getItem("symbolbMore");
+$App.reset002a = localStorage.getItem("reset002a");
+$App.reset002b = localStorage.getItem("reset002b");
+$App.reset002c = localStorage.getItem("reset002c");
+$App.reset002d = localStorage.getItem("reset002d");
+$App.reset002aMore = localStorage.getItem("reset002aMore");
+$App.reset002bMore = localStorage.getItem("reset002bMore");
+$App.reset002cMore = localStorage.getItem("reset002cMore");
+$App.reset002dMore = localStorage.getItem("reset002dMore");
+$App.symbolc = localStorage.getItem("symbolc");
+$App.symbold = localStorage.getItem("symbold");
+$App.symbolcMore = localStorage.getItem("symbolcMore");
+$App.symboldMore = localStorage.getItem("symboldMore");
+$App.reset003a = localStorage.getItem("reset003a");
+$App.reset003b = localStorage.getItem("reset003b");
+$App.reset003c = localStorage.getItem("reset003c");
+$App.reset003d = localStorage.getItem("reset003d");
+$App.reset004a = localStorage.getItem("reset004a");
+$App.reset004b = localStorage.getItem("reset004b");
+$App.reset004c = localStorage.getItem("reset004c");
+$App.reset004d = localStorage.getItem("reset004d");
+$App.reset005a = localStorage.getItem("reset005a");
+$App.reset005b = localStorage.getItem("reset005b");
+$App.reset005c = localStorage.getItem("reset005c");
+$App.reset005d = localStorage.getItem("reset005d");
+$App.reset006a = localStorage.getItem("reset006a");
+$App.reset006b = localStorage.getItem("reset006b");
+$App.reset006c = localStorage.getItem("reset006c");
+$App.reset006d = localStorage.getItem("reset006d");
+$App.symbole = localStorage.getItem("symbole");
+$App.symbolf = localStorage.getItem("symbolf");
+$App.symbolg = localStorage.getItem("symbolg");
+$App.symbolh = localStorage.getItem("symbolh");
+$App.symboli = localStorage.getItem("symboli");
+$App.symbolj = localStorage.getItem("symbolj");
+$App.symbolk = localStorage.getItem("symbolk");
+$App.symboll = localStorage.getItem("symboll");
+$App.b11111 = localStorage.getItem("b11111");
+$App.b22222 = localStorage.getItem("b22222");
+$App.b33333 = localStorage.getItem("b33333");
+$App.b44444 = localStorage.getItem("b44444");
+$App.b55555 = localStorage.getItem("b55555");
+$App.witaa1000 = localStorage.getItem("witaa1000");
+$App.witaa1000a = localStorage.getItem("witaa1000a");
+$App.witaa1000b = localStorage.getItem("witaa1000b");
+$App.witaa1000c = localStorage.getItem("witaa1000c");
+$App.witaaq001 = localStorage.getItem("witaaq001");
+$App.witaaq002 = localStorage.getItem("witaaq002");
+$App.witaaq003 = localStorage.getItem("witaaq003");
+$App.witaaq004 = localStorage.getItem("witaaq004");
+$App.witaaq005 = localStorage.getItem("witaaq005");
+$App.witaaq006 = localStorage.getItem("witaaq006");
+$App.witaaq007 = localStorage.getItem("witaaq007");
+$App.witaaq008 = localStorage.getItem("witaaq008");
+$App.witaaqa1001 = localStorage.getItem("witaaqa1001");
+$App.witaaqa1002 = localStorage.getItem("witaaqa1002");
+$App.witaaqa1003 = localStorage.getItem("witaaqa1003");
+$App.witaaqa1004 = localStorage.getItem("witaaqa1004");
+$App.witaaqa1005 = localStorage.getItem("witaaqa1005");
+$App.witaaqa1006 = localStorage.getItem("witaaqa1006");
+$App.witaaqa1007 = localStorage.getItem("witaaqa1007");
+$App.witaaqa1008 = localStorage.getItem("witaaqa1008");
+$App.mo1item01 = localStorage.getItem("mo1item01");
+$App.mo1item02 = localStorage.getItem("mo1item02");
+$App.mo1item03 = localStorage.getItem("mo1item03");
+$App.mo1item04 = localStorage.getItem("mo1item04");
+$App.mo1item05 = localStorage.getItem("mo1item05");
+$App.mo1item06 = localStorage.getItem("mo1item06");
+$App.mo1item07 = localStorage.getItem("mo1item07");
+$App.mo1item08 = localStorage.getItem("mo1item08");
+$App.mo1item09 = localStorage.getItem("mo1item09");
+$App.mo1item10 = localStorage.getItem("mo1item10");
+$App.mo1item11 = localStorage.getItem("mo1item11");
+$App.mo1item12 = localStorage.getItem("mo1item12");
+$App.mo1item13 = localStorage.getItem("mo1item13");
+$App.mo1item14 = localStorage.getItem("mo1item14");
+$App.mo1item15 = localStorage.getItem("mo1item15");
+$App.mo1item01n = localStorage.getItem("mo1item01n");
+$App.mo1item02n = localStorage.getItem("mo1item02n");
+$App.mo1item03n = localStorage.getItem("mo1item03n");
+$App.mo1item04n = localStorage.getItem("mo1item04n");
+$App.mo1item05n = localStorage.getItem("mo1item05n");
+$App.mo1item06n = localStorage.getItem("mo1item06n");
+$App.mo1item07n = localStorage.getItem("mo1item07n");
+$App.mo1item08n = localStorage.getItem("mo1item08n");
+$App.mo1item09n = localStorage.getItem("mo1item09n");
+$App.mo1item10n = localStorage.getItem("mo1item10n");
+$App.mo1item11n = localStorage.getItem("mo1item11n");
+$App.mo1item12n = localStorage.getItem("mo1item12n");
+$App.mo1item13n = localStorage.getItem("mo1item13n");
+$App.mo1item14n = localStorage.getItem("mo1item14n");
+$App.mo1item15n = localStorage.getItem("mo1item15n");
+$App.mo1item01v = localStorage.getItem("mo1item01v");
+$App.mo1item02v = localStorage.getItem("mo1item02v");
+$App.mo1item03v = localStorage.getItem("mo1item03v");
+$App.mo1item04v = localStorage.getItem("mo1item04v");
+$App.mo1item05v = localStorage.getItem("mo1item05v");
+$App.mo1item06v = localStorage.getItem("mo1item06v");
+$App.mo1item07v = localStorage.getItem("mo1item07v");
+$App.mo1item08v = localStorage.getItem("mo1item08v");
+$App.mo1item09v = localStorage.getItem("mo1item09v");
+$App.mo1item10v = localStorage.getItem("mo1item10v");
+$App.mo1item11v = localStorage.getItem("mo1item11v");
+$App.mo1item12v = localStorage.getItem("mo1item12v");
+$App.mo1item13v = localStorage.getItem("mo1item13v");
+$App.mo1item14v = localStorage.getItem("mo1item14v");
+$App.mo1item15v = localStorage.getItem("mo1item15v");
+$App.mo1itemtot = localStorage.getItem("mo1itemtot");
+$App.mo2item01 = localStorage.getItem("mo2item01");
+$App.mo2item02 = localStorage.getItem("mo2item02");
+$App.mo2item03 = localStorage.getItem("mo2item03");
+$App.mo2item04 = localStorage.getItem("mo2item04");
+$App.mo2item05 = localStorage.getItem("mo2item05");
+$App.mo2item06 = localStorage.getItem("mo2item06");
+$App.mo2item07 = localStorage.getItem("mo2item07");
+$App.mo2item08 = localStorage.getItem("mo2item08");
+$App.mo2item09 = localStorage.getItem("mo2item09");
+$App.mo2item10 = localStorage.getItem("mo2item10");
+$App.mo2item11 = localStorage.getItem("mo2item11");
+$App.mo2item12 = localStorage.getItem("mo2item12");
+$App.mo2item13 = localStorage.getItem("mo2item13");
+$App.mo2item14 = localStorage.getItem("mo2item14");
+$App.mo2item15 = localStorage.getItem("mo2item15");
+$App.mo2item01n = localStorage.getItem("mo2item01n");
+$App.mo2item02n = localStorage.getItem("mo2item02n");
+$App.mo2item03n = localStorage.getItem("mo2item03n");
+$App.mo2item04n = localStorage.getItem("mo2item04n");
+$App.mo2item05n = localStorage.getItem("mo2item05n");
+$App.mo2item06n = localStorage.getItem("mo2item06n");
+$App.mo2item07n = localStorage.getItem("mo2item07n");
+$App.mo2item08n = localStorage.getItem("mo2item08n");
+$App.mo2item09n = localStorage.getItem("mo2item09n");
+$App.mo2item10n = localStorage.getItem("mo2item10n");
+$App.mo2item11n = localStorage.getItem("mo2item11n");
+$App.mo2item12n = localStorage.getItem("mo2item12n");
+$App.mo2item13n = localStorage.getItem("mo2item13n");
+$App.mo2item14n = localStorage.getItem("mo2item14n");
+$App.mo2item15n = localStorage.getItem("mo2item15n");
+$App.mo2item01v = localStorage.getItem("mo2item01v");
+$App.mo2item02v = localStorage.getItem("mo2item02v");
+$App.mo2item03v = localStorage.getItem("mo2item03v");
+$App.mo2item04v = localStorage.getItem("mo2item04v");
+$App.mo2item05v = localStorage.getItem("mo2item05v");
+$App.mo2item06v = localStorage.getItem("mo2item06v");
+$App.mo2item07v = localStorage.getItem("mo2item07v");
+$App.mo2item08v = localStorage.getItem("mo2item08v");
+$App.mo2item09v = localStorage.getItem("mo2item09v");
+$App.mo2item10v = localStorage.getItem("mo2item10v");
+$App.mo2item11v = localStorage.getItem("mo2item11v");
+$App.mo2item12v = localStorage.getItem("mo2item12v");
+$App.mo2item13v = localStorage.getItem("mo2item13v");
+$App.mo2item14v = localStorage.getItem("mo2item14v");
+$App.mo2item15v = localStorage.getItem("mo2item15v");
+$App.mo2itemtot = localStorage.getItem("mo2itemtot");
+$App.fwf1n1 = localStorage.getItem("fwf1n1");
+$App.fwf1n2 = localStorage.getItem("fwf1n2");
+$App.fwf1n3 = localStorage.getItem("fwf1n3");
+$App.fwf1n4 = localStorage.getItem("fwf1n4");
+$App.timeline1 = localStorage.getItem("timeline1");
+$App.mitpm1 = localStorage.getItem("mitpm1");
+$App.motpm1 = localStorage.getItem("motpm1");
+$App.timeline1des = localStorage.getItem("timeline1des");
+$App.timeline1des2 = localStorage.getItem("timeline1des2");
+$App.spm1 = localStorage.getItem("spm1");
+$App.fwf1 = localStorage.getItem("fwf1");
+$App.fwf1m = localStorage.getItem("fwf1m");
+$App.fwf1d = localStorage.getItem("fwf1d");
+$App.fwf1md = localStorage.getItem("fwf1md");
+$App.fwf2n1 = localStorage.getItem("fwf2n1");
+$App.fwf2n2 = localStorage.getItem("fwf2n2");
+$App.fwf2n3 = localStorage.getItem("fwf2n3");
+$App.fwf2n4 = localStorage.getItem("fwf2n4");
+$App.timeline2 = localStorage.getItem("timeline2");
+$App.mitpm2 = localStorage.getItem("mitpm2");
+$App.motpm2 = localStorage.getItem("motpm2");
+$App.timeline2des = localStorage.getItem("timeline2des");
+$App.timeline2des2 = localStorage.getItem("timeline2des2");
+$App.spm2 = localStorage.getItem("spm2");
+$App.fwf2 = localStorage.getItem("fwf2");
+$App.fwf2m = localStorage.getItem("fwf2m");
+$App.fwf2d = localStorage.getItem("fwf2d");
+$App.fwf2md = localStorage.getItem("fwf2md");
+$App.elink2 = localStorage.getItem("elink2");
+$App.TPtitle001n = localStorage.getItem("TPtitle001n");
+$App.TPtitle002n = localStorage.getItem("TPtitle002n");
+$App.TPtitle003n = localStorage.getItem("TPtitle003n");
+$App.TPtitle004n = localStorage.getItem("TPtitle004n");
+$App.TPtitle005n = localStorage.getItem("TPtitle005n");
+$App.TPtitle006n = localStorage.getItem("TPtitle006n");
+$App.TPtitle007n = localStorage.getItem("TPtitle007n");
+$App.TPtitle008n = localStorage.getItem("TPtitle008n");
+$App.TPtitle009n = localStorage.getItem("TPtitle009n");
+$App.TPtitle010n = localStorage.getItem("TPtitle010n");
+$App.TPtitle011n = localStorage.getItem("TPtitle011n");
+$App.TPtitle012n = localStorage.getItem("TPtitle012n");
+$App.TPtitle013n = localStorage.getItem("TPtitle013n");
+$App.TPtitle014n = localStorage.getItem("TPtitle014n");
+$App.TPtitle015n = localStorage.getItem("TPtitle015n");
+$App.TPtitle016n = localStorage.getItem("TPtitle016n");
+$App.TPtitle017n = localStorage.getItem("TPtitle017n");
+$App.TPtitle018n = localStorage.getItem("TPtitle019n");
+$App.TPtitle019n = localStorage.getItem("TPtitle019n");
+$App.TPtitle019n = localStorage.getItem("TPtitle019n");
+$App.TPtitle020n = localStorage.getItem("TPtitle020n");
+$App.TPtitle021n = localStorage.getItem("TPtitle021n");
+$App.TPtitle022n = localStorage.getItem("TPtitle022n");
+$App.TPtitle023n = localStorage.getItem("TPtitle023n");
+$App.TPtitle024n = localStorage.getItem("TPtitle024n");
+$App.TPtitle025n = localStorage.getItem("TPtitle025n");
+$App.TPtitle026n = localStorage.getItem("TPtitle026n");
+$App.TPtitle027n = localStorage.getItem("TPtitle027n");
+$App.TPtitle028n = localStorage.getItem("TPtitle028n");
+$App.TPtitle029n = localStorage.getItem("TPtitle029n");
+$App.TPtitle030n = localStorage.getItem("TPtitle030n");
+$App.TPtitle031n = localStorage.getItem("TPtitle031n");
+$App.TPtitle032n = localStorage.getItem("TPtitle032n");
+$App.TPtitle033n = localStorage.getItem("TPtitle033n");
+$App.TPtitle034n = localStorage.getItem("TPtitle034n");
+$App.TPtitle035n = localStorage.getItem("TPtitle035n");
+$App.TPtitle036n = localStorage.getItem("TPtitle036n");
+$App.TPtitle037n = localStorage.getItem("TPtitle037n");
+$App.TPtitle038n = localStorage.getItem("TPtitle038n");
+$App.TPtitle039n = localStorage.getItem("TPtitle039n");
+$App.TPtitle040n = localStorage.getItem("TPtitle040n");
+$App.TPtitle041n = localStorage.getItem("TPtitle041n");
+$App.TPtitle042n = localStorage.getItem("TPtitle042n");
+$App.TPtitle043n = localStorage.getItem("TPtitle043n");
+$App.TPtitle044n = localStorage.getItem("TPtitle044n");
+$App.TPtitle045n = localStorage.getItem("TPtitle045n");
+$App.TPtitle046n = localStorage.getItem("TPtitle046n");
+$App.TPtitle047n = localStorage.getItem("TPtitle047n");
+$App.TPtitle048n = localStorage.getItem("TPtitle048n");
+$App.TPtitle017 = localStorage.getItem("TPtitle017");
+$App.TPtitle018 = localStorage.getItem("TPtitle018");
+$App.TPtitle019 = localStorage.getItem("TPtitle019");
+$App.TPtitle020 = localStorage.getItem("TPtitle020");
+$App.TPtitle021 = localStorage.getItem("TPtitle021");
+$App.TPtitle022 = localStorage.getItem("TPtitle022");
+$App.TPtitle023 = localStorage.getItem("TPtitle023");
+$App.TPtitle024 = localStorage.getItem("TPtitle024");
+$App.TPtitle025 = localStorage.getItem("TPtitle025");
+$App.TPtitle026 = localStorage.getItem("TPtitle026");
+$App.TPtitle027 = localStorage.getItem("TPtitle027");
+$App.TPtitle028 = localStorage.getItem("TPtitle028");
+$App.TPtitle029 = localStorage.getItem("TPtitle029");
+$App.TPtitle030 = localStorage.getItem("TPtitle030");
+$App.TPtitle031 = localStorage.getItem("TPtitle031");
+$App.TPtitle032 = localStorage.getItem("TPtitle032");
+$App.TPtitle033 = localStorage.getItem("TPtitle033");
+$App.TPtitle034 = localStorage.getItem("TPtitle034");
+$App.TPtitle035 = localStorage.getItem("TPtitle035");
+$App.TPtitle036 = localStorage.getItem("TPtitle036");
+$App.TPtitle037 = localStorage.getItem("TPtitle037");
+$App.TPtitle038 = localStorage.getItem("TPtitle038");
+$App.TPtitle039 = localStorage.getItem("TPtitle038");
+$App.TPtitle040 = localStorage.getItem("TPtitle040");
+$App.TPtitle041 = localStorage.getItem("TPtitle041");
+$App.TPtitle042 = localStorage.getItem("TPtitle042");
+$App.TPtitle043 = localStorage.getItem("TPtitle043");
+$App.TPtitle044 = localStorage.getItem("TPtitle044");
+$App.TPtitle045 = localStorage.getItem("TPtitle045");
+$App.TPtitle046 = localStorage.getItem("TPtitle046");
+$App.TPtitle047 = localStorage.getItem("TPtitle047");
+$App.TPtitle048 = localStorage.getItem("TPtitle048");
+$App.Tititle001 = localStorage.getItem("Tititle001");
+$App.Tititle002 = localStorage.getItem("Tititle002");
+$App.Tititle003 = localStorage.getItem("Tititle003");
+$App.Tititle004 = localStorage.getItem("Tititle004");
+$App.Tititle005 = localStorage.getItem("Tititle005");
+$App.Tititle006 = localStorage.getItem("Tititle006");
+$App.Tititle007 = localStorage.getItem("Tititle007");
+$App.Tititle008 = localStorage.getItem("Tititle008");
+$App.Tititle009 = localStorage.getItem("Tititle009");
+$App.Tititle010 = localStorage.getItem("Tititle010");
+$App.Tititle011 = localStorage.getItem("Tititle011");
+$App.Tititle012 = localStorage.getItem("Tititle012");
+$App.Tititle001n = localStorage.getItem("Tititle001n");
+$App.Tititle002n = localStorage.getItem("Tititle002n");
+$App.Tititle003n = localStorage.getItem("Tititle003n");
+$App.Tititle004n = localStorage.getItem("Tititle004n");
+$App.Tititle005n = localStorage.getItem("Tititle005n");
+$App.Tititle006n = localStorage.getItem("Tititle006n");
+$App.Tititle007n = localStorage.getItem("Tititle007n");
+$App.Tititle008n = localStorage.getItem("Tititle008n");
+$App.Tititle009n = localStorage.getItem("Tititle009n");
+$App.Tititle010n = localStorage.getItem("Tititle010n");
+$App.Tititle011n = localStorage.getItem("Tititle011n");
+$App.Tititle012n = localStorage.getItem("Tititle012n");
+$App.Tinote = localStorage.getItem("Tinote");
+$App.rcrimume1 = localStorage.getItem("rcrimume1");
+$App.rcrimume2 = localStorage.getItem("rcrimume2");
+$App.rcrimume3 = localStorage.getItem("rcrimume3");
+$App.pp01 = localStorage.getItem("pp01");
+$App.pp01a = localStorage.getItem("pp01a");
+$App.pp01b = localStorage.getItem("pp01b");
+$App.pp01c = localStorage.getItem("pp01c");
+$App.pp01d = localStorage.getItem("pp01d");
+$App.pp01e = localStorage.getItem("pp01e");
+$App.journal = localStorage.getItem("journal");
+$App.elink1t1 = localStorage.getItem("elink1t1");
+$App.elink1t2 = localStorage.getItem("elink1t2");
+$App.Ctitle001 = localStorage.getItem("Ctitle001");
+$App.Ctitle002 = localStorage.getItem("Ctitle002");
+$App.Ctitle003 = localStorage.getItem("Ctitle003");
+$App.Ctitle004 = localStorage.getItem("Ctitle004");
+$App.Ctitle001n = localStorage.getItem("Ctitle001n");
+$App.Ctitle002n = localStorage.getItem("Ctitle002n");
+$App.Ctitle003n = localStorage.getItem("Ctitle003n");
+$App.Ctitle004n = localStorage.getItem("Ctitle004n");
+$App.Ctitle005 = localStorage.getItem("Ctitle005");
+$App.Ctitle006 = localStorage.getItem("Ctitle006");
+$App.Ctitle007 = localStorage.getItem("Ctitle007");
+$App.Ctitle008 = localStorage.getItem("Ctitle008");
+$App.Ctitle005n = localStorage.getItem("Ctitle005n");
+$App.Ctitle006n = localStorage.getItem("Ctitle006n");
+$App.Ctitle007n = localStorage.getItem("Ctitle007n");
+$App.Ctitle008n = localStorage.getItem("Ctitle008n");
+$App.Ctitle009 = localStorage.getItem("Ctitle009");
+$App.Ctitle010 = localStorage.getItem("Ctitle010");
+$App.Ctitle011 = localStorage.getItem("Ctitle011");
+$App.Ctitle012 = localStorage.getItem("Ctitle012");
+$App.Ctitle009n = localStorage.getItem("Ctitle009n");
+$App.Ctitle010n = localStorage.getItem("Ctitle010n");
+$App.Ctitle011n = localStorage.getItem("Ctitle011n");
+$App.Ctitle012n = localStorage.getItem("Ctitle012n");
+$App.Ctitle013 = localStorage.getItem("Ctitle013");
+$App.Ctitle014 = localStorage.getItem("Ctitle014");
+$App.Ctitle015 = localStorage.getItem("Ctitle015");
+$App.Ctitle016 = localStorage.getItem("Ctitle016");
+$App.Ctitle017 = localStorage.getItem("Ctitle017");
+$App.Ctitle018 = localStorage.getItem("Ctitle018");
+$App.Ctitle019 = localStorage.getItem("Ctitle019");
+$App.Ctitle020 = localStorage.getItem("Ctitle020");
+$App.Ctitle021 = localStorage.getItem("Ctitle021");
+$App.Ctitle022 = localStorage.getItem("Ctitle022");
+$App.Ctitle013n = localStorage.getItem("Ctitle013n");
+$App.Ctitle014n = localStorage.getItem("Ctitle014n");
+$App.Ctitle015n = localStorage.getItem("Ctitle015n");
+$App.Ctitle016n = localStorage.getItem("Ctitle016n");
+$App.Ctitle017n = localStorage.getItem("Ctitle017n");
+$App.Ctitle018n = localStorage.getItem("Ctitle018n");
+$App.Ctitle019n = localStorage.getItem("Ctitle019n");
+$App.Ctitle020n = localStorage.getItem("Ctitle020n");
+$App.Ctitle021n = localStorage.getItem("Ctitle021n");
+$App.Ctitle022n = localStorage.getItem("Ctitle022n");
+$App.v5a001 = localStorage.getItem("v5a001");
+$App.v5a002 = localStorage.getItem("v5a002");
+$App.v5a003 = localStorage.getItem("v5a003");
+$App.v5a004 = localStorage.getItem("v5a004");
+$App.v5a005 = localStorage.getItem("v5a005");
+$App.v5a006 = localStorage.getItem("v5a006");
+$App.v5a007 = localStorage.getItem("v5a007");
+$App.v5a008 = localStorage.getItem("v5a008");
+$App.v5a009 = localStorage.getItem("v5a009");
+$App.v5a010 = localStorage.getItem("v5a010");
+$App.v5a011 = localStorage.getItem("v5a011");
+$App.v5a012 = localStorage.getItem("v5a012");
+$App.Speed01link01 = localStorage.getItem("Speed01link01");
+$App.speed1ref = localStorage.getItem("speed1ref");
+$App.speed1refb = localStorage.getItem("speed1refb");
+$App.speed2ref = localStorage.getItem("speed2ref");
+$App.speed2refb = localStorage.getItem("speed2refb");
+$App.aa1 = localStorage.getItem("aa1");
+$App.aa2 = localStorage.getItem("aa2");
+$App.aa3 = localStorage.getItem("aa3");
+$App.aa4 = localStorage.getItem("aa4");
+$App.aa5 = localStorage.getItem("aa5");
+$App.aa6 = localStorage.getItem("aa6");
+$App.aa7 = localStorage.getItem("aa7");
+$App.aa8 = localStorage.getItem("aa8");
+$App.aa9 = localStorage.getItem("aa8");
+$App.aa10 = localStorage.getItem("aa10");
+$App.aa11 = localStorage.getItem("aa11");
+$App.aa12 = localStorage.getItem("aa12");
+$App.aa13 = localStorage.getItem("aa13");
+$App.aa14 = localStorage.getItem("aa14");
+$App.aa15 = localStorage.getItem("aa15");
+$App.aa16 = localStorage.getItem("aa16");
+$App.aa17 = localStorage.getItem("aa17");
+$App.aa18 = localStorage.getItem("aa18");
+$App.aa19 = localStorage.getItem("aa19");
+$App.aa20 = localStorage.getItem("aa20");
+$App.aa21 = localStorage.getItem("aa21");
+$App.aa22 = localStorage.getItem("aa22");
+$App.aa23 = localStorage.getItem("aa23");
+$App.aa24 = localStorage.getItem("aa24");
+$App.aa25 = localStorage.getItem("aa25");
+$App.aa26 = localStorage.getItem("aa26");
+$App.aa27 = localStorage.getItem("aa27");
+$App.aa28 = localStorage.getItem("aa28");
+$App.aa29 = localStorage.getItem("aa29");
+$App.aa30 = localStorage.getItem("aa30");
+$App.aa31 = localStorage.getItem("aa31");
+$App.aa32 = localStorage.getItem("aa32");
+if ($App.aa1 == "r") {
+$scope.SetObjectStyle("Headline10001","color","red");
+$scope.SetObjectStyle("Ellipse101","fill","red");
+} else {
+};
+if ($App.aa1 == "g") {
+$scope.SetObjectStyle("Headline10001","color","green");
+$scope.SetObjectStyle("Ellipse101","fill","green");
+} else {
+};
+if ($App.aa1 == "b") {
+$scope.SetObjectStyle("Headline10001","color","blue");
+$scope.SetObjectStyle("Ellipse101","fill","blue");
+} else {
+};
+if ($App.aa2 == "r") {
+$scope.SetObjectStyle("Headline10002","color","red");
+$scope.SetObjectStyle("Ellipse102","fill","red");
+} else {
+};
+if ($App.aa2 == "g") {
+$scope.SetObjectStyle("Headline10002","color","green");
+$scope.SetObjectStyle("Ellipse102","fill","green");
+} else {
+};
+if ($App.aa2 == "b") {
+$scope.SetObjectStyle("Headline10002","color","blue");
+$scope.SetObjectStyle("Ellipse102","fill","blue");
+} else {
+};
+if ($App.aa3 == "r") {
+$scope.SetObjectStyle("Headline10003","color","red");
+$scope.SetObjectStyle("Ellipse103","fill","red");
+} else {
+};
+if ($App.aa3 == "g") {
+$scope.SetObjectStyle("Headline10003","color","green");
+$scope.SetObjectStyle("Ellipse103","fill","green");
+} else {
+};
+if ($App.aa3 == "b") {
+$scope.SetObjectStyle("Headline10003","color","blue");
+$scope.SetObjectStyle("Ellipse103","fill","blue");
+} else {
+};
+if ($App.aa4 == "r") {
+$scope.SetObjectStyle("Headline10004","color","red");
+$scope.SetObjectStyle("Ellipse104","fill","red");
+} else {
+};
+if ($App.aa4 == "g") {
+$scope.SetObjectStyle("Headline10004","color","green");
+$scope.SetObjectStyle("Ellipse104","fill","green");
+} else {
+};
+if ($App.aa4 == "b") {
+$scope.SetObjectStyle("Headline10004","color","blue");
+$scope.SetObjectStyle("Ellipse104","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10005","color","red");
+$scope.SetObjectStyle("Ellipse105","fill","red");
+} else {
+};
+if ($App.aa5 == "g") {
+$scope.SetObjectStyle("Headline10005","color","green");
+$scope.SetObjectStyle("Ellipse105","fill","green");
+} else {
+};
+if ($App.aa5 == "b") {
+$scope.SetObjectStyle("Headline10005","color","blue");
+$scope.SetObjectStyle("Ellipse105","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10006","color","red");
+$scope.SetObjectStyle("Ellipse106","fill","red");
+} else {
+};
+if ($App.aa6 == "g") {
+$scope.SetObjectStyle("Headline10006","color","green");
+$scope.SetObjectStyle("Ellipse106","fill","green");
+} else {
+};
+if ($App.aa6 == "b") {
+$scope.SetObjectStyle("Headline10006","color","blue");
+$scope.SetObjectStyle("Ellipse106","fill","blue");
+} else {
+};
+if ($App.aa7 == "r") {
+$scope.SetObjectStyle("Headline10007","color","red");
+$scope.SetObjectStyle("Ellipse107","fill","red");
+} else {
+};
+if ($App.aa7 == "g") {
+$scope.SetObjectStyle("Headline10007","color","green");
+$scope.SetObjectStyle("Ellipse107","fill","green");
+} else {
+};
+if ($App.aa7 == "b") {
+$scope.SetObjectStyle("Headline10007","color","blue");
+$scope.SetObjectStyle("Ellipse107","fill","blue");
+} else {
+};
+if ($App.aa8 == "r") {
+$scope.SetObjectStyle("Headline10008","color","red");
+$scope.SetObjectStyle("Ellipse108","fill","red");
+} else {
+};
+if ($App.aa8 == "g") {
+$scope.SetObjectStyle("Headline10008","color","green");
+$scope.SetObjectStyle("Ellipse108","fill","green");
+} else {
+};
+if ($App.aa8 == "b") {
+$scope.SetObjectStyle("Headline10008","color","blue");
+$scope.SetObjectStyle("Ellipse108","fill","blue");
+} else {
+};
+if ($App.aa9 == "r") {
+$scope.SetObjectStyle("Headline10009","color","red");
+$scope.SetObjectStyle("Ellipse109","fill","red");
+} else {
+};
+if ($App.aa9 == "g") {
+$scope.SetObjectStyle("Headline10009","color","green");
+$scope.SetObjectStyle("Ellipse109","fill","green");
+} else {
+};
+if ($App.aa9 == "b") {
+$scope.SetObjectStyle("Headline10009","color","blue");
+$scope.SetObjectStyle("Ellipse109","fill","blue");
+} else {
+};
+if ($App.aa10 == "r") {
+$scope.SetObjectStyle("Headline10010","color","red");
+$scope.SetObjectStyle("Ellipse110","fill","red");
+} else {
+};
+if ($App.aa10 == "g") {
+$scope.SetObjectStyle("Headline10010","color","green");
+$scope.SetObjectStyle("Ellipse110","fill","green");
+} else {
+};
+if ($App.aa10 == "b") {
+$scope.SetObjectStyle("Headline10010","color","blue");
+$scope.SetObjectStyle("Ellipse110","fill","blue");
+} else {
+};
+if ($App.aa11 == "r") {
+$scope.SetObjectStyle("Headline10011","color","red");
+$scope.SetObjectStyle("Ellipse111","fill","red");
+} else {
+};
+if ($App.aa11 == "g") {
+$scope.SetObjectStyle("Headline10011","color","green");
+$scope.SetObjectStyle("Ellipse111","fill","green");
+} else {
+};
+if ($App.aa11 == "b") {
+$scope.SetObjectStyle("Headline10011","color","blue");
+$scope.SetObjectStyle("Ellipse111","fill","blue");
+} else {
+};
+if ($App.aa12 == "r") {
+$scope.SetObjectStyle("Headline10012","color","red");
+$scope.SetObjectStyle("Ellipse112","fill","red");
+} else {
+};
+if ($App.aa12 == "g") {
+$scope.SetObjectStyle("Headline10012","color","green");
+$scope.SetObjectStyle("Ellipse112","fill","green");
+} else {
+};
+if ($App.aa12 == "b") {
+$scope.SetObjectStyle("Headline10012","color","blue");
+$scope.SetObjectStyle("Ellipse112","fill","blue");
+} else {
+};
+if ($App.aa13 == "r") {
+$scope.SetObjectStyle("Headline10013","color","red");
+$scope.SetObjectStyle("Ellipse113","fill","red");
+} else {
+};
+if ($App.aa13 == "g") {
+$scope.SetObjectStyle("Headline10013","color","green");
+$scope.SetObjectStyle("Ellipse113","fill","green");
+} else {
+};
+if ($App.aa13 == "b") {
+$scope.SetObjectStyle("Headline10013","color","blue");
+$scope.SetObjectStyle("Ellipse113","fill","blue");
+} else {
+};
+if ($App.aa14 == "r") {
+$scope.SetObjectStyle("Headline10014","color","red");
+$scope.SetObjectStyle("Ellipse114","fill","red");
+} else {
+};
+if ($App.aa14 == "g") {
+$scope.SetObjectStyle("Headline10014","color","green");
+$scope.SetObjectStyle("Ellipse114","fill","green");
+} else {
+};
+if ($App.aa14 == "b") {
+$scope.SetObjectStyle("Headline10014","color","blue");
+$scope.SetObjectStyle("Ellipse114","fill","blue");
+} else {
+};
+if ($App.aa15 == "r") {
+$scope.SetObjectStyle("Headline10015","color","red");
+$scope.SetObjectStyle("Ellipse115","fill","red");
+} else {
+};
+if ($App.aa15 == "g") {
+$scope.SetObjectStyle("Headline10015","color","green");
+$scope.SetObjectStyle("Ellipse115","fill","green");
+} else {
+};
+if ($App.aa15 == "b") {
+$scope.SetObjectStyle("Headline10015","color","blue");
+$scope.SetObjectStyle("Ellipse115","fill","blue");
+} else {
+};
+if ($App.aa16 == "r") {
+$scope.SetObjectStyle("Headline10016","color","red");
+$scope.SetObjectStyle("Ellipse116","fill","red");
+} else {
+};
+if ($App.aa16 == "g") {
+$scope.SetObjectStyle("Headline10016","color","green");
+$scope.SetObjectStyle("Ellipse116","fill","green");
+} else {
+};
+if ($App.aa16 == "b") {
+$scope.SetObjectStyle("Headline10016","color","blue");
+$scope.SetObjectStyle("Ellipse116","fill","blue");
+} else {
+};
+if ($App.aa17 == "r") {
+$scope.SetObjectStyle("Headline10017","color","red");
+$scope.SetObjectStyle("Ellipse117","fill","red");
+} else {
+};
+if ($App.aa17 == "g") {
+$scope.SetObjectStyle("Headline10017","color","green");
+$scope.SetObjectStyle("Ellipse117","fill","green");
+} else {
+};
+if ($App.aa17 == "b") {
+$scope.SetObjectStyle("Headline10017","color","blue");
+$scope.SetObjectStyle("Ellipse117","fill","blue");
+} else {
+};
+if ($App.aa18 == "r") {
+$scope.SetObjectStyle("Headline10018","color","red");
+$scope.SetObjectStyle("Ellipse118","fill","red");
+} else {
+};
+if ($App.aa18 == "g") {
+$scope.SetObjectStyle("Headline10018","color","green");
+$scope.SetObjectStyle("Ellipse118","fill","green");
+} else {
+};
+if ($App.aa18 == "b") {
+$scope.SetObjectStyle("Headline10018","color","blue");
+$scope.SetObjectStyle("Ellipse118","fill","blue");
+} else {
+};
+if ($App.aa19 == "r") {
+$scope.SetObjectStyle("Headline10019","color","red");
+$scope.SetObjectStyle("Ellipse119","fill","red");
+} else {
+};
+if ($App.aa19 == "g") {
+$scope.SetObjectStyle("Headline10019","color","green");
+$scope.SetObjectStyle("Ellipse119","fill","green");
+} else {
+};
+if ($App.aa19 == "b") {
+$scope.SetObjectStyle("Headline10019","color","blue");
+$scope.SetObjectStyle("Ellipse119","fill","blue");
+} else {
+};
+if ($App.aa20 == "r") {
+$scope.SetObjectStyle("Headline10020","color","red");
+$scope.SetObjectStyle("Ellipse120","fill","red");
+} else {
+};
+if ($App.aa20 == "g") {
+$scope.SetObjectStyle("Headline10020","color","green");
+$scope.SetObjectStyle("Ellipse120","fill","green");
+} else {
+};
+if ($App.aa20 == "b") {
+$scope.SetObjectStyle("Headline10020","color","blue");
+$scope.SetObjectStyle("Ellipse120","fill","blue");
+} else {
+};
+if ($App.aa21 == "r") {
+$scope.SetObjectStyle("Headline10021","color","red");
+$scope.SetObjectStyle("Ellipse121","fill","red");
+} else {
+};
+if ($App.aa21 == "g") {
+$scope.SetObjectStyle("Headline10021","color","green");
+$scope.SetObjectStyle("Ellipse121","fill","green");
+} else {
+};
+if ($App.aa21 == "b") {
+$scope.SetObjectStyle("Headline10021","color","blue");
+$scope.SetObjectStyle("Ellipse121","fill","blue");
+} else {
+};
+if ($App.aa22 == "r") {
+$scope.SetObjectStyle("Headline10022","color","red");
+$scope.SetObjectStyle("Ellipse122","fill","red");
+} else {
+};
+if ($App.aa22 == "g") {
+$scope.SetObjectStyle("Headline10022","color","green");
+$scope.SetObjectStyle("Ellipse122","fill","green");
+} else {
+};
+if ($App.aa22 == "b") {
+$scope.SetObjectStyle("Headline10022","color","blue");
+$scope.SetObjectStyle("Ellipse122","fill","blue");
+} else {
+};
+if ($App.aa23 == "r") {
+$scope.SetObjectStyle("Headline10023","color","red");
+$scope.SetObjectStyle("Ellipse123","fill","red");
+} else {
+};
+if ($App.aa23 == "g") {
+$scope.SetObjectStyle("Headline10023","color","green");
+$scope.SetObjectStyle("Ellipse123","fill","green");
+} else {
+};
+if ($App.aa23 == "b") {
+$scope.SetObjectStyle("Headline10023","color","blue");
+$scope.SetObjectStyle("Ellipse123","fill","blue");
+} else {
+};
+if ($App.aa24 == "r") {
+$scope.SetObjectStyle("Headline10024","color","red");
+$scope.SetObjectStyle("Ellipse124","fill","red");
+} else {
+};
+if ($App.aa24 == "g") {
+$scope.SetObjectStyle("Headline10024","color","green");
+$scope.SetObjectStyle("Ellipse124","fill","green");
+} else {
+};
+if ($App.aa24 == "b") {
+$scope.SetObjectStyle("Headline10024","color","blue");
+$scope.SetObjectStyle("Ellipse124","fill","blue");
+} else {
+};
+if ($App.aa25 == "r") {
+$scope.SetObjectStyle("Headline10025","color","red");
+$scope.SetObjectStyle("Ellipse125","fill","red");
+} else {
+};
+if ($App.aa25 == "g") {
+$scope.SetObjectStyle("Headline10025","color","green");
+$scope.SetObjectStyle("Ellipse125","fill","green");
+} else {
+};
+if ($App.aa25 == "b") {
+$scope.SetObjectStyle("Headline10025","color","blue");
+$scope.SetObjectStyle("Ellipse125","fill","blue");
+} else {
+};
+if ($App.aa26 == "r") {
+$scope.SetObjectStyle("Headline10026","color","red");
+$scope.SetObjectStyle("Ellipse126","fill","red");
+} else {
+};
+if ($App.aa26 == "g") {
+$scope.SetObjectStyle("Headline10026","color","green");
+$scope.SetObjectStyle("Ellipse126","fill","green");
+} else {
+};
+if ($App.aa26 == "b") {
+$scope.SetObjectStyle("Headline10026","color","blue");
+$scope.SetObjectStyle("Ellipse126","fill","blue");
+} else {
+};
+if ($App.aa27 == "r") {
+$scope.SetObjectStyle("Headline10027","color","red");
+$scope.SetObjectStyle("Ellipse127","fill","red");
+} else {
+};
+if ($App.aa27 == "g") {
+$scope.SetObjectStyle("Headline10027","color","green");
+$scope.SetObjectStyle("Ellipse127","fill","green");
+} else {
+};
+if ($App.aa27 == "b") {
+$scope.SetObjectStyle("Headline10027","color","blue");
+$scope.SetObjectStyle("Ellipse127","fill","blue");
+} else {
+};
+if ($App.aa28 == "r") {
+$scope.SetObjectStyle("Headline10028","color","red");
+$scope.SetObjectStyle("Ellipse128","fill","red");
+} else {
+};
+if ($App.aa28 == "g") {
+$scope.SetObjectStyle("Headline10028","color","green");
+$scope.SetObjectStyle("Ellipse128","fill","green");
+} else {
+};
+if ($App.aa28 == "b") {
+$scope.SetObjectStyle("Headline10028","color","blue");
+$scope.SetObjectStyle("Ellipse128","fill","blue");
+} else {
+};
+if ($App.aa29 == "r") {
+$scope.SetObjectStyle("Headline10029","color","red");
+$scope.SetObjectStyle("Ellipse129","fill","red");
+} else {
+};
+if ($App.aa29 == "g") {
+$scope.SetObjectStyle("Headline10029","color","green");
+$scope.SetObjectStyle("Ellipse129","fill","green");
+} else {
+};
+if ($App.aa29 == "b") {
+$scope.SetObjectStyle("Headline10029","color","blue");
+$scope.SetObjectStyle("Ellipse129","fill","blue");
+} else {
+};
+if ($App.aa30 == "r") {
+$scope.SetObjectStyle("Headline10030","color","red");
+$scope.SetObjectStyle("Ellipse130","fill","red");
+} else {
+};
+if ($App.aa30 == "g") {
+$scope.SetObjectStyle("Headline10030","color","green");
+$scope.SetObjectStyle("Ellipse130","fill","green");
+} else {
+};
+if ($App.aa30 == "b") {
+$scope.SetObjectStyle("Headline10030","color","blue");
+$scope.SetObjectStyle("Ellipse130","fill","blue");
+} else {
+};
+if ($App.aa31 == "r") {
+$scope.SetObjectStyle("Headline10031","color","red");
+$scope.SetObjectStyle("Ellipse131","fill","red");
+} else {
+};
+if ($App.aa31 == "g") {
+$scope.SetObjectStyle("Headline10031","color","green");
+$scope.SetObjectStyle("Ellipse131","fill","green");
+} else {
+};
+if ($App.aa31 == "b") {
+$scope.SetObjectStyle("Headline10031","color","blue");
+$scope.SetObjectStyle("Ellipse131","fill","blue");
+} else {
+};
+if ($App.aa32 == "r") {
+$scope.SetObjectStyle("Headline10032","color","red");
+$scope.SetObjectStyle("Ellipse132","fill","red");
+} else {
+};
+if ($App.aa32 == "g") {
+$scope.SetObjectStyle("Headline10032","color","green");
+$scope.SetObjectStyle("Ellipse132","fill","green");
+} else {
+};
+if ($App.aa32 == "b") {
+$scope.SetObjectStyle("Headline10032","color","blue");
+$scope.SetObjectStyle("Ellipse132","fill","blue");
+} else {
+};
+$App.speed01 = localStorage.getItem("speed01");
+$App.speed02 = localStorage.getItem("speed02");
+$App.speed03 = localStorage.getItem("speed03");
+$App.speed04 = localStorage.getItem("speed04");
+$App.speed05 = localStorage.getItem("speed05");
+$App.speed06 = localStorage.getItem("speed06");
+$App.speed07 = localStorage.getItem("speed07");
+$App.speed08 = localStorage.getItem("speed08");
+$App.speed09 = localStorage.getItem("speed09");
+$App.speed10 = localStorage.getItem("speed10");
+$App.speed11 = localStorage.getItem("speed11");
+$App.speed12 = localStorage.getItem("speed12");
+$App.speed13 = localStorage.getItem("speed13");
+$App.speed14 = localStorage.getItem("speed14");
+$App.speed15 = localStorage.getItem("speed15");
+$App.speed16 = localStorage.getItem("speed16");
+$App.speed17 = localStorage.getItem("speed17");
+$App.speed18 = localStorage.getItem("speed18");
+$App.speed19 = localStorage.getItem("speed19");
+$App.speed20 = localStorage.getItem("speed20");
+$App.speed21 = localStorage.getItem("speed21");
+$App.speed22 = localStorage.getItem("speed22");
+$App.speed23 = localStorage.getItem("speed23");
+$App.speed24 = localStorage.getItem("speed24");
+$App.speed25 = localStorage.getItem("speed25");
+$App.speed26 = localStorage.getItem("speed26");
+$App.speed27 = localStorage.getItem("speed27");
+$App.speed28 = localStorage.getItem("speed28");
+$App.speed29 = localStorage.getItem("speed29");
+$App.speed30 = localStorage.getItem("speed30");
+$App.speed31 = localStorage.getItem("speed31");
+$App.speed32 = localStorage.getItem("speed32");
+$App.speed01a = localStorage.getItem("speed01a");
+$App.speed02a = localStorage.getItem("speed02a");
+$App.speed03a = localStorage.getItem("speed03a");
+$App.speed04a = localStorage.getItem("speed04a");
+$App.speed05a = localStorage.getItem("speed05a");
+$App.speed06a = localStorage.getItem("speed06a");
+$App.speed07a = localStorage.getItem("speed07a");
+$App.speed08a = localStorage.getItem("speed08a");
+$App.speed09a = localStorage.getItem("speed09a");
+$App.speed10a = localStorage.getItem("speed10a");
+$App.speed11a = localStorage.getItem("speed11a");
+$App.speed12a = localStorage.getItem("speed12a");
+$App.speed13a = localStorage.getItem("speed13a");
+$App.speed14a = localStorage.getItem("speed14a");
+$App.speed15a = localStorage.getItem("speed15a");
+$App.speed16a = localStorage.getItem("speed16a");
+$App.speed17a = localStorage.getItem("speed17a");
+$App.speed18a = localStorage.getItem("speed18a");
+$App.speed19a = localStorage.getItem("speed19a");
+$App.speed20a = localStorage.getItem("speed20a");
+$App.speed21a = localStorage.getItem("speed21a");
+$App.speed22a = localStorage.getItem("speed22a");
+$App.speed23a = localStorage.getItem("speed23a");
+$App.speed24a = localStorage.getItem("speed24a");
+$App.speed25a = localStorage.getItem("speed25a");
+$App.speed26a = localStorage.getItem("speed26a");
+$App.speed27a = localStorage.getItem("speed27a");
+$App.speed28a = localStorage.getItem("speed28a");
+$App.speed29a = localStorage.getItem("speed29a");
+$App.speed30a = localStorage.getItem("speed30a");
+$App.speed31a = localStorage.getItem("speed31a");
+$App.speed32a = localStorage.getItem("speed32a");
+$App.speed01b = localStorage.getItem("speed01b");
+$App.speed02b = localStorage.getItem("speed02b");
+$App.speed03b = localStorage.getItem("speed03b");
+$App.speed04b = localStorage.getItem("speed04b");
+$App.speed05b = localStorage.getItem("speed05b");
+$App.speed06b = localStorage.getItem("speed06b");
+$App.speed07b = localStorage.getItem("speed07b");
+$App.speed08b = localStorage.getItem("speed08b");
+$App.speed09b = localStorage.getItem("speed09b");
+$App.speed10b = localStorage.getItem("speed10b");
+$App.speed11b = localStorage.getItem("speed11b");
+$App.speed12b = localStorage.getItem("speed12b");
+$App.speed13b = localStorage.getItem("speed13b");
+$App.speed14b = localStorage.getItem("speed14b");
+$App.speed15b = localStorage.getItem("speed15b");
+$App.speed16b = localStorage.getItem("speed16b");
+$App.speed17b = localStorage.getItem("speed17b");
+$App.speed18b = localStorage.getItem("speed18b");
+$App.speed19b = localStorage.getItem("speed19b");
+$App.speed20b = localStorage.getItem("speed20b");
+$App.speed21b = localStorage.getItem("speed21b");
+$App.speed22b = localStorage.getItem("speed22b");
+$App.speed23b = localStorage.getItem("speed23b");
+$App.speed24b = localStorage.getItem("speed24b");
+$App.speed25b = localStorage.getItem("speed25b");
+$App.speed26b = localStorage.getItem("speed26b");
+$App.speed27b = localStorage.getItem("speed27b");
+$App.speed28b = localStorage.getItem("speed28b");
+$App.speed29b = localStorage.getItem("speed29b");
+$App.speed30b = localStorage.getItem("speed30b");
+$App.speed31b = localStorage.getItem("speed31b");
+$App.speed32b = localStorage.getItem("speed32b");
+$App.speed01c = localStorage.getItem("speed01c");
+$App.speed02c = localStorage.getItem("speed02c");
+$App.speed03c = localStorage.getItem("speed03c");
+$App.speed04c = localStorage.getItem("speed04c");
+$App.speed05c = localStorage.getItem("speed05c");
+$App.speed06c = localStorage.getItem("speed06c");
+$App.speed07c = localStorage.getItem("speed07c");
+$App.speed08c = localStorage.getItem("speed08c");
+$App.speed09c = localStorage.getItem("speed09c");
+$App.speed10c = localStorage.getItem("speed10c");
+$App.speed11c = localStorage.getItem("speed11c");
+$App.speed12c = localStorage.getItem("speed12c");
+$App.speed13c = localStorage.getItem("speed13c");
+$App.speed14c = localStorage.getItem("speed14c");
+$App.speed15c = localStorage.getItem("speed15c");
+$App.speed16c = localStorage.getItem("speed16c");
+$App.speed17c = localStorage.getItem("speed17c");
+$App.speed18c = localStorage.getItem("speed18c");
+$App.speed19c = localStorage.getItem("speed19c");
+$App.speed20c = localStorage.getItem("speed20c");
+$App.speed21c = localStorage.getItem("speed21c");
+$App.speed22c = localStorage.getItem("speed22c");
+$App.speed23c = localStorage.getItem("speed23c");
+$App.speed24c = localStorage.getItem("speed24c");
+$App.speed25c = localStorage.getItem("speed25c");
+$App.speed26c = localStorage.getItem("speed26c");
+$App.speed27c = localStorage.getItem("speed27c");
+$App.speed28c = localStorage.getItem("speed28c");
+$App.speed29c = localStorage.getItem("speed29c");
+$App.speed30c = localStorage.getItem("speed30c");
+$App.speed31c = localStorage.getItem("speed31c");
+$App.speed32c = localStorage.getItem("speed32c");
+$App.speed01d = localStorage.getItem("speed01d");
+$App.speed02d = localStorage.getItem("speed02d");
+$App.speed03d = localStorage.getItem("speed03d");
+$App.speed04d = localStorage.getItem("speed04d");
+$App.speed05d = localStorage.getItem("speed05d");
+$App.speed06d = localStorage.getItem("speed06d");
+$App.speed07d = localStorage.getItem("speed07d");
+$App.speed08d = localStorage.getItem("speed08d");
+$App.speed09d = localStorage.getItem("speed09d");
+$App.speed10d = localStorage.getItem("speed10d");
+$App.speed11d = localStorage.getItem("speed11d");
+$App.speed12d = localStorage.getItem("speed12d");
+$App.speed13d = localStorage.getItem("speed13d");
+$App.speed14d = localStorage.getItem("speed14d");
+$App.speed15d = localStorage.getItem("speed15d");
+$App.speed16d = localStorage.getItem("speed16d");
+$App.speed17d = localStorage.getItem("speed17d");
+$App.speed18d = localStorage.getItem("speed18d");
+$App.speed19d = localStorage.getItem("speed19d");
+$App.speed20d = localStorage.getItem("speed20d");
+$App.speed21d = localStorage.getItem("speed21d");
+$App.speed22d = localStorage.getItem("speed22d");
+$App.speed23d = localStorage.getItem("speed23d");
+$App.speed24d = localStorage.getItem("speed24d");
+$App.speed25d = localStorage.getItem("speed25d");
+$App.speed26d = localStorage.getItem("speed26d");
+$App.speed27d = localStorage.getItem("speed27d");
+$App.speed28d = localStorage.getItem("speed28d");
+$App.speed29d = localStorage.getItem("speed29d");
+$App.speed30d = localStorage.getItem("speed30d");
+$App.speed31d = localStorage.getItem("speed31d");
+$App.speed32d = localStorage.getItem("speed32d");
+$App.speed01e = localStorage.getItem("speed01e");
+$App.speed02e = localStorage.getItem("speed02e");
+$App.speed03e = localStorage.getItem("speed03e");
+$App.speed04e = localStorage.getItem("speed04e");
+$App.speed05e = localStorage.getItem("speed05e");
+$App.speed06e = localStorage.getItem("speed06e");
+$App.speed07e = localStorage.getItem("speed07e");
+$App.speed08e = localStorage.getItem("speed08e");
+$App.speed09e = localStorage.getItem("speed09e");
+$App.speed10e = localStorage.getItem("speed10e");
+$App.speed11e = localStorage.getItem("speed11e");
+$App.speed12e = localStorage.getItem("speed12e");
+$App.speed13e = localStorage.getItem("speed13e");
+$App.speed14e = localStorage.getItem("speed14e");
+$App.speed15e = localStorage.getItem("speed15e");
+$App.speed16e = localStorage.getItem("speed16e");
+$App.speed17e = localStorage.getItem("speed17e");
+$App.speed18e = localStorage.getItem("speed18e");
+$App.speed19e = localStorage.getItem("speed19e");
+$App.speed20e = localStorage.getItem("speed20e");
+$App.speed21e = localStorage.getItem("speed21e");
+$App.speed22e = localStorage.getItem("speed22e");
+$App.speed23e = localStorage.getItem("speed23e");
+$App.speed24e = localStorage.getItem("speed24e");
+$App.speed25e = localStorage.getItem("speed25e");
+$App.speed26e = localStorage.getItem("speed26e");
+$App.speed27e = localStorage.getItem("speed27e");
+$App.speed28e = localStorage.getItem("speed28e");
+$App.speed29e = localStorage.getItem("speed29e");
+$App.speed30e = localStorage.getItem("speed30e");
+$App.speed31e = localStorage.getItem("speed31e");
+$App.speed32e = localStorage.getItem("speed32e");
+$App.a1a1 = localStorage.getItem("a1a1");
+$App.a1a2 = localStorage.getItem("a1a2");
+$App.a1a3 = localStorage.getItem("a1a3");
+$App.a1a4 = localStorage.getItem("a1a4");
+$App.a1a5 = localStorage.getItem("a1a5");
+$App.a2a1 = localStorage.getItem("a2a1");
+$App.a2a2 = localStorage.getItem("a2a2");
+$App.a2a3 = localStorage.getItem("a2a3");
+$App.a2a4 = localStorage.getItem("a2a4");
+$App.a2a5 = localStorage.getItem("a2a5");
+$App.a3a1 = localStorage.getItem("a3a1");
+$App.a3a2 = localStorage.getItem("a3a2");
+$App.a3a3 = localStorage.getItem("a3a3");
+$App.a3a4 = localStorage.getItem("a3a4");
+$App.a3a5 = localStorage.getItem("a3a5");
+$App.a4a1 = localStorage.getItem("a4a1");
+$App.a4a2 = localStorage.getItem("a4a2");
+$App.a4a3 = localStorage.getItem("a4a3");
+$App.a4a4 = localStorage.getItem("a4a4");
+$App.a4a5 = localStorage.getItem("a4a5");
+$App.a5a1 = localStorage.getItem("a5a1");
+$App.a5a2 = localStorage.getItem("a5a2");
+$App.a5a3 = localStorage.getItem("a5a3");
+$App.a5a4 = localStorage.getItem("a5a4");
+$App.a5a5 = localStorage.getItem("a5a5");
+$App.a6a1 = localStorage.getItem("a6a1");
+$App.a6a2 = localStorage.getItem("a6a2");
+$App.a6a3 = localStorage.getItem("a6a3");
+$App.a6a4 = localStorage.getItem("a6a4");
+$App.a6a5 = localStorage.getItem("a6a5");
+$App.b1a1 = localStorage.getItem("b1a1");
+$App.b1a2 = localStorage.getItem("b1a2");
+$App.b1a3 = localStorage.getItem("b1a3");
+$App.b1a4 = localStorage.getItem("b1a4");
+$App.b1a5 = localStorage.getItem("b1a5");
+$App.b2a1 = localStorage.getItem("b2a1");
+$App.b2a2 = localStorage.getItem("b2a2");
+$App.b2a3 = localStorage.getItem("b2a3");
+$App.b2a4 = localStorage.getItem("b2a4");
+$App.b2a5 = localStorage.getItem("b2a5");
+$App.b3a1 = localStorage.getItem("b3a1");
+$App.b3a2 = localStorage.getItem("b3a2");
+$App.b3a3 = localStorage.getItem("b3a3");
+$App.b3a4 = localStorage.getItem("b3a4");
+$App.b3a5 = localStorage.getItem("b3a5");
+$App.b4a1 = localStorage.getItem("b4a1");
+$App.b4a2 = localStorage.getItem("b4a2");
+$App.b4a3 = localStorage.getItem("b4a3");
+$App.b4a4 = localStorage.getItem("b4a4");
+$App.b4a5 = localStorage.getItem("b4a5");
+$App.b5a1 = localStorage.getItem("b5a1");
+$App.b5a2 = localStorage.getItem("b5a2");
+$App.b5a3 = localStorage.getItem("b5a3");
+$App.b5a4 = localStorage.getItem("b5a4");
+$App.b5a5 = localStorage.getItem("b5a5");
+$App.b6a1 = localStorage.getItem("b6a1");
+$App.b6a2 = localStorage.getItem("b6a2");
+$App.b6a3 = localStorage.getItem("b6a3");
+$App.b6a4 = localStorage.getItem("b6a4");
+$App.b6a5 = localStorage.getItem("b6a5");
+$App.c1a1 = localStorage.getItem("c1a1");
+$App.c1a2 = localStorage.getItem("c1a2");
+$App.c1a3 = localStorage.getItem("c1a3");
+$App.c1a4 = localStorage.getItem("c1a4");
+$App.c1a5 = localStorage.getItem("c1a5");
+$App.c2a1 = localStorage.getItem("c2a1");
+$App.c2a2 = localStorage.getItem("c2a2");
+$App.c2a3 = localStorage.getItem("c2a3");
+$App.c2a4 = localStorage.getItem("c2a4");
+$App.c2a5 = localStorage.getItem("c2a5");
+$App.c3a1 = localStorage.getItem("c3a1");
+$App.c3a2 = localStorage.getItem("c3a2");
+$App.c3a3 = localStorage.getItem("c3a3");
+$App.c3a4 = localStorage.getItem("c3a4");
+$App.c3a5 = localStorage.getItem("c3a5");
+$App.c4a1 = localStorage.getItem("c4a1");
+$App.c4a2 = localStorage.getItem("c4a2");
+$App.c4a3 = localStorage.getItem("c4a3");
+$App.c4a4 = localStorage.getItem("c4a4");
+$App.c4a5 = localStorage.getItem("c4a5");
+$App.c5a1 = localStorage.getItem("c5a1");
+$App.c5a2 = localStorage.getItem("c5a2");
+$App.c5a3 = localStorage.getItem("c5a3");
+$App.c5a4 = localStorage.getItem("c5a4");
+$App.c5a5 = localStorage.getItem("c5a5");
+$App.c6a1 = localStorage.getItem("c6a1");
+$App.c6a2 = localStorage.getItem("c6a2");
+$App.c6a3 = localStorage.getItem("c6a3");
+$App.c6a4 = localStorage.getItem("c6a4");
+$App.c6a5 = localStorage.getItem("c6a5");
+$App.d1a1 = localStorage.getItem("d1a1");
+$App.d1a2 = localStorage.getItem("d1a2");
+$App.d1a3 = localStorage.getItem("d1a3");
+$App.d1a4 = localStorage.getItem("d1a4");
+$App.d1a5 = localStorage.getItem("d1a5");
+$App.d2a1 = localStorage.getItem("d2a1");
+$App.d2a2 = localStorage.getItem("d2a2");
+$App.d2a3 = localStorage.getItem("d2a3");
+$App.d2a4 = localStorage.getItem("d2a4");
+$App.d2a5 = localStorage.getItem("d2a5");
+$App.d3a1 = localStorage.getItem("d3a1");
+$App.d3a2 = localStorage.getItem("d3a2");
+$App.d3a3 = localStorage.getItem("d3a3");
+$App.d3a4 = localStorage.getItem("d3a4");
+$App.d3a5 = localStorage.getItem("d3a5");
+$App.d4a1 = localStorage.getItem("d4a1");
+$App.d4a2 = localStorage.getItem("d4a2");
+$App.d4a3 = localStorage.getItem("d4a3");
+$App.d4a4 = localStorage.getItem("d4a4");
+$App.d4a5 = localStorage.getItem("d4a5");
+$App.d5a1 = localStorage.getItem("d5a1");
+$App.d5a2 = localStorage.getItem("d5a2");
+$App.d5a3 = localStorage.getItem("d5a3");
+$App.d5a4 = localStorage.getItem("d5a4");
+$App.d5a5 = localStorage.getItem("d5a5");
+$App.d6a1 = localStorage.getItem("d6a1");
+$App.d6a2 = localStorage.getItem("d6a2");
+$App.d6a3 = localStorage.getItem("d6a3");
+$App.d6a4 = localStorage.getItem("d6a4");
+$App.d6a5 = localStorage.getItem("d6a5");
+$App.e1a1 = localStorage.getItem("e1a1");
+$App.e1a2 = localStorage.getItem("e1a2");
+$App.e1a3 = localStorage.getItem("e1a3");
+$App.e1a4 = localStorage.getItem("e1a4");
+$App.e1a5 = localStorage.getItem("e1a5");
+$App.e2a1 = localStorage.getItem("e2a1");
+$App.e2a2 = localStorage.getItem("e2a2");
+$App.e2a3 = localStorage.getItem("e2a3");
+$App.e2a4 = localStorage.getItem("e2a4");
+$App.e2a5 = localStorage.getItem("e2a5");
+$App.e3a1 = localStorage.getItem("e3a1");
+$App.e3a2 = localStorage.getItem("e3a2");
+$App.e3a3 = localStorage.getItem("e3a3");
+$App.e3a4 = localStorage.getItem("e3a4");
+$App.e3a5 = localStorage.getItem("e3a5");
+$App.e4a1 = localStorage.getItem("e4a1");
+$App.e4a2 = localStorage.getItem("e4a2");
+$App.e4a3 = localStorage.getItem("e4a3");
+$App.e4a4 = localStorage.getItem("e4a4");
+$App.e4a5 = localStorage.getItem("e4a5");
+$App.e5a1 = localStorage.getItem("e5a1");
+$App.e5a2 = localStorage.getItem("e5a2");
+$App.e5a3 = localStorage.getItem("e5a3");
+$App.e5a4 = localStorage.getItem("e5a4");
+$App.e5a5 = localStorage.getItem("e5a5");
+$App.e6a1 = localStorage.getItem("e6a1");
+$App.e6a2 = localStorage.getItem("e6a2");
+$App.e6a3 = localStorage.getItem("e6a3");
+$App.e6a4 = localStorage.getItem("e6a4");
+$App.e6a5 = localStorage.getItem("e6a5");
+$App.f1a1 = localStorage.getItem("f1a1");
+$App.f1a2 = localStorage.getItem("f1a2");
+$App.f1a3 = localStorage.getItem("f1a3");
+$App.f1a4 = localStorage.getItem("f1a4");
+$App.f1a5 = localStorage.getItem("f1a5");
+$App.f2a1 = localStorage.getItem("f2a1");
+$App.f2a2 = localStorage.getItem("f2a2");
+$App.f2a3 = localStorage.getItem("f2a3");
+$App.f2a4 = localStorage.getItem("f2a4");
+$App.f2a5 = localStorage.getItem("f2a5");
+$App.f3a1 = localStorage.getItem("f3a1");
+$App.f3a2 = localStorage.getItem("f3a2");
+$App.f3a3 = localStorage.getItem("f3a3");
+$App.f3a4 = localStorage.getItem("f3a4");
+$App.f3a5 = localStorage.getItem("f3a5");
+$App.f4a1 = localStorage.getItem("f4a1");
+$App.f4a2 = localStorage.getItem("f4a2");
+$App.f4a3 = localStorage.getItem("f4a3");
+$App.f4a4 = localStorage.getItem("f4a4");
+$App.f4a5 = localStorage.getItem("f4a5");
+$App.g1a1 = localStorage.getItem("g1a1");
+$App.g1a2 = localStorage.getItem("g1a2");
+$App.g1a3 = localStorage.getItem("g1a3");
+$App.g1a4 = localStorage.getItem("g1a4");
+$App.g1a5 = localStorage.getItem("g1a5");
+$App.g2a1 = localStorage.getItem("g2a1");
+$App.g2a2 = localStorage.getItem("g2a2");
+$App.g2a3 = localStorage.getItem("g2a3");
+$App.g2a4 = localStorage.getItem("g2a4");
+$App.g2a5 = localStorage.getItem("g2a5");
+$App.g3a1 = localStorage.getItem("g3a1");
+$App.g3a2 = localStorage.getItem("g3a2");
+$App.g3a3 = localStorage.getItem("g3a3");
+$App.g3a4 = localStorage.getItem("g3a4");
+$App.g3a5 = localStorage.getItem("g3a5");
+$App.g4a1 = localStorage.getItem("g4a1");
+$App.g4a2 = localStorage.getItem("g4a2");
+$App.g4a3 = localStorage.getItem("g4a3");
+$App.g4a4 = localStorage.getItem("g4a4");
+$App.g4a5 = localStorage.getItem("g4a5");
+$App.h1a1 = localStorage.getItem("h1a1");
+$App.h1a2 = localStorage.getItem("h1a2");
+$App.h1a3 = localStorage.getItem("h1a3");
+$App.h1a4 = localStorage.getItem("h1a4");
+$App.h1a5 = localStorage.getItem("h1a5");
+$App.h2a1 = localStorage.getItem("h2a1");
+$App.h2a2 = localStorage.getItem("h2a2");
+$App.h2a3 = localStorage.getItem("h2a3");
+$App.h2a4 = localStorage.getItem("h2a4");
+$App.h2a5 = localStorage.getItem("h2a5");
+$App.h3a1 = localStorage.getItem("h3a1");
+$App.h3a2 = localStorage.getItem("h3a2");
+$App.h3a3 = localStorage.getItem("h3a3");
+$App.h3a4 = localStorage.getItem("h3a4");
+$App.h3a5 = localStorage.getItem("h3a5");
+$App.h4a1 = localStorage.getItem("h4a1");
+$App.h4a2 = localStorage.getItem("h4a2");
+$App.h4a3 = localStorage.getItem("h4a3");
+$App.h4a4 = localStorage.getItem("h4a4");
+$App.h4a5 = localStorage.getItem("h4a5");
+$App.i1a1 = localStorage.getItem("i1a1");
+$App.i1a2 = localStorage.getItem("i1a2");
+$App.i1a3 = localStorage.getItem("i1a3");
+$App.i1a4 = localStorage.getItem("i1a4");
+$App.i1a5 = localStorage.getItem("i1a5");
+$App.i2a1 = localStorage.getItem("i2a1");
+$App.i2a2 = localStorage.getItem("i2a2");
+$App.i2a3 = localStorage.getItem("i2a3");
+$App.i2a4 = localStorage.getItem("i2a4");
+$App.i2a5 = localStorage.getItem("i2a5");
+$App.i3a1 = localStorage.getItem("i3a1");
+$App.i3a2 = localStorage.getItem("i3a2");
+$App.i3a3 = localStorage.getItem("i3a3");
+$App.i3a4 = localStorage.getItem("i3a4");
+$App.i3a5 = localStorage.getItem("i3a5");
+$App.i4a1 = localStorage.getItem("i4a1");
+$App.i4a2 = localStorage.getItem("i4a2");
+$App.i4a3 = localStorage.getItem("i4a3");
+$App.i4a4 = localStorage.getItem("i4a4");
+$App.i4a5 = localStorage.getItem("i4a5");
+$App.j1a1 = localStorage.getItem("j1a1");
+$App.j1a2 = localStorage.getItem("j1a2");
+$App.j1a3 = localStorage.getItem("j1a3");
+$App.j1a4 = localStorage.getItem("j1a4");
+$App.j1a5 = localStorage.getItem("j1a5");
+$App.j2a1 = localStorage.getItem("j2a1");
+$App.j2a2 = localStorage.getItem("j2a2");
+$App.j2a3 = localStorage.getItem("j2a3");
+$App.j2a4 = localStorage.getItem("j2a4");
+$App.j2a5 = localStorage.getItem("j2a5");
+$App.j3a1 = localStorage.getItem("j3a1");
+$App.j3a2 = localStorage.getItem("j3a2");
+$App.j3a3 = localStorage.getItem("j3a3");
+$App.j3a4 = localStorage.getItem("j3a4");
+$App.j3a5 = localStorage.getItem("j3a5");
+$App.j4a1 = localStorage.getItem("j4a1");
+$App.j4a2 = localStorage.getItem("j4a2");
+$App.j4a3 = localStorage.getItem("j4a3");
+$App.j4a4 = localStorage.getItem("j4a4");
+$App.j4a5 = localStorage.getItem("j4a5");
+$App.k1a1 = localStorage.getItem("k1a1");
+$App.k1a2 = localStorage.getItem("k1a2");
+$App.k1a3 = localStorage.getItem("k1a3");
+$App.k1a4 = localStorage.getItem("k1a4");
+$App.k1a5 = localStorage.getItem("k1a5");
+$App.k2a1 = localStorage.getItem("k2a1");
+$App.k2a2 = localStorage.getItem("k2a2");
+$App.k2a3 = localStorage.getItem("k2a3");
+$App.k2a4 = localStorage.getItem("k2a4");
+$App.k2a5 = localStorage.getItem("k2a5");
+$App.k3a1 = localStorage.getItem("k3a1");
+$App.k3a2 = localStorage.getItem("k3a2");
+$App.k3a3 = localStorage.getItem("k3a3");
+$App.k3a4 = localStorage.getItem("k3a4");
+$App.k3a5 = localStorage.getItem("k3a5");
+$App.k4a1 = localStorage.getItem("k4a1");
+$App.k4a2 = localStorage.getItem("k4a2");
+$App.k4a3 = localStorage.getItem("k4a3");
+$App.k4a4 = localStorage.getItem("k4a4");
+$App.k4a5 = localStorage.getItem("k4a5");
+$App.l1a1 = localStorage.getItem("l1a1");
+$App.l1a2 = localStorage.getItem("l1a2");
+$App.l1a3 = localStorage.getItem("l1a3");
+$App.l1a4 = localStorage.getItem("l1a4");
+$App.l1a5 = localStorage.getItem("l1a5");
+$App.l2a1 = localStorage.getItem("l2a1");
+$App.l2a2 = localStorage.getItem("l2a2");
+$App.l2a3 = localStorage.getItem("l2a3");
+$App.l2a4 = localStorage.getItem("l2a4");
+$App.l2a5 = localStorage.getItem("l2a5");
+$App.l3a1 = localStorage.getItem("l3a1");
+$App.l3a2 = localStorage.getItem("l3a2");
+$App.l3a3 = localStorage.getItem("l3a3");
+$App.l3a4 = localStorage.getItem("l3a4");
+$App.l3a5 = localStorage.getItem("l3a5");
+$App.l4a1 = localStorage.getItem("l4a1");
+$App.l4a2 = localStorage.getItem("l4a2");
+$App.l4a3 = localStorage.getItem("l4a3");
+$App.l4a4 = localStorage.getItem("l4a4");
+$App.l4a5 = localStorage.getItem("l4a5");
+$App.m1a1 = localStorage.getItem("m1a1");
+$App.m1a2 = localStorage.getItem("m1a2");
+$App.m1a3 = localStorage.getItem("m1a3");
+$App.m1a4 = localStorage.getItem("m1a4");
+$App.m1a5 = localStorage.getItem("m1a5");
+$App.m2a1 = localStorage.getItem("m2a1");
+$App.m2a2 = localStorage.getItem("m2a2");
+$App.m2a3 = localStorage.getItem("m2a3");
+$App.m2a4 = localStorage.getItem("m2a4");
+$App.m2a5 = localStorage.getItem("m2a5");
+$App.m3a1 = localStorage.getItem("m3a1");
+$App.m3a2 = localStorage.getItem("m3a2");
+$App.m3a3 = localStorage.getItem("m3a3");
+$App.m3a4 = localStorage.getItem("m3a4");
+$App.m3a5 = localStorage.getItem("m3a5");
+$App.m4a1 = localStorage.getItem("m4a1");
+$App.m4a2 = localStorage.getItem("m4a2");
+$App.m4a3 = localStorage.getItem("m4a3");
+$App.m4a4 = localStorage.getItem("m4a4");
+$App.m4a5 = localStorage.getItem("m4a5");
+$App.n1a1 = localStorage.getItem("n1a1");
+$App.n1a2 = localStorage.getItem("n1a2");
+$App.n1a3 = localStorage.getItem("n1a3");
+$App.n1a4 = localStorage.getItem("n1a4");
+$App.n1a5 = localStorage.getItem("n1a5");
+$App.n2a1 = localStorage.getItem("n2a1");
+$App.n2a2 = localStorage.getItem("n2a2");
+$App.n2a3 = localStorage.getItem("n2a3");
+$App.n2a4 = localStorage.getItem("n2a4");
+$App.n2a5 = localStorage.getItem("n2a5");
+$App.n3a1 = localStorage.getItem("n3a1");
+$App.n3a2 = localStorage.getItem("n3a2");
+$App.n3a3 = localStorage.getItem("n3a3");
+$App.n3a4 = localStorage.getItem("n3a4");
+$App.n3a5 = localStorage.getItem("n3a5");
+$App.n4a1 = localStorage.getItem("n4a1");
+$App.n4a2 = localStorage.getItem("n4a2");
+$App.n4a3 = localStorage.getItem("n4a3");
+$App.n4a4 = localStorage.getItem("n4a4");
+$App.n4a5 = localStorage.getItem("n4a5");
+$App.o1a1 = localStorage.getItem("o1a1");
+$App.o1a2 = localStorage.getItem("o1a2");
+$App.o1a3 = localStorage.getItem("o1a3");
+$App.o1a4 = localStorage.getItem("o1a4");
+$App.o1a5 = localStorage.getItem("o1a5");
+$App.o2a1 = localStorage.getItem("o2a1");
+$App.o2a2 = localStorage.getItem("o2a2");
+$App.o2a3 = localStorage.getItem("o2a3");
+$App.o2a4 = localStorage.getItem("o2a4");
+$App.o2a5 = localStorage.getItem("o2a5");
+$App.o3a1 = localStorage.getItem("o3a1");
+$App.o3a2 = localStorage.getItem("o3a2");
+$App.o3a3 = localStorage.getItem("o3a3");
+$App.o3a4 = localStorage.getItem("o3a4");
+$App.o3a5 = localStorage.getItem("o3a5");
+$App.o4a1 = localStorage.getItem("o4a1");
+$App.o4a2 = localStorage.getItem("o4a2");
+$App.o4a3 = localStorage.getItem("o4a3");
+$App.o4a4 = localStorage.getItem("o4a4");
+$App.o4a5 = localStorage.getItem("o4a5");
+$App.p1a1 = localStorage.getItem("p1a1");
+$App.p1a2 = localStorage.getItem("p1a2");
+$App.p1a3 = localStorage.getItem("p1a3");
+$App.p1a4 = localStorage.getItem("p1a4");
+$App.p1a5 = localStorage.getItem("p1a5");
+$App.p2a1 = localStorage.getItem("p2a1");
+$App.p2a2 = localStorage.getItem("p2a2");
+$App.p2a3 = localStorage.getItem("p2a3");
+$App.p2a4 = localStorage.getItem("p2a4");
+$App.p2a5 = localStorage.getItem("p2a5");
+$App.p3a1 = localStorage.getItem("p3a1");
+$App.p3a2 = localStorage.getItem("p3a2");
+$App.p3a3 = localStorage.getItem("p3a3");
+$App.p3a4 = localStorage.getItem("p3a4");
+$App.p3a5 = localStorage.getItem("p3a5");
+$App.p4a1 = localStorage.getItem("p4a1");
+$App.p4a2 = localStorage.getItem("p4a2");
+$App.p4a3 = localStorage.getItem("p4a3");
+$App.p4a4 = localStorage.getItem("p4a4");
+$App.p4a5 = localStorage.getItem("p4a5");
+$App.q1a1 = localStorage.getItem("q1a1");
+$App.q1a2 = localStorage.getItem("q1a2");
+$App.q1a3 = localStorage.getItem("q1a3");
+$App.q1a4 = localStorage.getItem("q1a4");
+$App.q1a5 = localStorage.getItem("q1a5");
+$App.q2a1 = localStorage.getItem("q2a1");
+$App.q2a2 = localStorage.getItem("q2a2");
+$App.q2a3 = localStorage.getItem("q2a3");
+$App.q2a4 = localStorage.getItem("q2a4");
+$App.q2a5 = localStorage.getItem("q2a5");
+$App.q3a1 = localStorage.getItem("q3a1");
+$App.q3a2 = localStorage.getItem("q3a2");
+$App.q3a3 = localStorage.getItem("q3a3");
+$App.q3a4 = localStorage.getItem("q3a4");
+$App.q3a5 = localStorage.getItem("q3a5");
+$App.q4a1 = localStorage.getItem("q4a1");
+$App.q4a2 = localStorage.getItem("q4a2");
+$App.q4a3 = localStorage.getItem("q4a3");
+$App.q4a4 = localStorage.getItem("q4a4");
+$App.q4a5 = localStorage.getItem("q4a5");
+$App.r1a1 = localStorage.getItem("r1a1");
+$App.r1a2 = localStorage.getItem("r1a2");
+$App.r1a3 = localStorage.getItem("r1a3");
+$App.r1a4 = localStorage.getItem("r1a4");
+$App.r1a5 = localStorage.getItem("r1a5");
+$App.r2a1 = localStorage.getItem("r2a1");
+$App.r2a2 = localStorage.getItem("r2a2");
+$App.r2a3 = localStorage.getItem("r2a3");
+$App.r2a4 = localStorage.getItem("r2a4");
+$App.r2a5 = localStorage.getItem("r2a5");
+$App.r3a1 = localStorage.getItem("r3a1");
+$App.r3a2 = localStorage.getItem("r3a2");
+$App.r3a3 = localStorage.getItem("r3a3");
+$App.r3a4 = localStorage.getItem("r3a4");
+$App.r3a5 = localStorage.getItem("r3a5");
+$App.r4a1 = localStorage.getItem("r4a1");
+$App.r4a2 = localStorage.getItem("r4a2");
+$App.r4a3 = localStorage.getItem("r4a3");
+$App.r4a4 = localStorage.getItem("r4a4");
+$App.r4a5 = localStorage.getItem("r4a5");
+$App.s1a1 = localStorage.getItem("s1a1");
+$App.s1a2 = localStorage.getItem("s1a2");
+$App.s1a3 = localStorage.getItem("s1a3");
+$App.s1a4 = localStorage.getItem("s1a4");
+$App.s1a5 = localStorage.getItem("s1a5");
+$App.s2a1 = localStorage.getItem("s2a1");
+$App.s2a2 = localStorage.getItem("s2a2");
+$App.s2a3 = localStorage.getItem("s2a3");
+$App.s2a4 = localStorage.getItem("s2a4");
+$App.s2a5 = localStorage.getItem("s2a5");
+$App.s3a1 = localStorage.getItem("s3a1");
+$App.s3a2 = localStorage.getItem("s3a2");
+$App.s3a3 = localStorage.getItem("s3a3");
+$App.s3a4 = localStorage.getItem("s3a4");
+$App.s3a5 = localStorage.getItem("s3a5");
+$App.s4a1 = localStorage.getItem("s4a1");
+$App.s4a2 = localStorage.getItem("s4a2");
+$App.s4a3 = localStorage.getItem("s4a3");
+$App.s4a4 = localStorage.getItem("s4a4");
+$App.s4a5 = localStorage.getItem("s4a5");
+$App.t1a1 = localStorage.getItem("t1a1");
+$App.t1a2 = localStorage.getItem("t1a2");
+$App.t1a3 = localStorage.getItem("t1a3");
+$App.t1a4 = localStorage.getItem("t1a4");
+$App.t1a5 = localStorage.getItem("t1a5");
+$App.t2a1 = localStorage.getItem("t2a1");
+$App.t2a2 = localStorage.getItem("t2a2");
+$App.t2a3 = localStorage.getItem("t2a3");
+$App.t2a4 = localStorage.getItem("t2a4");
+$App.t2a5 = localStorage.getItem("t2a5");
+$App.t3a1 = localStorage.getItem("t3a1");
+$App.t3a2 = localStorage.getItem("t3a2");
+$App.t3a3 = localStorage.getItem("t3a3");
+$App.t3a4 = localStorage.getItem("t3a4");
+$App.t3a5 = localStorage.getItem("t3a5");
+$App.t4a1 = localStorage.getItem("t4a1");
+$App.t4a2 = localStorage.getItem("t4a2");
+$App.t4a3 = localStorage.getItem("t4a3");
+$App.t4a4 = localStorage.getItem("t4a4");
+$App.t4a5 = localStorage.getItem("t4a5");
+$App.u1a1 = localStorage.getItem("u1a1");
+$App.u1a2 = localStorage.getItem("u1a2");
+$App.u1a3 = localStorage.getItem("u1a3");
+$App.u1a4 = localStorage.getItem("u1a4");
+$App.u1a5 = localStorage.getItem("u1a5");
+$App.u2a1 = localStorage.getItem("u2a1");
+$App.u2a2 = localStorage.getItem("u2a2");
+$App.u2a3 = localStorage.getItem("u2a3");
+$App.u2a4 = localStorage.getItem("u2a4");
+$App.u2a5 = localStorage.getItem("u2a5");
+$App.u3a1 = localStorage.getItem("u3a1");
+$App.u3a2 = localStorage.getItem("u3a2");
+$App.u3a3 = localStorage.getItem("u3a3");
+$App.u3a4 = localStorage.getItem("u3a4");
+$App.u3a5 = localStorage.getItem("u3a5");
+$App.u4a1 = localStorage.getItem("u4a1");
+$App.u4a2 = localStorage.getItem("u4a2");
+$App.u4a3 = localStorage.getItem("u4a3");
+$App.u4a4 = localStorage.getItem("u4a4");
+$App.u4a5 = localStorage.getItem("u4a5");
+$App.v1a1 = localStorage.getItem("v1a1");
+$App.v1a2 = localStorage.getItem("v1a2");
+$App.v1a3 = localStorage.getItem("v1a3");
+$App.v1a4 = localStorage.getItem("v1a4");
+$App.v1a5 = localStorage.getItem("v1a5");
+$App.v2a1 = localStorage.getItem("v2a1");
+$App.v2a2 = localStorage.getItem("v2a2");
+$App.v2a3 = localStorage.getItem("v2a3");
+$App.v2a4 = localStorage.getItem("v2a4");
+$App.v2a5 = localStorage.getItem("v2a5");
+$App.v3a1 = localStorage.getItem("v3a1");
+$App.v3a2 = localStorage.getItem("v3a2");
+$App.v3a3 = localStorage.getItem("v3a3");
+$App.v3a4 = localStorage.getItem("v3a4");
+$App.v3a5 = localStorage.getItem("v3a5");
+$App.v4a1 = localStorage.getItem("v4a1");
+$App.v4a2 = localStorage.getItem("v4a2");
+$App.v4a3 = localStorage.getItem("v4a3");
+$App.v4a4 = localStorage.getItem("v4a4");
+$App.v4a5 = localStorage.getItem("v4a5");
+$App.w1a1 = localStorage.getItem("w1a1");
+$App.w1a2 = localStorage.getItem("w1a2");
+$App.w1a3 = localStorage.getItem("w1a3");
+$App.w1a4 = localStorage.getItem("w1a4");
+$App.w1a5 = localStorage.getItem("w1a5");
+$App.w2a1 = localStorage.getItem("w2a1");
+$App.w2a2 = localStorage.getItem("w2a2");
+$App.w2a3 = localStorage.getItem("w2a3");
+$App.w2a4 = localStorage.getItem("w2a4");
+$App.w2a5 = localStorage.getItem("w2a5");
+$App.x1a1 = localStorage.getItem("x1a1");
+$App.x1a2 = localStorage.getItem("x1a2");
+$App.x1a3 = localStorage.getItem("x1a3");
+$App.x1a4 = localStorage.getItem("x1a4");
+$App.x1a5 = localStorage.getItem("x1a5");
+$App.x2a1 = localStorage.getItem("x2a1");
+$App.x2a2 = localStorage.getItem("x2a2");
+$App.x2a3 = localStorage.getItem("x2a3");
+$App.x2a4 = localStorage.getItem("x2a4");
+$App.x2a5 = localStorage.getItem("x2a5");
+$App.y1a1 = localStorage.getItem("y1a1");
+$App.y1a2 = localStorage.getItem("y1a2");
+$App.y1a3 = localStorage.getItem("y1a3");
+$App.y1a4 = localStorage.getItem("y1a4");
+$App.y1a5 = localStorage.getItem("y1a5");
+$App.y2a1 = localStorage.getItem("y2a1");
+$App.y2a2 = localStorage.getItem("y2a2");
+$App.y2a3 = localStorage.getItem("y2a3");
+$App.y2a4 = localStorage.getItem("y2a4");
+$App.y2a5 = localStorage.getItem("y2a5");
+$App.z1a1 = localStorage.getItem("z1a1");
+$App.z1a2 = localStorage.getItem("z1a2");
+$App.z1a3 = localStorage.getItem("z1a3");
+$App.z1a4 = localStorage.getItem("z1a4");
+$App.z1a5 = localStorage.getItem("z1a5");
+$App.z2a1 = localStorage.getItem("z2a1");
+$App.z2a2 = localStorage.getItem("z2a2");
+$App.z2a3 = localStorage.getItem("z2a3");
+$App.z2a4 = localStorage.getItem("z2a4");
+$App.z2a5 = localStorage.getItem("z2a5");
+$App.zt126 = localStorage.getItem("zt126");
+$App.zt226 = localStorage.getItem("zt226");
+$App.zt326 = localStorage.getItem("zt326");
+$App.may260 = localStorage.getItem("may260");
+$App.may261 = localStorage.getItem("may261");
+$App.may262 = localStorage.getItem("may262");
+$App.may263 = localStorage.getItem("may263");
+$App.june260 = localStorage.getItem("june260");
+$App.june261 = localStorage.getItem("june261");
+$App.june262 = localStorage.getItem("june262");
+$App.june263 = localStorage.getItem("june263");
+$App.july260 = localStorage.getItem("july260");
+$App.july261 = localStorage.getItem("july261");
+$App.july262 = localStorage.getItem("july262");
+$App.july263 = localStorage.getItem("july263");
+$App.aug260 = localStorage.getItem("aug260");
+$App.aug261 = localStorage.getItem("aug261");
+$App.aug262 = localStorage.getItem("aug262");
+$App.aug263 = localStorage.getItem("aug263");
+$App.sep260 = localStorage.getItem("sep260");
+$App.sep261 = localStorage.getItem("sep261");
+$App.sep262 = localStorage.getItem("sep262");
+$App.sep263 = localStorage.getItem("sep263");
+$App.oct260 = localStorage.getItem("oct260");
+$App.oct261 = localStorage.getItem("oct261");
+$App.oct262 = localStorage.getItem("oct262");
+$App.oct263 = localStorage.getItem("oct263");
+$App.nov260 = localStorage.getItem("nov260");
+$App.nov261 = localStorage.getItem("nov261");
+$App.nov262 = localStorage.getItem("nov262");
+$App.nov263 = localStorage.getItem("nov263");
+$App.dec260 = localStorage.getItem("dec260");
+$App.dec261 = localStorage.getItem("dec261");
+$App.dec262 = localStorage.getItem("dec262");
+$App.dec263 = localStorage.getItem("dec263");
+$App.monthnotes = localStorage.getItem("monthnotes");
+$App.monthnotes2 = localStorage.getItem("monthnotes2");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Prayer1 = localStorage.getItem("Prayer1");
+$App.Prayer2 = localStorage.getItem("Prayer2");
+$App.Prayer3 = localStorage.getItem("Prayer3");
+$App.Prayer4 = localStorage.getItem("Prayer4");
+$App.Prayer1tit = localStorage.getItem("Prayer1tit");
+$App.Prayer2tit = localStorage.getItem("Prayer2tit");
+$App.Prayer3tit = localStorage.getItem("Prayer3tit");
+$App.Prayer4tit = localStorage.getItem("Prayer4tit");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Prayer1 = localStorage.getItem("Prayer1");
+$App.Prayer2 = localStorage.getItem("Prayer2");
+$App.Prayer3 = localStorage.getItem("Prayer3");
+$App.Prayer4 = localStorage.getItem("Prayer4");
+$App.Prayer1tit = localStorage.getItem("Prayer1tit");
+$App.Prayer2tit = localStorage.getItem("Prayer2tit");
+$App.Prayer3tit = localStorage.getItem("Prayer3tit");
+$App.Prayer4tit = localStorage.getItem("Prayer4tit");
+$App.Read1 = localStorage.getItem("Read1");
+$App.Read2 = localStorage.getItem("Read2");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Next = localStorage.getItem("Next");
+$App.Me = localStorage.getItem("Me");
+$App.Reps1tit = localStorage.getItem("Reps1tit");
+$App.Reps2tit = localStorage.getItem("Reps2tit");
+$App.Reps3tit = localStorage.getItem("Reps3tit");
+$App.Reps4tit = localStorage.getItem("Reps4tit");
+$App.Reps = localStorage.getItem("Reps");
+$App.Reps1 = localStorage.getItem("Reps1");
+$App.Reps02 = localStorage.getItem("Reps02");
+$App.Reset1 = localStorage.getItem("Reset1");
+$App.Reset2 = localStorage.getItem("Reset2");
+$App.Reset3 = localStorage.getItem("Reset3");
+$App.Reset4 = localStorage.getItem("Reset4");
+$App.Reset5 = localStorage.getItem("Reset5");
+$App.Reset6 = localStorage.getItem("Reset6");
+$App.Reset7 = localStorage.getItem("Reset7");
+$App.Reset8 = localStorage.getItem("Reset8");
+$App.Reset9 = localStorage.getItem("Reset9");
+$App.Reset10 = localStorage.getItem("Reset10");
+$App.Reset11 = localStorage.getItem("Reset11");
+$App.Reset12 = localStorage.getItem("Reset12");
+$App.Reset13 = localStorage.getItem("Reset13");
+$App.Reset14 = localStorage.getItem("Reset14");
+$App.Reset15 = localStorage.getItem("Reset15");
+$App.Reset16 = localStorage.getItem("Reset16");
+$App.Reset1a = localStorage.getItem("Reset1a");
+$App.Reset2a = localStorage.getItem("Reset2a");
+$App.Reset3a = localStorage.getItem("Reset3a");
+$App.Reset4a = localStorage.getItem("Reset4a");
+$App.Reset5a = localStorage.getItem("Reset5a");
+$App.Reset6a = localStorage.getItem("Reset6a");
+$App.Reset7a = localStorage.getItem("Reset7a");
+$App.Reset8a = localStorage.getItem("Reset8a");
+$App.Reset9a = localStorage.getItem("Reset9a");
+$App.Reset10a = localStorage.getItem("Reset10a");
+$App.Reset11a = localStorage.getItem("Reset11a");
+$App.Reset12a = localStorage.getItem("Reset12a");
+$App.Reset13a = localStorage.getItem("Reset13a");
+$App.Reset14a = localStorage.getItem("Reset14a");
+$App.Reset15a = localStorage.getItem("Reset15a");
+$App.Reset16a = localStorage.getItem("Reset16a");
+$App.Homsstuffinote = localStorage.getItem("Homsstuffinote");
+$App.WorkBstuffnote = localStorage.getItem("WorkBstuffnote");
+$App.WorkCstuffnote = localStorage.getItem("WorkCstuffnote");
+$App.WorkDstuffnote = localStorage.getItem("WorkDstuffnote");
+$App.VERSIONRECORD = localStorage.getItem("VERSIONRECORD");
+$App.RecData = localStorage.getItem("RecData");
+$App.HEALTHGENERAL001 = localStorage.getItem("HEALTHGENERAL001");
+$App.project1abT = localStorage.getItem("project1abT");
+$App.project1doc = localStorage.getItem("project1doc");
+$App.project1 = localStorage.getItem("project1");
+$App.Project1Main = localStorage.getItem("Project1Main");
+$App.project1aT = localStorage.getItem("project1aT");
+$App.project1bT = localStorage.getItem("project1bT");
+$App.project1cT = localStorage.getItem("project1cT");
+$App.project1dT = localStorage.getItem("project1dT");
+$App.project1eT = localStorage.getItem("project1eT");
+$App.project1fT = localStorage.getItem("project1fT");
+$App.project1gT = localStorage.getItem("project1gT");
+$App.project1hT = localStorage.getItem("project1hT");
+$App.project1iT = localStorage.getItem("project1jT");
+$App.project1jT = localStorage.getItem("project1jT");
+$App.project1kT = localStorage.getItem("project1kT");
+$App.project1lT = localStorage.getItem("project1lT");
+$App.project1mT = localStorage.getItem("project1mT");
+$App.project1nT = localStorage.getItem("project1nT");
+$App.project1oT = localStorage.getItem("project1oT");
+$App.project1pT = localStorage.getItem("project1pT");
+$App.project1qT = localStorage.getItem("project1qT");
+$App.project1rT = localStorage.getItem("project1rT");
+$App.project1sT = localStorage.getItem("project1sT");
+$App.project1tT = localStorage.getItem("project1tT");
+$App.project1uT = localStorage.getItem("project1uT");
+$App.project1vT = localStorage.getItem("project1vT");
+$App.project1wT = localStorage.getItem("project1wT");
+$App.project1xT = localStorage.getItem("project1xT");
+$App.project1aaT = localStorage.getItem("project1aaT");
+$App.project1aa = localStorage.getItem("project1aa");
+$App.project1ab = localStorage.getItem("project1ab");
+$App.project1ac = localStorage.getItem("project1ac");
+$App.project1ad = localStorage.getItem("project1ad");
+$App.project1a = localStorage.getItem("project1a");
+$App.project1b = localStorage.getItem("project1b");
+$App.project1c = localStorage.getItem("project1c");
+$App.project1d = localStorage.getItem("project1d");
+$App.project1e = localStorage.getItem("project1e");
+$App.project1f = localStorage.getItem("project1f");
+$App.project1g = localStorage.getItem("project1g");
+$App.project1h = localStorage.getItem("project1h");
+$App.project1i = localStorage.getItem("project1i");
+$App.project1j = localStorage.getItem("project1j");
+$App.project1k = localStorage.getItem("project1k");
+$App.project1l = localStorage.getItem("project1l");
+$App.project1m = localStorage.getItem("project1m");
+$App.project1n = localStorage.getItem("project1n");
+$App.project1o = localStorage.getItem("project1o");
+$App.project1p = localStorage.getItem("project1p");
+$App.project1q = localStorage.getItem("project1q");
+$App.project1r = localStorage.getItem("project1r");
+$App.project1s = localStorage.getItem("project1s");
+$App.project1t = localStorage.getItem("project1t");
+$App.project1u = localStorage.getItem("project1u");
+$App.project1v = localStorage.getItem("project1v");
+$App.project1w = localStorage.getItem("project1w");
+$App.project1x = localStorage.getItem("project1x");
+$App.project1y = localStorage.getItem("project1y");
+$App.project2doc = localStorage.getItem("project2doc");
+$App.project2 = localStorage.getItem("project2");
+$App.Project2Main = localStorage.getItem("Project2Main");
+$App.Project2aa = localStorage.getItem("Project2aa");
+$App.project2acT = localStorage.getItem("project2acT");
+$App.project2aT = localStorage.getItem("project2aT");
+$App.project2bT = localStorage.getItem("project2bT");
+$App.project2cT = localStorage.getItem("project2cT");
+$App.project2dT = localStorage.getItem("project2dT");
+$App.project2eT = localStorage.getItem("project2eT");
+$App.project2fT = localStorage.getItem("project2fT");
+$App.project2gT = localStorage.getItem("project2gT");
+$App.project2hT = localStorage.getItem("project2hT");
+$App.project2iT = localStorage.getItem("project2jT");
+$App.project2jT = localStorage.getItem("project2jT");
+$App.project2kT = localStorage.getItem("project2kT");
+$App.project2lT = localStorage.getItem("project2lT");
+$App.project2mT = localStorage.getItem("project2mT");
+$App.project2nT = localStorage.getItem("project2nT");
+$App.project2oT = localStorage.getItem("project2oT");
+$App.project2pT = localStorage.getItem("project2pT");
+$App.project2qT = localStorage.getItem("project2qT");
+$App.project2rT = localStorage.getItem("project2rT");
+$App.project2sT = localStorage.getItem("project2sT");
+$App.project2tT = localStorage.getItem("project2tT");
+$App.project2uT = localStorage.getItem("project2uT");
+$App.project2vT = localStorage.getItem("project2vT");
+$App.project2wT = localStorage.getItem("project2wT");
+$App.project2xT = localStorage.getItem("project2xT");
+$App.Project2aa = localStorage.getItem("project2aa");
+$App.project2ab = localStorage.getItem("project2ab");
+$App.project2ac = localStorage.getItem("project2ac");
+$App.project2ad = localStorage.getItem("project2ad");
+$App.project2a = localStorage.getItem("project2a");
+$App.project2b = localStorage.getItem("project2b");
+$App.project2c = localStorage.getItem("project2c");
+$App.project2d = localStorage.getItem("project2d");
+$App.project2e = localStorage.getItem("project2e");
+$App.project2f = localStorage.getItem("project2f");
+$App.project2g = localStorage.getItem("project2g");
+$App.project2h = localStorage.getItem("project2h");
+$App.project2i = localStorage.getItem("project2i");
+$App.project2j = localStorage.getItem("project2j");
+$App.project2k = localStorage.getItem("project2k");
+$App.project2l = localStorage.getItem("project2l");
+$App.project2m = localStorage.getItem("project2m");
+$App.project2n = localStorage.getItem("project2n");
+$App.project2o = localStorage.getItem("project2o");
+$App.project2p = localStorage.getItem("project2p");
+$App.project2q = localStorage.getItem("project2q");
+$App.project2r = localStorage.getItem("project2r");
+$App.project2s = localStorage.getItem("project2s");
+$App.project2t = localStorage.getItem("project2t");
+$App.project2u = localStorage.getItem("project2u");
+$App.project2v = localStorage.getItem("project2v");
+$App.project2w = localStorage.getItem("project2w");
+$App.project2x = localStorage.getItem("project2x");
+$App.project2y = localStorage.getItem("project2y");};
+$scope.PreparationKeys_pageenter = function() {$scope.ObjectToFront("PushButton634");
+$App.familymatters = localStorage.getItem("familymatters");
+$App.healthmatters = localStorage.getItem("healthmatters");
+$App.mirrorCamera = localStorage.getItem("mirrorCamera");
+$App.worktrans = localStorage.getItem("worktrans");
+$App.financialMe = localStorage.getItem("financialMe");
+$App.bfm = localStorage.getItem("bfm");
+$App.resetmain = localStorage.getItem("resetmain");
+$App.resetmainMore = localStorage.getItem("resetmainMore");
+$App.mirrorCameramore = localStorage.getItem("mirrorCameramore");
+$App.familymattersMore = localStorage.getItem("familymattersMore");
+$App.reset001a = localStorage.getItem("reset001a");
+$App.reset001b = localStorage.getItem("reset001b");
+$App.reset001c = localStorage.getItem("reset001c");
+$App.reset001d = localStorage.getItem("reset001d");
+$App.reset001aMore = localStorage.getItem("reset001aMore");
+$App.reset001bMore = localStorage.getItem("reset001bMore");
+$App.reset001cMore = localStorage.getItem("reset001cMore");
+$App.reset001dMore = localStorage.getItem("reset001dMore");
+$App.symbola = localStorage.getItem("symbola");
+$App.symbolb = localStorage.getItem("symbolb");
+$App.symbolaMore = localStorage.getItem("symbolaMore");
+$App.symbolbMore = localStorage.getItem("symbolbMore");
+$App.reset002a = localStorage.getItem("reset002a");
+$App.reset002b = localStorage.getItem("reset002b");
+$App.reset002c = localStorage.getItem("reset002c");
+$App.reset002d = localStorage.getItem("reset002d");
+$App.reset002aMore = localStorage.getItem("reset002aMore");
+$App.reset002bMore = localStorage.getItem("reset002bMore");
+$App.reset002cMore = localStorage.getItem("reset002cMore");
+$App.reset002dMore = localStorage.getItem("reset002dMore");
+$App.symbolc = localStorage.getItem("symbolc");
+$App.symbold = localStorage.getItem("symbold");
+$App.symbolcMore = localStorage.getItem("symbolcMore");
+$App.symboldMore = localStorage.getItem("symboldMore");
+$App.reset003a = localStorage.getItem("reset003a");
+$App.reset003b = localStorage.getItem("reset003b");
+$App.reset003c = localStorage.getItem("reset003c");
+$App.reset003d = localStorage.getItem("reset003d");
+$App.reset004a = localStorage.getItem("reset004a");
+$App.reset004b = localStorage.getItem("reset004b");
+$App.reset004c = localStorage.getItem("reset004c");
+$App.reset004d = localStorage.getItem("reset004d");
+$App.reset005a = localStorage.getItem("reset005a");
+$App.reset005b = localStorage.getItem("reset005b");
+$App.reset005c = localStorage.getItem("reset005c");
+$App.reset005d = localStorage.getItem("reset005d");
+$App.reset006a = localStorage.getItem("reset006a");
+$App.reset006b = localStorage.getItem("reset006b");
+$App.reset006c = localStorage.getItem("reset006c");
+$App.reset006d = localStorage.getItem("reset006d");
+$App.symbole = localStorage.getItem("symbole");
+$App.symbolf = localStorage.getItem("symbolf");
+$App.symbolg = localStorage.getItem("symbolg");
+$App.symbolh = localStorage.getItem("symbolh");
+$App.symboli = localStorage.getItem("symboli");
+$App.symbolj = localStorage.getItem("symbolj");
+$App.symbolk = localStorage.getItem("symbolk");
+$App.symboll = localStorage.getItem("symboll");
+$App.b11111 = localStorage.getItem("b11111");
+$App.b22222 = localStorage.getItem("b22222");
+$App.b33333 = localStorage.getItem("b33333");
+$App.b44444 = localStorage.getItem("b44444");
+$App.b55555 = localStorage.getItem("b55555");
+$App.witaa1000 = localStorage.getItem("witaa1000");
+$App.witaa1000a = localStorage.getItem("witaa1000a");
+$App.witaa1000b = localStorage.getItem("witaa1000b");
+$App.witaa1000c = localStorage.getItem("witaa1000c");
+$App.witaaq001 = localStorage.getItem("witaaq001");
+$App.witaaq002 = localStorage.getItem("witaaq002");
+$App.witaaq003 = localStorage.getItem("witaaq003");
+$App.witaaq004 = localStorage.getItem("witaaq004");
+$App.witaaq005 = localStorage.getItem("witaaq005");
+$App.witaaq006 = localStorage.getItem("witaaq006");
+$App.witaaq007 = localStorage.getItem("witaaq007");
+$App.witaaq008 = localStorage.getItem("witaaq008");
+$App.witaaqa1001 = localStorage.getItem("witaaqa1001");
+$App.witaaqa1002 = localStorage.getItem("witaaqa1002");
+$App.witaaqa1003 = localStorage.getItem("witaaqa1003");
+$App.witaaqa1004 = localStorage.getItem("witaaqa1004");
+$App.witaaqa1005 = localStorage.getItem("witaaqa1005");
+$App.witaaqa1006 = localStorage.getItem("witaaqa1006");
+$App.witaaqa1007 = localStorage.getItem("witaaqa1007");
+$App.witaaqa1008 = localStorage.getItem("witaaqa1008");
+$App.mo1item01 = localStorage.getItem("mo1item01");
+$App.mo1item02 = localStorage.getItem("mo1item02");
+$App.mo1item03 = localStorage.getItem("mo1item03");
+$App.mo1item04 = localStorage.getItem("mo1item04");
+$App.mo1item05 = localStorage.getItem("mo1item05");
+$App.mo1item06 = localStorage.getItem("mo1item06");
+$App.mo1item07 = localStorage.getItem("mo1item07");
+$App.mo1item08 = localStorage.getItem("mo1item08");
+$App.mo1item09 = localStorage.getItem("mo1item09");
+$App.mo1item10 = localStorage.getItem("mo1item10");
+$App.mo1item11 = localStorage.getItem("mo1item11");
+$App.mo1item12 = localStorage.getItem("mo1item12");
+$App.mo1item13 = localStorage.getItem("mo1item13");
+$App.mo1item14 = localStorage.getItem("mo1item14");
+$App.mo1item15 = localStorage.getItem("mo1item15");
+$App.mo1item01n = localStorage.getItem("mo1item01n");
+$App.mo1item02n = localStorage.getItem("mo1item02n");
+$App.mo1item03n = localStorage.getItem("mo1item03n");
+$App.mo1item04n = localStorage.getItem("mo1item04n");
+$App.mo1item05n = localStorage.getItem("mo1item05n");
+$App.mo1item06n = localStorage.getItem("mo1item06n");
+$App.mo1item07n = localStorage.getItem("mo1item07n");
+$App.mo1item08n = localStorage.getItem("mo1item08n");
+$App.mo1item09n = localStorage.getItem("mo1item09n");
+$App.mo1item10n = localStorage.getItem("mo1item10n");
+$App.mo1item11n = localStorage.getItem("mo1item11n");
+$App.mo1item12n = localStorage.getItem("mo1item12n");
+$App.mo1item13n = localStorage.getItem("mo1item13n");
+$App.mo1item14n = localStorage.getItem("mo1item14n");
+$App.mo1item15n = localStorage.getItem("mo1item15n");
+$App.mo1item01v = localStorage.getItem("mo1item01v");
+$App.mo1item02v = localStorage.getItem("mo1item02v");
+$App.mo1item03v = localStorage.getItem("mo1item03v");
+$App.mo1item04v = localStorage.getItem("mo1item04v");
+$App.mo1item05v = localStorage.getItem("mo1item05v");
+$App.mo1item06v = localStorage.getItem("mo1item06v");
+$App.mo1item07v = localStorage.getItem("mo1item07v");
+$App.mo1item08v = localStorage.getItem("mo1item08v");
+$App.mo1item09v = localStorage.getItem("mo1item09v");
+$App.mo1item10v = localStorage.getItem("mo1item10v");
+$App.mo1item11v = localStorage.getItem("mo1item11v");
+$App.mo1item12v = localStorage.getItem("mo1item12v");
+$App.mo1item13v = localStorage.getItem("mo1item13v");
+$App.mo1item14v = localStorage.getItem("mo1item14v");
+$App.mo1item15v = localStorage.getItem("mo1item15v");
+$App.mo1itemtot = localStorage.getItem("mo1itemtot");
+$App.mo2item01 = localStorage.getItem("mo2item01");
+$App.mo2item02 = localStorage.getItem("mo2item02");
+$App.mo2item03 = localStorage.getItem("mo2item03");
+$App.mo2item04 = localStorage.getItem("mo2item04");
+$App.mo2item05 = localStorage.getItem("mo2item05");
+$App.mo2item06 = localStorage.getItem("mo2item06");
+$App.mo2item07 = localStorage.getItem("mo2item07");
+$App.mo2item08 = localStorage.getItem("mo2item08");
+$App.mo2item09 = localStorage.getItem("mo2item09");
+$App.mo2item10 = localStorage.getItem("mo2item10");
+$App.mo2item11 = localStorage.getItem("mo2item11");
+$App.mo2item12 = localStorage.getItem("mo2item12");
+$App.mo2item13 = localStorage.getItem("mo2item13");
+$App.mo2item14 = localStorage.getItem("mo2item14");
+$App.mo2item15 = localStorage.getItem("mo2item15");
+$App.mo2item01n = localStorage.getItem("mo2item01n");
+$App.mo2item02n = localStorage.getItem("mo2item02n");
+$App.mo2item03n = localStorage.getItem("mo2item03n");
+$App.mo2item04n = localStorage.getItem("mo2item04n");
+$App.mo2item05n = localStorage.getItem("mo2item05n");
+$App.mo2item06n = localStorage.getItem("mo2item06n");
+$App.mo2item07n = localStorage.getItem("mo2item07n");
+$App.mo2item08n = localStorage.getItem("mo2item08n");
+$App.mo2item09n = localStorage.getItem("mo2item09n");
+$App.mo2item10n = localStorage.getItem("mo2item10n");
+$App.mo2item11n = localStorage.getItem("mo2item11n");
+$App.mo2item12n = localStorage.getItem("mo2item12n");
+$App.mo2item13n = localStorage.getItem("mo2item13n");
+$App.mo2item14n = localStorage.getItem("mo2item14n");
+$App.mo2item15n = localStorage.getItem("mo2item15n");
+$App.mo2item01v = localStorage.getItem("mo2item01v");
+$App.mo2item02v = localStorage.getItem("mo2item02v");
+$App.mo2item03v = localStorage.getItem("mo2item03v");
+$App.mo2item04v = localStorage.getItem("mo2item04v");
+$App.mo2item05v = localStorage.getItem("mo2item05v");
+$App.mo2item06v = localStorage.getItem("mo2item06v");
+$App.mo2item07v = localStorage.getItem("mo2item07v");
+$App.mo2item08v = localStorage.getItem("mo2item08v");
+$App.mo2item09v = localStorage.getItem("mo2item09v");
+$App.mo2item10v = localStorage.getItem("mo2item10v");
+$App.mo2item11v = localStorage.getItem("mo2item11v");
+$App.mo2item12v = localStorage.getItem("mo2item12v");
+$App.mo2item13v = localStorage.getItem("mo2item13v");
+$App.mo2item14v = localStorage.getItem("mo2item14v");
+$App.mo2item15v = localStorage.getItem("mo2item15v");
+$App.mo2itemtot = localStorage.getItem("mo2itemtot");
+$App.fwf1n1 = localStorage.getItem("fwf1n1");
+$App.fwf1n2 = localStorage.getItem("fwf1n2");
+$App.fwf1n3 = localStorage.getItem("fwf1n3");
+$App.fwf1n4 = localStorage.getItem("fwf1n4");
+$App.timeline1 = localStorage.getItem("timeline1");
+$App.mitpm1 = localStorage.getItem("mitpm1");
+$App.motpm1 = localStorage.getItem("motpm1");
+$App.timeline1des = localStorage.getItem("timeline1des");
+$App.timeline1des2 = localStorage.getItem("timeline1des2");
+$App.spm1 = localStorage.getItem("spm1");
+$App.fwf1 = localStorage.getItem("fwf1");
+$App.fwf1m = localStorage.getItem("fwf1m");
+$App.fwf1d = localStorage.getItem("fwf1d");
+$App.fwf1md = localStorage.getItem("fwf1md");
+$App.fwf2n1 = localStorage.getItem("fwf2n1");
+$App.fwf2n2 = localStorage.getItem("fwf2n2");
+$App.fwf2n3 = localStorage.getItem("fwf2n3");
+$App.fwf2n4 = localStorage.getItem("fwf2n4");
+$App.timeline2 = localStorage.getItem("timeline2");
+$App.mitpm2 = localStorage.getItem("mitpm2");
+$App.motpm2 = localStorage.getItem("motpm2");
+$App.timeline2des = localStorage.getItem("timeline2des");
+$App.timeline2des2 = localStorage.getItem("timeline2des2");
+$App.spm2 = localStorage.getItem("spm2");
+$App.fwf2 = localStorage.getItem("fwf2");
+$App.fwf2m = localStorage.getItem("fwf2m");
+$App.fwf2d = localStorage.getItem("fwf2d");
+$App.fwf2md = localStorage.getItem("fwf2md");
+$App.elink2 = localStorage.getItem("elink2");
+$App.TPtitle001n = localStorage.getItem("TPtitle001n");
+$App.TPtitle002n = localStorage.getItem("TPtitle002n");
+$App.TPtitle003n = localStorage.getItem("TPtitle003n");
+$App.TPtitle004n = localStorage.getItem("TPtitle004n");
+$App.TPtitle005n = localStorage.getItem("TPtitle005n");
+$App.TPtitle006n = localStorage.getItem("TPtitle006n");
+$App.TPtitle007n = localStorage.getItem("TPtitle007n");
+$App.TPtitle008n = localStorage.getItem("TPtitle008n");
+$App.TPtitle009n = localStorage.getItem("TPtitle009n");
+$App.TPtitle010n = localStorage.getItem("TPtitle010n");
+$App.TPtitle011n = localStorage.getItem("TPtitle011n");
+$App.TPtitle012n = localStorage.getItem("TPtitle012n");
+$App.TPtitle013n = localStorage.getItem("TPtitle013n");
+$App.TPtitle014n = localStorage.getItem("TPtitle014n");
+$App.TPtitle015n = localStorage.getItem("TPtitle015n");
+$App.TPtitle016n = localStorage.getItem("TPtitle016n");
+$App.TPtitle017n = localStorage.getItem("TPtitle017n");
+$App.TPtitle018n = localStorage.getItem("TPtitle019n");
+$App.TPtitle019n = localStorage.getItem("TPtitle019n");
+$App.TPtitle019n = localStorage.getItem("TPtitle019n");
+$App.TPtitle020n = localStorage.getItem("TPtitle020n");
+$App.TPtitle021n = localStorage.getItem("TPtitle021n");
+$App.TPtitle022n = localStorage.getItem("TPtitle022n");
+$App.TPtitle023n = localStorage.getItem("TPtitle023n");
+$App.TPtitle024n = localStorage.getItem("TPtitle024n");
+$App.TPtitle025n = localStorage.getItem("TPtitle025n");
+$App.TPtitle026n = localStorage.getItem("TPtitle026n");
+$App.TPtitle027n = localStorage.getItem("TPtitle027n");
+$App.TPtitle028n = localStorage.getItem("TPtitle028n");
+$App.TPtitle029n = localStorage.getItem("TPtitle029n");
+$App.TPtitle030n = localStorage.getItem("TPtitle030n");
+$App.TPtitle031n = localStorage.getItem("TPtitle031n");
+$App.TPtitle032n = localStorage.getItem("TPtitle032n");
+$App.TPtitle033n = localStorage.getItem("TPtitle033n");
+$App.TPtitle034n = localStorage.getItem("TPtitle034n");
+$App.TPtitle035n = localStorage.getItem("TPtitle035n");
+$App.TPtitle036n = localStorage.getItem("TPtitle036n");
+$App.TPtitle037n = localStorage.getItem("TPtitle037n");
+$App.TPtitle038n = localStorage.getItem("TPtitle038n");
+$App.TPtitle039n = localStorage.getItem("TPtitle039n");
+$App.TPtitle040n = localStorage.getItem("TPtitle040n");
+$App.TPtitle041n = localStorage.getItem("TPtitle041n");
+$App.TPtitle042n = localStorage.getItem("TPtitle042n");
+$App.TPtitle043n = localStorage.getItem("TPtitle043n");
+$App.TPtitle044n = localStorage.getItem("TPtitle044n");
+$App.TPtitle045n = localStorage.getItem("TPtitle045n");
+$App.TPtitle046n = localStorage.getItem("TPtitle046n");
+$App.TPtitle047n = localStorage.getItem("TPtitle047n");
+$App.TPtitle048n = localStorage.getItem("TPtitle048n");
+$App.TPtitle017 = localStorage.getItem("TPtitle017");
+$App.TPtitle018 = localStorage.getItem("TPtitle018");
+$App.TPtitle019 = localStorage.getItem("TPtitle019");
+$App.TPtitle020 = localStorage.getItem("TPtitle020");
+$App.TPtitle021 = localStorage.getItem("TPtitle021");
+$App.TPtitle022 = localStorage.getItem("TPtitle022");
+$App.TPtitle023 = localStorage.getItem("TPtitle023");
+$App.TPtitle024 = localStorage.getItem("TPtitle024");
+$App.TPtitle025 = localStorage.getItem("TPtitle025");
+$App.TPtitle026 = localStorage.getItem("TPtitle026");
+$App.TPtitle027 = localStorage.getItem("TPtitle027");
+$App.TPtitle028 = localStorage.getItem("TPtitle028");
+$App.TPtitle029 = localStorage.getItem("TPtitle029");
+$App.TPtitle030 = localStorage.getItem("TPtitle030");
+$App.TPtitle031 = localStorage.getItem("TPtitle031");
+$App.TPtitle032 = localStorage.getItem("TPtitle032");
+$App.TPtitle033 = localStorage.getItem("TPtitle033");
+$App.TPtitle034 = localStorage.getItem("TPtitle034");
+$App.TPtitle035 = localStorage.getItem("TPtitle035");
+$App.TPtitle036 = localStorage.getItem("TPtitle036");
+$App.TPtitle037 = localStorage.getItem("TPtitle037");
+$App.TPtitle038 = localStorage.getItem("TPtitle038");
+$App.TPtitle039 = localStorage.getItem("TPtitle038");
+$App.TPtitle040 = localStorage.getItem("TPtitle040");
+$App.TPtitle041 = localStorage.getItem("TPtitle041");
+$App.TPtitle042 = localStorage.getItem("TPtitle042");
+$App.TPtitle043 = localStorage.getItem("TPtitle043");
+$App.TPtitle044 = localStorage.getItem("TPtitle044");
+$App.TPtitle045 = localStorage.getItem("TPtitle045");
+$App.TPtitle046 = localStorage.getItem("TPtitle046");
+$App.TPtitle047 = localStorage.getItem("TPtitle047");
+$App.TPtitle048 = localStorage.getItem("TPtitle048");
+$App.Tititle001 = localStorage.getItem("Tititle001");
+$App.Tititle002 = localStorage.getItem("Tititle002");
+$App.Tititle003 = localStorage.getItem("Tititle003");
+$App.Tititle004 = localStorage.getItem("Tititle004");
+$App.Tititle005 = localStorage.getItem("Tititle005");
+$App.Tititle006 = localStorage.getItem("Tititle006");
+$App.Tititle007 = localStorage.getItem("Tititle007");
+$App.Tititle008 = localStorage.getItem("Tititle008");
+$App.Tititle009 = localStorage.getItem("Tititle009");
+$App.Tititle010 = localStorage.getItem("Tititle010");
+$App.Tititle011 = localStorage.getItem("Tititle011");
+$App.Tititle012 = localStorage.getItem("Tititle012");
+$App.Tititle001n = localStorage.getItem("Tititle001n");
+$App.Tititle002n = localStorage.getItem("Tititle002n");
+$App.Tititle003n = localStorage.getItem("Tititle003n");
+$App.Tititle004n = localStorage.getItem("Tititle004n");
+$App.Tititle005n = localStorage.getItem("Tititle005n");
+$App.Tititle006n = localStorage.getItem("Tititle006n");
+$App.Tititle007n = localStorage.getItem("Tititle007n");
+$App.Tititle008n = localStorage.getItem("Tititle008n");
+$App.Tititle009n = localStorage.getItem("Tititle009n");
+$App.Tititle010n = localStorage.getItem("Tititle010n");
+$App.Tititle011n = localStorage.getItem("Tititle011n");
+$App.Tititle012n = localStorage.getItem("Tititle012n");
+$App.Tinote = localStorage.getItem("Tinote");
+$App.rcrimume1 = localStorage.getItem("rcrimume1");
+$App.rcrimume2 = localStorage.getItem("rcrimume2");
+$App.rcrimume3 = localStorage.getItem("rcrimume3");
+$App.pp01 = localStorage.getItem("pp01");
+$App.pp01a = localStorage.getItem("pp01a");
+$App.pp01b = localStorage.getItem("pp01b");
+$App.pp01c = localStorage.getItem("pp01c");
+$App.pp01d = localStorage.getItem("pp01d");
+$App.pp01e = localStorage.getItem("pp01e");
+$App.journal = localStorage.getItem("journal");
+$App.elink1t1 = localStorage.getItem("elink1t1");
+$App.elink1t2 = localStorage.getItem("elink1t2");
+$App.Ctitle001 = localStorage.getItem("Ctitle001");
+$App.Ctitle002 = localStorage.getItem("Ctitle002");
+$App.Ctitle003 = localStorage.getItem("Ctitle003");
+$App.Ctitle004 = localStorage.getItem("Ctitle004");
+$App.Ctitle001n = localStorage.getItem("Ctitle001n");
+$App.Ctitle002n = localStorage.getItem("Ctitle002n");
+$App.Ctitle003n = localStorage.getItem("Ctitle003n");
+$App.Ctitle004n = localStorage.getItem("Ctitle004n");
+$App.Ctitle005 = localStorage.getItem("Ctitle005");
+$App.Ctitle006 = localStorage.getItem("Ctitle006");
+$App.Ctitle007 = localStorage.getItem("Ctitle007");
+$App.Ctitle008 = localStorage.getItem("Ctitle008");
+$App.Ctitle005n = localStorage.getItem("Ctitle005n");
+$App.Ctitle006n = localStorage.getItem("Ctitle006n");
+$App.Ctitle007n = localStorage.getItem("Ctitle007n");
+$App.Ctitle008n = localStorage.getItem("Ctitle008n");
+$App.Ctitle009 = localStorage.getItem("Ctitle009");
+$App.Ctitle010 = localStorage.getItem("Ctitle010");
+$App.Ctitle011 = localStorage.getItem("Ctitle011");
+$App.Ctitle012 = localStorage.getItem("Ctitle012");
+$App.Ctitle009n = localStorage.getItem("Ctitle009n");
+$App.Ctitle010n = localStorage.getItem("Ctitle010n");
+$App.Ctitle011n = localStorage.getItem("Ctitle011n");
+$App.Ctitle012n = localStorage.getItem("Ctitle012n");
+$App.Ctitle013 = localStorage.getItem("Ctitle013");
+$App.Ctitle014 = localStorage.getItem("Ctitle014");
+$App.Ctitle015 = localStorage.getItem("Ctitle015");
+$App.Ctitle016 = localStorage.getItem("Ctitle016");
+$App.Ctitle017 = localStorage.getItem("Ctitle017");
+$App.Ctitle018 = localStorage.getItem("Ctitle018");
+$App.Ctitle019 = localStorage.getItem("Ctitle019");
+$App.Ctitle020 = localStorage.getItem("Ctitle020");
+$App.Ctitle021 = localStorage.getItem("Ctitle021");
+$App.Ctitle022 = localStorage.getItem("Ctitle022");
+$App.Ctitle013n = localStorage.getItem("Ctitle013n");
+$App.Ctitle014n = localStorage.getItem("Ctitle014n");
+$App.Ctitle015n = localStorage.getItem("Ctitle015n");
+$App.Ctitle016n = localStorage.getItem("Ctitle016n");
+$App.Ctitle017n = localStorage.getItem("Ctitle017n");
+$App.Ctitle018n = localStorage.getItem("Ctitle018n");
+$App.Ctitle019n = localStorage.getItem("Ctitle019n");
+$App.Ctitle020n = localStorage.getItem("Ctitle020n");
+$App.Ctitle021n = localStorage.getItem("Ctitle021n");
+$App.Ctitle022n = localStorage.getItem("Ctitle022n");
+$App.v5a001 = localStorage.getItem("v5a001");
+$App.v5a002 = localStorage.getItem("v5a002");
+$App.v5a003 = localStorage.getItem("v5a003");
+$App.v5a004 = localStorage.getItem("v5a004");
+$App.v5a005 = localStorage.getItem("v5a005");
+$App.v5a006 = localStorage.getItem("v5a006");
+$App.v5a007 = localStorage.getItem("v5a007");
+$App.v5a008 = localStorage.getItem("v5a008");
+$App.v5a009 = localStorage.getItem("v5a009");
+$App.v5a010 = localStorage.getItem("v5a010");
+$App.v5a011 = localStorage.getItem("v5a011");
+$App.v5a012 = localStorage.getItem("v5a012");
+$App.Speed01link01 = localStorage.getItem("Speed01link01");
+$App.speed1ref = localStorage.getItem("speed1ref");
+$App.speed1refb = localStorage.getItem("speed1refb");
+$App.speed2ref = localStorage.getItem("speed2ref");
+$App.speed2refb = localStorage.getItem("speed2refb");
+$App.aa1 = localStorage.getItem("aa1");
+$App.aa2 = localStorage.getItem("aa2");
+$App.aa3 = localStorage.getItem("aa3");
+$App.aa4 = localStorage.getItem("aa4");
+$App.aa5 = localStorage.getItem("aa5");
+$App.aa6 = localStorage.getItem("aa6");
+$App.aa7 = localStorage.getItem("aa7");
+$App.aa8 = localStorage.getItem("aa8");
+$App.aa9 = localStorage.getItem("aa8");
+$App.aa10 = localStorage.getItem("aa10");
+$App.aa11 = localStorage.getItem("aa11");
+$App.aa12 = localStorage.getItem("aa12");
+$App.aa13 = localStorage.getItem("aa13");
+$App.aa14 = localStorage.getItem("aa14");
+$App.aa15 = localStorage.getItem("aa15");
+$App.aa16 = localStorage.getItem("aa16");
+$App.aa17 = localStorage.getItem("aa17");
+$App.aa18 = localStorage.getItem("aa18");
+$App.aa19 = localStorage.getItem("aa19");
+$App.aa20 = localStorage.getItem("aa20");
+$App.aa21 = localStorage.getItem("aa21");
+$App.aa22 = localStorage.getItem("aa22");
+$App.aa23 = localStorage.getItem("aa23");
+$App.aa24 = localStorage.getItem("aa24");
+$App.aa25 = localStorage.getItem("aa25");
+$App.aa26 = localStorage.getItem("aa26");
+$App.aa27 = localStorage.getItem("aa27");
+$App.aa28 = localStorage.getItem("aa28");
+$App.aa29 = localStorage.getItem("aa29");
+$App.aa30 = localStorage.getItem("aa30");
+$App.aa31 = localStorage.getItem("aa31");
+$App.aa32 = localStorage.getItem("aa32");
+if ($App.aa1 == "r") {
+$scope.SetObjectStyle("Headline10001","color","red");
+$scope.SetObjectStyle("Ellipse101","fill","red");
+} else {
+};
+if ($App.aa1 == "g") {
+$scope.SetObjectStyle("Headline10001","color","green");
+$scope.SetObjectStyle("Ellipse101","fill","green");
+} else {
+};
+if ($App.aa1 == "b") {
+$scope.SetObjectStyle("Headline10001","color","blue");
+$scope.SetObjectStyle("Ellipse101","fill","blue");
+} else {
+};
+if ($App.aa2 == "r") {
+$scope.SetObjectStyle("Headline10002","color","red");
+$scope.SetObjectStyle("Ellipse102","fill","red");
+} else {
+};
+if ($App.aa2 == "g") {
+$scope.SetObjectStyle("Headline10002","color","green");
+$scope.SetObjectStyle("Ellipse102","fill","green");
+} else {
+};
+if ($App.aa2 == "b") {
+$scope.SetObjectStyle("Headline10002","color","blue");
+$scope.SetObjectStyle("Ellipse102","fill","blue");
+} else {
+};
+if ($App.aa3 == "r") {
+$scope.SetObjectStyle("Headline10003","color","red");
+$scope.SetObjectStyle("Ellipse103","fill","red");
+} else {
+};
+if ($App.aa3 == "g") {
+$scope.SetObjectStyle("Headline10003","color","green");
+$scope.SetObjectStyle("Ellipse103","fill","green");
+} else {
+};
+if ($App.aa3 == "b") {
+$scope.SetObjectStyle("Headline10003","color","blue");
+$scope.SetObjectStyle("Ellipse103","fill","blue");
+} else {
+};
+if ($App.aa4 == "r") {
+$scope.SetObjectStyle("Headline10004","color","red");
+$scope.SetObjectStyle("Ellipse104","fill","red");
+} else {
+};
+if ($App.aa4 == "g") {
+$scope.SetObjectStyle("Headline10004","color","green");
+$scope.SetObjectStyle("Ellipse104","fill","green");
+} else {
+};
+if ($App.aa4 == "b") {
+$scope.SetObjectStyle("Headline10004","color","blue");
+$scope.SetObjectStyle("Ellipse104","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10005","color","red");
+$scope.SetObjectStyle("Ellipse105","fill","red");
+} else {
+};
+if ($App.aa5 == "g") {
+$scope.SetObjectStyle("Headline10005","color","green");
+$scope.SetObjectStyle("Ellipse105","fill","green");
+} else {
+};
+if ($App.aa5 == "b") {
+$scope.SetObjectStyle("Headline10005","color","blue");
+$scope.SetObjectStyle("Ellipse105","fill","blue");
+} else {
+};
+if ($App.aa5 == "r") {
+$scope.SetObjectStyle("Headline10006","color","red");
+$scope.SetObjectStyle("Ellipse106","fill","red");
+} else {
+};
+if ($App.aa6 == "g") {
+$scope.SetObjectStyle("Headline10006","color","green");
+$scope.SetObjectStyle("Ellipse106","fill","green");
+} else {
+};
+if ($App.aa6 == "b") {
+$scope.SetObjectStyle("Headline10006","color","blue");
+$scope.SetObjectStyle("Ellipse106","fill","blue");
+} else {
+};
+if ($App.aa7 == "r") {
+$scope.SetObjectStyle("Headline10007","color","red");
+$scope.SetObjectStyle("Ellipse107","fill","red");
+} else {
+};
+if ($App.aa7 == "g") {
+$scope.SetObjectStyle("Headline10007","color","green");
+$scope.SetObjectStyle("Ellipse107","fill","green");
+} else {
+};
+if ($App.aa7 == "b") {
+$scope.SetObjectStyle("Headline10007","color","blue");
+$scope.SetObjectStyle("Ellipse107","fill","blue");
+} else {
+};
+if ($App.aa8 == "r") {
+$scope.SetObjectStyle("Headline10008","color","red");
+$scope.SetObjectStyle("Ellipse108","fill","red");
+} else {
+};
+if ($App.aa8 == "g") {
+$scope.SetObjectStyle("Headline10008","color","green");
+$scope.SetObjectStyle("Ellipse108","fill","green");
+} else {
+};
+if ($App.aa8 == "b") {
+$scope.SetObjectStyle("Headline10008","color","blue");
+$scope.SetObjectStyle("Ellipse108","fill","blue");
+} else {
+};
+if ($App.aa9 == "r") {
+$scope.SetObjectStyle("Headline10009","color","red");
+$scope.SetObjectStyle("Ellipse109","fill","red");
+} else {
+};
+if ($App.aa9 == "g") {
+$scope.SetObjectStyle("Headline10009","color","green");
+$scope.SetObjectStyle("Ellipse109","fill","green");
+} else {
+};
+if ($App.aa9 == "b") {
+$scope.SetObjectStyle("Headline10009","color","blue");
+$scope.SetObjectStyle("Ellipse109","fill","blue");
+} else {
+};
+if ($App.aa10 == "r") {
+$scope.SetObjectStyle("Headline10010","color","red");
+$scope.SetObjectStyle("Ellipse110","fill","red");
+} else {
+};
+if ($App.aa10 == "g") {
+$scope.SetObjectStyle("Headline10010","color","green");
+$scope.SetObjectStyle("Ellipse110","fill","green");
+} else {
+};
+if ($App.aa10 == "b") {
+$scope.SetObjectStyle("Headline10010","color","blue");
+$scope.SetObjectStyle("Ellipse110","fill","blue");
+} else {
+};
+if ($App.aa11 == "r") {
+$scope.SetObjectStyle("Headline10011","color","red");
+$scope.SetObjectStyle("Ellipse111","fill","red");
+} else {
+};
+if ($App.aa11 == "g") {
+$scope.SetObjectStyle("Headline10011","color","green");
+$scope.SetObjectStyle("Ellipse111","fill","green");
+} else {
+};
+if ($App.aa11 == "b") {
+$scope.SetObjectStyle("Headline10011","color","blue");
+$scope.SetObjectStyle("Ellipse111","fill","blue");
+} else {
+};
+if ($App.aa12 == "r") {
+$scope.SetObjectStyle("Headline10012","color","red");
+$scope.SetObjectStyle("Ellipse112","fill","red");
+} else {
+};
+if ($App.aa12 == "g") {
+$scope.SetObjectStyle("Headline10012","color","green");
+$scope.SetObjectStyle("Ellipse112","fill","green");
+} else {
+};
+if ($App.aa12 == "b") {
+$scope.SetObjectStyle("Headline10012","color","blue");
+$scope.SetObjectStyle("Ellipse112","fill","blue");
+} else {
+};
+if ($App.aa13 == "r") {
+$scope.SetObjectStyle("Headline10013","color","red");
+$scope.SetObjectStyle("Ellipse113","fill","red");
+} else {
+};
+if ($App.aa13 == "g") {
+$scope.SetObjectStyle("Headline10013","color","green");
+$scope.SetObjectStyle("Ellipse113","fill","green");
+} else {
+};
+if ($App.aa13 == "b") {
+$scope.SetObjectStyle("Headline10013","color","blue");
+$scope.SetObjectStyle("Ellipse113","fill","blue");
+} else {
+};
+if ($App.aa14 == "r") {
+$scope.SetObjectStyle("Headline10014","color","red");
+$scope.SetObjectStyle("Ellipse114","fill","red");
+} else {
+};
+if ($App.aa14 == "g") {
+$scope.SetObjectStyle("Headline10014","color","green");
+$scope.SetObjectStyle("Ellipse114","fill","green");
+} else {
+};
+if ($App.aa14 == "b") {
+$scope.SetObjectStyle("Headline10014","color","blue");
+$scope.SetObjectStyle("Ellipse114","fill","blue");
+} else {
+};
+if ($App.aa15 == "r") {
+$scope.SetObjectStyle("Headline10015","color","red");
+$scope.SetObjectStyle("Ellipse115","fill","red");
+} else {
+};
+if ($App.aa15 == "g") {
+$scope.SetObjectStyle("Headline10015","color","green");
+$scope.SetObjectStyle("Ellipse115","fill","green");
+} else {
+};
+if ($App.aa15 == "b") {
+$scope.SetObjectStyle("Headline10015","color","blue");
+$scope.SetObjectStyle("Ellipse115","fill","blue");
+} else {
+};
+if ($App.aa16 == "r") {
+$scope.SetObjectStyle("Headline10016","color","red");
+$scope.SetObjectStyle("Ellipse116","fill","red");
+} else {
+};
+if ($App.aa16 == "g") {
+$scope.SetObjectStyle("Headline10016","color","green");
+$scope.SetObjectStyle("Ellipse116","fill","green");
+} else {
+};
+if ($App.aa16 == "b") {
+$scope.SetObjectStyle("Headline10016","color","blue");
+$scope.SetObjectStyle("Ellipse116","fill","blue");
+} else {
+};
+if ($App.aa17 == "r") {
+$scope.SetObjectStyle("Headline10017","color","red");
+$scope.SetObjectStyle("Ellipse117","fill","red");
+} else {
+};
+if ($App.aa17 == "g") {
+$scope.SetObjectStyle("Headline10017","color","green");
+$scope.SetObjectStyle("Ellipse117","fill","green");
+} else {
+};
+if ($App.aa17 == "b") {
+$scope.SetObjectStyle("Headline10017","color","blue");
+$scope.SetObjectStyle("Ellipse117","fill","blue");
+} else {
+};
+if ($App.aa18 == "r") {
+$scope.SetObjectStyle("Headline10018","color","red");
+$scope.SetObjectStyle("Ellipse118","fill","red");
+} else {
+};
+if ($App.aa18 == "g") {
+$scope.SetObjectStyle("Headline10018","color","green");
+$scope.SetObjectStyle("Ellipse118","fill","green");
+} else {
+};
+if ($App.aa18 == "b") {
+$scope.SetObjectStyle("Headline10018","color","blue");
+$scope.SetObjectStyle("Ellipse118","fill","blue");
+} else {
+};
+if ($App.aa19 == "r") {
+$scope.SetObjectStyle("Headline10019","color","red");
+$scope.SetObjectStyle("Ellipse119","fill","red");
+} else {
+};
+if ($App.aa19 == "g") {
+$scope.SetObjectStyle("Headline10019","color","green");
+$scope.SetObjectStyle("Ellipse119","fill","green");
+} else {
+};
+if ($App.aa19 == "b") {
+$scope.SetObjectStyle("Headline10019","color","blue");
+$scope.SetObjectStyle("Ellipse119","fill","blue");
+} else {
+};
+if ($App.aa20 == "r") {
+$scope.SetObjectStyle("Headline10020","color","red");
+$scope.SetObjectStyle("Ellipse120","fill","red");
+} else {
+};
+if ($App.aa20 == "g") {
+$scope.SetObjectStyle("Headline10020","color","green");
+$scope.SetObjectStyle("Ellipse120","fill","green");
+} else {
+};
+if ($App.aa20 == "b") {
+$scope.SetObjectStyle("Headline10020","color","blue");
+$scope.SetObjectStyle("Ellipse120","fill","blue");
+} else {
+};
+if ($App.aa21 == "r") {
+$scope.SetObjectStyle("Headline10021","color","red");
+$scope.SetObjectStyle("Ellipse121","fill","red");
+} else {
+};
+if ($App.aa21 == "g") {
+$scope.SetObjectStyle("Headline10021","color","green");
+$scope.SetObjectStyle("Ellipse121","fill","green");
+} else {
+};
+if ($App.aa21 == "b") {
+$scope.SetObjectStyle("Headline10021","color","blue");
+$scope.SetObjectStyle("Ellipse121","fill","blue");
+} else {
+};
+if ($App.aa22 == "r") {
+$scope.SetObjectStyle("Headline10022","color","red");
+$scope.SetObjectStyle("Ellipse122","fill","red");
+} else {
+};
+if ($App.aa22 == "g") {
+$scope.SetObjectStyle("Headline10022","color","green");
+$scope.SetObjectStyle("Ellipse122","fill","green");
+} else {
+};
+if ($App.aa22 == "b") {
+$scope.SetObjectStyle("Headline10022","color","blue");
+$scope.SetObjectStyle("Ellipse122","fill","blue");
+} else {
+};
+if ($App.aa23 == "r") {
+$scope.SetObjectStyle("Headline10023","color","red");
+$scope.SetObjectStyle("Ellipse123","fill","red");
+} else {
+};
+if ($App.aa23 == "g") {
+$scope.SetObjectStyle("Headline10023","color","green");
+$scope.SetObjectStyle("Ellipse123","fill","green");
+} else {
+};
+if ($App.aa23 == "b") {
+$scope.SetObjectStyle("Headline10023","color","blue");
+$scope.SetObjectStyle("Ellipse123","fill","blue");
+} else {
+};
+if ($App.aa24 == "r") {
+$scope.SetObjectStyle("Headline10024","color","red");
+$scope.SetObjectStyle("Ellipse124","fill","red");
+} else {
+};
+if ($App.aa24 == "g") {
+$scope.SetObjectStyle("Headline10024","color","green");
+$scope.SetObjectStyle("Ellipse124","fill","green");
+} else {
+};
+if ($App.aa24 == "b") {
+$scope.SetObjectStyle("Headline10024","color","blue");
+$scope.SetObjectStyle("Ellipse124","fill","blue");
+} else {
+};
+if ($App.aa25 == "r") {
+$scope.SetObjectStyle("Headline10025","color","red");
+$scope.SetObjectStyle("Ellipse125","fill","red");
+} else {
+};
+if ($App.aa25 == "g") {
+$scope.SetObjectStyle("Headline10025","color","green");
+$scope.SetObjectStyle("Ellipse125","fill","green");
+} else {
+};
+if ($App.aa25 == "b") {
+$scope.SetObjectStyle("Headline10025","color","blue");
+$scope.SetObjectStyle("Ellipse125","fill","blue");
+} else {
+};
+if ($App.aa26 == "r") {
+$scope.SetObjectStyle("Headline10026","color","red");
+$scope.SetObjectStyle("Ellipse126","fill","red");
+} else {
+};
+if ($App.aa26 == "g") {
+$scope.SetObjectStyle("Headline10026","color","green");
+$scope.SetObjectStyle("Ellipse126","fill","green");
+} else {
+};
+if ($App.aa26 == "b") {
+$scope.SetObjectStyle("Headline10026","color","blue");
+$scope.SetObjectStyle("Ellipse126","fill","blue");
+} else {
+};
+if ($App.aa27 == "r") {
+$scope.SetObjectStyle("Headline10027","color","red");
+$scope.SetObjectStyle("Ellipse127","fill","red");
+} else {
+};
+if ($App.aa27 == "g") {
+$scope.SetObjectStyle("Headline10027","color","green");
+$scope.SetObjectStyle("Ellipse127","fill","green");
+} else {
+};
+if ($App.aa27 == "b") {
+$scope.SetObjectStyle("Headline10027","color","blue");
+$scope.SetObjectStyle("Ellipse127","fill","blue");
+} else {
+};
+if ($App.aa28 == "r") {
+$scope.SetObjectStyle("Headline10028","color","red");
+$scope.SetObjectStyle("Ellipse128","fill","red");
+} else {
+};
+if ($App.aa28 == "g") {
+$scope.SetObjectStyle("Headline10028","color","green");
+$scope.SetObjectStyle("Ellipse128","fill","green");
+} else {
+};
+if ($App.aa28 == "b") {
+$scope.SetObjectStyle("Headline10028","color","blue");
+$scope.SetObjectStyle("Ellipse128","fill","blue");
+} else {
+};
+if ($App.aa29 == "r") {
+$scope.SetObjectStyle("Headline10029","color","red");
+$scope.SetObjectStyle("Ellipse129","fill","red");
+} else {
+};
+if ($App.aa29 == "g") {
+$scope.SetObjectStyle("Headline10029","color","green");
+$scope.SetObjectStyle("Ellipse129","fill","green");
+} else {
+};
+if ($App.aa29 == "b") {
+$scope.SetObjectStyle("Headline10029","color","blue");
+$scope.SetObjectStyle("Ellipse129","fill","blue");
+} else {
+};
+if ($App.aa30 == "r") {
+$scope.SetObjectStyle("Headline10030","color","red");
+$scope.SetObjectStyle("Ellipse130","fill","red");
+} else {
+};
+if ($App.aa30 == "g") {
+$scope.SetObjectStyle("Headline10030","color","green");
+$scope.SetObjectStyle("Ellipse130","fill","green");
+} else {
+};
+if ($App.aa30 == "b") {
+$scope.SetObjectStyle("Headline10030","color","blue");
+$scope.SetObjectStyle("Ellipse130","fill","blue");
+} else {
+};
+if ($App.aa31 == "r") {
+$scope.SetObjectStyle("Headline10031","color","red");
+$scope.SetObjectStyle("Ellipse131","fill","red");
+} else {
+};
+if ($App.aa31 == "g") {
+$scope.SetObjectStyle("Headline10031","color","green");
+$scope.SetObjectStyle("Ellipse131","fill","green");
+} else {
+};
+if ($App.aa31 == "b") {
+$scope.SetObjectStyle("Headline10031","color","blue");
+$scope.SetObjectStyle("Ellipse131","fill","blue");
+} else {
+};
+if ($App.aa32 == "r") {
+$scope.SetObjectStyle("Headline10032","color","red");
+$scope.SetObjectStyle("Ellipse132","fill","red");
+} else {
+};
+if ($App.aa32 == "g") {
+$scope.SetObjectStyle("Headline10032","color","green");
+$scope.SetObjectStyle("Ellipse132","fill","green");
+} else {
+};
+if ($App.aa32 == "b") {
+$scope.SetObjectStyle("Headline10032","color","blue");
+$scope.SetObjectStyle("Ellipse132","fill","blue");
+} else {
+};
+$App.speed01 = localStorage.getItem("speed01");
+$App.speed02 = localStorage.getItem("speed02");
+$App.speed03 = localStorage.getItem("speed03");
+$App.speed04 = localStorage.getItem("speed04");
+$App.speed05 = localStorage.getItem("speed05");
+$App.speed06 = localStorage.getItem("speed06");
+$App.speed07 = localStorage.getItem("speed07");
+$App.speed08 = localStorage.getItem("speed08");
+$App.speed09 = localStorage.getItem("speed09");
+$App.speed10 = localStorage.getItem("speed10");
+$App.speed11 = localStorage.getItem("speed11");
+$App.speed12 = localStorage.getItem("speed12");
+$App.speed13 = localStorage.getItem("speed13");
+$App.speed14 = localStorage.getItem("speed14");
+$App.speed15 = localStorage.getItem("speed15");
+$App.speed16 = localStorage.getItem("speed16");
+$App.speed17 = localStorage.getItem("speed17");
+$App.speed18 = localStorage.getItem("speed18");
+$App.speed19 = localStorage.getItem("speed19");
+$App.speed20 = localStorage.getItem("speed20");
+$App.speed21 = localStorage.getItem("speed21");
+$App.speed22 = localStorage.getItem("speed22");
+$App.speed23 = localStorage.getItem("speed23");
+$App.speed24 = localStorage.getItem("speed24");
+$App.speed25 = localStorage.getItem("speed25");
+$App.speed26 = localStorage.getItem("speed26");
+$App.speed27 = localStorage.getItem("speed27");
+$App.speed28 = localStorage.getItem("speed28");
+$App.speed29 = localStorage.getItem("speed29");
+$App.speed30 = localStorage.getItem("speed30");
+$App.speed31 = localStorage.getItem("speed31");
+$App.speed32 = localStorage.getItem("speed32");
+$App.speed01a = localStorage.getItem("speed01a");
+$App.speed02a = localStorage.getItem("speed02a");
+$App.speed03a = localStorage.getItem("speed03a");
+$App.speed04a = localStorage.getItem("speed04a");
+$App.speed05a = localStorage.getItem("speed05a");
+$App.speed06a = localStorage.getItem("speed06a");
+$App.speed07a = localStorage.getItem("speed07a");
+$App.speed08a = localStorage.getItem("speed08a");
+$App.speed09a = localStorage.getItem("speed09a");
+$App.speed10a = localStorage.getItem("speed10a");
+$App.speed11a = localStorage.getItem("speed11a");
+$App.speed12a = localStorage.getItem("speed12a");
+$App.speed13a = localStorage.getItem("speed13a");
+$App.speed14a = localStorage.getItem("speed14a");
+$App.speed15a = localStorage.getItem("speed15a");
+$App.speed16a = localStorage.getItem("speed16a");
+$App.speed17a = localStorage.getItem("speed17a");
+$App.speed18a = localStorage.getItem("speed18a");
+$App.speed19a = localStorage.getItem("speed19a");
+$App.speed20a = localStorage.getItem("speed20a");
+$App.speed21a = localStorage.getItem("speed21a");
+$App.speed22a = localStorage.getItem("speed22a");
+$App.speed23a = localStorage.getItem("speed23a");
+$App.speed24a = localStorage.getItem("speed24a");
+$App.speed25a = localStorage.getItem("speed25a");
+$App.speed26a = localStorage.getItem("speed26a");
+$App.speed27a = localStorage.getItem("speed27a");
+$App.speed28a = localStorage.getItem("speed28a");
+$App.speed29a = localStorage.getItem("speed29a");
+$App.speed30a = localStorage.getItem("speed30a");
+$App.speed31a = localStorage.getItem("speed31a");
+$App.speed32a = localStorage.getItem("speed32a");
+$App.speed01b = localStorage.getItem("speed01b");
+$App.speed02b = localStorage.getItem("speed02b");
+$App.speed03b = localStorage.getItem("speed03b");
+$App.speed04b = localStorage.getItem("speed04b");
+$App.speed05b = localStorage.getItem("speed05b");
+$App.speed06b = localStorage.getItem("speed06b");
+$App.speed07b = localStorage.getItem("speed07b");
+$App.speed08b = localStorage.getItem("speed08b");
+$App.speed09b = localStorage.getItem("speed09b");
+$App.speed10b = localStorage.getItem("speed10b");
+$App.speed11b = localStorage.getItem("speed11b");
+$App.speed12b = localStorage.getItem("speed12b");
+$App.speed13b = localStorage.getItem("speed13b");
+$App.speed14b = localStorage.getItem("speed14b");
+$App.speed15b = localStorage.getItem("speed15b");
+$App.speed16b = localStorage.getItem("speed16b");
+$App.speed17b = localStorage.getItem("speed17b");
+$App.speed18b = localStorage.getItem("speed18b");
+$App.speed19b = localStorage.getItem("speed19b");
+$App.speed20b = localStorage.getItem("speed20b");
+$App.speed21b = localStorage.getItem("speed21b");
+$App.speed22b = localStorage.getItem("speed22b");
+$App.speed23b = localStorage.getItem("speed23b");
+$App.speed24b = localStorage.getItem("speed24b");
+$App.speed25b = localStorage.getItem("speed25b");
+$App.speed26b = localStorage.getItem("speed26b");
+$App.speed27b = localStorage.getItem("speed27b");
+$App.speed28b = localStorage.getItem("speed28b");
+$App.speed29b = localStorage.getItem("speed29b");
+$App.speed30b = localStorage.getItem("speed30b");
+$App.speed31b = localStorage.getItem("speed31b");
+$App.speed32b = localStorage.getItem("speed32b");
+$App.speed01c = localStorage.getItem("speed01c");
+$App.speed02c = localStorage.getItem("speed02c");
+$App.speed03c = localStorage.getItem("speed03c");
+$App.speed04c = localStorage.getItem("speed04c");
+$App.speed05c = localStorage.getItem("speed05c");
+$App.speed06c = localStorage.getItem("speed06c");
+$App.speed07c = localStorage.getItem("speed07c");
+$App.speed08c = localStorage.getItem("speed08c");
+$App.speed09c = localStorage.getItem("speed09c");
+$App.speed10c = localStorage.getItem("speed10c");
+$App.speed11c = localStorage.getItem("speed11c");
+$App.speed12c = localStorage.getItem("speed12c");
+$App.speed13c = localStorage.getItem("speed13c");
+$App.speed14c = localStorage.getItem("speed14c");
+$App.speed15c = localStorage.getItem("speed15c");
+$App.speed16c = localStorage.getItem("speed16c");
+$App.speed17c = localStorage.getItem("speed17c");
+$App.speed18c = localStorage.getItem("speed18c");
+$App.speed19c = localStorage.getItem("speed19c");
+$App.speed20c = localStorage.getItem("speed20c");
+$App.speed21c = localStorage.getItem("speed21c");
+$App.speed22c = localStorage.getItem("speed22c");
+$App.speed23c = localStorage.getItem("speed23c");
+$App.speed24c = localStorage.getItem("speed24c");
+$App.speed25c = localStorage.getItem("speed25c");
+$App.speed26c = localStorage.getItem("speed26c");
+$App.speed27c = localStorage.getItem("speed27c");
+$App.speed28c = localStorage.getItem("speed28c");
+$App.speed29c = localStorage.getItem("speed29c");
+$App.speed30c = localStorage.getItem("speed30c");
+$App.speed31c = localStorage.getItem("speed31c");
+$App.speed32c = localStorage.getItem("speed32c");
+$App.speed01d = localStorage.getItem("speed01d");
+$App.speed02d = localStorage.getItem("speed02d");
+$App.speed03d = localStorage.getItem("speed03d");
+$App.speed04d = localStorage.getItem("speed04d");
+$App.speed05d = localStorage.getItem("speed05d");
+$App.speed06d = localStorage.getItem("speed06d");
+$App.speed07d = localStorage.getItem("speed07d");
+$App.speed08d = localStorage.getItem("speed08d");
+$App.speed09d = localStorage.getItem("speed09d");
+$App.speed10d = localStorage.getItem("speed10d");
+$App.speed11d = localStorage.getItem("speed11d");
+$App.speed12d = localStorage.getItem("speed12d");
+$App.speed13d = localStorage.getItem("speed13d");
+$App.speed14d = localStorage.getItem("speed14d");
+$App.speed15d = localStorage.getItem("speed15d");
+$App.speed16d = localStorage.getItem("speed16d");
+$App.speed17d = localStorage.getItem("speed17d");
+$App.speed18d = localStorage.getItem("speed18d");
+$App.speed19d = localStorage.getItem("speed19d");
+$App.speed20d = localStorage.getItem("speed20d");
+$App.speed21d = localStorage.getItem("speed21d");
+$App.speed22d = localStorage.getItem("speed22d");
+$App.speed23d = localStorage.getItem("speed23d");
+$App.speed24d = localStorage.getItem("speed24d");
+$App.speed25d = localStorage.getItem("speed25d");
+$App.speed26d = localStorage.getItem("speed26d");
+$App.speed27d = localStorage.getItem("speed27d");
+$App.speed28d = localStorage.getItem("speed28d");
+$App.speed29d = localStorage.getItem("speed29d");
+$App.speed30d = localStorage.getItem("speed30d");
+$App.speed31d = localStorage.getItem("speed31d");
+$App.speed32d = localStorage.getItem("speed32d");
+$App.speed01e = localStorage.getItem("speed01e");
+$App.speed02e = localStorage.getItem("speed02e");
+$App.speed03e = localStorage.getItem("speed03e");
+$App.speed04e = localStorage.getItem("speed04e");
+$App.speed05e = localStorage.getItem("speed05e");
+$App.speed06e = localStorage.getItem("speed06e");
+$App.speed07e = localStorage.getItem("speed07e");
+$App.speed08e = localStorage.getItem("speed08e");
+$App.speed09e = localStorage.getItem("speed09e");
+$App.speed10e = localStorage.getItem("speed10e");
+$App.speed11e = localStorage.getItem("speed11e");
+$App.speed12e = localStorage.getItem("speed12e");
+$App.speed13e = localStorage.getItem("speed13e");
+$App.speed14e = localStorage.getItem("speed14e");
+$App.speed15e = localStorage.getItem("speed15e");
+$App.speed16e = localStorage.getItem("speed16e");
+$App.speed17e = localStorage.getItem("speed17e");
+$App.speed18e = localStorage.getItem("speed18e");
+$App.speed19e = localStorage.getItem("speed19e");
+$App.speed20e = localStorage.getItem("speed20e");
+$App.speed21e = localStorage.getItem("speed21e");
+$App.speed22e = localStorage.getItem("speed22e");
+$App.speed23e = localStorage.getItem("speed23e");
+$App.speed24e = localStorage.getItem("speed24e");
+$App.speed25e = localStorage.getItem("speed25e");
+$App.speed26e = localStorage.getItem("speed26e");
+$App.speed27e = localStorage.getItem("speed27e");
+$App.speed28e = localStorage.getItem("speed28e");
+$App.speed29e = localStorage.getItem("speed29e");
+$App.speed30e = localStorage.getItem("speed30e");
+$App.speed31e = localStorage.getItem("speed31e");
+$App.speed32e = localStorage.getItem("speed32e");
+$App.a1a1 = localStorage.getItem("a1a1");
+$App.a1a2 = localStorage.getItem("a1a2");
+$App.a1a3 = localStorage.getItem("a1a3");
+$App.a1a4 = localStorage.getItem("a1a4");
+$App.a1a5 = localStorage.getItem("a1a5");
+$App.a2a1 = localStorage.getItem("a2a1");
+$App.a2a2 = localStorage.getItem("a2a2");
+$App.a2a3 = localStorage.getItem("a2a3");
+$App.a2a4 = localStorage.getItem("a2a4");
+$App.a2a5 = localStorage.getItem("a2a5");
+$App.a3a1 = localStorage.getItem("a3a1");
+$App.a3a2 = localStorage.getItem("a3a2");
+$App.a3a3 = localStorage.getItem("a3a3");
+$App.a3a4 = localStorage.getItem("a3a4");
+$App.a3a5 = localStorage.getItem("a3a5");
+$App.a4a1 = localStorage.getItem("a4a1");
+$App.a4a2 = localStorage.getItem("a4a2");
+$App.a4a3 = localStorage.getItem("a4a3");
+$App.a4a4 = localStorage.getItem("a4a4");
+$App.a4a5 = localStorage.getItem("a4a5");
+$App.a5a1 = localStorage.getItem("a5a1");
+$App.a5a2 = localStorage.getItem("a5a2");
+$App.a5a3 = localStorage.getItem("a5a3");
+$App.a5a4 = localStorage.getItem("a5a4");
+$App.a5a5 = localStorage.getItem("a5a5");
+$App.a6a1 = localStorage.getItem("a6a1");
+$App.a6a2 = localStorage.getItem("a6a2");
+$App.a6a3 = localStorage.getItem("a6a3");
+$App.a6a4 = localStorage.getItem("a6a4");
+$App.a6a5 = localStorage.getItem("a6a5");
+$App.b1a1 = localStorage.getItem("b1a1");
+$App.b1a2 = localStorage.getItem("b1a2");
+$App.b1a3 = localStorage.getItem("b1a3");
+$App.b1a4 = localStorage.getItem("b1a4");
+$App.b1a5 = localStorage.getItem("b1a5");
+$App.b2a1 = localStorage.getItem("b2a1");
+$App.b2a2 = localStorage.getItem("b2a2");
+$App.b2a3 = localStorage.getItem("b2a3");
+$App.b2a4 = localStorage.getItem("b2a4");
+$App.b2a5 = localStorage.getItem("b2a5");
+$App.b3a1 = localStorage.getItem("b3a1");
+$App.b3a2 = localStorage.getItem("b3a2");
+$App.b3a3 = localStorage.getItem("b3a3");
+$App.b3a4 = localStorage.getItem("b3a4");
+$App.b3a5 = localStorage.getItem("b3a5");
+$App.b4a1 = localStorage.getItem("b4a1");
+$App.b4a2 = localStorage.getItem("b4a2");
+$App.b4a3 = localStorage.getItem("b4a3");
+$App.b4a4 = localStorage.getItem("b4a4");
+$App.b4a5 = localStorage.getItem("b4a5");
+$App.b5a1 = localStorage.getItem("b5a1");
+$App.b5a2 = localStorage.getItem("b5a2");
+$App.b5a3 = localStorage.getItem("b5a3");
+$App.b5a4 = localStorage.getItem("b5a4");
+$App.b5a5 = localStorage.getItem("b5a5");
+$App.b6a1 = localStorage.getItem("b6a1");
+$App.b6a2 = localStorage.getItem("b6a2");
+$App.b6a3 = localStorage.getItem("b6a3");
+$App.b6a4 = localStorage.getItem("b6a4");
+$App.b6a5 = localStorage.getItem("b6a5");
+$App.c1a1 = localStorage.getItem("c1a1");
+$App.c1a2 = localStorage.getItem("c1a2");
+$App.c1a3 = localStorage.getItem("c1a3");
+$App.c1a4 = localStorage.getItem("c1a4");
+$App.c1a5 = localStorage.getItem("c1a5");
+$App.c2a1 = localStorage.getItem("c2a1");
+$App.c2a2 = localStorage.getItem("c2a2");
+$App.c2a3 = localStorage.getItem("c2a3");
+$App.c2a4 = localStorage.getItem("c2a4");
+$App.c2a5 = localStorage.getItem("c2a5");
+$App.c3a1 = localStorage.getItem("c3a1");
+$App.c3a2 = localStorage.getItem("c3a2");
+$App.c3a3 = localStorage.getItem("c3a3");
+$App.c3a4 = localStorage.getItem("c3a4");
+$App.c3a5 = localStorage.getItem("c3a5");
+$App.c4a1 = localStorage.getItem("c4a1");
+$App.c4a2 = localStorage.getItem("c4a2");
+$App.c4a3 = localStorage.getItem("c4a3");
+$App.c4a4 = localStorage.getItem("c4a4");
+$App.c4a5 = localStorage.getItem("c4a5");
+$App.c5a1 = localStorage.getItem("c5a1");
+$App.c5a2 = localStorage.getItem("c5a2");
+$App.c5a3 = localStorage.getItem("c5a3");
+$App.c5a4 = localStorage.getItem("c5a4");
+$App.c5a5 = localStorage.getItem("c5a5");
+$App.c6a1 = localStorage.getItem("c6a1");
+$App.c6a2 = localStorage.getItem("c6a2");
+$App.c6a3 = localStorage.getItem("c6a3");
+$App.c6a4 = localStorage.getItem("c6a4");
+$App.c6a5 = localStorage.getItem("c6a5");
+$App.d1a1 = localStorage.getItem("d1a1");
+$App.d1a2 = localStorage.getItem("d1a2");
+$App.d1a3 = localStorage.getItem("d1a3");
+$App.d1a4 = localStorage.getItem("d1a4");
+$App.d1a5 = localStorage.getItem("d1a5");
+$App.d2a1 = localStorage.getItem("d2a1");
+$App.d2a2 = localStorage.getItem("d2a2");
+$App.d2a3 = localStorage.getItem("d2a3");
+$App.d2a4 = localStorage.getItem("d2a4");
+$App.d2a5 = localStorage.getItem("d2a5");
+$App.d3a1 = localStorage.getItem("d3a1");
+$App.d3a2 = localStorage.getItem("d3a2");
+$App.d3a3 = localStorage.getItem("d3a3");
+$App.d3a4 = localStorage.getItem("d3a4");
+$App.d3a5 = localStorage.getItem("d3a5");
+$App.d4a1 = localStorage.getItem("d4a1");
+$App.d4a2 = localStorage.getItem("d4a2");
+$App.d4a3 = localStorage.getItem("d4a3");
+$App.d4a4 = localStorage.getItem("d4a4");
+$App.d4a5 = localStorage.getItem("d4a5");
+$App.d5a1 = localStorage.getItem("d5a1");
+$App.d5a2 = localStorage.getItem("d5a2");
+$App.d5a3 = localStorage.getItem("d5a3");
+$App.d5a4 = localStorage.getItem("d5a4");
+$App.d5a5 = localStorage.getItem("d5a5");
+$App.d6a1 = localStorage.getItem("d6a1");
+$App.d6a2 = localStorage.getItem("d6a2");
+$App.d6a3 = localStorage.getItem("d6a3");
+$App.d6a4 = localStorage.getItem("d6a4");
+$App.d6a5 = localStorage.getItem("d6a5");
+$App.e1a1 = localStorage.getItem("e1a1");
+$App.e1a2 = localStorage.getItem("e1a2");
+$App.e1a3 = localStorage.getItem("e1a3");
+$App.e1a4 = localStorage.getItem("e1a4");
+$App.e1a5 = localStorage.getItem("e1a5");
+$App.e2a1 = localStorage.getItem("e2a1");
+$App.e2a2 = localStorage.getItem("e2a2");
+$App.e2a3 = localStorage.getItem("e2a3");
+$App.e2a4 = localStorage.getItem("e2a4");
+$App.e2a5 = localStorage.getItem("e2a5");
+$App.e3a1 = localStorage.getItem("e3a1");
+$App.e3a2 = localStorage.getItem("e3a2");
+$App.e3a3 = localStorage.getItem("e3a3");
+$App.e3a4 = localStorage.getItem("e3a4");
+$App.e3a5 = localStorage.getItem("e3a5");
+$App.e4a1 = localStorage.getItem("e4a1");
+$App.e4a2 = localStorage.getItem("e4a2");
+$App.e4a3 = localStorage.getItem("e4a3");
+$App.e4a4 = localStorage.getItem("e4a4");
+$App.e4a5 = localStorage.getItem("e4a5");
+$App.e5a1 = localStorage.getItem("e5a1");
+$App.e5a2 = localStorage.getItem("e5a2");
+$App.e5a3 = localStorage.getItem("e5a3");
+$App.e5a4 = localStorage.getItem("e5a4");
+$App.e5a5 = localStorage.getItem("e5a5");
+$App.e6a1 = localStorage.getItem("e6a1");
+$App.e6a2 = localStorage.getItem("e6a2");
+$App.e6a3 = localStorage.getItem("e6a3");
+$App.e6a4 = localStorage.getItem("e6a4");
+$App.e6a5 = localStorage.getItem("e6a5");
+$App.f1a1 = localStorage.getItem("f1a1");
+$App.f1a2 = localStorage.getItem("f1a2");
+$App.f1a3 = localStorage.getItem("f1a3");
+$App.f1a4 = localStorage.getItem("f1a4");
+$App.f1a5 = localStorage.getItem("f1a5");
+$App.f2a1 = localStorage.getItem("f2a1");
+$App.f2a2 = localStorage.getItem("f2a2");
+$App.f2a3 = localStorage.getItem("f2a3");
+$App.f2a4 = localStorage.getItem("f2a4");
+$App.f2a5 = localStorage.getItem("f2a5");
+$App.f3a1 = localStorage.getItem("f3a1");
+$App.f3a2 = localStorage.getItem("f3a2");
+$App.f3a3 = localStorage.getItem("f3a3");
+$App.f3a4 = localStorage.getItem("f3a4");
+$App.f3a5 = localStorage.getItem("f3a5");
+$App.f4a1 = localStorage.getItem("f4a1");
+$App.f4a2 = localStorage.getItem("f4a2");
+$App.f4a3 = localStorage.getItem("f4a3");
+$App.f4a4 = localStorage.getItem("f4a4");
+$App.f4a5 = localStorage.getItem("f4a5");
+$App.g1a1 = localStorage.getItem("g1a1");
+$App.g1a2 = localStorage.getItem("g1a2");
+$App.g1a3 = localStorage.getItem("g1a3");
+$App.g1a4 = localStorage.getItem("g1a4");
+$App.g1a5 = localStorage.getItem("g1a5");
+$App.g2a1 = localStorage.getItem("g2a1");
+$App.g2a2 = localStorage.getItem("g2a2");
+$App.g2a3 = localStorage.getItem("g2a3");
+$App.g2a4 = localStorage.getItem("g2a4");
+$App.g2a5 = localStorage.getItem("g2a5");
+$App.g3a1 = localStorage.getItem("g3a1");
+$App.g3a2 = localStorage.getItem("g3a2");
+$App.g3a3 = localStorage.getItem("g3a3");
+$App.g3a4 = localStorage.getItem("g3a4");
+$App.g3a5 = localStorage.getItem("g3a5");
+$App.g4a1 = localStorage.getItem("g4a1");
+$App.g4a2 = localStorage.getItem("g4a2");
+$App.g4a3 = localStorage.getItem("g4a3");
+$App.g4a4 = localStorage.getItem("g4a4");
+$App.g4a5 = localStorage.getItem("g4a5");
+$App.h1a1 = localStorage.getItem("h1a1");
+$App.h1a2 = localStorage.getItem("h1a2");
+$App.h1a3 = localStorage.getItem("h1a3");
+$App.h1a4 = localStorage.getItem("h1a4");
+$App.h1a5 = localStorage.getItem("h1a5");
+$App.h2a1 = localStorage.getItem("h2a1");
+$App.h2a2 = localStorage.getItem("h2a2");
+$App.h2a3 = localStorage.getItem("h2a3");
+$App.h2a4 = localStorage.getItem("h2a4");
+$App.h2a5 = localStorage.getItem("h2a5");
+$App.h3a1 = localStorage.getItem("h3a1");
+$App.h3a2 = localStorage.getItem("h3a2");
+$App.h3a3 = localStorage.getItem("h3a3");
+$App.h3a4 = localStorage.getItem("h3a4");
+$App.h3a5 = localStorage.getItem("h3a5");
+$App.h4a1 = localStorage.getItem("h4a1");
+$App.h4a2 = localStorage.getItem("h4a2");
+$App.h4a3 = localStorage.getItem("h4a3");
+$App.h4a4 = localStorage.getItem("h4a4");
+$App.h4a5 = localStorage.getItem("h4a5");
+$App.i1a1 = localStorage.getItem("i1a1");
+$App.i1a2 = localStorage.getItem("i1a2");
+$App.i1a3 = localStorage.getItem("i1a3");
+$App.i1a4 = localStorage.getItem("i1a4");
+$App.i1a5 = localStorage.getItem("i1a5");
+$App.i2a1 = localStorage.getItem("i2a1");
+$App.i2a2 = localStorage.getItem("i2a2");
+$App.i2a3 = localStorage.getItem("i2a3");
+$App.i2a4 = localStorage.getItem("i2a4");
+$App.i2a5 = localStorage.getItem("i2a5");
+$App.i3a1 = localStorage.getItem("i3a1");
+$App.i3a2 = localStorage.getItem("i3a2");
+$App.i3a3 = localStorage.getItem("i3a3");
+$App.i3a4 = localStorage.getItem("i3a4");
+$App.i3a5 = localStorage.getItem("i3a5");
+$App.i4a1 = localStorage.getItem("i4a1");
+$App.i4a2 = localStorage.getItem("i4a2");
+$App.i4a3 = localStorage.getItem("i4a3");
+$App.i4a4 = localStorage.getItem("i4a4");
+$App.i4a5 = localStorage.getItem("i4a5");
+$App.j1a1 = localStorage.getItem("j1a1");
+$App.j1a2 = localStorage.getItem("j1a2");
+$App.j1a3 = localStorage.getItem("j1a3");
+$App.j1a4 = localStorage.getItem("j1a4");
+$App.j1a5 = localStorage.getItem("j1a5");
+$App.j2a1 = localStorage.getItem("j2a1");
+$App.j2a2 = localStorage.getItem("j2a2");
+$App.j2a3 = localStorage.getItem("j2a3");
+$App.j2a4 = localStorage.getItem("j2a4");
+$App.j2a5 = localStorage.getItem("j2a5");
+$App.j3a1 = localStorage.getItem("j3a1");
+$App.j3a2 = localStorage.getItem("j3a2");
+$App.j3a3 = localStorage.getItem("j3a3");
+$App.j3a4 = localStorage.getItem("j3a4");
+$App.j3a5 = localStorage.getItem("j3a5");
+$App.j4a1 = localStorage.getItem("j4a1");
+$App.j4a2 = localStorage.getItem("j4a2");
+$App.j4a3 = localStorage.getItem("j4a3");
+$App.j4a4 = localStorage.getItem("j4a4");
+$App.j4a5 = localStorage.getItem("j4a5");
+$App.k1a1 = localStorage.getItem("k1a1");
+$App.k1a2 = localStorage.getItem("k1a2");
+$App.k1a3 = localStorage.getItem("k1a3");
+$App.k1a4 = localStorage.getItem("k1a4");
+$App.k1a5 = localStorage.getItem("k1a5");
+$App.k2a1 = localStorage.getItem("k2a1");
+$App.k2a2 = localStorage.getItem("k2a2");
+$App.k2a3 = localStorage.getItem("k2a3");
+$App.k2a4 = localStorage.getItem("k2a4");
+$App.k2a5 = localStorage.getItem("k2a5");
+$App.k3a1 = localStorage.getItem("k3a1");
+$App.k3a2 = localStorage.getItem("k3a2");
+$App.k3a3 = localStorage.getItem("k3a3");
+$App.k3a4 = localStorage.getItem("k3a4");
+$App.k3a5 = localStorage.getItem("k3a5");
+$App.k4a1 = localStorage.getItem("k4a1");
+$App.k4a2 = localStorage.getItem("k4a2");
+$App.k4a3 = localStorage.getItem("k4a3");
+$App.k4a4 = localStorage.getItem("k4a4");
+$App.k4a5 = localStorage.getItem("k4a5");
+$App.l1a1 = localStorage.getItem("l1a1");
+$App.l1a2 = localStorage.getItem("l1a2");
+$App.l1a3 = localStorage.getItem("l1a3");
+$App.l1a4 = localStorage.getItem("l1a4");
+$App.l1a5 = localStorage.getItem("l1a5");
+$App.l2a1 = localStorage.getItem("l2a1");
+$App.l2a2 = localStorage.getItem("l2a2");
+$App.l2a3 = localStorage.getItem("l2a3");
+$App.l2a4 = localStorage.getItem("l2a4");
+$App.l2a5 = localStorage.getItem("l2a5");
+$App.l3a1 = localStorage.getItem("l3a1");
+$App.l3a2 = localStorage.getItem("l3a2");
+$App.l3a3 = localStorage.getItem("l3a3");
+$App.l3a4 = localStorage.getItem("l3a4");
+$App.l3a5 = localStorage.getItem("l3a5");
+$App.l4a1 = localStorage.getItem("l4a1");
+$App.l4a2 = localStorage.getItem("l4a2");
+$App.l4a3 = localStorage.getItem("l4a3");
+$App.l4a4 = localStorage.getItem("l4a4");
+$App.l4a5 = localStorage.getItem("l4a5");
+$App.m1a1 = localStorage.getItem("m1a1");
+$App.m1a2 = localStorage.getItem("m1a2");
+$App.m1a3 = localStorage.getItem("m1a3");
+$App.m1a4 = localStorage.getItem("m1a4");
+$App.m1a5 = localStorage.getItem("m1a5");
+$App.m2a1 = localStorage.getItem("m2a1");
+$App.m2a2 = localStorage.getItem("m2a2");
+$App.m2a3 = localStorage.getItem("m2a3");
+$App.m2a4 = localStorage.getItem("m2a4");
+$App.m2a5 = localStorage.getItem("m2a5");
+$App.m3a1 = localStorage.getItem("m3a1");
+$App.m3a2 = localStorage.getItem("m3a2");
+$App.m3a3 = localStorage.getItem("m3a3");
+$App.m3a4 = localStorage.getItem("m3a4");
+$App.m3a5 = localStorage.getItem("m3a5");
+$App.m4a1 = localStorage.getItem("m4a1");
+$App.m4a2 = localStorage.getItem("m4a2");
+$App.m4a3 = localStorage.getItem("m4a3");
+$App.m4a4 = localStorage.getItem("m4a4");
+$App.m4a5 = localStorage.getItem("m4a5");
+$App.n1a1 = localStorage.getItem("n1a1");
+$App.n1a2 = localStorage.getItem("n1a2");
+$App.n1a3 = localStorage.getItem("n1a3");
+$App.n1a4 = localStorage.getItem("n1a4");
+$App.n1a5 = localStorage.getItem("n1a5");
+$App.n2a1 = localStorage.getItem("n2a1");
+$App.n2a2 = localStorage.getItem("n2a2");
+$App.n2a3 = localStorage.getItem("n2a3");
+$App.n2a4 = localStorage.getItem("n2a4");
+$App.n2a5 = localStorage.getItem("n2a5");
+$App.n3a1 = localStorage.getItem("n3a1");
+$App.n3a2 = localStorage.getItem("n3a2");
+$App.n3a3 = localStorage.getItem("n3a3");
+$App.n3a4 = localStorage.getItem("n3a4");
+$App.n3a5 = localStorage.getItem("n3a5");
+$App.n4a1 = localStorage.getItem("n4a1");
+$App.n4a2 = localStorage.getItem("n4a2");
+$App.n4a3 = localStorage.getItem("n4a3");
+$App.n4a4 = localStorage.getItem("n4a4");
+$App.n4a5 = localStorage.getItem("n4a5");
+$App.o1a1 = localStorage.getItem("o1a1");
+$App.o1a2 = localStorage.getItem("o1a2");
+$App.o1a3 = localStorage.getItem("o1a3");
+$App.o1a4 = localStorage.getItem("o1a4");
+$App.o1a5 = localStorage.getItem("o1a5");
+$App.o2a1 = localStorage.getItem("o2a1");
+$App.o2a2 = localStorage.getItem("o2a2");
+$App.o2a3 = localStorage.getItem("o2a3");
+$App.o2a4 = localStorage.getItem("o2a4");
+$App.o2a5 = localStorage.getItem("o2a5");
+$App.o3a1 = localStorage.getItem("o3a1");
+$App.o3a2 = localStorage.getItem("o3a2");
+$App.o3a3 = localStorage.getItem("o3a3");
+$App.o3a4 = localStorage.getItem("o3a4");
+$App.o3a5 = localStorage.getItem("o3a5");
+$App.o4a1 = localStorage.getItem("o4a1");
+$App.o4a2 = localStorage.getItem("o4a2");
+$App.o4a3 = localStorage.getItem("o4a3");
+$App.o4a4 = localStorage.getItem("o4a4");
+$App.o4a5 = localStorage.getItem("o4a5");
+$App.p1a1 = localStorage.getItem("p1a1");
+$App.p1a2 = localStorage.getItem("p1a2");
+$App.p1a3 = localStorage.getItem("p1a3");
+$App.p1a4 = localStorage.getItem("p1a4");
+$App.p1a5 = localStorage.getItem("p1a5");
+$App.p2a1 = localStorage.getItem("p2a1");
+$App.p2a2 = localStorage.getItem("p2a2");
+$App.p2a3 = localStorage.getItem("p2a3");
+$App.p2a4 = localStorage.getItem("p2a4");
+$App.p2a5 = localStorage.getItem("p2a5");
+$App.p3a1 = localStorage.getItem("p3a1");
+$App.p3a2 = localStorage.getItem("p3a2");
+$App.p3a3 = localStorage.getItem("p3a3");
+$App.p3a4 = localStorage.getItem("p3a4");
+$App.p3a5 = localStorage.getItem("p3a5");
+$App.p4a1 = localStorage.getItem("p4a1");
+$App.p4a2 = localStorage.getItem("p4a2");
+$App.p4a3 = localStorage.getItem("p4a3");
+$App.p4a4 = localStorage.getItem("p4a4");
+$App.p4a5 = localStorage.getItem("p4a5");
+$App.q1a1 = localStorage.getItem("q1a1");
+$App.q1a2 = localStorage.getItem("q1a2");
+$App.q1a3 = localStorage.getItem("q1a3");
+$App.q1a4 = localStorage.getItem("q1a4");
+$App.q1a5 = localStorage.getItem("q1a5");
+$App.q2a1 = localStorage.getItem("q2a1");
+$App.q2a2 = localStorage.getItem("q2a2");
+$App.q2a3 = localStorage.getItem("q2a3");
+$App.q2a4 = localStorage.getItem("q2a4");
+$App.q2a5 = localStorage.getItem("q2a5");
+$App.q3a1 = localStorage.getItem("q3a1");
+$App.q3a2 = localStorage.getItem("q3a2");
+$App.q3a3 = localStorage.getItem("q3a3");
+$App.q3a4 = localStorage.getItem("q3a4");
+$App.q3a5 = localStorage.getItem("q3a5");
+$App.q4a1 = localStorage.getItem("q4a1");
+$App.q4a2 = localStorage.getItem("q4a2");
+$App.q4a3 = localStorage.getItem("q4a3");
+$App.q4a4 = localStorage.getItem("q4a4");
+$App.q4a5 = localStorage.getItem("q4a5");
+$App.r1a1 = localStorage.getItem("r1a1");
+$App.r1a2 = localStorage.getItem("r1a2");
+$App.r1a3 = localStorage.getItem("r1a3");
+$App.r1a4 = localStorage.getItem("r1a4");
+$App.r1a5 = localStorage.getItem("r1a5");
+$App.r2a1 = localStorage.getItem("r2a1");
+$App.r2a2 = localStorage.getItem("r2a2");
+$App.r2a3 = localStorage.getItem("r2a3");
+$App.r2a4 = localStorage.getItem("r2a4");
+$App.r2a5 = localStorage.getItem("r2a5");
+$App.r3a1 = localStorage.getItem("r3a1");
+$App.r3a2 = localStorage.getItem("r3a2");
+$App.r3a3 = localStorage.getItem("r3a3");
+$App.r3a4 = localStorage.getItem("r3a4");
+$App.r3a5 = localStorage.getItem("r3a5");
+$App.r4a1 = localStorage.getItem("r4a1");
+$App.r4a2 = localStorage.getItem("r4a2");
+$App.r4a3 = localStorage.getItem("r4a3");
+$App.r4a4 = localStorage.getItem("r4a4");
+$App.r4a5 = localStorage.getItem("r4a5");
+$App.s1a1 = localStorage.getItem("s1a1");
+$App.s1a2 = localStorage.getItem("s1a2");
+$App.s1a3 = localStorage.getItem("s1a3");
+$App.s1a4 = localStorage.getItem("s1a4");
+$App.s1a5 = localStorage.getItem("s1a5");
+$App.s2a1 = localStorage.getItem("s2a1");
+$App.s2a2 = localStorage.getItem("s2a2");
+$App.s2a3 = localStorage.getItem("s2a3");
+$App.s2a4 = localStorage.getItem("s2a4");
+$App.s2a5 = localStorage.getItem("s2a5");
+$App.s3a1 = localStorage.getItem("s3a1");
+$App.s3a2 = localStorage.getItem("s3a2");
+$App.s3a3 = localStorage.getItem("s3a3");
+$App.s3a4 = localStorage.getItem("s3a4");
+$App.s3a5 = localStorage.getItem("s3a5");
+$App.s4a1 = localStorage.getItem("s4a1");
+$App.s4a2 = localStorage.getItem("s4a2");
+$App.s4a3 = localStorage.getItem("s4a3");
+$App.s4a4 = localStorage.getItem("s4a4");
+$App.s4a5 = localStorage.getItem("s4a5");
+$App.t1a1 = localStorage.getItem("t1a1");
+$App.t1a2 = localStorage.getItem("t1a2");
+$App.t1a3 = localStorage.getItem("t1a3");
+$App.t1a4 = localStorage.getItem("t1a4");
+$App.t1a5 = localStorage.getItem("t1a5");
+$App.t2a1 = localStorage.getItem("t2a1");
+$App.t2a2 = localStorage.getItem("t2a2");
+$App.t2a3 = localStorage.getItem("t2a3");
+$App.t2a4 = localStorage.getItem("t2a4");
+$App.t2a5 = localStorage.getItem("t2a5");
+$App.t3a1 = localStorage.getItem("t3a1");
+$App.t3a2 = localStorage.getItem("t3a2");
+$App.t3a3 = localStorage.getItem("t3a3");
+$App.t3a4 = localStorage.getItem("t3a4");
+$App.t3a5 = localStorage.getItem("t3a5");
+$App.t4a1 = localStorage.getItem("t4a1");
+$App.t4a2 = localStorage.getItem("t4a2");
+$App.t4a3 = localStorage.getItem("t4a3");
+$App.t4a4 = localStorage.getItem("t4a4");
+$App.t4a5 = localStorage.getItem("t4a5");
+$App.u1a1 = localStorage.getItem("u1a1");
+$App.u1a2 = localStorage.getItem("u1a2");
+$App.u1a3 = localStorage.getItem("u1a3");
+$App.u1a4 = localStorage.getItem("u1a4");
+$App.u1a5 = localStorage.getItem("u1a5");
+$App.u2a1 = localStorage.getItem("u2a1");
+$App.u2a2 = localStorage.getItem("u2a2");
+$App.u2a3 = localStorage.getItem("u2a3");
+$App.u2a4 = localStorage.getItem("u2a4");
+$App.u2a5 = localStorage.getItem("u2a5");
+$App.u3a1 = localStorage.getItem("u3a1");
+$App.u3a2 = localStorage.getItem("u3a2");
+$App.u3a3 = localStorage.getItem("u3a3");
+$App.u3a4 = localStorage.getItem("u3a4");
+$App.u3a5 = localStorage.getItem("u3a5");
+$App.u4a1 = localStorage.getItem("u4a1");
+$App.u4a2 = localStorage.getItem("u4a2");
+$App.u4a3 = localStorage.getItem("u4a3");
+$App.u4a4 = localStorage.getItem("u4a4");
+$App.u4a5 = localStorage.getItem("u4a5");
+$App.v1a1 = localStorage.getItem("v1a1");
+$App.v1a2 = localStorage.getItem("v1a2");
+$App.v1a3 = localStorage.getItem("v1a3");
+$App.v1a4 = localStorage.getItem("v1a4");
+$App.v1a5 = localStorage.getItem("v1a5");
+$App.v2a1 = localStorage.getItem("v2a1");
+$App.v2a2 = localStorage.getItem("v2a2");
+$App.v2a3 = localStorage.getItem("v2a3");
+$App.v2a4 = localStorage.getItem("v2a4");
+$App.v2a5 = localStorage.getItem("v2a5");
+$App.v3a1 = localStorage.getItem("v3a1");
+$App.v3a2 = localStorage.getItem("v3a2");
+$App.v3a3 = localStorage.getItem("v3a3");
+$App.v3a4 = localStorage.getItem("v3a4");
+$App.v3a5 = localStorage.getItem("v3a5");
+$App.v4a1 = localStorage.getItem("v4a1");
+$App.v4a2 = localStorage.getItem("v4a2");
+$App.v4a3 = localStorage.getItem("v4a3");
+$App.v4a4 = localStorage.getItem("v4a4");
+$App.v4a5 = localStorage.getItem("v4a5");
+$App.w1a1 = localStorage.getItem("w1a1");
+$App.w1a2 = localStorage.getItem("w1a2");
+$App.w1a3 = localStorage.getItem("w1a3");
+$App.w1a4 = localStorage.getItem("w1a4");
+$App.w1a5 = localStorage.getItem("w1a5");
+$App.w2a1 = localStorage.getItem("w2a1");
+$App.w2a2 = localStorage.getItem("w2a2");
+$App.w2a3 = localStorage.getItem("w2a3");
+$App.w2a4 = localStorage.getItem("w2a4");
+$App.w2a5 = localStorage.getItem("w2a5");
+$App.x1a1 = localStorage.getItem("x1a1");
+$App.x1a2 = localStorage.getItem("x1a2");
+$App.x1a3 = localStorage.getItem("x1a3");
+$App.x1a4 = localStorage.getItem("x1a4");
+$App.x1a5 = localStorage.getItem("x1a5");
+$App.x2a1 = localStorage.getItem("x2a1");
+$App.x2a2 = localStorage.getItem("x2a2");
+$App.x2a3 = localStorage.getItem("x2a3");
+$App.x2a4 = localStorage.getItem("x2a4");
+$App.x2a5 = localStorage.getItem("x2a5");
+$App.y1a1 = localStorage.getItem("y1a1");
+$App.y1a2 = localStorage.getItem("y1a2");
+$App.y1a3 = localStorage.getItem("y1a3");
+$App.y1a4 = localStorage.getItem("y1a4");
+$App.y1a5 = localStorage.getItem("y1a5");
+$App.y2a1 = localStorage.getItem("y2a1");
+$App.y2a2 = localStorage.getItem("y2a2");
+$App.y2a3 = localStorage.getItem("y2a3");
+$App.y2a4 = localStorage.getItem("y2a4");
+$App.y2a5 = localStorage.getItem("y2a5");
+$App.z1a1 = localStorage.getItem("z1a1");
+$App.z1a2 = localStorage.getItem("z1a2");
+$App.z1a3 = localStorage.getItem("z1a3");
+$App.z1a4 = localStorage.getItem("z1a4");
+$App.z1a5 = localStorage.getItem("z1a5");
+$App.z2a1 = localStorage.getItem("z2a1");
+$App.z2a2 = localStorage.getItem("z2a2");
+$App.z2a3 = localStorage.getItem("z2a3");
+$App.z2a4 = localStorage.getItem("z2a4");
+$App.z2a5 = localStorage.getItem("z2a5");
+$App.zt126 = localStorage.getItem("zt126");
+$App.zt226 = localStorage.getItem("zt226");
+$App.zt326 = localStorage.getItem("zt326");
+$App.may260 = localStorage.getItem("may260");
+$App.may261 = localStorage.getItem("may261");
+$App.may262 = localStorage.getItem("may262");
+$App.may263 = localStorage.getItem("may263");
+$App.june260 = localStorage.getItem("june260");
+$App.june261 = localStorage.getItem("june261");
+$App.june262 = localStorage.getItem("june262");
+$App.june263 = localStorage.getItem("june263");
+$App.july260 = localStorage.getItem("july260");
+$App.july261 = localStorage.getItem("july261");
+$App.july262 = localStorage.getItem("july262");
+$App.july263 = localStorage.getItem("july263");
+$App.aug260 = localStorage.getItem("aug260");
+$App.aug261 = localStorage.getItem("aug261");
+$App.aug262 = localStorage.getItem("aug262");
+$App.aug263 = localStorage.getItem("aug263");
+$App.sep260 = localStorage.getItem("sep260");
+$App.sep261 = localStorage.getItem("sep261");
+$App.sep262 = localStorage.getItem("sep262");
+$App.sep263 = localStorage.getItem("sep263");
+$App.oct260 = localStorage.getItem("oct260");
+$App.oct261 = localStorage.getItem("oct261");
+$App.oct262 = localStorage.getItem("oct262");
+$App.oct263 = localStorage.getItem("oct263");
+$App.nov260 = localStorage.getItem("nov260");
+$App.nov261 = localStorage.getItem("nov261");
+$App.nov262 = localStorage.getItem("nov262");
+$App.nov263 = localStorage.getItem("nov263");
+$App.dec260 = localStorage.getItem("dec260");
+$App.dec261 = localStorage.getItem("dec261");
+$App.dec262 = localStorage.getItem("dec262");
+$App.dec263 = localStorage.getItem("dec263");
+$App.monthnotes = localStorage.getItem("monthnotes");
+$App.monthnotes2 = localStorage.getItem("monthnotes2");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Prayer1 = localStorage.getItem("Prayer1");
+$App.Prayer2 = localStorage.getItem("Prayer2");
+$App.Prayer3 = localStorage.getItem("Prayer3");
+$App.Prayer4 = localStorage.getItem("Prayer4");
+$App.Prayer1tit = localStorage.getItem("Prayer1tit");
+$App.Prayer2tit = localStorage.getItem("Prayer2tit");
+$App.Prayer3tit = localStorage.getItem("Prayer3tit");
+$App.Prayer4tit = localStorage.getItem("Prayer4tit");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Prayer1 = localStorage.getItem("Prayer1");
+$App.Prayer2 = localStorage.getItem("Prayer2");
+$App.Prayer3 = localStorage.getItem("Prayer3");
+$App.Prayer4 = localStorage.getItem("Prayer4");
+$App.Prayer1tit = localStorage.getItem("Prayer1tit");
+$App.Prayer2tit = localStorage.getItem("Prayer2tit");
+$App.Prayer3tit = localStorage.getItem("Prayer3tit");
+$App.Prayer4tit = localStorage.getItem("Prayer4tit");
+$App.Read1 = localStorage.getItem("Read1");
+$App.Read2 = localStorage.getItem("Read2");
+$App.Prayer = localStorage.getItem("Prayer");
+$App.Next = localStorage.getItem("Next");
+$App.Me = localStorage.getItem("Me");
+$App.Reps1tit = localStorage.getItem("Reps1tit");
+$App.Reps2tit = localStorage.getItem("Reps2tit");
+$App.Reps3tit = localStorage.getItem("Reps3tit");
+$App.Reps4tit = localStorage.getItem("Reps4tit");
+$App.Reps = localStorage.getItem("Reps");
+$App.Reps1 = localStorage.getItem("Reps1");
+$App.Reps02 = localStorage.getItem("Reps02");
+$App.Reset1 = localStorage.getItem("Reset1");
+$App.Reset2 = localStorage.getItem("Reset2");
+$App.Reset3 = localStorage.getItem("Reset3");
+$App.Reset4 = localStorage.getItem("Reset4");
+$App.Reset5 = localStorage.getItem("Reset5");
+$App.Reset6 = localStorage.getItem("Reset6");
+$App.Reset7 = localStorage.getItem("Reset7");
+$App.Reset8 = localStorage.getItem("Reset8");
+$App.Reset9 = localStorage.getItem("Reset9");
+$App.Reset10 = localStorage.getItem("Reset10");
+$App.Reset11 = localStorage.getItem("Reset11");
+$App.Reset12 = localStorage.getItem("Reset12");
+$App.Reset13 = localStorage.getItem("Reset13");
+$App.Reset14 = localStorage.getItem("Reset14");
+$App.Reset15 = localStorage.getItem("Reset15");
+$App.Reset16 = localStorage.getItem("Reset16");
+$App.Reset1a = localStorage.getItem("Reset1a");
+$App.Reset2a = localStorage.getItem("Reset2a");
+$App.Reset3a = localStorage.getItem("Reset3a");
+$App.Reset4a = localStorage.getItem("Reset4a");
+$App.Reset5a = localStorage.getItem("Reset5a");
+$App.Reset6a = localStorage.getItem("Reset6a");
+$App.Reset7a = localStorage.getItem("Reset7a");
+$App.Reset8a = localStorage.getItem("Reset8a");
+$App.Reset9a = localStorage.getItem("Reset9a");
+$App.Reset10a = localStorage.getItem("Reset10a");
+$App.Reset11a = localStorage.getItem("Reset11a");
+$App.Reset12a = localStorage.getItem("Reset12a");
+$App.Reset13a = localStorage.getItem("Reset13a");
+$App.Reset14a = localStorage.getItem("Reset14a");
+$App.Reset15a = localStorage.getItem("Reset15a");
+$App.Reset16a = localStorage.getItem("Reset16a");
+$App.Homsstuffinote = localStorage.getItem("Homsstuffinote");
+$App.WorkBstuffnote = localStorage.getItem("WorkBstuffnote");
+$App.WorkCstuffnote = localStorage.getItem("WorkCstuffnote");
+$App.WorkDstuffnote = localStorage.getItem("WorkDstuffnote");
+$App.VERSIONRECORD = localStorage.getItem("VERSIONRECORD");
+$App.RecData = localStorage.getItem("RecData");
+$App.HEALTHGENERAL001 = localStorage.getItem("HEALTHGENERAL001");
+$App.project1abT = localStorage.getItem("project1abT");
+$App.project1doc = localStorage.getItem("project1doc");
+$App.project1 = localStorage.getItem("project1");
+$App.Project1Main = localStorage.getItem("Project1Main");
+$App.project1aT = localStorage.getItem("project1aT");
+$App.project1bT = localStorage.getItem("project1bT");
+$App.project1cT = localStorage.getItem("project1cT");
+$App.project1dT = localStorage.getItem("project1dT");
+$App.project1eT = localStorage.getItem("project1eT");
+$App.project1fT = localStorage.getItem("project1fT");
+$App.project1gT = localStorage.getItem("project1gT");
+$App.project1hT = localStorage.getItem("project1hT");
+$App.project1iT = localStorage.getItem("project1jT");
+$App.project1jT = localStorage.getItem("project1jT");
+$App.project1kT = localStorage.getItem("project1kT");
+$App.project1lT = localStorage.getItem("project1lT");
+$App.project1mT = localStorage.getItem("project1mT");
+$App.project1nT = localStorage.getItem("project1nT");
+$App.project1oT = localStorage.getItem("project1oT");
+$App.project1pT = localStorage.getItem("project1pT");
+$App.project1qT = localStorage.getItem("project1qT");
+$App.project1rT = localStorage.getItem("project1rT");
+$App.project1sT = localStorage.getItem("project1sT");
+$App.project1tT = localStorage.getItem("project1tT");
+$App.project1uT = localStorage.getItem("project1uT");
+$App.project1vT = localStorage.getItem("project1vT");
+$App.project1wT = localStorage.getItem("project1wT");
+$App.project1xT = localStorage.getItem("project1xT");
+$App.project1aaT = localStorage.getItem("project1aaT");
+$App.project1aa = localStorage.getItem("project1aa");
+$App.project1ab = localStorage.getItem("project1ab");
+$App.project1ac = localStorage.getItem("project1ac");
+$App.project1ad = localStorage.getItem("project1ad");
+$App.project1a = localStorage.getItem("project1a");
+$App.project1b = localStorage.getItem("project1b");
+$App.project1c = localStorage.getItem("project1c");
+$App.project1d = localStorage.getItem("project1d");
+$App.project1e = localStorage.getItem("project1e");
+$App.project1f = localStorage.getItem("project1f");
+$App.project1g = localStorage.getItem("project1g");
+$App.project1h = localStorage.getItem("project1h");
+$App.project1i = localStorage.getItem("project1i");
+$App.project1j = localStorage.getItem("project1j");
+$App.project1k = localStorage.getItem("project1k");
+$App.project1l = localStorage.getItem("project1l");
+$App.project1m = localStorage.getItem("project1m");
+$App.project1n = localStorage.getItem("project1n");
+$App.project1o = localStorage.getItem("project1o");
+$App.project1p = localStorage.getItem("project1p");
+$App.project1q = localStorage.getItem("project1q");
+$App.project1r = localStorage.getItem("project1r");
+$App.project1s = localStorage.getItem("project1s");
+$App.project1t = localStorage.getItem("project1t");
+$App.project1u = localStorage.getItem("project1u");
+$App.project1v = localStorage.getItem("project1v");
+$App.project1w = localStorage.getItem("project1w");
+$App.project1x = localStorage.getItem("project1x");
+$App.project1y = localStorage.getItem("project1y");
+$App.project2doc = localStorage.getItem("project2doc");
+$App.project2 = localStorage.getItem("project2");
+$App.Project2Main = localStorage.getItem("Project2Main");
+$App.Project2aa = localStorage.getItem("Project2aa");
+$App.project2acT = localStorage.getItem("project2acT");
+$App.project2aT = localStorage.getItem("project2aT");
+$App.project2bT = localStorage.getItem("project2bT");
+$App.project2cT = localStorage.getItem("project2cT");
+$App.project2dT = localStorage.getItem("project2dT");
+$App.project2eT = localStorage.getItem("project2eT");
+$App.project2fT = localStorage.getItem("project2fT");
+$App.project2gT = localStorage.getItem("project2gT");
+$App.project2hT = localStorage.getItem("project2hT");
+$App.project2iT = localStorage.getItem("project2jT");
+$App.project2jT = localStorage.getItem("project2jT");
+$App.project2kT = localStorage.getItem("project2kT");
+$App.project2lT = localStorage.getItem("project2lT");
+$App.project2mT = localStorage.getItem("project2mT");
+$App.project2nT = localStorage.getItem("project2nT");
+$App.project2oT = localStorage.getItem("project2oT");
+$App.project2pT = localStorage.getItem("project2pT");
+$App.project2qT = localStorage.getItem("project2qT");
+$App.project2rT = localStorage.getItem("project2rT");
+$App.project2sT = localStorage.getItem("project2sT");
+$App.project2tT = localStorage.getItem("project2tT");
+$App.project2uT = localStorage.getItem("project2uT");
+$App.project2vT = localStorage.getItem("project2vT");
+$App.project2wT = localStorage.getItem("project2wT");
+$App.project2xT = localStorage.getItem("project2xT");
+$App.Project2aa = localStorage.getItem("project2aa");
+$App.project2ab = localStorage.getItem("project2ab");
+$App.project2ac = localStorage.getItem("project2ac");
+$App.project2ad = localStorage.getItem("project2ad");
+$App.project2a = localStorage.getItem("project2a");
+$App.project2b = localStorage.getItem("project2b");
+$App.project2c = localStorage.getItem("project2c");
+$App.project2d = localStorage.getItem("project2d");
+$App.project2e = localStorage.getItem("project2e");
+$App.project2f = localStorage.getItem("project2f");
+$App.project2g = localStorage.getItem("project2g");
+$App.project2h = localStorage.getItem("project2h");
+$App.project2i = localStorage.getItem("project2i");
+$App.project2j = localStorage.getItem("project2j");
+$App.project2k = localStorage.getItem("project2k");
+$App.project2l = localStorage.getItem("project2l");
+$App.project2m = localStorage.getItem("project2m");
+$App.project2n = localStorage.getItem("project2n");
+$App.project2o = localStorage.getItem("project2o");
+$App.project2p = localStorage.getItem("project2p");
+$App.project2q = localStorage.getItem("project2q");
+$App.project2r = localStorage.getItem("project2r");
+$App.project2s = localStorage.getItem("project2s");
+$App.project2t = localStorage.getItem("project2t");
+$App.project2u = localStorage.getItem("project2u");
+$App.project2v = localStorage.getItem("project2v");
+$App.project2w = localStorage.getItem("project2w");
+$App.project2x = localStorage.getItem("project2x");
+$App.project2y = localStorage.getItem("project2y");};
+$scope.PrayerReps_pageenter = function() {$scope.ObjectToFront("PushButton634");
 $App.familymatters = localStorage.getItem("familymatters");
 $App.healthmatters = localStorage.getItem("healthmatters");
 $App.mirrorCamera = localStorage.getItem("mirrorCamera");
@@ -2435,8 +7955,87 @@ $scope.__init();
 neo = angular.element(document.getElementById("ng-view")).scope();neo.Refresh();});
 });NeoApp.controller("App_DlgCtrl",function($scope,$rootScope,$modalInstance,$filter,$window,$animate){$scope.CloseDialog=function(){$modalInstance.close();};$scope.CloseDialogBtn=function(btnNum){$modalInstance.close(btnNum);};});
 function debounce(func,wait,immediate){var timeout;return function(){var context=this,args=arguments;var later=function(){timeout=null;if(!immediate)func.apply(context,args);};var callNow=immediate&&!timeout;clearTimeout(timeout);timeout=setTimeout(later,wait);if(callNow)func.apply(context,args);};};NeoApp.directive('timer',function(){return{restrict:'E',replace:false,transclude:false,link:function(scope,element,attributes){if(attributes.autostop){scope.$on('$destroy',function(){scope.$parent.TimerStop(attributes.id);});};if(attributes.autostart)scope.$parent.TimerStart(attributes.id,attributes.interval);}};});NeoApp.directive('slider',['$window',function($window){return{restrict:'E',replace:true,transclude:true,require:'?ngModel',scope:{value:"=ngModel",min:"=",max:"=",disabled:'=ngDisabled',onChange:"&",onChanging:"&"},compile:function(element,attributes){element.addClass('neoapp-slider');var html='';if(attributes.trackimage){html+='<img class="track-img" src="'+attributes.trackimage+'"';if(attributes.trackheight)html+=' style="height:'+attributes.trackheight+'"';html+='/>';}else{html+='<div class="track"';if(attributes.trackheight)html+=' style="height:'+attributes.trackheight+'"';html+='><div class="track-left';if(attributes.kind)html+=' track-left-'+attributes.kind;html+='"></div>';};html+='</div><button class="thumb';if(attributes.thumbimage)html+=' thumb-img';if(attributes.kind)html+=' thumb-'+attributes.kind;html+='"';if(attributes.thumbwidth||attributes.thumbimage){html+=' style="';if(attributes.thumbwidth)html+='width:'+attributes.thumbwidth;if(attributes.thumbwidth&&attributes.thumbimage)html+=';';if(attributes.thumbimage)html+="background-image:url('"+attributes.thumbimage+"')";html+='"';};html+=' ng-style="NAB.'+attributes.id+'_style"';html+=' ng-transclude></button>';element.html(html);return linkFn;}};function linkFn($scope,element,attributes,ngModel){var mouseDown=false,track=attributes.trackimage?element.find('.track-img'):element.find('.track'),thumb=element.find('.thumb'),trackLeft=element.find('.track-left'),elemLeft,vMin=isNaN(parseFloat($scope.min))?0:parseFloat($scope.min),vMax=isNaN(parseFloat($scope.max))?100:parseFloat($scope.max),xOffs,dbOnChanging=($scope.onChanging)?debounce(function(){$scope.onChanging();},100):null;if(vMax<=vMin)vMax=vMin+1;var value=isNaN(parseFloat($scope.value))?vMin:parseFloat($scope.value);function positionThumb(){var basePos=((value-vMin)/(vMax-vMin))*(track.width()-thumb.innerWidth());thumb.css('left',basePos);if(trackLeft)trackLeft.css('width',basePos);};function updateValue(){if(ngModel&&!isNaN(parseFloat($scope.value))){var v=$scope.value;value=Math.max(vMin,Math.min(Math.floor(v),vMax));$scope.value=value;}else{value=Math.max(vMin,Math.min(Math.floor(value),vMax));};positionThumb();};function mouseCoords(event){if(event.type=='touchstart'||event.type=='touchmove'||event.type=='touchend'||event.type=='touchcancel'){var touch=event.originalEvent.touches[0]||event.originalEvent.changedTouches[0];return{x:touch.pageX,y:touch.pageY};}else{return{x:event.pageX,y:event.pageY};};};thumb.on('mousedown touchstart',function(event){if(!element.attr('disabled')){mouseDown=true;elemLeft=element.position().left;xOffs=mouseCoords(event).x-thumb.position().left-elemLeft;$(document).one('mouseup touchend ontouchcancel',function(event){if($scope.onChange)$scope.onChange();mouseDown=false;return false;});return false;};});element.on('mousemove touchmove',function(event){if(mouseDown){var xPos=mouseCoords(event).x-elemLeft-xOffs;var v=((xPos/(track.width()-thumb.innerWidth()))*(vMax-vMin))+vMin;v=Math.max(vMin,Math.min(Math.floor(v),vMax));if(value!=v){value=v;positionThumb();if(ngModel){$scope.value=value;if($scope.onChanging)$scope.onChanging();$scope.$apply();};if($scope.onChanging)dbOnChanging();};return false;};});angular.element($window).on('resize.'+element.id,function(){positionThumb();});if(ngModel){$scope.$watch('value',function(){if(!mouseDown){updateValue();};});};if(angular.isObject($scope.max)){$scope.$watch('max',function(){vMax=+$scope.max||100;updateValue();});};if(angular.isObject($scope.min)){$scope.$watch('min',function(){vMin=+$scope.min||0;updateValue();});};$scope.$watch('disabled',function(newVal){element.find('*').attr('disabled',newVal||false);});$scope.$on('$destroy',function(){angular.element($window).off('resize.'+element.id);});};}]);
-NeoApp.controller("Temphome_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
+NeoApp.controller("landinghome_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 1;
+$App.NAB.PageID = "landinghome";
+$scope.Headline609_click = function() {$scope.GotoPage( "landinghome" );};
+$scope.PushButton666_click = function() {$scope.GotoPage( "PreparationKeys" );};
+$scope.Pager6_prevclick = function() {$scope.GotoPrevPage();};
+$scope.Pager6_nextclick = function() {$scope.GotoNextPage();};
+$scope.PushButton767_click = function() {$scope.GotoPage( "onehundredandonebusinesses" );};
+$scope.PushButton768_click = function() {$scope.GotoPage( "Reset2026" );};
+$scope.PushButton808_click = function() {$scope.GotoPage( "Reset00" );};
+$scope.PushButton809_click = function() {$scope.GotoPage( "Reset01" );};
+$scope.PushButton810_click = function() {$scope.GotoPage( "Reset02" );};
+$scope.PushButton848_click = function() {$scope.GotoPage( "PrayerReps" );};
+$scope.PushButton968_click = function() {$scope.GotoPage( "wiiaa" );};
+$scope.PushButton967_click = function() {window.document.location.reload();};
+$scope.PushButton969_click = function() {$scope.GotoPage( "CopyAll" );};
+$scope.PushButton970_click = function() {$scope.GotoPage( "Home" );};
+$scope.PushButton971_click = function() {$scope.GotoPage( "Workstuff-A" );};
+$scope.PushButton972_click = function() {$scope.GotoPage( "tilesv5" );};
+$scope.PushButton973_click = function() {$scope.GotoPage( "External01" );};
+$scope.PushButton974_click = function() {$scope.GotoPage( "Project1" );};
+$scope.PushButton975_click = function() {$scope.GotoPage( "Project2" );};
+$scope.PushButton976_click = function() {$scope.GotoPage( "elink2" );};
+$scope.PushButton977_click = function() {$scope.GotoPage( "Next" );};
+$scope.PushButton978_click = function() {neoTalkSpeak($App.Tinote, "", $App.Read1, $App.Read2);};
+$scope.PushButton979_click = function() {neoTalkSpeak($App.HEALTHGENERAL001, "", $App.Read1, $App.Read2);};
+$scope.PushButton980_click = function() {neoTalkSpeak($App.Next, "", $App.Read1, $App.Read2);};
+$scope.PushButton981_click = function() {neoTalkSpeak($App.Me, "", $App.Read1, $App.Read2);};
+$scope.PushButton982_click = function() {$scope.GotoPage( "Me" );};
+$scope.PushButton983_click = function() {$scope.GotoPage( "skillsphil" );};
+$scope.PushButton984_click = function() {$scope.GotoPage( "Health" );};
+$scope.PushButton985_click = function() {$scope.GotoPage( "Health" );};
+$scope.PushButton986_click = function() {$scope.GotoPage( "Journal" );};
+$scope.PushButton987_click = function() {$scope.GotoPage( "wiiaa" );};
+$scope.PushButton988_click = function() {$scope.GotoPage( "Barrels" );};
+$scope.SVGicon10_click = function() {neoTalkPauseSpeech();};
+$scope.SVGicon11_click = function() {neoTalkResumeSpeech();};
+$scope.SVGicon12_click = function() {neoTalkCancelSpeech();};
+$scope.PushButton989_click = function() {$scope.GotoPage( "Indexwrite" );};
+$scope.PushButton990_click = function() {$App.zt126 = localStorage.getItem("zt126");
+$App.zt226 = localStorage.getItem("zt226");
+$App.zt326 = localStorage.getItem("zt326");
+$App.may260 = localStorage.getItem("may260");
+$App.may261 = localStorage.getItem("may261");
+$App.may262 = localStorage.getItem("may262");
+$App.may263 = localStorage.getItem("may263");
+$App.june260 = localStorage.getItem("june260");
+$App.june261 = localStorage.getItem("june261");
+$App.june262 = localStorage.getItem("june262");
+$App.june263 = localStorage.getItem("june263");
+$App.july260 = localStorage.getItem("july260");
+$App.july261 = localStorage.getItem("july261");
+$App.july262 = localStorage.getItem("july262");
+$App.july263 = localStorage.getItem("july263");
+$App.aug260 = localStorage.getItem("aug260");
+$App.aug261 = localStorage.getItem("aug261");
+$App.aug262 = localStorage.getItem("aug262");
+$App.aug263 = localStorage.getItem("aug263");
+$App.sep260 = localStorage.getItem("sep260");
+$App.sep261 = localStorage.getItem("sep261");
+$App.sep262 = localStorage.getItem("sep262");
+$App.sep263 = localStorage.getItem("sep263");
+$App.oct260 = localStorage.getItem("oct260");
+$App.oct261 = localStorage.getItem("oct261");
+$App.oct262 = localStorage.getItem("oct262");
+$App.oct263 = localStorage.getItem("oct263");
+$App.nov260 = localStorage.getItem("nov260");
+$App.nov261 = localStorage.getItem("nov261");
+$App.nov262 = localStorage.getItem("nov262");
+$App.nov263 = localStorage.getItem("nov263");
+$App.dec260 = localStorage.getItem("dec260");
+$App.dec261 = localStorage.getItem("dec261");
+$App.dec262 = localStorage.getItem("dec262");
+$App.dec263 = localStorage.getItem("dec263");
+$App.monthnotes = localStorage.getItem("monthnotes");
+$App.monthnotes2 = localStorage.getItem("monthnotes2");
+$scope.GotoPage( "Records-2026" );};
+$scope.PushButton991_click = function() {$scope.GotoPage( "External01" );};
+});
+NeoApp.controller("Temphome_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
+$App.NAB.PageNumber = 2;
 $App.NAB.PageID = "Temphome";
 $scope.PushButton22_click = function() {window.document.location.reload();};
 $scope.Headline10026_click = function() {neoTalkSpeak($App.speed26a, "", $App.Read1, $App.Read2);};
@@ -2583,11 +8182,103 @@ $scope.PushButton664_click = function() {$scope.GotoPage( "Reset2026" );};
 $scope.PushButton638_click = function() {$scope.GotoPage( "Reset00" );};
 $scope.PushButton661_click = function() {$scope.GotoPage( "Reset01" );};
 $scope.PushButton665_click = function() {$scope.GotoPage( "Reset02" );};
+$scope.Pager3_prevclick = function() {$scope.GotoPrevPage();};
+$scope.Pager3_nextclick = function() {$scope.GotoNextPage();};
+});
+NeoApp.controller("PreparationKeys_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
+$App.NAB.PageNumber = 3;
+$App.NAB.PageID = "PreparationKeys";
+$scope.Headline610_click = function() {$scope.GotoPage( "landinghome" );};
+$scope.Headline611_click = function() {neoTalkSpeak($App.speed26a, "", $App.Read1, $App.Read2);};
+$scope.Headline612_click = function() {neoTalkSpeak($App.speed27a, "", $App.Read1, $App.Read2);};
+$scope.Headline613_click = function() {neoTalkSpeak($App.speed28a, "", $App.Read1, $App.Read2);};
+$scope.Headline614_click = function() {neoTalkSpeak($App.speed25a, "", $App.Read1, $App.Read2);};
+$scope.Headline615_click = function() {neoTalkSpeak($App.speed30a, "", $App.Read1, $App.Read2);};
+$scope.Headline616_click = function() {neoTalkSpeak($App.speed31a, "", $App.Read1, $App.Read2);};
+$scope.Headline617_click = function() {neoTalkSpeak($App.speed32a, "", $App.Read1, $App.Read2);};
+$scope.Headline618_click = function() {neoTalkSpeak($App.speed29a, "", $App.Read1, $App.Read2);};
+$scope.Headline619_click = function() {neoTalkSpeak($App.speed09a, "", $App.Read1, $App.Read2);};
+$scope.Headline620_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
+$scope.Headline621_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
+$scope.Headline622_click = function() {neoTalkSpeak($App.speed06a, "", $App.Read1, $App.Read2);};
+$scope.Headline623_click = function() {neoTalkSpeak($App.speed07a, "", $App.Read1, $App.Read2);};
+$scope.Headline624_click = function() {neoTalkSpeak($App.speed08a, "", $App.Read1, $App.Read2);};
+$scope.Headline625_click = function() {neoTalkSpeak($App.speed05a, "", $App.Read1, $App.Read2);};
+$scope.Headline626_click = function() {neoTalkSpeak($App.speed14a, "", $App.Read1, $App.Read2);};
+$scope.Headline627_click = function() {neoTalkSpeak($App.speed15a, "", $App.Read1, $App.Read2);};
+$scope.Headline628_click = function() {neoTalkSpeak($App.speed16a, "", $App.Read1, $App.Read2);};
+$scope.Headline629_click = function() {neoTalkSpeak($App.speed13a, "", $App.Read1, $App.Read2);};
+$scope.Headline630_click = function() {neoTalkSpeak($App.speed19a, "", $App.Read1, $App.Read2);};
+$scope.Headline631_click = function() {neoTalkSpeak($App.speed20a, "", $App.Read1, $App.Read2);};
+$scope.Headline632_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
+$scope.Headline633_click = function() {neoTalkSpeak($App.speed21a, "", $App.Read1, $App.Read2);};
+$scope.Headline634_click = function() {neoTalkSpeak($App.speed10a, "", $App.Read1, $App.Read2);};
+$scope.Headline635_click = function() {neoTalkSpeak($App.speed18a, "", $App.Read1, $App.Read2);};
+$scope.Headline636_click = function() {neoTalkSpeak($App.speed22a, "", $App.Read1, $App.Read2);};
+$scope.Headline637_click = function() {neoTalkSpeak($App.speed23a, "", $App.Read1, $App.Read2);};
+$scope.Headline638_click = function() {neoTalkSpeak($App.speed24a, "", $App.Read1, $App.Read2);};
+$scope.PushButton668_click = function() {$scope.GotoPage( "Speed02" );};
+$scope.PushButton669_click = function() {$scope.GotoPage( "Speed03" );};
+$scope.PushButton670_click = function() {$scope.GotoPage( "Speed04" );};
+$scope.PushButton672_click = function() {$scope.GotoPage( "Speed05" );};
+$scope.PushButton673_click = function() {$scope.GotoPage( "Speed06" );};
+$scope.PushButton674_click = function() {$scope.GotoPage( "Speed07" );};
+$scope.PushButton675_click = function() {$scope.GotoPage( "Speed08" );};
+$scope.PushButton677_click = function() {$scope.GotoPage( "Speed09" );};
+$scope.PushButton678_click = function() {$scope.GotoPage( "Speed10" );};
+$scope.PushButton679_click = function() {$scope.GotoPage( "Speed11" );};
+$scope.PushButton680_click = function() {$scope.GotoPage( "Speed12" );};
+$scope.PushButton681_click = function() {$scope.GotoPage( "Speed13" );};
+$scope.PushButton682_click = function() {$scope.GotoPage( "Speed14" );};
+$scope.PushButton683_click = function() {$scope.GotoPage( "Speed15" );};
+$scope.PushButton684_click = function() {$scope.GotoPage( "Speed16" );};
+$scope.PushButton686_click = function() {$scope.GotoPage( "Speed17" );};
+$scope.PushButton687_click = function() {$scope.GotoPage( "Speed18" );};
+$scope.PushButton688_click = function() {$scope.GotoPage( "Speed19" );};
+$scope.PushButton689_click = function() {$scope.GotoPage( "Speed20" );};
+$scope.PushButton690_click = function() {$scope.GotoPage( "Speed21" );};
+$scope.PushButton691_click = function() {$scope.GotoPage( "Speed22" );};
+$scope.PushButton692_click = function() {$scope.GotoPage( "Speed23" );};
+$scope.PushButton693_click = function() {$scope.GotoPage( "Speed24" );};
+$scope.PushButton694_click = function() {$scope.GotoPage( "Speed25" );};
+$scope.PushButton695_click = function() {$scope.GotoPage( "Speed26" );};
+$scope.PushButton696_click = function() {$scope.GotoPage( "Speed27" );};
+$scope.PushButton697_click = function() {$scope.GotoPage( "Speed28" );};
+$scope.PushButton698_click = function() {$scope.GotoPage( "Speed29" );};
+$scope.PushButton699_click = function() {$scope.GotoPage( "Speed30" );};
+$scope.PushButton764_click = function() {$scope.GotoPage( "Speed31" );};
+$scope.PushButton765_click = function() {$scope.GotoPage( "Speed32" );};
+$scope.PushButton766_click = function() {$scope.GotoPage( "Speed01" );};
+$scope.Headline639_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
+$scope.Headline640_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
+$scope.Headline641_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
+$scope.Headline642_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
+$scope.SVGicon4_click = function() {neoTalkPauseSpeech();};
+$scope.SVGicon5_click = function() {neoTalkResumeSpeech();};
+$scope.SVGicon6_click = function() {neoTalkCancelSpeech();};
+});
+NeoApp.controller("PrayerReps_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
+$App.NAB.PageNumber = 4;
+$App.NAB.PageID = "PrayerReps";
+$scope.Headline643_click = function() {$scope.GotoPage( "landinghome" );};
+$scope.PushButton957_click = function() {neoTalkSpeak($App.Prayer, "", $App.Read1, $App.Read2);};
+$scope.PushButton958_click = function() {neoTalkSpeak($App.Reps, "", $App.Read1, $App.Read2);};
+$scope.PushButton959_click = function() {$scope.GotoPage( "Prayer" );};
+$scope.PushButton960_click = function() {$scope.GotoPage( "DailyReps" );};
+$scope.PushButton961_click = function() {neoTalkSpeak($App.Reps02, "", $App.Read1, $App.Read2);};
+$scope.PushButton962_click = function() {neoTalkSpeak($App.Prayer2, "", $App.Read1, $App.Read2);};
+$scope.PushButton963_click = function() {neoTalkSpeak($App.Prayer3, "", $App.Read1, $App.Read2);};
+$scope.PushButton964_click = function() {neoTalkSpeak($App.Prayer4, "", $App.Read1, $App.Read2);};
+$scope.PushButton965_click = function() {neoTalkSpeak($App.Reps03, "", $App.Read1, $App.Read2);};
+$scope.PushButton966_click = function() {neoTalkSpeak($App.Reps04, "", $App.Read1, $App.Read2);};
+$scope.SVGicon7_click = function() {neoTalkPauseSpeech();};
+$scope.SVGicon8_click = function() {neoTalkResumeSpeech();};
+$scope.SVGicon9_click = function() {neoTalkCancelSpeech();};
 });
 NeoApp.controller("wiiaa_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 2;
+$App.NAB.PageNumber = 5;
 $App.NAB.PageID = "wiiaa";
-$scope.PushButton27_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton27_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea220_change = function() {localStorage.setItem("witaa1000",$App.witaa1000);};
 $scope.TextArea219_change = function() {localStorage.setItem("witaaq001",$App.witaaq001);};
 $scope.TextArea540_change = function() {localStorage.setItem("witaaqa1001",$App.witaaqa1001);};
@@ -2611,7 +8302,7 @@ $scope.TextArea564_change = function() {localStorage.setItem("witaa1000c",$App.w
 $scope.TextArea565_change = function() {localStorage.setItem("witaa1000a",$App.witaa1000a);};
 });
 NeoApp.controller("Reset2026_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 3;
+$App.NAB.PageNumber = 6;
 $App.NAB.PageID = "Reset2026";
 $scope.PushButton169_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea574_change = function() {localStorage.setItem("resetmain",$App.resetmain);};
@@ -2667,13 +8358,13 @@ $scope.TextArea621_change = function() {localStorage.setItem("healthmatters",$Ap
 $scope.TextArea647_change = function() {localStorage.setItem("familymatters",$App.familymatters);};
 });
 NeoApp.controller("Reset00_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 4;
+$App.NAB.PageNumber = 7;
 $App.NAB.PageID = "Reset00";
 $scope.PushButton637_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea656_change = function() {localStorage.setItem("resetmainMore",$App.resetmainMore);};
 });
 NeoApp.controller("Reset01_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 5;
+$App.NAB.PageNumber = 8;
 $App.NAB.PageID = "Reset01";
 $scope.PushButton639_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea658_change = function() {localStorage.setItem("familymattersMore",$App.familymattersMore);};
@@ -2686,7 +8377,7 @@ $scope.TextArea664_change = function() {localStorage.setItem("reset001dMore",$Ap
 $scope.PushButton660_click = function() {window.open($App.reset001dMore, "_blank");};
 });
 NeoApp.controller("Reset02_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 6;
+$App.NAB.PageNumber = 9;
 $App.NAB.PageID = "Reset02";
 $scope.PushButton662_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea657_change = function() {localStorage.setItem("mirrorCameramore",$App.mirrorCameramore);};
@@ -2699,7 +8390,7 @@ $scope.TextArea670_change = function() {localStorage.setItem("reset002dMore",$Ap
 $scope.PushButton663_click = function() {window.open($App.reset002dMore, "_blank");};
 });
 NeoApp.controller("onehundredandonebusinesses_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 7;
+$App.NAB.PageNumber = 10;
 $App.NAB.PageID = "onehundredandonebusinesses";
 $scope.PushButton28_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea591_change = function() {localStorage.setItem("b22222",$App.b22222);};
@@ -2812,7 +8503,7 @@ $scope.PushButton635_click = function() {$scope.ObjectToFront("PushButton634");}
 $scope.PushButton636_click = function() {$scope.ObjectToBack("PushButton634");};
 });
 NeoApp.controller("Indexwrite_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 8;
+$App.NAB.PageNumber = 11;
 $App.NAB.PageID = "Indexwrite";
 $scope.TextInput459_change = function() {localStorage.setItem("a1a1",$App.a1a1);};
 $scope.TextArea456_change = function() {localStorage.setItem("a1a2",$App.a1a2);};
@@ -3723,7 +9414,7 @@ $scope.PushButton956_click = function() {$scope.GotoPage( "bounce" );
 $scope.GotoPage( "Indexwrite" );};
 });
 NeoApp.controller("Records-2026_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 9;
+$App.NAB.PageNumber = 12;
 $App.NAB.PageID = "Records-2026";
 $scope.TextArea335_change = function() {localStorage.setItem("june260",$App.june260);};
 $scope.PushButton583_click = function() {$scope.ObjectToFront("ContainerMay26");};
@@ -3779,13 +9470,13 @@ $scope.TextArea333_change = function() {localStorage.setItem("may262",$App.may26
 $scope.TextArea336_change = function() {localStorage.setItem("may263",$App.may263);};
 });
 NeoApp.controller("CopyAll_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 10;
+$App.NAB.PageNumber = 13;
 $App.NAB.PageID = "CopyAll";
 $scope.PushButton100_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton774_click = function() {navigator.clipboard.writeText($App.allvar);};
 });
 NeoApp.controller("tilesv5_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 11;
+$App.NAB.PageNumber = 14;
 $App.NAB.PageID = "tilesv5";
 $scope.TextArea297_change = function() {localStorage.setItem("v5a001",$App.v5a001);};
 $scope.TextArea298_change = function() {localStorage.setItem("v5a002",$App.v5a002);};
@@ -3806,7 +9497,7 @@ $scope.PushButton611_click = function() {neoTalkCancelSpeech();};
 $scope.Headline322_click = function() {$scope.GotoPage( "Temphome" );};
 });
 NeoApp.controller("Barrels_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 12;
+$App.NAB.PageNumber = 15;
 $App.NAB.PageID = "Barrels";
 $scope.Headline48_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton30_click = function() {$App.timeline = localStorage.getItem("timeline1");
@@ -4063,7 +9754,7 @@ $App.spm = localStorage.getItem("spm2");
 $App.fwfn1 = localStorage.getItem("fwf2n1");};
 });
 NeoApp.controller("Barrels1_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 13;
+$App.NAB.PageNumber = 16;
 $App.NAB.PageID = "Barrels1";
 $scope.Headline84_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextInput84_change = function() {localStorage.setItem("timeline1",$App.timeline1);};
@@ -4192,7 +9883,7 @@ $App.cap03scen01r = $scope.Calculate($App.cap03scen01+"/100",-1);
 $App.res03scen01 = $scope.Calculate($App.cap03scen01r+"*"+$App.rate03scen01,-1);};
 });
 NeoApp.controller("Barrels2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 14;
+$App.NAB.PageNumber = 17;
 $App.NAB.PageID = "Barrels2";
 $scope.Headline27_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextInput72_change = function() {localStorage.setItem("timeline2",$App.timeline2);};
@@ -4261,7 +9952,7 @@ $scope.TextInput542_change = function() {localStorage.setItem("mo2item15n",$App.
 $scope.PushButton105_click = function() {$App.mo2item04 = localStorage.getItem("mo2item04");};
 });
 NeoApp.controller("Barrels3_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 15;
+$App.NAB.PageNumber = 18;
 $App.NAB.PageID = "Barrels3";
 $scope.Headline53_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextInput76_change = function() {localStorage.setItem("timeline3",$App.timeline3);};
@@ -4329,7 +10020,7 @@ $scope.TextInput613_change = function() {localStorage.setItem("mo2item15n",$App.
 $scope.PushButton48_click = function() {$App.mo2item04 = localStorage.getItem("mo2item04");};
 });
 NeoApp.controller("Barrels4_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 16;
+$App.NAB.PageNumber = 19;
 $App.NAB.PageID = "Barrels4";
 $scope.Headline64_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton50_click = function() {$scope.GotoPage( "Barrels2" );};
@@ -4339,7 +10030,7 @@ $scope.TextInput82_change = function() {localStorage.setItem("timeline3",$App.ti
 $scope.TextInput83_change = function() {localStorage.setItem("timeline4",$App.timeline4);};
 });
 NeoApp.controller("tilesv5-2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 17;
+$App.NAB.PageNumber = 20;
 $App.NAB.PageID = "tilesv5-2";
 $scope.TextArea309_change = function() {localStorage.setItem("v5a006",$App.v5a006);};
 $scope.TextArea311_change = function() {localStorage.setItem("v5a007",$App.v5a007);};
@@ -4361,7 +10052,7 @@ $scope.Pager16_nextclick = function() {$scope.GotoNextPage();};
 $scope.Headline328_click = function() {$scope.GotoPage( "Temphome" );};
 });
 NeoApp.controller("tilesv5-3_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 18;
+$App.NAB.PageNumber = 21;
 $App.NAB.PageID = "tilesv5-3";
 $scope.TextArea450_change = function() {localStorage.setItem("v5a010",$App.v5a010);};
 $scope.TextArea492_change = function() {localStorage.setItem("v5a011",$App.v5a011);};
@@ -4377,9 +10068,9 @@ $scope.Pager78_nextclick = function() {$scope.GotoNextPage();};
 $scope.Headline329_click = function() {$scope.GotoPage( "Temphome" );};
 });
 NeoApp.controller("External01_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 19;
+$App.NAB.PageNumber = 22;
 $App.NAB.PageID = "External01";
-$scope.PushButton134_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton134_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.PushButton135_click = function() {window.open($App.Ctitle001, "_blank");};
 $scope.PushButton136_click = function() {window.open($App.Ctitle002, "_blank");};
 $scope.PushButton137_click = function() {window.open($App.Ctitle003, "_blank");};
@@ -4436,9 +10127,9 @@ $scope.TextInput397_change = function() {localStorage.setItem("elink1t1",$App.el
 $scope.TextInput398_change = function() {localStorage.setItem("elink1t2",$App.elink1t2);};
 });
 NeoApp.controller("Speed01_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 20;
+$App.NAB.PageNumber = 23;
 $App.NAB.PageID = "Speed01";
-$scope.PushButton34_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton34_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.PushButton72_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
 $scope.TextArea223_change = function() {localStorage.setItem("speed01b",$App.speed01b);};
 $scope.PushButton769_click = function() {neoTalkSpeak($App.speed01a, "", $App.Read1, $App.Read2);};
@@ -4466,9 +10157,9 @@ $scope.Headline364_click = function() {localStorage.setItem("speed01a",$App.spee
 $scope.Headline365_click = function() {localStorage.setItem("speed01a",$App.speed01a);};
 });
 NeoApp.controller("Speed03_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 21;
+$App.NAB.PageNumber = 24;
 $App.NAB.PageID = "Speed03";
-$scope.PushButton189_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton189_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea226_change = function() {localStorage.setItem("speed03a",$App.speed03a);};
 $scope.PushButton192_click = function() {neoTalkSpeak($App.speed03a, "", $App.Read1, $App.Read2);};
 $scope.TextInput155_change = function() {localStorage.setItem("speed03",$App.speed03);};
@@ -4491,9 +10182,9 @@ $scope.SetObjectStyle("Ellipse103","fill","blue");
 localStorage.setItem("aa3","b");};
 });
 NeoApp.controller("Speed04_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 22;
+$App.NAB.PageNumber = 25;
 $App.NAB.PageID = "Speed04";
-$scope.PushButton194_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton194_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea228_change = function() {localStorage.setItem("speed04a",$App.speed04a);};
 $scope.PushButton195_click = function() {neoTalkSpeak($App.speed04a, "", $App.Read1, $App.Read2);};
 $scope.TextInput159_change = function() {localStorage.setItem("speed04",$App.speed04);};
@@ -4516,9 +10207,9 @@ $scope.SetObjectStyle("Ellipse104","fill","blue");
 localStorage.setItem("aa4","b");};
 });
 NeoApp.controller("Speed02_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 23;
+$App.NAB.PageNumber = 26;
 $App.NAB.PageID = "Speed02";
-$scope.PushButton590_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton590_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.PushButton591_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
 $scope.TextArea312_change = function() {localStorage.setItem("speed02b",$App.speed02b);};
 $scope.PushButton592_click = function() {neoTalkSpeak($App.speed02a, "", $App.Read1, $App.Read2);};
@@ -4546,9 +10237,9 @@ $scope.Headline426_click = function() {localStorage.setItem("speed01a",$App.spee
 $scope.Headline427_click = function() {localStorage.setItem("speed01a",$App.speed01a);};
 });
 NeoApp.controller("Speed05_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 24;
+$App.NAB.PageNumber = 27;
 $App.NAB.PageID = "Speed05";
-$scope.PushButton204_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton204_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea222_change = function() {localStorage.setItem("speed05a",$App.speed05a);};
 $scope.PushButton205_click = function() {neoTalkSpeak($App.speed05b, "", $App.Read1, $App.Read2);};
 $scope.TextInput161_change = function() {localStorage.setItem("speed05",$App.speed05);};
@@ -4571,9 +10262,9 @@ $scope.SetObjectStyle("Ellipse105","fill","blue");
 localStorage.setItem("aa5","b");};
 });
 NeoApp.controller("Speed06_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 25;
+$App.NAB.PageNumber = 28;
 $App.NAB.PageID = "Speed06";
-$scope.PushButton206_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton206_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.PushButton209_click = function() {neoTalkSpeak($App.speed06b, "", $App.Read1, $App.Read2);};
 $scope.TextArea225_change = function() {localStorage.setItem("speed06b",$App.speed06b);};
 $scope.PushButton307_click = function() {neoTalkSpeak($App.speed06b, "", $App.Read1, $App.Read2);};
@@ -4596,9 +10287,9 @@ $scope.SetObjectStyle("Ellipse106","fill","blue");
 localStorage.setItem("aa6","b");};
 });
 NeoApp.controller("Speed07_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 26;
+$App.NAB.PageNumber = 29;
 $App.NAB.PageID = "Speed07";
-$scope.PushButton211_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton211_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.PushButton214_click = function() {neoTalkSpeak($App.speed07b, "", $App.Read1, $App.Read2);};
 $scope.TextArea227_change = function() {localStorage.setItem("speed7b",$App.speed07b);};
 $scope.PushButton223_click = function() {neoTalkSpeak($App.speed07b, "", $App.Read1, $App.Read2);};
@@ -4621,10 +10312,10 @@ $scope.SetObjectStyle("Ellipse107","fill","green");
 localStorage.setItem("aa7","g");};
 });
 NeoApp.controller("Speed08_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 27;
+$App.NAB.PageNumber = 30;
 $App.NAB.PageID = "Speed08";
 $scope.PushButton217_click = function() {$scope.GotoPage( "Temphome" );};
-$scope.PushButton218_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton218_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.PushButton273_click = function() {neoTalkSpeak($App.speed08b, "", $App.Read1, $App.Read2);};
 $scope.TextArea229_change = function() {localStorage.setItem("speed08b",$App.speed08b);};
 $scope.PushButton275_click = function() {neoTalkSpeak($App.speed08b, "", $App.Read1, $App.Read2);};
@@ -4647,9 +10338,9 @@ $scope.SetObjectStyle("Ellipse108","fill","green");
 localStorage.setItem("aa8","g");};
 });
 NeoApp.controller("Speed10_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 28;
+$App.NAB.PageNumber = 31;
 $App.NAB.PageID = "Speed10";
-$scope.PushButton498_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton498_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea253_change = function() {localStorage.setItem("speed10a",$App.speed10a);};
 $scope.PushButton502_click = function() {neoTalkSpeak($App.speed10a, "", $App.Read1, $App.Read2);};
 $scope.TextInput378_change = function() {localStorage.setItem("speed10",$App.speed10);};
@@ -4672,9 +10363,9 @@ $scope.SetObjectStyle("Ellipse110","fill","green");
 localStorage.setItem("aa10","g");};
 });
 NeoApp.controller("Speed11_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 29;
+$App.NAB.PageNumber = 32;
 $App.NAB.PageID = "Speed11";
-$scope.PushButton522_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton522_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea258_change = function() {localStorage.setItem("speed11a",$App.speed11a);};
 $scope.PushButton523_click = function() {neoTalkSpeak($App.speed11a, "", $App.Read1, $App.Read2);};
 $scope.TextInput379_change = function() {localStorage.setItem("speed11",$App.speed11);};
@@ -4697,9 +10388,9 @@ $scope.SetObjectStyle("Ellipse111","fill","green");
 localStorage.setItem("aa11","g");};
 });
 NeoApp.controller("Speed09_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 30;
+$App.NAB.PageNumber = 33;
 $App.NAB.PageID = "Speed09";
-$scope.PushButton474_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton474_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea248_change = function() {localStorage.setItem("speed09a",$App.speed09a);};
 $scope.PushButton478_click = function() {neoTalkSpeak($App.speed09a, "", $App.Read1, $App.Read2);};
 $scope.TextInput377_change = function() {localStorage.setItem("speed09",$App.speed09);};
@@ -4722,9 +10413,9 @@ $scope.SetObjectStyle("Ellipse109","fill","green");
 localStorage.setItem("aa9","g");};
 });
 NeoApp.controller("Speed12_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 31;
+$App.NAB.PageNumber = 34;
 $App.NAB.PageID = "Speed12";
-$scope.PushButton530_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton530_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea263_change = function() {localStorage.setItem("speed12a",$App.speed12a);};
 $scope.PushButton531_click = function() {neoTalkSpeak($App.speed12a, "", $App.Read1, $App.Read2);};
 $scope.TextInput380_change = function() {localStorage.setItem("speed12",$App.speed12);};
@@ -4747,9 +10438,9 @@ $scope.SetObjectStyle("Ellipse112","fill","green");
 localStorage.setItem("aa12","g");};
 });
 NeoApp.controller("Speed13_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 32;
+$App.NAB.PageNumber = 35;
 $App.NAB.PageID = "Speed13";
-$scope.PushButton537_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton537_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea268_change = function() {localStorage.setItem("speed13a",$App.speed13a);};
 $scope.PushButton538_click = function() {neoTalkSpeak($App.speed13a, "", $App.Read1, $App.Read2);};
 $scope.TextInput381_change = function() {localStorage.setItem("speed13",$App.speed13);};
@@ -4772,9 +10463,9 @@ $scope.SetObjectStyle("Ellipse113","fill","blue");
 localStorage.setItem("aa13","b");};
 });
 NeoApp.controller("Speed14_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 33;
+$App.NAB.PageNumber = 36;
 $App.NAB.PageID = "Speed14";
-$scope.PushButton556_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton556_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea273_change = function() {localStorage.setItem("speed14a",$App.speed14a);};
 $scope.PushButton557_click = function() {neoTalkSpeak($App.speed14a, "", $App.Read1, $App.Read2);};
 $scope.TextInput382_change = function() {localStorage.setItem("speed14",$App.speed14);};
@@ -4797,9 +10488,9 @@ $scope.SetObjectStyle("Ellipse114","fill","blue");
 localStorage.setItem("aa14","b");};
 });
 NeoApp.controller("Speed15_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 34;
+$App.NAB.PageNumber = 37;
 $App.NAB.PageID = "Speed15";
-$scope.PushButton563_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton563_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea278_change = function() {localStorage.setItem("speed15a",$App.speed15a);};
 $scope.PushButton564_click = function() {neoTalkSpeak($App.speed15a, "", $App.Read1, $App.Read2);};
 $scope.TextInput383_change = function() {localStorage.setItem("speed15",$App.speed15);};
@@ -4822,9 +10513,9 @@ $scope.SetObjectStyle("Ellipse115","fill","blue");
 localStorage.setItem("aa15","b");};
 });
 NeoApp.controller("Speed16_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 35;
+$App.NAB.PageNumber = 38;
 $App.NAB.PageID = "Speed16";
-$scope.PushButton569_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton569_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea283_change = function() {localStorage.setItem("speed16a",$App.speed16a);};
 $scope.PushButton570_click = function() {neoTalkSpeak($App.speed16a, "", $App.Read1, $App.Read2);};
 $scope.TextInput384_change = function() {localStorage.setItem("speed16",$App.speed16);};
@@ -4847,9 +10538,9 @@ $scope.SetObjectStyle("Ellipse116","fill","blue");
 localStorage.setItem("aa16","b");};
 });
 NeoApp.controller("Speed17_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 36;
+$App.NAB.PageNumber = 39;
 $App.NAB.PageID = "Speed17";
-$scope.PushButton708_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton708_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea338_change = function() {localStorage.setItem("speed17a",$App.speed17a);};
 $scope.PushButton709_click = function() {neoTalkSpeak($App.speed17a, "", $App.Read1, $App.Read2);};
 $scope.TextInput435_change = function() {localStorage.setItem("speed17",$App.speed17);};
@@ -4872,9 +10563,9 @@ $scope.SetObjectStyle("Ellipse117","fill","blue");
 localStorage.setItem("aa17","b");};
 });
 NeoApp.controller("Speed18_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 37;
+$App.NAB.PageNumber = 40;
 $App.NAB.PageID = "Speed18";
-$scope.PushButton714_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton714_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea343_change = function() {localStorage.setItem("speed18a",$App.speed18a);};
 $scope.PushButton715_click = function() {neoTalkSpeak($App.speed18a, "", $App.Read1, $App.Read2);};
 $scope.TextInput436_change = function() {localStorage.setItem("speed18",$App.speed18);};
@@ -4897,9 +10588,9 @@ $scope.SetObjectStyle("Ellipse118","fill","blue");
 localStorage.setItem("aa18","b");};
 });
 NeoApp.controller("Speed19_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 38;
+$App.NAB.PageNumber = 41;
 $App.NAB.PageID = "Speed19";
-$scope.PushButton720_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton720_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea348_change = function() {localStorage.setItem("speed19a",$App.speed19a);};
 $scope.PushButton721_click = function() {neoTalkSpeak($App.speed19a, "", $App.Read1, $App.Read2);};
 $scope.TextInput437_change = function() {localStorage.setItem("speed19",$App.speed19);};
@@ -4922,9 +10613,9 @@ $scope.SetObjectStyle("Ellipse119","fill","blue");
 localStorage.setItem("aa19","b");};
 });
 NeoApp.controller("Speed20_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 39;
+$App.NAB.PageNumber = 42;
 $App.NAB.PageID = "Speed20";
-$scope.PushButton726_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton726_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea353_change = function() {localStorage.setItem("speed20a",$App.speed20a);};
 $scope.PushButton727_click = function() {neoTalkSpeak($App.speed20a, "", $App.Read1, $App.Read2);};
 $scope.TextInput438_change = function() {localStorage.setItem("speed20",$App.speed20);};
@@ -4947,9 +10638,9 @@ $scope.SetObjectStyle("Ellipse120","fill","blue");
 localStorage.setItem("aa20","b");};
 });
 NeoApp.controller("Speed21_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 40;
+$App.NAB.PageNumber = 43;
 $App.NAB.PageID = "Speed21";
-$scope.PushButton732_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton732_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea358_change = function() {localStorage.setItem("speed21a",$App.speed21a);};
 $scope.PushButton733_click = function() {neoTalkSpeak($App.speed21a, "", $App.Read1, $App.Read2);};
 $scope.TextInput439_change = function() {localStorage.setItem("speed21",$App.speed21);};
@@ -4972,9 +10663,9 @@ $scope.SetObjectStyle("Ellipse121","fill","blue");
 localStorage.setItem("aa21","b");};
 });
 NeoApp.controller("Speed22_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 41;
+$App.NAB.PageNumber = 44;
 $App.NAB.PageID = "Speed22";
-$scope.PushButton744_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton744_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea368_change = function() {localStorage.setItem("speed22a",$App.speed22a);};
 $scope.PushButton745_click = function() {neoTalkSpeak($App.speed22a, "", $App.Read1, $App.Read2);};
 $scope.TextInput441_change = function() {localStorage.setItem("speed22",$App.speed22);};
@@ -4997,9 +10688,9 @@ $scope.SetObjectStyle("Ellipse122","fill","blue");
 localStorage.setItem("aa22","b");};
 });
 NeoApp.controller("Speed23_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 42;
+$App.NAB.PageNumber = 45;
 $App.NAB.PageID = "Speed23";
-$scope.PushButton750_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton750_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea373_change = function() {localStorage.setItem("speed23a",$App.speed23a);};
 $scope.PushButton751_click = function() {neoTalkSpeak($App.speed23a, "", $App.Read1, $App.Read2);};
 $scope.TextInput442_change = function() {localStorage.setItem("speed23",$App.speed23);};
@@ -5022,9 +10713,9 @@ $scope.SetObjectStyle("Ellipse123","fill","blue");
 localStorage.setItem("aa23","b");};
 });
 NeoApp.controller("Speed24_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 43;
+$App.NAB.PageNumber = 46;
 $App.NAB.PageID = "Speed24";
-$scope.PushButton738_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton738_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea363_change = function() {localStorage.setItem("speed24a",$App.speed24a);};
 $scope.PushButton739_click = function() {neoTalkSpeak($App.speed24a, "", $App.Read1, $App.Read2);};
 $scope.TextInput440_change = function() {localStorage.setItem("speed24",$App.speed24);};
@@ -5047,9 +10738,9 @@ $scope.SetObjectStyle("Ellipse124","fill","blue");
 localStorage.setItem("aa24","b");};
 });
 NeoApp.controller("Speed25_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 44;
+$App.NAB.PageNumber = 47;
 $App.NAB.PageID = "Speed25";
-$scope.PushButton643_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton643_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea403_change = function() {localStorage.setItem("speed25a",$App.speed25a);};
 $scope.PushButton644_click = function() {neoTalkSpeak($App.speed25a, "", $App.Read1, $App.Read2);};
 $scope.TextInput448_change = function() {localStorage.setItem("speed25",$App.speed25);};
@@ -5072,9 +10763,9 @@ $scope.SetObjectStyle("Ellipse125","fill","blue");
 localStorage.setItem("aa25","b");};
 });
 NeoApp.controller("Speed26_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 45;
+$App.NAB.PageNumber = 48;
 $App.NAB.PageID = "Speed26";
-$scope.PushButton652_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton652_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea408_change = function() {localStorage.setItem("speed26a",$App.speed26a);};
 $scope.PushButton653_click = function() {neoTalkSpeak($App.speed26a, "", $App.Read1, $App.Read2);};
 $scope.TextInput449_change = function() {localStorage.setItem("speed26",$App.speed26);};
@@ -5097,9 +10788,9 @@ $scope.SetObjectStyle("Ellipse126","fill","blue");
 localStorage.setItem("aa26","b");};
 });
 NeoApp.controller("Speed27_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 46;
+$App.NAB.PageNumber = 49;
 $App.NAB.PageID = "Speed27";
-$scope.PushButton850_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton850_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea413_change = function() {localStorage.setItem("speed27a",$App.speed27a);};
 $scope.PushButton851_click = function() {neoTalkSpeak($App.speed27a, "", $App.Read1, $App.Read2);};
 $scope.TextInput450_change = function() {localStorage.setItem("speed27",$App.speed26);};
@@ -5122,9 +10813,9 @@ $scope.SetObjectStyle("Ellipse127","fill","blue");
 localStorage.setItem("aa27","b");};
 });
 NeoApp.controller("Speed28_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 47;
+$App.NAB.PageNumber = 50;
 $App.NAB.PageID = "Speed28";
-$scope.PushButton859_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton859_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea418_change = function() {localStorage.setItem("speed28a",$App.speed28a);};
 $scope.PushButton860_click = function() {neoTalkSpeak($App.speed28a, "", $App.Read1, $App.Read2);};
 $scope.TextInput451_change = function() {localStorage.setItem("speed28",$App.speed28);};
@@ -5147,9 +10838,9 @@ $scope.SetObjectStyle("Ellipse128","fill","blue");
 localStorage.setItem("aa28","b");};
 });
 NeoApp.controller("Speed29_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 48;
+$App.NAB.PageNumber = 51;
 $App.NAB.PageID = "Speed29";
-$scope.PushButton868_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton868_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea423_change = function() {localStorage.setItem("speed29a",$App.speed29a);};
 $scope.PushButton869_click = function() {neoTalkSpeak($App.speed29a, "", $App.Read1, $App.Read2);};
 $scope.TextInput452_change = function() {localStorage.setItem("speed29",$App.speed29);};
@@ -5172,9 +10863,9 @@ $scope.SetObjectStyle("Ellipse129","fill","blue");
 localStorage.setItem("aa29","b");};
 });
 NeoApp.controller("Speed30_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 49;
+$App.NAB.PageNumber = 52;
 $App.NAB.PageID = "Speed30";
-$scope.PushButton877_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton877_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea428_change = function() {localStorage.setItem("speed30a",$App.speed30a);};
 $scope.PushButton878_click = function() {neoTalkSpeak($App.speed30a, "", $App.Read1, $App.Read2);};
 $scope.TextInput453_change = function() {localStorage.setItem("speed30",$App.speed30);};
@@ -5197,9 +10888,9 @@ $scope.SetObjectStyle("Ellipse130","fill","blue");
 localStorage.setItem("aa30","b");};
 });
 NeoApp.controller("Speed31_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 50;
+$App.NAB.PageNumber = 53;
 $App.NAB.PageID = "Speed31";
-$scope.PushButton886_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton886_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea433_change = function() {localStorage.setItem("speed31a",$App.speed31a);};
 $scope.PushButton887_click = function() {neoTalkSpeak($App.speed31a, "", $App.Read1, $App.Read2);};
 $scope.TextInput454_change = function() {localStorage.setItem("speed31",$App.speed31);};
@@ -5222,9 +10913,9 @@ $scope.SetObjectStyle("Ellipse131","fill","blue");
 localStorage.setItem("aa31","b");};
 });
 NeoApp.controller("Speed32_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 51;
+$App.NAB.PageNumber = 54;
 $App.NAB.PageID = "Speed32";
-$scope.PushButton895_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton895_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.TextArea438_change = function() {localStorage.setItem("speed32a",$App.speed32a);};
 $scope.PushButton896_click = function() {neoTalkSpeak($App.speed32a, "", $App.Read1, $App.Read2);};
 $scope.TextInput455_change = function() {localStorage.setItem("speed32",$App.speed32);};
@@ -5247,7 +10938,7 @@ $scope.SetObjectStyle("Ellipse132","fill","blue");
 localStorage.setItem("aa32","b");};
 });
 NeoApp.controller("HomeTiles_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 52;
+$App.NAB.PageNumber = 55;
 $App.NAB.PageID = "HomeTiles";
 $scope.PushButton226_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton227_click = function() {$App.S1 = localStorage.getItem("S1");
@@ -5306,7 +10997,7 @@ $App.resetrules = localStorage.getItem("resetrules");
 $scope.GotoPage( "ResetNew" );};
 });
 NeoApp.controller("TNeoAppPage11_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 53;
+$App.NAB.PageNumber = 56;
 $App.NAB.PageID = "TNeoAppPage11";
 $scope.PushButton191_click = function() {neoAddToCalendar($App.title,$App.startDate,$App.endDate,$App.startHour,$App.endHour,$App.location,$App.description,$App.timeZone);
 };
@@ -5314,7 +11005,7 @@ $scope.PushButton207_click = function() {window.open("https://www.bing.com/ck/a?
 $scope.PushButton208_click = function() {$scope.GotoPage( "Temphome" );};
 });
 NeoApp.controller("Health_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 54;
+$App.NAB.PageNumber = 57;
 $App.NAB.PageID = "Health";
 $scope.PushButton149_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea16_change = function() {localStorage.setItem("HEALTHGENERAL001",$App.HEALTHGENERAL001);};
@@ -5322,7 +11013,7 @@ $scope.TextArea218_change = function() {localStorage.setItem("HEALTHGENERAL002",
 $scope.PushButton101_click = function() {neoTalkSpeak($App.HEALTHGENERAL001, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Homestuff_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 55;
+$App.NAB.PageNumber = 58;
 $App.NAB.PageID = "Homestuff";
 $scope.PushButton1_click = function() {window.open($App.title001, "_blank");};
 $scope.PushButton3_click = function() {window.open($App.title002, "_blank");};
@@ -5379,7 +11070,7 @@ $scope.TextArea6_change = function() {localStorage.setItem("Homsstuffinote",$App
 $scope.PushButton187_click = function() {neoTalkSpeak($App.Homsstuffinote, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("elink2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 56;
+$App.NAB.PageNumber = 59;
 $App.NAB.PageID = "elink2";
 $scope.PushButton113_click = function() {window.open($App.TPtitle001, "_blank");};
 $scope.PushButton114_click = function() {window.open($App.TPtitle002, "_blank");};
@@ -5529,7 +11220,7 @@ $scope.PushButton271_click = function() {window.open($App.TPtitle032, "_blank");
 $scope.TextInput38_change = function() {localStorage.setItem("elink2",$App.elink2);};
 });
 NeoApp.controller("WorkDesktop_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 57;
+$App.NAB.PageNumber = 60;
 $App.NAB.PageID = "WorkDesktop";
 $scope.PushButton546_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager77_prevclick = function() {$scope.GotoPrevPage();};
@@ -5539,7 +11230,7 @@ $scope.PushButton547_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $
 $scope.TextArea214_change = function() {localStorage.setItem("worknotes10",$App.worknotes10);};
 });
 NeoApp.controller("skillsphil_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 58;
+$App.NAB.PageNumber = 61;
 $App.NAB.PageID = "skillsphil";
 $scope.PushButton153_click = function() {window.open($App.Tititle001, "_blank");};
 $scope.PushButton175_click = function() {window.open($App.Tititle005, "_blank");};
@@ -5583,7 +11274,7 @@ $scope.TextInput240_change = function() {localStorage.setItem("Tititle002n",$App
 $scope.PushButton106_click = function() {window.open("https://www.youtube.com/", "_blank");};
 });
 NeoApp.controller("Project1_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 59;
+$App.NAB.PageNumber = 62;
 $App.NAB.PageID = "Project1";
 $scope.TextInput314_change = function() {localStorage.setItem("project1aa",$App.project1aa);};
 $scope.PushButton284_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5650,7 +11341,7 @@ $scope.TextInput369_change = function() {localStorage.setItem("project1",$App.pr
 $scope.TextInput371_change = function() {localStorage.setItem("project1doc",$App.project1doc);};
 });
 NeoApp.controller("Project1pa_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 60;
+$App.NAB.PageNumber = 63;
 $App.NAB.PageID = "Project1pa";
 $scope.PushButton274_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea167_change = function() {localStorage.setItem("project1aT",$App.project1aT);};
@@ -5660,7 +11351,7 @@ $scope.Pager30_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager30_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Projectaa_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 61;
+$App.NAB.PageNumber = 64;
 $App.NAB.PageID = "Projectaa";
 $scope.PushButton403_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea191_change = function() {localStorage.setItem("project1aaT",$App.project1aaT);};
@@ -5670,7 +11361,7 @@ $scope.Pager54_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager54_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Projectab_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 62;
+$App.NAB.PageNumber = 65;
 $App.NAB.PageID = "Projectab";
 $scope.PushButton407_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea192_change = function() {localStorage.setItem("project1abT",$App.project1abT);};
@@ -5680,7 +11371,7 @@ $scope.Pager55_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager55_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Projectac_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 63;
+$App.NAB.PageNumber = 66;
 $App.NAB.PageID = "Projectac";
 $scope.PushButton411_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea193_change = function() {localStorage.setItem("project1acT",$App.project1acT);};
@@ -5690,7 +11381,7 @@ $scope.Pager56_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager56_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Projectad_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 64;
+$App.NAB.PageNumber = 67;
 $App.NAB.PageID = "Projectad";
 $scope.PushButton415_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea194_change = function() {localStorage.setItem("project1adT",$App.project1adT);};
@@ -5700,7 +11391,7 @@ $scope.Pager57_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager57_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project1pb_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 65;
+$App.NAB.PageNumber = 68;
 $App.NAB.PageID = "Project1pb";
 $scope.PushButton305_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager31_prevclick = function() {$scope.GotoPrevPage();};
@@ -5710,7 +11401,7 @@ $scope.PushButton311_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton314_click = function() {neoTalkSpeak($App.project1bT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pc_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 66;
+$App.NAB.PageNumber = 69;
 $App.NAB.PageID = "Project1pc";
 $scope.TextArea169_change = function() {localStorage.setItem("project1cT",$App.project1cT);};
 $scope.PushButton308_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5720,7 +11411,7 @@ $scope.PushButton315_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton316_click = function() {neoTalkSpeak($App.project1cT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pd_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 67;
+$App.NAB.PageNumber = 70;
 $App.NAB.PageID = "Project1pd";
 $scope.TextArea170_change = function() {localStorage.setItem("project1dT",$App.project1dT);};
 $scope.PushButton310_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5730,7 +11421,7 @@ $scope.PushButton317_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton318_click = function() {neoTalkSpeak($App.project1dT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pe_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 68;
+$App.NAB.PageNumber = 71;
 $App.NAB.PageID = "Project1pe";
 $scope.TextArea171_change = function() {localStorage.setItem("project1eT",$App.project1eT);};
 $scope.PushButton320_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5740,7 +11431,7 @@ $scope.PushButton321_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton322_click = function() {neoTalkSpeak($App.project1eT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pf_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 69;
+$App.NAB.PageNumber = 72;
 $App.NAB.PageID = "Project1pf";
 $scope.TextArea172_change = function() {localStorage.setItem("project1fT",$App.project1fT);};
 $scope.PushButton324_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5750,7 +11441,7 @@ $scope.PushButton325_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton326_click = function() {neoTalkSpeak($App.project1fT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pg_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 70;
+$App.NAB.PageNumber = 73;
 $App.NAB.PageID = "Project1pg";
 $scope.TextArea173_change = function() {localStorage.setItem("project1gT",$App.project1gT);};
 $scope.PushButton328_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5760,7 +11451,7 @@ $scope.PushButton329_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton330_click = function() {neoTalkSpeak($App.project1gT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1ph_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 71;
+$App.NAB.PageNumber = 74;
 $App.NAB.PageID = "Project1ph";
 $scope.TextArea174_change = function() {localStorage.setItem("project1hT",$App.project1hT);};
 $scope.PushButton332_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5770,7 +11461,7 @@ $scope.PushButton333_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton334_click = function() {neoTalkSpeak($App.project1hT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pi_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 72;
+$App.NAB.PageNumber = 75;
 $App.NAB.PageID = "Project1pi";
 $scope.TextArea175_change = function() {localStorage.setItem("project1iT",$App.project1iT);};
 $scope.PushButton336_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5780,7 +11471,7 @@ $scope.PushButton337_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton338_click = function() {neoTalkSpeak($App.project1iT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pj_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 73;
+$App.NAB.PageNumber = 76;
 $App.NAB.PageID = "Project1pj";
 $scope.TextArea176_change = function() {localStorage.setItem("project1jT",$App.project1jT);};
 $scope.PushButton340_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5790,7 +11481,7 @@ $scope.PushButton341_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton342_click = function() {neoTalkSpeak($App.project1jT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pk_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 74;
+$App.NAB.PageNumber = 77;
 $App.NAB.PageID = "Project1pk";
 $scope.TextArea177_change = function() {localStorage.setItem("project1kT",$App.project1kT);};
 $scope.PushButton344_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5800,7 +11491,7 @@ $scope.PushButton345_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton346_click = function() {neoTalkSpeak($App.project1kT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pl_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 75;
+$App.NAB.PageNumber = 78;
 $App.NAB.PageID = "Project1pl";
 $scope.TextArea178_change = function() {localStorage.setItem("project1lT",$App.project1lT);};
 $scope.PushButton348_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5810,7 +11501,7 @@ $scope.PushButton349_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton350_click = function() {neoTalkSpeak($App.project1lT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pm_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 76;
+$App.NAB.PageNumber = 79;
 $App.NAB.PageID = "Project1pm";
 $scope.TextArea179_change = function() {localStorage.setItem("project1mT",$App.project1mT);};
 $scope.PushButton352_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5820,7 +11511,7 @@ $scope.PushButton353_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton354_click = function() {neoTalkSpeak($App.project1mT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pn_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 77;
+$App.NAB.PageNumber = 80;
 $App.NAB.PageID = "Project1pn";
 $scope.TextArea180_change = function() {localStorage.setItem("project1nT",$App.project1nT);};
 $scope.PushButton356_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5830,7 +11521,7 @@ $scope.PushButton357_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton358_click = function() {neoTalkSpeak($App.project1nT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pfo_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 78;
+$App.NAB.PageNumber = 81;
 $App.NAB.PageID = "Project1pfo";
 $scope.TextArea182_change = function() {localStorage.setItem("project1oT",$App.project1oT);};
 $scope.PushButton364_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5840,7 +11531,7 @@ $scope.PushButton365_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton366_click = function() {neoTalkSpeak($App.project1oT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pp_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 79;
+$App.NAB.PageNumber = 82;
 $App.NAB.PageID = "Project1pp";
 $scope.TextArea183_change = function() {localStorage.setItem("project1pT",$App.project1pT);};
 $scope.PushButton368_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5850,7 +11541,7 @@ $scope.PushButton369_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton370_click = function() {neoTalkSpeak($App.project1pT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pq_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 80;
+$App.NAB.PageNumber = 83;
 $App.NAB.PageID = "Project1pq";
 $scope.TextArea184_change = function() {localStorage.setItem("project1qT",$App.project1qT);};
 $scope.PushButton372_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5860,7 +11551,7 @@ $scope.PushButton373_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton374_click = function() {neoTalkSpeak($App.project1qT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pr_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 81;
+$App.NAB.PageNumber = 84;
 $App.NAB.PageID = "Project1pr";
 $scope.TextArea185_change = function() {localStorage.setItem("project1rT",$App.project1rT);};
 $scope.PushButton376_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5870,7 +11561,7 @@ $scope.PushButton377_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton378_click = function() {neoTalkSpeak($App.project1rT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1ps_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 82;
+$App.NAB.PageNumber = 85;
 $App.NAB.PageID = "Project1ps";
 $scope.TextArea186_change = function() {localStorage.setItem("project1sT",$App.project1sT);};
 $scope.PushButton380_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5880,7 +11571,7 @@ $scope.PushButton381_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton382_click = function() {neoTalkSpeak($App.project1sT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pft_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 83;
+$App.NAB.PageNumber = 86;
 $App.NAB.PageID = "Project1pft";
 $scope.TextArea181_change = function() {localStorage.setItem("project1tT",$App.project1tT);};
 $scope.PushButton360_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5890,7 +11581,7 @@ $scope.PushButton361_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton362_click = function() {neoTalkSpeak($App.project1tT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pu_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 84;
+$App.NAB.PageNumber = 87;
 $App.NAB.PageID = "Project1pu";
 $scope.TextArea187_change = function() {localStorage.setItem("project1uT",$App.project1uT);};
 $scope.PushButton384_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5900,7 +11591,7 @@ $scope.PushButton385_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton386_click = function() {neoTalkSpeak($App.project1uT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pv_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 85;
+$App.NAB.PageNumber = 88;
 $App.NAB.PageID = "Project1pv";
 $scope.TextArea188_change = function() {localStorage.setItem("project1vT",$App.project1vT);};
 $scope.PushButton388_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5910,7 +11601,7 @@ $scope.PushButton389_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton390_click = function() {neoTalkSpeak($App.project1vT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1pw_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 86;
+$App.NAB.PageNumber = 89;
 $App.NAB.PageID = "Project1pw";
 $scope.TextArea189_change = function() {localStorage.setItem("project1wT",$App.project1wT);};
 $scope.PushButton392_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5920,7 +11611,7 @@ $scope.PushButton393_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton394_click = function() {neoTalkSpeak($App.project1wT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project1px_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 87;
+$App.NAB.PageNumber = 90;
 $App.NAB.PageID = "Project1px";
 $scope.TextArea190_change = function() {localStorage.setItem("project1xT",$App.project1xT);};
 $scope.PushButton396_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5930,7 +11621,7 @@ $scope.PushButton397_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton398_click = function() {neoTalkSpeak($App.project1xT, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Project2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 88;
+$App.NAB.PageNumber = 91;
 $App.NAB.PageID = "Project2";
 $scope.TextInput340_change = function() {localStorage.setItem("project2aa",$App.Project2aa);};
 $scope.PushButton420_click = function() {$scope.GotoPage( "Temphome" );};
@@ -5998,7 +11689,7 @@ $scope.TextInput372_change = function() {localStorage.setItem("project2",$App.pr
 $scope.TextInput373_change = function() {localStorage.setItem("project2doc",$App.project2doc);};
 });
 NeoApp.controller("Projectaa2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 89;
+$App.NAB.PageNumber = 92;
 $App.NAB.PageID = "Projectaa2";
 $scope.PushButton451_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea196_change = function() {localStorage.setItem("project2aaT",$App.project2aaT);};
@@ -6008,7 +11699,7 @@ $scope.Pager59_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager59_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Projectab2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 90;
+$App.NAB.PageNumber = 93;
 $App.NAB.PageID = "Projectab2";
 $scope.PushButton455_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea197_change = function() {localStorage.setItem("project2abT",$App.project2abT);};
@@ -6018,7 +11709,7 @@ $scope.Pager60_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager60_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Projectac2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 91;
+$App.NAB.PageNumber = 94;
 $App.NAB.PageID = "Projectac2";
 $scope.PushButton459_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton460_click = function() {$scope.GotoPage( "Projects" );};
@@ -6030,7 +11721,7 @@ localStorage.setItem("project2acTjic",$App.project2acT);};
 $scope.PushButton526_click = function() {$App.project2acT = localStorage.getItem("project2acTjic");};
 });
 NeoApp.controller("Projectad2_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 92;
+$App.NAB.PageNumber = 95;
 $App.NAB.PageID = "Projectad2";
 $scope.PushButton463_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea199_change = function() {localStorage.setItem("project2adT",$App.project2adT);};
@@ -6040,7 +11731,7 @@ $scope.Pager62_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager62_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pa_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 93;
+$App.NAB.PageNumber = 96;
 $App.NAB.PageID = "Project2pa";
 $scope.PushButton467_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea200_change = function() {localStorage.setItem("project2aT",$App.project2aT);};
@@ -6050,7 +11741,7 @@ $scope.Pager63_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager63_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pb_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 94;
+$App.NAB.PageNumber = 97;
 $App.NAB.PageID = "Project2pb";
 $scope.PushButton471_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea201_change = function() {localStorage.setItem("project2bT",$App.project2bT);};
@@ -6060,7 +11751,7 @@ $scope.Pager64_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager64_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pc_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 95;
+$App.NAB.PageNumber = 98;
 $App.NAB.PageID = "Project2pc";
 $scope.PushButton475_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea202_change = function() {localStorage.setItem("project2cT",$App.project2cT);};
@@ -6070,7 +11761,7 @@ $scope.Pager65_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager65_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pd_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 96;
+$App.NAB.PageNumber = 99;
 $App.NAB.PageID = "Project2pd";
 $scope.PushButton479_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea203_change = function() {localStorage.setItem("project2dT",$App.project2dT);};
@@ -6080,7 +11771,7 @@ $scope.Pager66_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager66_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pe_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 97;
+$App.NAB.PageNumber = 100;
 $App.NAB.PageID = "Project2pe";
 $scope.PushButton483_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea204_change = function() {localStorage.setItem("project2eT",$App.project2eT);};
@@ -6090,7 +11781,7 @@ $scope.Pager67_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager67_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pf_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 98;
+$App.NAB.PageNumber = 101;
 $App.NAB.PageID = "Project2pf";
 $scope.PushButton487_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea205_change = function() {localStorage.setItem("project2fT",$App.project2fT);};
@@ -6100,7 +11791,7 @@ $scope.Pager68_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager68_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pg_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 99;
+$App.NAB.PageNumber = 102;
 $App.NAB.PageID = "Project2pg";
 $scope.PushButton491_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea206_change = function() {localStorage.setItem("project2gT",$App.project2gT);};
@@ -6110,7 +11801,7 @@ $scope.Pager69_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager69_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2ph_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 100;
+$App.NAB.PageNumber = 103;
 $App.NAB.PageID = "Project2ph";
 $scope.PushButton495_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea207_change = function() {localStorage.setItem("projecthT",$App.projecthT);};
@@ -6120,7 +11811,7 @@ $scope.Pager70_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager70_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pi_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 101;
+$App.NAB.PageNumber = 104;
 $App.NAB.PageID = "Project2pi";
 $scope.PushButton499_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea208_change = function() {localStorage.setItem("project2iT",$App.project2iT);};
@@ -6130,7 +11821,7 @@ $scope.Pager71_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager71_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pj_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 102;
+$App.NAB.PageNumber = 105;
 $App.NAB.PageID = "Project2pj";
 $scope.PushButton503_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea209_change = function() {localStorage.setItem("project2jT",$App.project2jT);};
@@ -6140,7 +11831,7 @@ $scope.Pager72_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager72_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pk_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 103;
+$App.NAB.PageNumber = 106;
 $App.NAB.PageID = "Project2pk";
 $scope.PushButton507_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea210_change = function() {localStorage.setItem("project2kT",$App.project2kT);};
@@ -6150,7 +11841,7 @@ $scope.Pager73_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager73_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pl_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 104;
+$App.NAB.PageNumber = 107;
 $App.NAB.PageID = "Project2pl";
 $scope.PushButton511_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea211_change = function() {localStorage.setItem("project2lT",$App.project2lT);};
@@ -6160,7 +11851,7 @@ $scope.Pager74_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager74_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pm_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 105;
+$App.NAB.PageNumber = 108;
 $App.NAB.PageID = "Project2pm";
 $scope.PushButton515_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea212_change = function() {localStorage.setItem("project2mT",$App.project2mT);};
@@ -6170,7 +11861,7 @@ $scope.Pager75_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager75_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Project2pn_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 106;
+$App.NAB.PageNumber = 109;
 $App.NAB.PageID = "Project2pn";
 $scope.PushButton519_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea213_change = function() {localStorage.setItem("project2nT",$App.project2nT);};
@@ -6180,7 +11871,7 @@ $scope.Pager76_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager76_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("C-A-Z_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 107;
+$App.NAB.PageNumber = 110;
 $App.NAB.PageID = "C-A-Z";
 $scope.PushButton31_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton32_click = function() {$scope.GotoPage( "Workstuff-A" );};
@@ -6211,7 +11902,7 @@ $scope.PushButton78_click = function() {window.open($App.Atitle015, "_blank");};
 $scope.PushButton79_click = function() {window.open($App.Atitle016, "_blank");};
 });
 NeoApp.controller("Workstuff-B_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 108;
+$App.NAB.PageNumber = 111;
 $App.NAB.PageID = "Workstuff-B";
 $scope.PushButton81_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.PushButton82_click = function() {window.open($App.Btitle001, "_blank");};
@@ -6270,9 +11961,9 @@ $scope.Pager17_nextclick = function() {$scope.GotoNextPage();};
 $scope.PushButton186_click = function() {neoTalkSpeak($App.WorkBstuffnote, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("Prayer_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 109;
+$App.NAB.PageNumber = 112;
 $App.NAB.PageID = "Prayer";
-$scope.PushButton193_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton193_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.Pager20_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager20_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea11_change = function() {localStorage.setItem("Prayer",$App.Prayer);};
@@ -6288,13 +11979,13 @@ $scope.TextArea397_change = function() {localStorage.setItem("Prayer3tit",$App.P
 $scope.TextArea398_change = function() {localStorage.setItem("Prayer4tit",$App.Prayer4tit);};
 });
 NeoApp.controller("Journal_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 110;
+$App.NAB.PageNumber = 113;
 $App.NAB.PageID = "Journal";
 $scope.PushButton108_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea296_change = function() {localStorage.setItem("journal",$App.journal);};
 });
 NeoApp.controller("Next_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 111;
+$App.NAB.PageNumber = 114;
 $App.NAB.PageID = "Next";
 $scope.PushButton212_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager23_prevclick = function() {$scope.GotoPrevPage();};
@@ -6303,9 +11994,9 @@ $scope.TextArea17_change = function() {localStorage.setItem("Next",$App.Next);};
 $scope.PushButton213_click = function() {neoTalkSpeak($App.Next, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("DailyReps_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 112;
+$App.NAB.PageNumber = 115;
 $App.NAB.PageID = "DailyReps";
-$scope.PushButton197_click = function() {$scope.GotoPage( "Temphome" );};
+$scope.PushButton197_click = function() {$scope.GotoPage( "landinghome" );};
 $scope.Pager22_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager22_nextclick = function() {$scope.GotoNextPage();};
 $scope.TextArea12_change = function() {localStorage.setItem("Reps",$App.Reps);};
@@ -6322,7 +12013,7 @@ $scope.TextArea401_change = function() {localStorage.setItem("Reps3tit",$App.Rep
 $scope.TextArea402_change = function() {localStorage.setItem("Reps4tit",$App.Reps4tit);};
 });
 NeoApp.controller("Home_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 113;
+$App.NAB.PageNumber = 116;
 $App.NAB.PageID = "Home";
 $scope.TextInput106_change = function() {localStorage.setItem("main001n",$App.main001n);};
 $scope.TextInput122_change = function() {localStorage.setItem("main002n",$App.main002n);};
@@ -6339,31 +12030,31 @@ $scope.Pager4_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager4_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("VERSION_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 114;
+$App.NAB.PageNumber = 117;
 $App.NAB.PageID = "VERSION";
 $scope.PushButton103_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea4_change = function() {localStorage.setItem("VERSIONRECORD",$App.VERSIONRECORD);};
 });
 NeoApp.controller("ResetRules_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 115;
+$App.NAB.PageNumber = 118;
 $App.NAB.PageID = "ResetRules";
 $scope.PushButton239_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea163_change = function() {localStorage.setItem("resetrules",$App.resetrules);};
 });
 NeoApp.controller("Resetoverview_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 116;
+$App.NAB.PageNumber = 119;
 $App.NAB.PageID = "Resetoverview";
 $scope.PushButton240_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea164_change = function() {localStorage.setItem("resetoverview",$App.resetoverview);};
 });
 NeoApp.controller("ResetNotes_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 117;
+$App.NAB.PageNumber = 120;
 $App.NAB.PageID = "ResetNotes";
 $scope.PushButton241_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea165_change = function() {localStorage.setItem("resetnotes",$App.resetnotes);};
 });
 NeoApp.controller("Template001_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 118;
+$App.NAB.PageNumber = 121;
 $App.NAB.PageID = "Template001";
 $scope.TextArea1_change = function() {localStorage.setItem("FNM001",$App.FNM001);};
 $scope.Pager2_prevclick = function() {$scope.GotoPrevPage();};
@@ -6372,7 +12063,7 @@ $scope.Pager8_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager8_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("Template1setup_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 119;
+$App.NAB.PageNumber = 122;
 $App.NAB.PageID = "Template1setup";
 $scope.Pager1_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager1_nextclick = function() {$scope.GotoNextPage();};
@@ -6380,7 +12071,7 @@ $scope.Pager9_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager9_nextclick = function() {$scope.GotoNextPage();};
 });
 NeoApp.controller("KeepJIC_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 120;
+$App.NAB.PageNumber = 123;
 $App.NAB.PageID = "KeepJIC";
 $scope.TextArea7_change = function() {localStorage.setItem("RecData",$App.RecData);};
 $scope.PushButton109_click = function() {$scope.GotoPage( "Temphome" );};
@@ -7708,7 +13399,7 @@ $App.Var1300 = lines[1299]  || "";
 };
 });
 NeoApp.controller("ResetNew_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 121;
+$App.NAB.PageNumber = 124;
 $App.NAB.PageID = "ResetNew";
 $scope.PushButton228_click = function() {$scope.GotoPage( "Resetoverview" );};
 $scope.PushButton229_click = function() {$scope.GotoPage( "ResetRules" );};
@@ -7716,7 +13407,7 @@ $scope.PushButton232_click = function() {$scope.GotoPage( "ResetNotes" );};
 $scope.PushButton238_click = function() {$scope.GotoPage( "Temphome" );};
 });
 NeoApp.controller("Reset_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 122;
+$App.NAB.PageNumber = 125;
 $App.NAB.PageID = "Reset";
 $scope.PushButton219_click = function() {window.document.location.reload();};
 $scope.PushButton220_click = function() {$scope.GotoPage( "Temphome" );};
@@ -7760,7 +13451,7 @@ $scope.TextArea58_change = function() {localStorage.setItem("Reset16a",$App.Rese
 $scope.TextArea59_change = function() {localStorage.setItem("Reset16",$App.Reset16);};
 });
 NeoApp.controller("Stages_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 123;
+$App.NAB.PageNumber = 126;
 $App.NAB.PageID = "Stages";
 $scope.Pager27_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager27_nextclick = function() {$scope.GotoNextPage();};
@@ -7796,7 +13487,7 @@ $scope.TextArea66_change = function() {localStorage.setItem("Stage7",$App.Stage7
 $scope.TextArea67_change = function() {localStorage.setItem("Stage8",$App.Stage8);};
 });
 NeoApp.controller("Lanes_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 124;
+$App.NAB.PageNumber = 127;
 $App.NAB.PageID = "Lanes";
 $scope.PushButton224_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.Pager28_prevclick = function() {$scope.GotoPrevPage();};
@@ -7829,18 +13520,18 @@ $scope.TextArea85_change = function() {localStorage.setItem("Lanes8",$App.Lanes8
 $scope.TextArea86_change = function() {localStorage.setItem("Lanes8",$App.Lanes8);};
 });
 NeoApp.controller("Me_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 125;
+$App.NAB.PageNumber = 128;
 $App.NAB.PageID = "Me";
 $scope.PushButton215_click = function() {$scope.GotoPage( "Temphome" );};
 $scope.TextArea18_change = function() {localStorage.setItem("Me",$App.Me);};
 $scope.PushButton216_click = function() {neoTalkSpeak($App.Me, "", $App.Read1, $App.Read2);};
 });
 NeoApp.controller("bounce_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 126;
+$App.NAB.PageNumber = 129;
 $App.NAB.PageID = "bounce";
 });
 NeoApp.controller("P012-Index-Cards-Read1_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
-$App.NAB.PageNumber = 127;
+$App.NAB.PageNumber = 130;
 $App.NAB.PageID = "P012-Index-Cards-Read1";
 $scope.TextArea454_change = function() {localStorage.setItem("i0001",$App.i0001);};
 $scope.Headline527_click = function() {neoTalkSpeak($App.i0001, "", $App.Read1, $App.Read2);};

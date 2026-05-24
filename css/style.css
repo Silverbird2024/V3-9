@@ -4,6 +4,82 @@ body {height:667px;width:375px}
 .app-viewport {position:absolute;top:0;bottom:0;width:100%}
 html{background:#eeeeee}body{background:rgba(255,255,255,0);position:absolute;top:0px;bottom:0px;left:0px;right:0px;margin:auto}.navbar-left{float:left}.btn-default{background:#f4f4f4}p,h1,h2,h3,h4,h5,h6{overflow:hidden}a:focus,.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn.active.focus,input[type="radio"]:focus,input[type="checkbox"]:focus{outline:0}.nav,.pagination,.carousel,.panel-title a{cursor:pointer}.modal{overflow:auto}.modal-dialog{margin-top:0;margin-bottom:0;padding-top:10px}.modal-content{overflow:hidden}.modal-backdrop{opacity:.5}.pagination{margin:0}.input-group-btn{vertical-align:top}.input-group-btn>.btn{height:100%}.input-group>.form-control{height:100%}.input-group{padding:0}.modal-dialog{position:absolute!important;top:0px!important;left:0px!important;bottom:0px!important;right:0px!important;margin:auto!important;max-width:95%;max-height:95%}svg{overflow:visible!important}.neocheckbox [type="checkbox"]:not(:checked),.neocheckbox [type="checkbox"]:checked{position:absolute;left:-9999px}.neocheckbox [type="checkbox"]:not(:checked) + label,.neocheckbox [type="checkbox"]:checked + label{position:relative;padding-left:1.95em;cursor:pointer}.neocheckbox [type="checkbox"]:not(:checked) + label:before,.neocheckbox [type="checkbox"]:checked + label:before{content:'';position:absolute;left:0;top:0;width:1.25em;height:1.25em;border:0.15em solid #aaa;background:#fff;border-radius:4px}.neocheckbox [type="checkbox"]:not(:checked) + label:after,.neocheckbox [type="checkbox"]:checked + label:after{content:"✓";position:absolute;top:.2em;left:.2em;font-size:1.1em;line-height:0.8;color:#444444;transition:all .2s;font-family:'Lucida Sans Unicode','Arial Unicode MS',Arial}.neocheckbox [type="checkbox"]:not(:checked) + label:after{opacity:0;transform:scale(0)}.neocheckbox [type="checkbox"]:checked + label:after{opacity:1;transform:scale(1)}.neocheckbox [type="checkbox"]:disabled:not(:checked) + label:before,.neocheckbox [type="checkbox"]:disabled:checked + label:before{box-shadow:none;border-color:#bbb;background-color:#ddd}.neocheckbox [type="checkbox"]:disabled:checked + label:after{color:#999}.neocheckbox [type="checkbox"]:disabled + label{color:#aaa}.neocheckbox label:hover:before{border:0.15em solid #888!important}.neoradio [type="radio"]:not(:checked),.neoradio [type="radio"]:checked{position:absolute;left:-9999px}.neoradio [type="radio"]:not(:checked) + label,.neoradio [type="radio"]:checked + label{position:relative;padding-left:1.95em;cursor:pointer}.neoradio [type="radio"]:not(:checked) + label:before,.neoradio [type="radio"]:checked + label:before{content:'';position:absolute;left:0;top:0;width:1.25em;height:1.25em;border:0.15em solid #aaa;background:#fff;border-radius:100px}.neoradio [type="radio"]:not(:checked) + label:after,.neoradio [type="radio"]:checked + label:after{content:"✓";position:absolute;top:.2em;left:.2em;font-size:1.1em;line-height:0.8;color:#444444;transition:all .2s;font-family:'Lucida Sans Unicode','Arial Unicode MS',Arial}.neoradio [type="radio"]:not(:checked) + label:after{opacity:0;transform:scale(0)}.neoradio [type="radio"]:checked + label:after{opacity:1;transform:scale(1)}.neoradio [type="radio"]:disabled:not(:checked) + label:before,.neoradio [type="radio"]:disabled:checked + label:before{box-shadow:none;border-color:#bbb;background-color:#ddd}.neoradio [type="radio"]:disabled:checked + label:after{color:#999}.neoradio [type="radio"]:disabled + label{color:#aaa}.neoradio label:hover:before{border:0.15em solid #888!important}.container{position:relative!important;min-height:30px;width:100%!important;height:auto!important;top:auto!important;left:auto!important}.row{position:relative!important;min-height:30px;width:100%!important;height:auto!important;top:auto!important;left:auto!important;padding:10px}.flow{position:relative!important;width:auto!important;height:auto!important;left:auto!important;top:auto!important;min-width:15px;min-height:15px}.col,[class*="col-"]{position:relative!important;min-height:30px;height:auto!important;top:auto!important;left:auto!important;padding:5px}.neo-sticky{position:fixed!important;z-index:1}.neo-top-right{top:0px!important;right:0px;left:auto!important}.neo-bottom-right{bottom:0px!important;top:auto!important;right:0px;left:auto!important}.neo-top-left{top:0px!important;left:0px!important}.neo-bottom-left{bottom:0px!important;top:auto!important;right:auto;left:0px!important}.neo-top-center{top:0px!important;left:0px!important;right:0px!important;margin:auto!important}.neo-bottom-center{bottom:0px!important;top:auto!important;right:0px!important;left:0px!important;margin:auto!important}.neo-middle-center{top:0px!important;left:0px!important;right:0px!important;bottom:0px!important;margin:auto!important}.neo-middle-left{top:0px!important;left:0px!important;right:auto!important;bottom:0px!important;margin:auto!important}.neo-middle-right{top:0px!important;left:auto!important;right:0px!important;bottom:0px!important;margin:auto!important}.neo-top-center-content{display:flex;justify-content:center;align-items:flex-start}.neo-top-left-content{display:flex;justify-content:left;align-items:flex-start}.neo-top-right-content{display:flex;justify-content:flex-end;align-items:flex-start}.neo-middle-center-content{display:flex;justify-content:center;align-items:center}.neo-middle-left-content{display:flex;justify-content:left;align-items:center}.neo-middle-right-content{display:flex;justify-content:flex-end;align-items:center}.neo-bottom-center-content{display:flex;justify-content:center;align-items:flex-end}.neo-bottom-left-content{display:flex;justify-content:left;align-items:flex-end}.neo-bottom-right-content{display:flex;justify-content:flex-end;align-items:flex-end}.neo-equal-cols-xs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;flex-wrap:wrap}.neo-equal-cols-xs > [class*='col-']{display:flex;flex-direction:column;flex-wrap:wrap}@media (min-width:768px){.neo-equal-cols-sm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;flex-wrap:wrap}.neo-equal-cols-sm > [class*='col-']{display:flex;flex-direction:column;flex-wrap:wrap}}@media (min-width:992px){.neo-equal-cols-md{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;flex-wrap:wrap}.neo-equal-cols-md > [class*='col-']{display:flex;flex-direction:column;flex-wrap:wrap}}@media (min-width:1200px){.neo-equal-cols-lg{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;flex-wrap:wrap}.neo-equal-cols-lg > [class*='col-']{display:flex;flex-direction:column;flex-wrap:wrap}}.neo-grid{margin:0 auto;overflow:hidden}.neo-full-height.grid{display:flex;height:100%;flex-direction:column}.neo-full-height.grid > .neo-row{flex-grow:1}.neo-row{display:flex;flex-wrap:wrap;margin:0 -0.5em 0 -0.5em}.neo-row > *{box-sizing:border-box;padding:0 0.5em 1em;flex-basis:100%}.neo-row:last-child{margin-bottom:-1em}.neo-gutterless > .neo-row{margin:0}.neo-gutterless > .neo-row > *{padding:0}.neo-gutterless > .neo-row:last-child{margin-bottom:0}.neo-col{flex:1 0 auto}.neo-col-1{flex-basis:8.3333333333%;max-width:8.3333333333%}.neo-col-2{flex-basis:16.6666666666%;max-width:16.6666666666%}.neo-col-3{flex-basis:25%;max-width:25%}.neo-col-4{flex-basis:33.3333333333%;max-width:33.3333333333%}.neo-col-5{flex-basis:41.6666666666%;max-width:41.6666666666%}.neo-col-6{flex-basis:50%;max-width:50%}.neo-col-7{flex-basis:58.3333333333%;max-width:58.3333333333%}.neo-col-8{flex-basis:66.6666666666%;max-width:66.6666666666%}.neo-col-9{flex-basis:75%;max-width:75%}.neo-col-10{flex-basis:83.3333333333%;max-width:83.3333333333%}.neo-col-11{flex-basis:91.6666666666%;max-width:91.6666666666%}.neo-col-12{flex-basis:100%;max-width:100%}.neo-col-top{align-self:flex-start}.neo-col-bottom{align-self:flex-end}.neo-col-middle{align-self:center}.neo-row-left{justify-content:flex-start}.neo-row-right{justify-content:flex-end}.neo-row-center{justify-content:center}.neo-row-space-between{justify-content:space-between}.neo-row-space-around{justify-content:space-around}.neo-row-reverse{flex-direction:row-reverse;flex-wrap:wrap-reverse}.neo-row-equal > *{display:flex}.neo-row-equal > * > *{width:100%}.neo-row-top{align-items:flex-start}.neo-row-middle{align-items:center}.neo-row-bottom{align-items:flex-end}.neo-hide{display:none}@media (max-width:767px){.neo-col-sm-1{flex-basis:8.3333333333%;max-width:8.3333333333%}.neo-col-sm-2{flex-basis:16.6666666666%;max-width:16.6666666666%}.neo-col-sm-3{flex-basis:25%;max-width:25%}.neo-col-sm-4{flex-basis:33.3333333333%;max-width:33.3333333333%}.neo-col-sm-5{flex-basis:41.6666666666%;max-width:41.6666666666%}.neo-col-sm-6{flex-basis:50%;max-width:50%}.neo-col-sm-7{flex-basis:58.3333333333%;max-width:58.3333333333%}.neo-col-sm-8{flex-basis:66.6666666666%;max-width:66.6666666666%}.neo-col-sm-9{flex-basis:75%;max-width:75%}.neo-col-sm-10{flex-basis:83.3333333333%;max-width:83.3333333333%}.neo-col-sm-11{flex-basis:91.6666666666%;max-width:91.6666666666%}.neo-col-sm-12{flex-basis:100%;max-width:100%}.neo-col-sm-top{align-self:flex-start}.neo-col-sm-bottom{align-self:flex-end}.neo-col-sm-middle{align-self:center}.neo-row-sm-left{justify-content:flex-start}.neo-row-sm-right{justify-content:flex-end}.neo-row-sm-center{justify-content:center}.neo-row-sm-space-between{justify-content:space-between}.neo-row-sm-space-around{justify-content:space-around}.neo-row-sm-reverse{flex-direction:row-reverse;flex-wrap:wrap-reverse}.neo-row-sm-equal > *{display:flex}.neo-row-sm-equal > * > *{width:100%}.neo-row-sm-top{align-items:flex-start}.neo-row-sm-middle{align-items:center}.neo-row-sm-bottom{align-items:flex-end}.neo-hide-sm{display:none}}@media (min-width:768px) and (max-width:959px){.neo-col-md-1{flex-basis:8.3333333333%;max-width:8.3333333333%}.neo-col-md-2{flex-basis:16.6666666666%;max-width:16.6666666666%}.neo-col-md-3{flex-basis:25%;max-width:25%}.neo-col-md-4{flex-basis:33.3333333333%;max-width:33.3333333333%}.neo-col-md-5{flex-basis:41.6666666666%;max-width:41.6666666666%}.neo-col-md-6{flex-basis:50%;max-width:50%}.neo-col-md-7{flex-basis:58.3333333333%;max-width:58.3333333333%}.neo-col-md-8{flex-basis:66.6666666666%;max-width:66.6666666666%}.neo-col-md-9{flex-basis:75%;max-width:75%}.neo-col-md-10{flex-basis:83.3333333333%;max-width:83.3333333333%}.neo-col-md-11{flex-basis:91.6666666666%;max-width:91.6666666666%}.neo-col-md-12{flex-basis:100%;max-width:100%}.neo-col-md-top{align-self:flex-start}.neo-col-md-bottom{align-self:flex-end}.neo-col-md-middle{align-self:center}.neo-row-md-left{justify-content:flex-start}.neo-row-md-right{justify-content:flex-end}.neo-row-md-center{justify-content:center}.neo-row-md-space-between{justify-content:space-between}.neo-row-md-space-around{justify-content:space-around}.neo-row-md-reverse{flex-direction:row-reverse;flex-wrap:wrap-reverse}.neo-row-md-equal > *{display:flex}.neo-row-md-equal > * > *{width:100%}.neo-row-md-top{align-items:flex-start}.neo-row-md-middle{align-items:center}.neo-row-md-bottom{align-items:flex-end}.neo-hide-md{display:none}}@media (min-width:960px){.neo-col-lg-1{flex-basis:8.3333333333%;max-width:8.3333333333%}.neo-col-lg-2{flex-basis:16.6666666666%;max-width:16.6666666666%}.neo-col-lg-3{flex-basis:25%;max-width:25%}.neo-col-lg-4{flex-basis:33.3333333333%;max-width:33.3333333333%}.neo-col-lg-5{flex-basis:41.6666666666%;max-width:41.6666666666%}.neo-col-lg-6{flex-basis:50%;max-width:50%}.neo-col-lg-7{flex-basis:58.3333333333%;max-width:58.3333333333%}.neo-col-lg-8{flex-basis:66.6666666666%;max-width:66.6666666666%}.neo-col-lg-9{flex-basis:75%;max-width:75%}.neo-col-lg-10{flex-basis:83.3333333333%;max-width:83.3333333333%}.neo-col-lg-11{flex-basis:91.6666666666%;max-width:91.6666666666%}.neo-col-lg-12{flex-basis:100%;max-width:100%}.neo-col-lg-top{align-self:flex-start}.neo-col-lg-bottom{align-self:flex-end}.neo-col-lg-middle{align-self:center}.neo-row-lg-left{justify-content:flex-start}.neo-row-lg-right{justify-content:flex-end}.neo-row-lg-center{justify-content:center}.neo-row-lg-space-between{justify-content:space-between}.neo-row-lg-space-around{justify-content:space-around}.neo-row-lg-reverse{flex-direction:row-reverse;flex-wrap:wrap-reverse}.neo-row-lg-equal > *{display:flex}.neo-row-lg-equal > * > *{width:100%}.neo-row-lg-top{align-items:flex-start}.neo-row-lg-middle{align-items:center}.neo-row-lg-bottom{align-items:flex-end}.neo-hide-lg{display:none}}.neo-row,[class*="neo-row-"]{position:relative!important;min-height:30px;width:100%!important;height:auto!important;top:auto!important;left:auto!important;padding:10px}.neo-col,[class*="neo-col-"]{position:relative!important;min-height:30px;height:auto!important;top:auto!important;left:auto!important;padding:5px}.neo-grid,.neo-full-height.grid{position:relative!important;min-height:30px;width:100%!important;height:auto!important;top:auto!important;left:auto!important;padding:5px}.neoani{display:inline-block;position:relative}
 #Headline357 {position:absolute;left:111px;top:3px;width:142px;height:14px;margin:0;font-size:6pt;text-align:center}
+#landinghome {position:relative;width:100%;height:100%;overflow:auto;;background-color:#383838}
+#Headline609 {position:absolute;left:8px;top:31px;width:143px;height:52px;margin:0;color:white}
+#PushButton666 {position:absolute;left:28px;top:113px;width:151px;height:83px;margin:0;color:#000080;font-weight:800;text-shadow:2px 2px 7px white;background-color:#707070}
+#PushButton666:hover {color:green;text-shadow:2px 2px 6px red}
+#Pager6 {position:absolute;left:243px;top:36px;width:126px;height:36px;margin:0;color:#383838;opacity:0.48}
+#PushButton767 {position:absolute;left:29px;top:77px;width:61px;height:29px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.6}
+#PushButton767:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton768 {position:absolute;left:98px;top:77px;width:53px;height:29px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.6}
+#PushButton768:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton808 {position:absolute;left:158px;top:78px;width:53px;height:29px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.6}
+#PushButton808:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton809 {position:absolute;left:219px;top:78px;width:53px;height:29px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.6}
+#PushButton809:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton810 {position:absolute;left:280px;top:78px;width:53px;height:29px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.6}
+#PushButton810:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton848 {position:absolute;left:185px;top:113px;width:151px;height:83px;margin:0;color:#000080;font-weight:800;text-shadow:2px 2px 7px white;background-color:#707070}
+#PushButton848:hover {color:green;text-shadow:2px 2px 6px red}
+#PushButton968 {position:absolute;left:28px;top:201px;width:151px;height:83px;margin:0;color:#000080;font-weight:800;text-shadow:2px 2px 7px white;background-color:#707070}
+#PushButton968:hover {color:green;text-shadow:2px 2px 6px red}
+#PushButton967 {position:absolute;left:186px;top:33px;width:73px;height:38px;margin:0;color:#FF8C00;font-size:7pt;font-weight:600;opacity:0.45}
+#PushButton967:hover {color:orange;opacity:1}
+#PushButton969 {position:absolute;left:102px;top:727px;width:167px;height:33px;margin:0;color:#0247FE;font-weight:600}
+#PushButton969:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton970 {position:absolute;left:244px;top:429px;width:115px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton970:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton971 {position:absolute;left:242px;top:465px;width:116px;height:77px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton971:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton972 {position:absolute;left:115px;top:391px;width:101px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton972:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton973 {position:absolute;left:9px;top:427px;width:101px;height:57px;margin:0;color:white;font-size:10pt;font-weight:600;background-color:red}
+#PushButton973:hover {color:green;font-weight:600}
+#PushButton974 {position:absolute;left:9px;top:488px;width:99px;height:53px;margin:0;color:blue;font-size:10pt;font-weight:600;background-color:orange}
+#PushButton974:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton975 {position:absolute;left:113px;top:489px;width:126px;height:52px;margin:0;color:blue;font-size:10pt;font-weight:600;background-color:orange}
+#PushButton975:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton976 {position:absolute;left:113px;top:428px;width:128px;height:56px;margin:0;color:white;font-size:8pt;font-weight:600;background-color:green}
+#PushButton976:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton977 {position:absolute;left:313px;top:659px;width:38px;height:30px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton977:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton978 {position:absolute;left:7px;top:587px;width:282px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton978:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton979 {position:absolute;left:7px;top:625px;width:306px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton979:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton980 {position:absolute;left:8px;top:658px;width:303px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton980:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton981 {position:absolute;left:8px;top:692px;width:303px;height:28px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton981:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton982 {position:absolute;left:313px;top:693px;width:38px;height:27px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton982:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton983 {position:absolute;left:291px;top:589px;width:61px;height:30px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton983:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton984 {position:absolute;left:314px;top:626px;width:36px;height:30px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton984:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton985 {position:absolute;left:218px;top:391px;width:85px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton985:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton986 {position:absolute;left:6px;top:554px;width:348px;height:28px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton986:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton987 {position:absolute;left:9px;top:392px;width:103px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton987:hover {color:WHITE;font-weight:600;background-color:#008000}
+#PushButton988 {position:absolute;left:305px;top:391px;width:52px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600}
+#PushButton988:hover {color:WHITE;font-weight:600;background-color:#008000}
+#SVGicon10 {position:absolute;left:15px;top:775px;width:57px;height:28px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon10:hover {fill:#FF0000}
+#SVGicon11 {position:absolute;left:74px;top:776px;width:54px;height:26px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon11:hover {fill:#FF0000}
+#SVGicon12 {position:absolute;left:126px;top:774px;width:64px;height:30px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon12:hover {fill:#FF0000}
+#PushButton989 {position:absolute;left:249px;top:815px;width:116px;height:31px;margin:0;color:blue;font-size:9pt;background-color:orange;opacity:0.41}
+#PushButton989:hover {font-weight:800}
+#PushButton990 {position:absolute;left:198px;top:769px;width:166px;height:39px;margin:0;color:#0000FF;font-weight:600;background-color:orange}
+#PushButton990:hover {color:WHITE;font-weight:600;background-color:#008000}
+#Headline644 {position:absolute;left:45px;top:353px;width:276px;height:35px;margin:0;color:#E0E0E0;font-size:22pt;text-align:center}
+#PushButton991 {position:absolute;left:184px;top:200px;width:151px;height:83px;margin:0;color:#000080;font-weight:800;text-shadow:2px 2px 7px white;background-color:#707070}
+#PushButton991:hover {color:green;text-shadow:2px 2px 6px red}
+#Headline645 {position:absolute;left:65px;top:12px;width:249px;height:12px;margin:0;color:yellow;font-size:7pt;font-weight:600;text-align:center}
+#Headline645:hover {color:green}
 #Temphome {position:relative;width:100%;height:100%;overflow:auto;;background-color:#A8A8A8}
 #PushButton22 {position:absolute;left:6px;top:3px;width:65px;height:64px;margin:0;color:#FF8C00;font-size:7pt;font-weight:600}
 #PushButton22:hover {color:green}
@@ -226,30 +302,200 @@ html{background:#eeeeee}body{background:rgba(255,255,255,0);position:absolute;to
 #PushButton661:hover {color:WHITE;font-weight:600;background-color:#008000}
 #PushButton665 {position:absolute;left:316px;top:19px;width:53px;height:29px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.6}
 #PushButton665:hover {color:WHITE;font-weight:600;background-color:#008000}
-#wiiaa {position:relative;width:100%;height:100%;overflow:auto;;background-color:#BCFFF2}
+#Pager3 {position:absolute;left:340px;top:54px;width:51px;height:70px;margin:0;}
+#PreparationKeys {position:relative;width:100%;height:100%;overflow:auto;;background-color:#383838}
+#Headline610 {position:absolute;left:229px;top:6px;width:135px;height:52px;margin:0;color:white}
+#PushButton667 {position:absolute;left:14px;top:14px;width:155px;height:72px;margin:0;color:blue;font-size:15pt;font-weight:800;text-shadow:2px 2px 6px #FFE4C4;background-color:#707070}
+#PushButton667:hover {color:green;text-shadow:2px 2px 6px red}
+#Headline611 {position:absolute;left:108px;top:487px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline611:hover {opacity:0.34}
+#Headline612 {position:absolute;left:195px;top:486px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline612:hover {opacity:0.34}
+#Headline613 {position:absolute;left:285px;top:487px;width:73px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline613:hover {opacity:0.34}
+#Headline614 {position:absolute;left:21px;top:486px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline614:hover {opacity:0.34}
+#Headline615 {position:absolute;left:108px;top:556px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline615:hover {opacity:0.34}
+#Headline616 {position:absolute;left:195px;top:555px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline616:hover {opacity:0.34}
+#Headline617 {position:absolute;left:285px;top:556px;width:73px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline617:hover {opacity:0.34}
+#Headline618 {position:absolute;left:21px;top:555px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline618:hover {opacity:0.34}
+#Headline619 {position:absolute;left:21px;top:237px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline619:hover {opacity:0.34}
+#Headline620 {position:absolute;left:197px;top:237px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline621 {position:absolute;left:282px;top:237px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline622 {position:absolute;left:108px;top:170px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline622:hover {opacity:0.34}
+#Headline623 {position:absolute;left:196px;top:171px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline623:hover {opacity:0.34}
+#Headline624 {position:absolute;left:281px;top:171px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline624:hover {opacity:0.34}
+#Headline625 {position:absolute;left:20px;top:171px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline625:hover {opacity:0.34}
+#Headline626 {position:absolute;left:107px;top:297px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline626:hover {opacity:0.34}
+#Headline627 {position:absolute;left:196px;top:297px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline627:hover {opacity:0.34}
+#Headline628 {position:absolute;left:285px;top:297px;width:73px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline628:hover {opacity:0.34}
+#Headline629 {position:absolute;left:20px;top:297px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline629:hover {opacity:0.34}
+#Headline630 {position:absolute;left:195px;top:354px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline630:hover {opacity:0.34}
+#Headline631 {position:absolute;left:286px;top:354px;width:73px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline631:hover {opacity:0.34}
+#Headline632 {position:absolute;left:19px;top:354px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline632:hover {opacity:0.34}
+#Headline633 {position:absolute;left:21px;top:417px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline633:hover {opacity:0.34}
+#Headline634 {position:absolute;left:106px;top:237px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline634:hover {opacity:0.34}
+#Headline635 {position:absolute;left:106px;top:354px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline635:hover {opacity:0.34}
+#Headline636 {position:absolute;left:107px;top:418px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline636:hover {opacity:0.34}
+#Headline637 {position:absolute;left:195px;top:417px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline637:hover {opacity:0.34}
+#Headline638 {position:absolute;left:285px;top:418px;width:73px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline638:hover {opacity:0.34}
+#PushButton668 {position:absolute;left:123px;top:146px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton668:hover {border-color:#FF0000}
+#PushButton669 {position:absolute;left:214px;top:147px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton669:hover {border-color:#FF0000}
+#PushButton670 {position:absolute;left:302px;top:147px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton670:hover {border-color:#FF0000}
+#PushButton671 {position:absolute;left:40px;top:219px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton672 {position:absolute;left:40px;top:219px;width:41px;height:8px;margin:0;background-color:white}
+#PushButton672:hover {border-color:#FF0000}
+#PushButton673 {position:absolute;left:124px;top:218px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton673:hover {border-color:#FF0000}
+#PushButton674 {position:absolute;left:215px;top:219px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton674:hover {border-color:#FF0000}
+#PushButton675 {position:absolute;left:303px;top:219px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton675:hover {border-color:#FF0000}
+#PushButton676 {position:absolute;left:40px;top:280px;width:41px;height:8px;margin:0;}
+#PushButton677 {position:absolute;left:40px;top:280px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton677:hover {border-color:#FF0000}
+#PushButton678 {position:absolute;left:124px;top:280px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton678:hover {border-color:#FF0000}
+#PushButton679 {position:absolute;left:215px;top:281px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton679:hover {border-color:#FF0000}
+#PushButton680 {position:absolute;left:303px;top:281px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton680:hover {border-color:#FF0000}
+#PushButton681 {position:absolute;left:40px;top:338px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton681:hover {border-color:#FF0000}
+#PushButton682 {position:absolute;left:124px;top:338px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton682:hover {border-color:#FF0000}
+#PushButton683 {position:absolute;left:213px;top:339px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton683:hover {border-color:#FF0000}
+#PushButton684 {position:absolute;left:301px;top:339px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton684:hover {border-color:#FF0000}
+#PushButton685 {position:absolute;left:40px;top:396px;width:41px;height:8px;margin:0;}
+#PushButton686 {position:absolute;left:40px;top:397px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton686:hover {border-color:#FF0000}
+#PushButton687 {position:absolute;left:124px;top:397px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton687:hover {border-color:#FF0000}
+#PushButton688 {position:absolute;left:215px;top:398px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton688:hover {border-color:#FF0000}
+#PushButton689 {position:absolute;left:303px;top:398px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton689:hover {border-color:#FF0000}
+#PushButton690 {position:absolute;left:40px;top:461px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton690:hover {border-color:#FF0000}
+#PushButton691 {position:absolute;left:124px;top:461px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton691:hover {border-color:#FF0000}
+#PushButton692 {position:absolute;left:213px;top:462px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton692:hover {border-color:#FF0000}
+#PushButton693 {position:absolute;left:301px;top:462px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton693:hover {border-color:#FF0000}
+#PushButton694 {position:absolute;left:40px;top:531px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton694:hover {border-color:#FF0000}
+#PushButton695 {position:absolute;left:124px;top:531px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton695:hover {border-color:#FF0000}
+#PushButton696 {position:absolute;left:213px;top:532px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton696:hover {border-color:#FF0000}
+#PushButton697 {position:absolute;left:301px;top:532px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton697:hover {border-color:#FF0000}
+#PushButton698 {position:absolute;left:40px;top:599px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton698:hover {border-color:#FF0000}
+#PushButton699 {position:absolute;left:124px;top:599px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton699:hover {border-color:#FF0000}
+#PushButton764 {position:absolute;left:213px;top:600px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton764:hover {border-color:#FF0000}
+#PushButton765 {position:absolute;left:301px;top:600px;width:41px;height:14px;margin:0;background-color:#FFFFFF}
+#PushButton765:hover {border-color:#FF0000}
+#PushButton766 {position:absolute;left:41px;top:147px;width:41px;height:8px;margin:0;background-color:#FFFFFF}
+#PushButton766:hover {border-color:#FF0000}
+#Headline639 {position:absolute;left:22px;top:96px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline639:hover {opacity:0.34}
+#Headline640 {position:absolute;left:105px;top:96px;width:82px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline640:hover {opacity:0.34}
+#Headline641 {position:absolute;left:199px;top:96px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline641:hover {opacity:0.34}
+#Headline642 {position:absolute;left:282px;top:96px;width:80px;height:38px;margin:0;color:white;font-family:Times New Roman,Times,serif;font-size:10pt;font-weight:600;line-height:90%;text-align:center}
+#Headline642:hover {opacity:0.34}
+#SVGicon4 {position:absolute;left:98px;top:633px;width:57px;height:28px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon4:hover {fill:#FF0000}
+#SVGicon5 {position:absolute;left:157px;top:634px;width:54px;height:26px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon5:hover {fill:#FF0000}
+#SVGicon6 {position:absolute;left:209px;top:632px;width:64px;height:30px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon6:hover {fill:#FF0000}
+#PrayerReps {position:relative;width:100%;height:100%;overflow:auto;;background-color:#383838}
+#Headline643 {position:absolute;left:229px;top:6px;width:135px;height:52px;margin:0;color:white}
+#PushButton915 {position:absolute;left:14px;top:14px;width:155px;height:72px;margin:0;color:blue;font-size:15pt;font-weight:800;text-shadow:2px 2px 6px #FFE4C4;background-color:#707070}
+#PushButton915:hover {color:green;text-shadow:2px 2px 6px red}
+#PushButton957 {position:absolute;left:14px;top:101px;width:74px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton957:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton958 {position:absolute;left:14px;top:135px;width:73px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton958:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton959 {position:absolute;left:315px;top:101px;width:46px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton959:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton960 {position:absolute;left:315px;top:136px;width:45px;height:30px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton960:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton961 {position:absolute;left:91px;top:135px;width:77px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton961:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton962 {position:absolute;left:89px;top:101px;width:79px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton962:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton963 {position:absolute;left:169px;top:101px;width:71px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton963:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton964 {position:absolute;left:241px;top:101px;width:73px;height:32px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton964:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton965 {position:absolute;left:169px;top:135px;width:71px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton965:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#PushButton966 {position:absolute;left:242px;top:135px;width:72px;height:31px;margin:0;color:blue;font-size:8pt;font-weight:600;opacity:0.46}
+#PushButton966:hover {color:WHITE;font-weight:600;background-color:#008000;opacity:0.8}
+#SVGicon7 {position:absolute;left:96px;top:229px;width:57px;height:28px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon7:hover {fill:#FF0000}
+#SVGicon8 {position:absolute;left:155px;top:230px;width:54px;height:26px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon8:hover {fill:#FF0000}
+#SVGicon9 {position:absolute;left:207px;top:228px;width:64px;height:30px;margin:0;fill:#E0E0E0;stroke:black;stroke-width:4px;transition:all 1s ease-out 0s;padding:2px}
+#SVGicon9:hover {fill:#FF0000}
+#wiiaa {position:relative;width:100%;height:100%;overflow:auto;;background-color:#383838}
 #PushButton27 {position:absolute;left:281px;top:13px;width:77px;height:29px;margin:0;color:#66B032;font-size:10pt}
-#Headline50 {position:absolute;left:9px;top:17px;width:269px;height:27px;margin:0;color:#008080;font-size:16pt;text-align:center}
-#TextArea220 {position:absolute;left:7px;top:88px;width:352px;height:137px;margin:0;}
-#TextArea219 {position:absolute;left:6px;top:229px;width:352px;height:50px;margin:0;background-color:#F5F5DC}
-#TextArea540 {position:absolute;left:6px;top:282px;width:352px;height:114px;margin:0;background-color:#F5F5DC}
-#TextArea541 {position:absolute;left:6px;top:458px;width:352px;height:114px;margin:0;background-color:#F0F8FF}
-#TextArea542 {position:absolute;left:6px;top:405px;width:352px;height:50px;margin:0;background-color:#F0F8FF}
-#TextArea221 {position:absolute;left:8px;top:581px;width:352px;height:50px;margin:0;background-color:#F5F5DC}
-#TextArea543 {position:absolute;left:8px;top:634px;width:352px;height:114px;margin:0;background-color:#F5F5DC}
-#TextArea544 {position:absolute;left:8px;top:757px;width:352px;height:50px;margin:0;background-color:#F0F8FF}
-#TextArea545 {position:absolute;left:8px;top:810px;width:352px;height:114px;margin:0;background-color:#F0F8FF}
-#TextArea546 {position:absolute;left:7px;top:935px;width:352px;height:50px;margin:0;background-color:#F5F5DC}
-#TextArea547 {position:absolute;left:7px;top:988px;width:352px;height:114px;margin:0;background-color:#F5F5DC}
-#TextArea548 {position:absolute;left:7px;top:1111px;width:352px;height:50px;margin:0;background-color:#F0F8FF}
-#TextArea549 {position:absolute;left:7px;top:1164px;width:352px;height:114px;margin:0;background-color:#F0F8FF}
-#TextArea550 {position:absolute;left:6px;top:1287px;width:352px;height:50px;margin:0;background-color:#F5F5DC}
-#TextArea551 {position:absolute;left:6px;top:1340px;width:352px;height:114px;margin:0;background-color:#F5F5DC}
-#TextArea560 {position:absolute;left:6px;top:1463px;width:352px;height:50px;margin:0;background-color:#F0F8FF}
-#TextArea561 {position:absolute;left:6px;top:1516px;width:352px;height:114px;margin:0;background-color:#F0F8FF}
+#Headline50 {position:absolute;left:9px;top:17px;width:269px;height:27px;margin:0;color:white;font-size:12pt;font-weight:600;text-align:center}
+#TextArea220 {position:absolute;left:7px;top:88px;width:352px;height:137px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea219 {position:absolute;left:6px;top:229px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea540 {position:absolute;left:6px;top:282px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea541 {position:absolute;left:6px;top:458px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea542 {position:absolute;left:6px;top:405px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea221 {position:absolute;left:8px;top:581px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea543 {position:absolute;left:8px;top:634px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea544 {position:absolute;left:8px;top:757px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea545 {position:absolute;left:8px;top:810px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea546 {position:absolute;left:7px;top:935px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea547 {position:absolute;left:7px;top:988px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea548 {position:absolute;left:7px;top:1111px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea549 {position:absolute;left:7px;top:1164px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea550 {position:absolute;left:6px;top:1287px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea551 {position:absolute;left:6px;top:1340px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea560 {position:absolute;left:6px;top:1463px;width:352px;height:50px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
+#TextArea561 {position:absolute;left:6px;top:1516px;width:352px;height:114px;margin:0;color:#FFFFFF;font-size:11pt;background-color:#A8A8A8}
 #TextArea562 {position:absolute;left:389px;top:247px;width:352px;height:279px;margin:0;background-color:#FDF5E6}
 #TextArea563 {position:absolute;left:389px;top:531px;width:352px;height:246px;margin:0;background-color:#FFF8DC}
 #TextArea564 {position:absolute;left:390px;top:779px;width:352px;height:702px;margin:0;}
-#Headline49 {position:absolute;left:2px;top:51px;width:368px;height:37px;margin:0;color:#008080;font-size:11pt;text-align:center}
+#Headline49 {position:absolute;left:2px;top:51px;width:368px;height:37px;margin:0;color:white;font-size:9pt;font-weight:600;text-align:center}
 #TextArea565 {position:absolute;left:389px;top:31px;width:352px;height:210px;margin:0;background-color:#FFE4C4}
 #Headline51 {position:absolute;left:432px;top:2px;width:269px;height:27px;margin:0;color:#008080;font-size:16pt;text-align:center}
 #Reset2026 {position:relative;width:100%;height:100%;overflow:auto;;background-color:#383838}
@@ -2139,7 +2385,7 @@ html{background:#eeeeee}body{background:rgba(255,255,255,0);position:absolute;to
 #TextArea493 {position:absolute;left:6px;top:991px;width:350px;height:420px;margin:0;}
 #Pager78 {position:absolute;left:112px;top:1429px;width:127px;height:40px;margin:0;}
 #Headline329 {position:absolute;left:249px;top:6px;width:112px;height:23px;margin:0;color:green;font-size:16pt}
-#External01 {position:relative;width:100%;height:100%;overflow:auto;;background-color:#E0E0E0}
+#External01 {position:relative;width:100%;height:100%;overflow:auto;;background-color:#383838}
 #PushButton134 {position:absolute;left:281px;top:13px;width:77px;height:29px;margin:0;color:#66B032;font-size:10pt}
 #PushButton135 {position:absolute;left:4px;top:74px;width:180px;height:68px;margin:0;}
 #PushButton136 {position:absolute;left:6px;top:146px;width:179px;height:63px;margin:0;}
