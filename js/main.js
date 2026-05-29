@@ -7439,6 +7439,7 @@ localStorage.setItem("z2a4","Test data");
 localStorage.setItem("z2a5","Test data");};
 $scope.TextArea699_change = function() {localStorage.setItem("allvar",$App.allvar);};
 $scope.PushButton208_click = function() {$App.allvar = localStorage.getItem("allvar");};
+$scope.PushButton211_click = function() {navigator.clipboard.readText().then(function(data){$App.allvar=data;})};
 });
 NeoApp.controller("PreparationKeys_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 2;
